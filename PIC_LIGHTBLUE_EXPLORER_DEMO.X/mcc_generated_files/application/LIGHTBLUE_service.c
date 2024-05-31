@@ -32,8 +32,6 @@
 // APP Dependencies
 #include "../rn487x/rn487x.h"
 #include "../rn487x/rn487x_interface.h"
-#include "BMA253_accel.h"
-#include "MCP9844_temp_sensor.h"
 #include "../pin_manager.h"
 #include "../drivers/uart.h"
 
@@ -302,35 +300,6 @@ void LIGHTBLUE_Initialize(void)
 {
     bitMap.ioBitMap.gpioBitMap = 0x01;
     bitMap.ioStateBitMap.gpioStateBitMap = 0x01; 
-}
-
-void LIGHTBLUE_TemperatureSensor(void)
-{
-    char payload[5];
-    int16_t temperature;
-    
-    *payload = '\0';
-    MCP9844_GetTemperatureValue(&temperature);
-    
-    LIGHTBLUE_SplitWord(payload, temperature);
-    
-    LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
-}
-
-void LIGHTBLUE_AccelSensor(void)
-{
-    char payload[13];
-    BMA253_ACCEL_DATA_t accelData;
-    
-    *payload = '\0';
-    BMA253_GetAccelDataXYZ(&accelData);
-    // Masking to ensure top nibble is always 0 as light blue expects
-    // Exception may occur when highest byte is not 0
-    LIGHTBLUE_SplitWord(payload, (accelData.x & 0x0FFF)); 
-    LIGHTBLUE_SplitWord(payload, (accelData.y & 0x0FFF));
-    LIGHTBLUE_SplitWord(payload, (accelData.z & 0x0FFF));
-    
-    LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
 }
 
 void LIGHTBLUE_PushButton(void)

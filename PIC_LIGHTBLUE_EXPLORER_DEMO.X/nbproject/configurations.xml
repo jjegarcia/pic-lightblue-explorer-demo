@@ -8,19 +8,13 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="f3" displayName="application" projectFiles="true">
-          <itemPath>mcc_generated_files/application/BMA253_accel.h</itemPath>
-          <itemPath>mcc_generated_files/application/MCP9844_temp_sensor.h</itemPath>
           <itemPath>mcc_generated_files/application/LIGHTBLUE_service.h</itemPath>
         </logicalFolder>
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/uart.h</itemPath>
-          <itemPath>mcc_generated_files/drivers/i2c_master.h</itemPath>
-          <itemPath>mcc_generated_files/drivers/i2c_simple_master.h</itemPath>
-          <itemPath>mcc_generated_files/drivers/i2c_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="examples" displayName="examples" projectFiles="true">
           <itemPath>mcc_generated_files/examples/rn487x_example.h</itemPath>
-          <itemPath>mcc_generated_files/examples/i2c1_master_example.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="rn487x" projectFiles="true">
           <itemPath>mcc_generated_files/rn487x/rn487x_interface.h</itemPath>
@@ -33,8 +27,6 @@
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
         <itemPath>mcc_generated_files/tmr0.h</itemPath>
         <itemPath>mcc_generated_files/device_config.h</itemPath>
-        <itemPath>mcc_generated_files/i2c1_driver.h</itemPath>
-        <itemPath>mcc_generated_files/i2c1_master.h</itemPath>
         <itemPath>mcc_generated_files/delay.h</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -49,8 +41,6 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="f2" displayName="application" projectFiles="true">
-          <itemPath>mcc_generated_files/application/BMA253_accel.c</itemPath>
-          <itemPath>mcc_generated_files/application/MCP9844_temp_sensor.c</itemPath>
           <itemPath>mcc_generated_files/application/LIGHTBLUE_service.c</itemPath>
         </logicalFolder>
         <logicalFolder name="docs" displayName="docs" projectFiles="true">
@@ -60,13 +50,9 @@
         </logicalFolder>
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/uart.c</itemPath>
-          <itemPath>mcc_generated_files/drivers/i2c_master.c</itemPath>
-          <itemPath>mcc_generated_files/drivers/i2c_simple_master.c</itemPath>
-          <itemPath>mcc_generated_files/drivers/i2c_types.c</itemPath>
         </logicalFolder>
         <logicalFolder name="examples" displayName="examples" projectFiles="true">
           <itemPath>mcc_generated_files/examples/rn487x_example.c</itemPath>
-          <itemPath>mcc_generated_files/examples/i2c1_master_example.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="rn487x" projectFiles="true">
           <itemPath>mcc_generated_files/rn487x/rn487x_interface.c</itemPath>
@@ -79,8 +65,6 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/tmr0.c</itemPath>
         <itemPath>mcc_generated_files/device_config.c</itemPath>
-        <itemPath>mcc_generated_files/i2c1_driver.c</itemPath>
-        <itemPath>mcc_generated_files/i2c1_master.c</itemPath>
         <itemPath>mcc_generated_files/delay.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
@@ -104,10 +88,10 @@
         <targetDevice>PIC16LF18456</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>nEdbgTool</platformTool>
+        <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.32</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <platform>4</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.8.149"/>

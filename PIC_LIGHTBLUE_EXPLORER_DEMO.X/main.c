@@ -91,11 +91,11 @@ int main(void)
             {
                 RESET_TIMER_INTERRUPT_FLAG;
 
-                LIGHTBLUE_TemperatureSensor();
-                LIGHTBLUE_AccelSensor();
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
+//                LIGHTBLUE_TemperatureSensor();
+//                LIGHTBLUE_AccelSensor();
+//                LIGHTBLUE_PushButton();
+//                LIGHTBLUE_LedState();
+//                LIGHTBLUE_SendProtocolVersion();
             }
             else
             {
@@ -123,7 +123,11 @@ int main(void)
             }
         }
         else
-        {
+{
+            if (TIMER_FLAG_SET() == true) {
+                RESET_TIMER_INTERRUPT_FLAG;
+                DATA_LED_Toggle();
+            }
             while(RN487X_DataReady())
             {
                 uart[UART_CDC].Write(RN487X_Read());

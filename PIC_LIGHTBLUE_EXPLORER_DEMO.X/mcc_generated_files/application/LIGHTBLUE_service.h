@@ -47,31 +47,6 @@ void LIGHTBLUE_Initialize(void);
      2^3        2^2             2^1           2^0    2^-1   2^-2  2^-3  2^-4
  \return void \n
  */
-void LIGHTBLUE_TemperatureSensor(void);
-/**
- \ingroup LIGHTBLUE
- \brief  Public function used to issue Acceleration Sensor data to the Light Blue application \n
- This function will request X, Y, Z data from the BMA253, format it according to the Light Blue
- protocol requirements using 'A' for the ID, data is sent as a 16-bit hex values 
- representing the signed acceleration data in 12-bit form with top 4 bits cleared to 0's.
- Actual value is provided as described below:
-     b15    b14     b13     b12    b11    b10   b9      b8
-     0      0       0       0      Sign   1g    500mg   250mg
-     b7     b6      b5      b4     b3     b2    b1      b0 
-    125mg   62.5mg  31.2mg  15.6mg 7.8mg  3.9mg 1.9mg  0.97mg
- \return void \n
- */
-void LIGHTBLUE_AccelSensor(void);
-/**
- \ingroup LIGHTBLUE
- \brief  Public function used to issue Push button state to the Light Blue application \n
- This function will read the SW0 state, format it according to the Light Blue
- protocol requirements using 'P' for the ID, data is sent as a 8-bit hex value 
- representing the button pressed state.
-0 - Pressed
-1- Released
- \return void \n
- */
 void LIGHTBLUE_PushButton(void);
 /**
  \ingroup LIGHTBLUE
