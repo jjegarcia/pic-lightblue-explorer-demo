@@ -53,11 +53,11 @@
 #include <stdbool.h>
 #include <conio.h>
 #include "interrupt_manager.h"
+#include "ext_int.h"
 #include "tmr0.h"
 #include "eusart2.h"
 #include "eusart1.h"
 #include "delay.h"
-
 
 
 
