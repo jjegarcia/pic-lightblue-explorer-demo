@@ -26,6 +26,7 @@
  */
 #include <xc.h>
 #include "ext_int.h"
+#include "pin_manager.h"
 
 void (*INT_InterruptHandler)(void);
 
@@ -40,7 +41,9 @@ void INT_ISR(void)
 
 void INT_CallBack(void)
 {
-     BUTTON_ACTIVE();
+    if (DATA_LED_GetValue() ==1){
+        BUTTON_ACTIVE();
+    }
     // Add your custom callback code here
     if(INT_InterruptHandler)
     {

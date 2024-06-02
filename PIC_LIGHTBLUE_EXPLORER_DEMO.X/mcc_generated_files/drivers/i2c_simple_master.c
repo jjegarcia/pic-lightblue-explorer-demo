@@ -27,6 +27,8 @@
 */
 
 
+#include ".././i2c1_master.h"
+#include "i2c_simple_master.h"
 
 /****************************************************************/
 static i2c1_operations_t wr1RegCompleteHandler(void *p)
