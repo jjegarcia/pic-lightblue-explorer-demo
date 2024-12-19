@@ -1,6 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"76 mcc_generated_files/drivers/../mcc.h
+"76 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "271 ./mcc_generated_files/rn487x/rn487x.h
 [; ;./mcc_generated_files/rn487x/rn487x.h: 271: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
@@ -22,21 +23,93 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 36: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
-"60 ./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 60:     int8_t setTemperatureEn(
-[v _setTemperatureEn `(c ~T0 @X0 0 ef1`a ]
-"111
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 111:     float getTemp();
-[v _getTemp `(f ~T0 @X0 0 e? ]
-"112
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 112:     float getXData();
-[v _getXData `(f ~T0 @X0 0 e? ]
-"113
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 113:     float getYData();
-[v _getYData `(f ~T0 @X0 0 e? ]
-"114
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 114:     float getZData();
-[v _getZData `(f ~T0 @X0 0 e? ]
+"75 ./mcc_generated_files/rn487x/rn487x_interface.h
+[; ;./mcc_generated_files/rn487x/rn487x_interface.h: 75: _Bool RN487X_IsConnected(void);
+[v _RN487X_IsConnected `(a ~T0 @X0 0 ef ]
+"310 mcc_generated_files/tmr0.h
+[; ;mcc_generated_files/tmr0.h: 310: _Bool TMR0_HasOverflowOccured(void);
+[v _TMR0_HasOverflowOccured `(a ~T0 @X0 0 ef ]
+"22417 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22417:     struct {
+[s S1021 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1021 . INTF . IOCIF TMR0IF ]
+"22416
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22416: typedef union {
+[u S1020 `S1021 1 ]
+[n S1020 . . ]
+"22424
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22424: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
+[v _PIR0bits `VS1020 ~T0 @X0 0 e@1804 ]
+"50 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 50: void LIGHTBLUE_TemperatureSensor(void);
+[v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 0 ef ]
+"64
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 64: void LIGHTBLUE_AccelSensor(void);
+[v _LIGHTBLUE_AccelSensor `(v ~T0 @X0 0 ef ]
+"75
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 75: void LIGHTBLUE_PushButton(void);
+[v _LIGHTBLUE_PushButton `(v ~T0 @X0 0 ef ]
+"89
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 89: void LIGHTBLUE_LedState(void);
+[v _LIGHTBLUE_LedState `(v ~T0 @X0 0 ef ]
+"100
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 100: void LIGHTBLUE_SendProtocolVersion(void);
+[v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 0 ef ]
+"126
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 126: void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+[v _LIGHTBLUE_ParseIncomingPacket `(v ~T0 @X0 0 ef1`uc ]
+"293 ./mcc_generated_files/rn487x/rn487x.h
+[; ;./mcc_generated_files/rn487x/rn487x.h: 293: uint8_t RN487X_Read(void);
+[v _RN487X_Read `(uc ~T0 @X0 0 ef ]
+"283
+[; ;./mcc_generated_files/rn487x/rn487x.h: 283: _Bool RN487X_DataReady(void);
+[v _RN487X_DataReady `(a ~T0 @X0 0 ef ]
+[v F12815 `(uc ~T0 @X0 0 tf ]
+[v F12817 `(v ~T0 @X0 0 tf1`uc ]
+[v F12820 `(a ~T0 @X0 0 tf ]
+[v F12822 `(a ~T0 @X0 0 tf ]
+[v F12825 `(v ~T0 @X0 0 tf ]
+[v F12824 `(v ~T0 @X0 0 tf1`*F12825 ]
+[v F12828 `(v ~T0 @X0 0 tf ]
+[v F12831 `(v ~T0 @X0 0 tf ]
+[v F12830 `(v ~T0 @X0 0 tf1`*F12831 ]
+[v F12834 `(a ~T0 @X0 0 tf ]
+[v F12836 `(v ~T0 @X0 0 tf ]
+[v F12838 `(v ~T0 @X0 0 tf ]
+"51 ./mcc_generated_files/drivers/uart.h
+[; ;./mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+[s S1692 `*F12815 1 `*F12817 1 `*F12820 1 `*F12822 1 `*F12824 1 `*F12828 1 `*F12830 1 `*F12834 1 `*F12836 1 `*F12838 1 ]
+[n S1692 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
+"53
+[; ;./mcc_generated_files/drivers/uart.h: 53: extern const uart_functions_t uart[];
+[v _uart `CS1692 ~T0 @X0 -> 0 `x e ]
+"108 main.c
+[; ;main.c: 108:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+[c E12809 0 1 .. ]
+[n E12809 . UART_CDC UART_BLE  ]
+"111 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 111: void LIGHTBLUE_SendSerialData(char* serialData);
+[v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 0 ef1`*uc ]
+[v F12725 `(v ~T0 @X0 0 tf1`uc ]
+[v F12728 `(uc ~T0 @X0 0 tf ]
+[v F12730 `(a ~T0 @X0 0 tf ]
+[v F12732 `(a ~T0 @X0 0 tf ]
+[v F12734 `(v ~T0 @X0 0 tf1`a ]
+[v F12737 `(v ~T0 @X0 0 tf1`a ]
+"133 main.c
+[; ;main.c: 133:                 RN487X.Write(uart[UART_CDC].Read());
+[c E12719 0 1 .. ]
+[n E12719 . TEST_MODE APPLICATION_MODE  ]
+[v F12740 `(v ~T0 @X0 0 tf1`E12719 ]
+[v F12743 `(v ~T0 @X0 0 tf1`us ]
+[v F12746 `(v ~T0 @X0 0 tf1`*uc ]
+"48 ./mcc_generated_files/rn487x/rn487x_interface.h
+[; ;./mcc_generated_files/rn487x/rn487x_interface.h: 48: {
+[s S1685 `*F12725 1 `*F12728 1 `*F12730 1 `*F12732 1 `*F12734 1 `*F12737 1 `*F12740 1 `*F12743 1 `*F12746 1 ]
+[n S1685 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
+"66
+[; ;./mcc_generated_files/rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
+[v _RN487X `CS1685 ~T0 @X0 0 e ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1609,87 +1682,221 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"126 ./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 126:     uint8_t _deviceAddress;
-[v __deviceAddress `uc ~T0 @X0 1 e ]
-"65 main.c
-[; ;main.c: 65: static char statusBuffer[(80)];
+"64 main.c
+[; ;main.c: 64: static char statusBuffer[(80)];
 [v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
-"66
-[; ;main.c: 66: static char lightBlueSerial[(80)];
+"65
+[; ;main.c: 65: static char lightBlueSerial[(80)];
 [v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
-"67
-[; ;main.c: 67: static uint8_t serialIndex;
+"66
+[; ;main.c: 66: static uint8_t serialIndex;
 [v _serialIndex `uc ~T0 @X0 1 s ]
-"68
-[; ;main.c: 68: float temp;
-[v _temp `f ~T0 @X0 1 e ]
-"69
-[; ;main.c: 69: float magX;
-[v _magX `f ~T0 @X0 1 e ]
-"70
-[; ;main.c: 70: float magY;
-[v _magY `f ~T0 @X0 1 e ]
-"71
-[; ;main.c: 71: float magZ;
-[v _magZ `f ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"76
-[; ;main.c: 76: int main(void)
+"71
+[; ;main.c: 71: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"77
-[; ;main.c: 77: {
+"72
+[; ;main.c: 72: {
 {
 [e :U _main ]
 [f ]
-"79
-[; ;main.c: 79:     SYSTEM_Initialize();
+"74
+[; ;main.c: 74:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"80
-[; ;main.c: 80:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof(statusBuffer));
+"75
+[; ;main.c: 75:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof(statusBuffer));
 [e ( _RN487X_SetAsyncMessageHandler (2 , &U _statusBuffer -> -> # _statusBuffer `ui `uc ]
-"83
-[; ;main.c: 83:     (INTCONbits.GIE = 1);
+"78
+[; ;main.c: 78:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"86
-[; ;main.c: 86:     (INTCONbits.PEIE = 1);
+"81
+[; ;main.c: 81:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"88
-[; ;main.c: 88:     RN487X_Init();
+"83
+[; ;main.c: 83:     RN487X_Init();
 [e ( _RN487X_Init ..  ]
-"89
-[; ;main.c: 89:     LIGHTBLUE_Initialize();
+"84
+[; ;main.c: 84:     LIGHTBLUE_Initialize();
 [e ( _LIGHTBLUE_Initialize ..  ]
-"90
-[; ;main.c: 90:     setTemperatureEn(1);
-[e ( _setTemperatureEn (1 -> -> 1 `i `a ]
-"93
-[; ;main.c: 93:     while (1){
+"86
+[; ;main.c: 86:     while (1)
 [e :U 1695 ]
+"87
+[; ;main.c: 87:     {
 {
+"88
+[; ;main.c: 88:         if (RN487X_IsConnected() == 1)
+[e $ ! == -> ( _RN487X_IsConnected ..  `i -> 1 `i 1697  ]
+"89
+[; ;main.c: 89:         {
+{
+"90
+[; ;main.c: 90:             if ((TMR0_HasOverflowOccured()) == 1)
+[e $ ! == -> ( _TMR0_HasOverflowOccured ..  `i -> 1 `i 1698  ]
+"91
+[; ;main.c: 91:             {
+{
+"92
+[; ;main.c: 92:                 (PIR0bits.TMR0IF = 0);
+[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
+"94
+[; ;main.c: 94:                 LIGHTBLUE_TemperatureSensor();
+[e ( _LIGHTBLUE_TemperatureSensor ..  ]
+"95
+[; ;main.c: 95:                 LIGHTBLUE_AccelSensor();
+[e ( _LIGHTBLUE_AccelSensor ..  ]
+"96
+[; ;main.c: 96:                 LIGHTBLUE_PushButton();
+[e ( _LIGHTBLUE_PushButton ..  ]
+"97
+[; ;main.c: 97:                 LIGHTBLUE_LedState();
+[e ( _LIGHTBLUE_LedState ..  ]
+"98
+[; ;main.c: 98:                 LIGHTBLUE_SendProtocolVersion();
+[e ( _LIGHTBLUE_SendProtocolVersion ..  ]
 "99
-[; ;main.c: 99:          temp =getTemp();
-[e = _temp ( _getTemp ..  ]
+[; ;main.c: 99:             }
+}
+[e $U 1699  ]
 "100
-[; ;main.c: 100:          magX=getXData();
-[e = _magX ( _getXData ..  ]
+[; ;main.c: 100:             else
+[e :U 1698 ]
 "101
-[; ;main.c: 101:          magY=getYData();
-[e = _magY ( _getYData ..  ]
+[; ;main.c: 101:             {
+{
 "102
-[; ;main.c: 102:          magZ=getZData();
-[e = _magZ ( _getZData ..  ]
+[; ;main.c: 102:                 while (RN487X_DataReady())
+[e $U 1700  ]
+[e :U 1701 ]
+"103
+[; ;main.c: 103:                 {
+{
+"104
+[; ;main.c: 104:                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+[e ( _LIGHTBLUE_ParseIncomingPacket (1 -> ( _RN487X_Read ..  `uc ]
+"105
+[; ;main.c: 105:                 }
+}
+[e :U 1700 ]
+"102
+[; ;main.c: 102:                 while (RN487X_DataReady())
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1701  ]
+[e :U 1702 ]
 "106
-[; ;main.c: 106:     }
+[; ;main.c: 106:                 while (uart[UART_CDC].DataReady())
+[e $U 1703  ]
+[e :U 1704 ]
+"107
+[; ;main.c: 107:                 {
+{
+"108
+[; ;main.c: 108:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
+"109
+[; ;main.c: 109:                     if ((lightBlueSerial[serialIndex] == '\r')
+[e $ ! || || == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 13 `ui == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 10 `ui == -> _serialIndex `ui - -> # _lightBlueSerial `ui -> -> 1 `i `ui 1706  ]
+"112
+[; ;main.c: 112:                     {
+{
+"113
+[; ;main.c: 113:                         lightBlueSerial[serialIndex] = '\0';
+[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> -> 0 `ui `uc ]
+"114
+[; ;main.c: 114:                         LIGHTBLUE_SendSerialData(lightBlueSerial);
+[e ( _LIGHTBLUE_SendSerialData (1 &U _lightBlueSerial ]
+"115
+[; ;main.c: 115:                         serialIndex = 0;
+[e = _serialIndex -> -> 0 `i `uc ]
+"116
+[; ;main.c: 116:                     }
+}
+[e $U 1707  ]
+"117
+[; ;main.c: 117:                     else
+[e :U 1706 ]
+"118
+[; ;main.c: 118:                     {
+{
+"119
+[; ;main.c: 119:                         serialIndex++;
+[e ++ _serialIndex -> -> 1 `i `uc ]
+"120
+[; ;main.c: 120:                     }
+}
+[e :U 1707 ]
+"121
+[; ;main.c: 121:                 }
+}
+[e :U 1703 ]
+"106
+[; ;main.c: 106:                 while (uart[UART_CDC].DataReady())
+[e $ != -> ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1704  ]
+[e :U 1705 ]
+"123
+[; ;main.c: 123:             }
+}
+[e :U 1699 ]
+"124
+[; ;main.c: 124:         }
+}
+[e $U 1708  ]
+"125
+[; ;main.c: 125:         else
+[e :U 1697 ]
+"126
+[; ;main.c: 126:         {
+{
+"127
+[; ;main.c: 127:             while(RN487X_DataReady())
+[e $U 1709  ]
+[e :U 1710 ]
+"128
+[; ;main.c: 128:             {
+{
+"129
+[; ;main.c: 129:                 uart[UART_CDC].Write(RN487X_Read());
+[e ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
+"130
+[; ;main.c: 130:             }
+}
+[e :U 1709 ]
+"127
+[; ;main.c: 127:             while(RN487X_DataReady())
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1710  ]
+[e :U 1711 ]
+"131
+[; ;main.c: 131:             while (uart[UART_CDC].DataReady())
+[e $U 1712  ]
+[e :U 1713 ]
+"132
+[; ;main.c: 132:             {
+{
+"133
+[; ;main.c: 133:                 RN487X.Write(uart[UART_CDC].Read());
+[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
+"134
+[; ;main.c: 134:             }
+}
+[e :U 1712 ]
+"131
+[; ;main.c: 131:             while (uart[UART_CDC].DataReady())
+[e $ != -> ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1713  ]
+[e :U 1714 ]
+"135
+[; ;main.c: 135:         }
+}
+[e :U 1708 ]
+"136
+[; ;main.c: 136:     }
 }
 [e :U 1694 ]
 [e $U 1695  ]
 [e :U 1696 ]
-"107
-[; ;main.c: 107:     return 0;
+"137
+[; ;main.c: 137:     return 0;
 [e ) -> 0 `i ]
 [e $UE 1693  ]
-"108
-[; ;main.c: 108: }
+"138
+[; ;main.c: 138: }
 [e :UE 1693 ]
 }

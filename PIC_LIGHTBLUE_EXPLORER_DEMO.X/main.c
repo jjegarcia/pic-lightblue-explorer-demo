@@ -42,7 +42,6 @@
 #include "mcc_generated_files/rn487x/rn487x_interface.h"
 #include "mcc_generated_files/rn487x/rn487x.h"
 #include "mcc_generated_files/drivers/uart.h"
-#include "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
 
 /** MACRO used to reference Periodic Timer overflow flag Set. 
  *  This is used by the application to have a semi-accurate 
@@ -65,10 +64,6 @@
 static char statusBuffer[MAX_BUFFER_SIZE];      /**< Status Buffer instance passed to RN487X drive used for Asynchronous Message Handling (see *asyncBuffer in rn487x.c) */
 static char lightBlueSerial[MAX_BUFFER_SIZE];   /**< Message Buffer used for CDC Serial communication when connected. Terminated by \r, \n, MAX character Passes messages to BLE for transmisison. */
 static uint8_t serialIndex;                     /**< Local index value for serial communication buffer. */
-float temp;
-float magX;
-float magY;
-float magZ;
 
 /*
                          Main application
@@ -87,22 +82,57 @@ int main(void)
 
     RN487X_Init();
     LIGHTBLUE_Initialize();
-    setTemperatureEn(true);
-//    uart[UART_CDC].Write("Hello:");
 
-    while (1){
-//                LIGHTBLUE_TemperatureSensor();
-//                LIGHTBLUE_AccelSensor();
-//                LIGHTBLUE_PushButton();
-//                LIGHTBLUE_LedState();
-//                LIGHTBLUE_SendProtocolVersion();
-         temp =getTemp();
-         magX=getXData();
-         magY=getYData();
-         magZ=getZData();
-         
-//         uart[UART_CDC].Write("Data:");
-//         uart[UART_CDC].Write(magX);
+    while (1)
+    {
+        if (RN487X_IsConnected() == true)
+        {
+            if (TIMER_FLAG_SET() == true)
+            {
+                RESET_TIMER_INTERRUPT_FLAG;
+
+                LIGHTBLUE_TemperatureSensor();
+                LIGHTBLUE_AccelSensor();
+                LIGHTBLUE_PushButton();
+                LIGHTBLUE_LedState();
+                LIGHTBLUE_SendProtocolVersion();
+            }
+            else
+            {
+                while (RN487X_DataReady())
+                {
+                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+                }
+                while (uart[UART_CDC].DataReady())
+                {
+                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+                    if ((lightBlueSerial[serialIndex] == '\r')
+                        || (lightBlueSerial[serialIndex] == '\n')
+                        || (serialIndex == (sizeof(lightBlueSerial) - 1)))
+                    {
+                        lightBlueSerial[serialIndex] = '\0';
+                        LIGHTBLUE_SendSerialData(lightBlueSerial);
+                        serialIndex = 0;
+                    }
+                    else
+                    {
+                        serialIndex++;
+                    }
+                }
+                
+            }
+        }
+        else
+        {
+            while(RN487X_DataReady())
+            {
+                uart[UART_CDC].Write(RN487X_Read());
+            }
+            while (uart[UART_CDC].DataReady())
+            {
+                RN487X.Write(uart[UART_CDC].Read());
+            }
+        }
     }
     return 0;
 }
