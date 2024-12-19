@@ -182,11 +182,6 @@ I2C1_DATA_NACK 3
 I2C1_TIMEOUT 4
 I2C1_NULL 5
 ]
-"104 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-[e E12809 . `uc
-UART_CDC 0
-UART_BLE 1
-]
 "192 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [e E2 TMAG5273_Register `uc
 TMAG5273_REG_DEVICE_CONFIG_1 0
@@ -1176,7 +1171,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 "36199
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-[v _statusBuffer@main$F3688 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+[v _statusBuffer@main$F3649 statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "68
 [v _temp temp `f  1 e 4 0 ]
 "69
@@ -1900,16 +1895,6 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v ___fladd@a a `d  1 p 4 14 ]
 "237
 } 0
-"43 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 1 ]
-"70
-} 0
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
@@ -2096,18 +2081,6 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
 {
 "305
-} 0
-"173 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-{
-[v EUSART1_Write@txData txData `uc  1 p 1 11 ]
-"194
-} 0
-"173 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-[v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
-{
-[v EUSART2_Write@txData txData `uc  1 p 1 11 ]
-"194
 } 0
 "52 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]

@@ -37,29 +37,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "114
 [; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 114:     float getZData();
 [v _getZData `(f ~T0 @X0 0 e? ]
-[v F12815 `(uc ~T0 @X0 0 tf ]
-[v F12817 `(v ~T0 @X0 0 tf1`uc ]
-[v F12820 `(a ~T0 @X0 0 tf ]
-[v F12822 `(a ~T0 @X0 0 tf ]
-[v F12825 `(v ~T0 @X0 0 tf ]
-[v F12824 `(v ~T0 @X0 0 tf1`*F12825 ]
-[v F12828 `(v ~T0 @X0 0 tf ]
-[v F12831 `(v ~T0 @X0 0 tf ]
-[v F12830 `(v ~T0 @X0 0 tf1`*F12831 ]
-[v F12834 `(a ~T0 @X0 0 tf ]
-[v F12836 `(v ~T0 @X0 0 tf ]
-[v F12838 `(v ~T0 @X0 0 tf ]
-"51 ./mcc_generated_files/drivers/uart.h
-[; ;./mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1692 `*F12815 1 `*F12817 1 `*F12820 1 `*F12822 1 `*F12824 1 `*F12828 1 `*F12830 1 `*F12834 1 `*F12836 1 `*F12838 1 ]
-[n S1692 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
-"53
-[; ;./mcc_generated_files/drivers/uart.h: 53: extern const uart_functions_t uart[];
-[v _uart `CS1692 ~T0 @X0 -> 0 `x e ]
-"104 main.c
-[; ;main.c: 104:          uart[UART_CDC].Write("Data:");
-[c E12809 0 1 .. ]
-[n E12809 . UART_CDC UART_BLE  ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1702,12 +1679,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "102
 [; ;main.c: 102:          magZ=getZData();
 [e = _magZ ( _getZData ..  ]
-"104
-[; ;main.c: 104:          uart[UART_CDC].Write("Data:");
-[e ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> :s 1C `uc ]
-"105
-[; ;main.c: 105:          uart[UART_CDC].Write(magX);
-[e ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> _magX `uc ]
 "106
 [; ;main.c: 106:     }
 }
@@ -1722,4 +1693,3 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 108: }
 [e :UE 1693 ]
 }
-[a 1C 68 97 116 97 58 0 ]

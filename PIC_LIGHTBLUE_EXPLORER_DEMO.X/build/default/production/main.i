@@ -21054,8 +21054,8 @@ int main(void)
          magY=getYData();
          magZ=getZData();
 
-         uart[UART_CDC].Write("Data:");
-         uart[UART_CDC].Write(magX);
+
+
     }
     return 0;
 }

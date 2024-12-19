@@ -88,7 +88,7 @@ int main(void)
     RN487X_Init();
     LIGHTBLUE_Initialize();
     setTemperatureEn(true);
-    
+//    uart[UART_CDC].Write("Hello:");
 
     while (1){
 //                LIGHTBLUE_TemperatureSensor();
@@ -101,8 +101,8 @@ int main(void)
          magY=getYData();
          magZ=getZData();
          
-         uart[UART_CDC].Write("Data:");
-         uart[UART_CDC].Write(magX);
+//         uart[UART_CDC].Write("Data:");
+//         uart[UART_CDC].Write(magX);
     }
     return 0;
 }
