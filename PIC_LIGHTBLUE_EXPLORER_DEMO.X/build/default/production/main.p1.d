@@ -13,4 +13,6 @@ mcc_generated_files/drivers/i2c_simple_master.h  \
 mcc_generated_files/application/LIGHTBLUE_service.h  \
 mcc_generated_files/rn487x/rn487x_interface.h  \
 mcc_generated_files/rn487x/rn487x.h  \
-mcc_generated_files/drivers/uart.h 
+mcc_generated_files/drivers/uart.h  \
+mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h  \
+mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library_Defs.h 

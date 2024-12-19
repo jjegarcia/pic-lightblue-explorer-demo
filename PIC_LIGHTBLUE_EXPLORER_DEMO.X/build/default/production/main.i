@@ -20861,10 +20861,167 @@ typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*T
 
 extern const uart_functions_t uart[];
 # 44 "main.c" 2
-# 64 "main.c"
+
+# 1 "./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h" 1
+# 22 "./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
+# 1 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library_Defs.h" 1
+# 140 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library_Defs.h"
+enum TMAG5273_Register
+{
+    TMAG5273_REG_DEVICE_CONFIG_1 = 0X00,
+    TMAG5273_REG_DEVICE_CONFIG_2 = 0X01,
+    TMAG5273_REG_SENSOR_CONFIG_1 = 0X02,
+    TMAG5273_REG_SENSOR_CONFIG_2 = 0X03,
+    TMAG5273_REG_X_THR_CONFIG = 0X04,
+    TMAG5273_REG_Y_THR_CONFIG = 0X05,
+    TMAG5273_REG_Z_THR_CONFIG = 0X06,
+    TMAG5273_REG_T_CONFIG = 0X07,
+    TMAG5273_REG_INT_CONFIG_1 = 0X08,
+    TMAG5273_REG_MAG_GAIN_CONFIG = 0X09,
+    TMAG5273_REG_MAG_OFFSET_CONFIG_1 = 0X0A,
+    TMAG5273_REG_MAG_OFFSET_CONFIG_2 = 0X0B,
+    TMAG5273_REG_I2C_ADDRESS = 0X0C,
+    TMAG5273_REG_DEVICE_ID = 0X0D,
+    TMAG5273_REG_MANUFACTURER_ID_LSB = 0X0E,
+    TMAG5273_REG_MANUFACTURER_ID_MSB = 0X0F,
+    TMAG5273_REG_T_MSB_RESULT = 0X10,
+    TMAG5273_REG_T_LSB_RESULT = 0X11,
+    TMAG5273_REG_X_MSB_RESULT = 0X12,
+    TMAG5273_REG_X_LSB_RESULT = 0X13,
+    TMAG5273_REG_Y_MSB_RESULT = 0X14,
+    TMAG5273_REG_Y_LSB_RESULT = 0X15,
+    TMAG5273_REG_Z_MSB_RESULT = 0X16,
+    TMAG5273_REG_Z_LSB_RESULT = 0X17,
+    TMAG5273_REG_CONV_STATUS = 0X18,
+    TMAG5273_REG_ANGLE_RESULT_MSB = 0X19,
+    TMAG5273_REG_ANGLE_RESULT_LSB = 0X1A,
+    TMAG5273_REG_MAGNITUDE_RESULT = 0X1B,
+    TMAG5273_REG_DEVICE_STATUS = 0X1C
+};
+# 22 "./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h" 2
+
+
+
+
+    int8_t begin(void);
+
+
+    int8_t isConnected();
+    int8_t setupWakeUpAndSleep();
+
+    int8_t readWakeUpAndSleepData(float *xVal, float *yVal, float *zVal,
+                                  float *temperature);
+
+
+    int8_t setCRCMode(uint8_t crcMode);
+    int8_t setMagTemp(uint8_t magTempMode);
+    int8_t setConvAvg(uint8_t avgMode);
+    int8_t setReadMode(uint8_t readMode);
+    int8_t setIntThreshold(
+        uint8_t threshold);
+    int8_t setLowPower(uint8_t lpLnMode);
+    int8_t setGlitchFilter(uint8_t glitchMode);
+    int8_t setTriggerMode(uint8_t trigMode);
+    int8_t setOperatingMode(uint8_t opMode);
+    int8_t setMagneticChannel(uint8_t channelMode);
+    int8_t setSleeptime(uint8_t sleepTime);
+    int8_t setMagDir(uint8_t threshDir);
+    int8_t setMagnitudeGain(uint8_t gainAdjust);
+    int8_t setMagneticGain(float magneticGain);
+    int8_t setMagneticOffset1(float offset1);
+    int8_t setMagneticOffset2(float offset2);
+    int8_t setAngleEn(uint8_t angleEnable);
+    int8_t setXYAxisRange(uint8_t xyAxisRange);
+    int8_t setZAxisRange(uint8_t zAxisRange);
+    int8_t setXThreshold(float xThreshold);
+    int8_t setYThreshold(float yThreshold);
+    int8_t setZThreshold(float zThresh);
+    int8_t setTemperatureThreshold(int8_t tempThresh);
+    int8_t setTemperatureEn(
+        _Bool temperatureEnable);
+    int8_t setInterruptResult(_Bool interruptEnable);
+    int8_t setThresholdEn(
+        _Bool enableInterruptResponse);
+    int8_t setIntPinState(_Bool interruptState);
+    int8_t setInterruptMode(uint8_t configurationMode);
+    int8_t setMaskInterrupt(_Bool interruptPinEnable);
+    int8_t setI2CAddress(uint8_t address);
+    int8_t setI2CAddressEN(
+        _Bool addressEnable);
+    int8_t setOscillatorError(_Bool oscError);
+
+
+    uint8_t getCRCMode();
+    uint8_t getMagTemp();
+    uint8_t getConvAvg();
+    uint8_t getReadMode();
+    uint8_t getIntThreshold();
+    uint8_t getLowPower();
+    uint8_t getGlitchFiler();
+    uint8_t getTriggerMode();
+    uint8_t getOperatingMode();
+    uint8_t getMagneticChannel();
+    uint8_t getSleeptime();
+    uint8_t getMagDir();
+    uint8_t getMagnitudeChannelSelect();
+    uint8_t getMagneticGain();
+    int8_t getMagneticOffset1();
+    int8_t getMagneticOffset2();
+    uint8_t getAngleEn();
+    uint8_t getXYAxisRange();
+    uint8_t getZAxisRange();
+    float getXThreshold();
+    float getYThreshold();
+    float getZThreshold();
+    float getTemperatureThreshold();
+    uint8_t getTemperatureEN();
+    uint8_t getInterruptResult();
+    uint8_t getThresholdEn();
+    uint8_t getIntPinState();
+    uint8_t getInterruptMode();
+    uint8_t getMaskInt();
+    uint8_t getSetCount();
+    uint8_t getPOR();
+    uint8_t getDiagStatus();
+    uint8_t getResultStatus();
+    uint8_t getI2CAddress();
+    uint8_t getDeviceID();
+    uint16_t getManufacturerID();
+
+    float getTemp();
+    float getXData();
+    float getYData();
+    float getZData();
+    float getAngleResult();
+    float getMagnitudeResult();
+
+    uint8_t getInterruptPinStatus();
+
+    uint8_t getDeviceStatus();
+    int8_t getError();
+
+
+
+
+    uint8_t _deviceAddress;
+
+    int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
+    int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
+    uint8_t readRegister(uint8_t regAddress);
+    uint8_t writeRegister(uint8_t regAddress, uint8_t data);
+    _Bool ping(uint8_t i2c_address);
+
+    uint8_t bitRead(uint16_t reg,uint8_t position);
+    void bitWrite(uint16_t *reg,uint8_t position,uint8_t value);
+# 45 "main.c" 2
+# 65 "main.c"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
+float temp;
+float magX;
+float magY;
+float magZ;
 
 
 
@@ -20883,13 +21040,22 @@ int main(void)
 
     RN487X_Init();
     LIGHTBLUE_Initialize();
+    setTemperatureEn(1);
+
 
     while (1){
-                LIGHTBLUE_TemperatureSensor();
-                LIGHTBLUE_AccelSensor();
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
-    return 0;
+
+
+
+
+
+         temp =getTemp();
+         magX=getXData();
+         magY=getYData();
+         magZ=getZData();
+
+         uart[UART_CDC].Write("Data:");
+         uart[UART_CDC].Write(magX);
     }
+    return 0;
 }

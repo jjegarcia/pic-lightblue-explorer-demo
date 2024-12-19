@@ -17,6 +17,8 @@
           <itemPath>mcc_generated_files/drivers/i2c_master.h</itemPath>
           <itemPath>mcc_generated_files/drivers/i2c_simple_master.h</itemPath>
           <itemPath>mcc_generated_files/drivers/i2c_types.h</itemPath>
+          <itemPath>mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h</itemPath>
+          <itemPath>mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library_Defs.h</itemPath>
         </logicalFolder>
         <logicalFolder name="examples" displayName="examples" projectFiles="true">
           <itemPath>mcc_generated_files/examples/rn487x_example.h</itemPath>
@@ -69,6 +71,7 @@
           <itemPath>mcc_generated_files/drivers/i2c_master.c</itemPath>
           <itemPath>mcc_generated_files/drivers/i2c_simple_master.c</itemPath>
           <itemPath>mcc_generated_files/drivers/i2c_types.c</itemPath>
+          <itemPath>mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c</itemPath>
         </logicalFolder>
         <logicalFolder name="examples" displayName="examples" projectFiles="true">
           <itemPath>mcc_generated_files/examples/rn487x_example.c</itemPath>

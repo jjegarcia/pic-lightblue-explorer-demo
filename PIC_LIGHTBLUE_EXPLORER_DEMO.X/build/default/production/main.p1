@@ -1,7 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"76 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
+"76 mcc_generated_files/drivers/../mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "271 ./mcc_generated_files/rn487x/rn487x.h
 [; ;./mcc_generated_files/rn487x/rn487x.h: 271: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
@@ -23,21 +22,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 36: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
-"50
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 50: void LIGHTBLUE_TemperatureSensor(void);
-[v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 0 ef ]
-"64
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 64: void LIGHTBLUE_AccelSensor(void);
-[v _LIGHTBLUE_AccelSensor `(v ~T0 @X0 0 ef ]
-"75
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 75: void LIGHTBLUE_PushButton(void);
-[v _LIGHTBLUE_PushButton `(v ~T0 @X0 0 ef ]
-"89
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 89: void LIGHTBLUE_LedState(void);
-[v _LIGHTBLUE_LedState `(v ~T0 @X0 0 ef ]
-"100
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 100: void LIGHTBLUE_SendProtocolVersion(void);
-[v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 0 ef ]
+"60 ./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 60:     int8_t setTemperatureEn(
+[v _setTemperatureEn `(c ~T0 @X0 0 ef1`a ]
+"111
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 111:     float getTemp();
+[v _getTemp `(f ~T0 @X0 0 e? ]
+"112
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 112:     float getXData();
+[v _getXData `(f ~T0 @X0 0 e? ]
+"113
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 113:     float getYData();
+[v _getYData `(f ~T0 @X0 0 e? ]
+"114
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 114:     float getZData();
+[v _getZData `(f ~T0 @X0 0 e? ]
+[v F12815 `(uc ~T0 @X0 0 tf ]
+[v F12817 `(v ~T0 @X0 0 tf1`uc ]
+[v F12820 `(a ~T0 @X0 0 tf ]
+[v F12822 `(a ~T0 @X0 0 tf ]
+[v F12825 `(v ~T0 @X0 0 tf ]
+[v F12824 `(v ~T0 @X0 0 tf1`*F12825 ]
+[v F12828 `(v ~T0 @X0 0 tf ]
+[v F12831 `(v ~T0 @X0 0 tf ]
+[v F12830 `(v ~T0 @X0 0 tf1`*F12831 ]
+[v F12834 `(a ~T0 @X0 0 tf ]
+[v F12836 `(v ~T0 @X0 0 tf ]
+[v F12838 `(v ~T0 @X0 0 tf ]
+"51 ./mcc_generated_files/drivers/uart.h
+[; ;./mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+[s S1692 `*F12815 1 `*F12817 1 `*F12820 1 `*F12822 1 `*F12824 1 `*F12828 1 `*F12830 1 `*F12834 1 `*F12836 1 `*F12838 1 ]
+[n S1692 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
+"53
+[; ;./mcc_generated_files/drivers/uart.h: 53: extern const uart_functions_t uart[];
+[v _uart `CS1692 ~T0 @X0 -> 0 `x e ]
+"104 main.c
+[; ;main.c: 104:          uart[UART_CDC].Write("Data:");
+[c E12809 0 1 .. ]
+[n E12809 . UART_CDC UART_BLE  ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1610,72 +1632,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"64 main.c
-[; ;main.c: 64: static char statusBuffer[(80)];
+"126 ./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 126:     uint8_t _deviceAddress;
+[v __deviceAddress `uc ~T0 @X0 1 e ]
+"65 main.c
+[; ;main.c: 65: static char statusBuffer[(80)];
 [v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
-"65
-[; ;main.c: 65: static char lightBlueSerial[(80)];
-[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
 "66
-[; ;main.c: 66: static uint8_t serialIndex;
+[; ;main.c: 66: static char lightBlueSerial[(80)];
+[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
+"67
+[; ;main.c: 67: static uint8_t serialIndex;
 [v _serialIndex `uc ~T0 @X0 1 s ]
-[v $root$_main `(v ~T0 @X0 0 e ]
+"68
+[; ;main.c: 68: float temp;
+[v _temp `f ~T0 @X0 1 e ]
+"69
+[; ;main.c: 69: float magX;
+[v _magX `f ~T0 @X0 1 e ]
+"70
+[; ;main.c: 70: float magY;
+[v _magY `f ~T0 @X0 1 e ]
 "71
-[; ;main.c: 71: int main(void)
+[; ;main.c: 71: float magZ;
+[v _magZ `f ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"76
+[; ;main.c: 76: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"72
-[; ;main.c: 72: {
+"77
+[; ;main.c: 77: {
 {
 [e :U _main ]
 [f ]
-"74
-[; ;main.c: 74:     SYSTEM_Initialize();
+"79
+[; ;main.c: 79:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"75
-[; ;main.c: 75:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof(statusBuffer));
+"80
+[; ;main.c: 80:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof(statusBuffer));
 [e ( _RN487X_SetAsyncMessageHandler (2 , &U _statusBuffer -> -> # _statusBuffer `ui `uc ]
-"78
-[; ;main.c: 78:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"81
-[; ;main.c: 81:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
 "83
-[; ;main.c: 83:     RN487X_Init();
-[e ( _RN487X_Init ..  ]
-"84
-[; ;main.c: 84:     LIGHTBLUE_Initialize();
-[e ( _LIGHTBLUE_Initialize ..  ]
+[; ;main.c: 83:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "86
-[; ;main.c: 86:     while (1){
+[; ;main.c: 86:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+"88
+[; ;main.c: 88:     RN487X_Init();
+[e ( _RN487X_Init ..  ]
+"89
+[; ;main.c: 89:     LIGHTBLUE_Initialize();
+[e ( _LIGHTBLUE_Initialize ..  ]
+"90
+[; ;main.c: 90:     setTemperatureEn(1);
+[e ( _setTemperatureEn (1 -> -> 1 `i `a ]
+"93
+[; ;main.c: 93:     while (1){
 [e :U 1695 ]
 {
-"87
-[; ;main.c: 87:                 LIGHTBLUE_TemperatureSensor();
-[e ( _LIGHTBLUE_TemperatureSensor ..  ]
-"88
-[; ;main.c: 88:                 LIGHTBLUE_AccelSensor();
-[e ( _LIGHTBLUE_AccelSensor ..  ]
-"89
-[; ;main.c: 89:                 LIGHTBLUE_PushButton();
-[e ( _LIGHTBLUE_PushButton ..  ]
-"90
-[; ;main.c: 90:                 LIGHTBLUE_LedState();
-[e ( _LIGHTBLUE_LedState ..  ]
-"91
-[; ;main.c: 91:                 LIGHTBLUE_SendProtocolVersion();
-[e ( _LIGHTBLUE_SendProtocolVersion ..  ]
-"92
-[; ;main.c: 92:     return 0;
-[e ) -> 0 `i ]
-[e $UE 1693  ]
-"93
-[; ;main.c: 93:     }
+"99
+[; ;main.c: 99:          temp =getTemp();
+[e = _temp ( _getTemp ..  ]
+"100
+[; ;main.c: 100:          magX=getXData();
+[e = _magX ( _getXData ..  ]
+"101
+[; ;main.c: 101:          magY=getYData();
+[e = _magY ( _getYData ..  ]
+"102
+[; ;main.c: 102:          magZ=getZData();
+[e = _magZ ( _getZData ..  ]
+"104
+[; ;main.c: 104:          uart[UART_CDC].Write("Data:");
+[e ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> :s 1C `uc ]
+"105
+[; ;main.c: 105:          uart[UART_CDC].Write(magX);
+[e ( *U . *U + &U _uart * -> . `E12809 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> _magX `uc ]
+"106
+[; ;main.c: 106:     }
 }
 [e :U 1694 ]
 [e $U 1695  ]
 [e :U 1696 ]
-"94
-[; ;main.c: 94: }
+"107
+[; ;main.c: 107:     return 0;
+[e ) -> 0 `i ]
+[e $UE 1693  ]
+"108
+[; ;main.c: 108: }
 [e :UE 1693 ]
 }
+[a 1C 68 97 116 97 58 0 ]

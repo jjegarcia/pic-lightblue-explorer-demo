@@ -21018,7 +21018,6 @@ enum TMAG5273_Register
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
-float temp;
 
 
 
@@ -21046,8 +21045,7 @@ int main(void)
 
 
 
-         temp =getTemp();
-         serialIndex=0;
+        float temp=getTemp();
     }
     return 0;
 }
