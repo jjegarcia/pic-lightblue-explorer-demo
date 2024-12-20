@@ -17,7 +17,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S1 `s 1 `s 1 `s 1 ]
 [n S1 . x y z ]
 "130 mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 130:     uint8_t readRegister(uint8_t regAddress);
+[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 130: uint8_t readRegister(uint8_t regAddress);
 [v _readRegister `(uc ~T0 @X0 0 ef1`uc ]
 "123 mcc_generated_files/application/BMA253_accel.c
 [; ;mcc_generated_files/application/BMA253_accel.c: 123:     lSB = readRegister(TMAG5273_REG_X_LSB_RESULT);
@@ -1596,7 +1596,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 "126 mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 126:     uint8_t _deviceAddress;
+[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 126: uint8_t _deviceAddress;
 [v __deviceAddress `uc ~T0 @X0 1 e ]
 "69 mcc_generated_files/application/BMA253_accel.c
 [; ;mcc_generated_files/application/BMA253_accel.c: 69: void BMA253_Initialize(void)

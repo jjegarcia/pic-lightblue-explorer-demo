@@ -21116,7 +21116,7 @@ _Bool ping(uint8_t i2c_address);
 
 uint8_t bitRead(uint16_t reg, uint8_t position);
 void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
-# 153 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
+# 155 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
 static int16_t TMAG5273_CalcTemperature(void);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);

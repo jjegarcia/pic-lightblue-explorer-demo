@@ -150,6 +150,8 @@ by the ambient temperature register.
  */
 #define MSB_MASK                            (0xFF00)
 
+#define LSB_MASK                            (0x00FF)
+
 static int16_t TMAG5273_CalcTemperature(void);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);

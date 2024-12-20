@@ -20903,116 +20903,122 @@ enum TMAG5273_Register
 
 
 
-    int8_t begin(void);
+int8_t begin(void);
 
 
-    int8_t isConnected();
-    int8_t setupWakeUpAndSleep();
+int8_t isConnected();
+int8_t setupWakeUpAndSleep();
 
-    int8_t readWakeUpAndSleepData(float *xVal, float *yVal, float *zVal,
-                                  float *temperature);
+int8_t readWakeUpAndSleepData(float *xVal, float *yVal, float *zVal,
+        float *temperature);
 
 
-    int8_t setCRCMode(uint8_t crcMode);
-    int8_t setMagTemp(uint8_t magTempMode);
-    int8_t setConvAvg(uint8_t avgMode);
-    int8_t setReadMode(uint8_t readMode);
-    int8_t setIntThreshold(
+int8_t setCRCMode(uint8_t crcMode);
+int8_t setMagTemp(uint8_t magTempMode);
+int8_t setConvAvg(uint8_t avgMode);
+int8_t setReadMode(uint8_t readMode);
+int8_t setIntThreshold(
         uint8_t threshold);
-    int8_t setLowPower(uint8_t lpLnMode);
-    int8_t setGlitchFilter(uint8_t glitchMode);
-    int8_t setTriggerMode(uint8_t trigMode);
-    int8_t setOperatingMode(uint8_t opMode);
-    int8_t setMagneticChannel(uint8_t channelMode);
-    int8_t setSleeptime(uint8_t sleepTime);
-    int8_t setMagDir(uint8_t threshDir);
-    int8_t setMagnitudeGain(uint8_t gainAdjust);
-    int8_t setMagneticGain(float magneticGain);
-    int8_t setMagneticOffset1(float offset1);
-    int8_t setMagneticOffset2(float offset2);
-    int8_t setAngleEn(uint8_t angleEnable);
-    int8_t setXYAxisRange(uint8_t xyAxisRange);
-    int8_t setZAxisRange(uint8_t zAxisRange);
-    int8_t setXThreshold(float xThreshold);
-    int8_t setYThreshold(float yThreshold);
-    int8_t setZThreshold(float zThresh);
-    int8_t setTemperatureThreshold(int8_t tempThresh);
-    int8_t setTemperatureEn(
+int8_t setLowPower(uint8_t lpLnMode);
+int8_t setGlitchFilter(uint8_t glitchMode);
+int8_t setTriggerMode(uint8_t trigMode);
+int8_t setOperatingMode(uint8_t opMode);
+int8_t setMagneticChannel(uint8_t channelMode);
+int8_t setSleeptime(uint8_t sleepTime);
+int8_t setMagDir(uint8_t threshDir);
+int8_t setMagnitudeGain(uint8_t gainAdjust);
+int8_t setMagneticGain(float magneticGain);
+int8_t setMagneticOffset1(float offset1);
+int8_t setMagneticOffset2(float offset2);
+int8_t setAngleEn(uint8_t angleEnable);
+int8_t setXYAxisRange(uint8_t xyAxisRange);
+int8_t setZAxisRange(uint8_t zAxisRange);
+int8_t setXThreshold(float xThreshold);
+int8_t setYThreshold(float yThreshold);
+int8_t setZThreshold(float zThresh);
+int8_t setTemperatureThreshold(int8_t tempThresh);
+int8_t setTemperatureEn(
         _Bool temperatureEnable);
-    int8_t setInterruptResult(_Bool interruptEnable);
-    int8_t setThresholdEn(
+int8_t setInterruptResult(_Bool interruptEnable);
+int8_t setThresholdEn(
         _Bool enableInterruptResponse);
-    int8_t setIntPinState(_Bool interruptState);
-    int8_t setInterruptMode(uint8_t configurationMode);
-    int8_t setMaskInterrupt(_Bool interruptPinEnable);
-    int8_t setI2CAddress(uint8_t address);
-    int8_t setI2CAddressEN(
+int8_t setIntPinState(_Bool interruptState);
+int8_t setInterruptMode(uint8_t configurationMode);
+int8_t setMaskInterrupt(_Bool interruptPinEnable);
+int8_t setI2CAddress(uint8_t address);
+int8_t setI2CAddressEN(
         _Bool addressEnable);
-    int8_t setOscillatorError(_Bool oscError);
+int8_t setOscillatorError(_Bool oscError);
 
 
-    uint8_t getCRCMode();
-    uint8_t getMagTemp();
-    uint8_t getConvAvg();
-    uint8_t getReadMode();
-    uint8_t getIntThreshold();
-    uint8_t getLowPower();
-    uint8_t getGlitchFiler();
-    uint8_t getTriggerMode();
-    uint8_t getOperatingMode();
-    uint8_t getMagneticChannel();
-    uint8_t getSleeptime();
-    uint8_t getMagDir();
-    uint8_t getMagnitudeChannelSelect();
-    uint8_t getMagneticGain();
-    int8_t getMagneticOffset1();
-    int8_t getMagneticOffset2();
-    uint8_t getAngleEn();
-    uint8_t getXYAxisRange();
-    uint8_t getZAxisRange();
-    float getXThreshold();
-    float getYThreshold();
-    float getZThreshold();
-    float getTemperatureThreshold();
-    uint8_t getTemperatureEN();
-    uint8_t getInterruptResult();
-    uint8_t getThresholdEn();
-    uint8_t getIntPinState();
-    uint8_t getInterruptMode();
-    uint8_t getMaskInt();
-    uint8_t getSetCount();
-    uint8_t getPOR();
-    uint8_t getDiagStatus();
-    uint8_t getResultStatus();
-    uint8_t getI2CAddress();
-    uint8_t getDeviceID();
-    uint16_t getManufacturerID();
+uint8_t getCRCMode();
+uint8_t getMagTemp();
+uint8_t getConvAvg();
+uint8_t getReadMode();
+uint8_t getIntThreshold();
+uint8_t getLowPower();
+uint8_t getGlitchFiler();
+uint8_t getTriggerMode();
+uint8_t getOperatingMode();
+uint8_t getMagneticChannel();
+uint8_t getSleeptime();
+uint8_t getMagDir();
+uint8_t getMagnitudeChannelSelect();
+uint8_t getMagneticGain();
+int8_t getMagneticOffset1();
+int8_t getMagneticOffset2();
+uint8_t getAngleEn();
+uint8_t getXYAxisRange();
+uint8_t getZAxisRange();
+float getXThreshold();
+float getYThreshold();
+float getZThreshold();
+float getTemperatureThreshold();
+uint8_t getTemperatureEN();
+uint8_t getInterruptResult();
+uint8_t getThresholdEn();
+uint8_t getIntPinState();
+uint8_t getInterruptMode();
+uint8_t getMaskInt();
+uint8_t getSetCount();
+uint8_t getPOR();
+uint8_t getDiagStatus();
+uint8_t getResultStatus();
+uint8_t getI2CAddress();
+uint8_t getDeviceID();
+uint16_t getManufacturerID();
 
-    float getTemp();
-    float getXData();
-    float getYData();
-    float getZData();
-    float getAngleResult();
-    float getMagnitudeResult();
+float getTemp();
+float getXData();
+float getYData();
+float getZData();
+float getAngleResult();
+float getMagnitudeResult();
 
-    uint8_t getInterruptPinStatus();
+uint8_t getInterruptPinStatus();
 
-    uint8_t getDeviceStatus();
-    int8_t getError();
-
-
+uint8_t getDeviceStatus();
+int8_t getError();
 
 
-    uint8_t _deviceAddress;
 
-    int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
-    int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
-    uint8_t readRegister(uint8_t regAddress);
-    uint8_t writeRegister(uint8_t regAddress, uint8_t data);
-    _Bool ping(uint8_t i2c_address);
 
-    uint8_t bitRead(uint16_t reg,uint8_t position);
-    void bitWrite(uint16_t *reg,uint8_t position,uint8_t value);
+uint8_t _deviceAddress;
+
+int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
+int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
+uint8_t readRegister(uint8_t regAddress);
+uint8_t writeRegister(uint8_t regAddress, uint8_t data);
+_Bool ping(uint8_t i2c_address);
+
+uint8_t bitRead(uint16_t reg, uint8_t position);
+void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
+# 155 "./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
+static int16_t TMAG5273_CalcTemperature(void);
+uint16_t TMAG5273_GetManufacture(void);
+uint16_t TMAG5273_GetDevice(void);
+void TMAG5273_GetTemperatureValue(int16_t *temperature);
+uint16_t swap(uint16_t reg);
 # 45 "main.c" 2
 # 65 "main.c"
 static char statusBuffer[(80)];

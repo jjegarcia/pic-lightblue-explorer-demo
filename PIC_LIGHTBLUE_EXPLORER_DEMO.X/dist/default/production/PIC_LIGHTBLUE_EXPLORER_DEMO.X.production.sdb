@@ -35,8 +35,8 @@ TMAG5273_REG_ANGLE_RESULT_LSB 26
 TMAG5273_REG_MAGNITUDE_RESULT 27
 TMAG5273_REG_DEVICE_STATUS 28
 ]
-"322 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[e E13197 . `uc
+"323 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[e E13204 . `uc
 PROTOCOL_VERSION_ID 86
 LED_STATE_ID 76
 BUTTON_STATE_ID 80
@@ -50,13 +50,13 @@ SERIAL_DATA_ID 83
 ERROR_ID 82
 UI_CONFIG_DATA_ID 85
 ]
-"387
+"388
 [e E271 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
-"400
-[e E13211 . `uc
+"401
+[e E13218 . `uc
 IDLE 0
 SEQUENCE_NUMBER 1
 PACKET_ID 2
@@ -65,7 +65,7 @@ PAYLOAD_SIZE_1 4
 PAYLOAD_0 5
 PAYLOAD_1 6
 ]
-"515
+"516
 [e E12881 . `uc
 UART_CDC 0
 UART_BLE 1
@@ -228,7 +228,7 @@ UART_BLE 1
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
-"193 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"197 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [e E2 TMAG5273_Register `uc
 TMAG5273_REG_DEVICE_CONFIG_1 0
 TMAG5273_REG_DEVICE_CONFIG_2 1
@@ -273,7 +273,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 "8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strchr.c
-[v _strchr strchr `(*.7uc  1 e 2 0 ]
+[v _strchr strchr `(*.39uc  1 e 2 0 ]
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
 [v _strcpy strcpy `(*.4uc  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
@@ -281,7 +281,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strstr.c
-[v _strstr strstr `(*.7uc  1 e 2 0 ]
+[v _strstr strstr `(*.39uc  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
@@ -310,35 +310,35 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
 "311
 [v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
-"325
+"326
 [v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
-"341
+"342
 [v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
-"351
+"352
 [v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
-"369
+"370
 [v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
-"384
+"385
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
-"399
+"400
 [v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
-"450
+"451
 [v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
-"462
+"463
 [v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
-"467
+"468
 [v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
-"474
+"475
 [v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
-"478
+"479
 [v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
-"482
+"483
 [v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
-"486
+"487
 [v _LIGHTBLUE_SetErrorLedValue LIGHTBLUE_SetErrorLedValue `(v  1 s 1 LIGHTBLUE_SetErrorLedValue ]
-"491
+"492
 [v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
-"498
+"499
 [v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
 "75 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/MCP9844_temp_sensor.c
 [v _MCP9844_CalcTemperature MCP9844_CalcTemperature `(s  1 s 2 MCP9844_CalcTemperature ]
@@ -408,52 +408,56 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
 "228
 [v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
-"29 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"31 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _begin begin `(c  1 e 1 0 ]
-"87
+"89
 [v _isConnected isConnected `(c  1 e 1 0 ]
-"109
+"113
 [v _readRegisters readRegisters `(c  1 e 1 0 ]
-"165
+"169
 [v _readRegister readRegister `(uc  1 e 1 0 ]
-"178
+"182
 [v _writeRegister writeRegister `(uc  1 e 1 0 ]
-"526
+"530
 [v _setOperatingMode setOperatingMode `(c  1 e 1 0 ]
-"578
+"582
 [v _setMagneticChannel setMagneticChannel `(c  1 e 1 0 ]
-"1007
+"1011
 [v _setXYAxisRange setXYAxisRange `(c  1 e 1 0 ]
-"1034
+"1038
 [v _setZAxisRange setZAxisRange `(c  1 e 1 0 ]
-"1133
+"1137
 [v _setTemperatureEn setTemperatureEn `(c  1 e 1 0 ]
-"1524
+"1528
 [v _getLowPower getLowPower `(uc  1 e 1 0 ]
-"1575
+"1579
 [v _getOperatingMode getOperatingMode `(uc  1 e 1 0 ]
-"1619
+"1623
 [v _getMagneticChannel getMagneticChannel `(uc  1 e 1 0 ]
-"1880
+"1884
 [v _getAngleEn getAngleEn `(uc  1 e 1 0 ]
-"1915
+"1919
 [v _getXYAxisRange getXYAxisRange `(uc  1 e 1 0 ]
-"1937
+"1941
 [v _getZAxisRange getZAxisRange `(uc  1 e 1 0 ]
-"2029
+"2033
 [v _getTemperatureEN getTemperatureEN `(uc  1 e 1 0 ]
-"2261
-[v _getManufacturerID getManufacturerID `(us  1 e 2 0 ]
-"2296
+"2300
 [v _getDeviceStatus getDeviceStatus `(uc  1 e 1 0 ]
-"2310
+"2314
 [v _getError getError `(c  1 e 1 0 ]
-"2335
-[v _getTemp getTemp `(f  1 e 4 0 ]
-"2500
+"2504
 [v _bitRead bitRead `(uc  1 e 1 0 ]
-"2507
+"2511
 [v _bitWrite bitWrite `(v  1 e 1 0 ]
+"2528
+[v _TMAG5273_GetManufacture TMAG5273_GetManufacture `(us  1 e 2 0 ]
+"2534
+[v _swap swap `(us  1 e 2 0 ]
+"2550
+[v _TMAG5273_GetTemperatureValue TMAG5273_GetTemperatureValue `(v  1 e 1 0 ]
+"2554
+[v _TMAG5273_CalcTemperature TMAG5273_CalcTemperature `(s  1 s 2 TMAG5273_CalcTemperature ]
 "88 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 "132
@@ -523,15 +527,15 @@ TMAG5273_REG_DEVICE_STATUS 28
 "280
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 "142 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/i2c1_master_example.c
-[v _rd1RegCompleteHandler@i2c1_master_example$F1237 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
+[v _rd1RegCompleteHandler@i2c1_master_example$F1239 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
 "149
-[v _rd2RegCompleteHandler@i2c1_master_example$F1248 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
+[v _rd2RegCompleteHandler@i2c1_master_example$F1250 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
 "156
-[v _wr1RegCompleteHandler@i2c1_master_example$F1254 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+[v _wr1RegCompleteHandler@i2c1_master_example$F1256 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
 "163
-[v _wr2RegCompleteHandler@i2c1_master_example$F1260 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
+[v _wr2RegCompleteHandler@i2c1_master_example$F1262 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
 "170
-[v _rdBlkRegCompleteHandler@i2c1_master_example$F1271 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
+[v _rdBlkRegCompleteHandler@i2c1_master_example$F1273 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
 "84 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/rn487x_example.c
 [v _RN487X_Example_Run RN487X_Example_Run `(v  1 s 1 RN487X_Example_Run ]
 "99
@@ -717,7 +721,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 "252
 [v _RN487X_Write RN487X_Write `T(v  1 s 1 RN487X_Write ]
 "257
-[v _RN487X_Read@rn487x_interface$F1379 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+[v _RN487X_Read@rn487x_interface$F1381 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
 "262
 [v _RN487X_is_tx_done RN487X_is_tx_done `T(a  1 s 1 RN487X_is_tx_done ]
 "267
@@ -744,15 +748,15 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "127
 [v _TMR0_HasOverflowOccured TMR0_HasOverflowOccured `(a  1 e 1 0 ]
-[s S1093 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S1095 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "427 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[u S1098 . 1 `S1093 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1098  1 e 1 @11 ]
-[s S288 . 1 `uc 1 RA0 1 0 :1:0 
+[u S1100 . 1 `S1095 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1100  1 e 1 @11 ]
+[s S289 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -762,11 +766,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 RA7 1 0 :1:7 
 ]
 "464
-[u S297 . 1 `S288 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES297  1 e 1 @12 ]
+[u S298 . 1 `S289 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES298  1 e 1 @12 ]
 "654
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
-[s S1496 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S1498 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -776,8 +780,8 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "671
-[u S1505 . 1 `S1496 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES1505  1 e 1 @18 ]
+[u S1507 . 1 `S1498 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1507  1 e 1 @18 ]
 "716
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
 "778
@@ -786,7 +790,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "861
 [v _LATA LATA `VEuc  1 e 1 @24 ]
-[s S326 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S327 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -796,13 +800,13 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 LATA7 1 0 :1:7 
 ]
 "878
-[u S335 . 1 `S326 1 . 1 0 ]
-[v _LATAbits LATAbits `VES335  1 e 1 @24 ]
+[u S336 . 1 `S327 1 . 1 0 ]
+[v _LATAbits LATAbits `VES336  1 e 1 @24 ]
 "923
 [v _LATB LATB `VEuc  1 e 1 @25 ]
 "985
 [v _LATC LATC `VEuc  1 e 1 @26 ]
-[s S1475 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1477 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -812,8 +816,8 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 LATC7 1 0 :1:7 
 ]
 "1002
-[u S1484 . 1 `S1475 1 . 1 0 ]
-[v _LATCbits LATCbits `VES1484  1 e 1 @26 ]
+[u S1486 . 1 `S1477 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1486  1 e 1 @26 ]
 "1047
 [v _LATE LATE `VEuc  1 e 1 @28 ]
 "5181
@@ -826,7 +830,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "5420
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S1925 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S1927 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -836,11 +840,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 SPEN 1 0 :1:7 
 ]
 "5446
-[u S1934 . 1 `S1925 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES1934  1 e 1 @285 ]
+[u S1936 . 1 `S1927 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES1936  1 e 1 @285 ]
 "5600
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S1903 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S1905 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -850,8 +854,8 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5626
-[u S1912 . 1 `S1903 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES1912  1 e 1 @286 ]
+[u S1914 . 1 `S1905 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES1914  1 e 1 @286 ]
 "5780
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
 "6026
@@ -862,7 +866,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
 "6236
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S2761 . 1 `uc 1 BF 1 0 :1:0 
+[s S2763 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -872,33 +876,33 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 SMP 1 0 :1:7 
 ]
 "6345
-[s S2770 . 1 `uc 1 . 1 0 :2:0 
+[s S2772 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S2775 . 1 `uc 1 . 1 0 :2:0 
+[s S2777 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S2780 . 1 `uc 1 . 1 0 :2:0 
+[s S2782 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S2785 . 1 `uc 1 . 1 0 :2:0 
+[s S2787 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S2790 . 1 `uc 1 . 1 0 :2:0 
+[s S2792 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S2796 . 1 `uc 1 BF1 1 0 :1:0 
+[s S2798 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -907,66 +911,66 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S2805 . 1 `uc 1 . 1 0 :2:0 
+[s S2807 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S2811 . 1 `uc 1 . 1 0 :2:0 
+[s S2813 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S2817 . 1 `uc 1 . 1 0 :2:0 
+[s S2819 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S2823 . 1 `uc 1 . 1 0 :2:0 
+[s S2825 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S2828 . 1 `uc 1 . 1 0 :2:0 
+[s S2830 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S2833 . 1 `uc 1 . 1 0 :2:0 
+[s S2835 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S2838 . 1 `uc 1 . 1 0 :2:0 
+[s S2840 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S2843 . 1 `uc 1 . 1 0 :2:0 
+[s S2845 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S2848 . 1 `S2761 1 . 1 0 `S2770 1 . 1 0 `S2775 1 . 1 0 `S2780 1 . 1 0 `S2785 1 . 1 0 `S2790 1 . 1 0 `S2796 1 . 1 0 `S2805 1 . 1 0 `S2811 1 . 1 0 `S2817 1 . 1 0 `S2823 1 . 1 0 `S2828 1 . 1 0 `S2833 1 . 1 0 `S2838 1 . 1 0 `S2843 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES2848  1 e 1 @399 ]
+[u S2850 . 1 `S2763 1 . 1 0 `S2772 1 . 1 0 `S2777 1 . 1 0 `S2782 1 . 1 0 `S2787 1 . 1 0 `S2792 1 . 1 0 `S2798 1 . 1 0 `S2807 1 . 1 0 `S2813 1 . 1 0 `S2819 1 . 1 0 `S2825 1 . 1 0 `S2830 1 . 1 0 `S2835 1 . 1 0 `S2840 1 . 1 0 `S2845 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES2850  1 e 1 @399 ]
 "6600
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S2603 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S2605 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6630
-[s S2609 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S2611 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S2614 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S2616 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -975,11 +979,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S2623 . 1 `S2603 1 . 1 0 `S2609 1 . 1 0 `S2614 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES2623  1 e 1 @400 ]
+[u S2625 . 1 `S2605 1 . 1 0 `S2611 1 . 1 0 `S2616 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES2625  1 e 1 @400 ]
 "6720
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S2682 . 1 `uc 1 SEN 1 0 :1:0 
+[s S2684 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -989,17 +993,17 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6767
-[s S2691 . 1 `uc 1 . 1 0 :1:0 
+[s S2693 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S2694 . 1 `uc 1 . 1 0 :1:0 
+[s S2696 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S2701 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S2703 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -1008,53 +1012,53 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S2710 . 1 `uc 1 . 1 0 :1:0 
+[s S2712 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S2717 . 1 `S2682 1 . 1 0 `S2691 1 . 1 0 `S2694 1 . 1 0 `S2701 1 . 1 0 `S2710 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES2717  1 e 1 @401 ]
+[u S2719 . 1 `S2684 1 . 1 0 `S2693 1 . 1 0 `S2696 1 . 1 0 `S2703 1 . 1 0 `S2712 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES2719  1 e 1 @401 ]
 "19404
 [v _TMR0L TMR0L `VEuc  1 e 1 @1436 ]
 "19542
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "19796
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S2543 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2545 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "19824
-[s S2549 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2551 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2555 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2557 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[u S2561 . 1 `S2543 1 . 1 0 `S2549 1 . 1 0 `S2555 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2561  1 e 1 @1438 ]
+[u S2563 . 1 `S2545 1 . 1 0 `S2551 1 . 1 0 `S2557 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2563  1 e 1 @1438 ]
 "19894
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
-[s S2247 . 1 `uc 1 INTF 1 0 :1:0 
+[s S2249 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "22424
-[u S2252 . 1 `S2247 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES2252  1 e 1 @1804 ]
-[s S2284 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S2254 . 1 `S2249 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES2254  1 e 1 @1804 ]
+[s S2286 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -1064,17 +1068,17 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "22533
-[u S2293 . 1 `S2284 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES2293  1 e 1 @1807 ]
-[s S2234 . 1 `uc 1 INTE 1 0 :1:0 
+[u S2295 . 1 `S2286 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES2295  1 e 1 @1807 ]
+[s S2236 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "22837
-[u S2239 . 1 `S2234 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES2239  1 e 1 @1814 ]
-[s S1841 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S2241 . 1 `S2236 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES2241  1 e 1 @1814 ]
+[s S1843 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -1084,8 +1088,8 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 RC2IE 1 0 :1:7 
 ]
 "22946
-[u S1850 . 1 `S1841 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES1850  1 e 1 @1817 ]
+[u S1852 . 1 `S1843 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1852  1 e 1 @1817 ]
 "23246
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "23291
@@ -1125,11 +1129,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 "26474
 [v _RC2STA RC2STA `VEuc  1 e 1 @2589 ]
 "26496
-[v _RC2STAbits RC2STAbits `VES1934  1 e 1 @2589 ]
+[v _RC2STAbits RC2STAbits `VES1936  1 e 1 @2589 ]
 "26596
 [v _TX2STA TX2STA `VEuc  1 e 1 @2590 ]
 "26618
-[v _TX2STAbits TX2STAbits `VES1912  1 e 1 @2590 ]
+[v _TX2STAbits TX2STAbits `VES1914  1 e 1 @2590 ]
 "26718
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @2591 ]
 "32778
@@ -1158,7 +1162,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
 "34938
 [v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
-[s S2445 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S2447 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -1168,11 +1172,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 IOCAP7 1 0 :1:7 
 ]
 "35017
-[u S2454 . 1 `S2445 1 . 1 0 ]
+[u S2456 . 1 `S2447 1 . 1 0 ]
 "35017
 "35017
-[v _IOCAPbits IOCAPbits `VES2454  1 e 1 @7997 ]
-[s S2424 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[v _IOCAPbits IOCAPbits `VES2456  1 e 1 @7997 ]
+[s S2426 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -1182,11 +1186,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 IOCAN7 1 0 :1:7 
 ]
 "35079
-[u S2433 . 1 `S2424 1 . 1 0 ]
+[u S2435 . 1 `S2426 1 . 1 0 ]
 "35079
 "35079
-[v _IOCANbits IOCANbits `VES2433  1 e 1 @7998 ]
-[s S2403 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[v _IOCANbits IOCANbits `VES2435  1 e 1 @7998 ]
+[s S2405 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -1196,10 +1200,10 @@ TMAG5273_REG_DEVICE_STATUS 28
 `uc 1 IOCAF7 1 0 :1:7 
 ]
 "35141
-[u S2412 . 1 `S2403 1 . 1 0 ]
+[u S2414 . 1 `S2405 1 . 1 0 ]
 "35141
 "35141
-[v _IOCAFbits IOCAFbits `VES2412  1 e 1 @7999 ]
+[v _IOCAFbits IOCAFbits `VES2414  1 e 1 @7999 ]
 "35186
 [v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
 "35248
@@ -1225,7 +1229,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 "36199
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-[v _statusBuffer@main$F3781 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+[v _statusBuffer@main$F3783 statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "66
 [v _lightBlueSerial lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
 "67
@@ -1254,20 +1258,22 @@ TMAG5273_REG_DEVICE_STATUS 28
 [s S155 . 2 `S142 1 ioBitMap 1 0 `S152 1 ioStateBitMap 1 1 ]
 [u S158 . 2 `us 1 gpioMap 2 0 `S155 1 . 2 0 ]
 [v _bitMap bitMap `VES158  1 s 2 bitMap ]
-[s S672 . 36 `uc 1 busy 1 0 :1:0 
+[s S674 . 36 `uc 1 busy 1 0 :1:0 
 `uc 1 inUse 1 0 :1:1 
 `uc 1 bufferFree 1 0 :1:2 
 `uc 1 addressNACKCheck 1 0 :1:3 
 `uc 1 address 1 1 `*.39uc 1 data_ptr 2 2 `ui 1 data_length 2 4 `us 1 time_out 2 6 `us 1 time_out_value 2 8 `E12652 1 state 1 10 `E12493 1 error 1 11 `[6]*.37(E12498 1 callbackTable 12 12 `[6]*.39v 1 callbackPayload 12 24 ]
 "80 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_master.c
-[v _i2c_status i2c_status `S672  1 e 36 0 ]
+[v _i2c_status i2c_status `S674  1 e 36 0 ]
 "400
 [v _fsmStateTable fsmStateTable `DC[16]*.37(E12652  1 e 32 0 ]
+"23 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+[v _manufactureId manufactureId `us  1 e 2 0 ]
 "126 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
 [v __deviceAddress _deviceAddress `uc  1 e 1 0 ]
-[s S359 . 20 `*.37(uc 1 Read 2 0 `*.37(v 1 Write 2 2 `*.37(a 1 TransmitReady 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 SetTxISR 2 8 `*.37(v 1 RxDefaultISR 2 10 `*.37(v 1 SetRxISR 2 12 `*.37(a 1 TransmitDone 2 14 `*.37(v 1 TxDefaultISR 2 16 `*.37(v 1 Initialize 2 18 ]
+[s S360 . 20 `*.37(uc 1 Read 2 0 `*.37(v 1 Write 2 2 `*.37(a 1 TransmitReady 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 SetTxISR 2 8 `*.37(v 1 RxDefaultISR 2 10 `*.37(v 1 SetRxISR 2 12 `*.37(a 1 TransmitDone 2 14 `*.37(v 1 TxDefaultISR 2 16 `*.37(v 1 Initialize 2 18 ]
 "35 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/uart.c
-[v _uart uart `DC[2]S359  1 e 40 0 ]
+[v _uart uart `DC[2]S360  1 e 40 0 ]
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
 [v _eusart1TxHead eusart1TxHead `VEuc  1 e 1 0 ]
 "63
@@ -1282,18 +1288,18 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
-[s S1828 . 1 `uc 1 perr 1 0 :1:0 
+[s S1830 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S1833 . 1 `S1828 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S1833  1 e 8 0 ]
+[u S1835 . 1 `S1830 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S1835  1 e 8 0 ]
 "71
 [v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart1RxLastError eusart1RxLastError `VES1833  1 e 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES1835  1 e 1 0 ]
 "77
 [v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -1319,11 +1325,11 @@ TMAG5273_REG_DEVICE_STATUS 28
 "69
 [v _eusart2RxBuffer eusart2RxBuffer `VE[8]uc  1 e 8 0 ]
 "70
-[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S1833  1 e 8 0 ]
+[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S1835  1 e 8 0 ]
 "71
 [v _eusart2RxCount eusart2RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart2RxLastError eusart2RxLastError `VES1833  1 e 1 0 ]
+[v _eusart2RxLastError eusart2RxLastError `VES1835  1 e 1 0 ]
 "77
 [v _EUSART2_TxDefaultInterruptHandler EUSART2_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -1342,32 +1348,32 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
 "146 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E12565  1 e 32 0 ]
-[s S3146 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S3148 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S3146  1 e 29 0 ]
+[v _I2C1_Status I2C1_Status `S3148  1 e 29 0 ]
 "54 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _IOCAF6_InterruptHandler IOCAF6_InterruptHandler `*.37(v  1 e 2 0 ]
 "36 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _cmdBuf cmdBuf `[64]uc  1 e 64 0 ]
 "40
-[v _asyncBuffer asyncBuffer `*.7uc  1 s 1 asyncBuffer ]
+[v _asyncBuffer asyncBuffer `*.39uc  1 s 2 asyncBuffer ]
 "41
 [v _asyncBufferSize asyncBufferSize `uc  1 s 1 asyncBufferSize ]
 "42
-[v _pHead pHead `*.7uc  1 s 1 pHead ]
+[v _pHead pHead `*.39uc  1 s 2 pHead ]
 "43
 [v _peek peek `uc  1 s 1 peek ]
 "44
 [v _dataReady dataReady `a  1 s 1 dataReady ]
 "33 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
 [v _connected connected `a  1 s 1 connected ]
-[s S230 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
+[s S231 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
 "227
-[v _RN487X RN487X `DCS230  1 e 18 0 ]
+[v _RN487X RN487X `DCS231  1 e 18 0 ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEus  1 e 2 0 ]
 "72 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
@@ -1375,75 +1381,75 @@ TMAG5273_REG_DEVICE_STATUS 28
 {
 "140
 } 0
-"29 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"31 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _begin begin `(c  1 e 1 0 ]
 {
-"80
+"82
 } 0
-"1034
+"1038
 [v _setZAxisRange setZAxisRange `(c  1 e 1 0 ]
 {
 [v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 wreg ]
-"1035
-[v setZAxisRange@mode mode `us  1 a 2 22 ]
-"1034
+"1039
+[v setZAxisRange@mode mode `us  1 a 2 25 ]
+"1038
 [v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 wreg ]
-[v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 21 ]
-"1052
+[v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 24 ]
+"1056
 } 0
-"1007
+"1011
 [v _setXYAxisRange setXYAxisRange `(c  1 e 1 0 ]
 {
 [v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 wreg ]
-"1008
-[v setXYAxisRange@mode mode `us  1 a 2 22 ]
-"1007
+"1012
+[v setXYAxisRange@mode mode `us  1 a 2 25 ]
+"1011
 [v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 wreg ]
-[v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 21 ]
-"1025
+[v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 24 ]
+"1029
 } 0
-"1133
+"1137
 [v _setTemperatureEn setTemperatureEn `(c  1 e 1 0 ]
 {
 [v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 wreg ]
-"1134
-[v setTemperatureEn@mode mode `us  1 a 2 22 ]
-"1133
+"1138
+[v setTemperatureEn@mode mode `us  1 a 2 25 ]
+"1137
 [v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 wreg ]
-[v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 21 ]
-"1151
+[v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 24 ]
+"1155
 } 0
-"526
+"530
 [v _setOperatingMode setOperatingMode `(c  1 e 1 0 ]
 {
 [v setOperatingMode@opMode opMode `uc  1 a 1 wreg ]
-"527
-[v setOperatingMode@mode mode `us  1 a 2 22 ]
-"526
+"531
+[v setOperatingMode@mode mode `us  1 a 2 25 ]
+"530
 [v setOperatingMode@opMode opMode `uc  1 a 1 wreg ]
-[v setOperatingMode@opMode opMode `uc  1 a 1 21 ]
-"558
+[v setOperatingMode@opMode opMode `uc  1 a 1 24 ]
+"562
 } 0
-"578
+"582
 [v _setMagneticChannel setMagneticChannel `(c  1 e 1 0 ]
 {
 [v setMagneticChannel@channelMode channelMode `uc  1 a 1 wreg ]
-"579
-[v setMagneticChannel@mode mode `us  1 a 2 22 ]
-"578
+"583
+[v setMagneticChannel@mode mode `us  1 a 2 25 ]
+"582
 [v setMagneticChannel@channelMode channelMode `uc  1 a 1 wreg ]
-[v setMagneticChannel@channelMode channelMode `uc  1 a 1 21 ]
-"676
+[v setMagneticChannel@channelMode channelMode `uc  1 a 1 24 ]
+"680
 } 0
-"178
+"182
 [v _writeRegister writeRegister `(uc  1 e 1 0 ]
 {
 [v writeRegister@regAddress regAddress `uc  1 a 1 wreg ]
 [v writeRegister@regAddress regAddress `uc  1 a 1 wreg ]
 [v writeRegister@data data `uc  1 p 1 6 ]
-"181
+"185
 [v writeRegister@regAddress regAddress `uc  1 a 1 7 ]
-"183
+"187
 } 0
 "51 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
 [v _i2c_write1ByteRegister i2c_write1ByteRegister `(v  1 e 1 0 ]
@@ -1455,118 +1461,127 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v i2c_write1ByteRegister@address address `uc  1 a 1 11 ]
 "59
 } 0
-"2310 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"2314 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _getError getError `(c  1 e 1 0 ]
 {
-"2312
-[v getError@statusReg statusReg `uc  1 a 1 18 ]
 "2316
-[v getError@oscillatorError oscillatorError `uc  1 a 1 17 ]
-"2315
-[v getError@intPinError intPinError `uc  1 a 1 16 ]
-"2314
-[v getError@otpCrcError otpCrcError `uc  1 a 1 15 ]
-"2313
-[v getError@undervoltageError undervoltageError `uc  1 a 1 14 ]
-"2324
+[v getError@statusReg statusReg `uc  1 a 1 21 ]
+"2320
+[v getError@oscillatorError oscillatorError `uc  1 a 1 20 ]
+"2319
+[v getError@intPinError intPinError `uc  1 a 1 19 ]
+"2318
+[v getError@otpCrcError otpCrcError `uc  1 a 1 18 ]
+"2317
+[v getError@undervoltageError undervoltageError `uc  1 a 1 17 ]
+"2328
 } 0
-"2296
+"2300
 [v _getDeviceStatus getDeviceStatus `(uc  1 e 1 0 ]
 {
-"2298
-[v getDeviceStatus@deviceStatusReg deviceStatusReg `uc  1 a 1 11 ]
-"2301
+"2302
+[v getDeviceStatus@deviceStatusReg deviceStatusReg `uc  1 a 1 14 ]
+"2305
 } 0
-"2507
+"2511
 [v _bitWrite bitWrite `(v  1 e 1 0 ]
 {
-"2509
+"2513
 [v bitWrite@lsb lsb `uc  1 a 1 8 ]
-"2508
+"2512
 [v bitWrite@mask mask `uc  1 a 1 7 ]
-"2510
+"2514
 [v bitWrite@msb msb `uc  1 a 1 6 ]
-"2507
+"2511
 [v bitWrite@reg reg `*.39us  1 p 2 1 ]
 [v bitWrite@position position `uc  1 p 1 3 ]
 [v bitWrite@value value `uc  1 p 1 4 ]
-"2522
+"2526
 } 0
-"87
+"89
 [v _isConnected isConnected `(c  1 e 1 0 ]
 {
-"100
+"104
 } 0
-"2261
-[v _getManufacturerID getManufacturerID `(us  1 e 2 0 ]
+"2528
+[v _TMAG5273_GetManufacture TMAG5273_GetManufacture `(us  1 e 2 0 ]
 {
-"2263
-[v getManufacturerID@databuffer databuffer `[2]uc  1 a 2 21 ]
-"2262
-[v getManufacturerID@deviceIDReg deviceIDReg `us  1 a 2 19 ]
-"2270
+"2530
+[v TMAG5273_GetManufacture@read read `us  1 a 2 15 ]
+"2532
 } 0
-"2029
+"2534
+[v _swap swap `(us  1 e 2 0 ]
+{
+"2536
+[v swap@lowerByte lowerByte `uc  1 a 1 9 ]
+"2535
+[v swap@upperByte upperByte `uc  1 a 1 8 ]
+"2534
+[v swap@reg reg `us  1 p 2 1 ]
+"2545
+} 0
+"2033
 [v _getTemperatureEN getTemperatureEN `(uc  1 e 1 0 ]
 {
-"2030
-[v getTemperatureEN@tempENreg tempENreg `uc  1 a 1 15 ]
-"2033
-[v getTemperatureEN@tempEN tempEN `uc  1 a 1 14 ]
-"2036
+"2034
+[v getTemperatureEN@tempENreg tempENreg `uc  1 a 1 17 ]
+"2037
+[v getTemperatureEN@tempEN tempEN `uc  1 a 1 16 ]
+"2040
 } 0
-"1575
+"1579
 [v _getOperatingMode getOperatingMode `(uc  1 e 1 0 ]
 {
+"1584
+[v getOperatingMode@opMode1 opMode1 `uc  1 a 1 18 ]
+"1583
+[v getOperatingMode@opMode0 opMode0 `uc  1 a 1 17 ]
 "1580
-[v getOperatingMode@opMode1 opMode1 `uc  1 a 1 16 ]
-"1579
-[v getOperatingMode@opMode0 opMode0 `uc  1 a 1 15 ]
-"1576
-[v getOperatingMode@opMode opMode `uc  1 a 1 14 ]
-"1601
+[v getOperatingMode@opMode opMode `uc  1 a 1 16 ]
+"1605
 } 0
-"1619
+"1623
 [v _getMagneticChannel getMagneticChannel `(uc  1 e 1 0 ]
 {
-"1626
-[v getMagneticChannel@magMode7 magMode7 `uc  1 a 1 18 ]
-"1625
-[v getMagneticChannel@magMode6 magMode6 `uc  1 a 1 17 ]
+"1630
+[v getMagneticChannel@magMode7 magMode7 `uc  1 a 1 20 ]
+"1629
+[v getMagneticChannel@magMode6 magMode6 `uc  1 a 1 19 ]
+"1628
+[v getMagneticChannel@magMode5 magMode5 `uc  1 a 1 18 ]
+"1627
+[v getMagneticChannel@magMode4 magMode4 `uc  1 a 1 17 ]
 "1624
-[v getMagneticChannel@magMode5 magMode5 `uc  1 a 1 16 ]
-"1623
-[v getMagneticChannel@magMode4 magMode4 `uc  1 a 1 15 ]
-"1620
-[v getMagneticChannel@magChannel magChannel `uc  1 a 1 14 ]
-"1667
+[v getMagneticChannel@magChannel magChannel `uc  1 a 1 16 ]
+"1671
 } 0
-"1524
+"1528
 [v _getLowPower getLowPower `(uc  1 e 1 0 ]
 {
-"1525
-[v getLowPower@lowPowerMode lowPowerMode `uc  1 a 1 15 ]
-"1528
-[v getLowPower@lowPowerModeBit lowPowerModeBit `uc  1 a 1 14 ]
-"1531
+"1529
+[v getLowPower@lowPowerMode lowPowerMode `uc  1 a 1 17 ]
+"1532
+[v getLowPower@lowPowerModeBit lowPowerModeBit `uc  1 a 1 16 ]
+"1535
 } 0
-"1880
+"1884
 [v _getAngleEn getAngleEn `(uc  1 e 1 0 ]
 {
+"1889
+[v getAngleEn@angleDir3 angleDir3 `uc  1 a 1 18 ]
+"1888
+[v getAngleEn@angleDir2 angleDir2 `uc  1 a 1 17 ]
 "1885
-[v getAngleEn@angleDir3 angleDir3 `uc  1 a 1 16 ]
-"1884
-[v getAngleEn@angleDir2 angleDir2 `uc  1 a 1 15 ]
-"1881
-[v getAngleEn@angleReg angleReg `uc  1 a 1 14 ]
-"1906
+[v getAngleEn@angleReg angleReg `uc  1 a 1 16 ]
+"1910
 } 0
-"2500
+"2504
 [v _bitRead bitRead `(uc  1 e 1 0 ]
 {
 [v bitRead@reg reg `us  1 p 2 1 ]
 [v bitRead@position position `uc  1 p 1 3 ]
-"2505
+"2509
 } 0
 "127 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _TMR0_HasOverflowOccured TMR0_HasOverflowOccured `(a  1 e 1 0 ]
@@ -1682,11 +1697,8 @@ TMAG5273_REG_DEVICE_STATUS 28
 "328 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_SetAsyncMessageHandler RN487X_SetAsyncMessageHandler `(a  1 e 1 0 ]
 {
-[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 wreg ]
-[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 wreg ]
-[v RN487X_SetAsyncMessageHandler@len len `uc  1 p 1 1 ]
-"330
-[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 2 ]
+[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.39uc  1 p 2 1 ]
+[v RN487X_SetAsyncMessageHandler@len len `uc  1 p 1 3 ]
 "340
 } 0
 "356
@@ -1703,7 +1715,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _RN487X_FilterData RN487X_FilterData `(a  1 s 1 RN487X_FilterData ]
 {
 "367
-[v RN487X_FilterData@readChar readChar `uc  1 a 1 36 ]
+[v RN487X_FilterData@readChar readChar `uc  1 a 1 40 ]
 "365
 [v RN487X_FilterData@asyncBuffering asyncBuffering `a  1 s 1 asyncBuffering ]
 "396
@@ -1712,42 +1724,34 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _RN487X_MessageHandler RN487X_MessageHandler `(v  1 s 1 RN487X_MessageHandler ]
 {
 "370
-[v RN487X_MessageHandler@messageType messageType `E12962  1 a 1 34 ]
+[v RN487X_MessageHandler@messageType messageType `E12962  1 a 1 35 ]
 "368
-[v RN487X_MessageHandler@message message `*.7uc  1 p 1 11 ]
+[v RN487X_MessageHandler@message message `*.39uc  1 p 2 33 ]
 "389
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strstr.c
-[v _strstr strstr `(*.7uc  1 e 2 0 ]
+[v _strstr strstr `(*.39uc  1 e 2 0 ]
 {
-[v strstr@h h `*.7DCuc  1 a 1 wreg ]
 "7
-[v strstr@nl nl `ui  1 a 2 0 ]
+[v strstr@nl nl `ui  1 a 2 2 ]
 "4
-[v strstr@h h `*.7DCuc  1 a 1 wreg ]
-[v strstr@n n `*.25DCuc  1 p 2 7 ]
-"6
-[v strstr@h h `*.7DCuc  1 a 1 2 ]
+[v strstr@h h `*.39DCuc  1 p 2 8 ]
+[v strstr@n n `*.25DCuc  1 p 2 10 ]
 "15
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
 {
-[v strncmp@l l `*.7DCuc  1 a 1 wreg ]
-[v strncmp@l l `*.7DCuc  1 a 1 wreg ]
-[v strncmp@r r `*.25DCuc  1 p 2 1 ]
-[v strncmp@n n `ui  1 p 2 3 ]
-"5
-[v strncmp@l l `*.7DCuc  1 a 1 6 ]
+[v strncmp@l l `*.39DCuc  1 p 2 1 ]
+[v strncmp@r r `*.25DCuc  1 p 2 3 ]
+[v strncmp@n n `ui  1 p 2 5 ]
 "8
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strchr.c
-[v _strchr strchr `(*.7uc  1 e 2 0 ]
+[v _strchr strchr `(*.39uc  1 e 2 0 ]
 {
-[v strchr@s s `*.7DCuc  1 a 1 wreg ]
-[v strchr@s s `*.7DCuc  1 a 1 wreg ]
-[v strchr@c c `i  1 p 2 1 ]
-[v strchr@s s `*.7DCuc  1 a 1 3 ]
+[v strchr@s s `*.39DCuc  1 p 2 1 ]
+[v strchr@c c `i  1 p 2 3 ]
 "11
 } 0
 "323 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
@@ -1763,15 +1767,12 @@ TMAG5273_REG_DEVICE_STATUS 28
 "358
 [v _rn487x_PrintMessage rn487x_PrintMessage `T(v  1 s 1 rn487x_PrintMessage ]
 {
-[v rn487x_PrintMessage@passedMessage passedMessage `*.7uc  1 a 1 wreg ]
 "362
-[v rn487x_PrintMessage@messageIndex messageIndex `uc  1 a 1 33 ]
+[v rn487x_PrintMessage@messageIndex messageIndex `uc  1 a 1 32 ]
 "360
 [v rn487x_PrintMessage@printCharacter printCharacter `[32]uc  1 a 32 0 ]
 "358
-[v rn487x_PrintMessage@passedMessage passedMessage `*.7uc  1 a 1 wreg ]
-"361
-[v rn487x_PrintMessage@passedMessage passedMessage `*.7uc  1 a 1 32 ]
+[v rn487x_PrintMessage@passedMessage passedMessage `*.39uc  1 p 2 7 ]
 "366
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
@@ -1779,12 +1780,12 @@ TMAG5273_REG_DEVICE_STATUS 28
 {
 [v strcpy@dest dest `*.4uc  1 a 1 wreg ]
 "5
-[v strcpy@d d `*.4uc  1 a 1 2 ]
+[v strcpy@d d `*.4uc  1 a 1 5 ]
 "3
 [v strcpy@dest dest `*.4uc  1 a 1 wreg ]
-[v strcpy@src src `*.7DCuc  1 p 1 1 ]
+[v strcpy@src src `*.39DCuc  1 p 2 1 ]
 "5
-[v strcpy@dest dest `*.4uc  1 a 1 3 ]
+[v strcpy@dest dest `*.4uc  1 a 1 6 ]
 "8
 } 0
 "342 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
@@ -1843,186 +1844,115 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
 {
 "312
-[v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 0 ]
+[v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 23 ]
 "313
-[v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 5 ]
-"323
+[v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 28 ]
+"324
 } 0
-"2335 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
-[v _getTemp getTemp `(f  1 e 4 0 ]
+"2550 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+[v _TMAG5273_GetTemperatureValue TMAG5273_GetTemperatureValue `(v  1 e 1 0 ]
 {
-"2344
-[v getTemp@tempOut tempOut `f  1 a 4 61 ]
-"2338
-[v getTemp@databuffer databuffer `[2]uc  1 a 2 71 ]
-"2337
-[v getTemp@temp temp `s  1 a 2 69 ]
-"2347
+[v TMAG5273_GetTemperatureValue@temperature temperature `*.39s  1 p 2 21 ]
+"2552
 } 0
-"109
-[v _readRegisters readRegisters `(c  1 e 1 0 ]
+"2554
+[v _TMAG5273_CalcTemperature TMAG5273_CalcTemperature `(s  1 s 2 TMAG5273_CalcTemperature ]
 {
-[v readRegisters@regAddress regAddress `uc  1 a 1 wreg ]
-[v readRegisters@regAddress regAddress `uc  1 a 1 wreg ]
-[v readRegisters@dataBuffer dataBuffer `*.4uc  1 p 1 7 ]
-[v readRegisters@numBytes numBytes `uc  1 p 1 8 ]
-"128
-[v readRegisters@regAddress regAddress `uc  1 a 1 11 ]
-"130
+"2555
+[v TMAG5273_CalcTemperature@temperatureData temperatureData `s  1 a 2 19 ]
+"2557
+[v TMAG5273_CalcTemperature@lowerByte lowerByte `uc  1 a 1 18 ]
+"2566
 } 0
-"228 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
-[v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
+"135 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
 {
-[v i2c_readNBytes@address address `uc  1 a 1 wreg ]
-[v i2c_readNBytes@address address `uc  1 a 1 wreg ]
-[v i2c_readNBytes@data data `*.4v  1 p 1 4 ]
-[v i2c_readNBytes@len len `ui  1 p 2 5 ]
-[v i2c_readNBytes@address address `uc  1 a 1 11 ]
-"234
+[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
+"138
+[v i2c_read2ByteRegister@result result `us  1 a 2 11 ]
+"135
+[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
+[v i2c_read2ByteRegister@reg reg `uc  1 p 1 4 ]
+[v i2c_read2ByteRegister@address address `uc  1 a 1 10 ]
+"148
 } 0
-"246 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
-[v _I2C1_MasterRead I2C1_MasterRead `(E358  1 e 1 0 ]
-{
-"249
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 2 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 1 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 1 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 0 ]
-"44
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 46 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 39 ]
-"20
-[v ___fldiv@new_exp new_exp `s  1 a 2 44 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 51 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 50 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 43 ]
-"8
-[v ___fldiv@a a `d  1 p 4 26 ]
-[v ___fldiv@b b `d  1 p 4 30 ]
-"185
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 25 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 24 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 23 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 22 ]
-"10
-[v ___fladd@b b `d  1 p 4 6 ]
-[v ___fladd@a a `d  1 p 4 10 ]
-"237
-} 0
-"43 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 78 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 77 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 73 ]
-"70
-} 0
-"384 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+"385 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
-"385
+"386
 [v LIGHTBLUE_SendSerialData@length length `uc  1 a 1 8 ]
-"384
+"385
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 9 ]
-"397
+"398
 } 0
-"369
+"370
 [v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
 {
-"370
-[v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 2 ]
-"372
-[v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 22 ]
 "371
+[v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 2 ]
+"373
+[v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 22 ]
+"372
 [v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
-"382
+"383
 } 0
-"341
+"342
 [v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
 {
-"342
-[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
 "343
+[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
+"344
 [v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
-"349
+"350
 } 0
-"474
+"475
 [v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
 {
-"476
+"477
 } 0
-"399
+"400
 [v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 wreg ]
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 wreg ]
-"400
-[v LIGHTBLUE_ParseIncomingPacket@parserState parserState `E13211  1 s 1 parserState ]
 "401
-[v LIGHTBLUE_ParseIncomingPacket@length length `uc  1 s 1 length ]
+[v LIGHTBLUE_ParseIncomingPacket@parserState parserState `E13218  1 s 1 parserState ]
 "402
-[v LIGHTBLUE_ParseIncomingPacket@data data `us  1 s 2 data ]
+[v LIGHTBLUE_ParseIncomingPacket@length length `uc  1 s 1 length ]
 "403
+[v LIGHTBLUE_ParseIncomingPacket@data data `us  1 s 2 data ]
+"404
 [v LIGHTBLUE_ParseIncomingPacket@packetID packetID `uc  1 s 1 packetID ]
-"399
+"400
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 19 ]
-"448
+"449
 } 0
-"498
+"499
 [v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
 {
 [v LIGHTBLUE_PerformAction@id id `uc  1 a 1 wreg ]
-"499
+"500
 [v LIGHTBLUE_PerformAction@led led `uc  1 a 1 10 ]
-"498
+"499
 [v LIGHTBLUE_PerformAction@id id `uc  1 a 1 wreg ]
 [v LIGHTBLUE_PerformAction@data data `uc  1 p 1 7 ]
 [v LIGHTBLUE_PerformAction@id id `uc  1 a 1 9 ]
-"520
+"521
 } 0
-"486
+"487
 [v _LIGHTBLUE_SetErrorLedValue LIGHTBLUE_SetErrorLedValue `(v  1 s 1 LIGHTBLUE_SetErrorLedValue ]
 {
 [v LIGHTBLUE_SetErrorLedValue@value value `a  1 a 1 wreg ]
 [v LIGHTBLUE_SetErrorLedValue@value value `a  1 a 1 wreg ]
 [v LIGHTBLUE_SetErrorLedValue@value value `a  1 a 1 6 ]
-"489
+"490
 } 0
-"491
+"492
 [v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
 {
-"496
+"497
 } 0
 "223 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_SetOutputs RN487X_SetOutputs `(a  1 e 1 0 ]
@@ -2083,14 +2013,14 @@ TMAG5273_REG_DEVICE_STATUS 28
 "79
 [v _RN487X_SendCmd RN487X_SendCmd `(v  1 e 1 0 ]
 {
-[v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 wreg ]
+[v RN487X_SendCmd@cmd cmd `*.5DCuc  1 a 1 wreg ]
 "81
 [v RN487X_SendCmd@index index `uc  1 a 1 9 ]
 "79
-[v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 wreg ]
+[v RN487X_SendCmd@cmd cmd `*.5DCuc  1 a 1 wreg ]
 [v RN487X_SendCmd@cmdLen cmdLen `uc  1 p 1 7 ]
 "81
-[v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 10 ]
+[v RN487X_SendCmd@cmd cmd `*.5DCuc  1 a 1 10 ]
 "91
 } 0
 "262 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
@@ -2121,7 +2051,7 @@ TMAG5273_REG_DEVICE_STATUS 28
 "123
 } 0
 "257 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-[v _RN487X_Read@rn487x_interface$F1379 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+[v _RN487X_Read@rn487x_interface$F1381 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
 {
 "260
 } 0
@@ -2151,62 +2081,66 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 1 ]
 "42
 } 0
-"351 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+"352 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
 {
-"352
-[v LIGHTBLUE_LedState@payload payload `[3]uc  1 a 3 0 ]
 "353
+[v LIGHTBLUE_LedState@payload payload `[3]uc  1 a 3 0 ]
+"354
 [v LIGHTBLUE_LedState@led led `uc  1 a 1 3 ]
-"367
+"368
 } 0
-"482
+"483
 [v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
 {
-"484
+"485
 } 0
-"478
+"479
 [v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
 {
-"480
+"481
 } 0
 "306
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
 {
 "309
 } 0
-"325
+"326
 [v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
 {
-"326
+"327
 [v LIGHTBLUE_AccelSensor@payload payload `[13]uc  1 a 13 22 ]
 [s S47 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
-"327
+"328
 [v LIGHTBLUE_AccelSensor@accelData accelData `S47  1 a 6 35 ]
-"339
+"340
 } 0
-"462
+"463
 [v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
 {
-[v LIGHTBLUE_SplitWord@payload payload `*.39uc  1 p 2 0 ]
-[v LIGHTBLUE_SplitWord@value value `s  1 p 2 2 ]
-"465
+[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
+[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
+[v LIGHTBLUE_SplitWord@value value `s  1 p 2 9 ]
+[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 11 ]
+"466
 } 0
-"467
+"468
 [v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
 {
-[v LIGHTBLUE_SplitByte@payload payload `*.39uc  1 p 2 6 ]
-[v LIGHTBLUE_SplitByte@value value `c  1 p 1 8 ]
-"472
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
+[v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 8 ]
+"473
 } 0
-"450
+"451
 [v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
 {
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
-[v LIGHTBLUE_SendPacket@payload payload `*.39uc  1 p 2 7 ]
-[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 11 ]
-"460
+[v LIGHTBLUE_SendPacket@payload payload `*.4uc  1 p 1 7 ]
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 10 ]
+"461
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -2253,16 +2187,42 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v BMA253_GetAccelDataXYZ@accelData accelData `*.4S47  1 a 1 19 ]
 "147
 } 0
-"165 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"169 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _readRegister readRegister `(uc  1 e 1 0 ]
 {
 [v readRegister@regAddress regAddress `uc  1 a 1 wreg ]
-"166
-[v readRegister@regVal regVal `uc  1 a 1 11 ]
-"165
+"170
+[v readRegister@regVal regVal `uc  1 a 1 13 ]
+"169
 [v readRegister@regAddress regAddress `uc  1 a 1 wreg ]
-[v readRegister@regAddress regAddress `uc  1 a 1 10 ]
-"171
+[v readRegister@regAddress regAddress `uc  1 a 1 12 ]
+"175
+} 0
+"113
+[v _readRegisters readRegisters `(c  1 e 1 0 ]
+{
+[v readRegisters@regAddress regAddress `uc  1 a 1 wreg ]
+[v readRegisters@regAddress regAddress `uc  1 a 1 wreg ]
+[v readRegisters@dataBuffer dataBuffer `*.4uc  1 p 1 7 ]
+[v readRegisters@numBytes numBytes `uc  1 p 1 8 ]
+"132
+[v readRegisters@regAddress regAddress `uc  1 a 1 11 ]
+"134
+} 0
+"228 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
+{
+[v i2c_readNBytes@address address `uc  1 a 1 wreg ]
+[v i2c_readNBytes@address address `uc  1 a 1 wreg ]
+[v i2c_readNBytes@data data `*.4v  1 p 1 4 ]
+[v i2c_readNBytes@len len `ui  1 p 2 5 ]
+[v i2c_readNBytes@address address `uc  1 a 1 11 ]
+"234
+} 0
+"246 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_MasterRead I2C1_MasterRead `(E358  1 e 1 0 ]
+{
+"249
 } 0
 "104 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/BMA253_accel.c
 [v _BMA253_GetAccelDataZ BMA253_GetAccelDataZ `(v  1 e 1 0 ]
@@ -2508,27 +2468,27 @@ TMAG5273_REG_DEVICE_STATUS 28
 "523
 } 0
 "170 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/i2c1_master_example.c
-[v _rdBlkRegCompleteHandler@i2c1_master_example$F1271 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
+[v _rdBlkRegCompleteHandler@i2c1_master_example$F1273 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
 {
-[v rdBlkRegCompleteHandler@i2c1_master_example$F1271@ptr ptr `*.4v  1 p 1 8 ]
+[v rdBlkRegCompleteHandler@i2c1_master_example$F1273@ptr ptr `*.4v  1 p 1 8 ]
 "175
 } 0
 "156
-[v _wr1RegCompleteHandler@i2c1_master_example$F1254 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+[v _wr1RegCompleteHandler@i2c1_master_example$F1256 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
 {
-[v wr1RegCompleteHandler@i2c1_master_example$F1254@ptr ptr `*.4v  1 p 1 8 ]
+[v wr1RegCompleteHandler@i2c1_master_example$F1256@ptr ptr `*.4v  1 p 1 8 ]
 "161
 } 0
 "149
-[v _rd2RegCompleteHandler@i2c1_master_example$F1248 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
+[v _rd2RegCompleteHandler@i2c1_master_example$F1250 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
 {
-[v rd2RegCompleteHandler@i2c1_master_example$F1248@ptr ptr `*.4v  1 p 1 8 ]
+[v rd2RegCompleteHandler@i2c1_master_example$F1250@ptr ptr `*.4v  1 p 1 8 ]
 "154
 } 0
 "142
-[v _rd1RegCompleteHandler@i2c1_master_example$F1237 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
+[v _rd1RegCompleteHandler@i2c1_master_example$F1239 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
 {
-[v rd1RegCompleteHandler@i2c1_master_example$F1237@ptr ptr `*.4v  1 p 1 8 ]
+[v rd1RegCompleteHandler@i2c1_master_example$F1239@ptr ptr `*.4v  1 p 1 8 ]
 "147
 } 0
 "185 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
@@ -2562,9 +2522,9 @@ TMAG5273_REG_DEVICE_STATUS 28
 "39
 } 0
 "163 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/i2c1_master_example.c
-[v _wr2RegCompleteHandler@i2c1_master_example$F1260 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
+[v _wr2RegCompleteHandler@i2c1_master_example$F1262 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
 {
-[v wr2RegCompleteHandler@i2c1_master_example$F1260@ptr ptr `*.4v  1 p 1 8 ]
+[v wr2RegCompleteHandler@i2c1_master_example$F1262@ptr ptr `*.4v  1 p 1 8 ]
 "168
 } 0
 "273 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c

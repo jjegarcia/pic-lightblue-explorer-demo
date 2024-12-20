@@ -23,7 +23,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 36: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
 "26 ./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 26:     int8_t begin(void);
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 26: int8_t begin(void);
 [v _begin `(c ~T0 @X0 0 ef ]
 "75 ./mcc_generated_files/rn487x/rn487x_interface.h
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 75: _Bool RN487X_IsConnected(void);
@@ -1685,7 +1685,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 "126 ./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 126:     uint8_t _deviceAddress;
+[; ;./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h: 126: uint8_t _deviceAddress;
 [v __deviceAddress `uc ~T0 @X0 1 e ]
 "65 main.c
 [; ;main.c: 65: static char statusBuffer[(80)];

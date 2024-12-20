@@ -23,8 +23,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/application/../rn487x/rn487x.h: 92: {
 [u S6 `us 1 `S7 1 ]
 [n S6 . gpioMap . ]
-"156 mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 156: void TMAG5273_GetTemperatureValue(int16_t *temperature);
+"158 mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h
+[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 158: void TMAG5273_GetTemperatureValue(int16_t *temperature);
 [v _TMAG5273_GetTemperatureValue `(v ~T0 @X0 0 ef1`*s ]
 "240 mcc_generated_files/application/LIGHTBLUE_service.c
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 240: static void LIGHTBLUE_SplitWord(char* payload, int16_t value);

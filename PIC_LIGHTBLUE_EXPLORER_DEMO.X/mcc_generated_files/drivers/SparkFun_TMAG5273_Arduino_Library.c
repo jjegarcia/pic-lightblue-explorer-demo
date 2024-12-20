@@ -30,6 +30,9 @@ uint16_t manufactureId;
 
 int8_t begin(void)//, TwoWire &wirePort)
 {
+    uint16_t testReg = 0b0001001110010001;
+    bitWrite(&testReg, 2, 1);
+
     //    _i2cPort = &wirePort;           // Chooses the wire port of the device
     //    _deviceAddress = sensorAddress; // Sets the address of the device
 
@@ -2509,30 +2512,19 @@ uint8_t bitRead(uint16_t reg, uint8_t position) {
 }
 
 void bitWrite(uint16_t *reg, uint8_t position, uint8_t value) {
-    uint8_t mask = 0;
-    uint8_t lsb = (uint8_t) reg | 0xff00;
-    uint8_t msb = (uint8_t) reg << 8;
-    if (position > 7) {
-        mask = value << position - 7;
-        msb = msb | mask;
-        reg = (msb >> 8) | lsb;
-    } else {
-        if (0 < position < 16) {
-            mask = value << position;
-            lsb = lsb | mask;
-            reg = (msb >> 8) | lsb;
-        }
-    }
+    uint16_t mask = 0;
+    mask = value << position;
+    *reg = *reg | mask;
 }
 
 uint16_t TMAG5273_GetManufacture(void) {
-    
-    uint16_t read= i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_MANUFACTURER_ID_LSB);
-    return swap(read);
- }
 
-uint16_t swap(uint16_t reg){
-       uint8_t upperByte;
+    uint16_t read = i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_MANUFACTURER_ID_LSB);
+    return swap(read);
+}
+
+uint16_t swap(uint16_t reg) {
+    uint8_t upperByte;
     uint8_t lowerByte;
 
     upperByte = ((reg & MSB_MASK) >> 8);
@@ -2543,6 +2535,7 @@ uint16_t swap(uint16_t reg){
     return reg;
 
 }
+
 uint16_t TMAG5273_GetDevice(void) {
     return i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_MANUFACTURER_ID_LSB);
 }
@@ -2557,10 +2550,10 @@ static int16_t TMAG5273_CalcTemperature(void) {
     uint8_t lowerByte;
 
     temperatureData = i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_T_MSB_RESULT);
-    upperByte = ((temperatureData & MSB_MASK) >> 8) & CLEAR_FLAG_BITS_MASK;
+    upperByte = ((temperatureData & LSB_MASK) >> 8) & CLEAR_FLAG_BITS_MASK;
     lowerByte = (uint8_t) temperatureData;
 
-    temperatureData = ((int16_t) (upperByte << 8) | lowerByte);
+    temperatureData = ((int16_t) (lowerByte << 8) | upperByte);
 
     return temperatureData;
 }
