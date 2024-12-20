@@ -228,7 +228,7 @@ UART_BLE 1
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
-"200 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"203 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [e E2 TMAG5273_Register `uc
 TMAG5273_REG_DEVICE_CONFIG_1 0
 TMAG5273_REG_DEVICE_CONFIG_2 1
@@ -410,53 +410,53 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
 "31 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _begin begin `(c  1 e 1 0 ]
-"92
+"95
 [v _isConnected isConnected `(c  1 e 1 0 ]
-"116
+"119
 [v _readRegisters readRegisters `(c  1 e 1 0 ]
-"172
+"175
 [v _readRegister readRegister `(uc  1 e 1 0 ]
-"185
+"188
 [v _writeRegister writeRegister `(uc  1 e 1 0 ]
-"533
+"536
 [v _setOperatingMode setOperatingMode `(c  1 e 1 0 ]
-"585
+"588
 [v _setMagneticChannel setMagneticChannel `(c  1 e 1 0 ]
-"1014
+"1017
 [v _setXYAxisRange setXYAxisRange `(c  1 e 1 0 ]
-"1041
+"1044
 [v _setZAxisRange setZAxisRange `(c  1 e 1 0 ]
-"1140
+"1143
 [v _setTemperatureEn setTemperatureEn `(c  1 e 1 0 ]
-"1531
+"1534
 [v _getLowPower getLowPower `(uc  1 e 1 0 ]
-"1582
+"1585
 [v _getOperatingMode getOperatingMode `(uc  1 e 1 0 ]
-"1626
+"1629
 [v _getMagneticChannel getMagneticChannel `(uc  1 e 1 0 ]
-"1887
+"1890
 [v _getAngleEn getAngleEn `(uc  1 e 1 0 ]
-"1922
+"1925
 [v _getXYAxisRange getXYAxisRange `(uc  1 e 1 0 ]
-"1944
+"1947
 [v _getZAxisRange getZAxisRange `(uc  1 e 1 0 ]
-"2036
+"2039
 [v _getTemperatureEN getTemperatureEN `(uc  1 e 1 0 ]
-"2303
+"2306
 [v _getDeviceStatus getDeviceStatus `(uc  1 e 1 0 ]
-"2317
+"2320
 [v _getError getError `(c  1 e 1 0 ]
-"2507
+"2510
 [v _bitRead bitRead `(uc  1 e 1 0 ]
-"2514
-[v _bitWrite bitWrite `(v  1 e 1 0 ]
 "2520
-[v _TMAG5273_GetManufacture TMAG5273_GetManufacture `(us  1 e 2 0 ]
+[v _bitWrite bitWrite `(v  1 e 1 0 ]
 "2526
+[v _TMAG5273_GetManufacture TMAG5273_GetManufacture `(us  1 e 2 0 ]
+"2532
 [v _swap swap `(us  1 e 2 0 ]
-"2543
+"2549
 [v _TMAG5273_GetTemperatureValue TMAG5273_GetTemperatureValue `(v  1 e 1 0 ]
-"2547
+"2553
 [v _TMAG5273_CalcTemperature TMAG5273_CalcTemperature `(s  1 s 2 TMAG5273_CalcTemperature ]
 "88 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -1386,72 +1386,72 @@ TMAG5273_REG_DEVICE_STATUS 28
 {
 "33
 [v begin@testReg testReg `us  1 a 2 27 ]
-"85
+"88
 } 0
-"1041
+"1044
 [v _setZAxisRange setZAxisRange `(c  1 e 1 0 ]
 {
 [v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 wreg ]
-"1042
+"1045
 [v setZAxisRange@mode mode `us  1 a 2 25 ]
-"1041
+"1044
 [v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 wreg ]
 [v setZAxisRange@zAxisRange zAxisRange `uc  1 a 1 24 ]
-"1059
+"1062
 } 0
-"1014
+"1017
 [v _setXYAxisRange setXYAxisRange `(c  1 e 1 0 ]
 {
 [v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 wreg ]
-"1015
+"1018
 [v setXYAxisRange@mode mode `us  1 a 2 25 ]
-"1014
+"1017
 [v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 wreg ]
 [v setXYAxisRange@xyAxisRange xyAxisRange `uc  1 a 1 24 ]
-"1032
+"1035
 } 0
-"1140
+"1143
 [v _setTemperatureEn setTemperatureEn `(c  1 e 1 0 ]
 {
 [v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 wreg ]
-"1141
+"1144
 [v setTemperatureEn@mode mode `us  1 a 2 25 ]
-"1140
+"1143
 [v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 wreg ]
 [v setTemperatureEn@temperatureEnable temperatureEnable `a  1 a 1 24 ]
-"1158
+"1161
 } 0
-"533
+"536
 [v _setOperatingMode setOperatingMode `(c  1 e 1 0 ]
 {
 [v setOperatingMode@opMode opMode `uc  1 a 1 wreg ]
-"534
+"537
 [v setOperatingMode@mode mode `us  1 a 2 25 ]
-"533
+"536
 [v setOperatingMode@opMode opMode `uc  1 a 1 wreg ]
 [v setOperatingMode@opMode opMode `uc  1 a 1 24 ]
-"565
+"568
 } 0
-"585
+"588
 [v _setMagneticChannel setMagneticChannel `(c  1 e 1 0 ]
 {
 [v setMagneticChannel@channelMode channelMode `uc  1 a 1 wreg ]
-"586
+"589
 [v setMagneticChannel@mode mode `us  1 a 2 25 ]
-"585
+"588
 [v setMagneticChannel@channelMode channelMode `uc  1 a 1 wreg ]
 [v setMagneticChannel@channelMode channelMode `uc  1 a 1 24 ]
-"683
+"686
 } 0
-"185
+"188
 [v _writeRegister writeRegister `(uc  1 e 1 0 ]
 {
 [v writeRegister@regAddress regAddress `uc  1 a 1 wreg ]
 [v writeRegister@regAddress regAddress `uc  1 a 1 wreg ]
 [v writeRegister@data data `uc  1 p 1 6 ]
-"188
+"191
 [v writeRegister@regAddress regAddress `uc  1 a 1 7 ]
-"190
+"193
 } 0
 "51 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
 [v _i2c_write1ByteRegister i2c_write1ByteRegister `(v  1 e 1 0 ]
@@ -1463,123 +1463,126 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v i2c_write1ByteRegister@address address `uc  1 a 1 11 ]
 "59
 } 0
-"2317 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"2320 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _getError getError `(c  1 e 1 0 ]
 {
-"2319
-[v getError@statusReg statusReg `uc  1 a 1 21 ]
-"2323
-[v getError@oscillatorError oscillatorError `uc  1 a 1 20 ]
 "2322
+[v getError@statusReg statusReg `uc  1 a 1 21 ]
+"2326
+[v getError@oscillatorError oscillatorError `uc  1 a 1 20 ]
+"2325
 [v getError@intPinError intPinError `uc  1 a 1 19 ]
-"2321
+"2324
 [v getError@otpCrcError otpCrcError `uc  1 a 1 18 ]
-"2320
+"2323
 [v getError@undervoltageError undervoltageError `uc  1 a 1 17 ]
-"2331
+"2334
 } 0
-"2303
+"2306
 [v _getDeviceStatus getDeviceStatus `(uc  1 e 1 0 ]
 {
-"2305
-[v getDeviceStatus@deviceStatusReg deviceStatusReg `uc  1 a 1 14 ]
 "2308
+[v getDeviceStatus@deviceStatusReg deviceStatusReg `uc  1 a 1 14 ]
+"2311
 } 0
-"2514
+"2520
 [v _bitWrite bitWrite `(v  1 e 1 0 ]
 {
-"2515
+"2521
 [v bitWrite@mask mask `us  1 a 2 9 ]
-"2514
+"2520
 [v bitWrite@reg reg `*.39us  1 p 2 1 ]
 [v bitWrite@position position `uc  1 p 1 3 ]
 [v bitWrite@value value `uc  1 p 1 4 ]
-"2518
-} 0
-"92
-[v _isConnected isConnected `(c  1 e 1 0 ]
-{
-"107
-} 0
-"2520
-[v _TMAG5273_GetManufacture TMAG5273_GetManufacture `(us  1 e 2 0 ]
-{
-"2522
-[v TMAG5273_GetManufacture@read read `us  1 a 2 15 ]
 "2524
 } 0
+"95
+[v _isConnected isConnected `(c  1 e 1 0 ]
+{
+"110
+} 0
 "2526
-[v _swap swap `(us  1 e 2 0 ]
+[v _TMAG5273_GetManufacture TMAG5273_GetManufacture `(us  1 e 2 0 ]
 {
 "2528
-[v swap@lowerByte lowerByte `uc  1 a 1 9 ]
-"2527
-[v swap@upperByte upperByte `uc  1 a 1 8 ]
-"2526
-[v swap@reg reg `us  1 p 2 1 ]
-"2537
+[v TMAG5273_GetManufacture@read read `us  1 a 2 15 ]
+"2530
 } 0
-"2036
+"2532
+[v _swap swap `(us  1 e 2 0 ]
+{
+"2534
+[v swap@lowerByte lowerByte `uc  1 a 1 9 ]
+"2533
+[v swap@upperByte upperByte `uc  1 a 1 8 ]
+"2532
+[v swap@reg reg `us  1 p 2 1 ]
+"2543
+} 0
+"2039
 [v _getTemperatureEN getTemperatureEN `(uc  1 e 1 0 ]
 {
-"2037
-[v getTemperatureEN@tempENreg tempENreg `uc  1 a 1 17 ]
 "2040
-[v getTemperatureEN@tempEN tempEN `uc  1 a 1 16 ]
+[v getTemperatureEN@tempENreg tempENreg `uc  1 a 1 17 ]
 "2043
+[v getTemperatureEN@tempEN tempEN `uc  1 a 1 16 ]
+"2046
 } 0
-"1582
+"1585
 [v _getOperatingMode getOperatingMode `(uc  1 e 1 0 ]
 {
-"1587
+"1590
 [v getOperatingMode@opMode1 opMode1 `uc  1 a 1 18 ]
-"1586
+"1589
 [v getOperatingMode@opMode0 opMode0 `uc  1 a 1 17 ]
-"1583
+"1586
 [v getOperatingMode@opMode opMode `uc  1 a 1 16 ]
-"1608
+"1611
 } 0
-"1626
+"1629
 [v _getMagneticChannel getMagneticChannel `(uc  1 e 1 0 ]
 {
-"1633
+"1636
 [v getMagneticChannel@magMode7 magMode7 `uc  1 a 1 20 ]
-"1632
+"1635
 [v getMagneticChannel@magMode6 magMode6 `uc  1 a 1 19 ]
-"1631
+"1634
 [v getMagneticChannel@magMode5 magMode5 `uc  1 a 1 18 ]
-"1630
+"1633
 [v getMagneticChannel@magMode4 magMode4 `uc  1 a 1 17 ]
-"1627
+"1630
 [v getMagneticChannel@magChannel magChannel `uc  1 a 1 16 ]
-"1674
+"1677
 } 0
-"1531
+"1534
 [v _getLowPower getLowPower `(uc  1 e 1 0 ]
 {
-"1532
-[v getLowPower@lowPowerMode lowPowerMode `uc  1 a 1 17 ]
 "1535
-[v getLowPower@lowPowerModeBit lowPowerModeBit `uc  1 a 1 16 ]
+[v getLowPower@lowPowerMode lowPowerMode `uc  1 a 1 17 ]
 "1538
+[v getLowPower@lowPowerModeBit lowPowerModeBit `uc  1 a 1 16 ]
+"1541
 } 0
-"1887
+"1890
 [v _getAngleEn getAngleEn `(uc  1 e 1 0 ]
 {
-"1892
+"1895
 [v getAngleEn@angleDir3 angleDir3 `uc  1 a 1 18 ]
-"1891
+"1894
 [v getAngleEn@angleDir2 angleDir2 `uc  1 a 1 17 ]
-"1888
+"1891
 [v getAngleEn@angleReg angleReg `uc  1 a 1 16 ]
-"1913
+"1916
 } 0
-"2507
+"2510
 [v _bitRead bitRead `(uc  1 e 1 0 ]
 {
-[v bitRead@reg reg `us  1 p 2 1 ]
+"2511
+[v bitRead@mask mask `us  1 a 2 8 ]
+"2510
+[v bitRead@reg reg `*.39us  1 p 2 1 ]
 [v bitRead@position position `uc  1 p 1 3 ]
-"2512
+"2518
 } 0
 "127 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _TMR0_HasOverflowOccured TMR0_HasOverflowOccured `(a  1 e 1 0 ]
@@ -1847,20 +1850,20 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 28 ]
 "324
 } 0
-"2543 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"2549 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _TMAG5273_GetTemperatureValue TMAG5273_GetTemperatureValue `(v  1 e 1 0 ]
 {
 [v TMAG5273_GetTemperatureValue@temperature temperature `*.39s  1 p 2 21 ]
-"2545
+"2551
 } 0
-"2547
+"2553
 [v _TMAG5273_CalcTemperature TMAG5273_CalcTemperature `(s  1 s 2 TMAG5273_CalcTemperature ]
 {
-"2548
+"2554
 [v TMAG5273_CalcTemperature@temperatureData temperatureData `s  1 a 2 19 ]
-"2550
+"2556
 [v TMAG5273_CalcTemperature@lowerByte lowerByte `uc  1 a 1 18 ]
-"2559
+"2565
 } 0
 "135 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
 [v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
@@ -2185,27 +2188,27 @@ TMAG5273_REG_DEVICE_STATUS 28
 [v BMA253_GetAccelDataXYZ@accelData accelData `*.4S47  1 a 1 19 ]
 "147
 } 0
-"172 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
+"175 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c
 [v _readRegister readRegister `(uc  1 e 1 0 ]
 {
 [v readRegister@regAddress regAddress `uc  1 a 1 wreg ]
-"173
+"176
 [v readRegister@regVal regVal `uc  1 a 1 13 ]
-"172
+"175
 [v readRegister@regAddress regAddress `uc  1 a 1 wreg ]
 [v readRegister@regAddress regAddress `uc  1 a 1 12 ]
-"178
+"181
 } 0
-"116
+"119
 [v _readRegisters readRegisters `(c  1 e 1 0 ]
 {
 [v readRegisters@regAddress regAddress `uc  1 a 1 wreg ]
 [v readRegisters@regAddress regAddress `uc  1 a 1 wreg ]
 [v readRegisters@dataBuffer dataBuffer `*.4uc  1 p 1 7 ]
 [v readRegisters@numBytes numBytes `uc  1 p 1 8 ]
-"135
+"138
 [v readRegisters@regAddress regAddress `uc  1 a 1 11 ]
-"137
+"140
 } 0
 "228 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
 [v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]

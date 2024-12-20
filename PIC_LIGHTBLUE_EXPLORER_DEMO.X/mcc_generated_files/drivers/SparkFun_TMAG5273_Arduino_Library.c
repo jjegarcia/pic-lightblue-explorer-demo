@@ -31,8 +31,11 @@ uint16_t manufactureId;
 int8_t begin(void)//, TwoWire &wirePort)
 {
     uint16_t testReg = 0b0001001110010001;
+    uint8_t myRead = 0;
     bitWrite(&testReg, 2, 1);
+    myRead = bitRead(&testReg, 2);
 
+    myRead = bitRead(&testReg, 1);
     //    _i2cPort = &wirePort;           // Chooses the wire port of the device
     //    _deviceAddress = sensorAddress; // Sets the address of the device
 
@@ -2504,11 +2507,14 @@ float getMagnitudeResult() {
     return magReg;
 }
 
-uint8_t bitRead(uint16_t reg, uint8_t position) {
-    if (reg & (1 << position) == 0) {
-        return 0x0;
+uint8_t bitRead(uint16_t *reg, uint8_t position) {
+    uint16_t mask = (1 << position) & *reg;
+
+    if (mask == 0) {
+        return 0;
+    } else {
+        return 1;
     }
-    return 0x01;
 }
 
 void bitWrite(uint16_t *reg, uint8_t position, uint8_t value) {

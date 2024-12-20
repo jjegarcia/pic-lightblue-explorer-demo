@@ -131,7 +131,7 @@ uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);
 bool ping(uint8_t i2c_address); // Checks for device presence
 
-uint8_t bitRead(uint16_t reg, uint8_t position);
+uint8_t bitRead(uint16_t *reg, uint8_t position);
 void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
 
 
