@@ -20,6 +20,8 @@ Distributed as-is; no warranty is given.
 #include "SparkFun_TMAG5273_Arduino_Library_Defs.h"
 #include <mcc.h>
 
+uint16_t manufactureId;
+
 /// @brief Begin communication with the TMAG over I2C, initialize it, and
 /// and set the wire for the I2C communication
 /// @param sensorAddress I2C address of the sensor
@@ -92,7 +94,9 @@ int8_t isConnected() {
     //        return -1;
     //    }
 
-    if (getManufacturerID() != TMAG5273_DEVICE_ID_VALUE) {
+    manufactureId = TMAG5273_GetManufacture();
+
+    if (manufactureId != TMAG5273_DEVICE_ID_VALUE) {
         return -1;
     }
 
@@ -125,7 +129,7 @@ int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes) 
     //        dataBuffer[i] = Wire.read();
     //    }
     //
-    i2c_readNBytes(regAddress,&dataBuffer,numBytes);
+    i2c_readNBytes(regAddress, &dataBuffer, numBytes);
     return 0;
 }
 
@@ -164,8 +168,9 @@ int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes)
 
 uint8_t readRegister(uint8_t regAddress) {
     uint8_t regVal = 0;
-//    readRegisters(regAddress, &regVal, 2);    
-    i2c_readNBytes(regAddress,&regVal,2);
+    readRegisters(regAddress, &regVal, 1);
+    //    i2c_read1ByteRegister(regAddress, &regVal);
+    //    i2c_readNBytes(regAddress,&regVal,2);
     return regVal;
 }
 
@@ -177,7 +182,7 @@ uint8_t readRegister(uint8_t regAddress) {
 uint8_t writeRegister(uint8_t regAddress, uint8_t data) {
     // Write 1 byte to writeRegisters()
     //writeRegisters(regAddress, &data, 1);
-    i2c_write1ByteRegister( TMAG5273_I2C_ADDRESS_INITIAL,  regAddress,  data);
+    i2c_write1ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, regAddress, data);
     return data;
 }
 
@@ -2518,4 +2523,44 @@ void bitWrite(uint16_t *reg, uint8_t position, uint8_t value) {
             reg = (msb >> 8) | lsb;
         }
     }
+}
+
+uint16_t TMAG5273_GetManufacture(void) {
+    
+    uint16_t read= i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_MANUFACTURER_ID_LSB);
+    return swap(read);
+ }
+
+uint16_t swap(uint16_t reg){
+       uint8_t upperByte;
+    uint8_t lowerByte;
+
+    upperByte = ((reg & MSB_MASK) >> 8);
+    lowerByte = (uint8_t) reg;
+
+    reg = ((int16_t) (lowerByte << 8) | upperByte);
+
+    return reg;
+
+}
+uint16_t TMAG5273_GetDevice(void) {
+    return i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_MANUFACTURER_ID_LSB);
+}
+
+void TMAG5273_GetTemperatureValue(int16_t *temperature) {
+    *temperature = TMAG5273_CalcTemperature();
+}
+
+static int16_t TMAG5273_CalcTemperature(void) {
+    int16_t temperatureData;
+    uint8_t upperByte;
+    uint8_t lowerByte;
+
+    temperatureData = i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_T_MSB_RESULT);
+    upperByte = ((temperatureData & MSB_MASK) >> 8) & CLEAR_FLAG_BITS_MASK;
+    lowerByte = (uint8_t) temperatureData;
+
+    temperatureData = ((int16_t) (upperByte << 8) | lowerByte);
+
+    return temperatureData;
 }

@@ -36,6 +36,7 @@
 #include "MCP9844_temp_sensor.h"
 #include "../pin_manager.h"
 #include "../drivers/uart.h"
+#include "../drivers/SparkFun_TMAG5273_Arduino_Library.h"
 
 /**
 \ingroup LIGHTBLUE
@@ -312,7 +313,10 @@ void LIGHTBLUE_TemperatureSensor(void) {
     int16_t temperature;
 
     *payload = '\0';
-    MCP9844_GetTemperatureValue(&temperature);
+//    MCP9844_GetTemperatureValue(&temperature);
+    
+//    temperature= getTemp();
+    TMAG5273_GetTemperatureValue(temperature);
 
     LIGHTBLUE_SplitWord(payload, temperature);
 
@@ -322,7 +326,8 @@ void LIGHTBLUE_TemperatureSensor(void) {
 void LIGHTBLUE_AccelSensor(void) {
     char payload[13];
     BMA253_ACCEL_DATA_t accelData;
-
+    
+   
     *payload = '\0';
     BMA253_GetAccelDataXYZ(&accelData);
     // Masking to ensure top nibble is always 0 as light blue expects

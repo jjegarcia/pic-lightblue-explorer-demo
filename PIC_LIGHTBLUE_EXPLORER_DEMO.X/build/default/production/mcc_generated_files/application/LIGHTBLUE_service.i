@@ -20841,7 +20841,283 @@ typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*T
 
 extern const uart_functions_t uart[];
 # 38 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
-# 178 "mcc_generated_files/application/LIGHTBLUE_service.c"
+
+# 1 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h" 1
+# 22 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
+# 1 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library_Defs.h" 1
+# 140 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library_Defs.h"
+enum TMAG5273_Register
+{
+    TMAG5273_REG_DEVICE_CONFIG_1 = 0X00,
+    TMAG5273_REG_DEVICE_CONFIG_2 = 0X01,
+    TMAG5273_REG_SENSOR_CONFIG_1 = 0X02,
+    TMAG5273_REG_SENSOR_CONFIG_2 = 0X03,
+    TMAG5273_REG_X_THR_CONFIG = 0X04,
+    TMAG5273_REG_Y_THR_CONFIG = 0X05,
+    TMAG5273_REG_Z_THR_CONFIG = 0X06,
+    TMAG5273_REG_T_CONFIG = 0X07,
+    TMAG5273_REG_INT_CONFIG_1 = 0X08,
+    TMAG5273_REG_MAG_GAIN_CONFIG = 0X09,
+    TMAG5273_REG_MAG_OFFSET_CONFIG_1 = 0X0A,
+    TMAG5273_REG_MAG_OFFSET_CONFIG_2 = 0X0B,
+    TMAG5273_REG_I2C_ADDRESS = 0X0C,
+    TMAG5273_REG_DEVICE_ID = 0X0D,
+    TMAG5273_REG_MANUFACTURER_ID_LSB = 0X0E,
+    TMAG5273_REG_MANUFACTURER_ID_MSB = 0X0F,
+    TMAG5273_REG_T_MSB_RESULT = 0X10,
+    TMAG5273_REG_T_LSB_RESULT = 0X11,
+    TMAG5273_REG_X_MSB_RESULT = 0X12,
+    TMAG5273_REG_X_LSB_RESULT = 0X13,
+    TMAG5273_REG_Y_MSB_RESULT = 0X14,
+    TMAG5273_REG_Y_LSB_RESULT = 0X15,
+    TMAG5273_REG_Z_MSB_RESULT = 0X16,
+    TMAG5273_REG_Z_LSB_RESULT = 0X17,
+    TMAG5273_REG_CONV_STATUS = 0X18,
+    TMAG5273_REG_ANGLE_RESULT_MSB = 0X19,
+    TMAG5273_REG_ANGLE_RESULT_LSB = 0X1A,
+    TMAG5273_REG_MAGNITUDE_RESULT = 0X1B,
+    TMAG5273_REG_DEVICE_STATUS = 0X1C
+};
+# 22 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h" 2
+
+# 1 "mcc_generated_files/application/../drivers/../mcc.h" 1
+# 50 "mcc_generated_files/application/../drivers/../mcc.h"
+# 1 "mcc_generated_files/device_config.h" 1
+# 50 "mcc_generated_files/application/../drivers/../mcc.h" 2
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 1 3
+# 54 "mcc_generated_files/application/../drivers/../mcc.h" 2
+
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 55 "mcc_generated_files/application/../drivers/../mcc.h" 2
+
+# 1 "mcc_generated_files/i2c1_master.h" 1
+# 58 "mcc_generated_files/i2c1_master.h"
+typedef enum {
+    I2C1_NOERR,
+    I2C1_BUSY,
+    I2C1_FAIL
+
+
+} i2c1_error_t;
+
+typedef enum
+{
+    I2C1_STOP=1,
+    I2C1_RESTART_READ,
+    I2C1_RESTART_WRITE,
+    I2C1_CONTINUE,
+    I2C1_RESET_LINK
+} i2c1_operations_t;
+
+typedef uint8_t i2c1_address_t;
+typedef i2c1_operations_t (*i2c1_callback_t)(void *funPtr);
+
+
+i2c1_operations_t I2C1_CallbackReturnStop(void *funPtr);
+i2c1_operations_t I2C1_CallbackReturnReset(void *funPtr);
+i2c1_operations_t I2C1_CallbackRestartWrite(void *funPtr);
+i2c1_operations_t I2C1_CallbackRestartRead(void *funPtr);
+
+
+
+
+
+
+void I2C1_Initialize(void);
+# 101 "mcc_generated_files/i2c1_master.h"
+i2c1_error_t I2C1_Open(i2c1_address_t address);
+# 111 "mcc_generated_files/i2c1_master.h"
+i2c1_error_t I2C1_Close(void);
+# 123 "mcc_generated_files/i2c1_master.h"
+i2c1_error_t I2C1_MasterOperation(_Bool read);
+
+
+
+
+i2c1_error_t I2C1_MasterWrite(void);
+
+
+
+
+i2c1_error_t I2C1_MasterRead(void);
+# 142 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetTimeout(uint8_t timeOut);
+# 152 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetBuffer(void *buffer, size_t bufferSize);
+# 164 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetDataCompleteCallback(i2c1_callback_t cb, void *ptr);
+# 174 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetWriteCollisionCallback(i2c1_callback_t cb, void *ptr);
+# 184 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
+# 194 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
+# 204 "mcc_generated_files/i2c1_master.h"
+void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
+# 56 "mcc_generated_files/application/../drivers/../mcc.h" 2
+
+# 1 "mcc_generated_files/tmr0.h" 1
+# 100 "mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+# 129 "mcc_generated_files/tmr0.h"
+void TMR0_StartTimer(void);
+# 161 "mcc_generated_files/tmr0.h"
+void TMR0_StopTimer(void);
+# 197 "mcc_generated_files/tmr0.h"
+uint16_t TMR0_ReadTimer(void);
+# 236 "mcc_generated_files/tmr0.h"
+void TMR0_WriteTimer(uint16_t timerVal);
+# 272 "mcc_generated_files/tmr0.h"
+void TMR0_Reload(void);
+# 310 "mcc_generated_files/tmr0.h"
+_Bool TMR0_HasOverflowOccured(void);
+# 57 "mcc_generated_files/application/../drivers/../mcc.h" 2
+
+
+
+# 1 "mcc_generated_files/delay.h" 1
+# 34 "mcc_generated_files/delay.h"
+void DELAY_milliseconds(uint16_t milliseconds);
+void DELAY_microseconds(uint16_t microseconds);
+# 60 "mcc_generated_files/application/../drivers/../mcc.h" 2
+
+# 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
+# 37 "mcc_generated_files/drivers/i2c_simple_master.h"
+uint8_t i2c_read1ByteRegister(i2c1_address_t address, uint8_t reg);
+uint16_t i2c_read2ByteRegister(i2c1_address_t address, uint8_t reg);
+void i2c_write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data);
+void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
+
+void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
+void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
+void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
+# 61 "mcc_generated_files/application/../drivers/../mcc.h" 2
+# 76 "mcc_generated_files/application/../drivers/../mcc.h"
+void SYSTEM_Initialize(void);
+# 89 "mcc_generated_files/application/../drivers/../mcc.h"
+void OSCILLATOR_Initialize(void);
+# 102 "mcc_generated_files/application/../drivers/../mcc.h"
+void PMD_Initialize(void);
+# 23 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h" 2
+
+
+
+    int8_t begin(void);
+
+
+    int8_t isConnected();
+    int8_t setupWakeUpAndSleep();
+
+    int8_t readWakeUpAndSleepData(float *xVal, float *yVal, float *zVal,
+                                  float *temperature);
+
+
+    int8_t setCRCMode(uint8_t crcMode);
+    int8_t setMagTemp(uint8_t magTempMode);
+    int8_t setConvAvg(uint8_t avgMode);
+    int8_t setReadMode(uint8_t readMode);
+    int8_t setIntThreshold(
+        uint8_t threshold);
+    int8_t setLowPower(uint8_t lpLnMode);
+    int8_t setGlitchFilter(uint8_t glitchMode);
+    int8_t setTriggerMode(uint8_t trigMode);
+    int8_t setOperatingMode(uint8_t opMode);
+    int8_t setMagneticChannel(uint8_t channelMode);
+    int8_t setSleeptime(uint8_t sleepTime);
+    int8_t setMagDir(uint8_t threshDir);
+    int8_t setMagnitudeGain(uint8_t gainAdjust);
+    int8_t setMagneticGain(float magneticGain);
+    int8_t setMagneticOffset1(float offset1);
+    int8_t setMagneticOffset2(float offset2);
+    int8_t setAngleEn(uint8_t angleEnable);
+    int8_t setXYAxisRange(uint8_t xyAxisRange);
+    int8_t setZAxisRange(uint8_t zAxisRange);
+    int8_t setXThreshold(float xThreshold);
+    int8_t setYThreshold(float yThreshold);
+    int8_t setZThreshold(float zThresh);
+    int8_t setTemperatureThreshold(int8_t tempThresh);
+    int8_t setTemperatureEn(
+        _Bool temperatureEnable);
+    int8_t setInterruptResult(_Bool interruptEnable);
+    int8_t setThresholdEn(
+        _Bool enableInterruptResponse);
+    int8_t setIntPinState(_Bool interruptState);
+    int8_t setInterruptMode(uint8_t configurationMode);
+    int8_t setMaskInterrupt(_Bool interruptPinEnable);
+    int8_t setI2CAddress(uint8_t address);
+    int8_t setI2CAddressEN(
+        _Bool addressEnable);
+    int8_t setOscillatorError(_Bool oscError);
+
+
+    uint8_t getCRCMode();
+    uint8_t getMagTemp();
+    uint8_t getConvAvg();
+    uint8_t getReadMode();
+    uint8_t getIntThreshold();
+    uint8_t getLowPower();
+    uint8_t getGlitchFiler();
+    uint8_t getTriggerMode();
+    uint8_t getOperatingMode();
+    uint8_t getMagneticChannel();
+    uint8_t getSleeptime();
+    uint8_t getMagDir();
+    uint8_t getMagnitudeChannelSelect();
+    uint8_t getMagneticGain();
+    int8_t getMagneticOffset1();
+    int8_t getMagneticOffset2();
+    uint8_t getAngleEn();
+    uint8_t getXYAxisRange();
+    uint8_t getZAxisRange();
+    float getXThreshold();
+    float getYThreshold();
+    float getZThreshold();
+    float getTemperatureThreshold();
+    uint8_t getTemperatureEN();
+    uint8_t getInterruptResult();
+    uint8_t getThresholdEn();
+    uint8_t getIntPinState();
+    uint8_t getInterruptMode();
+    uint8_t getMaskInt();
+    uint8_t getSetCount();
+    uint8_t getPOR();
+    uint8_t getDiagStatus();
+    uint8_t getResultStatus();
+    uint8_t getI2CAddress();
+    uint8_t getDeviceID();
+    uint16_t getManufacturerID();
+
+    float getTemp();
+    float getXData();
+    float getYData();
+    float getZData();
+    float getAngleResult();
+    float getMagnitudeResult();
+
+    uint8_t getInterruptPinStatus();
+
+    uint8_t getDeviceStatus();
+    int8_t getError();
+
+
+
+
+    uint8_t _deviceAddress;
+
+    int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
+    int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
+    uint8_t readRegister(uint8_t regAddress);
+    uint8_t writeRegister(uint8_t regAddress, uint8_t data);
+    _Bool ping(uint8_t i2c_address);
+
+    uint8_t bitRead(uint16_t reg,uint8_t position);
+    void bitWrite(uint16_t *reg,uint8_t position,uint8_t value);
+# 39 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 179 "mcc_generated_files/application/LIGHTBLUE_service.c"
 typedef enum {
     PROTOCOL_VERSION_ID = 'V',
     LED_STATE_ID = 'L',
@@ -20856,7 +21132,7 @@ typedef enum {
     ERROR_ID = 'R',
     UI_CONFIG_DATA_ID = 'U'
 } PROTOCOL_PACKET_TYPES_t;
-# 200 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 201 "mcc_generated_files/application/LIGHTBLUE_service.c"
 typedef enum {
     IDLE = 0,
     SEQUENCE_NUMBER = 1,
@@ -20872,9 +21148,9 @@ const char * const protocol_version_number = "1.1.0";
 static char _hex[] = "0123456789ABCDEF";
 static uint8_t sequenceNumber = 0;
 static volatile rn487x_gpio_bitmap_t bitMap;
-# 230 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 231 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static void LIGHTBLUE_SendPacket(char packetID, char* payload);
-# 239 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 240 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
 
 
@@ -20892,9 +21168,9 @@ static void LIGHTBLUE_SplitByte(char* payload, int8_t value);
 
 
 static uint8_t LIGHTBLUE_GetButtonValue(void);
-# 264 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 265 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static uint8_t LIGHTBLUE_GetDataLedValue(void);
-# 273 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 274 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static uint8_t LIGHTBLUE_GetErrorLedValue(void);
 
 
@@ -20912,7 +21188,7 @@ static void LIGHTBLUE_SetErrorLedValue(_Bool value);
 
 
 static void LIGHTBLUE_UpdateErrorLed(void);
-# 303 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 304 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static void LIGHTBLUE_PerformAction(char id, uint8_t data);
 
 void LIGHTBLUE_Initialize(void) {
@@ -20925,7 +21201,9 @@ void LIGHTBLUE_TemperatureSensor(void) {
     int16_t temperature;
 
     *payload = '\0';
-    MCP9844_GetTemperatureValue(&temperature);
+
+
+    temperature= getTemp();
 
     LIGHTBLUE_SplitWord(payload, temperature);
 
@@ -20935,6 +21213,7 @@ void LIGHTBLUE_TemperatureSensor(void) {
 void LIGHTBLUE_AccelSensor(void) {
     char payload[13];
     BMA253_ACCEL_DATA_t accelData;
+
 
     *payload = '\0';
     BMA253_GetAccelDataXYZ(&accelData);

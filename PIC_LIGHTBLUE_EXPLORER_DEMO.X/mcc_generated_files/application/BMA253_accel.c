@@ -26,6 +26,7 @@
 
 #include "BMA253_accel.h"
 #include "../drivers/i2c_simple_master.h"
+#include "../drivers/SparkFun_TMAG5273_Arduino_Library.h"
 
 /**
 \ingroup BMA253
@@ -116,13 +117,16 @@ void BMA253_GetAccelDataZ(int16_t *zAccelData)
 
 void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData)
 {
+    int8_t lSB = 0;
+    int8_t mSB = 0;
+
+    lSB = readRegister(TMAG5273_REG_X_LSB_RESULT);
+    mSB = readRegister(TMAG5273_REG_X_MSB_RESULT);
+
     int16_t sensorValue;
-    while (!BMA253_NewAccelDataRdyX())
-    {
-        // Do Nothing until we have new data ready in the register
-    }
     
-    BMA253_GetAccelDataX(&sensorValue);
+    sensorValue = mSB >> 8 | lSB;
+    
     accelData->x = sensorValue;
     
     while (!BMA253_NewAccelDataRdyY())

@@ -42,6 +42,7 @@
 #include "mcc_generated_files/rn487x/rn487x_interface.h"
 #include "mcc_generated_files/rn487x/rn487x.h"
 #include "mcc_generated_files/drivers/uart.h"
+#include"mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
 
 /** MACRO used to reference Periodic Timer overflow flag Set. 
  *  This is used by the application to have a semi-accurate 
@@ -82,6 +83,7 @@ int main(void)
 
     RN487X_Init();
     LIGHTBLUE_Initialize();
+    begin();
 
     while (1)
     {
