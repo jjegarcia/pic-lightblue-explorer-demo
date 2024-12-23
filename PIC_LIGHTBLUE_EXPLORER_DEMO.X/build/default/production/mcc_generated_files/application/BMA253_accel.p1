@@ -16,8 +16,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/application/BMA253_accel.h: 224: {
 [s S1 `s 1 `s 1 `s 1 ]
 [n S1 . x y z ]
-"130 mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h
-[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 130: uint8_t readRegister(uint8_t regAddress);
+"129 mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h
+[; ;mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h: 129: uint8_t readRegister(uint8_t regAddress);
 [v _readRegister `(uc ~T0 @X0 0 ef1`uc ]
 "123 mcc_generated_files/application/BMA253_accel.c
 [; ;mcc_generated_files/application/BMA253_accel.c: 123:     lSB = readRegister(TMAG5273_REG_X_LSB_RESULT);

@@ -125,7 +125,6 @@ int8_t getError(); // Returns an error code (0 is success, negative is failure, 
 //    TwoWire *_i2cPort = NULL;
 uint8_t _deviceAddress;
 
-int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
 int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
 uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);

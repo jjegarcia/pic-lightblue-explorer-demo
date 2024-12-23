@@ -30,12 +30,12 @@ uint16_t manufactureId;
 
 int8_t begin(void)//, TwoWire &wirePort)
 {
-    uint16_t testReg = 0b0001001110010001;
-    uint8_t myRead = 0;
-    bitWrite(&testReg, 2, 1);
-    myRead = bitRead(&testReg, 2);
-
-    myRead = bitRead(&testReg, 1);
+//    uint16_t testReg = 0b0001001110010001;
+//    uint8_t myRead = 0;
+//    bitWrite(&testReg, 2, 1);
+//    myRead = bitRead(&testReg, 2);
+//
+//    myRead = bitRead(&testReg, 1);
     //    _i2cPort = &wirePort;           // Chooses the wire port of the device
     //    _deviceAddress = sensorAddress; // Sets the address of the device
 
@@ -135,36 +135,7 @@ int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes) 
     //        dataBuffer[i] = Wire.read();
     //    }
     //
-    i2c_readNBytes(regAddress, &dataBuffer, numBytes);
-    return 0;
-}
-
-/// @brief Reads a register region from a device.
-/// @param regAddress I2C address of device
-/// @param dataBuffer Pointer to byte to store read data
-/// @param numBytes Number of bytes to write
-/// @return Error code (0 is success, negative is failure, positive is warning)
-
-int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes) {
-    //    // uint8_t _deviceAddress = 0X22;
-    //    //  Begin transmission
-    //    Wire.beginTransmission(_deviceAddress);
-    //
-    //    // Write the address
-    //    Wire.write(regAddress);
-    //
-    //    // Write all the data
-    //    for (uint8_t i = 0; i < numBytes; i++)
-    //    {
-    //        Wire.write(dataBuffer[i]);
-    //    }
-    //
-    //    // End transmission
-    //    if (Wire.endTransmission())
-    //    {
-    //        return -1;
-    //    }
-
+    i2c_readDataBlock( TMAG5273_I2C_ADDRESS_INITIAL,  regAddress,  *dataBuffer,  numBytes);
     return 0;
 }
 
@@ -173,10 +144,8 @@ int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes)
 /// @return Value of the register chosen to be read from
 
 uint8_t readRegister(uint8_t regAddress) {
-    uint8_t regVal = 0;
-    readRegisters(regAddress, &regVal, 1);
-    //    i2c_read1ByteRegister(regAddress, &regVal);
-    //    i2c_readNBytes(regAddress,&regVal,2);
+    uint8_t regVal;
+    regVal = i2c_read1ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, regAddress);
     return regVal;
 }
 
@@ -186,8 +155,6 @@ uint8_t readRegister(uint8_t regAddress) {
 /// @return Error code (0 is success, negative is failure, positive is warning)
 
 uint8_t writeRegister(uint8_t regAddress, uint8_t data) {
-    // Write 1 byte to writeRegisters()
-    //writeRegisters(regAddress, &data, 1);
     i2c_write1ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, regAddress, data);
     return data;
 }

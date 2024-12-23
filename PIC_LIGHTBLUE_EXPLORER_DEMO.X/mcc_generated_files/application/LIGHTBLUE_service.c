@@ -311,12 +311,14 @@ void LIGHTBLUE_Initialize(void) {
 void LIGHTBLUE_TemperatureSensor(void) {
     char payload[5];
     int16_t temperature;
+    uint8_t read;
 
     *payload = '\0';
-//    MCP9844_GetTemperatureValue(&temperature);
-    
-//    temperature= getTemp();
-    TMAG5273_GetTemperatureValue(temperature);
+    //    MCP9844_GetTemperatureValue(&temperature);
+
+    //    temperature= getTemp();
+    TMAG5273_GetTemperatureValue(&temperature);
+
 
     LIGHTBLUE_SplitWord(payload, temperature);
 
@@ -326,8 +328,8 @@ void LIGHTBLUE_TemperatureSensor(void) {
 void LIGHTBLUE_AccelSensor(void) {
     char payload[13];
     BMA253_ACCEL_DATA_t accelData;
-    
-   
+
+
     *payload = '\0';
     BMA253_GetAccelDataXYZ(&accelData);
     // Masking to ensure top nibble is always 0 as light blue expects

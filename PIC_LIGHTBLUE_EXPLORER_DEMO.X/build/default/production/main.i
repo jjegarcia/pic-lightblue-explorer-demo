@@ -21005,15 +21005,14 @@ int8_t getError();
 
 uint8_t _deviceAddress;
 
-int8_t writeRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
 int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes);
 uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);
 _Bool ping(uint8_t i2c_address);
 
-uint8_t bitRead(uint16_t reg, uint8_t position);
+uint8_t bitRead(uint16_t *reg, uint8_t position);
 void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
-# 155 "./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
+# 154 "./mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
 static int16_t TMAG5273_CalcTemperature(void);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);
