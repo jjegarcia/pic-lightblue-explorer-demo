@@ -20839,13 +20839,16 @@ uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);
 _Bool ping(uint8_t i2c_address);
 
-uint8_t bitRead(uint16_t *reg, uint8_t position);
-void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
-# 154 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
-static int16_t TMAG5273_CalcTemperature(void);
+uint8_t bitRead16(uint16_t *reg, uint8_t position);
+void bitWrite16(uint16_t *reg, uint8_t position, uint8_t value);
+uint8_t bitRead8(uint8_t *reg, uint8_t position);
+void bitWrite8(uint8_t *reg, uint8_t position, uint8_t value);
+# 156 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.h"
+static int16_t TMAG5273_CalcMeasurement(uint8_t regAddress);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);
 void TMAG5273_GetTemperatureValue(int16_t *temperature);
+void TMAG5273_GetXValue(int16_t *x);
 uint16_t swap(uint16_t reg);
 # 19 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c" 2
 
@@ -20853,6 +20856,16 @@ uint16_t swap(uint16_t reg);
 
 
 uint16_t manufactureId;
+
+uint8_t number;
+uint8_t zero;
+uint8_t uno;
+uint8_t dos;
+uint8_t tres;
+uint8_t cuatro;
+uint8_t cinco;
+uint8_t seis;
+uint8_t siete;
 
 
 
@@ -20862,7 +20875,22 @@ uint16_t manufactureId;
 
 int8_t begin(void)
 {
-# 43 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+
+    number = 0b00010000;
+    zero = bitRead8(&number, 0);
+    uno = bitRead8(&number, 1);
+    dos = bitRead8(&number, 2);
+    tres = bitRead8(&number, 3);
+    cuatro = bitRead8(&number, 4);
+    cinco = bitRead8(&number, 5);
+    seis = bitRead8(&number, 6);
+    siete = bitRead8(&number, 7);
+
+    number=0;
+    bitWrite8(&number,4,1);
+
+    uint8_t stop = 9;
+# 69 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
     if (isConnected() != 0) {
         return 0;
     }
@@ -20931,10 +20959,10 @@ int8_t isConnected() {
 
     return 0;
 }
-# 119 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 145 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t readRegisters(uint8_t regAddress, uint8_t *dataBuffer, uint8_t numBytes) {
-# 138 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
-    i2c_readDataBlock( 0X22, regAddress, *dataBuffer, numBytes);
+# 164 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+    i2c_readDataBlock(0X22, regAddress, *dataBuffer, numBytes);
     return 0;
 }
 
@@ -20957,14 +20985,14 @@ uint8_t writeRegister(uint8_t regAddress, uint8_t data) {
     i2c_write1ByteRegister(0X22, regAddress, data);
     return data;
 }
-# 169 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 195 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setupWakeUpAndSleep() {
     writeRegister(TMAG5273_REG_INT_CONFIG_1, 0X64);
     writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, 0X23);
 
     return getError();
 }
-# 184 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 210 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t readWakeUpAndSleepData(float *xVal, float *yVal, float *zVal, float *temperature) {
     uint8_t wakeupRegisterRead[8];
 
@@ -20995,7 +21023,7 @@ int8_t readWakeUpAndSleepData(float *xVal, float *yVal, float *zVal, float *temp
 
     return getError();
 }
-# 226 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 252 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setCRCMode(uint8_t crcMode) {
     uint8_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
@@ -21003,18 +21031,18 @@ int8_t setCRCMode(uint8_t crcMode) {
 
     if (crcMode == 0) {
 
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 7, 0);
 
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (crcMode == 1) {
 
-        bitWrite(mode, 7, 1);
+        bitWrite8(mode, 7, 1);
 
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     }
     return getError();
 }
-# 254 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 280 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagTemp(uint8_t magTempMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
@@ -21022,28 +21050,28 @@ int8_t setMagTemp(uint8_t magTempMode) {
 
     if (magTempMode == 0)
     {
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 5, 0);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 5, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (magTempMode == 0x1)
     {
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 5, 1);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 5, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (magTempMode == 0x2)
     {
-        bitWrite(mode, 6, 1);
-        bitWrite(mode, 5, 0);
+        bitWrite8(mode, 6, 1);
+        bitWrite8(mode, 5, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (magTempMode == 0x3)
     {
-        bitWrite(mode, 6, 1);
-        bitWrite(mode, 5, 1);
+        bitWrite8(mode, 6, 1);
+        bitWrite8(mode, 5, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     }
     return getError();
 }
-# 295 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 321 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setConvAvg(uint8_t avgMode) {
     uint8_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
@@ -21051,65 +21079,65 @@ int8_t setConvAvg(uint8_t avgMode) {
 
     if (avgMode == 0)
     {
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 0);
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 0);
+        bitWrite8(mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x1)
     {
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
+        bitWrite8(mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x2)
     {
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 1);
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 1);
+        bitWrite8(mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x3)
     {
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 1);
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 1);
+        bitWrite8(mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x4)
     {
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 0);
-        bitWrite(mode, 4, 1);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 0);
+        bitWrite8(mode, 4, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x5)
     {
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
-        bitWrite(mode, 4, 1);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
+        bitWrite8(mode, 4, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 351 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 377 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setReadMode(uint8_t readMode) {
     uint8_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
 
     if (readMode == 0) {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 0);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 0);
     } else if (readMode == 1) {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 0);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 0);
     } else if (readMode == 2)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 1);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 1);
     }
 
     return getError();
 }
-# 382 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 408 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setIntThreshold(uint8_t threshold) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
@@ -21118,26 +21146,26 @@ int8_t setIntThreshold(uint8_t threshold) {
     if (threshold == 0)
     {
 
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 7, 0);
 
-        bitWrite(mode, 6, 0);
+        bitWrite8(mode, 6, 0);
 
-        bitWrite(mode, 5, 0);
+        bitWrite8(mode, 5, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (threshold == 0x1)
     {
 
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 7, 0);
 
-        bitWrite(mode, 6, 0);
+        bitWrite8(mode, 6, 0);
 
-        bitWrite(mode, 5, 1);
+        bitWrite8(mode, 5, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 417 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 443 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setLowPower(uint8_t lpLnMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
@@ -21146,18 +21174,18 @@ int8_t setLowPower(uint8_t lpLnMode) {
     if (lpLnMode == 0)
     {
 
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 4, 0);
 
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (lpLnMode == 1)
     {
-        bitWrite(mode, 4, 1);
+        bitWrite8(mode, 4, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 444 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 470 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setGlitchFilter(uint8_t glitchMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
@@ -21166,18 +21194,18 @@ int8_t setGlitchFilter(uint8_t glitchMode) {
     if (glitchMode == 0)
     {
 
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 3, 0);
 
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (glitchMode == 1)
     {
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 3, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 474 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 500 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setTriggerMode(uint8_t trigMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
@@ -21185,17 +21213,17 @@ int8_t setTriggerMode(uint8_t trigMode) {
 
     if (trigMode == 0)
     {
-        bitWrite(mode, 2, 0);
+        bitWrite8(mode, 2, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (trigMode == 0X1)
     {
-        bitWrite(mode, 2, 1);
+        bitWrite8(mode, 2, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 503 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 529 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setOperatingMode(uint8_t opMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
@@ -21204,32 +21232,32 @@ int8_t setOperatingMode(uint8_t opMode) {
     if (opMode == 0)
     {
 
-        bitWrite(mode, 0, 0);
+        bitWrite8(mode, 0, 0);
 
-        bitWrite(mode, 1, 0);
+        bitWrite8(mode, 1, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (opMode == 0X1)
     {
 
-        bitWrite(mode, 0, 1);
+        bitWrite8(mode, 0, 1);
 
-        bitWrite(mode, 1, 0);
+        bitWrite8(mode, 1, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (opMode == 0X2)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 1);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (opMode == 0X3)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 1);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 555 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 581 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagneticChannel(uint8_t channelMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_1);
@@ -21238,198 +21266,198 @@ int8_t setMagneticChannel(uint8_t channelMode) {
     if (channelMode == 0X0)
     {
 
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 4, 0);
 
-        bitWrite(mode, 5, 0);
+        bitWrite8(mode, 5, 0);
 
-        bitWrite(mode, 6, 0);
+        bitWrite8(mode, 6, 0);
 
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 7, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
 
     } else if (channelMode == 0X1)
     {
-        bitWrite(mode, 4, 1);
-        bitWrite(mode, 5, 0);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 1);
+        bitWrite8(mode, 5, 0);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X2)
     {
-        bitWrite(mode, 4, 0);
-        bitWrite(mode, 5, 1);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 0);
+        bitWrite8(mode, 5, 1);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X3)
     {
-        bitWrite(mode, 4, 1);
-        bitWrite(mode, 5, 1);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 1);
+        bitWrite8(mode, 5, 1);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X4)
     {
-        bitWrite(mode, 4, 0);
-        bitWrite(mode, 5, 0);
-        bitWrite(mode, 6, 1);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 0);
+        bitWrite8(mode, 5, 0);
+        bitWrite8(mode, 6, 1);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X5)
     {
-        bitWrite(mode, 4, 1);
-        bitWrite(mode, 5, 0);
-        bitWrite(mode, 6, 1);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 1);
+        bitWrite8(mode, 5, 0);
+        bitWrite8(mode, 6, 1);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X6)
     {
-        bitWrite(mode, 4, 0);
-        bitWrite(mode, 5, 1);
-        bitWrite(mode, 6, 1);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 0);
+        bitWrite8(mode, 5, 1);
+        bitWrite8(mode, 6, 1);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X7)
     {
-        bitWrite(mode, 4, 1);
-        bitWrite(mode, 5, 1);
-        bitWrite(mode, 6, 1);
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 4, 1);
+        bitWrite8(mode, 5, 1);
+        bitWrite8(mode, 6, 1);
+        bitWrite8(mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X8)
     {
-        bitWrite(mode, 4, 0);
-        bitWrite(mode, 5, 0);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 1);
+        bitWrite8(mode, 4, 0);
+        bitWrite8(mode, 5, 0);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X9)
     {
-        bitWrite(mode, 4, 1);
-        bitWrite(mode, 5, 0);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 1);
+        bitWrite8(mode, 4, 1);
+        bitWrite8(mode, 5, 0);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0XA)
     {
-        bitWrite(mode, 4, 0);
-        bitWrite(mode, 5, 1);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 1);
+        bitWrite8(mode, 4, 0);
+        bitWrite8(mode, 5, 1);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0XB)
     {
-        bitWrite(mode, 4, 1);
-        bitWrite(mode, 5, 1);
-        bitWrite(mode, 6, 0);
-        bitWrite(mode, 7, 1);
+        bitWrite8(mode, 4, 1);
+        bitWrite8(mode, 5, 1);
+        bitWrite8(mode, 6, 0);
+        bitWrite8(mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 674 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 700 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setSleeptime(uint8_t sleepTime) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_1);
 
     if (sleepTime == 0X0)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X1)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X2)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 1);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 1);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X3)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 1);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 1);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X4)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X5)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X6)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 1);
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 1);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X7)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 1);
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 1);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X8)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X9)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0XA)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 1);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 1);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0XB)
     {
-        bitWrite(mode, 0, 1);
-        bitWrite(mode, 1, 1);
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 0, 1);
+        bitWrite8(mode, 1, 1);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0XC)
     {
-        bitWrite(mode, 0, 0);
-        bitWrite(mode, 1, 0);
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 0, 0);
+        bitWrite8(mode, 1, 0);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 782 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 808 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagDir(uint8_t threshDir) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
@@ -21438,18 +21466,18 @@ int8_t setMagDir(uint8_t threshDir) {
     if (threshDir == 0X0)
     {
 
-        bitWrite(mode, 5, 0);
+        bitWrite8(mode, 5, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (threshDir == 0X1)
     {
-        bitWrite(mode, 5, 1);
+        bitWrite8(mode, 5, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 810 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 836 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagnitudeGain(uint8_t gainAdjust) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
@@ -21458,18 +21486,18 @@ int8_t setMagnitudeGain(uint8_t gainAdjust) {
     if (gainAdjust == 0X0)
     {
 
-        bitWrite(mode, 4, 0);
+        bitWrite8(mode, 4, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (gainAdjust == 0X1)
     {
-        bitWrite(mode, 4, 1);
+        bitWrite8(mode, 4, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 840 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 866 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagneticGain(float magneticGain) {
 
     int8_t magneticGainReg = 0;
@@ -21480,7 +21508,7 @@ int8_t setMagneticGain(float magneticGain) {
 
     return getError();
 }
-# 859 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 885 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagneticOffset1(float offset1) {
     uint8_t rangeValXY = getXYAxisRange();
     uint8_t range = 0;
@@ -21496,7 +21524,7 @@ int8_t setMagneticOffset1(float offset1) {
 
     return getError();
 }
-# 883 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 909 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMagneticOffset2(float offset2) {
 
     uint8_t channelSelect = getAngleEn();
@@ -21543,7 +21571,7 @@ int8_t setMagneticOffset2(float offset2) {
 
     return getError();
 }
-# 941 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 967 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setAngleEn(uint8_t angleEnable) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
@@ -21552,34 +21580,34 @@ int8_t setAngleEn(uint8_t angleEnable) {
     if (angleEnable == 0X0)
     {
 
-        bitWrite(mode, 2, 0);
+        bitWrite8(mode, 2, 0);
 
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 3, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (angleEnable == 0X1)
     {
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 0);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (angleEnable == 0X2)
     {
-        bitWrite(mode, 2, 0);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 2, 0);
+        bitWrite8(mode, 3, 1);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (angleEnable == 0X3)
     {
-        bitWrite(mode, 2, 1);
-        bitWrite(mode, 3, 1);
+        bitWrite8(mode, 2, 1);
+        bitWrite8(mode, 3, 1);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 984 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1010 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setXYAxisRange(uint8_t xyAxisRange) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
@@ -21588,18 +21616,18 @@ int8_t setXYAxisRange(uint8_t xyAxisRange) {
     if (xyAxisRange == 0X0)
     {
 
-        bitWrite(mode, 1, 0);
+        bitWrite8(mode, 1, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (xyAxisRange == 0X1)
     {
-        bitWrite(mode, 1, 1);
+        bitWrite8(mode, 1, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 1011 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1037 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setZAxisRange(uint8_t zAxisRange) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
@@ -21608,18 +21636,18 @@ int8_t setZAxisRange(uint8_t zAxisRange) {
     if (zAxisRange == 0X0)
     {
 
-        bitWrite(mode, 0, 0);
+        bitWrite8(mode, 0, 0);
 
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (zAxisRange == 0X1)
     {
-        bitWrite(mode, 0, 1);
+        bitWrite8(mode, 0, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
     return getError();
 }
-# 1039 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1065 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setXThreshold(float xThreshold) {
     uint8_t range = getXYAxisRange();
 
@@ -21630,7 +21658,7 @@ int8_t setXThreshold(float xThreshold) {
 
     return getError();
 }
-# 1058 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1084 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setYThreshold(float yThreshold) {
     uint8_t range = getXYAxisRange();
 
@@ -21640,7 +21668,7 @@ int8_t setYThreshold(float yThreshold) {
 
     return getError();
 }
-# 1076 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1102 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setZThreshold(float zThreshold) {
 
     uint8_t range = getZAxisRange();
@@ -21651,7 +21679,7 @@ int8_t setZThreshold(float zThreshold) {
 
     return getError();
 }
-# 1094 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1120 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setTemperatureThreshold(int8_t tempThresh) {
 
 
@@ -21659,7 +21687,7 @@ int8_t setTemperatureThreshold(int8_t tempThresh) {
 
     return getError();
 }
-# 1110 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1136 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setTemperatureEn(_Bool temperatureEnable) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_T_CONFIG);
@@ -21668,18 +21696,18 @@ int8_t setTemperatureEn(_Bool temperatureEnable) {
     if (temperatureEnable == 0)
     {
 
-        bitWrite(mode, 0, 0);
+        bitWrite8(mode, 0, 0);
 
         writeRegister(TMAG5273_REG_T_CONFIG, mode);
     } else if (temperatureEnable == 1)
     {
-        bitWrite(mode, 0, 1);
+        bitWrite8(mode, 0, 1);
         writeRegister(TMAG5273_REG_T_CONFIG, mode);
     }
 
     return getError();
 }
-# 1139 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1165 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setInterruptResult(_Bool interruptEnable) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_INT_CONFIG_1);
@@ -21688,18 +21716,18 @@ int8_t setInterruptResult(_Bool interruptEnable) {
     if (interruptEnable == 0)
     {
 
-        bitWrite(mode, 7, 0);
+        bitWrite8(mode, 7, 0);
 
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (interruptEnable == 1)
     {
-        bitWrite(mode, 7, 1);
+        bitWrite8(mode, 7, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 1167 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1193 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setThresholdEn(_Bool enableInterruptResponse) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_INT_CONFIG_1);
@@ -21708,18 +21736,18 @@ int8_t setThresholdEn(_Bool enableInterruptResponse) {
     if (enableInterruptResponse == 0)
     {
 
-        bitWrite(mode, 6, 0);
+        bitWrite8(mode, 6, 0);
 
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (enableInterruptResponse == 1)
     {
-        bitWrite(mode, 6, 1);
+        bitWrite8(mode, 6, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 1195 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1221 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setIntPinState(_Bool interruptState) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_INT_CONFIG_1);
@@ -21728,18 +21756,18 @@ int8_t setIntPinState(_Bool interruptState) {
     if (interruptState == 0)
     {
 
-        bitWrite(mode, 5, 0);
+        bitWrite8(mode, 5, 0);
 
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (interruptState == 1)
     {
-        bitWrite(mode, 5, 1);
+        bitWrite8(mode, 5, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 1225 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1251 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setInterruptMode(uint8_t configurationMode) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_INT_CONFIG_1);
@@ -21757,7 +21785,7 @@ int8_t setInterruptMode(uint8_t configurationMode) {
 
     return getError();
 }
-# 1250 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1276 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setMaskInterrupt(_Bool interruptPinEnable) {
     uint16_t mode = 0;
     mode = readRegister(TMAG5273_REG_INT_CONFIG_1);
@@ -21766,18 +21794,18 @@ int8_t setMaskInterrupt(_Bool interruptPinEnable) {
     if (interruptPinEnable == 0)
     {
 
-        bitWrite(mode, 0, 0);
+        bitWrite8(mode, 0, 0);
 
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (interruptPinEnable == 1)
     {
-        bitWrite(mode, 0, 1);
+        bitWrite8(mode, 0, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
     return getError();
 }
-# 1282 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1308 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setI2CAddress(uint8_t address) {
 
     writeRegister(TMAG5273_REG_I2C_ADDRESS, (address << 1) | 0x01);
@@ -21786,7 +21814,7 @@ int8_t setI2CAddress(uint8_t address) {
 
     return getError();
 }
-# 1298 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1324 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setI2CAddressEN(_Bool addressEnable) {
     uint16_t addReg = 0;
     addReg = readRegister(TMAG5273_REG_I2C_ADDRESS);
@@ -21794,48 +21822,48 @@ int8_t setI2CAddressEN(_Bool addressEnable) {
 
     if (addressEnable == 0) {
 
-        bitWrite(addReg, 0, 0);
+        bitWrite8(addReg, 0, 0);
         writeRegister(TMAG5273_REG_I2C_ADDRESS, addReg);
     } else if (addressEnable == 1) {
 
-        bitWrite(addReg, 0, 1);
+        bitWrite8(addReg, 0, 1);
         writeRegister(TMAG5273_REG_I2C_ADDRESS, addReg);
     }
 
     return getError();
 }
-# 1324 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1350 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t setOscillatorError(_Bool oscError) {
     uint16_t deviceStatusReg = 0;
     deviceStatusReg = readRegister(TMAG5273_REG_DEVICE_STATUS);
 
     if (oscError == 1) {
 
-        bitWrite(deviceStatusReg, 4, 1);
+        bitWrite8(deviceStatusReg, 4, 1);
     } else {
         return getError();
     }
 
     return getError();
 }
-# 1348 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1374 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getCRCMode() {
     uint8_t getCRC = 0;
     getCRC = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
-    uint8_t mode = bitRead(getCRC, 7);
+    uint8_t mode = bitRead8(getCRC, 7);
 
     return mode;
 }
-# 1365 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1391 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getMagTemp() {
     uint8_t magTemp = 0;
     magTemp = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
 
-    uint8_t tempReg5 = bitRead(magTemp, 5);
+    uint8_t tempReg5 = bitRead8(magTemp, 5);
 
-    uint8_t tempReg6 = bitRead(magTemp, 6);
+    uint8_t tempReg6 = bitRead8(magTemp, 6);
 
     if ((tempReg5 == 0) && (tempReg6 == 0))
     {
@@ -21853,14 +21881,14 @@ uint8_t getMagTemp() {
         return 1;
     }
 }
-# 1402 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1428 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getConvAvg() {
     uint8_t convAv = 0;
     convAv = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
-    uint8_t convBit2 = bitRead(convAv, 2);
-    uint8_t convBit3 = bitRead(convAv, 3);
-    uint8_t convBit4 = bitRead(convAv, 4);
+    uint8_t convBit2 = bitRead8(convAv, 2);
+    uint8_t convBit3 = bitRead8(convAv, 3);
+    uint8_t convBit4 = bitRead8(convAv, 4);
 
     if ((convBit2 == 0) && (convBit3 == 0) && (convBit4 == 0))
     {
@@ -21884,14 +21912,14 @@ uint8_t getConvAvg() {
         return 1;
     }
 }
-# 1442 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1468 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getReadMode() {
 
     uint8_t readModeReg = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
 
-    uint8_t readMode0 = bitRead(readModeReg, 0);
-    uint8_t readMode1 = bitRead(readModeReg, 1);
+    uint8_t readMode0 = bitRead8(readModeReg, 0);
+    uint8_t readMode1 = bitRead8(readModeReg, 1);
 
     if ((readMode0 == 0) && (readMode1 == 0))
     {
@@ -21906,14 +21934,14 @@ uint8_t getReadMode() {
         return 0;
     }
 }
-# 1473 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1499 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getIntThreshold() {
     uint8_t interruptThreshold = 0;
     interruptThreshold = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t interruptThreshold5 = bitRead(interruptThreshold, 5);
-    uint8_t interruptThreshold6 = bitRead(interruptThreshold, 6);
-    uint8_t interruptThreshold7 = bitRead(interruptThreshold, 7);
+    uint8_t interruptThreshold5 = bitRead8(interruptThreshold, 5);
+    uint8_t interruptThreshold6 = bitRead8(interruptThreshold, 6);
+    uint8_t interruptThreshold7 = bitRead8(interruptThreshold, 7);
 
     if ((interruptThreshold5 == 0) && (interruptThreshold6 == 0) && (interruptThreshold7 == 0))
     {
@@ -21927,12 +21955,12 @@ uint8_t getIntThreshold() {
         return 0;
     }
 }
-# 1501 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1527 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getLowPower() {
     uint8_t lowPowerMode = 0;
     lowPowerMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t lowPowerModeBit = bitRead(lowPowerMode, 4);
+    uint8_t lowPowerModeBit = bitRead8(lowPowerMode, 4);
 
     return lowPowerModeBit;
 }
@@ -21947,26 +21975,26 @@ uint8_t getGlitchFiler() {
     uint8_t glitchMode = 0;
     glitchMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t glitchModeBit = bitRead(glitchMode, 3);
+    uint8_t glitchModeBit = bitRead8(glitchMode, 3);
 
     return glitchModeBit;
 }
-# 1535 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1561 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getTriggerMode() {
     uint8_t triggerMode = 0;
     triggerMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t triggerModeBit = bitRead(triggerMode, 2);
+    uint8_t triggerModeBit = bitRead8(triggerMode, 2);
 
     return triggerModeBit;
 }
-# 1552 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1578 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getOperatingMode() {
     uint8_t opMode = 0;
     opMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t opMode0 = bitRead(opMode, 0);
-    uint8_t opMode1 = bitRead(opMode, 1);
+    uint8_t opMode0 = bitRead8(opMode, 0);
+    uint8_t opMode1 = bitRead8(opMode, 1);
 
     if ((opMode0 == 0) && (opMode1 == 0))
     {
@@ -21988,15 +22016,15 @@ uint8_t getOperatingMode() {
 
     return 0;
 }
-# 1596 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1622 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getMagneticChannel() {
     uint8_t magChannel = 0;
     magChannel = readRegister(TMAG5273_REG_SENSOR_CONFIG_1);
 
-    uint8_t magMode4 = bitRead(magChannel, 4);
-    uint8_t magMode5 = bitRead(magChannel, 5);
-    uint8_t magMode6 = bitRead(magChannel, 6);
-    uint8_t magMode7 = bitRead(magChannel, 7);
+    uint8_t magMode4 = bitRead8(magChannel, 4);
+    uint8_t magMode5 = bitRead8(magChannel, 5);
+    uint8_t magMode6 = bitRead8(magChannel, 6);
+    uint8_t magMode7 = bitRead8(magChannel, 7);
 
     if ((magMode4 == 0) && (magMode5 == 0) && (magMode6 == 0) && (magMode7 == 0))
     {
@@ -22038,15 +22066,15 @@ uint8_t getMagneticChannel() {
         return 0;
     }
 }
-# 1664 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1690 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getSleeptime() {
     uint8_t sleepReg = 0;
     sleepReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_1);
 
-    uint8_t sleep0 = bitRead(sleepReg, 0);
-    uint8_t sleep1 = bitRead(sleepReg, 1);
-    uint8_t sleep2 = bitRead(sleepReg, 2);
-    uint8_t sleep3 = bitRead(sleepReg, 3);
+    uint8_t sleep0 = bitRead8(sleepReg, 0);
+    uint8_t sleep1 = bitRead8(sleepReg, 1);
+    uint8_t sleep2 = bitRead8(sleepReg, 2);
+    uint8_t sleep3 = bitRead8(sleepReg, 3);
 
     if ((sleep0 == 0) && (sleep1 == 0) && (sleep2 == 0) && (sleep3 == 0))
     {
@@ -22091,25 +22119,25 @@ uint8_t getSleeptime() {
         return 0;
     }
 }
-# 1724 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1750 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getMagDir() {
     uint8_t magDirectionReg = 0;
     magDirectionReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t magDirection5 = bitRead(magDirectionReg, 5);
+    uint8_t magDirection5 = bitRead8(magDirectionReg, 5);
 
     return magDirection5;
 }
-# 1740 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1766 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getMagnitudeChannelSelect() {
     uint8_t magGainReg = 0;
     magGainReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t magGain4 = bitRead(magGainReg, 4);
+    uint8_t magGain4 = bitRead8(magGainReg, 4);
 
     return magGain4;
 }
-# 1758 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1784 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getMagneticGain() {
     uint8_t magneticGainReg = 0;
     magneticGainReg = readRegister(TMAG5273_REG_MAG_GAIN_CONFIG);
@@ -22119,7 +22147,7 @@ uint8_t getMagneticGain() {
 
     return magneticGain;
 }
-# 1775 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1801 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t getMagneticOffset1() {
     int8_t magOffset1 = 0;
     magOffset1 = readRegister(TMAG5273_REG_MAG_OFFSET_CONFIG_1);
@@ -22137,7 +22165,7 @@ int8_t getMagneticOffset1() {
 
     return offsetVal;
 }
-# 1800 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1826 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t getMagneticOffset2() {
     int8_t magOffset2 = 0;
     magOffset2 = readRegister(TMAG5273_REG_MAG_OFFSET_CONFIG_2);
@@ -22184,13 +22212,13 @@ int8_t getMagneticOffset2() {
 
     return offsetVal;
 }
-# 1857 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1883 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getAngleEn() {
     uint8_t angleReg = 0;
     angleReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t angleDir2 = bitRead(angleReg, 2);
-    uint8_t angleDir3 = bitRead(angleReg, 3);
+    uint8_t angleDir2 = bitRead8(angleReg, 2);
+    uint8_t angleDir3 = bitRead8(angleReg, 3);
 
     if ((angleDir2 == 0) && (angleDir3 == 0))
     {
@@ -22212,12 +22240,12 @@ uint8_t getAngleEn() {
 
     return 0;
 }
-# 1892 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1918 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getXYAxisRange() {
     uint8_t XYrangeReg = 0;
     XYrangeReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t axisRange = bitRead(XYrangeReg, 1);
+    uint8_t axisRange = bitRead8(XYrangeReg, 1);
 
     if (axisRange == 0) {
         return 0;
@@ -22227,12 +22255,12 @@ uint8_t getXYAxisRange() {
 
     return 0;
 }
-# 1914 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1940 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getZAxisRange() {
     uint8_t ZrangeReg = 0;
     ZrangeReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t ZaxisRange = bitRead(ZrangeReg, 0);
+    uint8_t ZaxisRange = bitRead8(ZrangeReg, 0);
 
     if (ZaxisRange == 0) {
         return 0;
@@ -22242,7 +22270,7 @@ uint8_t getZAxisRange() {
 
     return 0;
 }
-# 1936 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1962 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 float getXThreshold() {
     int8_t xThresh = 0;
     xThresh = readRegister(TMAG5273_REG_X_THR_CONFIG);
@@ -22252,7 +22280,7 @@ float getXThreshold() {
 
     return thresh;
 }
-# 1953 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1979 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 float getYThreshold() {
     int8_t yThresh = 0;
     yThresh = readRegister(TMAG5273_REG_Y_THR_CONFIG);
@@ -22262,7 +22290,7 @@ float getYThreshold() {
 
     return thresh;
 }
-# 1970 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 1996 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 float getZThreshold() {
     int8_t zThresh = 0;
     zThresh = readRegister(TMAG5273_REG_Z_THR_CONFIG);
@@ -22272,7 +22300,7 @@ float getZThreshold() {
 
     return thresh;
 }
-# 1987 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2013 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 float getTemperatureThreshold() {
     int8_t tempThreshReg = 0;
     tempThreshReg = readRegister(TMAG5273_REG_T_CONFIG);
@@ -22284,50 +22312,50 @@ float getTemperatureThreshold() {
 
     return tempThresh;
 }
-# 2006 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2032 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getTemperatureEN() {
     uint8_t tempENreg = 0;
     tempENreg = readRegister(TMAG5273_REG_T_CONFIG);
 
-    uint8_t tempEN = bitRead(tempENreg, 0);
+    uint8_t tempEN = bitRead8(tempENreg, 0);
 
     return tempEN;
 }
-# 2024 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2050 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getInterruptResult() {
     uint8_t intRsltReg = 0;
     intRsltReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t intRslt = bitRead(intRsltReg, 7);
+    uint8_t intRslt = bitRead8(intRsltReg, 7);
 
     return intRslt;
 }
-# 2040 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2066 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getThresholdEn() {
     uint8_t threshReg = 0;
     threshReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t threshEnRslt = bitRead(threshReg, 6);
+    uint8_t threshEnRslt = bitRead8(threshReg, 6);
 
     return threshEnRslt;
 }
-# 2056 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2082 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getIntPinState() {
     uint8_t intStateReg = 0;
     intStateReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t intStateRslt = bitRead(intStateReg, 5);
+    uint8_t intStateRslt = bitRead8(intStateReg, 5);
 
     return intStateRslt;
 }
-# 2074 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2100 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getInterruptMode() {
     uint8_t intModeReg = 0;
     intModeReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t intCon2 = bitRead(intModeReg, 2);
-    uint8_t intCon3 = bitRead(intModeReg, 3);
-    uint8_t intCon4 = bitRead(intModeReg, 4);
+    uint8_t intCon2 = bitRead8(intModeReg, 2);
+    uint8_t intCon3 = bitRead8(intModeReg, 3);
+    uint8_t intCon4 = bitRead8(intModeReg, 4);
 
     if ((intCon2 == 0) && (intCon3 == 0) && (intCon4 == 0))
     {
@@ -22365,7 +22393,7 @@ uint8_t getMaskInt() {
     uint8_t maskIntReg = 0;
     maskIntReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t maskInt = bitRead(maskIntReg, 0);
+    uint8_t maskInt = bitRead8(maskIntReg, 0);
 
     return maskInt;
 }
@@ -22385,34 +22413,34 @@ uint8_t getSetCount() {
 
     return count;
 }
-# 2146 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2172 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getPOR() {
     uint8_t convReg = 0;
     convReg = readRegister(TMAG5273_REG_CONV_STATUS);
 
-    uint8_t PORBit = bitRead(convReg, 4);
+    uint8_t PORBit = bitRead8(convReg, 4);
 
     return PORBit;
 }
-# 2164 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2190 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getDiagStatus() {
     uint8_t convReg = 0;
     convReg = readRegister(TMAG5273_REG_CONV_STATUS);
 
-    uint8_t diagBit = bitRead(convReg, 1);
+    uint8_t diagBit = bitRead8(convReg, 1);
 
     return diagBit;
 }
-# 2180 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2206 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getResultStatus() {
     uint8_t convReg = 0;
     convReg = readRegister(TMAG5273_REG_CONV_STATUS);
 
-    uint8_t resultBit = bitRead(convReg, 0);
+    uint8_t resultBit = bitRead8(convReg, 0);
 
     return resultBit;
 }
-# 2197 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2223 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getI2CAddress() {
     uint8_t addressReg = 0;
     uint8_t address = readRegister(TMAG5273_REG_I2C_ADDRESS);
@@ -22421,13 +22449,13 @@ uint8_t getI2CAddress() {
 
     return addressReg;
 }
-# 2215 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2241 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getDeviceID() {
     uint8_t deviceReg = 0;
     deviceReg = readRegister(TMAG5273_REG_DEVICE_ID);
 
-    uint8_t reg1 = bitRead(deviceReg, 0);
-    uint8_t reg2 = bitRead(deviceReg, 1);
+    uint8_t reg1 = bitRead8(deviceReg, 0);
+    uint8_t reg2 = bitRead8(deviceReg, 1);
 
     if ((reg1 == 1) && (reg2 == 0)) {
         return 0;
@@ -22455,30 +22483,30 @@ uint16_t getManufacturerID() {
 
     return deviceIDReg;
 }
-# 2256 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2282 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getInterruptPinStatus() {
     uint8_t deviceStatusReg = 0;
     deviceStatusReg = readRegister(TMAG5273_REG_DEVICE_STATUS);
 
-    uint8_t intPinStatus = bitRead(deviceStatusReg, 4);
+    uint8_t intPinStatus = bitRead8(deviceStatusReg, 4);
 
     return intPinStatus;
 }
-# 2273 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2299 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 uint8_t getDeviceStatus() {
 
     uint8_t deviceStatusReg = readRegister(TMAG5273_REG_DEVICE_STATUS);
 
     return deviceStatusReg;
 }
-# 2287 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2313 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 int8_t getError() {
 
     uint8_t statusReg = getDeviceStatus();
-    uint8_t undervoltageError = bitRead(statusReg, 0);
-    uint8_t otpCrcError = bitRead(statusReg, 1);
-    uint8_t intPinError = bitRead(statusReg, 2);
-    uint8_t oscillatorError = bitRead(statusReg, 3);
+    uint8_t undervoltageError = bitRead8(statusReg, 0);
+    uint8_t otpCrcError = bitRead8(statusReg, 1);
+    uint8_t intPinError = bitRead8(statusReg, 2);
+    uint8_t oscillatorError = bitRead8(statusReg, 3);
 
 
     if ((undervoltageError != 0) && (otpCrcError != 0) && (intPinError != 0) && (oscillatorError != 0)) {
@@ -22487,7 +22515,7 @@ int8_t getError() {
         return 0;
     }
 }
-# 2312 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2338 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 float getTemp() {
 
     int16_t temp = 0;
@@ -22598,7 +22626,7 @@ float getZData() {
 
     return zOut;
 }
-# 2431 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
+# 2457 "mcc_generated_files/drivers/SparkFun_TMAG5273_Arduino_Library.c"
 float getAngleResult() {
     uint8_t angleLSB = 0;
     uint8_t angleMSB = 0;
@@ -22645,7 +22673,7 @@ float getMagnitudeResult() {
     return magReg;
 }
 
-uint8_t bitRead(uint16_t *reg, uint8_t position) {
+uint8_t bitRead16(uint16_t *reg, uint8_t position) {
     uint16_t mask = (1 << position) & *reg;
 
     if (mask == 0) {
@@ -22655,8 +22683,24 @@ uint8_t bitRead(uint16_t *reg, uint8_t position) {
     }
 }
 
-void bitWrite(uint16_t *reg, uint8_t position, uint8_t value) {
+void bitWrite16(uint16_t *reg, uint8_t position, uint8_t value) {
     uint16_t mask = 0;
+    mask = value << position;
+    *reg = *reg | mask;
+}
+
+uint8_t bitRead8(uint8_t *reg, uint8_t position) {
+    uint8_t mask = (1 << position) & *reg;
+
+    if (mask == 0) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+void bitWrite8(uint8_t *reg, uint8_t position, uint8_t value) {
+    uint8_t mask = 0;
     mask = value << position;
     *reg = *reg | mask;
 }
@@ -22685,19 +22729,23 @@ uint16_t TMAG5273_GetDevice(void) {
 }
 
 void TMAG5273_GetTemperatureValue(int16_t *temperature) {
-    *temperature = TMAG5273_CalcTemperature();
+    *temperature = TMAG5273_CalcMeasurement(TMAG5273_REG_T_MSB_RESULT);
 }
 
-static int16_t TMAG5273_CalcTemperature(void) {
-    int16_t temperatureData;
+void TMAG5273_GetXValue(int16_t *x) {
+    *x = TMAG5273_CalcMeasurement(TMAG5273_REG_X_MSB_RESULT);
+}
+
+static int16_t TMAG5273_CalcMeasurement(uint8_t regAddress) {
+    int16_t data;
     uint8_t upperByte;
     uint8_t lowerByte;
 
-    temperatureData = i2c_read2ByteRegister(0X22, TMAG5273_REG_T_MSB_RESULT);
-    upperByte = ((temperatureData & (0x00FF)) >> 8) & (0x1F);
-    lowerByte = (uint8_t) temperatureData;
+    data = i2c_read2ByteRegister(0X22, regAddress);
+    upperByte = ((data & (0x00FF)) >> 8) & (0x1F);
+    lowerByte = (uint8_t) data;
 
-    temperatureData = ((int16_t) (lowerByte << 8) | upperByte);
+    data = ((int16_t) (lowerByte << 8) | upperByte);
 
-    return temperatureData;
+    return data;
 }

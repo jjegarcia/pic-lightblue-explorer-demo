@@ -130,8 +130,10 @@ uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);
 bool ping(uint8_t i2c_address); // Checks for device presence
 
-uint8_t bitRead(uint16_t *reg, uint8_t position);
-void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
+uint8_t bitRead16(uint16_t *reg, uint8_t position);
+void bitWrite16(uint16_t *reg, uint8_t position, uint8_t value);
+uint8_t bitRead8(uint8_t *reg, uint8_t position);
+void bitWrite8(uint8_t *reg, uint8_t position, uint8_t value);
 
 
 /**
@@ -151,10 +153,11 @@ by the ambient temperature register.
 
 #define LSB_MASK                            (0x00FF)
 
-static int16_t TMAG5273_CalcTemperature(void);
+static int16_t TMAG5273_CalcMeasurement(uint8_t regAddress);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);
 void TMAG5273_GetTemperatureValue(int16_t *temperature);
+void TMAG5273_GetXValue(int16_t *x);
 uint16_t swap(uint16_t reg);
 
 #endif

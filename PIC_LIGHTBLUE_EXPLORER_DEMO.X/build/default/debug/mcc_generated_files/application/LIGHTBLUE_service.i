@@ -21113,13 +21113,16 @@ uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);
 _Bool ping(uint8_t i2c_address);
 
-uint8_t bitRead(uint16_t *reg, uint8_t position);
-void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
-# 154 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
-static int16_t TMAG5273_CalcTemperature(void);
+uint8_t bitRead16(uint16_t *reg, uint8_t position);
+void bitWrite16(uint16_t *reg, uint8_t position, uint8_t value);
+uint8_t bitRead8(uint8_t *reg, uint8_t position);
+void bitWrite8(uint8_t *reg, uint8_t position, uint8_t value);
+# 156 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
+static int16_t TMAG5273_CalcMeasurement(uint8_t regAddress);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);
 void TMAG5273_GetTemperatureValue(int16_t *temperature);
+void TMAG5273_GetXValue(int16_t *x);
 uint16_t swap(uint16_t reg);
 # 39 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
 # 179 "mcc_generated_files/application/LIGHTBLUE_service.c"
@@ -21208,10 +21211,7 @@ void LIGHTBLUE_TemperatureSensor(void) {
 
     *payload = '\0';
 
-
-
-
-    read = readRegister(TMAG5273_REG_MANUFACTURER_ID_LSB);
+    TMAG5273_GetTemperatureValue(&temperature);
 
 
     LIGHTBLUE_SplitWord(payload, temperature);

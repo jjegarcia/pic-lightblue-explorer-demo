@@ -314,9 +314,7 @@ void LIGHTBLUE_TemperatureSensor(void) {
     uint8_t read;
 
     *payload = '\0';
-    //    MCP9844_GetTemperatureValue(&temperature);
-
-    //    temperature= getTemp();
+ 
     TMAG5273_GetTemperatureValue(&temperature);
 
 

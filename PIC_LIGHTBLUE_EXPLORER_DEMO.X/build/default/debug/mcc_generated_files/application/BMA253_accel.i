@@ -20874,13 +20874,16 @@ uint8_t readRegister(uint8_t regAddress);
 uint8_t writeRegister(uint8_t regAddress, uint8_t data);
 _Bool ping(uint8_t i2c_address);
 
-uint8_t bitRead(uint16_t *reg, uint8_t position);
-void bitWrite(uint16_t *reg, uint8_t position, uint8_t value);
-# 154 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
-static int16_t TMAG5273_CalcTemperature(void);
+uint8_t bitRead16(uint16_t *reg, uint8_t position);
+void bitWrite16(uint16_t *reg, uint8_t position, uint8_t value);
+uint8_t bitRead8(uint8_t *reg, uint8_t position);
+void bitWrite8(uint8_t *reg, uint8_t position, uint8_t value);
+# 156 "mcc_generated_files/application/../drivers/SparkFun_TMAG5273_Arduino_Library.h"
+static int16_t TMAG5273_CalcMeasurement(uint8_t regAddress);
 uint16_t TMAG5273_GetManufacture(void);
 uint16_t TMAG5273_GetDevice(void);
 void TMAG5273_GetTemperatureValue(int16_t *temperature);
+void TMAG5273_GetXValue(int16_t *x);
 uint16_t swap(uint16_t reg);
 # 29 "mcc_generated_files/application/BMA253_accel.c" 2
 # 47 "mcc_generated_files/application/BMA253_accel.c"
@@ -20890,79 +20893,62 @@ static _Bool BMA253_NewAccelDataRdyY(void);
 # 67 "mcc_generated_files/application/BMA253_accel.c"
 static _Bool BMA253_NewAccelDataRdyZ(void);
 
-void BMA253_Initialize(void)
-{
+void BMA253_Initialize(void) {
     i2c_write1ByteRegister((0x19), (0x11), (0x00));
     i2c_write1ByteRegister((0x19), (0x10), (0x08));
     i2c_write1ByteRegister((0x19), (0x0F), (0x03));
 }
 
-void BMA253_GetAccelDataX(int16_t *xAccelData)
-{
+void BMA253_GetAccelDataX(int16_t *xAccelData) {
     uint8_t lsbData;
     uint8_t msbData;
-    while(!BMA253_NewAccelDataRdyX())
-    {
+    while (!BMA253_NewAccelDataRdyX()) {
 
     }
 
     lsbData = i2c_read1ByteRegister((0x19), (0x02));
     msbData = i2c_read1ByteRegister((0x19), (0x03));
-    *xAccelData = ( (((int16_t)msbData) << 8) | (lsbData) ) >> 4;
+    *xAccelData = ((((int16_t) msbData) << 8) | (lsbData)) >> 4;
 }
 
-void BMA253_GetAccelDataY(int16_t *yAccelData)
-{
+void BMA253_GetAccelDataY(int16_t *yAccelData) {
     uint8_t lsbData;
     uint8_t msbData;
-    while(!BMA253_NewAccelDataRdyY())
-    {
+    while (!BMA253_NewAccelDataRdyY()) {
 
     }
 
     lsbData = i2c_read1ByteRegister((0x19), (0x04));
     msbData = i2c_read1ByteRegister((0x19), (0x05));
-    *yAccelData = ( (((int16_t)msbData) << 8) | (lsbData) ) >> 4;
+    *yAccelData = ((((int16_t) msbData) << 8) | (lsbData)) >> 4;
 }
 
-void BMA253_GetAccelDataZ(int16_t *zAccelData)
-{
+void BMA253_GetAccelDataZ(int16_t *zAccelData) {
     uint8_t lsbData;
     uint8_t msbData;
-    while(!BMA253_NewAccelDataRdyZ())
-    {
+    while (!BMA253_NewAccelDataRdyZ()) {
 
     }
 
     lsbData = i2c_read1ByteRegister((0x19), (0x06));
     msbData = i2c_read1ByteRegister((0x19), (0x07));
-    *zAccelData = ( (((int16_t)msbData) << 8) | (lsbData) ) >> 4;
+    *zAccelData = ((((int16_t) msbData) << 8) | (lsbData)) >> 4;
 }
 
-void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData)
-{
-    int8_t lSB = 0;
-    int8_t mSB = 0;
-
-    lSB = readRegister(TMAG5273_REG_X_LSB_RESULT);
-    mSB = readRegister(TMAG5273_REG_X_MSB_RESULT);
-
+void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData) {
     int16_t sensorValue;
-
-    sensorValue = mSB >> 8 | lSB;
+    TMAG5273_GetXValue(&sensorValue);
 
     accelData->x = sensorValue;
 
-    while (!BMA253_NewAccelDataRdyY())
-    {
+    while (!BMA253_NewAccelDataRdyY()) {
 
     }
 
     BMA253_GetAccelDataY(&sensorValue);
     accelData->y = sensorValue;
 
-     while (!BMA253_NewAccelDataRdyZ())
-    {
+    while (!BMA253_NewAccelDataRdyZ()) {
 
     }
 
@@ -20970,13 +20956,11 @@ void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData)
     accelData->z = sensorValue;
 }
 
-uint8_t BMA253_GetAccelChipId(void)
-{
+uint8_t BMA253_GetAccelChipId(void) {
     return i2c_read1ByteRegister((0x19), (0x00));
 }
 
-static _Bool BMA253_NewAccelDataRdyX(void)
-{
+static _Bool BMA253_NewAccelDataRdyX(void) {
     _Bool xNewData;
 
     xNewData = (i2c_read1ByteRegister((0x19), (0x02)) & (0x01));
@@ -20984,8 +20968,7 @@ static _Bool BMA253_NewAccelDataRdyX(void)
     return xNewData;
 }
 
-static _Bool BMA253_NewAccelDataRdyY(void)
-{
+static _Bool BMA253_NewAccelDataRdyY(void) {
     _Bool yNewData;
 
     yNewData = (i2c_read1ByteRegister((0x19), (0x04)) & (0x01));
@@ -20993,8 +20976,7 @@ static _Bool BMA253_NewAccelDataRdyY(void)
     return yNewData;
 }
 
-static _Bool BMA253_NewAccelDataRdyZ(void)
-{
+static _Bool BMA253_NewAccelDataRdyZ(void) {
     _Bool zNewData;
 
     zNewData = (i2c_read1ByteRegister((0x19), (0x06)) & (0x01));
