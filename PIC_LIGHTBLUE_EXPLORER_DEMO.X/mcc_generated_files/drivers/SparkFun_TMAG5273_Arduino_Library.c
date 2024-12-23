@@ -41,20 +41,20 @@ uint8_t siete;
 int8_t begin(void)//, TwoWire &wirePort)
 {
 
-    number = 0b00010000;
-    zero = bitRead8(&number, 0);
-    uno = bitRead8(&number, 1);
-    dos = bitRead8(&number, 2);
-    tres = bitRead8(&number, 3);
-    cuatro = bitRead8(&number, 4);
-    cinco = bitRead8(&number, 5);
-    seis = bitRead8(&number, 6);
-    siete = bitRead8(&number, 7);
-    
-    number=0;
-    bitWrite8(&number,4,1);
+//    number = 0b00010000;
+//    zero = bitRead8(&number, 0);
+//    uno = bitRead8(&number, 1);
+//    dos = bitRead8(&number, 2);
+//    tres = bitRead8(&number, 3);
+//    cuatro = bitRead8(&number, 4);
+//    cinco = bitRead8(&number, 5);
+//    seis = bitRead8(&number, 6);
+//    siete = bitRead8(&number, 7);
+//    
+//    number=0;
+//    bitWrite8(&number,4,1);
 
-    uint8_t stop = 9;
+//    uint8_t stop = 9;
 
     //    uint16_t testReg = 0b0001001110010001;
     //    uint8_t myRead = 0;
@@ -256,12 +256,12 @@ int8_t setCRCMode(uint8_t crcMode) {
     // If-Else statement for writing values to the register, bit by bit
     if (crcMode == 0) {
         // adds the crcMode (0 or 1) to bit 7 in the register
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 7, 0);
         // Writes new register value to reg
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (crcMode == 1) {
         // adds the crc_mode (0 or 1) to bit 7 in the register
-        bitWrite8(mode, 7, 1);
+        bitWrite8(&mode, 7, 1);
         // Writes new register value to reg
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     }
@@ -284,23 +284,23 @@ int8_t setMagTemp(uint8_t magTempMode) {
     // If-Else statement for writing values to the register, bit by bit
     if (magTempMode == 0) // 0b00
     {
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 5, 0);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 5, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (magTempMode == 0x1) // 0b01
     {
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 5, 1);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 5, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (magTempMode == 0x2) // 0b10
     {
-        bitWrite8(mode, 6, 1);
-        bitWrite8(mode, 5, 0);
+        bitWrite8(&mode, 6, 1);
+        bitWrite8(&mode, 5, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (magTempMode == 0x3) // 0b11
     {
-        bitWrite8(mode, 6, 1);
-        bitWrite8(mode, 5, 1);
+        bitWrite8(&mode, 6, 1);
+        bitWrite8(&mode, 5, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     }
     return getError();
@@ -325,39 +325,39 @@ int8_t setConvAvg(uint8_t avgMode) {
     // If-Else statement for writing values to the register, bit by bit
     if (avgMode == 0) // 0b000
     {
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 0);
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 0);
+        bitWrite8(&mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x1) // 0b001
     {
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
+        bitWrite8(&mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x2) // 0b010
     {
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 1);
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 1);
+        bitWrite8(&mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x3) // 0b011
     {
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 1);
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 1);
+        bitWrite8(&mode, 4, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x4) // 0b100
     {
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 0);
-        bitWrite8(mode, 4, 1);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 0);
+        bitWrite8(&mode, 4, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     } else if (avgMode == 0x5) // 0b101
     {
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
-        bitWrite8(mode, 4, 1);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
+        bitWrite8(&mode, 4, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_1, mode);
     }
 
@@ -380,15 +380,15 @@ int8_t setReadMode(uint8_t readMode) {
 
     // Write values to the register, bit by bit
     if (readMode == 0) {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 0);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 0);
     } else if (readMode == 1) {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 0);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 0);
     } else if (readMode == 2) //
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 1);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 1);
     }
 
     return getError();
@@ -413,20 +413,20 @@ int8_t setIntThreshold(uint8_t threshold) {
     if (threshold == 0) // 0b00
     {
         // Writes a 0 to bit 7
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 7, 0);
         // Writes a 0 to bit 6
-        bitWrite8(mode, 6, 0);
+        bitWrite8(&mode, 6, 0);
         // Writes a 0 to bit 5
-        bitWrite8(mode, 5, 0);
+        bitWrite8(&mode, 5, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (threshold == 0x1) // 0b001
     {
         // Writes a 0 to bit 7
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 7, 0);
         // Writes a 0 to bit 6
-        bitWrite8(mode, 6, 0);
+        bitWrite8(&mode, 6, 0);
         // Writes a 1 to bit 5
-        bitWrite8(mode, 5, 1);
+        bitWrite8(&mode, 5, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
@@ -448,12 +448,12 @@ int8_t setLowPower(uint8_t lpLnMode) {
     if (lpLnMode == 0) // 0b0
     {
         // 0b0 - Low active current mode
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 4, 0);
         // Writes new value to register
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (lpLnMode == 1) // 0b1 - Low noise mode
     {
-        bitWrite8(mode, 4, 1);
+        bitWrite8(&mode, 4, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
@@ -475,12 +475,12 @@ int8_t setGlitchFilter(uint8_t glitchMode) {
     if (glitchMode == 0) // 0b0 - Glitch filter on
     {
         // Writes 0 to glitch filter bit
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 3, 0);
         // Writes new register value to reg
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (glitchMode == 1) // 0b1 - Glitch filter off
     {
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 3, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
@@ -504,11 +504,11 @@ int8_t setTriggerMode(uint8_t trigMode) {
     // If-Else statement for writing values to the register, bit by bit
     if (trigMode == 0) // 0b0
     {
-        bitWrite8(mode, 2, 0);
+        bitWrite8(&mode, 2, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (trigMode == 0X1) // 0b1
     {
-        bitWrite8(mode, 2, 1);
+        bitWrite8(&mode, 2, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
@@ -534,26 +534,26 @@ int8_t setOperatingMode(uint8_t opMode) {
     if (opMode == 0) // 0b00
     {
         // Write 0 to bit 0
-        bitWrite8(mode, 0, 0);
+        bitWrite8(&mode, 0, 0);
         // Write 0 to bit 1
-        bitWrite8(mode, 1, 0);
+        bitWrite8(&mode, 1, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (opMode == 0X1) // 0b01
     {
         // Write 1 to bit 0
-        bitWrite8(mode, 0, 1);
+        bitWrite8(&mode, 0, 1);
         // Write 0 to bit 1
-        bitWrite8(mode, 1, 0);
+        bitWrite8(&mode, 1, 0);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (opMode == 0X2) // 0b10
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 1);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     } else if (opMode == 0X3) // 0b11
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 1);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 1);
         writeRegister(TMAG5273_REG_DEVICE_CONFIG_2, mode);
     }
 
@@ -586,92 +586,92 @@ int8_t setMagneticChannel(uint8_t channelMode) {
     if (channelMode == 0X0) // 0b0000
     {
         // Writes 0 to bit 4 of the register
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 4, 0);
         // Writes 0 to bit 5 of the register
-        bitWrite8(mode, 5, 0);
+        bitWrite8(&mode, 5, 0);
         // Writes 0 to bit 6 of the register
-        bitWrite8(mode, 6, 0);
+        bitWrite8(&mode, 6, 0);
         // Writes 0 to bit 7 of the register
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 7, 0);
         // Writes the new register value back into TMAG5273_REG_SENSOR_CONFIG_1
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
         // writeRegisterRegion(TMAG5273_REG_SENSOR_CONFIG_1, mode, 0);
     } else if (channelMode == 0X1) // 0x0001
     {
-        bitWrite8(mode, 4, 1);
-        bitWrite8(mode, 5, 0);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 1);
+        bitWrite8(&mode, 5, 0);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X2) // 0x0010
     {
-        bitWrite8(mode, 4, 0);
-        bitWrite8(mode, 5, 1);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 0);
+        bitWrite8(&mode, 5, 1);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X3) // 0x0011
     {
-        bitWrite8(mode, 4, 1);
-        bitWrite8(mode, 5, 1);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 1);
+        bitWrite8(&mode, 5, 1);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X4) // 0x0100
     {
-        bitWrite8(mode, 4, 0);
-        bitWrite8(mode, 5, 0);
-        bitWrite8(mode, 6, 1);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 0);
+        bitWrite8(&mode, 5, 0);
+        bitWrite8(&mode, 6, 1);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X5) // 0x0101
     {
-        bitWrite8(mode, 4, 1);
-        bitWrite8(mode, 5, 0);
-        bitWrite8(mode, 6, 1);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 1);
+        bitWrite8(&mode, 5, 0);
+        bitWrite8(&mode, 6, 1);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X6) // 0x0110
     {
-        bitWrite8(mode, 4, 0);
-        bitWrite8(mode, 5, 1);
-        bitWrite8(mode, 6, 1);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 0);
+        bitWrite8(&mode, 5, 1);
+        bitWrite8(&mode, 6, 1);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X7) // 0x0111
     {
-        bitWrite8(mode, 4, 1);
-        bitWrite8(mode, 5, 1);
-        bitWrite8(mode, 6, 1);
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 4, 1);
+        bitWrite8(&mode, 5, 1);
+        bitWrite8(&mode, 6, 1);
+        bitWrite8(&mode, 7, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X8) // 0x1000
     {
-        bitWrite8(mode, 4, 0);
-        bitWrite8(mode, 5, 0);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 1);
+        bitWrite8(&mode, 4, 0);
+        bitWrite8(&mode, 5, 0);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0X9) // 0x1001
     {
-        bitWrite8(mode, 4, 1);
-        bitWrite8(mode, 5, 0);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 1);
+        bitWrite8(&mode, 4, 1);
+        bitWrite8(&mode, 5, 0);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0XA) // 0x1010
     {
-        bitWrite8(mode, 4, 0);
-        bitWrite8(mode, 5, 1);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 1);
+        bitWrite8(&mode, 4, 0);
+        bitWrite8(&mode, 5, 1);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (channelMode == 0XB) // 0x1011
     {
-        bitWrite8(mode, 4, 1);
-        bitWrite8(mode, 5, 1);
-        bitWrite8(mode, 6, 0);
-        bitWrite8(mode, 7, 1);
+        bitWrite8(&mode, 4, 1);
+        bitWrite8(&mode, 5, 1);
+        bitWrite8(&mode, 6, 0);
+        bitWrite8(&mode, 7, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     }
 
@@ -703,94 +703,94 @@ int8_t setSleeptime(uint8_t sleepTime) {
 
     if (sleepTime == 0X0) // 0b0000
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X1) // 0b0001
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X2) // 0b0010
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 1);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 1);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X3) // 0b0011
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 1);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 1);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X4) // 0b0100
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X5) // 0b0101
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X6) // 0b0110
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 1);
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 1);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X7) // 0b0111
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 1);
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 1);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X8) // 0b1000
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0X9) // 0b1001
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0XA) // 0b1010
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 1);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 1);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0XB) // 0b1011
     {
-        bitWrite8(mode, 0, 1);
-        bitWrite8(mode, 1, 1);
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 0, 1);
+        bitWrite8(&mode, 1, 1);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     } else if (sleepTime == 0XC) // 0b1100
     {
-        bitWrite8(mode, 0, 0);
-        bitWrite8(mode, 1, 0);
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 0, 0);
+        bitWrite8(&mode, 1, 0);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_1, mode);
     }
 
@@ -813,12 +813,12 @@ int8_t setMagDir(uint8_t threshDir) {
     if (threshDir == 0X0) // 0b0
     {
         // Write 0 to bit 5 of the register value
-        bitWrite8(mode, 5, 0);
+        bitWrite8(&mode, 5, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (threshDir == 0X1) // 0b1
     {
-        bitWrite8(mode, 5, 1);
+        bitWrite8(&mode, 5, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
@@ -841,12 +841,12 @@ int8_t setMagnitudeGain(uint8_t gainAdjust) {
     if (gainAdjust == 0X0) // 0b0
     {
         // Write 0 to bit 4 of the register value
-        bitWrite8(mode, 4, 0);
+        bitWrite8(&mode, 4, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (gainAdjust == 0X1) // 0b1
     {
-        bitWrite8(mode, 4, 1);
+        bitWrite8(&mode, 4, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
@@ -972,27 +972,27 @@ int8_t setAngleEn(uint8_t angleEnable) {
     if (angleEnable == 0X0) // 0b00
     {
         // Write 0 to bit 2 of the register value
-        bitWrite8(mode, 2, 0);
+        bitWrite8(&mode, 2, 0);
         // Write 0 to bit 3 of the register value
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 3, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (angleEnable == 0X1) // 0b01
     {
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 0);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (angleEnable == 0X2) // 0b10
     {
-        bitWrite8(mode, 2, 0);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 2, 0);
+        bitWrite8(&mode, 3, 1);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (angleEnable == 0X3) // 0b11
     {
-        bitWrite8(mode, 2, 1);
-        bitWrite8(mode, 3, 1);
+        bitWrite8(&mode, 2, 1);
+        bitWrite8(&mode, 3, 1);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
@@ -1015,12 +1015,12 @@ int8_t setXYAxisRange(uint8_t xyAxisRange) {
     if (xyAxisRange == 0X0) // 0b0
     {
         // Write 0 to bit 1 of the register value
-        bitWrite8(mode, 1, 0);
+        bitWrite8(&mode, 1, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (xyAxisRange == 0X1) // 0b1
     {
-        bitWrite8(mode, 1, 1);
+        bitWrite8(&mode, 1, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
@@ -1042,12 +1042,12 @@ int8_t setZAxisRange(uint8_t zAxisRange) {
     if (zAxisRange == 0X0) // 0b0
     {
         // Write 0 to bit 0 of the register value
-        bitWrite8(mode, 0, 0);
+        bitWrite8(&mode, 0, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     } else if (zAxisRange == 0X1) // 0b1
     {
-        bitWrite8(mode, 0, 1);
+        bitWrite8(&mode, 0, 1);
         writeRegister(TMAG5273_REG_SENSOR_CONFIG_2, mode);
     }
 
@@ -1141,12 +1141,12 @@ int8_t setTemperatureEn(bool temperatureEnable) {
     if (temperatureEnable == 0) // 0b0
     {
         // Write 0 to bit 7 of the register value
-        bitWrite8(mode, 0, 0);
+        bitWrite8(&mode, 0, 0);
         // Writes mode to the T_CONFIG register
         writeRegister(TMAG5273_REG_T_CONFIG, mode);
     } else if (temperatureEnable == 1) // 0b1
     {
-        bitWrite8(mode, 0, 1);
+        bitWrite8(&mode, 0, 1);
         writeRegister(TMAG5273_REG_T_CONFIG, mode);
     }
 
@@ -1170,12 +1170,12 @@ int8_t setInterruptResult(bool interruptEnable) {
     if (interruptEnable == 0) // 0b0
     {
         // Write 0 to bit 7 of the register value
-        bitWrite8(mode, 7, 0);
+        bitWrite8(&mode, 7, 0);
         // Writes mode to the CONFIG_1 register
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (interruptEnable == 1) // 0b1
     {
-        bitWrite8(mode, 7, 1);
+        bitWrite8(&mode, 7, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
@@ -1198,12 +1198,12 @@ int8_t setThresholdEn(bool enableInterruptResponse) {
     if (enableInterruptResponse == 0) // 0b0
     {
         // Write 0 to bit 6 of the register value
-        bitWrite8(mode, 6, 0);
+        bitWrite8(&mode, 6, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (enableInterruptResponse == 1) // 0b1
     {
-        bitWrite8(mode, 6, 1);
+        bitWrite8(&mode, 6, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
@@ -1226,12 +1226,12 @@ int8_t setIntPinState(bool interruptState) {
     if (interruptState == 0) // 0b0
     {
         // Write 0 to bit 5 of the register value
-        bitWrite8(mode, 5, 0);
+        bitWrite8(&mode, 5, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (interruptState == 1) // 0b1
     {
-        bitWrite8(mode, 5, 1);
+        bitWrite8(&mode, 5, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
@@ -1281,12 +1281,12 @@ int8_t setMaskInterrupt(bool interruptPinEnable) {
     if (interruptPinEnable == 0) // 0b0
     {
         // Write 0 to bit 1 of the register value
-        bitWrite8(mode, 0, 0);
+        bitWrite8(&mode, 0, 0);
         // Writes mode to the CONFIG_2 register
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     } else if (interruptPinEnable == 1) // 0b1
     {
-        bitWrite8(mode, 0, 1);
+        bitWrite8(&mode, 0, 1);
         writeRegister(TMAG5273_REG_INT_CONFIG_1, mode);
     }
 
@@ -1328,11 +1328,11 @@ int8_t setI2CAddressEN(bool addressEnable) {
     // If-Else statement for writing values to the register, bit by bit
     if (addressEnable == 0) {
         // Write 0 to bit 0 of register
-        bitWrite8(addReg, 0, 0);
+        bitWrite8(&addReg, 0, 0);
         writeRegister(TMAG5273_REG_I2C_ADDRESS, addReg);
     } else if (addressEnable == 1) {
         // Write 1 to bit 0 of register
-        bitWrite8(addReg, 0, 1);
+        bitWrite8(&addReg, 0, 1);
         writeRegister(TMAG5273_REG_I2C_ADDRESS, addReg);
     }
 
@@ -1353,7 +1353,7 @@ int8_t setOscillatorError(bool oscError) {
 
     if (oscError == 1) {
         // Writes 1 to bit 4 of the register
-        bitWrite8(deviceStatusReg, 4, 1);
+        bitWrite8(&deviceStatusReg, 4, 1);
     } else {
         return getError();
     }
@@ -1375,7 +1375,7 @@ uint8_t getCRCMode() {
     uint8_t getCRC = 0;
     getCRC = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
-    uint8_t mode = bitRead8(getCRC, 7);
+    uint8_t mode = bitRead8(&getCRC, 7);
 
     return mode;
 }
@@ -1393,9 +1393,9 @@ uint8_t getMagTemp() {
     magTemp = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
     // Fills with bit 5
-    uint8_t tempReg5 = bitRead8(magTemp, 5);
+    uint8_t tempReg5 = bitRead8(&magTemp, 5);
     // Fills with bit 6
-    uint8_t tempReg6 = bitRead8(magTemp, 6);
+    uint8_t tempReg6 = bitRead8(&magTemp, 6);
 
     if ((tempReg5 == 0) && (tempReg6 == 0)) // 0b00
     {
@@ -1429,9 +1429,9 @@ uint8_t getConvAvg() {
     uint8_t convAv = 0;
     convAv = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
-    uint8_t convBit2 = bitRead8(convAv, 2);
-    uint8_t convBit3 = bitRead8(convAv, 3);
-    uint8_t convBit4 = bitRead8(convAv, 4);
+    uint8_t convBit2 = bitRead8(&convAv, 2);
+    uint8_t convBit3 = bitRead8(&convAv, 3);
+    uint8_t convBit4 = bitRead8(&convAv, 4);
 
     if ((convBit2 == 0) && (convBit3 == 0) && (convBit4 == 0)) // 0b000
     {
@@ -1470,8 +1470,8 @@ uint8_t getReadMode() {
     uint8_t readModeReg = readRegister(TMAG5273_REG_DEVICE_CONFIG_1);
 
     // Read the bits to determine the value to return
-    uint8_t readMode0 = bitRead8(readModeReg, 0);
-    uint8_t readMode1 = bitRead8(readModeReg, 1);
+    uint8_t readMode0 = bitRead8(&readModeReg, 0);
+    uint8_t readMode1 = bitRead8(&readModeReg, 1);
 
     if ((readMode0 == 0) && (readMode1 == 0)) // 0b00
     {
@@ -1500,9 +1500,9 @@ uint8_t getIntThreshold() {
     uint8_t interruptThreshold = 0;
     interruptThreshold = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t interruptThreshold5 = bitRead8(interruptThreshold, 5);
-    uint8_t interruptThreshold6 = bitRead8(interruptThreshold, 6);
-    uint8_t interruptThreshold7 = bitRead8(interruptThreshold, 7);
+    uint8_t interruptThreshold5 = bitRead8(&interruptThreshold, 5);
+    uint8_t interruptThreshold6 = bitRead8(&interruptThreshold, 6);
+    uint8_t interruptThreshold7 = bitRead8(&interruptThreshold, 7);
 
     if ((interruptThreshold5 == 0) && (interruptThreshold6 == 0) && (interruptThreshold7 == 0)) // 0b000
     {
@@ -1528,7 +1528,7 @@ uint8_t getLowPower() {
     uint8_t lowPowerMode = 0;
     lowPowerMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t lowPowerModeBit = bitRead8(lowPowerMode, 4);
+    uint8_t lowPowerModeBit = bitRead8(&lowPowerMode, 4);
 
     return lowPowerModeBit;
 }
@@ -1543,7 +1543,7 @@ uint8_t getGlitchFiler() {
     uint8_t glitchMode = 0;
     glitchMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t glitchModeBit = bitRead8(glitchMode, 3);
+    uint8_t glitchModeBit = bitRead8(&glitchMode, 3);
 
     return glitchModeBit;
 }
@@ -1562,7 +1562,7 @@ uint8_t getTriggerMode() {
     uint8_t triggerMode = 0;
     triggerMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t triggerModeBit = bitRead8(triggerMode, 2);
+    uint8_t triggerModeBit = bitRead8(&triggerMode, 2);
 
     return triggerModeBit;
 }
@@ -1579,8 +1579,8 @@ uint8_t getOperatingMode() {
     uint8_t opMode = 0;
     opMode = readRegister(TMAG5273_REG_DEVICE_CONFIG_2);
 
-    uint8_t opMode0 = bitRead8(opMode, 0);
-    uint8_t opMode1 = bitRead8(opMode, 1);
+    uint8_t opMode0 = bitRead8(&opMode, 0);
+    uint8_t opMode1 = bitRead8(&opMode, 1);
 
     if ((opMode0 == 0) && (opMode1 == 0)) // 0b00
     {
@@ -1623,10 +1623,10 @@ uint8_t getMagneticChannel() {
     uint8_t magChannel = 0;
     magChannel = readRegister(TMAG5273_REG_SENSOR_CONFIG_1);
 
-    uint8_t magMode4 = bitRead8(magChannel, 4);
-    uint8_t magMode5 = bitRead8(magChannel, 5);
-    uint8_t magMode6 = bitRead8(magChannel, 6);
-    uint8_t magMode7 = bitRead8(magChannel, 7);
+    uint8_t magMode4 = bitRead8(&magChannel, 4);
+    uint8_t magMode5 = bitRead8(&magChannel, 5);
+    uint8_t magMode6 = bitRead8(&magChannel, 6);
+    uint8_t magMode7 = bitRead8(&magChannel, 7);
 
     if ((magMode4 == 0) && (magMode5 == 0) && (magMode6 == 0) && (magMode7 == 0)) // 0b0000
     {
@@ -1691,10 +1691,10 @@ uint8_t getSleeptime() {
     uint8_t sleepReg = 0;
     sleepReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_1);
 
-    uint8_t sleep0 = bitRead8(sleepReg, 0);
-    uint8_t sleep1 = bitRead8(sleepReg, 1);
-    uint8_t sleep2 = bitRead8(sleepReg, 2);
-    uint8_t sleep3 = bitRead8(sleepReg, 3);
+    uint8_t sleep0 = bitRead8(&sleepReg, 0);
+    uint8_t sleep1 = bitRead8(&sleepReg, 1);
+    uint8_t sleep2 = bitRead8(&sleepReg, 2);
+    uint8_t sleep3 = bitRead8(&sleepReg, 3);
 
     if ((sleep0 == 0) && (sleep1 == 0) && (sleep2 == 0) && (sleep3 == 0)) // 0b0000
     {
@@ -1751,7 +1751,7 @@ uint8_t getMagDir() {
     uint8_t magDirectionReg = 0;
     magDirectionReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t magDirection5 = bitRead8(magDirectionReg, 5);
+    uint8_t magDirection5 = bitRead8(&magDirectionReg, 5);
 
     return magDirection5;
 }
@@ -1767,7 +1767,7 @@ uint8_t getMagnitudeChannelSelect() {
     uint8_t magGainReg = 0;
     magGainReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t magGain4 = bitRead8(magGainReg, 4);
+    uint8_t magGain4 = bitRead8(&magGainReg, 4);
 
     return magGain4;
 }
@@ -1884,8 +1884,8 @@ uint8_t getAngleEn() {
     uint8_t angleReg = 0;
     angleReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t angleDir2 = bitRead8(angleReg, 2);
-    uint8_t angleDir3 = bitRead8(angleReg, 3);
+    uint8_t angleDir2 = bitRead8(&angleReg, 2);
+    uint8_t angleDir3 = bitRead8(&angleReg, 3);
 
     if ((angleDir2 == 0) && (angleDir3 == 0)) // 0b00
     {
@@ -1919,7 +1919,7 @@ uint8_t getXYAxisRange() {
     uint8_t XYrangeReg = 0;
     XYrangeReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t axisRange = bitRead8(XYrangeReg, 1);
+    uint8_t axisRange = bitRead8(&XYrangeReg, 1);
 
     if (axisRange == 0) {
         return 0;
@@ -1941,7 +1941,7 @@ uint8_t getZAxisRange() {
     uint8_t ZrangeReg = 0;
     ZrangeReg = readRegister(TMAG5273_REG_SENSOR_CONFIG_2);
 
-    uint8_t ZaxisRange = bitRead8(ZrangeReg, 0);
+    uint8_t ZaxisRange = bitRead8(&ZrangeReg, 0);
 
     if (ZaxisRange == 0) {
         return 0;
@@ -2033,7 +2033,7 @@ uint8_t getTemperatureEN() {
     uint8_t tempENreg = 0;
     tempENreg = readRegister(TMAG5273_REG_T_CONFIG);
 
-    uint8_t tempEN = bitRead8(tempENreg, 0);
+    uint8_t tempEN = bitRead8(&tempENreg, 0);
 
     return tempEN;
 }
@@ -2051,7 +2051,7 @@ uint8_t getInterruptResult() {
     uint8_t intRsltReg = 0;
     intRsltReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t intRslt = bitRead8(intRsltReg, 7);
+    uint8_t intRslt = bitRead8(&intRsltReg, 7);
 
     return intRslt;
 }
@@ -2067,7 +2067,7 @@ uint8_t getThresholdEn() {
     uint8_t threshReg = 0;
     threshReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t threshEnRslt = bitRead8(threshReg, 6);
+    uint8_t threshEnRslt = bitRead8(&threshReg, 6);
 
     return threshEnRslt;
 }
@@ -2083,7 +2083,7 @@ uint8_t getIntPinState() {
     uint8_t intStateReg = 0;
     intStateReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t intStateRslt = bitRead8(intStateReg, 5);
+    uint8_t intStateRslt = bitRead8(&intStateReg, 5);
 
     return intStateRslt;
 }
@@ -2101,9 +2101,9 @@ uint8_t getInterruptMode() {
     uint8_t intModeReg = 0;
     intModeReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t intCon2 = bitRead8(intModeReg, 2);
-    uint8_t intCon3 = bitRead8(intModeReg, 3);
-    uint8_t intCon4 = bitRead8(intModeReg, 4);
+    uint8_t intCon2 = bitRead8(&intModeReg, 2);
+    uint8_t intCon3 = bitRead8(&intModeReg, 3);
+    uint8_t intCon4 = bitRead8(&intModeReg, 4);
 
     if ((intCon2 == 0) && (intCon3 == 0) && (intCon4 == 0)) // 0b000
     {
@@ -2141,7 +2141,7 @@ uint8_t getMaskInt() {
     uint8_t maskIntReg = 0;
     maskIntReg = readRegister(TMAG5273_REG_INT_CONFIG_1);
 
-    uint8_t maskInt = bitRead8(maskIntReg, 0);
+    uint8_t maskInt = bitRead8(&maskIntReg, 0);
 
     return maskInt;
 }
@@ -2173,7 +2173,7 @@ uint8_t getPOR() {
     uint8_t convReg = 0;
     convReg = readRegister(TMAG5273_REG_CONV_STATUS);
 
-    uint8_t PORBit = bitRead8(convReg, 4);
+    uint8_t PORBit = bitRead8(&convReg, 4);
 
     return PORBit;
 }
@@ -2191,7 +2191,7 @@ uint8_t getDiagStatus() {
     uint8_t convReg = 0;
     convReg = readRegister(TMAG5273_REG_CONV_STATUS);
 
-    uint8_t diagBit = bitRead8(convReg, 1);
+    uint8_t diagBit = bitRead8(&convReg, 1);
 
     return diagBit;
 }
@@ -2207,7 +2207,7 @@ uint8_t getResultStatus() {
     uint8_t convReg = 0;
     convReg = readRegister(TMAG5273_REG_CONV_STATUS);
 
-    uint8_t resultBit = bitRead8(convReg, 0);
+    uint8_t resultBit = bitRead8(&convReg, 0);
 
     return resultBit;
 }
@@ -2242,8 +2242,8 @@ uint8_t getDeviceID() {
     uint8_t deviceReg = 0;
     deviceReg = readRegister(TMAG5273_REG_DEVICE_ID);
 
-    uint8_t reg1 = bitRead8(deviceReg, 0);
-    uint8_t reg2 = bitRead8(deviceReg, 1);
+    uint8_t reg1 = bitRead8(&deviceReg, 0);
+    uint8_t reg2 = bitRead8(&deviceReg, 1);
 
     if ((reg1 == 1) && (reg2 == 0)) {
         return 0;
@@ -2283,7 +2283,7 @@ uint8_t getInterruptPinStatus() {
     uint8_t deviceStatusReg = 0;
     deviceStatusReg = readRegister(TMAG5273_REG_DEVICE_STATUS);
     // Reads back the bit we want to investigate
-    uint8_t intPinStatus = bitRead8(deviceStatusReg, 4);
+    uint8_t intPinStatus = bitRead8(&deviceStatusReg, 4);
 
     return intPinStatus; // Returns a 0 or 1 if low or high, respectively
 }
@@ -2313,10 +2313,10 @@ uint8_t getDeviceStatus() {
 int8_t getError() {
     // Pull in the device status register to compare to the error codes
     uint8_t statusReg = getDeviceStatus();
-    uint8_t undervoltageError = bitRead8(statusReg, 0);
-    uint8_t otpCrcError = bitRead8(statusReg, 1);
-    uint8_t intPinError = bitRead8(statusReg, 2);
-    uint8_t oscillatorError = bitRead8(statusReg, 3);
+    uint8_t undervoltageError = bitRead8(&statusReg, 0);
+    uint8_t otpCrcError = bitRead8(&statusReg, 1);
+    uint8_t intPinError = bitRead8(&statusReg, 2);
+    uint8_t oscillatorError = bitRead8(&statusReg, 3);
 
     // If there is any error with the error codes, return -1. Otherwise, success and return 0
     if ((undervoltageError != 0) && (otpCrcError != 0) && (intPinError != 0) && (oscillatorError != 0)) {
