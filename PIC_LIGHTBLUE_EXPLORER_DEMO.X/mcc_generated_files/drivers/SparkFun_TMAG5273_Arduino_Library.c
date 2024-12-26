@@ -32,6 +32,10 @@ uint8_t cinco;
 uint8_t seis;
 uint8_t siete;
 
+int16_t data;
+uint8_t upperByte;
+uint8_t lowerByte;
+uint8_t mask;
 /// @brief Begin communication with the TMAG over I2C, initialize it, and
 /// and set the wire for the I2C communication
 /// @param sensorAddress I2C address of the sensor
@@ -41,20 +45,20 @@ uint8_t siete;
 int8_t begin(void)//, TwoWire &wirePort)
 {
 
-//    number = 0b00010000;
-//    zero = bitRead8(&number, 0);
-//    uno = bitRead8(&number, 1);
-//    dos = bitRead8(&number, 2);
-//    tres = bitRead8(&number, 3);
-//    cuatro = bitRead8(&number, 4);
-//    cinco = bitRead8(&number, 5);
-//    seis = bitRead8(&number, 6);
-//    siete = bitRead8(&number, 7);
-//    
-//    number=0;
-//    bitWrite8(&number,4,1);
+    //    number = 0b00010000;
+    //    zero = bitRead8(&number, 0);
+    //    uno = bitRead8(&number, 1);
+    //    dos = bitRead8(&number, 2);
+    //    tres = bitRead8(&number, 3);
+    //    cuatro = bitRead8(&number, 4);
+    //    cinco = bitRead8(&number, 5);
+    //    seis = bitRead8(&number, 6);
+    //    siete = bitRead8(&number, 7);
+    //    
+    //    number=0;
+    //    bitWrite8(&number,4,1);
 
-//    uint8_t stop = 9;
+    //    uint8_t stop = 9;
 
     //    uint16_t testReg = 0b0001001110010001;
     //    uint8_t myRead = 0;
@@ -2501,7 +2505,7 @@ float getMagnitudeResult() {
 }
 
 uint8_t bitRead16(uint16_t *reg, uint8_t position) {
-    uint16_t mask = (1 << position) & *reg;
+    mask = (1 << position) & *reg;
 
     if (mask == 0) {
         return 0;
@@ -2511,7 +2515,7 @@ uint8_t bitRead16(uint16_t *reg, uint8_t position) {
 }
 
 void bitWrite16(uint16_t *reg, uint8_t position, uint8_t value) {
-    uint16_t mask = 0;
+    mask = 0;
     mask = value << position;
     *reg = *reg | mask;
 }
@@ -2539,8 +2543,6 @@ uint16_t TMAG5273_GetManufacture(void) {
 }
 
 uint16_t swap(uint16_t reg) {
-    uint8_t upperByte;
-    uint8_t lowerByte;
 
     upperByte = ((reg & MSB_MASK) >> 8);
     lowerByte = (uint8_t) reg;
@@ -2556,7 +2558,14 @@ uint16_t TMAG5273_GetDevice(void) {
 }
 
 void TMAG5273_GetTemperatureValue(int16_t *temperature) {
-    *temperature = TMAG5273_CalcMeasurement(TMAG5273_REG_T_MSB_RESULT);
+
+    data = i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, TMAG5273_REG_T_MSB_RESULT);
+    data = TMAG5273_TSENSE_T0 + (data - TMAG5273_TADC_T0);
+            upperByte = ((data & LSB_MASK) >> 8);
+    lowerByte = (uint8_t) data;
+
+    data = ((int16_t) (upperByte << 8) | lowerByte);
+    *temperature = data;
 }
 
 void TMAG5273_GetXValue(int16_t *x) {
@@ -2564,12 +2573,8 @@ void TMAG5273_GetXValue(int16_t *x) {
 }
 
 static int16_t TMAG5273_CalcMeasurement(uint8_t regAddress) {
-    int16_t data;
-    uint8_t upperByte;
-    uint8_t lowerByte;
-
     data = i2c_read2ByteRegister(TMAG5273_I2C_ADDRESS_INITIAL, regAddress);
-    upperByte = ((data & LSB_MASK) >> 8) & CLEAR_FLAG_BITS_MASK;
+    upperByte = ((data & MSB_MASK) >> 8);
     lowerByte = (uint8_t) data;
 
     data = ((int16_t) (lowerByte << 8) | upperByte);
