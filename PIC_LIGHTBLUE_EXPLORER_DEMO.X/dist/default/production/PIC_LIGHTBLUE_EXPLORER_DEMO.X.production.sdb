@@ -235,18 +235,8 @@ APPLICATION_MODE 1
 [v _BMA253_NewAccelDataRdyZ BMA253_NewAccelDataRdyZ `(a  1 s 1 BMA253_NewAccelDataRdyZ ]
 "310 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
-"316
-[v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
-"329
-[v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
-"345
-[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
 "356
 [v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
-"368
-[v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
-"387
-[v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
 "404
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
 "421
@@ -1116,7 +1106,7 @@ APPLICATION_MODE 1
 "36199
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-[v _statusBuffer@main$F3828 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+[v _statusBuffer@main$F3823 statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "66
 [v _lightBlueSerial lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
 "67
@@ -1287,6 +1277,26 @@ APPLICATION_MODE 1
 "359
 [v LIGHTBLUE_AccState@acc acc `uc  1 a 1 0 ]
 "365
+} 0
+"501
+[v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
+{
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
+[v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
+"503
+[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 8 ]
+"507
+} 0
+"481
+[v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
+{
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
+[v LIGHTBLUE_SendPacket@payload payload `*.4uc  1 p 1 7 ]
+"483
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 10 ]
+"493
 } 0
 "514
 [v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
@@ -1569,47 +1579,6 @@ APPLICATION_MODE 1
 [v RN487X_IndicateRx@value value `a  1 p 1 1 ]
 "299
 } 0
-"316 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
-{
-"318
-[v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 24 ]
-"319
-[v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 29 ]
-"327
-} 0
-"70 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/MCP9844_temp_sensor.c
-[v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
-{
-[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 wreg ]
-[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 wreg ]
-"72
-[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 11 ]
-"73
-} 0
-"75
-[v _MCP9844_CalcTemperature MCP9844_CalcTemperature `(s  1 s 2 MCP9844_CalcTemperature ]
-{
-"77
-[v MCP9844_CalcTemperature@temperatureData temperatureData `s  1 a 2 22 ]
-"79
-[v MCP9844_CalcTemperature@lowerByte lowerByte `uc  1 a 1 21 ]
-"78
-[v MCP9844_CalcTemperature@upperByte upperByte `uc  1 a 1 20 ]
-"88
-} 0
-"135 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
-[v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
-{
-[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
-"138
-[v i2c_read2ByteRegister@result result `us  1 a 2 11 ]
-"135
-[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
-[v i2c_read2ByteRegister@reg reg `uc  1 p 1 4 ]
-[v i2c_read2ByteRegister@address address `uc  1 a 1 10 ]
-"148
-} 0
 "404 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
 {
@@ -1622,32 +1591,16 @@ APPLICATION_MODE 1
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 9 ]
 "419
 } 0
-"387
-[v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
 {
-"389
-[v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 2 ]
-"391
-[v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 22 ]
-"390
-[v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
-"402
+"7
+[v strlen@a a `*.26DCuc  1 a 2 4 ]
+"5
+[v strlen@s s `*.26DCuc  1 p 2 1 ]
+"12
 } 0
-"345
-[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
-{
-"347
-[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
-"348
-[v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
-"354
-} 0
-"509
-[v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
-{
-"512
-} 0
-"421
+"421 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 wreg ]
@@ -1727,9 +1680,9 @@ APPLICATION_MODE 1
 [v _RN487X_ReadDefaultResponse RN487X_ReadDefaultResponse `(a  1 e 1 0 ]
 {
 "127
-[v RN487X_ReadDefaultResponse@resp resp `[3]uc  1 a 3 4 ]
+[v RN487X_ReadDefaultResponse@resp resp `[3]uc  1 a 3 3 ]
 "128
-[v RN487X_ReadDefaultResponse@status status `a  1 a 1 3 ]
+[v RN487X_ReadDefaultResponse@status status `a  1 a 1 6 ]
 "168
 } 0
 "208
@@ -1751,12 +1704,12 @@ APPLICATION_MODE 1
 {
 [v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 wreg ]
 "81
-[v RN487X_SendCmd@index index `uc  1 a 1 10 ]
+[v RN487X_SendCmd@index index `uc  1 a 1 9 ]
 "79
 [v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 wreg ]
 [v RN487X_SendCmd@cmdLen cmdLen `uc  1 p 1 7 ]
 "81
-[v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 9 ]
+[v RN487X_SendCmd@cmd cmd `*.6DCuc  1 a 1 10 ]
 "91
 } 0
 "262 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
@@ -1773,6 +1726,24 @@ APPLICATION_MODE 1
 [v _EUSART2_is_tx_done EUSART2_is_tx_done `(a  1 e 1 0 ]
 {
 "145
+} 0
+"252 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_Write RN487X_Write `T(v  1 s 1 RN487X_Write ]
+{
+[v RN487X_Write@txData txData `uc  1 p 1 6 ]
+"255
+} 0
+"173 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 p 1 1 ]
+"194
+} 0
+"173 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+[v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
+{
+[v EUSART2_Write@txData txData `uc  1 p 1 1 ]
+"194
 } 0
 "108 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_ReadMsg RN487X_ReadMsg `(a  1 e 1 0 ]
@@ -1817,170 +1788,12 @@ APPLICATION_MODE 1
 [v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 1 ]
 "42
 } 0
-"368 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
-{
-"370
-[v LIGHTBLUE_LedState@payload payload `[3]uc  1 a 3 0 ]
-"371
-[v LIGHTBLUE_LedState@led led `uc  1 a 1 3 ]
-"385
-} 0
-"524
-[v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
-{
-"527
-} 0
-"519
-[v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
-{
-"522
-} 0
-"310
+"310 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
 {
 "314
 } 0
-"329
-[v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
-{
-"331
-[v LIGHTBLUE_AccelSensor@payload payload `[13]uc  1 a 13 19 ]
-[s S53 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
-"332
-[v LIGHTBLUE_AccelSensor@accelData accelData `S53  1 a 6 32 ]
-"343
-} 0
-"495
-[v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
-{
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitWord@value value `s  1 p 2 9 ]
-"497
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 11 ]
-"499
-} 0
-"501
-[v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
-{
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
-"503
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 8 ]
-"507
-} 0
-"481
-[v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
-{
-[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
-[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
-[v LIGHTBLUE_SendPacket@payload payload `*.4uc  1 p 1 7 ]
-"483
-[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 10 ]
-"493
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-"7
-[v strlen@a a `*.26DCuc  1 a 2 4 ]
-"5
-[v strlen@s s `*.26DCuc  1 p 2 1 ]
-"12
-} 0
-"252 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-[v _RN487X_Write RN487X_Write `T(v  1 s 1 RN487X_Write ]
-{
-[v RN487X_Write@txData txData `uc  1 p 1 6 ]
-"255
-} 0
-"173 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-{
-[v EUSART1_Write@txData txData `uc  1 p 1 1 ]
-"194
-} 0
-"173 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-[v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
-{
-[v EUSART2_Write@txData txData `uc  1 p 1 1 ]
-"194
-} 0
-"119 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/BMA253_accel.c
-[v _BMA253_GetAccelDataXYZ BMA253_GetAccelDataXYZ `(v  1 e 1 0 ]
-{
-[s S53 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
-[v BMA253_GetAccelDataXYZ@accelData accelData `*.4S53  1 a 1 wreg ]
-"120
-[v BMA253_GetAccelDataXYZ@sensorValue sensorValue `s  1 a 2 17 ]
-"119
-[v BMA253_GetAccelDataXYZ@accelData accelData `*.4S53  1 a 1 wreg ]
-[v BMA253_GetAccelDataXYZ@accelData accelData `*.4S53  1 a 1 16 ]
-"141
-} 0
-"107
-[v _BMA253_GetAccelDataZ BMA253_GetAccelDataZ `(v  1 e 1 0 ]
-{
-[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 a 1 wreg ]
-"109
-[v BMA253_GetAccelDataZ@msbData msbData `uc  1 a 1 15 ]
-"108
-[v BMA253_GetAccelDataZ@lsbData lsbData `uc  1 a 1 14 ]
-"107
-[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 a 1 wreg ]
-[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 a 1 13 ]
-"117
-} 0
-"163
-[v _BMA253_NewAccelDataRdyZ BMA253_NewAccelDataRdyZ `(a  1 s 1 BMA253_NewAccelDataRdyZ ]
-{
-"164
-[v BMA253_NewAccelDataRdyZ@zNewData zNewData `a  1 a 1 11 ]
-"169
-} 0
-"95
-[v _BMA253_GetAccelDataY BMA253_GetAccelDataY `(v  1 e 1 0 ]
-{
-[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 a 1 wreg ]
-"97
-[v BMA253_GetAccelDataY@msbData msbData `uc  1 a 1 15 ]
-"96
-[v BMA253_GetAccelDataY@lsbData lsbData `uc  1 a 1 14 ]
-"95
-[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 a 1 wreg ]
-[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 a 1 13 ]
-"105
-} 0
-"155
-[v _BMA253_NewAccelDataRdyY BMA253_NewAccelDataRdyY `(a  1 s 1 BMA253_NewAccelDataRdyY ]
-{
-"156
-[v BMA253_NewAccelDataRdyY@yNewData yNewData `a  1 a 1 11 ]
-"161
-} 0
-"83
-[v _BMA253_GetAccelDataX BMA253_GetAccelDataX `(v  1 e 1 0 ]
-{
-[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 a 1 wreg ]
-"85
-[v BMA253_GetAccelDataX@msbData msbData `uc  1 a 1 15 ]
-"84
-[v BMA253_GetAccelDataX@lsbData lsbData `uc  1 a 1 14 ]
-"83
-[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 a 1 wreg ]
-[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 a 1 13 ]
-"93
-} 0
-"147
-[v _BMA253_NewAccelDataRdyX BMA253_NewAccelDataRdyX `(a  1 s 1 BMA253_NewAccelDataRdyX ]
-{
-"148
-[v BMA253_NewAccelDataRdyX@xNewData xNewData `a  1 a 1 11 ]
-"153
-} 0
-"70
+"70 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/BMA253_accel.c
 [v _BMA253_Initialize BMA253_Initialize `(v  1 e 1 0 ]
 {
 "81

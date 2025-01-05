@@ -20942,11 +20942,11 @@ int main(void) {
             if ((TMR0_HasOverflowOccured()) == 1) {
                 (PIR0bits.TMR0IF = 0);
 
-                LIGHTBLUE_TemperatureSensor();
-                LIGHTBLUE_AccelSensor();
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
+
+
+
+
+
             } else {
                 while (RN487X_DataReady()) {
                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
