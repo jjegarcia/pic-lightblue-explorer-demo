@@ -22,7 +22,7 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS
     SOFTWARE.
-*/
+ */
 
 #ifndef LIGHTBLUE_SERVICE_H
 #define	LIGHTBLUE_SERVICE_H
@@ -73,6 +73,17 @@ void LIGHTBLUE_AccelSensor(void);
  \return void \n
  */
 void LIGHTBLUE_PushButton(void);
+
+/*
+ todo: Comments
+ */
+void LIGHTBLUE_PushButton_Alert(void);
+
+/*
+ todo: Comments
+ */
+void LIGHTBLUE_PushButton_Buzz(void);
+
 /**
  \ingroup LIGHTBLUE
  \brief  Public function used to issue LED state to the Light Blue application \n
@@ -124,6 +135,51 @@ Packet ID Options:
  \return void \n
  */
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+
+/**
+\ingroup LIGHTBLUE
+\def DataLedOn() 
+ * Macro used to turn ON the DATA LED. This will configured the connected pin
+ * to be driven in the direction which turns the LED ON.
+ * This LED is ACTIVE_LOW \n
+ \return void \n
+ */
+#define DataLedOn()                 DATA_LED_SetLow()
+/**
+\ingroup LIGHTBLUE
+\def DataLedOff() 
+ * Macro used to turn OFF the DATA LED. This will configured the connected pin
+ * to be driven in the direction which turns the LED OFF.
+ * This LED is ACTIVE_LOW \n
+ \return void \n
+ */
+#define DataLedOff()                DATA_LED_SetHigh()
+
+bool Reset_Requested;
+
+#define IS_RESET_REQUESEDT()                            (Reset_Requested==true)
+#define RESET_REQUESTED_SET()                           (Reset_Requested=true) 
+#define RESET_REQUESTED_CLEAR()                         (Reset_Requested=false)
+
+bool Themocouple_Reading_Rquested;
+
+#define IS_THERMCOUPLE_READING_REQUETED()               (Themocouple_Reading_Rquested==true)
+#define THERMOCOUUPLE_READING_REQUETED_SET()            (Themocouple_Reading_Rquested=true) 
+#define THERMOCOUUPLE_READING_REQUETED_CLEAR()          (Themocouple_Reading_Rquested=false)
+
+bool Alert_Acknowledged;
+
+#define IS_ALERT_ACKNOWLEDGED()                         (Alert_Acknowledged==true)
+#define IS_ALERT_NOT_ACKNOWLEDGED()                     (Alert_Acknowledged==false)
+#define ALERT_ACKNOWLEDGED()                            (Alert_Acknowledged=true) 
+#define ALERT_ACKNOWLEDGED_CLEAR()                      (Alert_Acknowledged=false)
+
+bool Buzz_Acknowledged;
+
+#define IS_BUZZ_ACKNOWLEDGED()                          (Buzz_Acknowledged==true)
+#define IS_BUZZ_NOT_ACKNOWLEDGED()                      (Buzz_Acknowledged==false)
+#define BUZZ_ACKNOWLEDGED()                             (Buzz_Acknowledged=true) 
+#define BUZZ_ACKNOWLEDGED_CLEAR()                       (Buzz_Acknowledged=false)
 
 #endif	/* LIGHTBLUE_SERVICE_H */
 
