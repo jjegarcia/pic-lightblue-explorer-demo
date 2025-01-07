@@ -542,9 +542,13 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
             RESET();
             break;
         case THERMOCOUPLE_READ_REQUEST_ID:
-            THERMOCOUUPLE_READING_REQUETED_SET();
+            THERMOCOUUPLE_READING_REQUESTED_SET();
             break;
       default:
             break;
     }
+}
+
+void LIGHTBLUE_SendThermocoupleReading(void){
+    
 }

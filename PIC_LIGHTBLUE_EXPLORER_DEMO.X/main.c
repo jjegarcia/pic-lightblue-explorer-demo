@@ -72,9 +72,13 @@ int main(void)
 }
 
 void runProtocol(void) {
-    if (TIMER_FLAG_SET() && IS_ALERT_NOT_ACKNOWLEDGED()) {
+    if (TIMER_FLAG_SET() ) {
         RESET_TIMER_INTERRUPT_FLAG;
-        LIGHTBLUE_PushButton_Alert();
+        if (IS_THERMCOUPLE_READING_REQUESTED())
+        {
+            LIGHTBLUE_SendThermocoupleReading();
+            THERMOCOUUPLE_READING_REQUESTED_CLEAR();
+        }
     } else {
         while (RN487X_DataReady()) {
             LIGHTBLUE_ParseIncomingPacket(RN487X_Read());

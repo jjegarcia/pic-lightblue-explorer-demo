@@ -155,31 +155,34 @@ void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
  */
 #define DataLedOff()                DATA_LED_SetHigh()
 
+
+void LIGHTBLUE_SendThermocoupleReading(void);
+
 bool Reset_Requested;
 
-#define IS_RESET_REQUESEDT()                            (Reset_Requested==true)
-#define RESET_REQUESTED_SET()                           (Reset_Requested=true) 
-#define RESET_REQUESTED_CLEAR()                         (Reset_Requested=false)
+#define IS_RESET_REQUESTED()                            (Reset_Requested                ==  true    )
+#define RESET_REQUESTED_SET()                           (Reset_Requested                =   true    ) 
+#define RESET_REQUESTED_CLEAR()                         (Reset_Requested                =   false   )
 
-bool Themocouple_Reading_Rquested;
+bool Themocouple_Reading_Requested;
 
-#define IS_THERMCOUPLE_READING_REQUETED()               (Themocouple_Reading_Rquested==true)
-#define THERMOCOUUPLE_READING_REQUETED_SET()            (Themocouple_Reading_Rquested=true) 
-#define THERMOCOUUPLE_READING_REQUETED_CLEAR()          (Themocouple_Reading_Rquested=false)
+#define IS_THERMCOUPLE_READING_REQUESTED()              (Themocouple_Reading_Requested  ==  true    )
+#define THERMOCOUUPLE_READING_REQUESTED_SET()           (Themocouple_Reading_Requested  =   true    ) 
+#define THERMOCOUUPLE_READING_REQUESTED_CLEAR()         (Themocouple_Reading_Requested  =   false   )
 
 bool Alert_Acknowledged;
 
-#define IS_ALERT_ACKNOWLEDGED()                         (Alert_Acknowledged==true)
-#define IS_ALERT_NOT_ACKNOWLEDGED()                     (Alert_Acknowledged==false)
+#define IS_ALERT_ACKNOWLEDGED()                         (Alert_Acknowledged             ==  true    )
+#define IS_ALERT_NOT_ACKNOWLEDGED()                     (Alert_Acknowledged             ==  false   )
 #define ALERT_ACKNOWLEDGED()                            (Alert_Acknowledged=true) 
 #define ALERT_ACKNOWLEDGED_CLEAR()                      (Alert_Acknowledged=false)
 
 bool Buzz_Acknowledged;
 
-#define IS_BUZZ_ACKNOWLEDGED()                          (Buzz_Acknowledged==true)
-#define IS_BUZZ_NOT_ACKNOWLEDGED()                      (Buzz_Acknowledged==false)
-#define BUZZ_ACKNOWLEDGED()                             (Buzz_Acknowledged=true) 
-#define BUZZ_ACKNOWLEDGED_CLEAR()                       (Buzz_Acknowledged=false)
+#define IS_BUZZ_ACKNOWLEDGED()                          (Buzz_Acknowledged              ==  true    )
+#define IS_BUZZ_NOT_ACKNOWLEDGED()                      (Buzz_Acknowledged              ==  false   )
+#define BUZZ_ACKNOWLEDGED()                             (Buzz_Acknowledged              =true       ) 
+#define BUZZ_ACKNOWLEDGED_CLEAR()                       (Buzz_Acknowledged              =false      )
 
 #endif	/* LIGHTBLUE_SERVICE_H */
 
