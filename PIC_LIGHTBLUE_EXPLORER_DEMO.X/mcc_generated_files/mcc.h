@@ -54,6 +54,7 @@
 #include <conio.h>
 #include "interrupt_manager.h"
 #include "i2c1_master.h"
+#include "spi2.h"
 #include "tmr0.h"
 #include "eusart2.h"
 #include "eusart1.h"
