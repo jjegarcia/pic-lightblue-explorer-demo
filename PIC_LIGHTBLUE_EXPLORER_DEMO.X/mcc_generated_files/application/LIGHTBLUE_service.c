@@ -550,5 +550,16 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
 }
 
 void LIGHTBLUE_SendThermocoupleReading(void){
-    
+    char payload[13];
+    BMA253_ACCEL_DATA_t accelData;
+
+    *payload = '\0';
+    BMA253_GetAccelDataXYZ(&accelData);
+    // Masking to ensure top nibble is always 0 as light blue expects
+    // Exception may occur when highest byte is not 0
+    LIGHTBLUE_SplitWord(payload, (accelData.x & 0x0FFF));
+    LIGHTBLUE_SplitWord(payload, (accelData.y & 0x0FFF));
+    LIGHTBLUE_SplitWord(payload, (accelData.z & 0x0FFF));
+
+    LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
 }
