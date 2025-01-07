@@ -1618,19 +1618,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"124 mcc_generated_files/rn487x/../mcc.h
-[; ;mcc_generated_files/rn487x/../mcc.h: 124: static char statusBuffer[(80)];
+"125 mcc_generated_files/rn487x/../mcc.h
+[; ;mcc_generated_files/rn487x/../mcc.h: 125: static char statusBuffer[(80)];
 [v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
-"125
-[; ;mcc_generated_files/rn487x/../mcc.h: 125: static char lightBlueSerial[(80)];
-[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
 "126
-[; ;mcc_generated_files/rn487x/../mcc.h: 126: static uint8_t serialIndex;
+[; ;mcc_generated_files/rn487x/../mcc.h: 126: static char lightBlueSerial[(80)];
+[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
+"127
+[; ;mcc_generated_files/rn487x/../mcc.h: 127: static uint8_t serialIndex;
 [v _serialIndex `uc ~T0 @X0 1 s ]
 "36 mcc_generated_files/rn487x/rn487x.c
 [; ;mcc_generated_files/rn487x/rn487x.c: 36: uint8_t cmdBuf[64];
 [v _cmdBuf `uc ~T0 @X0 -> 64 `i e ]
-[v F12804 `*Cuc ~T0 @X0 1 t ]
+[v F12825 `*Cuc ~T0 @X0 1 t ]
 "38
 [; ;mcc_generated_files/rn487x/rn487x.c: 38: const char * const rn487x_driver_version = "1.1.0";
 [v _rn487x_driver_version `C*Cuc ~T0 @X0 1 e ]
@@ -2076,8 +2076,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "197
 [; ;mcc_generated_files/rn487x/rn487x.c: 197:     const uint8_t cmdPrompt[] = {'C', 'M', 'D', '>', ' '};
-[v F12892 `Cuc ~T0 @X0 -> 5 `i s cmdPrompt ]
-[i F12892
+[v F12913 `Cuc ~T0 @X0 -> 5 `i s cmdPrompt ]
+[i F12913
 :U ..
 -> -> 67 `ui `uc
 -> -> 77 `ui `uc
@@ -2100,7 +2100,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 3 `i `uc ]
 "205
 [; ;mcc_generated_files/rn487x/rn487x.c: 205:     return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
-[e ) ( _RN487X_ReadMsg (2 , &U F12892 -> -> # F12892 `ui `uc ]
+[e ) ( _RN487X_ReadMsg (2 , &U F12913 -> -> # F12913 `ui `uc ]
 [e $UE 1726  ]
 "206
 [; ;mcc_generated_files/rn487x/rn487x.c: 206: }
@@ -2116,8 +2116,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "210
 [; ;mcc_generated_files/rn487x/rn487x.c: 210:     const uint8_t cmdPrompt[] = {'E', 'N', 'D', '\r', '\n'};
-[v F12894 `Cuc ~T0 @X0 -> 5 `i s cmdPrompt ]
-[i F12894
+[v F12915 `Cuc ~T0 @X0 -> 5 `i s cmdPrompt ]
+[i F12915
 :U ..
 -> -> 69 `ui `uc
 -> -> 78 `ui `uc
@@ -2146,7 +2146,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 5 `i `uc ]
 "220
 [; ;mcc_generated_files/rn487x/rn487x.c: 220:     return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
-[e ) ( _RN487X_ReadMsg (2 , &U F12894 -> -> # F12894 `ui `uc ]
+[e ) ( _RN487X_ReadMsg (2 , &U F12915 -> -> # F12915 `ui `uc ]
 [e $UE 1727  ]
 "221
 [; ;mcc_generated_files/rn487x/rn487x.c: 221: }
@@ -2301,8 +2301,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/rn487x/rn487x.c: 270:     char ioLowNibble = '0';
 [v _ioLowNibble `uc ~T0 @X0 1 a ]
 [e = _ioLowNibble -> -> 48 `ui `uc ]
-[v F12905 `uc ~T0 @X0 -> 2 `i s ]
-[i F12905
+[v F12926 `uc ~T0 @X0 -> 2 `i s ]
+[i F12926
 :U ..
 "271
 [; ;mcc_generated_files/rn487x/rn487x.c: 271:     uint8_t ioValue[] = {'0', '0'};
@@ -2311,7 +2311,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _ioValue `uc ~T0 @X0 -> 2 `i a ]
-[e = _ioValue F12905 ]
+[e = _ioValue F12926 ]
 "272
 [; ;mcc_generated_files/rn487x/rn487x.c: 272:     rn487x_gpio_stateBitMap_t ioBitMapValue;
 [v _ioBitMapValue `S3 ~T0 @X0 1 a ]
@@ -2395,8 +2395,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "302
 [; ;mcc_generated_files/rn487x/rn487x.c: 302:     const uint8_t reboot[] = {'R', 'e', 'b', 'o', 'o', 't', 'i', 'n', 'g', '\r', '\n'};
-[v F12909 `Cuc ~T0 @X0 -> 11 `i s reboot ]
-[i F12909
+[v F12930 `Cuc ~T0 @X0 -> 11 `i s reboot ]
+[i F12930
 :U ..
 -> -> 82 `ui `uc
 -> -> 101 `ui `uc
@@ -2431,7 +2431,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _RN487X_SendCmd (2 , -> &U _cmdBuf `*Cuc -> -> 5 `i `uc ]
 "312
 [; ;mcc_generated_files/rn487x/rn487x.c: 312:     return RN487X_ReadMsg(reboot, sizeof (reboot));
-[e ) ( _RN487X_ReadMsg (2 , &U F12909 -> -> # F12909 `ui `uc ]
+[e ) ( _RN487X_ReadMsg (2 , &U F12930 -> -> # F12930 `ui `uc ]
 [e $UE 1736  ]
 "313
 [; ;mcc_generated_files/rn487x/rn487x.c: 313: }
@@ -2603,8 +2603,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "365
 [; ;mcc_generated_files/rn487x/rn487x.c: 365:     static _Bool asyncBuffering = 0;
-[v F12921 `a ~T0 @X0 1 s asyncBuffering ]
-[i F12921
+[v F12942 `a ~T0 @X0 1 s asyncBuffering ]
+[i F12942
 -> -> 0 `i `a
 ]
 "367
@@ -2613,7 +2613,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _readChar ( *U . _RN487X 1 ..  ]
 "369
 [; ;mcc_generated_files/rn487x/rn487x.c: 369:     if(asyncBuffering == 1)
-[e $ ! == -> F12921 `i -> 1 `i 1749  ]
+[e $ ! == -> F12942 `i -> 1 `i 1749  ]
 "370
 [; ;mcc_generated_files/rn487x/rn487x.c: 370:     {
 {
@@ -2625,7 +2625,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "373
 [; ;mcc_generated_files/rn487x/rn487x.c: 373:             asyncBuffering = 0;
-[e = F12921 -> -> 0 `i `a ]
+[e = F12942 -> -> 0 `i `a ]
 "374
 [; ;mcc_generated_files/rn487x/rn487x.c: 374:             *pHead = '\0';
 [e = *U _pHead -> -> 0 `ui `uc ]
@@ -2669,7 +2669,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "386
 [; ;mcc_generated_files/rn487x/rn487x.c: 386:             asyncBuffering = 1;
-[e = F12921 -> -> 1 `i `a ]
+[e = F12942 -> -> 1 `i `a ]
 "387
 [; ;mcc_generated_files/rn487x/rn487x.c: 387:             pHead = asyncBuffer;
 [e = _pHead _asyncBuffer ]
