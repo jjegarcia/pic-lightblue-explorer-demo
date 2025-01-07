@@ -20691,6 +20691,13 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 102 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
+# 124 "mcc_generated_files/mcc.h"
+static char statusBuffer[(80)];
+static char lightBlueSerial[(80)];
+static uint8_t serialIndex;
+
+
+void runProtocol(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
 

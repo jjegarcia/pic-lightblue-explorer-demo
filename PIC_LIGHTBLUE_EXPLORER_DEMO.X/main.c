@@ -43,28 +43,6 @@
 #include "mcc_generated_files/rn487x/rn487x.h"
 #include "mcc_generated_files/drivers/uart.h"
 
-/** MACRO used to reference Periodic Timer overflow flag Set. 
- *  This is used by the application to have a semi-accurate 
- *  periodic task execution rate. 
- *  Strict adherence to time interval is not required.
- */
-#define TIMER_FLAG_SET()                (TMR0_HasOverflowOccured())
-/** MACRO used to reset the Periodic Timer overflow flag.
- *  This is used by the application to reload the semi-accurate
- *  periodic task execution.
- *  The rate allows for a (100%) drift prior to error
- *  Is susceptible to effect by extended BLE communication. 
- */
-#define RESET_TIMER_INTERRUPT_FLAG      (PIR0bits.TMR0IF = 0)
-/** MACRO used to configure the application used buffer sizes.
- *  This is used by the application for communication buffers.
- */
-#define MAX_BUFFER_SIZE                 (80)
-
-static char statusBuffer[MAX_BUFFER_SIZE];      /**< Status Buffer instance passed to RN487X drive used for Asynchronous Message Handling (see *asyncBuffer in rn487x.c) */
-static char lightBlueSerial[MAX_BUFFER_SIZE];   /**< Message Buffer used for CDC Serial communication when connected. Terminated by \r, \n, MAX character Passes messages to BLE for transmisison. */
-static uint8_t serialIndex;                     /**< Local index value for serial communication buffer. */
-
 /*
                          Main application
  */
@@ -87,54 +65,21 @@ int main(void)
     {
         if (RN487X_IsConnected() == true)
         {
-            if (TIMER_FLAG_SET() == true)
-            {
-                RESET_TIMER_INTERRUPT_FLAG;
-
-                LIGHTBLUE_TemperatureSensor();
-                LIGHTBLUE_AccelSensor();
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
-            }
-            else
-            {
-                while (RN487X_DataReady())
-                {
-                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-                }
-                while (uart[UART_CDC].DataReady())
-                {
-                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-                    if ((lightBlueSerial[serialIndex] == '\r')
-                        || (lightBlueSerial[serialIndex] == '\n')
-                        || (serialIndex == (sizeof(lightBlueSerial) - 1)))
-                    {
-                        lightBlueSerial[serialIndex] = '\0';
-                        LIGHTBLUE_SendSerialData(lightBlueSerial);
-                        serialIndex = 0;
-                    }
-                    else
-                    {
-                        serialIndex++;
-                    }
-                }
-                
-            }
-        }
-        else
-        {
-            while(RN487X_DataReady())
-            {
-                uart[UART_CDC].Write(RN487X_Read());
-            }
-            while (uart[UART_CDC].DataReady())
-            {
-                RN487X.Write(uart[UART_CDC].Read());
-            }
+            runProtocol();
         }
     }
     return 0;
+}
+
+void runProtocol(void) {
+    if (TIMER_FLAG_SET() && IS_ALERT_NOT_ACKNOWLEDGED()) {
+        RESET_TIMER_INTERRUPT_FLAG;
+        LIGHTBLUE_PushButton_Alert();
+    } else {
+        while (RN487X_DataReady()) {
+            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+        }
+    }
 }
 /**
  End of File

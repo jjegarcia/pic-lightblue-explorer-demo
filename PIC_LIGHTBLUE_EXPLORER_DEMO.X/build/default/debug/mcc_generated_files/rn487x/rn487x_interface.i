@@ -20793,6 +20793,13 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 102 "mcc_generated_files/rn487x/../mcc.h"
 void PMD_Initialize(void);
+# 124 "mcc_generated_files/rn487x/../mcc.h"
+static char statusBuffer[(80)];
+static char lightBlueSerial[(80)];
+static uint8_t serialIndex;
+
+
+void runProtocol(void);
 # 30 "mcc_generated_files/rn487x/rn487x_interface.c" 2
 
 # 1 "mcc_generated_files/rn487x/../drivers/uart.h" 1
