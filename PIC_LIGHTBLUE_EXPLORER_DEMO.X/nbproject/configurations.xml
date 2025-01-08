@@ -95,6 +95,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
+    <Elem>.</Elem>
     <Elem>application</Elem>
     <Elem>mcc_generated_files</Elem>
   </sourceRootList>

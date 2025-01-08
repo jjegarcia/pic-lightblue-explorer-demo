@@ -20291,17 +20291,17 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 250 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 330 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 275 "mcc_generated_files/pin_manager.h"
+# 343 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 366 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 322 "mcc_generated_files/pin_manager.h"
+# 390 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 346 "mcc_generated_files/pin_manager.h"
+# 414 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -20540,6 +20540,23 @@ void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/spi2.h" 1
+# 59 "mcc_generated_files/spi2.h"
+typedef enum {
+    SPI2_DEFAULT
+} spi2_modes_t;
+
+void SPI2_Initialize(void);
+_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
+void SPI2_Close(void);
+uint8_t SPI2_ExchangeByte(uint8_t data);
+void SPI2_ExchangeBlock(void *block, size_t blockSize);
+void SPI2_WriteBlock(void *block, size_t blockSize);
+void SPI2_ReadBlock(void *block, size_t blockSize);
+void SPI2_WriteByte(uint8_t byte);
+uint8_t SPI2_ReadByte(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -20555,7 +20572,7 @@ void TMR0_WriteTimer(uint16_t timerVal);
 void TMR0_Reload(void);
 # 310 "mcc_generated_files/tmr0.h"
 _Bool TMR0_HasOverflowOccured(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart2.h" 1
 # 75 "mcc_generated_files/eusart2.h"
@@ -20610,7 +20627,7 @@ void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart2.h"
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 58 "./mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -20665,13 +20682,13 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/delay.h" 1
 # 34 "mcc_generated_files/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
 void DELAY_microseconds(uint16_t microseconds);
-# 60 "./mcc_generated_files/mcc.h" 2
+# 61 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
 # 37 "mcc_generated_files/drivers/i2c_simple_master.h"
@@ -20683,32 +20700,73 @@ void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
 void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
 void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
 void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
-# 61 "./mcc_generated_files/mcc.h" 2
-# 76 "./mcc_generated_files/mcc.h"
+# 62 "./mcc_generated_files/mcc.h" 2
+# 77 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 89 "./mcc_generated_files/mcc.h"
+# 90 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 102 "./mcc_generated_files/mcc.h"
+# 103 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 40 "main.c" 2
 
 # 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
-# 36 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 30 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData);
+
+
+
+
+
+
+
 void LIGHTBLUE_Initialize(void);
-# 50 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 52 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_TemperatureSensor(void);
-# 64 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 66 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_AccelSensor(void);
-# 75 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 77 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_PushButton(void);
-# 89 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+
+
+
+
+void LIGHTBLUE_PushButton_Alert(void);
+
+
+
+
+void LIGHTBLUE_PushButton_Buzz(void);
+# 102 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_LedState(void);
-# 100 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 113 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendProtocolVersion(void);
-# 111 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 124 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendSerialData(char* serialData);
-# 126 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 139 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+# 161 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendThermocoupleReading(void);
+
+_Bool Reset_Requested;
+
+
+
+
+
+_Bool Themocouple_Reading_Requested;
+
+
+
+
+
+_Bool Alert_Acknowledged;
+
+
+
+
+
+
+_Bool Buzz_Acknowledged;
 # 41 "main.c" 2
 
 # 1 "./mcc_generated_files/rn487x/rn487x_interface.h" 1
@@ -20861,19 +20919,25 @@ typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*T
 
 extern const uart_functions_t uart[];
 # 44 "main.c" 2
-# 64 "main.c"
+
+# 1 "./main.h" 1
+# 20 "./main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
 
 
+void runProtocol(void);
+# 45 "main.c" 2
 
 
-int main(void)
-{
+
+
+
+int main(void) {
 
     SYSTEM_Initialize();
-    RN487X_SetAsyncMessageHandler(statusBuffer, sizeof(statusBuffer));
+    RN487X_SetAsyncMessageHandler(statusBuffer, sizeof (statusBuffer));
 
 
     (INTCONbits.GIE = 1);
@@ -20884,56 +20948,30 @@ int main(void)
     RN487X_Init();
     LIGHTBLUE_Initialize();
 
-    while (1)
-    {
-        if (RN487X_IsConnected() == 1)
-        {
-            if ((TMR0_HasOverflowOccured()) == 1)
-            {
-                (PIR0bits.TMR0IF = 0);
+    while (1) {
 
-                LIGHTBLUE_TemperatureSensor();
-                LIGHTBLUE_AccelSensor();
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
-            }
-            else
-            {
-                while (RN487X_DataReady())
-                {
-                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-                }
-                while (uart[UART_CDC].DataReady())
-                {
-                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-                    if ((lightBlueSerial[serialIndex] == '\r')
-                        || (lightBlueSerial[serialIndex] == '\n')
-                        || (serialIndex == (sizeof(lightBlueSerial) - 1)))
-                    {
-                        lightBlueSerial[serialIndex] = '\0';
-                        LIGHTBLUE_SendSerialData(lightBlueSerial);
-                        serialIndex = 0;
-                    }
-                    else
-                    {
-                        serialIndex++;
-                    }
-                }
 
-            }
-        }
-        else
         {
-            while(RN487X_DataReady())
-            {
-                uart[UART_CDC].Write(RN487X_Read());
-            }
-            while (uart[UART_CDC].DataReady())
-            {
-                RN487X.Write(uart[UART_CDC].Read());
-            }
+            runProtocol();
         }
     }
     return 0;
+}
+
+void runProtocol(void) {
+    uint16_t thermocoupleData;
+
+    if ((TMR0_HasOverflowOccured())) {
+        (PIR0bits.TMR0IF = 0);
+
+        {
+            LIGHTBLUE_SendThermocoupleReading();
+            (Themocouple_Reading_Requested = 0 );
+        }
+
+
+
+
+
+    }
 }

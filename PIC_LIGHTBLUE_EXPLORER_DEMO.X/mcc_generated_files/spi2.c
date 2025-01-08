@@ -62,15 +62,15 @@ static const spi2_configuration_t spi2_configuration[] = {
 void SPI2_Initialize(void)
 {
     //Setup PPS Pins
-    SSP2CLKPPS = 9;
+    SSP2CLKPPS = 17;
     SSP2DATPPS = 19;
-    RB1PPS    = 21;
+    RC1PPS    = 21;
     RC2PPS    = 22;
     //SPI setup
     SSP2STAT = 0x40;
     SSP2CON1 = 0x00;
     SSP2ADD = 0x01;
-    TRISBbits.TRISB1 = 0;
+    TRISCbits.TRISC1 = 0;
     SSP2CON1bits.SSPEN = 0;
 }
 
@@ -82,7 +82,7 @@ bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration)
         SSP2CON1 = spi2_configuration[spi2UniqueConfiguration].con1;
         SSP2CON2 = 0x00;
         SSP2ADD  = spi2_configuration[spi2UniqueConfiguration].add;
-        TRISBbits.TRISB1 = spi2_configuration[spi2UniqueConfiguration].operation;
+        TRISCbits.TRISC1 = spi2_configuration[spi2UniqueConfiguration].operation;
         SSP2CON1bits.SSPEN = 1;
         return true;
     }

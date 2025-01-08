@@ -12,7 +12,7 @@
 
   Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
-*/
+ */
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -35,7 +35,7 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
-*/
+ */
 
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/application/LIGHTBLUE_service.h"
@@ -47,11 +47,10 @@
 /*
                          Main application
  */
-int main(void)
-{
+int main(void) {
     // initialize the device
     SYSTEM_Initialize();
-    RN487X_SetAsyncMessageHandler(statusBuffer, sizeof(statusBuffer));
+    RN487X_SetAsyncMessageHandler(statusBuffer, sizeof (statusBuffer));
 
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
@@ -62,9 +61,9 @@ int main(void)
     RN487X_Init();
     LIGHTBLUE_Initialize();
 
-    while (1)
-    {
-        if (RN487X_IsConnected() == true)
+    while (1) {
+
+        //        if (RN487X_IsConnected() == true)
         {
             runProtocol();
         }
@@ -73,19 +72,22 @@ int main(void)
 }
 
 void runProtocol(void) {
-    if (TIMER_FLAG_SET() ) {
+    uint16_t thermocoupleData;
+
+    if (TIMER_FLAG_SET()) {
         RESET_TIMER_INTERRUPT_FLAG;
-        if (IS_THERMCOUPLE_READING_REQUESTED())
+        //        if (IS_THERMCOUPLE_READING_REQUESTED())
         {
             LIGHTBLUE_SendThermocoupleReading();
             THERMOCOUUPLE_READING_REQUESTED_CLEAR();
         }
-    } else {
-        while (RN487X_DataReady()) {
-            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-        }
+        //    } else 
+        //    {
+        //        while (RN487X_DataReady()) {
+        //            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+        //        }
     }
 }
 /**
  End of File
-*/
+ */

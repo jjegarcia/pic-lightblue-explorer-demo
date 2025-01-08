@@ -16,22 +16,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/rn487x/rn487x_interface.h: 48: {
 [s S2 `*F210 1 `*F213 1 `*F215 1 `*F217 1 `*F219 1 `*F222 1 `*F225 1 `*F228 1 `*F231 1 ]
 [n S2 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
-[v F12951 `(v ~T0 @X0 1 tf1`uc ]
+[v F12972 `(v ~T0 @X0 1 tf1`uc ]
 "98 mcc_generated_files/rn487x/rn487x_interface.c
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 98: static __attribute__((inline)) void RN487X_Write(uint8_t txData);
-[v _RN487X_Write `TF12951 ~T0 @X0 0 s ]
-[v F12954 `(uc ~T0 @X0 1 tf ]
+[v _RN487X_Write `TF12972 ~T0 @X0 0 s ]
+[v F12975 `(uc ~T0 @X0 1 tf ]
 "114
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 114: static __attribute__((inline)) uint8_t RN487X_Read(void);
-[v _RN487X_Read `TF12954 ~T0 @X0 0 s ]
-[v F12956 `(a ~T0 @X0 1 tf ]
+[v _RN487X_Read `TF12975 ~T0 @X0 0 s ]
+[v F12977 `(a ~T0 @X0 1 tf ]
 "130
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 130: static __attribute__((inline)) _Bool RN487X_is_tx_done(void);
-[v _RN487X_is_tx_done `TF12956 ~T0 @X0 0 s ]
-[v F12958 `(a ~T0 @X0 1 tf ]
+[v _RN487X_is_tx_done `TF12977 ~T0 @X0 0 s ]
+[v F12979 `(a ~T0 @X0 1 tf ]
 "146
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 146: static __attribute__((inline)) _Bool RN487X_is_rx_ready(void);
-[v _RN487X_is_rx_ready `TF12958 ~T0 @X0 0 s ]
+[v _RN487X_is_rx_ready `TF12979 ~T0 @X0 0 s ]
 "57
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 57: static void RN487X_IndicateRx(_Bool value);
 [v _RN487X_IndicateRx `(v ~T0 @X0 0 sf1`a ]
@@ -41,36 +41,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "69
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 69: static void RN487X_SetSystemMode(RN487X_SYSTEM_MODES_t mode);
 [v _RN487X_SetSystemMode `(v ~T0 @X0 0 sf1`E204 ]
-[v F12960 `(v ~T0 @X0 1 tf1`us ]
+[v F12981 `(v ~T0 @X0 1 tf1`us ]
 "162
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 162: static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount);
-[v _RN487X_Delay `TF12960 ~T0 @X0 0 s ]
+[v _RN487X_Delay `TF12981 ~T0 @X0 0 s ]
 "82
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 82: static void RN487X_MessageHandler(char* message);
 [v _RN487X_MessageHandler `(v ~T0 @X0 0 sf1`*uc ]
-[v F12915 `(uc ~T0 @X0 0 tf ]
-[v F12917 `(v ~T0 @X0 0 tf1`uc ]
-[v F12920 `(a ~T0 @X0 0 tf ]
-[v F12922 `(a ~T0 @X0 0 tf ]
-[v F12925 `(v ~T0 @X0 0 tf ]
-[v F12924 `(v ~T0 @X0 0 tf1`*F12925 ]
-[v F12928 `(v ~T0 @X0 0 tf ]
-[v F12931 `(v ~T0 @X0 0 tf ]
-[v F12930 `(v ~T0 @X0 0 tf1`*F12931 ]
-[v F12934 `(a ~T0 @X0 0 tf ]
-[v F12936 `(v ~T0 @X0 0 tf ]
-[v F12938 `(v ~T0 @X0 0 tf ]
+[v F12936 `(uc ~T0 @X0 0 tf ]
+[v F12938 `(v ~T0 @X0 0 tf1`uc ]
+[v F12941 `(a ~T0 @X0 0 tf ]
+[v F12943 `(a ~T0 @X0 0 tf ]
+[v F12946 `(v ~T0 @X0 0 tf ]
+[v F12945 `(v ~T0 @X0 0 tf1`*F12946 ]
+[v F12949 `(v ~T0 @X0 0 tf ]
+[v F12952 `(v ~T0 @X0 0 tf ]
+[v F12951 `(v ~T0 @X0 0 tf1`*F12952 ]
+[v F12955 `(a ~T0 @X0 0 tf ]
+[v F12957 `(v ~T0 @X0 0 tf ]
+[v F12959 `(v ~T0 @X0 0 tf ]
 "51 mcc_generated_files/rn487x/../drivers/uart.h
 [; ;mcc_generated_files/rn487x/../drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1687 `*F12915 1 `*F12917 1 `*F12920 1 `*F12922 1 `*F12924 1 `*F12928 1 `*F12930 1 `*F12934 1 `*F12936 1 `*F12938 1 ]
+[s S1687 `*F12936 1 `*F12938 1 `*F12941 1 `*F12943 1 `*F12945 1 `*F12949 1 `*F12951 1 `*F12955 1 `*F12957 1 `*F12959 1 ]
 [n S1687 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
 "53
 [; ;mcc_generated_files/rn487x/../drivers/uart.h: 53: extern const uart_functions_t uart[];
 [v _uart `CS1687 ~T0 @X0 -> 0 `x e ]
 "254 mcc_generated_files/rn487x/rn487x_interface.c
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 254:     uart[UART_BLE].Write(txData);
-[c E12909 0 1 .. ]
-[n E12909 . UART_CDC UART_BLE  ]
+[c E12930 0 1 .. ]
+[n E12930 . UART_CDC UART_BLE  ]
 "34 mcc_generated_files/delay.h
 [; ;mcc_generated_files/delay.h: 34: void DELAY_milliseconds(uint16_t milliseconds);
 [v _DELAY_milliseconds `(v ~T0 @X0 0 ef1`us ]
@@ -109,8 +109,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _TRISAbits `VS42 ~T0 @X0 0 e@18 ]
 "342 mcc_generated_files/rn487x/rn487x_interface.c
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 342: static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-[c E12962 0 1 2 .. ]
-[n E12962 . DISCONNECT_MSG STREAM_OPEN_MSG GENERAL_MSG  ]
+[c E12983 0 1 2 .. ]
+[n E12983 . DISCONNECT_MSG STREAM_OPEN_MSG GENERAL_MSG  ]
 "33 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h
 [; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
 [v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
@@ -1732,10 +1732,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 246: }
 [e :UE 1688 ]
 }
-[v F12995 `(v ~T0 @X0 1 tf1`uc ]
+[v F13016 `(v ~T0 @X0 1 tf1`uc ]
 "252
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 252: static __attribute__((inline)) void RN487X_Write(uint8_t txData)
-[v _RN487X_Write `TF12995 ~T0 @X0 1 s ]
+[v _RN487X_Write `TF13016 ~T0 @X0 1 s ]
 "253
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 253: {
 {
@@ -1748,15 +1748,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "254
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 254:     uart[UART_BLE].Write(txData);
-[e ( *U . *U + &U _uart * -> . `E12909 1 `ux -> -> # *U &U _uart `ui `ux 1 (1 _txData ]
+[e ( *U . *U + &U _uart * -> . `E12930 1 `ux -> -> # *U &U _uart `ui `ux 1 (1 _txData ]
 "255
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 255: }
 [e :UE 1689 ]
 }
-[v F13001 `(uc ~T0 @X0 1 tf ]
+[v F13022 `(uc ~T0 @X0 1 tf ]
 "257
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 257: static __attribute__((inline)) uint8_t RN487X_Read(void)
-[v _RN487X_Read `TF13001 ~T0 @X0 1 s ]
+[v _RN487X_Read `TF13022 ~T0 @X0 1 s ]
 "258
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 258: {
 {
@@ -1764,16 +1764,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "259
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 259:     return uart[UART_BLE].Read();
-[e ) ( *U . *U + &U _uart * -> . `E12909 1 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
+[e ) ( *U . *U + &U _uart * -> . `E12930 1 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
 [e $UE 1690  ]
 "260
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 260: }
 [e :UE 1690 ]
 }
-[v F13005 `(a ~T0 @X0 1 tf ]
+[v F13026 `(a ~T0 @X0 1 tf ]
 "262
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 262: static __attribute__((inline)) _Bool RN487X_is_tx_done(void)
-[v _RN487X_is_tx_done `TF13005 ~T0 @X0 1 s ]
+[v _RN487X_is_tx_done `TF13026 ~T0 @X0 1 s ]
 "263
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 263: {
 {
@@ -1781,16 +1781,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "264
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 264:     return uart[UART_BLE].TransmitDone();
-[e ) ( *U . *U + &U _uart * -> . `E12909 1 `ux -> -> # *U &U _uart `ui `ux 7 ..  ]
+[e ) ( *U . *U + &U _uart * -> . `E12930 1 `ux -> -> # *U &U _uart `ui `ux 7 ..  ]
 [e $UE 1691  ]
 "265
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 265: }
 [e :UE 1691 ]
 }
-[v F13009 `(a ~T0 @X0 1 tf ]
+[v F13030 `(a ~T0 @X0 1 tf ]
 "267
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 267: static __attribute__((inline)) _Bool RN487X_is_rx_ready(void)
-[v _RN487X_is_rx_ready `TF13009 ~T0 @X0 1 s ]
+[v _RN487X_is_rx_ready `TF13030 ~T0 @X0 1 s ]
 "268
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 268: {
 {
@@ -1798,16 +1798,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "269
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 269:     return uart[UART_BLE].DataReady();
-[e ) ( *U . *U + &U _uart * -> . `E12909 1 `ux -> -> # *U &U _uart `ui `ux 3 ..  ]
+[e ) ( *U . *U + &U _uart * -> . `E12930 1 `ux -> -> # *U &U _uart `ui `ux 3 ..  ]
 [e $UE 1692  ]
 "270
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 270: }
 [e :UE 1692 ]
 }
-[v F13013 `(v ~T0 @X0 1 tf1`us ]
+[v F13034 `(v ~T0 @X0 1 tf1`us ]
 "272
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 272: static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount)
-[v _RN487X_Delay `TF13013 ~T0 @X0 1 s ]
+[v _RN487X_Delay `TF13034 ~T0 @X0 1 s ]
 "273
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 273: {
 {
@@ -1993,10 +1993,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 317: }
 [e :UE 1712 ]
 }
-[v F13022 `(v ~T0 @X0 1 tf ]
+[v F13043 `(v ~T0 @X0 1 tf ]
 "323
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 323: static __attribute__((inline)) void rn487x_PrintMessageStart(void)
-[v _rn487x_PrintMessageStart `TF13022 ~T0 @X0 1 s ]
+[v _rn487x_PrintMessageStart `TF13043 ~T0 @X0 1 s ]
 "324
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 324: {
 {
@@ -2004,24 +2004,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "325
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 325:     uart[UART_CDC].Write('<');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
 "326
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 326:     uart[UART_CDC].Write('<');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
 "327
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 327:     uart[UART_CDC].Write('<');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
 "328
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 328:     uart[UART_CDC].Write(' ');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
 "329
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 329: }
 [e :UE 1727 ]
 }
-[v F13036 `(v ~T0 @X0 1 tf ]
+[v F13057 `(v ~T0 @X0 1 tf ]
 "331
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 331: static __attribute__((inline)) void rn487x_PrintMessageEnd(void)
-[v _rn487x_PrintMessageEnd `TF13036 ~T0 @X0 1 s ]
+[v _rn487x_PrintMessageEnd `TF13057 ~T0 @X0 1 s ]
 "332
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 332: {
 {
@@ -2029,52 +2029,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "333
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 333:     uart[UART_CDC].Write(' ');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
 "334
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 334:     uart[UART_CDC].Write('>');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
 "335
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 335:     uart[UART_CDC].Write('>');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
 "336
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 336:     uart[UART_CDC].Write('>');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
 "337
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 337:     uart[UART_CDC].Write(' ');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
 "338
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 338:     uart[UART_CDC].Write('\r');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 13 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 13 `ui `uc ]
 "339
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 339:     uart[UART_CDC].Write('\n');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 10 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 10 `ui `uc ]
 "340
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 340: }
 [e :UE 1728 ]
 }
-[v F13059 `(v ~T0 @X0 1 tf1`E12962 ]
+[v F13080 `(v ~T0 @X0 1 tf1`E12983 ]
 "342
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 342: static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-[v _rn487x_PrintIndicatorCharacters `TF13059 ~T0 @X0 1 s ]
+[v _rn487x_PrintIndicatorCharacters `TF13080 ~T0 @X0 1 s ]
 "343
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 343: {
 {
 [e :U _rn487x_PrintIndicatorCharacters ]
 "342
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 342: static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-[v _messageType `E12962 ~T0 @X0 1 r1 ]
+[v _messageType `E12983 ~T0 @X0 1 r1 ]
 "343
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 343: {
 [f ]
 "344
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 344:     if (DISCONNECT_MSG == messageType)
-[e $ ! == -> . `E12962 0 `ui -> _messageType `ui 1730  ]
+[e $ ! == -> . `E12983 0 `ui -> _messageType `ui 1730  ]
 "345
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 345:     {
 {
 "346
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 346:         uart[UART_CDC].Write('[');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 91 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 91 `ui `uc ]
 "347
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 347:     }
 }
@@ -2082,13 +2082,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "348
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 348:     else if (STREAM_OPEN_MSG == messageType)
 [e :U 1730 ]
-[e $ ! == -> . `E12962 1 `ui -> _messageType `ui 1732  ]
+[e $ ! == -> . `E12983 1 `ui -> _messageType `ui 1732  ]
 "349
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 349:     {
 {
 "350
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 350:         uart[UART_CDC].Write(']');
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 93 `ui `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 93 `ui `uc ]
 "351
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 351:     }
 }
@@ -2108,10 +2108,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 356: }
 [e :UE 1729 ]
 }
-[v F13068 `(v ~T0 @X0 1 tf1`*uc ]
+[v F13089 `(v ~T0 @X0 1 tf1`*uc ]
 "358
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 358: static __attribute__((inline)) void rn487x_PrintMessage(char* passedMessage)
-[v _rn487x_PrintMessage `TF13068 ~T0 @X0 1 s ]
+[v _rn487x_PrintMessage `TF13089 ~T0 @X0 1 s ]
 "359
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 359: {
 {
@@ -2140,7 +2140,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "364
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 364:         uart[UART_CDC].Write(printCharacter[messageIndex]);
-[e ( *U . *U + &U _uart * -> . `E12909 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> *U + &U _printCharacter * -> _messageIndex `ux -> -> # *U &U _printCharacter `ui `ux `uc ]
+[e ( *U . *U + &U _uart * -> . `E12930 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> *U + &U _printCharacter * -> _messageIndex `ux -> -> # *U &U _printCharacter `ui `ux `uc ]
 "365
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 365:     }
 }
@@ -2168,7 +2168,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "370
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 370:     RN487X_MESSAGE_TYPE messageType;
-[v _messageType `E12962 ~T0 @X0 1 a ]
+[v _messageType `E12983 ~T0 @X0 1 a ]
 "371
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 371:     rn487x_PrintMessageStart();
 [e ( _rn487x_PrintMessageStart ..  ]
@@ -2180,7 +2180,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "374
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 374:         messageType = DISCONNECT_MSG;
-[e = _messageType . `E12962 0 ]
+[e = _messageType . `E12983 0 ]
 "375
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 375:         connected = 0;
 [e = _connected -> -> 0 `i `a ]
@@ -2197,7 +2197,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "379
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 379:         messageType = STREAM_OPEN_MSG;
-[e = _messageType . `E12962 1 ]
+[e = _messageType . `E12983 1 ]
 "380
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 380:         connected = 1;
 [e = _connected -> -> 1 `i `a ]
@@ -2213,7 +2213,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "384
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 384:         messageType = GENERAL_MSG;
-[e = _messageType . `E12962 2 ]
+[e = _messageType . `E12983 2 ]
 "385
 [; ;mcc_generated_files/rn487x/rn487x_interface.c: 385:     }
 }

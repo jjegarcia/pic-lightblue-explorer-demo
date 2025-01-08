@@ -36,6 +36,8 @@
 #include "MCP9844_temp_sensor.h"
 #include "../pin_manager.h"
 #include "../drivers/uart.h"
+#include "../spi2.h"
+
 
 /**
 \ingroup LIGHTBLUE
@@ -176,18 +178,18 @@ LIGHTBLUE_PerformAction private function. Use of types is handled in packet
 format functions used to specific application transmission features. 
  */
 typedef enum {
-    PROTOCOL_VERSION_ID             = 'V',
-    LED_STATE_ID                    = 'L',
-    BUTTON_STATE_ID                 = 'P',
-    TEMPERATURE_DATA_ID             = 'T',
-    ACCEL_DATA_ID                   = 'X',
-    SERIAL_DATA_ID                  = 'S',
-    ERROR_ID                        = 'R',
-    UI_CONFIG_DATA_ID               = 'U',
-    ALERT_REQUEST_ID                = 'A',
-    BUZZ_REQUEST_ID                 = 'B',
-    THERMOCOUPLE_READ_REQUEST_ID    = 'Z',
-    RESET_REQUEST_ID                = 'O',
+    PROTOCOL_VERSION_ID = 'V',
+    LED_STATE_ID = 'L',
+    BUTTON_STATE_ID = 'P',
+    TEMPERATURE_DATA_ID = 'T',
+    ACCEL_DATA_ID = 'X',
+    SERIAL_DATA_ID = 'S',
+    ERROR_ID = 'R',
+    UI_CONFIG_DATA_ID = 'U',
+    ALERT_REQUEST_ID = 'A',
+    BUZZ_REQUEST_ID = 'B',
+    THERMOCOUPLE_READ_REQUEST_ID = 'Z',
+    RESET_REQUEST_ID = 'O',
 } PROTOCOL_PACKET_TYPES_t;
 
 /**
@@ -538,28 +540,56 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
         case BUZZ_REQUEST_ID:
             BUZZ_ACKNOWLEDGED();
             break;
-          case RESET_REQUEST_ID:
+        case RESET_REQUEST_ID:
             RESET();
             break;
         case THERMOCOUPLE_READ_REQUEST_ID:
             THERMOCOUUPLE_READING_REQUESTED_SET();
             break;
-      default:
+        default:
             break;
     }
 }
 
-void LIGHTBLUE_SendThermocoupleReading(void){
-    char payload[13];
-    BMA253_ACCEL_DATA_t accelData;
+void LIGHTBLUE_SendThermocoupleReading(void) {
+    char payload[4];
+    uint16_t thermocoupleData;
 
     *payload = '\0';
-    BMA253_GetAccelDataXYZ(&accelData);
-    // Masking to ensure top nibble is always 0 as light blue expects
-    // Exception may occur when highest byte is not 0
-    LIGHTBLUE_SplitWord(payload, (accelData.x & 0x0FFF));
-    LIGHTBLUE_SplitWord(payload, (accelData.y & 0x0FFF));
-    LIGHTBLUE_SplitWord(payload, (accelData.z & 0x0FFF));
+    MAX51855_GetThermocoupleData(&thermocoupleData);
+    
+    thermocoupleData = 0x1234;
 
-    LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
+    LIGHTBLUE_SplitWord(payload, (thermocoupleData & 0x0FFFF));
+    LIGHTBLUE_SendPacket(THERMOCOUPLE_READ_REQUEST_ID, payload);
+}
+
+#define MSB_MASK                            (0xFF00)
+
+static int16_t MAX51855_CalcTemperature(void);
+
+void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData) {
+
+    if (SPI2_Open(SPI2_DEFAULT)) {
+        RC0_THERMOCOUPLE_READ_CS_SetLow();
+        *thermocoupleData = MAX51855_CalcTemperature();
+        RC0_THERMOCOUPLE_READ_CS_SetHigh();
+        SPI2_Close();
+    } else {
+        *thermocoupleData = 0x0000;
+    }
+}
+
+static int16_t MAX51855_CalcTemperature(void) {
+    int16_t temperatureData;
+    uint8_t upperByte;
+    uint8_t lowerByte;
+
+    SPI2_ReadBlock(&temperatureData, 2);
+    upperByte = ((temperatureData & MSB_MASK) >> 8);
+    lowerByte = (uint8_t) temperatureData;
+
+    temperatureData = ((int16_t) (upperByte << 8) | lowerByte);
+
+    return temperatureData;
 }

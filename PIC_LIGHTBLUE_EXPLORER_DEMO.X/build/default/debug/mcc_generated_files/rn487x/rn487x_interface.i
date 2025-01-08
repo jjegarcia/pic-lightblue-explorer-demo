@@ -20396,17 +20396,17 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 294 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 306 "mcc_generated_files/pin_manager.h"
+# 330 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 319 "mcc_generated_files/pin_manager.h"
+# 343 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 342 "mcc_generated_files/pin_manager.h"
-void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 366 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF6_InterruptHandler)(void);
+void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 390 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF6_InterruptHandler)(void);
+# 414 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/rn487x/../mcc.h" 2
 
@@ -20810,13 +20810,6 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 103 "mcc_generated_files/rn487x/../mcc.h"
 void PMD_Initialize(void);
-# 125 "mcc_generated_files/rn487x/../mcc.h"
-static char statusBuffer[(80)];
-static char lightBlueSerial[(80)];
-static uint8_t serialIndex;
-
-
-void runProtocol(void);
 # 30 "mcc_generated_files/rn487x/rn487x_interface.c" 2
 
 # 1 "mcc_generated_files/rn487x/../drivers/uart.h" 1

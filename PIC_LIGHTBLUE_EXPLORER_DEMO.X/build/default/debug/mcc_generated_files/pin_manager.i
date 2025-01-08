@@ -20286,17 +20286,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 294 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 306 "mcc_generated_files/pin_manager.h"
+# 330 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 319 "mcc_generated_files/pin_manager.h"
+# 343 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 342 "mcc_generated_files/pin_manager.h"
-void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 366 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF6_InterruptHandler)(void);
+void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 390 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF6_InterruptHandler)(void);
+# 414 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
@@ -20322,14 +20322,14 @@ void PIN_MANAGER_Initialize(void)
 
     TRISE = 0x08;
     TRISA = 0xDE;
-    TRISB = 0xED;
-    TRISC = 0xAA;
+    TRISB = 0xEE;
+    TRISC = 0xA8;
 
 
 
 
     ANSELC = 0x00;
-    ANSELB = 0xCD;
+    ANSELB = 0xE0;
     ANSELA = 0x0E;
 
 
@@ -20384,15 +20384,17 @@ void PIN_MANAGER_Initialize(void)
 
     SSP1CLKPPS = 0x09;
     SSP2DATPPS = 0x13;
-    RB1PPS = 0x15;
-    RC1PPS = 0x14;
+    RC1PPS = 0x15;
     RC4PPS = 0x25;
     RB4PPS = 0x0F;
     RC2PPS = 0x16;
     RX2DTPPS = 0x15;
-    SSP1DATPPS = 0x11;
-    SSP2CLKPPS = 0x09;
-    RX1DTPPS = 0x0D;
+    SSP1DATPPS = 0x0A;
+    SSP2CLKPPS = 0x11;
+    RB1PPS = 0x00;
+    RB0PPS = 0x0F;
+    RB2PPS = 0x14;
+    RX1DTPPS = 0x0B;
 }
 
 void PIN_MANAGER_IOC(void)

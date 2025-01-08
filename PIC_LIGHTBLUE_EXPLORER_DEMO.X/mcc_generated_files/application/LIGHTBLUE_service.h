@@ -27,6 +27,8 @@
 #ifndef LIGHTBLUE_SERVICE_H
 #define	LIGHTBLUE_SERVICE_H
 
+void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData);
+
 /**
  \ingroup LIGHTBLUE
  \brief  Public function used for initialization of RN487X module conditions. \n
