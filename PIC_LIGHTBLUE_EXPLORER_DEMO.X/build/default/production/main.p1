@@ -23,23 +23,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 38: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
-"25 ./main.h
-[; ;./main.h: 25: void runProtocol(void);
+"27 ./main.h
+[; ;./main.h: 27: void runProtocol(void);
 [v _runProtocol `(v ~T0 @X0 0 ef ]
-"310 mcc_generated_files/tmr0.h
-[; ;mcc_generated_files/tmr0.h: 310: _Bool TMR0_HasOverflowOccured(void);
-[v _TMR0_HasOverflowOccured `(a ~T0 @X0 0 ef ]
-"22417 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22417:     struct {
-[s S1021 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1021 . INTF . IOCIF TMR0IF ]
-"22416
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22416: typedef union {
-[u S1020 `S1021 1 ]
-[n S1020 . . ]
-"22424
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22424: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
-[v _PIR0bits `VS1020 ~T0 @X0 0 e@1804 ]
 "161 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 161: void LIGHTBLUE_SendThermocoupleReading(void);
 [v _LIGHTBLUE_SendThermocoupleReading `(v ~T0 @X0 0 ef ]
@@ -1627,14 +1613,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "182
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 182: _Bool Buzz_Acknowledged;
 [v _Buzz_Acknowledged `a ~T0 @X0 1 e ]
-"20 ./main.h
-[; ;./main.h: 20: static char statusBuffer[(80)];
+"22 ./main.h
+[; ;./main.h: 22: static char statusBuffer[(80)];
 [v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
-"21
-[; ;./main.h: 21: static char lightBlueSerial[(80)];
+"23
+[; ;./main.h: 23: static char lightBlueSerial[(80)];
 [v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
-"22
-[; ;./main.h: 22: static uint8_t serialIndex;
+"24
+[; ;./main.h: 24: static uint8_t serialIndex;
 [v _serialIndex `uc ~T0 @X0 1 s ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "50 main.c
@@ -1697,30 +1683,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75
 [; ;main.c: 75:     uint16_t thermocoupleData;
 [v _thermocoupleData `us ~T0 @X0 1 a ]
-"77
-[; ;main.c: 77:     if ((TMR0_HasOverflowOccured())) {
-[e $ ! != -> ( _TMR0_HasOverflowOccured ..  `i -> 0 `i 1698  ]
-{
 "78
-[; ;main.c: 78:         (PIR0bits.TMR0IF = 0);
-[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-"80
-[; ;main.c: 80:         {
+[; ;main.c: 78:     {
 {
 "81
-[; ;main.c: 81:             LIGHTBLUE_SendThermocoupleReading();
-[e ( _LIGHTBLUE_SendThermocoupleReading ..  ]
+[; ;main.c: 81:         {
+{
 "82
-[; ;main.c: 82:             (Themocouple_Reading_Requested = 0 );
-[e = _Themocouple_Reading_Requested -> -> 0 `i `a ]
-"83
-[; ;main.c: 83:         }
+[; ;main.c: 82:             LIGHTBLUE_SendThermocoupleReading();
+[e ( _LIGHTBLUE_SendThermocoupleReading ..  ]
+"84
+[; ;main.c: 84:         }
 }
-"89
-[; ;main.c: 89:     }
-}
-[e :U 1698 ]
 "90
-[; ;main.c: 90: }
+[; ;main.c: 90:     }
+}
+"91
+[; ;main.c: 91: }
 [e :UE 1697 ]
 }

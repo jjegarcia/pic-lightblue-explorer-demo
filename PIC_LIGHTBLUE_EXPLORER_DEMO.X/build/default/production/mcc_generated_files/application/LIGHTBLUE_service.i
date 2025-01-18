@@ -20899,7 +20899,17 @@ void SPI2_ReadBlock(void *block, size_t blockSize);
 void SPI2_WriteByte(uint8_t byte);
 uint8_t SPI2_ReadByte(void);
 # 39 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
-# 180 "mcc_generated_files/application/LIGHTBLUE_service.c"
+
+# 1 "mcc_generated_files\\../main.h" 1
+# 22 "mcc_generated_files\\../main.h"
+static char statusBuffer[(80)];
+static char lightBlueSerial[(80)];
+static uint8_t serialIndex;
+
+
+void runProtocol(void);
+# 40 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 181 "mcc_generated_files/application/LIGHTBLUE_service.c"
 typedef enum {
     PROTOCOL_VERSION_ID = 'V',
     LED_STATE_ID = 'L',
@@ -20914,7 +20924,7 @@ typedef enum {
     THERMOCOUPLE_READ_REQUEST_ID = 'Z',
     RESET_REQUEST_ID = 'O',
 } PROTOCOL_PACKET_TYPES_t;
-# 202 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 203 "mcc_generated_files/application/LIGHTBLUE_service.c"
 typedef enum {
     IDLE = 0,
     SEQUENCE_NUMBER = 1,
@@ -20930,9 +20940,9 @@ const char * const protocol_version_number = "1.1.0";
 static char _hex[] = "0123456789ABCDEF";
 static uint8_t sequenceNumber = 0;
 static volatile rn487x_gpio_bitmap_t bitMap;
-# 232 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 233 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static void LIGHTBLUE_SendPacket(char packetID, char* payload);
-# 241 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 242 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
 
 
@@ -20950,9 +20960,9 @@ static void LIGHTBLUE_SplitByte(char* payload, int8_t value);
 
 
 static uint8_t LIGHTBLUE_GetButtonValue(void);
-# 266 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 267 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static uint8_t LIGHTBLUE_GetDataLedValue(void);
-# 275 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 276 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static uint8_t LIGHTBLUE_GetErrorLedValue(void);
 
 
@@ -20970,7 +20980,7 @@ static void LIGHTBLUE_SetErrorLedValue(_Bool value);
 
 
 static void LIGHTBLUE_UpdateErrorLed(void);
-# 305 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 306 "mcc_generated_files/application/LIGHTBLUE_service.c"
 static void LIGHTBLUE_PerformAction(char id, uint8_t data);
 
 void LIGHTBLUE_Initialize(void) {
@@ -21221,14 +21231,14 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
 }
 
 void LIGHTBLUE_SendThermocoupleReading(void) {
-    char payload[4];
+                                                                                                                                                             char payload[4];
     uint16_t thermocoupleData;
 
     *payload = '\0';
     MAX51855_GetThermocoupleData(&thermocoupleData);
-    LIGHTBLUE_SplitWord(payload, (thermocoupleData & 0x0FFF));
 
-    LIGHTBLUE_SendPacket(THERMOCOUPLE_READ_REQUEST_ID, payload);
+    LIGHTBLUE_SplitWord(payload, (thermocoupleData & 0x0FFFF));
+
 }
 
 
@@ -21236,10 +21246,12 @@ void LIGHTBLUE_SendThermocoupleReading(void) {
 static int16_t MAX51855_CalcTemperature(void);
 
 void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData) {
+        do { LATCbits.LATC0 = 0; } while(0);
+        while (PIR0bits.TMR0IF == 0) { }
 
     if (SPI2_Open(SPI2_DEFAULT)) {
-        do { LATCbits.LATC0 = 0; } while(0);
-        *thermocoupleData= MAX51855_CalcTemperature();
+        (PIR0bits.TMR0IF = 0);
+        *thermocoupleData = MAX51855_CalcTemperature();
         do { LATCbits.LATC0 = 1; } while(0);
         SPI2_Close();
     } else {
@@ -21247,17 +21259,15 @@ void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData) {
     }
 }
 
-static int16_t MAX51855_CalcTemperature(void)
-{
-    int16_t temperatureData;
+static int16_t MAX51855_CalcTemperature(void) {
+    int64_t temperatureData=0;
     uint8_t upperByte;
     uint8_t lowerByte;
-
-    SPI2_ReadBlock(&temperatureData, 2);
+    SPI2_ReadBlock(&temperatureData, 32);
     upperByte = ((temperatureData & (0xFF00)) >> 8);
-    lowerByte = (uint8_t)temperatureData;
+    lowerByte = (uint8_t) temperatureData;
 
-    temperatureData = ((int16_t)(upperByte << 8) | lowerByte);
+    temperatureData = ((int16_t) (upperByte << 8) | lowerByte);
 
     return temperatureData;
 }

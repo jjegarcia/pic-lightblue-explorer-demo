@@ -20921,7 +20921,7 @@ extern const uart_functions_t uart[];
 # 44 "main.c" 2
 
 # 1 "./main.h" 1
-# 20 "./main.h"
+# 22 "./main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
@@ -20961,12 +20961,13 @@ int main(void) {
 void runProtocol(void) {
     uint16_t thermocoupleData;
 
-    if ((TMR0_HasOverflowOccured())) {
-        (PIR0bits.TMR0IF = 0);
+
+    {
+
 
         {
             LIGHTBLUE_SendThermocoupleReading();
-            (Themocouple_Reading_Requested = 0 );
+
         }
 
 

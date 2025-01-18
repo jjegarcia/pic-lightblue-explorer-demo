@@ -37,6 +37,7 @@
 #include "../pin_manager.h"
 #include "../drivers/uart.h"
 #include "../spi2.h"
+#include "../main.h"
 
 
 /**
@@ -534,7 +535,7 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
             break;
         case ALERT_REQUEST_ID:
             LIGHTBLUE_SetErrorLedValue(data & NIBBLE_MASK);
-            DataLedOff();
+            DataLedOff();                                                                                                                                                                                                                                       
             ALERT_ACKNOWLEDGED();
             break;
         case BUZZ_REQUEST_ID:
@@ -552,16 +553,14 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
 }
 
 void LIGHTBLUE_SendThermocoupleReading(void) {
-    char payload[4];
+                                                                                                                                                             char payload[4];
     uint16_t thermocoupleData;
 
     *payload = '\0';
     MAX51855_GetThermocoupleData(&thermocoupleData);
-    
-    thermocoupleData = 0x1234;
 
     LIGHTBLUE_SplitWord(payload, (thermocoupleData & 0x0FFFF));
-    LIGHTBLUE_SendPacket(THERMOCOUPLE_READ_REQUEST_ID, payload);
+//    LIGHTBLUE_SendPacket(THERMOCOUPLE_READ_REQUEST_ID, payload);
 }
 
 #define MSB_MASK                            (0xFF00)
@@ -569,9 +568,11 @@ void LIGHTBLUE_SendThermocoupleReading(void) {
 static int16_t MAX51855_CalcTemperature(void);
 
 void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData) {
+        RC0_THERMOCOUPLE_READ_CS_SetLow();
+        while (PIR0bits.TMR0IF == 0) { }
 
     if (SPI2_Open(SPI2_DEFAULT)) {
-        RC0_THERMOCOUPLE_READ_CS_SetLow();
+        RESET_TIMER_INTERRUPT_FLAG;
         *thermocoupleData = MAX51855_CalcTemperature();
         RC0_THERMOCOUPLE_READ_CS_SetHigh();
         SPI2_Close();
@@ -581,11 +582,10 @@ void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData) {
 }
 
 static int16_t MAX51855_CalcTemperature(void) {
-    int16_t temperatureData;
+    int64_t temperatureData=0;
     uint8_t upperByte;
     uint8_t lowerByte;
-
-    SPI2_ReadBlock(&temperatureData, 2);
+    SPI2_ReadBlock(&temperatureData, 32);
     upperByte = ((temperatureData & MSB_MASK) >> 8);
     lowerByte = (uint8_t) temperatureData;
 

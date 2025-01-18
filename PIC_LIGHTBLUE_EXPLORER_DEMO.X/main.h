@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 
 /** MACRO used to reference Periodic Timer overflow flag Set. 
  *  This is used by the application to have a semi-accurate 
@@ -23,3 +25,4 @@ static uint8_t serialIndex;                     /**< Local index value for seria
 
 
 void runProtocol(void);
+#endif

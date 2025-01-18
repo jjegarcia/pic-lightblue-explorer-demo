@@ -42,7 +42,7 @@
 #include "mcc_generated_files/rn487x/rn487x_interface.h"
 #include "mcc_generated_files/rn487x/rn487x.h"
 #include "mcc_generated_files/drivers/uart.h"
-#include"main.h"
+#include "main.h"
 
 /*
                          Main application
@@ -74,12 +74,13 @@ int main(void) {
 void runProtocol(void) {
     uint16_t thermocoupleData;
 
-    if (TIMER_FLAG_SET()) {
-        RESET_TIMER_INTERRUPT_FLAG;
+//    if (TIMER_FLAG_SET()) 
+    {
+//        RESET_TIMER_INTERRUPT_FLAG;
         //        if (IS_THERMCOUPLE_READING_REQUESTED())
         {
             LIGHTBLUE_SendThermocoupleReading();
-            THERMOCOUUPLE_READING_REQUESTED_CLEAR();
+//            THERMOCOUUPLE_READING_REQUESTED_CLEAR();
         }
         //    } else 
         //    {
