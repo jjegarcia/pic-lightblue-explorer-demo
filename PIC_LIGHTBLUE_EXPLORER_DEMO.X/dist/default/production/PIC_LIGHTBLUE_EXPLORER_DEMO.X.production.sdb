@@ -4,7 +4,7 @@
 [d chip 16LF18456 ]
 [d frameptr 6 ]
 "322 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[e E12947 . `uc
+[e E12950 . `uc
 PROTOCOL_VERSION_ID 86
 LED_STATE_ID 76
 BUTTON_STATE_ID 80
@@ -19,12 +19,12 @@ THERMOCOUPLE_READ_REQUEST_ID 90
 RESET_REQUEST_ID 79
 ]
 "406
-[e E280 . `uc
+[e E283 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
 "419
-[e E12961 . `uc
+[e E12964 . `uc
 IDLE 0
 SEQUENCE_NUMBER 1
 PACKET_ID 2
@@ -34,12 +34,12 @@ PAYLOAD_0 5
 PAYLOAD_1 6
 ]
 "534
-[e E12890 . `uc
+[e E12893 . `uc
 UART_CDC 0
 UART_BLE 1
 ]
 "574
-[e E12922 . `uc
+[e E12925 . `uc
 SPI2_DEFAULT 0
 ]
 "80 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_master.c
@@ -250,12 +250,12 @@ SPI2_DEFAULT 0
 [v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
 "517
 [v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
-"555
-[v _LIGHTBLUE_SendThermocoupleReading LIGHTBLUE_SendThermocoupleReading `(v  1 e 1 0 ]
 "570
 [v _MAX51855_GetThermocoupleData MAX51855_GetThermocoupleData `(v  1 e 1 0 ]
 "584
 [v _MAX51855_CalcTemperature MAX51855_CalcTemperature `(s  1 s 2 MAX51855_CalcTemperature ]
+"597
+[v _Curiosity_GetData Curiosity_GetData `(v  1 e 1 0 ]
 "70 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/MCP9844_temp_sensor.c
 [v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
 "75
@@ -393,15 +393,15 @@ SPI2_DEFAULT 0
 "280
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 "142 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/i2c1_master_example.c
-[v _rd1RegCompleteHandler@i2c1_master_example$F1291 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
+[v _rd1RegCompleteHandler@i2c1_master_example$F1293 rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
 "149
-[v _rd2RegCompleteHandler@i2c1_master_example$F1302 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
+[v _rd2RegCompleteHandler@i2c1_master_example$F1304 rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
 "156
-[v _wr1RegCompleteHandler@i2c1_master_example$F1308 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+[v _wr1RegCompleteHandler@i2c1_master_example$F1310 wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
 "163
-[v _wr2RegCompleteHandler@i2c1_master_example$F1314 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
+[v _wr2RegCompleteHandler@i2c1_master_example$F1316 wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
 "170
-[v _rdBlkRegCompleteHandler@i2c1_master_example$F1325 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
+[v _rdBlkRegCompleteHandler@i2c1_master_example$F1327 rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
 "84 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/rn487x_example.c
 [v _RN487X_Example_Run RN487X_Example_Run `(v  1 s 1 RN487X_Example_Run ]
 "99
@@ -587,7 +587,7 @@ SPI2_DEFAULT 0
 "252
 [v _RN487X_Write RN487X_Write `T(v  1 s 1 RN487X_Write ]
 "257
-[v _RN487X_Read@rn487x_interface$F1433 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+[v _RN487X_Read@rn487x_interface$F1435 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
 "262
 [v _RN487X_is_tx_done RN487X_is_tx_done `T(a  1 s 1 RN487X_is_tx_done ]
 "267
@@ -622,22 +622,24 @@ SPI2_DEFAULT 0
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"127
+[v _TMR0_HasOverflowOccured TMR0_HasOverflowOccured `(a  1 e 1 0 ]
 "22 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.h
-[v _statusBuffer@main$F3851 statusBuffer `[80]uc  1 s 80 statusBuffer ]
-"169 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.h
+[v _statusBuffer@main$F3854 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+"171 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.h
 [v _Themocouple_Reading_Requested Themocouple_Reading_Requested `a  1 e 1 0 ]
-"175
+"177
 [v _Alert_Acknowledged Alert_Acknowledged `a  1 e 1 0 ]
-"182
+"184
 [v _Buzz_Acknowledged Buzz_Acknowledged `a  1 e 1 0 ]
-[s S1147 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S1149 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "427 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[u S1152 . 1 `S1147 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1152  1 e 1 @11 ]
+[u S1154 . 1 `S1149 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1154  1 e 1 @11 ]
 [s S248 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
@@ -652,7 +654,7 @@ SPI2_DEFAULT 0
 [v _PORTAbits PORTAbits `VES257  1 e 1 @12 ]
 "654
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
-[s S1541 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S1543 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -662,13 +664,13 @@ SPI2_DEFAULT 0
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "671
-[u S1550 . 1 `S1541 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES1550  1 e 1 @18 ]
+[u S1552 . 1 `S1543 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1552  1 e 1 @18 ]
 "716
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
 "778
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
-[s S3708 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S3710 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -678,8 +680,8 @@ SPI2_DEFAULT 0
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "795
-[u S3717 . 1 `S3708 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES3717  1 e 1 @20 ]
+[u S3719 . 1 `S3710 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES3719  1 e 1 @20 ]
 "840
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "861
@@ -724,7 +726,7 @@ SPI2_DEFAULT 0
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "5420
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S1962 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S1964 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -734,11 +736,11 @@ SPI2_DEFAULT 0
 `uc 1 SPEN 1 0 :1:7 
 ]
 "5446
-[u S1971 . 1 `S1962 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES1971  1 e 1 @285 ]
+[u S1973 . 1 `S1964 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES1973  1 e 1 @285 ]
 "5600
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S1940 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S1942 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -748,8 +750,8 @@ SPI2_DEFAULT 0
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5626
-[u S1949 . 1 `S1940 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES1949  1 e 1 @286 ]
+[u S1951 . 1 `S1942 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES1951  1 e 1 @286 ]
 "5780
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
 "6026
@@ -760,7 +762,7 @@ SPI2_DEFAULT 0
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
 "6236
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S2798 . 1 `uc 1 BF 1 0 :1:0 
+[s S2800 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -770,33 +772,33 @@ SPI2_DEFAULT 0
 `uc 1 SMP 1 0 :1:7 
 ]
 "6345
-[s S2807 . 1 `uc 1 . 1 0 :2:0 
+[s S2809 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S2812 . 1 `uc 1 . 1 0 :2:0 
+[s S2814 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S2817 . 1 `uc 1 . 1 0 :2:0 
+[s S2819 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S2822 . 1 `uc 1 . 1 0 :2:0 
+[s S2824 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S2827 . 1 `uc 1 . 1 0 :2:0 
+[s S2829 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S2833 . 1 `uc 1 BF1 1 0 :1:0 
+[s S2835 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -805,66 +807,66 @@ SPI2_DEFAULT 0
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S2842 . 1 `uc 1 . 1 0 :2:0 
+[s S2844 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S2848 . 1 `uc 1 . 1 0 :2:0 
+[s S2850 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S2854 . 1 `uc 1 . 1 0 :2:0 
+[s S2856 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S2860 . 1 `uc 1 . 1 0 :2:0 
+[s S2862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S2865 . 1 `uc 1 . 1 0 :2:0 
+[s S2867 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S2870 . 1 `uc 1 . 1 0 :2:0 
+[s S2872 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S2875 . 1 `uc 1 . 1 0 :2:0 
+[s S2877 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S2880 . 1 `uc 1 . 1 0 :2:0 
+[s S2882 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S2885 . 1 `S2798 1 . 1 0 `S2807 1 . 1 0 `S2812 1 . 1 0 `S2817 1 . 1 0 `S2822 1 . 1 0 `S2827 1 . 1 0 `S2833 1 . 1 0 `S2842 1 . 1 0 `S2848 1 . 1 0 `S2854 1 . 1 0 `S2860 1 . 1 0 `S2865 1 . 1 0 `S2870 1 . 1 0 `S2875 1 . 1 0 `S2880 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES2885  1 e 1 @399 ]
+[u S2887 . 1 `S2800 1 . 1 0 `S2809 1 . 1 0 `S2814 1 . 1 0 `S2819 1 . 1 0 `S2824 1 . 1 0 `S2829 1 . 1 0 `S2835 1 . 1 0 `S2844 1 . 1 0 `S2850 1 . 1 0 `S2856 1 . 1 0 `S2862 1 . 1 0 `S2867 1 . 1 0 `S2872 1 . 1 0 `S2877 1 . 1 0 `S2882 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES2887  1 e 1 @399 ]
 "6600
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S2640 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S2642 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6630
-[s S2646 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S2648 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S2651 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S2653 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -873,11 +875,11 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S2660 . 1 `S2640 1 . 1 0 `S2646 1 . 1 0 `S2651 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES2660  1 e 1 @400 ]
+[u S2662 . 1 `S2642 1 . 1 0 `S2648 1 . 1 0 `S2653 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES2662  1 e 1 @400 ]
 "6720
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S2719 . 1 `uc 1 SEN 1 0 :1:0 
+[s S2721 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -887,17 +889,17 @@ SPI2_DEFAULT 0
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6767
-[s S2728 . 1 `uc 1 . 1 0 :1:0 
+[s S2730 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S2731 . 1 `uc 1 . 1 0 :1:0 
+[s S2733 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S2738 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S2740 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -906,15 +908,15 @@ SPI2_DEFAULT 0
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S2747 . 1 `uc 1 . 1 0 :1:0 
+[s S2749 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S2754 . 1 `S2719 1 . 1 0 `S2728 1 . 1 0 `S2731 1 . 1 0 `S2738 1 . 1 0 `S2747 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES2754  1 e 1 @401 ]
+[u S2756 . 1 `S2721 1 . 1 0 `S2730 1 . 1 0 `S2733 1 . 1 0 `S2740 1 . 1 0 `S2749 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES2756  1 e 1 @401 ]
 "6969
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
 "6989
@@ -924,7 +926,7 @@ SPI2_DEFAULT 0
 "7543
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
 "7573
-[s S3740 . 1 `uc 1 SSPM02 1 0 :1:0 
+[s S3742 . 1 `uc 1 SSPM02 1 0 :1:0 
 `uc 1 SSPM12 1 0 :1:1 
 `uc 1 SSPM22 1 0 :1:2 
 `uc 1 SSPM32 1 0 :1:3 
@@ -933,8 +935,8 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV2 1 0 :1:6 
 `uc 1 WCOL2 1 0 :1:7 
 ]
-[u S3749 . 1 `S2640 1 . 1 0 `S2646 1 . 1 0 `S3740 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES3749  1 e 1 @410 ]
+[u S3751 . 1 `S2642 1 . 1 0 `S2648 1 . 1 0 `S3742 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES3751  1 e 1 @410 ]
 "7663
 [v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @411 ]
 "19404
@@ -943,27 +945,27 @@ SPI2_DEFAULT 0
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "19796
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S2580 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2582 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "19824
-[s S2586 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2588 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2592 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2594 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[u S2598 . 1 `S2580 1 . 1 0 `S2586 1 . 1 0 `S2592 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2598  1 e 1 @1438 ]
+[u S2600 . 1 `S2582 1 . 1 0 `S2588 1 . 1 0 `S2594 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2600  1 e 1 @1438 ]
 "19894
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
 [s S372 . 1 `uc 1 INTF 1 0 :1:0 
@@ -974,7 +976,7 @@ SPI2_DEFAULT 0
 "22424
 [u S377 . 1 `S372 1 . 1 0 ]
 [v _PIR0bits PIR0bits `VES377  1 e 1 @1804 ]
-[s S2316 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[s S2318 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -984,17 +986,17 @@ SPI2_DEFAULT 0
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "22533
-[u S2325 . 1 `S2316 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES2325  1 e 1 @1807 ]
-[s S2271 . 1 `uc 1 INTE 1 0 :1:0 
+[u S2327 . 1 `S2318 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES2327  1 e 1 @1807 ]
+[s S2273 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "22837
-[u S2276 . 1 `S2271 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES2276  1 e 1 @1814 ]
-[s S1878 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S2278 . 1 `S2273 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES2278  1 e 1 @1814 ]
+[s S1880 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -1004,8 +1006,8 @@ SPI2_DEFAULT 0
 `uc 1 RC2IE 1 0 :1:7 
 ]
 "22946
-[u S1887 . 1 `S1878 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES1887  1 e 1 @1817 ]
+[u S1889 . 1 `S1880 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1889  1 e 1 @1817 ]
 "23246
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "23291
@@ -1045,11 +1047,11 @@ SPI2_DEFAULT 0
 "26474
 [v _RC2STA RC2STA `VEuc  1 e 1 @2589 ]
 "26496
-[v _RC2STAbits RC2STAbits `VES1971  1 e 1 @2589 ]
+[v _RC2STAbits RC2STAbits `VES1973  1 e 1 @2589 ]
 "26596
 [v _TX2STA TX2STA `VEuc  1 e 1 @2590 ]
 "26618
-[v _TX2STAbits TX2STAbits `VES1949  1 e 1 @2590 ]
+[v _TX2STAbits TX2STAbits `VES1951  1 e 1 @2590 ]
 "26718
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @2591 ]
 "32778
@@ -1088,7 +1090,7 @@ SPI2_DEFAULT 0
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
 "34938
 [v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
-[s S2477 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S2479 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -1098,11 +1100,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAP7 1 0 :1:7 
 ]
 "35017
-[u S2486 . 1 `S2477 1 . 1 0 ]
+[u S2488 . 1 `S2479 1 . 1 0 ]
 "35017
 "35017
-[v _IOCAPbits IOCAPbits `VES2486  1 e 1 @7997 ]
-[s S2456 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[v _IOCAPbits IOCAPbits `VES2488  1 e 1 @7997 ]
+[s S2458 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -1112,11 +1114,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAN7 1 0 :1:7 
 ]
 "35079
-[u S2465 . 1 `S2456 1 . 1 0 ]
+[u S2467 . 1 `S2458 1 . 1 0 ]
 "35079
 "35079
-[v _IOCANbits IOCANbits `VES2465  1 e 1 @7998 ]
-[s S2435 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[v _IOCANbits IOCANbits `VES2467  1 e 1 @7998 ]
+[s S2437 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -1126,10 +1128,10 @@ SPI2_DEFAULT 0
 `uc 1 IOCAF7 1 0 :1:7 
 ]
 "35141
-[u S2444 . 1 `S2435 1 . 1 0 ]
+[u S2446 . 1 `S2437 1 . 1 0 ]
 "35141
 "35141
-[v _IOCAFbits IOCAFbits `VES2444  1 e 1 @7999 ]
+[v _IOCAFbits IOCAFbits `VES2446  1 e 1 @7999 ]
 "35186
 [v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
 "35248
@@ -1178,13 +1180,13 @@ SPI2_DEFAULT 0
 [s S118 . 2 `S105 1 ioBitMap 1 0 `S115 1 ioStateBitMap 1 1 ]
 [u S121 . 2 `us 1 gpioMap 2 0 `S118 1 . 2 0 ]
 [v _bitMap bitMap `VES121  1 s 2 bitMap ]
-[s S726 . 36 `uc 1 busy 1 0 :1:0 
+[s S728 . 36 `uc 1 busy 1 0 :1:0 
 `uc 1 inUse 1 0 :1:1 
 `uc 1 bufferFree 1 0 :1:2 
 `uc 1 addressNACKCheck 1 0 :1:3 
 `uc 1 address 1 1 `*.39uc 1 data_ptr 2 2 `ui 1 data_length 2 4 `us 1 time_out 2 6 `us 1 time_out_value 2 8 `E12652 1 state 1 10 `E12493 1 error 1 11 `[6]*.37(E12498 1 callbackTable 12 12 `[6]*.39v 1 callbackPayload 12 24 ]
 "80 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_master.c
-[v _i2c_status i2c_status `S726  1 e 36 0 ]
+[v _i2c_status i2c_status `S728  1 e 36 0 ]
 "400
 [v _fsmStateTable fsmStateTable `DC[16]*.37(E12652  1 e 32 0 ]
 [s S319 . 20 `*.37(uc 1 Read 2 0 `*.37(v 1 Write 2 2 `*.37(a 1 TransmitReady 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 SetTxISR 2 8 `*.37(v 1 RxDefaultISR 2 10 `*.37(v 1 SetRxISR 2 12 `*.37(a 1 TransmitDone 2 14 `*.37(v 1 TxDefaultISR 2 16 `*.37(v 1 Initialize 2 18 ]
@@ -1204,18 +1206,18 @@ SPI2_DEFAULT 0
 [v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
-[s S1865 . 1 `uc 1 perr 1 0 :1:0 
+[s S1867 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S1870 . 1 `S1865 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S1870  1 e 8 0 ]
+[u S1872 . 1 `S1867 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S1872  1 e 8 0 ]
 "71
 [v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart1RxLastError eusart1RxLastError `VES1870  1 e 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES1872  1 e 1 0 ]
 "77
 [v _EUSART1_TxDefaultInterruptHandler EUSART1_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -1241,11 +1243,11 @@ SPI2_DEFAULT 0
 "69
 [v _eusart2RxBuffer eusart2RxBuffer `VE[8]uc  1 e 8 0 ]
 "70
-[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S1870  1 e 8 0 ]
+[v _eusart2RxStatusBuffer eusart2RxStatusBuffer `VE[8]S1872  1 e 8 0 ]
 "71
 [v _eusart2RxCount eusart2RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart2RxLastError eusart2RxLastError `VES1870  1 e 1 0 ]
+[v _eusart2RxLastError eusart2RxLastError `VES1872  1 e 1 0 ]
 "77
 [v _EUSART2_TxDefaultInterruptHandler EUSART2_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -1257,20 +1259,20 @@ SPI2_DEFAULT 0
 "82
 [v _EUSART2_ErrorHandler EUSART2_ErrorHandler `*.37(v  1 e 2 0 ]
 "42 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/examples/rn487x_example.c
-[v _statusBuffer@rn487x_example$F1266 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+[v _statusBuffer@rn487x_example$F1268 statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "78 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_driver.h
 [v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
 "79
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
 "146 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E12565  1 e 32 0 ]
-[s S3183 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.1uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S3185 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.1uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S3183  1 e 29 0 ]
+[v _I2C1_Status I2C1_Status `S3185  1 e 29 0 ]
 "54 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _IOCAF6_InterruptHandler IOCAF6_InterruptHandler `*.37(v  1 e 2 0 ]
 "36 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
@@ -1290,9 +1292,9 @@ SPI2_DEFAULT 0
 [s S190 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
 "227
 [v _RN487X RN487X `DCS190  1 e 18 0 ]
-[s S3696 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S3698 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
-[v _spi2_configuration spi2_configuration `DC[1]S3696  1 s 4 spi2_configuration ]
+[v _spi2_configuration spi2_configuration `DC[1]S3698  1 s 4 spi2_configuration ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEus  1 e 2 0 ]
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
@@ -1303,26 +1305,44 @@ SPI2_DEFAULT 0
 "74
 [v _runProtocol runProtocol `(v  1 e 1 0 ]
 {
-"91
+"75
+[v runProtocol@thermocoupleData thermocoupleData `uc  1 a 1 0 ]
+"99
 } 0
-"555 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_SendThermocoupleReading LIGHTBLUE_SendThermocoupleReading `(v  1 e 1 0 ]
+"127 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
+[v _TMR0_HasOverflowOccured TMR0_HasOverflowOccured `(a  1 e 1 0 ]
 {
-"556
-[v LIGHTBLUE_SendThermocoupleReading@payload payload `[4]uc  1 a 4 19 ]
-"557
-[v LIGHTBLUE_SendThermocoupleReading@thermocoupleData thermocoupleData `us  1 a 2 23 ]
-"564
+"131
 } 0
-"570
-[v _MAX51855_GetThermocoupleData MAX51855_GetThermocoupleData `(v  1 e 1 0 ]
+"597 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _Curiosity_GetData Curiosity_GetData `(v  1 e 1 0 ]
 {
-[v MAX51855_GetThermocoupleData@thermocoupleData thermocoupleData `*.4us  1 a 1 wreg ]
-[v MAX51855_GetThermocoupleData@thermocoupleData thermocoupleData `*.4us  1 a 1 wreg ]
-[v MAX51855_GetThermocoupleData@thermocoupleData thermocoupleData `*.4us  1 a 1 9 ]
-"582
+[v Curiosity_GetData@dataBuffer dataBuffer `*.39uc  1 p 2 7 ]
+"609
 } 0
-"78 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+"128 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+[v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
+{
+[v SPI2_ReadBlock@block block `*.1v  1 a 1 wreg ]
+"130
+[v SPI2_ReadBlock@data data `*.1uc  1 a 1 6 ]
+"128
+[v SPI2_ReadBlock@block block `*.1v  1 a 1 wreg ]
+[v SPI2_ReadBlock@blockSize blockSize `ui  1 p 2 2 ]
+"130
+[v SPI2_ReadBlock@block block `*.1v  1 a 1 5 ]
+"135
+} 0
+"98
+[v _SPI2_ExchangeByte SPI2_ExchangeByte `(uc  1 e 1 0 ]
+{
+[v SPI2_ExchangeByte@data data `uc  1 a 1 wreg ]
+[v SPI2_ExchangeByte@data data `uc  1 a 1 wreg ]
+"100
+[v SPI2_ExchangeByte@data data `uc  1 a 1 1 ]
+"104
+} 0
+"78
 [v _SPI2_Open SPI2_Open `(a  1 e 1 0 ]
 {
 [v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 a 1 wreg ]
@@ -1335,66 +1355,6 @@ SPI2_DEFAULT 0
 [v _SPI2_Close SPI2_Close `(v  1 e 1 0 ]
 {
 "96
-} 0
-"584 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _MAX51855_CalcTemperature MAX51855_CalcTemperature `(s  1 s 2 MAX51855_CalcTemperature ]
-{
-"585
-[v MAX51855_CalcTemperature@temperatureData temperatureData `o  1 a 8 11 ]
-"587
-[v MAX51855_CalcTemperature@lowerByte lowerByte `uc  1 a 1 10 ]
-"586
-[v MAX51855_CalcTemperature@upperByte upperByte `uc  1 a 1 9 ]
-"595
-} 0
-"128 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
-[v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
-{
-[v SPI2_ReadBlock@block block `*.4v  1 a 1 wreg ]
-"130
-[v SPI2_ReadBlock@data data `*.4uc  1 a 1 6 ]
-"128
-[v SPI2_ReadBlock@block block `*.4v  1 a 1 wreg ]
-[v SPI2_ReadBlock@blockSize blockSize `ui  1 p 2 2 ]
-"130
-[v SPI2_ReadBlock@block block `*.4v  1 a 1 5 ]
-"135
-} 0
-"98
-[v _SPI2_ExchangeByte SPI2_ExchangeByte `(uc  1 e 1 0 ]
-{
-[v SPI2_ExchangeByte@data data `uc  1 a 1 wreg ]
-[v SPI2_ExchangeByte@data data `uc  1 a 1 wreg ]
-"100
-[v SPI2_ExchangeByte@data data `uc  1 a 1 1 ]
-"104
-} 0
-"481 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
-{
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitWord@value value `s  1 p 2 9 ]
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 0 ]
-"484
-} 0
-"486
-[v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
-{
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 8 ]
-"491
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-"7
-[v strlen@a a `*.26DCuc  1 a 2 4 ]
-"5
-[v strlen@s s `*.26DCuc  1 p 2 1 ]
-"12
 } 0
 "50 C:\Users\jjega\OneDrive\Documents\GitHub\original_microchip\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1550,7 +1510,7 @@ SPI2_DEFAULT 0
 "287
 } 0
 "257
-[v _RN487X_Read@rn487x_interface$F1433 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+[v _RN487X_Read@rn487x_interface$F1435 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
 {
 "260
 } 0

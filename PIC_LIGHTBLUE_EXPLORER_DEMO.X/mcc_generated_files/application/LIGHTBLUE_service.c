@@ -593,3 +593,17 @@ static int16_t MAX51855_CalcTemperature(void) {
 
     return temperatureData;
 }
+
+void Curiosity_GetData(uint8_t *dataBuffer) {
+        RC0_THERMOCOUPLE_READ_CS_SetLow();
+        while (PIR0bits.TMR0IF == 0) { }
+
+    if (SPI2_Open(SPI2_DEFAULT)) {
+        RESET_TIMER_INTERRUPT_FLAG;
+        SPI2_ReadBlock(dataBuffer, 4);
+        RC0_THERMOCOUPLE_READ_CS_SetHigh();
+        SPI2_Close();
+    } else {
+        *dataBuffer = 0x0000;
+    }
+}

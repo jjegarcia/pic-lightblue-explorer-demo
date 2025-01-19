@@ -64,31 +64,41 @@ int main(void) {
     while (1) {
 
         //        if (RN487X_IsConnected() == true)
-        {
+            {
             runProtocol();
-        }
-    }
+                }
+                    }
     return 0;
-}
+                    }
 
 void runProtocol(void) {
-    uint16_t thermocoupleData;
+    uint8_t thermocoupleData;
+    int64_t temperatureData=0;
+    uint8_t upperByte;
+    uint8_t lowerByte;
+    
+    uint8_t spiData[4];
 
+    Curiosity_GetData(spiData);
+
+    if (TIMER_FLAG_SET()){
+//    thermocoupleData= temperatureData;
+     }
 //    if (TIMER_FLAG_SET()) 
-    {
+        {
 //        RESET_TIMER_INTERRUPT_FLAG;
         //        if (IS_THERMCOUPLE_READING_REQUESTED())
-        {
-            LIGHTBLUE_SendThermocoupleReading();
+            {
+//            LIGHTBLUE_SendThermocoupleReading();
 //            THERMOCOUUPLE_READING_REQUESTED_CLEAR();
-        }
+            }
         //    } else 
         //    {
         //        while (RN487X_DataReady()) {
         //            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
         //        }
-    }
-}
+            }
+        }
 /**
  End of File
- */
+*/

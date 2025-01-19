@@ -28,6 +28,8 @@
 #define	LIGHTBLUE_SERVICE_H
 
 void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData);
+void Curiosity_GetData(uint8_t *dataBuffer);
+static int16_t Curiosity_CalcData(void);
 
 /**
  \ingroup LIGHTBLUE

@@ -20,15 +20,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111 ./mcc_generated_files/rn487x/rn487x.h
 [; ;./mcc_generated_files/rn487x/rn487x.h: 111: _Bool RN487X_Init(void);
 [v _RN487X_Init `(a ~T0 @X0 0 ef ]
-"38 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 38: void LIGHTBLUE_Initialize(void);
+"40 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 40: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
 "27 ./main.h
 [; ;./main.h: 27: void runProtocol(void);
 [v _runProtocol `(v ~T0 @X0 0 ef ]
-"161 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 161: void LIGHTBLUE_SendThermocoupleReading(void);
-[v _LIGHTBLUE_SendThermocoupleReading `(v ~T0 @X0 0 ef ]
+"31 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 31: void Curiosity_GetData(uint8_t *dataBuffer);
+[v _Curiosity_GetData `(v ~T0 @X0 0 ef1`*uc ]
+"310 mcc_generated_files/tmr0.h
+[; ;mcc_generated_files/tmr0.h: 310: _Bool TMR0_HasOverflowOccured(void);
+[v _TMR0_HasOverflowOccured `(a ~T0 @X0 0 ef ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1601,17 +1604,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"163 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 163: _Bool Reset_Requested;
+"165 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 165: _Bool Reset_Requested;
 [v _Reset_Requested `a ~T0 @X0 1 e ]
-"169
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 169: _Bool Themocouple_Reading_Requested;
+"171
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 171: _Bool Themocouple_Reading_Requested;
 [v _Themocouple_Reading_Requested `a ~T0 @X0 1 e ]
-"175
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 175: _Bool Alert_Acknowledged;
+"177
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 177: _Bool Alert_Acknowledged;
 [v _Alert_Acknowledged `a ~T0 @X0 1 e ]
-"182
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 182: _Bool Buzz_Acknowledged;
+"184
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 184: _Bool Buzz_Acknowledged;
 [v _Buzz_Acknowledged `a ~T0 @X0 1 e ]
 "22 ./main.h
 [; ;./main.h: 22: static char statusBuffer[(80)];
@@ -1652,16 +1655,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1695 ]
 {
 "67
-[; ;main.c: 67:         {
+[; ;main.c: 67:             {
 {
 "68
 [; ;main.c: 68:             runProtocol();
 [e ( _runProtocol ..  ]
 "69
-[; ;main.c: 69:         }
+[; ;main.c: 69:                 }
 }
 "70
-[; ;main.c: 70:     }
+[; ;main.c: 70:                     }
 }
 [e :U 1694 ]
 [e $U 1695  ]
@@ -1671,7 +1674,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ) -> 0 `i ]
 [e $UE 1693  ]
 "72
-[; ;main.c: 72: }
+[; ;main.c: 72:                     }
 [e :UE 1693 ]
 }
 "74
@@ -1681,24 +1684,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _runProtocol ]
 [f ]
 "75
-[; ;main.c: 75:     uint16_t thermocoupleData;
-[v _thermocoupleData `us ~T0 @X0 1 a ]
+[; ;main.c: 75:     uint8_t thermocoupleData;
+[v _thermocoupleData `uc ~T0 @X0 1 a ]
+"76
+[; ;main.c: 76:     int64_t temperatureData=0;
+[v _temperatureData `o ~T0 @X0 1 a ]
+[e = _temperatureData -> -> 0 `i `o ]
+"77
+[; ;main.c: 77:     uint8_t upperByte;
+[v _upperByte `uc ~T0 @X0 1 a ]
 "78
-[; ;main.c: 78:     {
-{
-"81
-[; ;main.c: 81:         {
-{
+[; ;main.c: 78:     uint8_t lowerByte;
+[v _lowerByte `uc ~T0 @X0 1 a ]
+"80
+[; ;main.c: 80:     Curiosity_GetData(thermocoupleData);
+[e ( _Curiosity_GetData (1 -> _thermocoupleData `*uc ]
 "82
-[; ;main.c: 82:             LIGHTBLUE_SendThermocoupleReading();
-[e ( _LIGHTBLUE_SendThermocoupleReading ..  ]
+[; ;main.c: 82:     if ((TMR0_HasOverflowOccured())){
+[e $ ! != -> ( _TMR0_HasOverflowOccured ..  `i -> 0 `i 1698  ]
+{
 "84
-[; ;main.c: 84:         }
+[; ;main.c: 84:      }
 }
-"90
-[; ;main.c: 90:     }
+[e :U 1698 ]
+"86
+[; ;main.c: 86:         {
+{
+"89
+[; ;main.c: 89:             {
+{
+"92
+[; ;main.c: 92:             }
 }
-"91
-[; ;main.c: 91: }
+"98
+[; ;main.c: 98:             }
+}
+"99
+[; ;main.c: 99:         }
 [e :UE 1697 ]
 }

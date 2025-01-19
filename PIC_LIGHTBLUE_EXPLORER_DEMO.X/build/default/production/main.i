@@ -20712,6 +20712,8 @@ void PMD_Initialize(void);
 # 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
 # 30 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData);
+void Curiosity_GetData(uint8_t *dataBuffer);
+static int16_t Curiosity_CalcData(void);
 
 
 
@@ -20720,11 +20722,11 @@ void MAX51855_GetThermocoupleData(uint16_t *thermocoupleData);
 
 
 void LIGHTBLUE_Initialize(void);
-# 52 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 54 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_TemperatureSensor(void);
-# 66 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 68 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_AccelSensor(void);
-# 77 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 79 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_PushButton(void);
 
 
@@ -20736,15 +20738,15 @@ void LIGHTBLUE_PushButton_Alert(void);
 
 
 void LIGHTBLUE_PushButton_Buzz(void);
-# 102 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 104 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_LedState(void);
-# 113 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 115 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendProtocolVersion(void);
-# 124 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 126 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendSerialData(char* serialData);
-# 139 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 141 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
-# 161 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 163 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendThermocoupleReading(void);
 
 _Bool Reset_Requested;
@@ -20951,28 +20953,36 @@ int main(void) {
     while (1) {
 
 
-        {
+            {
             runProtocol();
-        }
-    }
+                }
+                    }
     return 0;
-}
+                    }
 
 void runProtocol(void) {
-    uint16_t thermocoupleData;
+    uint8_t thermocoupleData;
+    int64_t temperatureData=0;
+    uint8_t upperByte;
+    uint8_t lowerByte;
 
+    Curiosity_GetData(thermocoupleData);
 
-    {
+    if ((TMR0_HasOverflowOccured())){
 
+     }
 
         {
-            LIGHTBLUE_SendThermocoupleReading();
 
+
+            {
+
+
+            }
+
+
+
+
+
+            }
         }
-
-
-
-
-
-    }
-}
