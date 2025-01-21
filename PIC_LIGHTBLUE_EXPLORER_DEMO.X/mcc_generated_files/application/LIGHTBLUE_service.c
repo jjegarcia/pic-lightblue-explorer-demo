@@ -36,6 +36,7 @@
 #include "MCP9844_temp_sensor.h"
 #include "../pin_manager.h"
 #include "../drivers/uart.h"
+#include "../../main.h"
 
 /**
 \ingroup LIGHTBLUE
@@ -543,5 +544,18 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data)
             break;
         default:
             break;
+    }
+}
+void Curiosity_GetData(uint8_t *dataBuffer) {
+        SPI_CS_SetLow();
+        while (PIR0bits.TMR0IF == 0) { }
+
+    if (SPI2_Open(SPI2_DEFAULT)) {
+        RESET_TIMER_INTERRUPT_FLAG;
+        SPI2_ReadBlock(dataBuffer, 4);
+        SPI_CS_SetHigh();
+        SPI2_Close();
+    } else {
+        *dataBuffer = 0x0000;
     }
 }
