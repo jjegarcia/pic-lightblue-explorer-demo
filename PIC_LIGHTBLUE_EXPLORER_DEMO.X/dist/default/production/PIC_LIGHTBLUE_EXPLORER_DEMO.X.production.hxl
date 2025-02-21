@@ -1,26 +1,26 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\jjega\AppData\Local\Temp\xcAs894.\driver_tmp_3.o
+ C:\Users\jjega\AppData\Local\Temp\xcBsef4.1\driver_tmp_3.o
  -Odist/default/production\PIC_LIGHTBLUE_EXPLORER_DEMO.X.production.hex
  -logfile=dist/default/production\PIC_LIGHTBLUE_EXPLORER_DEMO.X.production.hxl
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
-  0h - FFFh		(C:\Users\jjega\AppData\Local\Temp\xcAs894.\driver_tmp_3.o)
-  1022h - 215Fh		(C:\Users\jjega\AppData\Local\Temp\xcAs894.\driver_tmp_3.o)
-  10000h - 10007h		(C:\Users\jjega\AppData\Local\Temp\xcAs894.\driver_tmp_3.o)
-  1000Eh - 10017h		(C:\Users\jjega\AppData\Local\Temp\xcAs894.\driver_tmp_3.o)
+  0h - FFFh		(C:\Users\jjega\AppData\Local\Temp\xcBsef4.1\driver_tmp_3.o)
+  1036h - 215Fh		(C:\Users\jjega\AppData\Local\Temp\xcBsef4.1\driver_tmp_3.o)
+  10000h - 10007h		(C:\Users\jjega\AppData\Local\Temp\xcBsef4.1\driver_tmp_3.o)
+  1000Eh - 10017h		(C:\Users\jjega\AppData\Local\Temp\xcBsef4.1\driver_tmp_3.o)
  Unused ranges:
-  1000h - 1021h
+  1000h - 1035h
   2160h - FFFFh
   10008h - 1000Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\jjega\AppData\Local\Temp\xcAs894.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\jjega\AppData\Local\Temp\xcBsef4.1\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -281,8 +281,7 @@
 00000FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
-00001020 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001030 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

@@ -20937,7 +20937,7 @@ int main(void) {
     RN487X_Init();
     LIGHTBLUE_Initialize();
     while (1) {
-        if (RN487X_IsConnected() == 1) {
+
             service_acceleremoterInterrupt();
             if ((TMR0_HasOverflowOccured()) == 1) {
                 (PIR0bits.TMR0IF = 0);
@@ -20965,14 +20965,7 @@ int main(void) {
                 }
 
             }
-        } else {
-            while (RN487X_DataReady()) {
-                uart[UART_CDC].Write(RN487X_Read());
-            }
-            while (uart[UART_CDC].DataReady()) {
-                RN487X.Write(uart[UART_CDC].Read());
-            }
-        }
+# 128 "main.c"
     }
     return 0;
 }

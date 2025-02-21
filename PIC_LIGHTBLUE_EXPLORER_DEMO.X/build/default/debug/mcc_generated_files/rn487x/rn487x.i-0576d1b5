@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/rn487x/rn487x.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,240 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 40 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/rn487x/rn487x.c" 2
+# 26 "mcc_generated_files/rn487x/rn487x.c"
+# 1 "mcc_generated_files/rn487x/rn487x.h" 1
+# 29 "mcc_generated_files/rn487x/rn487x.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 29 "mcc_generated_files/rn487x/rn487x.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 194 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+# 30 "mcc_generated_files/rn487x/rn487x.h" 2
+
+# 1 "mcc_generated_files/rn487x/rn487x.h" 1
+# 31 "mcc_generated_files/rn487x/rn487x.h" 2
+# 53 "mcc_generated_files/rn487x/rn487x.h"
+typedef union
+{
+    uint8_t gpioBitMap;
+    struct
+    {
+        unsigned p2_2 : 1;
+        unsigned p2_4 : 1;
+        unsigned p3_5 : 1;
+        unsigned p1_2 : 1;
+        unsigned p1_3 : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_ioBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint8_t gpioStateBitMap;
+    struct
+    {
+        unsigned p2_2_state : 1;
+        unsigned p2_4_state : 1;
+        unsigned p3_5_state : 1;
+        unsigned p1_2_state : 1;
+        unsigned p1_3_state : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_stateBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint16_t gpioMap;
+    struct
+    {
+        rn487x_gpio_ioBitMap_t ioBitMap;
+        rn487x_gpio_stateBitMap_t ioStateBitMap;
+    };
+}rn487x_gpio_bitmap_t;
+# 111 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_Init(void);
+# 124 "mcc_generated_files/rn487x/rn487x.h"
+void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
+# 140 "mcc_generated_files/rn487x/rn487x.h"
+uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
+# 156 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
+# 168 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_ReadDefaultResponse(void);
+# 182 "mcc_generated_files/rn487x/rn487x.h"
+void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
+# 194 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_EnterCmdMode(void);
+# 206 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_EnterDataMode(void);
+# 219 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
+# 232 "mcc_generated_files/rn487x/rn487x.h"
+rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
+# 245 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_RebootCmd(void);
+# 257 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_Disconnect(void);
+# 271 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
+# 283 "mcc_generated_files/rn487x/rn487x.h"
+_Bool RN487X_DataReady(void);
+# 293 "mcc_generated_files/rn487x/rn487x.h"
+uint8_t RN487X_Read(void);
+# 26 "mcc_generated_files/rn487x/rn487x.c" 2
+
+# 1 "mcc_generated_files/rn487x/rn487x_interface.h" 1
+# 37 "mcc_generated_files/rn487x/rn487x_interface.h"
+typedef enum
+{
+    TEST_MODE = 0x00,
+    APPLICATION_MODE = 0x01
+}RN487X_SYSTEM_MODES_t;
+
+
+
+
+
+typedef struct
+{
+
+    void (*Write)(uint8_t);
+    uint8_t (*Read)(void);
+    _Bool (*TransmitDone)(void);
+    _Bool (*DataReady)(void);
+
+    void (*IndicateRx)(_Bool);
+
+    void (*ResetModule)(_Bool);
+
+    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
+
+    void (*DelayMs)(uint16_t);
+
+    void (*AsyncHandler)(char*);
+}iRN487X_FunctionPtrs_t;
+
+extern const iRN487X_FunctionPtrs_t RN487X;
+# 75 "mcc_generated_files/rn487x/rn487x_interface.h"
+_Bool RN487X_IsConnected(void);
+# 27 "mcc_generated_files/rn487x/rn487x.c" 2
+
+# 1 "mcc_generated_files/rn487x/../mcc.h" 1
+# 49 "mcc_generated_files/rn487x/../mcc.h"
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -23,16 +253,7 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 3
@@ -41,10 +262,6 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 128 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
-# 174 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 210 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 2 3
 
 int atoi (const char *);
@@ -132,91 +349,7 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
-# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 133 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned short uintptr_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef short intptr_t;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
 
-
-
-
-typedef short int16_t;
-# 179 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 194 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 215 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 235 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 27 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 5 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -20285,10 +20418,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 49 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
+# 50 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
 # 250 "mcc_generated_files/pin_manager.h"
@@ -20313,11 +20446,9 @@ typedef union {
 }INTERRUPTbits_t;
 
 volatile INTERRUPTbits_t iNTERRUPTbits;
-# 51 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/rn487x/../mcc.h" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 1 3
 
@@ -20479,10 +20610,10 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 8 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
+# 54 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/interrupt_manager.h" 1
-# 55 "./mcc_generated_files/mcc.h" 2
+# 55 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/i2c1_master.h" 1
 # 58 "mcc_generated_files/i2c1_master.h"
@@ -20548,7 +20679,7 @@ void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
 void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
 # 204 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 56 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
@@ -20565,7 +20696,7 @@ void TMR0_WriteTimer(uint16_t timerVal);
 void TMR0_Reload(void);
 # 310 "mcc_generated_files/tmr0.h"
 _Bool TMR0_HasOverflowOccured(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 57 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/eusart2.h" 1
 # 75 "mcc_generated_files/eusart2.h"
@@ -20620,7 +20751,7 @@ void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart2.h"
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 58 "./mcc_generated_files/mcc.h" 2
+# 58 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -20675,13 +20806,13 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
+# 59 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/delay.h" 1
 # 34 "mcc_generated_files/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
 void DELAY_microseconds(uint16_t microseconds);
-# 60 "./mcc_generated_files/mcc.h" 2
+# 60 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
 # 37 "mcc_generated_files/drivers/i2c_simple_master.h"
@@ -20693,292 +20824,380 @@ void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
 void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
 void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
 void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
-# 61 "./mcc_generated_files/mcc.h" 2
-# 76 "./mcc_generated_files/mcc.h"
+# 61 "mcc_generated_files/rn487x/../mcc.h" 2
+# 76 "mcc_generated_files/rn487x/../mcc.h"
 void SYSTEM_Initialize(void);
-# 89 "./mcc_generated_files/mcc.h"
+# 89 "mcc_generated_files/rn487x/../mcc.h"
 void OSCILLATOR_Initialize(void);
-# 102 "./mcc_generated_files/mcc.h"
+# 102 "mcc_generated_files/rn487x/../mcc.h"
 void PMD_Initialize(void);
-# 40 "main.c" 2
-
-# 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
-# 36 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_Initialize(void);
-# 50 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_TemperatureSensor(void);
-# 64 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_AccelSensor(void);
-# 75 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_PushButton(void);
-# 89 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_LedState(void);
-# 100 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendProtocolVersion(void);
-# 111 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendSerialData(char* serialData);
-# 126 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
-
-void LIGHTBLUE_AccState(void);
-# 41 "main.c" 2
-
-# 1 "./mcc_generated_files/rn487x/rn487x_interface.h" 1
-# 37 "./mcc_generated_files/rn487x/rn487x_interface.h"
-typedef enum
-{
-    TEST_MODE = 0x00,
-    APPLICATION_MODE = 0x01
-}RN487X_SYSTEM_MODES_t;
+# 28 "mcc_generated_files/rn487x/rn487x.c" 2
 
 
 
 
 
-typedef struct
+
+
+
+uint8_t cmdBuf[64];
+
+const char * const rn487x_driver_version = "1.1.0";
+
+static char *asyncBuffer;
+static uint8_t asyncBufferSize;
+static char *pHead;
+static uint8_t peek = 0;
+static _Bool dataReady = 0;
+
+
+
+
+
+
+
+static _Bool RN487X_FilterData(void);
+
+_Bool RN487X_Init(void)
 {
 
-    void (*Write)(uint8_t);
-    uint8_t (*Read)(void);
-    _Bool (*TransmitDone)(void);
-    _Bool (*DataReady)(void);
+    RN487X.SetSystemMode(APPLICATION_MODE);
 
-    void (*IndicateRx)(_Bool);
+    RN487X.ResetModule(1);
 
-    void (*ResetModule)(_Bool);
+    RN487X.DelayMs((1));
 
-    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
+    RN487X.ResetModule(0);
 
-    void (*DelayMs)(uint16_t);
 
-    void (*AsyncHandler)(char*);
-}iRN487X_FunctionPtrs_t;
+    RN487X.IndicateRx(1);
 
-extern const iRN487X_FunctionPtrs_t RN487X;
-# 75 "./mcc_generated_files/rn487x/rn487x_interface.h"
-_Bool RN487X_IsConnected(void);
-# 42 "main.c" 2
+    RN487X.DelayMs((200));
 
-# 1 "./mcc_generated_files/rn487x/rn487x.h" 1
-# 31 "./mcc_generated_files/rn487x/rn487x.h"
-# 1 "./mcc_generated_files/rn487x/rn487x.h" 1
-# 31 "./mcc_generated_files/rn487x/rn487x.h" 2
-# 53 "./mcc_generated_files/rn487x/rn487x.h"
-typedef union
-{
-    uint8_t gpioBitMap;
-    struct
+
+    while (RN487X.DataReady())
     {
-        unsigned p2_2 : 1;
-        unsigned p2_4 : 1;
-        unsigned p3_5 : 1;
-        unsigned p1_2 : 1;
-        unsigned p1_3 : 1;
-        unsigned reserved : 3;
-    };
-}rn487x_gpio_ioBitMap_t;
+        RN487X.Read();
+    }
 
-
-
-
-
-
-typedef union
-{
-    uint8_t gpioStateBitMap;
-    struct
-    {
-        unsigned p2_2_state : 1;
-        unsigned p2_4_state : 1;
-        unsigned p3_5_state : 1;
-        unsigned p1_2_state : 1;
-        unsigned p1_3_state : 1;
-        unsigned reserved : 3;
-    };
-}rn487x_gpio_stateBitMap_t;
-
-
-
-
-
-
-typedef union
-{
-    uint16_t gpioMap;
-    struct
-    {
-        rn487x_gpio_ioBitMap_t ioBitMap;
-        rn487x_gpio_stateBitMap_t ioStateBitMap;
-    };
-}rn487x_gpio_bitmap_t;
-# 111 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_Init(void);
-# 124 "./mcc_generated_files/rn487x/rn487x.h"
-void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
-# 140 "./mcc_generated_files/rn487x/rn487x.h"
-uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
-# 156 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
-# 168 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_ReadDefaultResponse(void);
-# 182 "./mcc_generated_files/rn487x/rn487x.h"
-void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
-# 194 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_EnterCmdMode(void);
-# 206 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_EnterDataMode(void);
-# 219 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
-# 232 "./mcc_generated_files/rn487x/rn487x.h"
-rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
-# 245 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_RebootCmd(void);
-# 257 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_Disconnect(void);
-# 271 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
-# 283 "./mcc_generated_files/rn487x/rn487x.h"
-_Bool RN487X_DataReady(void);
-# 293 "./mcc_generated_files/rn487x/rn487x.h"
-uint8_t RN487X_Read(void);
-# 43 "main.c" 2
-
-# 1 "./mcc_generated_files/drivers/uart.h" 1
-# 34 "./mcc_generated_files/drivers/uart.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
-# 34 "./mcc_generated_files/drivers/uart.h" 2
-
-
-
-
-
-
-
-
-typedef enum {
-    UART_CDC ,
-    UART_BLE
-} uart_configurations_t;
-
-
-
-
-
-typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-
-extern const uart_functions_t uart[];
-# 44 "main.c" 2
-
-# 1 "./mcc_generated_files/application/BMA253_accel.h" 1
-# 223 "./mcc_generated_files/application/BMA253_accel.h"
-typedef struct
-{
-    int16_t x;
-    int16_t y;
-    int16_t z;
-}BMA253_ACCEL_DATA_t;
-# 237 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_Initialize(void);
-# 246 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataX(int16_t *xAccelData);
-# 255 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataY(int16_t *yAccelData);
-# 264 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataZ(int16_t *zAccelData);
-# 275 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData);
-
-
-
-
-
-
-uint8_t BMA253_GetAccelChipId(void);
-
-typedef union {
-    struct {
-        unsigned UNDEFINED : 7;
-        unsigned FLAT : 1;
-    };
-    uint8_t AccelerometerInterruptBits;
-}AccelerometerInterruptBits_t;
-volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
-# 45 "main.c" 2
-# 65 "main.c"
-static char statusBuffer[(80)];
-static char lightBlueSerial[(80)];
-static uint8_t serialIndex;
-
-_Bool ACC_Interrupt_is_high() {
-    return iNTERRUPTbits.ACC == 1;
+    return 1;
 }
-void service_acceleremoterInterrupt(void);
-uint8_t flats = 0;
+
+void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen)
+{
+    uint8_t index = 0;
+
+    while (index < cmdLen)
+    {
+        if (RN487X.TransmitDone())
+        {
+            RN487X.Write(cmd[index]);
+            index++;
+        }
+    }
+}
+
+uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp)
+{
+    uint8_t index = 0;
+
+    RN487X_SendCmd((uint8_t *) getCmd, getCmdLen);
+
+    do
+    {
+        getCmdResp[index++] = RN487X.Read();
+    }
+    while (getCmdResp[index - 1] != '\n');
+
+    return index;
+}
+
+_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen)
+{
+    uint8_t index;
+    uint8_t resp;
+
+    for (index = 0; index < msgLen; index++)
+    {
+        resp = RN487X.Read();
+        if (resp != expectedMsg[index])
+        {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+_Bool RN487X_ReadDefaultResponse(void)
+{
+    uint8_t resp[3];
+    _Bool status = 0;
+
+    resp[0] = RN487X.Read();
+    resp[1] = RN487X.Read();
+    resp[2] = RN487X.Read();
+
+    switch (resp[0])
+    {
+        case 'A':
+        {
+            if ((resp[1] == 'O') && (resp[2] == 'K'))
+                status = 1;
+
+            break;
+        }
+        case 'E':
+        {
+            if ((resp[1] == 'r') && (resp[2] == 'r'))
+                status = 0;
+
+            break;
+        }
+        default:
+        {
+            return status;
+        }
+    }
 
 
+    RN487X.Read();
+    RN487X.Read();
 
 
-int main(void) {
+    RN487X.Read();
+    RN487X.Read();
+    RN487X.Read();
+    RN487X.Read();
+    RN487X.Read();
 
-    SYSTEM_Initialize();
-    RN487X_SetAsyncMessageHandler(statusBuffer, sizeof (statusBuffer));
+    return status;
+}
 
+void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen)
+{
+    uint8_t index = 0;
+    uint8_t resp;
 
-    (INTCONbits.GIE = 1);
+    do
+    {
+        resp = RN487X.Read();
 
-
-    (INTCONbits.PEIE = 1);
-    BMA253_Initialize();
-    RN487X_Init();
-    LIGHTBLUE_Initialize();
-    while (1) {
-
-            service_acceleremoterInterrupt();
-            if ((TMR0_HasOverflowOccured()) == 1) {
-                (PIR0bits.TMR0IF = 0);
-
-
-
-
-
-
-            } else {
-                while (RN487X_DataReady()) {
-                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-                }
-                while (uart[UART_CDC].DataReady()) {
-                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-                    if ((lightBlueSerial[serialIndex] == '\r')
-                            || (lightBlueSerial[serialIndex] == '\n')
-                            || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-                        lightBlueSerial[serialIndex] = '\0';
-                        LIGHTBLUE_SendSerialData(lightBlueSerial);
-                        serialIndex = 0;
-                    } else {
-                        serialIndex++;
-                    }
-                }
-
+        if (resp == expectedMsg[index])
+        {
+            index++;
+        }
+        else
+        {
+            index = 0;
+            if (resp == expectedMsg[index])
+            {
+                index++;
             }
-# 128 "main.c"
+        }
+    }
+    while (index < msgLen);
+}
+
+_Bool RN487X_EnterCmdMode(void)
+{
+    const uint8_t cmdPrompt[] = {'C', 'M', 'D', '>', ' '};
+
+    cmdBuf[0] = '$';
+    cmdBuf[1] = '$';
+    cmdBuf[2] = '$';
+
+    RN487X_SendCmd(cmdBuf, 3);
+
+    return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
+}
+
+_Bool RN487X_EnterDataMode(void)
+{
+    const uint8_t cmdPrompt[] = {'E', 'N', 'D', '\r', '\n'};
+
+    cmdBuf[0] = '-';
+    cmdBuf[1] = '-';
+    cmdBuf[2] = '-';
+    cmdBuf[3] = '\r';
+    cmdBuf[4] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 5);
+
+    return RN487X_ReadMsg(cmdPrompt, sizeof (cmdPrompt));
+}
+
+_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap)
+{
+    char ioHighNibble = '0';
+    char ioLowNibble = '0';
+    char stateHighNibble = '0';
+    char stateLowNibble = '0';
+
+
+    if (bitMap.ioBitMap.p1_3)
+    {
+        ioHighNibble = '1';
+    }
+    else
+    {
+        ioHighNibble = '0';
+    }
+    ioLowNibble = ( (0x0F & bitMap.ioBitMap.gpioBitMap) + '0');
+
+
+    if (bitMap.ioStateBitMap.p1_3_state)
+    {
+        stateHighNibble = '1';
+    }
+    else
+    {
+        stateHighNibble = '0';
+    }
+    stateLowNibble = ( (0x0F & bitMap.ioStateBitMap.gpioStateBitMap) + '0');
+
+    cmdBuf[0] = '|';
+    cmdBuf[1] = 'O';
+    cmdBuf[2] = ',';
+    cmdBuf[3] = ioHighNibble;
+    cmdBuf[4] = ioLowNibble;
+    cmdBuf[5] = ',';
+    cmdBuf[6] = stateHighNibble;
+    cmdBuf[7] = stateLowNibble;
+    cmdBuf[8] = '\r';
+    cmdBuf[9] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 10);
+    return RN487X_ReadDefaultResponse();
+}
+
+rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs)
+{
+    char ioHighNibble = '0';
+    char ioLowNibble = '0';
+    uint8_t ioValue[] = {'0', '0'};
+    rn487x_gpio_stateBitMap_t ioBitMapValue;
+    ioBitMapValue.gpioStateBitMap = 0x00;
+
+
+    if (getGPIOs.p1_3)
+    {
+        ioHighNibble = '1';
+    }
+    else
+    {
+        ioHighNibble = '0';
+    }
+    ioLowNibble = ( (0x0F & getGPIOs.gpioBitMap) + '0');
+
+    cmdBuf[0] = '|';
+    cmdBuf[1] = 'I';
+    cmdBuf[2] = ',';
+    cmdBuf[3] = ioHighNibble;
+    cmdBuf[4] = ioLowNibble;
+    cmdBuf[5] = '\r';
+    cmdBuf[6] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 7);
+    RN487X_ReadMsg(ioValue, sizeof (ioValue));
+    ioBitMapValue.gpioStateBitMap = ( (((ioValue[0] - '0') & 0x0F) << 4) | ((ioValue[1] - '0') & 0x0F) );
+    return ioBitMapValue;
+}
+
+_Bool RN487X_RebootCmd(void)
+{
+    const uint8_t reboot[] = {'R', 'e', 'b', 'o', 'o', 't', 'i', 'n', 'g', '\r', '\n'};
+
+    cmdBuf[0] = 'R';
+    cmdBuf[1] = ',';
+    cmdBuf[2] = '1';
+    cmdBuf[4] = '\r';
+    cmdBuf[5] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 5);
+
+    return RN487X_ReadMsg(reboot, sizeof (reboot));
+}
+
+_Bool RN487X_Disconnect(void)
+{
+    cmdBuf[0] = 'K';
+    cmdBuf[1] = ',';
+    cmdBuf[2] = '1';
+    cmdBuf[3] = '\r';
+    cmdBuf[4] = '\n';
+
+    RN487X_SendCmd(cmdBuf, 5);
+
+    return RN487X_ReadDefaultResponse();
+}
+
+_Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len)
+{
+    if ((pBuffer != ((void*)0)) && (len > 1))
+    {
+      asyncBuffer = pBuffer;
+      asyncBufferSize = len - 1;
+      return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+_Bool RN487X_DataReady(void)
+{
+    if (dataReady)
+    {
+        return 1;
+    }
+
+    if (RN487X.DataReady())
+    {
+        return RN487X_FilterData();
     }
     return 0;
 }
 
-void service_acceleremoterInterrupt(void) {
-    if (ACC_Interrupt_is_high()) {
-        (iNTERRUPTbits.ACC = 0);
-        accelerometerInterruptBits.FLAT = 1;
-        flats++;
-        if (flats > 1) {
-            LIGHTBLUE_AccState();
-            flats = 0;
-            accelerometerInterruptBits.FLAT = 0;
+uint8_t RN487X_Read(void)
+{
+    while(RN487X_DataReady() == 0);
+    dataReady = 0;
+    return peek;
+}
+
+static _Bool RN487X_FilterData(void)
+{
+    static _Bool asyncBuffering = 0;
+
+    uint8_t readChar = RN487X.Read();
+
+    if(asyncBuffering == 1)
+    {
+        if(readChar == ('%'))
+        {
+            asyncBuffering = 0;
+            *pHead = '\0';
+            RN487X.AsyncHandler(asyncBuffer);
+        }
+        else if (pHead < asyncBuffer + asyncBufferSize)
+        {
+            *pHead++ = readChar;
         }
     }
+    else
+    {
+        if (readChar == ('%'))
+        {
+            asyncBuffering = 1;
+            pHead = asyncBuffer;
+        }
+        else
+        {
+            dataReady = 1;
+            peek = readChar;
+        }
+    }
+    return dataReady;
 }

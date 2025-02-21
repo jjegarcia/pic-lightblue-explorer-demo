@@ -89,7 +89,7 @@ int main(void) {
     RN487X_Init();
     LIGHTBLUE_Initialize();
     while (1) {
-        if (RN487X_IsConnected() == true) {
+//        if (RN487X_IsConnected() == true) {
             service_acceleremoterInterrupt();
             if (TIMER_FLAG_SET() == true) {
                 RESET_TIMER_INTERRUPT_FLAG;
@@ -117,14 +117,14 @@ int main(void) {
                 }
 
             }
-        } else {
-            while (RN487X_DataReady()) {
-                uart[UART_CDC].Write(RN487X_Read());
-            }
-            while (uart[UART_CDC].DataReady()) {
-                RN487X.Write(uart[UART_CDC].Read());
-            }
-        }
+//        } else {
+//            while (RN487X_DataReady()) {
+//                uart[UART_CDC].Write(RN487X_Read());
+//    }
+//            while (uart[UART_CDC].DataReady()) {
+//                RN487X.Write(uart[UART_CDC].Read());
+//            }
+//        }
     }
     return 0;
 }
