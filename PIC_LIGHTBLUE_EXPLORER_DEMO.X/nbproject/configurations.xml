@@ -36,7 +36,9 @@
         <itemPath>mcc_generated_files/i2c1_driver.h</itemPath>
         <itemPath>mcc_generated_files/i2c1_master.h</itemPath>
         <itemPath>mcc_generated_files/delay.h</itemPath>
+        <itemPath>mcc_generated_files/spi2.h</itemPath>
       </logicalFolder>
+      <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -88,6 +90,7 @@
         <itemPath>mcc_generated_files/i2c1_driver.c</itemPath>
         <itemPath>mcc_generated_files/i2c1_master.c</itemPath>
         <itemPath>mcc_generated_files/delay.c</itemPath>
+        <itemPath>mcc_generated_files/spi2.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

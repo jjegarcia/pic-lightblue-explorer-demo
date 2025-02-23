@@ -193,6 +193,62 @@
 #define RB5_SetAnalogMode()         do { ANSELBbits.ANSB5 = 1; } while(0)
 #define RB5_SetDigitalMode()        do { ANSELBbits.ANSB5 = 0; } while(0)
 
+// get/set SPI_SS_EXT_DEVICE aliases
+#define SPI_SS_EXT_DEVICE_TRIS                 TRISCbits.TRISC0
+#define SPI_SS_EXT_DEVICE_LAT                  LATCbits.LATC0
+#define SPI_SS_EXT_DEVICE_PORT                 PORTCbits.RC0
+#define SPI_SS_EXT_DEVICE_WPU                  WPUCbits.WPUC0
+#define SPI_SS_EXT_DEVICE_OD                   ODCONCbits.ODCC0
+#define SPI_SS_EXT_DEVICE_ANS                  ANSELCbits.ANSC0
+#define SPI_SS_EXT_DEVICE_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define SPI_SS_EXT_DEVICE_GetValue()           PORTCbits.RC0
+#define SPI_SS_EXT_DEVICE_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+
+// get/set RC1 procedures
+#define RC1_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
+#define RC1_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
+#define RC1_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
+#define RC1_GetValue()              PORTCbits.RC1
+#define RC1_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
+#define RC1_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
+#define RC1_SetPullup()             do { WPUCbits.WPUC1 = 1; } while(0)
+#define RC1_ResetPullup()           do { WPUCbits.WPUC1 = 0; } while(0)
+#define RC1_SetAnalogMode()         do { ANSELCbits.ANSC1 = 1; } while(0)
+#define RC1_SetDigitalMode()        do { ANSELCbits.ANSC1 = 0; } while(0)
+
+// get/set RC2 procedures
+#define RC2_SetHigh()            do { LATCbits.LATC2 = 1; } while(0)
+#define RC2_SetLow()             do { LATCbits.LATC2 = 0; } while(0)
+#define RC2_Toggle()             do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0)
+#define RC2_GetValue()              PORTCbits.RC2
+#define RC2_SetDigitalInput()    do { TRISCbits.TRISC2 = 1; } while(0)
+#define RC2_SetDigitalOutput()   do { TRISCbits.TRISC2 = 0; } while(0)
+#define RC2_SetPullup()             do { WPUCbits.WPUC2 = 1; } while(0)
+#define RC2_ResetPullup()           do { WPUCbits.WPUC2 = 0; } while(0)
+#define RC2_SetAnalogMode()         do { ANSELCbits.ANSC2 = 1; } while(0)
+#define RC2_SetDigitalMode()        do { ANSELCbits.ANSC2 = 0; } while(0)
+
+// get/set RC3 procedures
+#define RC3_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+#define RC3_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+#define RC3_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
+#define RC3_GetValue()              PORTCbits.RC3
+#define RC3_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
+#define RC3_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+#define RC3_SetPullup()             do { WPUCbits.WPUC3 = 1; } while(0)
+#define RC3_ResetPullup()           do { WPUCbits.WPUC3 = 0; } while(0)
+#define RC3_SetAnalogMode()         do { ANSELCbits.ANSC3 = 1; } while(0)
+#define RC3_SetDigitalMode()        do { ANSELCbits.ANSC3 = 0; } while(0)
+
 // get/set RC4 procedures
 #define RC4_SetHigh()            do { LATCbits.LATC4 = 1; } while(0)
 #define RC4_SetLow()             do { LATCbits.LATC4 = 0; } while(0)
@@ -353,6 +409,97 @@ typedef union {
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
 
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Interrupt on Change Handler for the IOCAF7 pin functionality
+ * @Example
+    IOCAF7_ISR();
+ */
+void IOCAF7_ISR(void);
+
+/**
+  @Summary
+    Interrupt Handler Setter for IOCAF7 pin interrupt-on-change functionality
+
+  @Description
+    Allows selecting an interrupt handler for IOCAF7 at application runtime
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    InterruptHandler function pointer.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF7_SetInterruptHandler(MyInterruptHandler);
+
+*/
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+  @Summary
+    Dynamic Interrupt Handler for IOCAF7 pin
+
+  @Description
+    This is a dynamic interrupt handler to be used together with the IOCAF7_SetInterruptHandler() method.
+    This handler is called every time the IOCAF7 ISR is executed and allows any function to be registered at runtime.
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF7_SetInterruptHandler(IOCAF7_InterruptHandler);
+
+*/
+extern void (*IOCAF7_InterruptHandler)(void);
+
+/**
+  @Summary
+    Default Interrupt Handler for IOCAF7 pin
+
+  @Description
+    This is a predefined interrupt handler to be used together with the IOCAF7_SetInterruptHandler() method.
+    This handler is called every time the IOCAF7 ISR is executed. 
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF7_SetInterruptHandler(IOCAF7_DefaultInterruptHandler);
+
+*/
+void IOCAF7_DefaultInterruptHandler(void);
+
+typedef union {
+    struct {
+        unsigned ACC : 1;
+        unsigned UNDEFINED : 7;
+    };
+    uint8_t INTERRUPTbits;
+}INTERRUPTbits_t;
+
 volatile INTERRUPTbits_t iNTERRUPTbits;
 
 
@@ -360,7 +507,7 @@ volatile INTERRUPTbits_t iNTERRUPTbits;
 #define ACC_INTERRUPT_SetLow()          (iNTERRUPTbits.ACC = 0) 
 #define ACC_INTERRUPT_Toggle()          (iNTERRUPTbits.ACC = ~INTERRUPTbits.ACC)
 #define ACC_INTERRUPT_GetValue()        (iNTERRUPTbits.ACC)
-//#define ACC_INTERRUPT_Is_High()         (iNTERRUPTbits.ACC == 1)
+#define ACC_INTERRUPT_Is_High()         (iNTERRUPTbits.ACC == 1)
 
 
 #endif // PIN_MANAGER_H

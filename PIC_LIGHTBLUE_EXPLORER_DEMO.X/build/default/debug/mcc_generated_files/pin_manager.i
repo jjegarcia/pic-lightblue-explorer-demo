@@ -20286,17 +20286,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 250 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 275 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 322 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 346 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {
@@ -20306,26 +20306,46 @@ typedef union {
     };
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
-
-volatile INTERRUPTbits_t iNTERRUPTbits;
+# 422 "mcc_generated_files/pin_manager.h"
+void IOCAF7_ISR(void);
+# 445 "mcc_generated_files/pin_manager.h"
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
+# 469 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF7_InterruptHandler)(void);
+# 493 "mcc_generated_files/pin_manager.h"
+void IOCAF7_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
+
+# 1 "mcc_generated_files/../main.h" 1
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 1 "mcc_generated_files/../main.h" 2
+
+
+
+
+
+_Bool pushed = 0;
+_Bool sendSpiReadRequest = 0;
+
+void send_spi_read(void);
+void service_push(void);
+# 50 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
 
 void (*IOCAF6_InterruptHandler)(void);
+void (*IOCAF7_InterruptHandler)(void);
 
-
-void PIN_MANAGER_Initialize(void)
-{
+void PIN_MANAGER_Initialize(void) {
 
 
 
     LATE = 0x00;
     LATA = 0x31;
     LATB = 0x00;
-    LATC = 0xC1;
+    LATC = 0x01;
 
 
 
@@ -20333,7 +20353,7 @@ void PIN_MANAGER_Initialize(void)
     TRISE = 0x08;
     TRISA = 0xDE;
     TRISB = 0xEF;
-    TRISC = 0x25;
+    TRISC = 0xA8;
 
 
 
@@ -20361,9 +20381,9 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    SLRCONA = 0xFF;
+    SLRCONA = 0x7E;
     SLRCONB = 0xFF;
-    SLRCONC = 0xFF;
+    SLRCONC = 0x3F;
 
 
 
@@ -20379,35 +20399,48 @@ void PIN_MANAGER_Initialize(void)
 
     IOCAFbits.IOCAF6 = 0;
 
+    IOCAFbits.IOCAF7 = 0;
+
     IOCANbits.IOCAN6 = 0;
 
+    IOCANbits.IOCAN7 = 1;
+
     IOCAPbits.IOCAP6 = 1;
+
+    IOCAPbits.IOCAP7 = 0;
 
 
 
 
     IOCAF6_SetInterruptHandler(IOCAF6_DefaultInterruptHandler);
+    IOCAF7_SetInterruptHandler(IOCAF7_DefaultInterruptHandler);
 
 
     PIE0bits.IOCIE = 1;
 
 
     SSP1CLKPPS = 0x09;
-    RB1PPS = 0x13;
-    RB2PPS = 0x14;
+    SSP2DATPPS = 0x13;
+    RB1PPS = 0x00;
+    RB2PPS = 0x00;
+    RC1PPS = 0x15;
     RC4PPS = 0x25;
     RB4PPS = 0x0F;
+    RC2PPS = 0x16;
     RX2DTPPS = 0x15;
     SSP1DATPPS = 0x0A;
     RX1DTPPS = 0x0D;
+    SSP2CLKPPS = 0x11;
 }
 
-void PIN_MANAGER_IOC(void)
-{
+void PIN_MANAGER_IOC(void) {
 
-    if(IOCAFbits.IOCAF6 == 1)
-    {
+    if (IOCAFbits.IOCAF6 == 1) {
         IOCAF6_ISR();
+    }
+
+    if (IOCAFbits.IOCAF7 == 1) {
+        IOCAF7_ISR();
     }
 }
 
@@ -20417,11 +20450,10 @@ void PIN_MANAGER_IOC(void)
 void IOCAF6_ISR(void) {
 
 
-    (iNTERRUPTbits.ACC = 1);
+    ACC_INTERRUPT_SetHigh();
 
 
-    if(IOCAF6_InterruptHandler)
-    {
+    if (IOCAF6_InterruptHandler) {
         IOCAF6_InterruptHandler();
     }
     IOCAFbits.IOCAF6 = 0;
@@ -20430,14 +20462,44 @@ void IOCAF6_ISR(void) {
 
 
 
-void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)){
+void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)) {
     IOCAF6_InterruptHandler = InterruptHandler;
 }
 
 
 
 
-void IOCAF6_DefaultInterruptHandler(void){
+void IOCAF6_DefaultInterruptHandler(void) {
 
 
+}
+
+
+
+
+void IOCAF7_ISR(void) {
+
+
+
+
+    if (IOCAF7_InterruptHandler) {
+        IOCAF7_InterruptHandler();
+    }
+    IOCAFbits.IOCAF7 = 0;
+}
+
+
+
+
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)) {
+    IOCAF7_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IOCAF7_DefaultInterruptHandler(void) {
+
+
+    pushed = 1;
 }

@@ -1,190 +1,84 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F12202 `(v ~T0 @X0 0 tf ]
-[v F12204 `(v ~T0 @X0 0 tf ]
-"1047 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 1047: extern volatile unsigned char LATE __attribute__((address(0x01C)));
-[v _LATE `Vuc ~T0 @X0 0 e@28 ]
-"861
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 861: extern volatile unsigned char LATA __attribute__((address(0x018)));
-[v _LATA `Vuc ~T0 @X0 0 e@24 ]
-"923
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 923: extern volatile unsigned char LATB __attribute__((address(0x019)));
-[v _LATB `Vuc ~T0 @X0 0 e@25 ]
-"985
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 985: extern volatile unsigned char LATC __attribute__((address(0x01A)));
-[v _LATC `Vuc ~T0 @X0 0 e@26 ]
-"840
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 840: extern volatile unsigned char TRISE __attribute__((address(0x016)));
-[v _TRISE `Vuc ~T0 @X0 0 e@22 ]
-"654
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 654: extern volatile unsigned char TRISA __attribute__((address(0x012)));
-[v _TRISA `Vuc ~T0 @X0 0 e@18 ]
-"716
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 716: extern volatile unsigned char TRISB __attribute__((address(0x013)));
-[v _TRISB `Vuc ~T0 @X0 0 e@19 ]
-"778
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 778: extern volatile unsigned char TRISC __attribute__((address(0x014)));
-[v _TRISC `Vuc ~T0 @X0 0 e@20 ]
-"35682
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35682: extern volatile unsigned char ANSELC __attribute__((address(0x1F4E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@8014 ]
-"35186
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35186: extern volatile unsigned char ANSELB __attribute__((address(0x1F43)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@8003 ]
-"34690
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34690: extern volatile unsigned char ANSELA __attribute__((address(0x1F38)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@7992 ]
-"36178
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36178: extern volatile unsigned char WPUE __attribute__((address(0x1F65)));
-[v _WPUE `Vuc ~T0 @X0 0 e@8037 ]
-"35248
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35248: extern volatile unsigned char WPUB __attribute__((address(0x1F44)));
-[v _WPUB `Vuc ~T0 @X0 0 e@8004 ]
-"34752
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34752: extern volatile unsigned char WPUA __attribute__((address(0x1F39)));
-[v _WPUA `Vuc ~T0 @X0 0 e@7993 ]
-"35744
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35744: extern volatile unsigned char WPUC __attribute__((address(0x1F4F)));
-[v _WPUC `Vuc ~T0 @X0 0 e@8015 ]
-"36199
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36199: extern volatile unsigned char ODCONE __attribute__((address(0x1F66)));
-[v _ODCONE `Vuc ~T0 @X0 0 e@8038 ]
-"34814
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34814: extern volatile unsigned char ODCONA __attribute__((address(0x1F3A)));
-[v _ODCONA `Vuc ~T0 @X0 0 e@7994 ]
-"35310
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35310: extern volatile unsigned char ODCONB __attribute__((address(0x1F45)));
-[v _ODCONB `Vuc ~T0 @X0 0 e@8005 ]
-"35806
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35806: extern volatile unsigned char ODCONC __attribute__((address(0x1F50)));
-[v _ODCONC `Vuc ~T0 @X0 0 e@8016 ]
-"34876
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34876: extern volatile unsigned char SLRCONA __attribute__((address(0x1F3B)));
-[v _SLRCONA `Vuc ~T0 @X0 0 e@7995 ]
-"35372
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35372: extern volatile unsigned char SLRCONB __attribute__((address(0x1F46)));
-[v _SLRCONB `Vuc ~T0 @X0 0 e@8006 ]
-"35868
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35868: extern volatile unsigned char SLRCONC __attribute__((address(0x1F51)));
-[v _SLRCONC `Vuc ~T0 @X0 0 e@8017 ]
-"34938
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34938: extern volatile unsigned char INLVLA __attribute__((address(0x1F3C)));
-[v _INLVLA `Vuc ~T0 @X0 0 e@7996 ]
-"35434
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35434: extern volatile unsigned char INLVLB __attribute__((address(0x1F47)));
-[v _INLVLB `Vuc ~T0 @X0 0 e@8007 ]
-"35930
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35930: extern volatile unsigned char INLVLC __attribute__((address(0x1F52)));
-[v _INLVLC `Vuc ~T0 @X0 0 e@8018 ]
-"35130
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35130:     struct {
-[s S1612 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1612 . IOCAF0 IOCAF1 IOCAF2 IOCAF3 IOCAF4 IOCAF5 IOCAF6 IOCAF7 ]
-"35129
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35129: typedef union {
-[u S1611 `S1612 1 ]
-[n S1611 . . ]
-"35141
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35141: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x1F3F)));
-[v _IOCAFbits `VS1611 ~T0 @X0 0 e@7999 ]
-"35068
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35068:     struct {
-[s S1610 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1610 . IOCAN0 IOCAN1 IOCAN2 IOCAN3 IOCAN4 IOCAN5 IOCAN6 IOCAN7 ]
-"35067
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35067: typedef union {
-[u S1609 `S1610 1 ]
-[n S1609 . . ]
-"35079
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35079: extern volatile IOCANbits_t IOCANbits __attribute__((address(0x1F3E)));
-[v _IOCANbits `VS1609 ~T0 @X0 0 e@7998 ]
-"35006
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35006:     struct {
-[s S1608 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1608 . IOCAP0 IOCAP1 IOCAP2 IOCAP3 IOCAP4 IOCAP5 IOCAP6 IOCAP7 ]
-"35005
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35005: typedef union {
-[u S1607 `S1608 1 ]
-[n S1607 . . ]
-"35017
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35017: extern volatile IOCAPbits_t IOCAPbits __attribute__((address(0x1F3D)));
-[v _IOCAPbits `VS1607 ~T0 @X0 0 e@7997 ]
-[v F12176 `(v ~T0 @X0 0 tf ]
-"354 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 354: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F12176 ]
-"402
-[; ;mcc_generated_files/pin_manager.h: 402: void IOCAF6_DefaultInterruptHandler(void);
-[v _IOCAF6_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-[v F12191 `(v ~T0 @X0 0 tf ]
-"445
-[; ;mcc_generated_files/pin_manager.h: 445: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F12191 ]
-"493
-[; ;mcc_generated_files/pin_manager.h: 493: void IOCAF7_DefaultInterruptHandler(void);
-[v _IOCAF7_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-"22830 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22830:     struct {
-[s S1039 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1039 . INTE . IOCIE TMR0IE ]
-"22829
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22829: typedef union {
-[u S1038 `S1039 1 ]
-[n S1038 . . ]
-"22837
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22837: extern volatile PIE0bits_t PIE0bits __attribute__((address(0x716)));
-[v _PIE0bits `VS1038 ~T0 @X0 0 e@1814 ]
-"32778
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32778: extern volatile unsigned char SSP1CLKPPS __attribute__((address(0x1EC5)));
-[v _SSP1CLKPPS `Vuc ~T0 @X0 0 e@7877 ]
-"32986
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32986: extern volatile unsigned char SSP2DATPPS __attribute__((address(0x1EC9)));
-[v _SSP2DATPPS `Vuc ~T0 @X0 0 e@7881 ]
-"33820
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33820: extern volatile unsigned char RB1PPS __attribute__((address(0x1F19)));
-[v _RB1PPS `Vuc ~T0 @X0 0 e@7961 ]
-"33878
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33878: extern volatile unsigned char RB2PPS __attribute__((address(0x1F1A)));
-[v _RB2PPS `Vuc ~T0 @X0 0 e@7962 ]
-"34284
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34284: extern volatile unsigned char RC1PPS __attribute__((address(0x1F21)));
-[v _RC1PPS `Vuc ~T0 @X0 0 e@7969 ]
-"34458
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34458: extern volatile unsigned char RC4PPS __attribute__((address(0x1F24)));
-[v _RC4PPS `Vuc ~T0 @X0 0 e@7972 ]
-"33994
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33994: extern volatile unsigned char RB4PPS __attribute__((address(0x1F1C)));
-[v _RB4PPS `Vuc ~T0 @X0 0 e@7964 ]
-"34342
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34342: extern volatile unsigned char RC2PPS __attribute__((address(0x1F22)));
-[v _RC2PPS `Vuc ~T0 @X0 0 e@7970 ]
-"33194
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33194: extern volatile unsigned char RX2DTPPS __attribute__((address(0x1ECD)));
-[v _RX2DTPPS `Vuc ~T0 @X0 0 e@7885 ]
-"32830
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32830: extern volatile unsigned char SSP1DATPPS __attribute__((address(0x1EC6)));
-[v _SSP1DATPPS `Vuc ~T0 @X0 0 e@7878 ]
-"33090
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33090: extern volatile unsigned char RX1DTPPS __attribute__((address(0x1ECB)));
-[v _RX1DTPPS `Vuc ~T0 @X0 0 e@7883 ]
-"32934
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32934: extern volatile unsigned char SSP2CLKPPS __attribute__((address(0x1EC8)));
-[v _SSP2CLKPPS `Vuc ~T0 @X0 0 e@7880 ]
-"331 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 331: void IOCAF6_ISR(void);
-[v _IOCAF6_ISR `(v ~T0 @X0 0 ef ]
-"422
-[; ;mcc_generated_files/pin_manager.h: 422: void IOCAF7_ISR(void);
-[v _IOCAF7_ISR `(v ~T0 @X0 0 ef ]
-"170 mcc_generated_files/pin_manager.c
-[; ;mcc_generated_files/pin_manager.c: 170:     ACC_INTERRUPT_SetHigh();
-[v _ACC_INTERRUPT_SetHigh `(i ~T0 @X0 0 e? ]
-[v F12211 `(v ~T0 @X0 0 tf ]
-[v F12214 `(v ~T0 @X0 0 tf ]
+[v F12592 `(uc ~T0 @X0 0 tf ]
+[v F12594 `(v ~T0 @X0 0 tf1`uc ]
+[v F12597 `(a ~T0 @X0 0 tf ]
+[v F12599 `(a ~T0 @X0 0 tf ]
+[v F12602 `(v ~T0 @X0 0 tf ]
+[v F12601 `(v ~T0 @X0 0 tf1`*F12602 ]
+[v F12605 `(v ~T0 @X0 0 tf ]
+[v F12608 `(v ~T0 @X0 0 tf ]
+[v F12607 `(v ~T0 @X0 0 tf1`*F12608 ]
+[v F12611 `(a ~T0 @X0 0 tf ]
+[v F12613 `(v ~T0 @X0 0 tf ]
+[v F12615 `(v ~T0 @X0 0 tf ]
+"51 mcc_generated_files/drivers/uart.h
+[; ;mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+[s S1685 `*F12592 1 `*F12594 1 `*F12597 1 `*F12599 1 `*F12601 1 `*F12605 1 `*F12607 1 `*F12611 1 `*F12613 1 `*F12615 1 ]
+[n S1685 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
+"329 mcc_generated_files/drivers/../eusart1.h
+[; ;mcc_generated_files/drivers/../eusart1.h: 329: uint8_t EUSART1_Read(void);
+[v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
+"349
+[; ;mcc_generated_files/drivers/../eusart1.h: 349: void EUSART1_Write(uint8_t txData);
+[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
+"166
+[; ;mcc_generated_files/drivers/../eusart1.h: 166: _Bool EUSART1_is_tx_ready(void);
+[v _EUSART1_is_tx_ready `(a ~T0 @X0 0 ef ]
+"214
+[; ;mcc_generated_files/drivers/../eusart1.h: 214: _Bool EUSART1_is_rx_ready(void);
+[v _EUSART1_is_rx_ready `(a ~T0 @X0 0 ef ]
+[v F12579 `(v ~T0 @X0 0 tf ]
+"486
+[; ;mcc_generated_files/drivers/../eusart1.h: 486: void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F12579 ]
+"391
+[; ;mcc_generated_files/drivers/../eusart1.h: 391: void EUSART1_Receive_ISR(void);
+[v _EUSART1_Receive_ISR `(v ~T0 @X0 0 ef ]
+[v F12583 `(v ~T0 @X0 0 tf ]
+"506
+[; ;mcc_generated_files/drivers/../eusart1.h: 506: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F12583 ]
+"261
+[; ;mcc_generated_files/drivers/../eusart1.h: 261: _Bool EUSART1_is_tx_done(void);
+[v _EUSART1_is_tx_done `(a ~T0 @X0 0 ef ]
+"370
+[; ;mcc_generated_files/drivers/../eusart1.h: 370: void EUSART1_Transmit_ISR(void);
+[v _EUSART1_Transmit_ISR `(v ~T0 @X0 0 ef ]
+"118
+[; ;mcc_generated_files/drivers/../eusart1.h: 118: void EUSART1_Initialize(void);
+[v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
+"328 mcc_generated_files/drivers/../eusart2.h
+[; ;mcc_generated_files/drivers/../eusart2.h: 328: uint8_t EUSART2_Read(void);
+[v _EUSART2_Read `(uc ~T0 @X0 0 ef ]
+"348
+[; ;mcc_generated_files/drivers/../eusart2.h: 348: void EUSART2_Write(uint8_t txData);
+[v _EUSART2_Write `(v ~T0 @X0 0 ef1`uc ]
+"165
+[; ;mcc_generated_files/drivers/../eusart2.h: 165: _Bool EUSART2_is_tx_ready(void);
+[v _EUSART2_is_tx_ready `(a ~T0 @X0 0 ef ]
+"213
+[; ;mcc_generated_files/drivers/../eusart2.h: 213: _Bool EUSART2_is_rx_ready(void);
+[v _EUSART2_is_rx_ready `(a ~T0 @X0 0 ef ]
+[v F12212 `(v ~T0 @X0 0 tf ]
+"485
+[; ;mcc_generated_files/drivers/../eusart2.h: 485: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
+[v _EUSART2_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F12212 ]
+"390
+[; ;mcc_generated_files/drivers/../eusart2.h: 390: void EUSART2_Receive_ISR(void);
+[v _EUSART2_Receive_ISR `(v ~T0 @X0 0 ef ]
 [v F12216 `(v ~T0 @X0 0 tf ]
-[v F12220 `(v ~T0 @X0 0 tf ]
-[v F12222 `(v ~T0 @X0 0 tf ]
-[v F12224 `(v ~T0 @X0 0 tf ]
+"505
+[; ;mcc_generated_files/drivers/../eusart2.h: 505: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
+[v _EUSART2_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F12216 ]
+"260
+[; ;mcc_generated_files/drivers/../eusart2.h: 260: _Bool EUSART2_is_tx_done(void);
+[v _EUSART2_is_tx_done `(a ~T0 @X0 0 ef ]
+"369
+[; ;mcc_generated_files/drivers/../eusart2.h: 369: void EUSART2_Transmit_ISR(void);
+[v _EUSART2_Transmit_ISR `(v ~T0 @X0 0 ef ]
+"117
+[; ;mcc_generated_files/drivers/../eusart2.h: 117: void EUSART2_Initialize(void);
+[v _EUSART2_Initialize `(v ~T0 @X0 0 ef ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1757,303 +1651,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"6 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 6: _Bool pushed = 0;
-[v _pushed `a ~T0 @X0 1 e ]
-[i _pushed
--> -> 0 `i `a
+"35 mcc_generated_files/drivers/uart.c
+[; ;mcc_generated_files/drivers/uart.c: 35: const uart_functions_t uart[] = {
+[v _uart `CS1685 ~T0 @X0 -> 2 `i e ]
+[i _uart
+:U ..
+:U ..
+&U _EUSART1_Read
+&U _EUSART1_Write
+&U _EUSART1_is_tx_ready
+&U _EUSART1_is_rx_ready
+&U _EUSART1_SetTxInterruptHandler
+&U _EUSART1_Receive_ISR
+&U _EUSART1_SetRxInterruptHandler
+&U _EUSART1_is_tx_done
+&U _EUSART1_Transmit_ISR
+&U _EUSART1_Initialize
+..
+:U ..
+&U _EUSART2_Read
+&U _EUSART2_Write
+&U _EUSART2_is_tx_ready
+&U _EUSART2_is_rx_ready
+&U _EUSART2_SetTxInterruptHandler
+&U _EUSART2_Receive_ISR
+&U _EUSART2_SetRxInterruptHandler
+&U _EUSART2_is_tx_done
+&U _EUSART2_Transmit_ISR
+&U _EUSART2_Initialize
+..
+..
 ]
-"7
-[; ;mcc_generated_files/../main.h: 7: _Bool sendSpiReadRequest = 0;
-[v _sendSpiReadRequest `a ~T0 @X0 1 e ]
-[i _sendSpiReadRequest
--> -> 0 `i `a
-]
-"55 mcc_generated_files/pin_manager.c
-[; ;mcc_generated_files/pin_manager.c: 55: void (*IOCAF6_InterruptHandler)(void);
-[v _IOCAF6_InterruptHandler `*F12202 ~T0 @X0 1 e ]
-"56
-[; ;mcc_generated_files/pin_manager.c: 56: void (*IOCAF7_InterruptHandler)(void);
-[v _IOCAF7_InterruptHandler `*F12204 ~T0 @X0 1 e ]
-"58
-[; ;mcc_generated_files/pin_manager.c: 58: void PIN_MANAGER_Initialize(void) {
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-{
-[e :U _PIN_MANAGER_Initialize ]
-[f ]
-"62
-[; ;mcc_generated_files/pin_manager.c: 62:     LATE = 0x00;
-[e = _LATE -> -> 0 `i `uc ]
-"63
-[; ;mcc_generated_files/pin_manager.c: 63:     LATA = 0x31;
-[e = _LATA -> -> 49 `i `uc ]
-"64
-[; ;mcc_generated_files/pin_manager.c: 64:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
-"65
-[; ;mcc_generated_files/pin_manager.c: 65:     LATC = 0x01;
-[e = _LATC -> -> 1 `i `uc ]
-"70
-[; ;mcc_generated_files/pin_manager.c: 70:     TRISE = 0x08;
-[e = _TRISE -> -> 8 `i `uc ]
-"71
-[; ;mcc_generated_files/pin_manager.c: 71:     TRISA = 0xDE;
-[e = _TRISA -> -> 222 `i `uc ]
-"72
-[; ;mcc_generated_files/pin_manager.c: 72:     TRISB = 0xEF;
-[e = _TRISB -> -> 239 `i `uc ]
-"73
-[; ;mcc_generated_files/pin_manager.c: 73:     TRISC = 0xA8;
-[e = _TRISC -> -> 168 `i `uc ]
-"78
-[; ;mcc_generated_files/pin_manager.c: 78:     ANSELC = 0x00;
-[e = _ANSELC -> -> 0 `i `uc ]
-"79
-[; ;mcc_generated_files/pin_manager.c: 79:     ANSELB = 0xC9;
-[e = _ANSELB -> -> 201 `i `uc ]
-"80
-[; ;mcc_generated_files/pin_manager.c: 80:     ANSELA = 0x0E;
-[e = _ANSELA -> -> 14 `i `uc ]
-"85
-[; ;mcc_generated_files/pin_manager.c: 85:     WPUE = 0x00;
-[e = _WPUE -> -> 0 `i `uc ]
-"86
-[; ;mcc_generated_files/pin_manager.c: 86:     WPUB = 0x00;
-[e = _WPUB -> -> 0 `i `uc ]
-"87
-[; ;mcc_generated_files/pin_manager.c: 87:     WPUA = 0x00;
-[e = _WPUA -> -> 0 `i `uc ]
-"88
-[; ;mcc_generated_files/pin_manager.c: 88:     WPUC = 0x00;
-[e = _WPUC -> -> 0 `i `uc ]
-"93
-[; ;mcc_generated_files/pin_manager.c: 93:     ODCONE = 0x00;
-[e = _ODCONE -> -> 0 `i `uc ]
-"94
-[; ;mcc_generated_files/pin_manager.c: 94:     ODCONA = 0x00;
-[e = _ODCONA -> -> 0 `i `uc ]
-"95
-[; ;mcc_generated_files/pin_manager.c: 95:     ODCONB = 0x00;
-[e = _ODCONB -> -> 0 `i `uc ]
-"96
-[; ;mcc_generated_files/pin_manager.c: 96:     ODCONC = 0x00;
-[e = _ODCONC -> -> 0 `i `uc ]
-"101
-[; ;mcc_generated_files/pin_manager.c: 101:     SLRCONA = 0x7E;
-[e = _SLRCONA -> -> 126 `i `uc ]
-"102
-[; ;mcc_generated_files/pin_manager.c: 102:     SLRCONB = 0xFF;
-[e = _SLRCONB -> -> 255 `i `uc ]
-"103
-[; ;mcc_generated_files/pin_manager.c: 103:     SLRCONC = 0x3F;
-[e = _SLRCONC -> -> 63 `i `uc ]
-"108
-[; ;mcc_generated_files/pin_manager.c: 108:     INLVLA = 0x3F;
-[e = _INLVLA -> -> 63 `i `uc ]
-"109
-[; ;mcc_generated_files/pin_manager.c: 109:     INLVLB = 0x3F;
-[e = _INLVLB -> -> 63 `i `uc ]
-"110
-[; ;mcc_generated_files/pin_manager.c: 110:     INLVLC = 0x3F;
-[e = _INLVLC -> -> 63 `i `uc ]
-"117
-[; ;mcc_generated_files/pin_manager.c: 117:     IOCAFbits.IOCAF6 = 0;
-[e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
-"119
-[; ;mcc_generated_files/pin_manager.c: 119:     IOCAFbits.IOCAF7 = 0;
-[e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
-"121
-[; ;mcc_generated_files/pin_manager.c: 121:     IOCANbits.IOCAN6 = 0;
-[e = . . _IOCANbits 0 6 -> -> 0 `i `uc ]
-"123
-[; ;mcc_generated_files/pin_manager.c: 123:     IOCANbits.IOCAN7 = 1;
-[e = . . _IOCANbits 0 7 -> -> 1 `i `uc ]
-"125
-[; ;mcc_generated_files/pin_manager.c: 125:     IOCAPbits.IOCAP6 = 1;
-[e = . . _IOCAPbits 0 6 -> -> 1 `i `uc ]
-"127
-[; ;mcc_generated_files/pin_manager.c: 127:     IOCAPbits.IOCAP7 = 0;
-[e = . . _IOCAPbits 0 7 -> -> 0 `i `uc ]
-"132
-[; ;mcc_generated_files/pin_manager.c: 132:     IOCAF6_SetInterruptHandler(IOCAF6_DefaultInterruptHandler);
-[e ( _IOCAF6_SetInterruptHandler (1 &U _IOCAF6_DefaultInterruptHandler ]
-"133
-[; ;mcc_generated_files/pin_manager.c: 133:     IOCAF7_SetInterruptHandler(IOCAF7_DefaultInterruptHandler);
-[e ( _IOCAF7_SetInterruptHandler (1 &U _IOCAF7_DefaultInterruptHandler ]
-"136
-[; ;mcc_generated_files/pin_manager.c: 136:     PIE0bits.IOCIE = 1;
-[e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
-"139
-[; ;mcc_generated_files/pin_manager.c: 139:     SSP1CLKPPS = 0x09;
-[e = _SSP1CLKPPS -> -> 9 `i `uc ]
-"140
-[; ;mcc_generated_files/pin_manager.c: 140:     SSP2DATPPS = 0x13;
-[e = _SSP2DATPPS -> -> 19 `i `uc ]
-"141
-[; ;mcc_generated_files/pin_manager.c: 141:     RB1PPS = 0x00;
-[e = _RB1PPS -> -> 0 `i `uc ]
-"142
-[; ;mcc_generated_files/pin_manager.c: 142:     RB2PPS = 0x00;
-[e = _RB2PPS -> -> 0 `i `uc ]
-"143
-[; ;mcc_generated_files/pin_manager.c: 143:     RC1PPS = 0x15;
-[e = _RC1PPS -> -> 21 `i `uc ]
-"144
-[; ;mcc_generated_files/pin_manager.c: 144:     RC4PPS = 0x25;
-[e = _RC4PPS -> -> 37 `i `uc ]
-"145
-[; ;mcc_generated_files/pin_manager.c: 145:     RB4PPS = 0x0F;
-[e = _RB4PPS -> -> 15 `i `uc ]
-"146
-[; ;mcc_generated_files/pin_manager.c: 146:     RC2PPS = 0x16;
-[e = _RC2PPS -> -> 22 `i `uc ]
-"147
-[; ;mcc_generated_files/pin_manager.c: 147:     RX2DTPPS = 0x15;
-[e = _RX2DTPPS -> -> 21 `i `uc ]
-"148
-[; ;mcc_generated_files/pin_manager.c: 148:     SSP1DATPPS = 0x0A;
-[e = _SSP1DATPPS -> -> 10 `i `uc ]
-"149
-[; ;mcc_generated_files/pin_manager.c: 149:     RX1DTPPS = 0x0D;
-[e = _RX1DTPPS -> -> 13 `i `uc ]
-"150
-[; ;mcc_generated_files/pin_manager.c: 150:     SSP2CLKPPS = 0x11;
-[e = _SSP2CLKPPS -> -> 17 `i `uc ]
-"151
-[; ;mcc_generated_files/pin_manager.c: 151: }
-[e :UE 1681 ]
-}
-"153
-[; ;mcc_generated_files/pin_manager.c: 153: void PIN_MANAGER_IOC(void) {
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-{
-[e :U _PIN_MANAGER_IOC ]
-[f ]
-"155
-[; ;mcc_generated_files/pin_manager.c: 155:     if (IOCAFbits.IOCAF6 == 1) {
-[e $ ! == -> . . _IOCAFbits 0 6 `i -> 1 `i 1683  ]
-{
-"156
-[; ;mcc_generated_files/pin_manager.c: 156:         IOCAF6_ISR();
-[e ( _IOCAF6_ISR ..  ]
-"157
-[; ;mcc_generated_files/pin_manager.c: 157:     }
-}
-[e :U 1683 ]
-"159
-[; ;mcc_generated_files/pin_manager.c: 159:     if (IOCAFbits.IOCAF7 == 1) {
-[e $ ! == -> . . _IOCAFbits 0 7 `i -> 1 `i 1684  ]
-{
-"160
-[; ;mcc_generated_files/pin_manager.c: 160:         IOCAF7_ISR();
-[e ( _IOCAF7_ISR ..  ]
-"161
-[; ;mcc_generated_files/pin_manager.c: 161:     }
-}
-[e :U 1684 ]
-"162
-[; ;mcc_generated_files/pin_manager.c: 162: }
-[e :UE 1682 ]
-}
-"167
-[; ;mcc_generated_files/pin_manager.c: 167: void IOCAF6_ISR(void) {
-[v _IOCAF6_ISR `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF6_ISR ]
-[f ]
-"170
-[; ;mcc_generated_files/pin_manager.c: 170:     ACC_INTERRUPT_SetHigh();
-[e ( _ACC_INTERRUPT_SetHigh ..  ]
-"173
-[; ;mcc_generated_files/pin_manager.c: 173:     if (IOCAF6_InterruptHandler) {
-[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F12211 1686  ]
-{
-"174
-[; ;mcc_generated_files/pin_manager.c: 174:         IOCAF6_InterruptHandler();
-[e ( *U _IOCAF6_InterruptHandler ..  ]
-"175
-[; ;mcc_generated_files/pin_manager.c: 175:     }
-}
-[e :U 1686 ]
-"176
-[; ;mcc_generated_files/pin_manager.c: 176:     IOCAFbits.IOCAF6 = 0;
-[e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
-"177
-[; ;mcc_generated_files/pin_manager.c: 177: }
-[e :UE 1685 ]
-}
-"182
-[; ;mcc_generated_files/pin_manager.c: 182: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)) {
-[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F12214 ]
-{
-[e :U _IOCAF6_SetInterruptHandler ]
-[v _InterruptHandler `*F12216 ~T0 @X0 1 r1 ]
-[f ]
-"183
-[; ;mcc_generated_files/pin_manager.c: 183:     IOCAF6_InterruptHandler = InterruptHandler;
-[e = _IOCAF6_InterruptHandler _InterruptHandler ]
-"184
-[; ;mcc_generated_files/pin_manager.c: 184: }
-[e :UE 1687 ]
-}
-"189
-[; ;mcc_generated_files/pin_manager.c: 189: void IOCAF6_DefaultInterruptHandler(void) {
-[v _IOCAF6_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF6_DefaultInterruptHandler ]
-[f ]
-"192
-[; ;mcc_generated_files/pin_manager.c: 192: }
-[e :UE 1688 ]
-}
-"197
-[; ;mcc_generated_files/pin_manager.c: 197: void IOCAF7_ISR(void) {
-[v _IOCAF7_ISR `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF7_ISR ]
-[f ]
-"202
-[; ;mcc_generated_files/pin_manager.c: 202:     if (IOCAF7_InterruptHandler) {
-[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F12220 1690  ]
-{
-"203
-[; ;mcc_generated_files/pin_manager.c: 203:         IOCAF7_InterruptHandler();
-[e ( *U _IOCAF7_InterruptHandler ..  ]
-"204
-[; ;mcc_generated_files/pin_manager.c: 204:     }
-}
-[e :U 1690 ]
-"205
-[; ;mcc_generated_files/pin_manager.c: 205:     IOCAFbits.IOCAF7 = 0;
-[e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
-"206
-[; ;mcc_generated_files/pin_manager.c: 206: }
-[e :UE 1689 ]
-}
-"211
-[; ;mcc_generated_files/pin_manager.c: 211: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)) {
-[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F12222 ]
-{
-[e :U _IOCAF7_SetInterruptHandler ]
-[v _InterruptHandler `*F12224 ~T0 @X0 1 r1 ]
-[f ]
-"212
-[; ;mcc_generated_files/pin_manager.c: 212:     IOCAF7_InterruptHandler = InterruptHandler;
-[e = _IOCAF7_InterruptHandler _InterruptHandler ]
-"213
-[; ;mcc_generated_files/pin_manager.c: 213: }
-[e :UE 1691 ]
-}
-"218
-[; ;mcc_generated_files/pin_manager.c: 218: void IOCAF7_DefaultInterruptHandler(void) {
-[v _IOCAF7_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF7_DefaultInterruptHandler ]
-[f ]
-"221
-[; ;mcc_generated_files/pin_manager.c: 221:     pushed = 1;
-[e = _pushed -> -> 1 `i `a ]
-"222
-[; ;mcc_generated_files/pin_manager.c: 222: }
-[e :UE 1692 ]
-}

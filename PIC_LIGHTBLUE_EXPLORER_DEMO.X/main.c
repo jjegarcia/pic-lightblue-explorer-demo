@@ -36,7 +36,7 @@
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
  */
-
+#include "main.h"
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/application/LIGHTBLUE_service.h"
 #include "mcc_generated_files/rn487x/rn487x_interface.h"
@@ -66,9 +66,6 @@ static char statusBuffer[MAX_BUFFER_SIZE]; /**< Status Buffer instance passed to
 static char lightBlueSerial[MAX_BUFFER_SIZE]; /**< Message Buffer used for CDC Serial communication when connected. Terminated by \r, \n, MAX character Passes messages to BLE for transmisison. */
 static uint8_t serialIndex; /**< Local index value for serial communication buffer. */
 
-bool ACC_Interrupt_is_high() {
-    return iNTERRUPTbits.ACC == 1;
-}
 void service_acceleremoterInterrupt(void);
 uint8_t flats = 0;
 
@@ -91,6 +88,7 @@ int main(void) {
     while (1) {
         if (RN487X_IsConnected() == true) {
             service_acceleremoterInterrupt();
+            service_push();
             if (TIMER_FLAG_SET() == true) {
                 RESET_TIMER_INTERRUPT_FLAG;
 
@@ -127,6 +125,28 @@ int main(void) {
         }
     }
     return 0;
+}
+
+void service_push(void){
+            if (pushed) {
+            pushed = false;
+            sendSpiReadRequest = true;
+        }
+        if (sendSpiReadRequest) {
+            send_spi_read();
+        }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    SPI_SS_EXT_DEVICE_SetLow();
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        SPI_SS_EXT_DEVICE_SetHigh();
+        SPI2_Close();
+        sendSpiReadRequest = false;
+        
+    }
 }
 
 void service_acceleremoterInterrupt(void) {
