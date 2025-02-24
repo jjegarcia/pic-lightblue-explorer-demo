@@ -150,7 +150,7 @@ void send_spi_read(void) {
 }
 
 void service_acceleremoterInterrupt(void) {
-    if (ACC_Interrupt_is_high()) {
+    if (ACC_INTERRUPT_Is_High()) {
         ACC_INTERRUPT_SetLow();
         accelerometerInterruptBits.FLAT = 1;
         flats++;

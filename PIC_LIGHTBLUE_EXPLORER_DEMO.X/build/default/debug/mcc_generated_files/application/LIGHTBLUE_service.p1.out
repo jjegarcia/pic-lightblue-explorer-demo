@@ -1,195 +1,169 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"488 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 488:     struct {
-[s S1680 :1 `uc 1 :7 `uc 1 ]
-[n S1680 . ACC UNDEFINED ]
+"285 mcc_generated_files/application/BMA253_accel.h
+[; ;mcc_generated_files/application/BMA253_accel.h: 285:     struct {
+[s S11 :7 `uc 1 :1 `uc 1 ]
+[n S11 . UNDEFINED FLAT ]
+"284
+[; ;mcc_generated_files/application/BMA253_accel.h: 284: typedef union {
+[u S10 `S11 1 `uc 1 ]
+[n S10 . . AccelerometerInterruptBits ]
+"488 mcc_generated_files/application/../pin_manager.h
+[; ;mcc_generated_files/application/../pin_manager.h: 488:     struct {
+[s S1691 :1 `uc 1 :7 `uc 1 ]
+[n S1691 . ACC UNDEFINED ]
 "487
-[; ;mcc_generated_files/pin_manager.h: 487: typedef union {
-[u S1679 `S1680 1 `uc 1 ]
-[n S1679 . . INTERRUPTbits ]
-[v F12203 `(v ~T0 @X0 0 tf ]
-[v F12205 `(v ~T0 @X0 0 tf ]
-"1047 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 1047: extern volatile unsigned char LATE __attribute__((address(0x01C)));
-[v _LATE `Vuc ~T0 @X0 0 e@28 ]
-"861
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 861: extern volatile unsigned char LATA __attribute__((address(0x018)));
-[v _LATA `Vuc ~T0 @X0 0 e@24 ]
-"923
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 923: extern volatile unsigned char LATB __attribute__((address(0x019)));
-[v _LATB `Vuc ~T0 @X0 0 e@25 ]
-"985
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 985: extern volatile unsigned char LATC __attribute__((address(0x01A)));
-[v _LATC `Vuc ~T0 @X0 0 e@26 ]
-"840
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 840: extern volatile unsigned char TRISE __attribute__((address(0x016)));
-[v _TRISE `Vuc ~T0 @X0 0 e@22 ]
-"654
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 654: extern volatile unsigned char TRISA __attribute__((address(0x012)));
-[v _TRISA `Vuc ~T0 @X0 0 e@18 ]
-"716
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 716: extern volatile unsigned char TRISB __attribute__((address(0x013)));
-[v _TRISB `Vuc ~T0 @X0 0 e@19 ]
-"778
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 778: extern volatile unsigned char TRISC __attribute__((address(0x014)));
-[v _TRISC `Vuc ~T0 @X0 0 e@20 ]
-"35682
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35682: extern volatile unsigned char ANSELC __attribute__((address(0x1F4E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@8014 ]
-"35186
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35186: extern volatile unsigned char ANSELB __attribute__((address(0x1F43)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@8003 ]
-"34690
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34690: extern volatile unsigned char ANSELA __attribute__((address(0x1F38)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@7992 ]
-"36178
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36178: extern volatile unsigned char WPUE __attribute__((address(0x1F65)));
-[v _WPUE `Vuc ~T0 @X0 0 e@8037 ]
-"35248
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35248: extern volatile unsigned char WPUB __attribute__((address(0x1F44)));
-[v _WPUB `Vuc ~T0 @X0 0 e@8004 ]
-"34752
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34752: extern volatile unsigned char WPUA __attribute__((address(0x1F39)));
-[v _WPUA `Vuc ~T0 @X0 0 e@7993 ]
-"35744
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35744: extern volatile unsigned char WPUC __attribute__((address(0x1F4F)));
-[v _WPUC `Vuc ~T0 @X0 0 e@8015 ]
-"36199
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36199: extern volatile unsigned char ODCONE __attribute__((address(0x1F66)));
-[v _ODCONE `Vuc ~T0 @X0 0 e@8038 ]
-"34814
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34814: extern volatile unsigned char ODCONA __attribute__((address(0x1F3A)));
-[v _ODCONA `Vuc ~T0 @X0 0 e@7994 ]
-"35310
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35310: extern volatile unsigned char ODCONB __attribute__((address(0x1F45)));
-[v _ODCONB `Vuc ~T0 @X0 0 e@8005 ]
-"35806
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35806: extern volatile unsigned char ODCONC __attribute__((address(0x1F50)));
-[v _ODCONC `Vuc ~T0 @X0 0 e@8016 ]
-"34876
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34876: extern volatile unsigned char SLRCONA __attribute__((address(0x1F3B)));
-[v _SLRCONA `Vuc ~T0 @X0 0 e@7995 ]
-"35372
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35372: extern volatile unsigned char SLRCONB __attribute__((address(0x1F46)));
-[v _SLRCONB `Vuc ~T0 @X0 0 e@8006 ]
-"35868
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35868: extern volatile unsigned char SLRCONC __attribute__((address(0x1F51)));
-[v _SLRCONC `Vuc ~T0 @X0 0 e@8017 ]
-"34938
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34938: extern volatile unsigned char INLVLA __attribute__((address(0x1F3C)));
-[v _INLVLA `Vuc ~T0 @X0 0 e@7996 ]
-"35434
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35434: extern volatile unsigned char INLVLB __attribute__((address(0x1F47)));
-[v _INLVLB `Vuc ~T0 @X0 0 e@8007 ]
-"35930
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35930: extern volatile unsigned char INLVLC __attribute__((address(0x1F52)));
-[v _INLVLC `Vuc ~T0 @X0 0 e@8018 ]
-"35130
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35130:     struct {
-[s S1612 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1612 . IOCAF0 IOCAF1 IOCAF2 IOCAF3 IOCAF4 IOCAF5 IOCAF6 IOCAF7 ]
-"35129
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35129: typedef union {
-[u S1611 `S1612 1 ]
-[n S1611 . . ]
-"35141
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35141: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x1F3F)));
-[v _IOCAFbits `VS1611 ~T0 @X0 0 e@7999 ]
-"35068
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35068:     struct {
-[s S1610 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1610 . IOCAN0 IOCAN1 IOCAN2 IOCAN3 IOCAN4 IOCAN5 IOCAN6 IOCAN7 ]
-"35067
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35067: typedef union {
-[u S1609 `S1610 1 ]
-[n S1609 . . ]
-"35079
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35079: extern volatile IOCANbits_t IOCANbits __attribute__((address(0x1F3E)));
-[v _IOCANbits `VS1609 ~T0 @X0 0 e@7998 ]
-"35006
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35006:     struct {
-[s S1608 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1608 . IOCAP0 IOCAP1 IOCAP2 IOCAP3 IOCAP4 IOCAP5 IOCAP6 IOCAP7 ]
-"35005
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35005: typedef union {
-[u S1607 `S1608 1 ]
-[n S1607 . . ]
-"35017
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 35017: extern volatile IOCAPbits_t IOCAPbits __attribute__((address(0x1F3D)));
-[v _IOCAPbits `VS1607 ~T0 @X0 0 e@7997 ]
-[v F12176 `(v ~T0 @X0 0 tf ]
-"354 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 354: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F12176 ]
-"402
-[; ;mcc_generated_files/pin_manager.h: 402: void IOCAF6_DefaultInterruptHandler(void);
-[v _IOCAF6_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-[v F12184 `(v ~T0 @X0 0 tf ]
-"437
-[; ;mcc_generated_files/pin_manager.h: 437: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F12184 ]
-"485
-[; ;mcc_generated_files/pin_manager.h: 485: void IOCAF7_DefaultInterruptHandler(void);
-[v _IOCAF7_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-"22830 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22830:     struct {
-[s S1039 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1039 . INTE . IOCIE TMR0IE ]
-"22829
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22829: typedef union {
-[u S1038 `S1039 1 ]
-[n S1038 . . ]
-"22837
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22837: extern volatile PIE0bits_t PIE0bits __attribute__((address(0x716)));
-[v _PIE0bits `VS1038 ~T0 @X0 0 e@1814 ]
-"32778
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32778: extern volatile unsigned char SSP1CLKPPS __attribute__((address(0x1EC5)));
-[v _SSP1CLKPPS `Vuc ~T0 @X0 0 e@7877 ]
-"32986
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32986: extern volatile unsigned char SSP2DATPPS __attribute__((address(0x1EC9)));
-[v _SSP2DATPPS `Vuc ~T0 @X0 0 e@7881 ]
-"33820
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33820: extern volatile unsigned char RB1PPS __attribute__((address(0x1F19)));
-[v _RB1PPS `Vuc ~T0 @X0 0 e@7961 ]
-"33878
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33878: extern volatile unsigned char RB2PPS __attribute__((address(0x1F1A)));
-[v _RB2PPS `Vuc ~T0 @X0 0 e@7962 ]
-"34284
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34284: extern volatile unsigned char RC1PPS __attribute__((address(0x1F21)));
-[v _RC1PPS `Vuc ~T0 @X0 0 e@7969 ]
-"34458
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34458: extern volatile unsigned char RC4PPS __attribute__((address(0x1F24)));
-[v _RC4PPS `Vuc ~T0 @X0 0 e@7972 ]
-"33994
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33994: extern volatile unsigned char RB4PPS __attribute__((address(0x1F1C)));
-[v _RB4PPS `Vuc ~T0 @X0 0 e@7964 ]
-"34342
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34342: extern volatile unsigned char RC2PPS __attribute__((address(0x1F22)));
-[v _RC2PPS `Vuc ~T0 @X0 0 e@7970 ]
-"33194
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33194: extern volatile unsigned char RX2DTPPS __attribute__((address(0x1ECD)));
-[v _RX2DTPPS `Vuc ~T0 @X0 0 e@7885 ]
-"32830
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32830: extern volatile unsigned char SSP1DATPPS __attribute__((address(0x1EC6)));
-[v _SSP1DATPPS `Vuc ~T0 @X0 0 e@7878 ]
-"33090
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 33090: extern volatile unsigned char RX1DTPPS __attribute__((address(0x1ECB)));
-[v _RX1DTPPS `Vuc ~T0 @X0 0 e@7883 ]
-"32934
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32934: extern volatile unsigned char SSP2CLKPPS __attribute__((address(0x1EC8)));
-[v _SSP2CLKPPS `Vuc ~T0 @X0 0 e@7880 ]
-"331 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 331: void IOCAF6_ISR(void);
-[v _IOCAF6_ISR `(v ~T0 @X0 0 ef ]
-"414
-[; ;mcc_generated_files/pin_manager.h: 414: void IOCAF7_ISR(void);
-[v _IOCAF7_ISR `(v ~T0 @X0 0 ef ]
-[v F12211 `(v ~T0 @X0 0 tf ]
-[v F12213 `(v ~T0 @X0 0 tf ]
-[v F12215 `(v ~T0 @X0 0 tf ]
-[v F12219 `(v ~T0 @X0 0 tf ]
-[v F12221 `(v ~T0 @X0 0 tf ]
-[v F12223 `(v ~T0 @X0 0 tf ]
+[; ;mcc_generated_files/application/../pin_manager.h: 487: typedef union {
+[u S1690 `S1691 1 `uc 1 ]
+[n S1690 . . INTERRUPTbits ]
+"57 mcc_generated_files/application/../rn487x/rn487x.h
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 57:     {
+[s S3 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S3 . p2_2 p2_4 p3_5 p1_2 p1_3 reserved ]
+"54
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 54: {
+[u S2 `uc 1 `S3 1 ]
+[n S2 . gpioBitMap . ]
+"76
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 76:     {
+[s S5 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S5 . p2_2_state p2_4_state p3_5_state p1_2_state p1_3_state reserved ]
+"73
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 73: {
+[u S4 `uc 1 `S5 1 ]
+[n S4 . gpioStateBitMap . ]
+"95
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 95:     {
+[s S7 `S2 1 `S4 1 ]
+[n S7 . ioBitMap ioStateBitMap ]
+"92
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 92: {
+[u S6 `us 1 `S7 1 ]
+[n S6 . gpioMap . ]
+"112 mcc_generated_files/application/MCP9844_temp_sensor.h
+[; ;mcc_generated_files/application/MCP9844_temp_sensor.h: 112: void MCP9844_GetTemperatureValue(int16_t *temperature);
+[v _MCP9844_GetTemperatureValue `(v ~T0 @X0 0 ef1`*s ]
+"236 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 236: static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
+[v _LIGHTBLUE_SplitWord `(v ~T0 @X0 0 sf2`*uc`s ]
+"227
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 227: static void LIGHTBLUE_SendPacket(char packetID, char* payload);
+[v _LIGHTBLUE_SendPacket `(v ~T0 @X0 0 sf2`uc`*uc ]
+"326
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 326:     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
+[c E12938 86 76 80 84 88 83 82 85 65 .. ]
+[n E12938 . PROTOCOL_VERSION_ID LED_STATE_ID BUTTON_STATE_ID TEMPERATURE_DATA_ID ACCEL_DATA_ID SERIAL_DATA_ID ERROR_ID UI_CONFIG_DATA_ID ACC_STATE  ]
+"224 mcc_generated_files/application/BMA253_accel.h
+[; ;mcc_generated_files/application/BMA253_accel.h: 224: {
+[s S9 `s 1 `s 1 `s 1 ]
+[n S9 . x y z ]
+"275
+[; ;mcc_generated_files/application/BMA253_accel.h: 275: void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData);
+[v _BMA253_GetAccelDataXYZ `(v ~T0 @X0 0 ef1`*S9 ]
+"252 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 252: static uint8_t LIGHTBLUE_GetButtonValue(void);
+[v _LIGHTBLUE_GetButtonValue `(uc ~T0 @X0 0 sf ]
+"244
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 244: static void LIGHTBLUE_SplitByte(char* payload, int8_t value);
+[v _LIGHTBLUE_SplitByte `(v ~T0 @X0 0 sf2`*uc`c ]
+"259
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 259: static uint8_t LIGHTBLUE_GetAccState(void);
+[v _LIGHTBLUE_GetAccState `(uc ~T0 @X0 0 sf ]
+"269
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 269: static uint8_t LIGHTBLUE_GetDataLedValue(void);
+[v _LIGHTBLUE_GetDataLedValue `(uc ~T0 @X0 0 sf ]
+"278
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 278: static uint8_t LIGHTBLUE_GetErrorLedValue(void);
+[v _LIGHTBLUE_GetErrorLedValue `(uc ~T0 @X0 0 sf ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+[v F278 `(v ~T0 @X0 0 tf1`uc ]
+[v F281 `(uc ~T0 @X0 0 tf ]
+[v F283 `(a ~T0 @X0 0 tf ]
+[v F285 `(a ~T0 @X0 0 tf ]
+[v F287 `(v ~T0 @X0 0 tf1`a ]
+[v F290 `(v ~T0 @X0 0 tf1`a ]
+"408 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 408:     RN487X.Write(('['));
+[c E272 0 1 .. ]
+[n E272 . TEST_MODE APPLICATION_MODE  ]
+[v F293 `(v ~T0 @X0 0 tf1`E272 ]
+[v F296 `(v ~T0 @X0 0 tf1`us ]
+[v F299 `(v ~T0 @X0 0 tf1`*uc ]
+"48 mcc_generated_files/application/../rn487x/rn487x_interface.h
+[; ;mcc_generated_files/application/../rn487x/rn487x_interface.h: 48: {
+[s S8 `*F278 1 `*F281 1 `*F283 1 `*F285 1 `*F287 1 `*F290 1 `*F293 1 `*F296 1 `*F299 1 ]
+[n S8 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
+"66
+[; ;mcc_generated_files/application/../rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
+[v _RN487X `CS8 ~T0 @X0 0 e ]
+"423 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 423:     static PACKET_PARSER_STATE_t parserState = IDLE;
+[c E12949 0 1 2 3 4 5 6 .. ]
+[n E12949 . IDLE SEQUENCE_NUMBER PACKET_ID PAYLOAD_SIZE_0 PAYLOAD_SIZE_1 PAYLOAD_0 PAYLOAD_1  ]
+"308
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 308: static void LIGHTBLUE_PerformAction(char id, uint8_t data);
+[v _LIGHTBLUE_PerformAction `(v ~T0 @X0 0 sf2`uc`uc ]
+"453 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 453:     struct {
+[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S44 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"452
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 452: typedef union {
+[u S43 `S44 1 ]
+[n S43 . . ]
+"464
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 464: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS43 ~T0 @X0 0 e@12 ]
+"294 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 294: static void LIGHTBLUE_UpdateErrorLed(void);
+[v _LIGHTBLUE_UpdateErrorLed `(v ~T0 @X0 0 sf ]
+"194 mcc_generated_files/application/../rn487x/rn487x.h
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 194: _Bool RN487X_EnterCmdMode(void);
+[v _RN487X_EnterCmdMode `(a ~T0 @X0 0 ef ]
+"219
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 219: _Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
+[v _RN487X_SetOutputs `(a ~T0 @X0 0 ef1`S6 ]
+"206
+[; ;mcc_generated_files/application/../rn487x/rn487x.h: 206: _Bool RN487X_EnterDataMode(void);
+[v _RN487X_EnterDataMode `(a ~T0 @X0 0 ef ]
+"867 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 867:     struct {
+[s S60 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S60 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"866
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 866: typedef union {
+[u S59 `S60 1 ]
+[n S59 . . ]
+"878
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 878: extern volatile LATAbits_t LATAbits __attribute__((address(0x018)));
+[v _LATAbits `VS59 ~T0 @X0 0 e@24 ]
+[v F12912 `(uc ~T0 @X0 0 tf ]
+[v F12914 `(v ~T0 @X0 0 tf1`uc ]
+[v F12917 `(a ~T0 @X0 0 tf ]
+[v F12919 `(a ~T0 @X0 0 tf ]
+[v F12922 `(v ~T0 @X0 0 tf ]
+[v F12921 `(v ~T0 @X0 0 tf1`*F12922 ]
+[v F12925 `(v ~T0 @X0 0 tf ]
+[v F12928 `(v ~T0 @X0 0 tf ]
+[v F12927 `(v ~T0 @X0 0 tf1`*F12928 ]
+[v F12931 `(a ~T0 @X0 0 tf ]
+[v F12933 `(v ~T0 @X0 0 tf ]
+[v F12935 `(v ~T0 @X0 0 tf ]
+"51 mcc_generated_files/application/../drivers/uart.h
+[; ;mcc_generated_files/application/../drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+[s S1698 `*F12912 1 `*F12914 1 `*F12917 1 `*F12919 1 `*F12921 1 `*F12925 1 `*F12927 1 `*F12931 1 `*F12933 1 `*F12935 1 ]
+[n S1698 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
+"53
+[; ;mcc_generated_files/application/../drivers/uart.h: 53: extern const uart_functions_t uart[];
+[v _uart `CS1698 ~T0 @X0 -> 0 `x e ]
+"568 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 568:             uart[UART_CDC].Write(data);
+[c E12906 0 1 .. ]
+[n E12906 . UART_CDC UART_BLE  ]
+"291 mcc_generated_files/application/BMA253_accel.h
+[; ;mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
+[v _accelerometerInterruptBits `VS10 ~T0 @X0 1 e ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1762,306 +1736,882 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"495 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 495: volatile INTERRUPTbits_t iNTERRUPTbits;
-[v _iNTERRUPTbits `VS1679 ~T0 @X0 1 e ]
-"6 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 6: _Bool pushed = 0;
-[v _pushed `a ~T0 @X0 1 e ]
-[i _pushed
--> -> 0 `i `a
+"495 mcc_generated_files/application/../pin_manager.h
+[; ;mcc_generated_files/application/../pin_manager.h: 495: volatile INTERRUPTbits_t iNTERRUPTbits;
+[v _iNTERRUPTbits `VS1690 ~T0 @X0 1 e ]
+[v F12959 `*Cuc ~T0 @X0 1 t ]
+"208 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 208: const char * const protocol_version_number = "1.1.0";
+[v _protocol_version_number `C*Cuc ~T0 @X0 1 e ]
+[i _protocol_version_number
+:s 1C
 ]
-"7
-[; ;mcc_generated_files/../main.h: 7: _Bool sendSpiReadRequest = 0;
-[v _sendSpiReadRequest `a ~T0 @X0 1 e ]
-[i _sendSpiReadRequest
--> -> 0 `i `a
+"209
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 209: static char _hex[] = "0123456789ABCDEF";
+[v __hex `uc ~T0 @X0 -> 17 `i s ]
+[i __hex
+:U ..
+-> 48 `c
+-> 49 `c
+-> 50 `c
+-> 51 `c
+-> 52 `c
+-> 53 `c
+-> 54 `c
+-> 55 `c
+-> 56 `c
+-> 57 `c
+-> 65 `c
+-> 66 `c
+-> 67 `c
+-> 68 `c
+-> 69 `c
+-> 70 `c
+-> 0 `c
+..
 ]
-"55 mcc_generated_files/pin_manager.c
-[; ;mcc_generated_files/pin_manager.c: 55: void (*IOCAF6_InterruptHandler)(void);
-[v _IOCAF6_InterruptHandler `*F12203 ~T0 @X0 1 e ]
-"56
-[; ;mcc_generated_files/pin_manager.c: 56: void (*IOCAF7_InterruptHandler)(void);
-[v _IOCAF7_InterruptHandler `*F12205 ~T0 @X0 1 e ]
-"58
-[; ;mcc_generated_files/pin_manager.c: 58: void PIN_MANAGER_Initialize(void) {
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-{
-[e :U _PIN_MANAGER_Initialize ]
-[f ]
-"62
-[; ;mcc_generated_files/pin_manager.c: 62:     LATE = 0x00;
-[e = _LATE -> -> 0 `i `uc ]
-"63
-[; ;mcc_generated_files/pin_manager.c: 63:     LATA = 0x31;
-[e = _LATA -> -> 49 `i `uc ]
-"64
-[; ;mcc_generated_files/pin_manager.c: 64:     LATB = 0x00;
-[e = _LATB -> -> 0 `i `uc ]
-"65
-[; ;mcc_generated_files/pin_manager.c: 65:     LATC = 0x01;
-[e = _LATC -> -> 1 `i `uc ]
-"70
-[; ;mcc_generated_files/pin_manager.c: 70:     TRISE = 0x08;
-[e = _TRISE -> -> 8 `i `uc ]
-"71
-[; ;mcc_generated_files/pin_manager.c: 71:     TRISA = 0xDE;
-[e = _TRISA -> -> 222 `i `uc ]
-"72
-[; ;mcc_generated_files/pin_manager.c: 72:     TRISB = 0xEF;
-[e = _TRISB -> -> 239 `i `uc ]
-"73
-[; ;mcc_generated_files/pin_manager.c: 73:     TRISC = 0xA8;
-[e = _TRISC -> -> 168 `i `uc ]
-"78
-[; ;mcc_generated_files/pin_manager.c: 78:     ANSELC = 0x00;
-[e = _ANSELC -> -> 0 `i `uc ]
-"79
-[; ;mcc_generated_files/pin_manager.c: 79:     ANSELB = 0xC9;
-[e = _ANSELB -> -> 201 `i `uc ]
-"80
-[; ;mcc_generated_files/pin_manager.c: 80:     ANSELA = 0x0E;
-[e = _ANSELA -> -> 14 `i `uc ]
-"85
-[; ;mcc_generated_files/pin_manager.c: 85:     WPUE = 0x00;
-[e = _WPUE -> -> 0 `i `uc ]
-"86
-[; ;mcc_generated_files/pin_manager.c: 86:     WPUB = 0x00;
-[e = _WPUB -> -> 0 `i `uc ]
-"87
-[; ;mcc_generated_files/pin_manager.c: 87:     WPUA = 0x00;
-[e = _WPUA -> -> 0 `i `uc ]
-"88
-[; ;mcc_generated_files/pin_manager.c: 88:     WPUC = 0x00;
-[e = _WPUC -> -> 0 `i `uc ]
-"93
-[; ;mcc_generated_files/pin_manager.c: 93:     ODCONE = 0x00;
-[e = _ODCONE -> -> 0 `i `uc ]
-"94
-[; ;mcc_generated_files/pin_manager.c: 94:     ODCONA = 0x00;
-[e = _ODCONA -> -> 0 `i `uc ]
-"95
-[; ;mcc_generated_files/pin_manager.c: 95:     ODCONB = 0x00;
-[e = _ODCONB -> -> 0 `i `uc ]
-"96
-[; ;mcc_generated_files/pin_manager.c: 96:     ODCONC = 0x00;
-[e = _ODCONC -> -> 0 `i `uc ]
-"101
-[; ;mcc_generated_files/pin_manager.c: 101:     SLRCONA = 0x7E;
-[e = _SLRCONA -> -> 126 `i `uc ]
-"102
-[; ;mcc_generated_files/pin_manager.c: 102:     SLRCONB = 0xFF;
-[e = _SLRCONB -> -> 255 `i `uc ]
-"103
-[; ;mcc_generated_files/pin_manager.c: 103:     SLRCONC = 0x3F;
-[e = _SLRCONC -> -> 63 `i `uc ]
-"108
-[; ;mcc_generated_files/pin_manager.c: 108:     INLVLA = 0x3F;
-[e = _INLVLA -> -> 63 `i `uc ]
-"109
-[; ;mcc_generated_files/pin_manager.c: 109:     INLVLB = 0x3F;
-[e = _INLVLB -> -> 63 `i `uc ]
-"110
-[; ;mcc_generated_files/pin_manager.c: 110:     INLVLC = 0x3F;
-[e = _INLVLC -> -> 63 `i `uc ]
-"117
-[; ;mcc_generated_files/pin_manager.c: 117:     IOCAFbits.IOCAF6 = 0;
-[e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
-"119
-[; ;mcc_generated_files/pin_manager.c: 119:     IOCAFbits.IOCAF7 = 0;
-[e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
-"121
-[; ;mcc_generated_files/pin_manager.c: 121:     IOCANbits.IOCAN6 = 0;
-[e = . . _IOCANbits 0 6 -> -> 0 `i `uc ]
-"123
-[; ;mcc_generated_files/pin_manager.c: 123:     IOCANbits.IOCAN7 = 1;
-[e = . . _IOCANbits 0 7 -> -> 1 `i `uc ]
-"125
-[; ;mcc_generated_files/pin_manager.c: 125:     IOCAPbits.IOCAP6 = 1;
-[e = . . _IOCAPbits 0 6 -> -> 1 `i `uc ]
-"127
-[; ;mcc_generated_files/pin_manager.c: 127:     IOCAPbits.IOCAP7 = 0;
-[e = . . _IOCAPbits 0 7 -> -> 0 `i `uc ]
-"132
-[; ;mcc_generated_files/pin_manager.c: 132:     IOCAF6_SetInterruptHandler(IOCAF6_DefaultInterruptHandler);
-[e ( _IOCAF6_SetInterruptHandler (1 &U _IOCAF6_DefaultInterruptHandler ]
-"133
-[; ;mcc_generated_files/pin_manager.c: 133:     IOCAF7_SetInterruptHandler(IOCAF7_DefaultInterruptHandler);
-[e ( _IOCAF7_SetInterruptHandler (1 &U _IOCAF7_DefaultInterruptHandler ]
-"136
-[; ;mcc_generated_files/pin_manager.c: 136:     PIE0bits.IOCIE = 1;
-[e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
-"139
-[; ;mcc_generated_files/pin_manager.c: 139:     SSP1CLKPPS = 0x09;
-[e = _SSP1CLKPPS -> -> 9 `i `uc ]
-"140
-[; ;mcc_generated_files/pin_manager.c: 140:     SSP2DATPPS = 0x13;
-[e = _SSP2DATPPS -> -> 19 `i `uc ]
-"141
-[; ;mcc_generated_files/pin_manager.c: 141:     RB1PPS = 0x00;
-[e = _RB1PPS -> -> 0 `i `uc ]
-"142
-[; ;mcc_generated_files/pin_manager.c: 142:     RB2PPS = 0x00;
-[e = _RB2PPS -> -> 0 `i `uc ]
-"143
-[; ;mcc_generated_files/pin_manager.c: 143:     RC1PPS = 0x15;
-[e = _RC1PPS -> -> 21 `i `uc ]
-"144
-[; ;mcc_generated_files/pin_manager.c: 144:     RC4PPS = 0x25;
-[e = _RC4PPS -> -> 37 `i `uc ]
-"145
-[; ;mcc_generated_files/pin_manager.c: 145:     RB4PPS = 0x0F;
-[e = _RB4PPS -> -> 15 `i `uc ]
-"146
-[; ;mcc_generated_files/pin_manager.c: 146:     RC2PPS = 0x16;
-[e = _RC2PPS -> -> 22 `i `uc ]
-"147
-[; ;mcc_generated_files/pin_manager.c: 147:     RX2DTPPS = 0x15;
-[e = _RX2DTPPS -> -> 21 `i `uc ]
-"148
-[; ;mcc_generated_files/pin_manager.c: 148:     SSP1DATPPS = 0x0A;
-[e = _SSP1DATPPS -> -> 10 `i `uc ]
-"149
-[; ;mcc_generated_files/pin_manager.c: 149:     RX1DTPPS = 0x0D;
-[e = _RX1DTPPS -> -> 13 `i `uc ]
-"150
-[; ;mcc_generated_files/pin_manager.c: 150:     SSP2CLKPPS = 0x11;
-[e = _SSP2CLKPPS -> -> 17 `i `uc ]
-"151
-[; ;mcc_generated_files/pin_manager.c: 151: }
-[e :UE 1681 ]
-}
-"153
-[; ;mcc_generated_files/pin_manager.c: 153: void PIN_MANAGER_IOC(void) {
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-{
-[e :U _PIN_MANAGER_IOC ]
-[f ]
-"155
-[; ;mcc_generated_files/pin_manager.c: 155:     if (IOCAFbits.IOCAF6 == 1) {
-[e $ ! == -> . . _IOCAFbits 0 6 `i -> 1 `i 1683  ]
-{
-"156
-[; ;mcc_generated_files/pin_manager.c: 156:         IOCAF6_ISR();
-[e ( _IOCAF6_ISR ..  ]
-"157
-[; ;mcc_generated_files/pin_manager.c: 157:     }
-}
-[e :U 1683 ]
-"159
-[; ;mcc_generated_files/pin_manager.c: 159:     if (IOCAFbits.IOCAF7 == 1) {
-[e $ ! == -> . . _IOCAFbits 0 7 `i -> 1 `i 1684  ]
-{
-"160
-[; ;mcc_generated_files/pin_manager.c: 160:         IOCAF7_ISR();
-[e ( _IOCAF7_ISR ..  ]
-"161
-[; ;mcc_generated_files/pin_manager.c: 161:     }
-}
-[e :U 1684 ]
-"162
-[; ;mcc_generated_files/pin_manager.c: 162: }
-[e :UE 1682 ]
-}
-"167
-[; ;mcc_generated_files/pin_manager.c: 167: void IOCAF6_ISR(void) {
-[v _IOCAF6_ISR `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF6_ISR ]
-[f ]
-"170
-[; ;mcc_generated_files/pin_manager.c: 170:     (iNTERRUPTbits.ACC = 1);
-[e = . . _iNTERRUPTbits 0 0 -> -> 1 `i `uc ]
-"173
-[; ;mcc_generated_files/pin_manager.c: 173:     if (IOCAF6_InterruptHandler) {
-[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F12211 1686  ]
-{
-"174
-[; ;mcc_generated_files/pin_manager.c: 174:         IOCAF6_InterruptHandler();
-[e ( *U _IOCAF6_InterruptHandler ..  ]
-"175
-[; ;mcc_generated_files/pin_manager.c: 175:     }
-}
-[e :U 1686 ]
-"176
-[; ;mcc_generated_files/pin_manager.c: 176:     IOCAFbits.IOCAF6 = 0;
-[e = . . _IOCAFbits 0 6 -> -> 0 `i `uc ]
-"177
-[; ;mcc_generated_files/pin_manager.c: 177: }
-[e :UE 1685 ]
-}
-"182
-[; ;mcc_generated_files/pin_manager.c: 182: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)) {
-[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F12213 ]
-{
-[e :U _IOCAF6_SetInterruptHandler ]
-[v _InterruptHandler `*F12215 ~T0 @X0 1 r1 ]
-[f ]
-"183
-[; ;mcc_generated_files/pin_manager.c: 183:     IOCAF6_InterruptHandler = InterruptHandler;
-[e = _IOCAF6_InterruptHandler _InterruptHandler ]
-"184
-[; ;mcc_generated_files/pin_manager.c: 184: }
-[e :UE 1687 ]
-}
-"189
-[; ;mcc_generated_files/pin_manager.c: 189: void IOCAF6_DefaultInterruptHandler(void) {
-[v _IOCAF6_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF6_DefaultInterruptHandler ]
-[f ]
-"192
-[; ;mcc_generated_files/pin_manager.c: 192: }
-[e :UE 1688 ]
-}
-"197
-[; ;mcc_generated_files/pin_manager.c: 197: void IOCAF7_ISR(void) {
-[v _IOCAF7_ISR `(v ~T0 @X0 1 ef ]
-{
-[e :U _IOCAF7_ISR ]
-[f ]
-"202
-[; ;mcc_generated_files/pin_manager.c: 202:     if (IOCAF7_InterruptHandler) {
-[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F12219 1690  ]
-{
-"203
-[; ;mcc_generated_files/pin_manager.c: 203:         IOCAF7_InterruptHandler();
-[e ( *U _IOCAF7_InterruptHandler ..  ]
-"204
-[; ;mcc_generated_files/pin_manager.c: 204:     }
-}
-[e :U 1690 ]
-"205
-[; ;mcc_generated_files/pin_manager.c: 205:     IOCAFbits.IOCAF7 = 0;
-[e = . . _IOCAFbits 0 7 -> -> 0 `i `uc ]
-"206
-[; ;mcc_generated_files/pin_manager.c: 206: }
-[e :UE 1689 ]
-}
+"210
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 210: static uint8_t sequenceNumber = 0;
+[v _sequenceNumber `uc ~T0 @X0 1 s ]
+[i _sequenceNumber
+-> -> 0 `i `uc
+]
 "211
-[; ;mcc_generated_files/pin_manager.c: 211: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)) {
-[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F12221 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 211: static volatile rn487x_gpio_bitmap_t bitMap;
+[v _bitMap `VS6 ~T0 @X0 1 s ]
+"310
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 310: void LIGHTBLUE_Initialize(void)
+[v _LIGHTBLUE_Initialize `(v ~T0 @X0 1 ef ]
+"311
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 311: {
 {
-[e :U _IOCAF7_SetInterruptHandler ]
-[v _InterruptHandler `*F12223 ~T0 @X0 1 r1 ]
+[e :U _LIGHTBLUE_Initialize ]
 [f ]
-"212
-[; ;mcc_generated_files/pin_manager.c: 212:     IOCAF7_InterruptHandler = InterruptHandler;
-[e = _IOCAF7_InterruptHandler _InterruptHandler ]
-"213
-[; ;mcc_generated_files/pin_manager.c: 213: }
-[e :UE 1691 ]
+"312
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 312:     bitMap.ioBitMap.gpioBitMap = 0x01;
+[e = . . . _bitMap 1 0 0 -> -> 1 `i `uc ]
+"313
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 313:     bitMap.ioStateBitMap.gpioStateBitMap = 0x01;
+[e = . . . _bitMap 1 1 0 -> -> 1 `i `uc ]
+"314
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 314: }
+[e :UE 1699 ]
 }
-"218
-[; ;mcc_generated_files/pin_manager.c: 218: void IOCAF7_DefaultInterruptHandler(void) {
-[v _IOCAF7_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+"316
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 316: void LIGHTBLUE_TemperatureSensor(void)
+[v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 1 ef ]
+"317
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 317: {
 {
-[e :U _IOCAF7_DefaultInterruptHandler ]
+[e :U _LIGHTBLUE_TemperatureSensor ]
 [f ]
-"221
-[; ;mcc_generated_files/pin_manager.c: 221:     pushed = 1;
-[e = _pushed -> -> 1 `i `a ]
-"222
-[; ;mcc_generated_files/pin_manager.c: 222: }
-[e :UE 1692 ]
+"318
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 318:     char payload[5];
+[v _payload `uc ~T0 @X0 -> 5 `i a ]
+"319
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 319:     int16_t temperature;
+[v _temperature `s ~T0 @X0 1 a ]
+"321
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 321:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"322
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 322:     MCP9844_GetTemperatureValue(&temperature);
+[e ( _MCP9844_GetTemperatureValue (1 &U _temperature ]
+"324
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 324:     LIGHTBLUE_SplitWord(payload, temperature);
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload _temperature ]
+"326
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 326:     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 3 `uc &U _payload ]
+"327
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 327: }
+[e :UE 1700 ]
 }
+"329
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 329: void LIGHTBLUE_AccelSensor(void)
+[v _LIGHTBLUE_AccelSensor `(v ~T0 @X0 1 ef ]
+"330
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 330: {
+{
+[e :U _LIGHTBLUE_AccelSensor ]
+[f ]
+"331
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 331:     char payload[13];
+[v _payload `uc ~T0 @X0 -> 13 `i a ]
+"332
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 332:     BMA253_ACCEL_DATA_t accelData;
+[v _accelData `S9 ~T0 @X0 1 a ]
+"334
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 334:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"335
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 335:     BMA253_GetAccelDataXYZ(&accelData);
+[e ( _BMA253_GetAccelDataXYZ (1 &U _accelData ]
+"338
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 338:     LIGHTBLUE_SplitWord(payload, (accelData.x & 0x0FFF));
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 0 `i -> 4095 `i `s ]
+"339
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 339:     LIGHTBLUE_SplitWord(payload, (accelData.y & 0x0FFF));
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 1 `i -> 4095 `i `s ]
+"340
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 340:     LIGHTBLUE_SplitWord(payload, (accelData.z & 0x0FFF));
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 2 `i -> 4095 `i `s ]
+"342
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 342:     LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 4 `uc &U _payload ]
+"343
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 343: }
+[e :UE 1701 ]
+}
+"345
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 345: void LIGHTBLUE_PushButton(void)
+[v _LIGHTBLUE_PushButton `(v ~T0 @X0 1 ef ]
+"346
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 346: {
+{
+[e :U _LIGHTBLUE_PushButton ]
+[f ]
+"347
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 347:     char payload[3];
+[v _payload `uc ~T0 @X0 -> 3 `i a ]
+"348
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 348:     uint8_t button = LIGHTBLUE_GetButtonValue();
+[v _button `uc ~T0 @X0 1 a ]
+[e = _button ( _LIGHTBLUE_GetButtonValue ..  ]
+"350
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 350:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"351
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 351:     LIGHTBLUE_SplitByte(payload, button);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _button `c ]
+"353
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 353:     LIGHTBLUE_SendPacket(BUTTON_STATE_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 2 `uc &U _payload ]
+"354
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 354: }
+[e :UE 1702 ]
+}
+"356
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 356: void LIGHTBLUE_AccState(void)
+[v _LIGHTBLUE_AccState `(v ~T0 @X0 1 ef ]
+"357
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 357: {
+{
+[e :U _LIGHTBLUE_AccState ]
+[f ]
+"358
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 358:     char payload[3];
+[v _payload `uc ~T0 @X0 -> 3 `i a ]
+"359
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 359:     uint8_t acc = LIGHTBLUE_GetAccState();
+[v _acc `uc ~T0 @X0 1 a ]
+[e = _acc ( _LIGHTBLUE_GetAccState ..  ]
+"361
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 361:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"362
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 362:     LIGHTBLUE_SplitByte(payload, acc);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _acc `c ]
+"364
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 364:     LIGHTBLUE_SendPacket(ACC_STATE, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 8 `uc &U _payload ]
+"365
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 365: }
+[e :UE 1703 ]
+}
+"368
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 368: void LIGHTBLUE_LedState(void)
+[v _LIGHTBLUE_LedState `(v ~T0 @X0 1 ef ]
+"369
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 369: {
+{
+[e :U _LIGHTBLUE_LedState ]
+[f ]
+"370
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 370:     char payload[3];
+[v _payload `uc ~T0 @X0 -> 3 `i a ]
+"371
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 371:     uint8_t led;
+[v _led `uc ~T0 @X0 1 a ]
+"373
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 373:     led = (0x00) + LIGHTBLUE_GetDataLedValue();
+[e = _led -> + -> 0 `i -> ( _LIGHTBLUE_GetDataLedValue ..  `i `uc ]
+"375
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 375:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"376
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 376:     LIGHTBLUE_SplitByte(payload, led);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _led `c ]
+"378
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 378:     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 1 `uc &U _payload ]
+"380
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 380:     led = (0x10) + LIGHTBLUE_GetErrorLedValue();
+[e = _led -> + -> 16 `i -> ( _LIGHTBLUE_GetErrorLedValue ..  `i `uc ]
+"381
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 381:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"382
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 382:     LIGHTBLUE_SplitByte(payload, led);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _led `c ]
+"384
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 384:     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 1 `uc &U _payload ]
+"385
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 385: }
+[e :UE 1704 ]
+}
+"387
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 387: void LIGHTBLUE_SendProtocolVersion(void)
+[v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 1 ef ]
+"388
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 388: {
+{
+[e :U _LIGHTBLUE_SendProtocolVersion ]
+[f ]
+"389
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 389:     char payload[19];
+[v _payload `uc ~T0 @X0 -> 19 `i a ]
+"390
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 390:     uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
+"391
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 391:     uint8_t dataIndex;
+[v _dataIndex `uc ~T0 @X0 1 a ]
+"393
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 393:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"395
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 395:     for(dataIndex = 0; dataIndex < strlen(protocol_version_number); dataIndex++)
+{
+[e = _dataIndex -> -> 0 `i `uc ]
+[e $U 1709  ]
+[e :U 1706 ]
+"396
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 396:     {
+{
+"397
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 397:         value = protocol_version_number[dataIndex];
+[e = _value -> *U + _protocol_version_number * -> _dataIndex `ux -> -> # *U _protocol_version_number `ui `ux `uc ]
+"398
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 398:         LIGHTBLUE_SplitByte(payload, value);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _value `c ]
+"399
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 399:     }
+}
+[e ++ _dataIndex -> -> 1 `i `uc ]
+[e :U 1709 ]
+[e $ < -> _dataIndex `ui ( _strlen (1 _protocol_version_number 1706  ]
+[e :U 1707 ]
+}
+"401
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 401:     LIGHTBLUE_SendPacket(PROTOCOL_VERSION_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12938 0 `uc &U _payload ]
+"402
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 402: }
+[e :UE 1705 ]
+}
+"404
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 404: void LIGHTBLUE_SendSerialData(char* serialData)
+[v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 1 ef1`*uc ]
+"405
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 405: {
+{
+[e :U _LIGHTBLUE_SendSerialData ]
+"404
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 404: void LIGHTBLUE_SendSerialData(char* serialData)
+[v _serialData `*uc ~T0 @X0 1 r1 ]
+"405
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 405: {
+[f ]
+"406
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 406:     uint8_t length = strlen(serialData) * 2;
+[v _length `uc ~T0 @X0 1 a ]
+[e = _length -> * ( _strlen (1 -> _serialData `*Cuc -> -> 2 `i `ui `uc ]
+"408
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 408:     RN487X.Write(('['));
+[e ( *U . _RN487X 0 (1 -> -> 91 `ui `uc ]
+"409
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 409:     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> ++ _sequenceNumber -> -> 1 `i `uc `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"410
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 410:     RN487X.Write(SERIAL_DATA_ID);
+[e ( *U . _RN487X 0 (1 -> . `E12938 5 `uc ]
+"411
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 411:     RN487X.Write((_hex[(length >> 4) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & >> -> _length `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"412
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 412:     RN487X.Write((_hex[(length) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> _length `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"413
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 413:     while(*serialData)
+[e $U 1711  ]
+[e :U 1712 ]
+"414
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 414:     {
+{
+"415
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 415:         RN487X.Write((_hex[(*serialData >> 4) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & >> -> *U _serialData `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"416
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 416:         RN487X.Write((_hex[(*serialData++) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> *U ++ _serialData * -> -> 1 `i `x -> -> # *U _serialData `i `x `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"417
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 417:     }
+}
+[e :U 1711 ]
+"413
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 413:     while(*serialData)
+[e $ != -> *U _serialData `i -> 0 `i 1712  ]
+[e :U 1713 ]
+"418
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 418:     RN487X.Write((']'));
+[e ( *U . _RN487X 0 (1 -> -> 93 `ui `uc ]
+"419
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 419: }
+[e :UE 1710 ]
+}
+"421
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 421: void LIGHTBLUE_ParseIncomingPacket(char receivedByte)
+[v _LIGHTBLUE_ParseIncomingPacket `(v ~T0 @X0 1 ef1`uc ]
+"422
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 422: {
+{
+[e :U _LIGHTBLUE_ParseIncomingPacket ]
+"421
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 421: void LIGHTBLUE_ParseIncomingPacket(char receivedByte)
+[v _receivedByte `uc ~T0 @X0 1 r1 ]
+"422
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 422: {
+[f ]
+"423
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 423:     static PACKET_PARSER_STATE_t parserState = IDLE;
+[v F13031 `E12949 ~T0 @X0 1 s parserState ]
+[i F13031
+. `E12949 0
+]
+"424
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 424:     static uint8_t length = 0;
+[v F13032 `uc ~T0 @X0 1 s length ]
+[i F13032
+-> -> 0 `i `uc
+]
+"425
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 425:     static uint16_t data = 0;
+[v F13033 `us ~T0 @X0 1 s data ]
+[i F13033
+-> -> 0 `i `us
+]
+"426
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 426:     static char packetID = '\0';
+[v F13034 `uc ~T0 @X0 1 s packetID ]
+[i F13034
+-> -> 0 `ui `uc
+]
+"428
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 428:     switch(parserState)
+[e $U 1716  ]
+"429
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 429:     {
+{
+"430
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 430:         case SEQUENCE_NUMBER:
+[e :U 1717 ]
+"432
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 432:             parserState = PACKET_ID;
+[e = F13031 . `E12949 2 ]
+"433
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 433:             break;
+[e $U 1715  ]
+"434
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 434:         case PACKET_ID:
+[e :U 1718 ]
+"435
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 435:             packetID = receivedByte;
+[e = F13034 _receivedByte ]
+"436
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 436:             parserState = PAYLOAD_SIZE_0;
+[e = F13031 . `E12949 3 ]
+"437
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 437:             break;
+[e $U 1715  ]
+"438
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 438:         case PAYLOAD_SIZE_0:
+[e :U 1719 ]
+"439
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 439:             length = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13032 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+"440
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 440:             parserState = PAYLOAD_SIZE_1;
+[e = F13031 . `E12949 4 ]
+"441
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 441:             break;
+[e $U 1715  ]
+"442
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 442:         case PAYLOAD_SIZE_1:
+[e :U 1720 ]
+"443
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 443:             length = (length << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13032 -> + -> << -> F13032 `i -> 4 `i `ui ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+"444
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 444:             parserState = PAYLOAD_0;
+[e = F13031 . `E12949 5 ]
+"445
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 445:             break;
+[e $U 1715  ]
+"446
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 446:         case PAYLOAD_0:
+[e :U 1721 ]
+"447
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 447:             data = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13033 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+"448
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 448:             length--;
+[e -- F13032 -> -> 1 `i `uc ]
+"449
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 449:             if (length == 0)
+[e $ ! == -> F13032 `i -> 0 `i 1722  ]
+"450
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 450:             {
+{
+"451
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 451:                 parserState = IDLE;
+[e = F13031 . `E12949 0 ]
+"452
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 452:             }
+}
+[e $U 1723  ]
+"453
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 453:             else
+[e :U 1722 ]
+"454
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 454:             {
+{
+"455
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 455:                 parserState = PAYLOAD_1;
+[e = F13031 . `E12949 6 ]
+"456
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 456:             }
+}
+[e :U 1723 ]
+"457
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 457:             break;
+[e $U 1715  ]
+"458
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 458:         case PAYLOAD_1:
+[e :U 1724 ]
+"459
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 459:             data = (data << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13033 -> + << -> F13033 `ui -> 4 `i ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+"460
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 460:             LIGHTBLUE_PerformAction(packetID, data);
+[e ( _LIGHTBLUE_PerformAction (2 , F13034 -> F13033 `uc ]
+"461
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 461:             length--;
+[e -- F13032 -> -> 1 `i `uc ]
+"462
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 462:             if (length == 0)
+[e $ ! == -> F13032 `i -> 0 `i 1725  ]
+"463
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 463:             {
+{
+"464
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 464:                 parserState = IDLE;
+[e = F13031 . `E12949 0 ]
+"465
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 465:             }
+}
+[e $U 1726  ]
+"466
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 466:             else
+[e :U 1725 ]
+"467
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 467:             {
+{
+"468
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 468:                 parserState = PAYLOAD_0;
+[e = F13031 . `E12949 5 ]
+"469
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 469:             }
+}
+[e :U 1726 ]
+"470
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 470:             break;
+[e $U 1715  ]
+"471
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 471:         case IDLE:
+[e :U 1727 ]
+"472
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 472:         default:
+[e :U 1728 ]
+"473
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 473:             if (receivedByte == ('['))
+[e $ ! == -> _receivedByte `ui -> 91 `ui 1729  ]
+"474
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 474:             {
+{
+"475
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 475:                 parserState = SEQUENCE_NUMBER;
+[e = F13031 . `E12949 1 ]
+"476
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 476:             }
+}
+[e :U 1729 ]
+"477
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 477:             break;
+[e $U 1715  ]
+"478
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 478:     }
+}
+[e $U 1715  ]
+[e :U 1716 ]
+[e [\ -> F13031 `ui , $ -> . `E12949 1 `ui 1717
+ , $ -> . `E12949 2 `ui 1718
+ , $ -> . `E12949 3 `ui 1719
+ , $ -> . `E12949 4 `ui 1720
+ , $ -> . `E12949 5 `ui 1721
+ , $ -> . `E12949 6 `ui 1724
+ , $ -> . `E12949 0 `ui 1727
+ 1728 ]
+[e :U 1715 ]
+"479
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 479: }
+[e :UE 1714 ]
+}
+"481
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 481: static void LIGHTBLUE_SendPacket(char packetID, char* payload)
+[v _LIGHTBLUE_SendPacket `(v ~T0 @X0 1 sf2`uc`*uc ]
+"482
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 482: {
+{
+[e :U _LIGHTBLUE_SendPacket ]
+"481
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 481: static void LIGHTBLUE_SendPacket(char packetID, char* payload)
+[v _packetID `uc ~T0 @X0 1 r1 ]
+[v _payload `*uc ~T0 @X0 1 r2 ]
+"482
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 482: {
+[f ]
+"483
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 483:     RN487X.Write(('['));
+[e ( *U . _RN487X 0 (1 -> -> 91 `ui `uc ]
+"484
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 484:     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> ++ _sequenceNumber -> -> 1 `i `uc `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"485
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 485:     RN487X.Write(packetID);
+[e ( *U . _RN487X 0 (1 -> _packetID `uc ]
+"486
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 486:     RN487X.Write((_hex[(strlen(payload) >> 4) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> & >> ( _strlen (1 -> _payload `*Cuc -> 4 `i -> -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"487
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 487:     RN487X.Write((_hex[(strlen(payload)) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> & ( _strlen (1 -> _payload `*Cuc -> -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"488
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 488:     while (*payload)
+[e $U 1731  ]
+[e :U 1732 ]
+"489
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 489:     {
+{
+"490
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 490:         RN487X.Write((*(uint8_t *)payload++));
+[e ( *U . _RN487X 0 (1 *U -> ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x `*uc ]
+"491
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 491:     }
+}
+[e :U 1731 ]
+"488
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 488:     while (*payload)
+[e $ != -> *U _payload `i -> 0 `i 1732  ]
+[e :U 1733 ]
+"492
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 492:     RN487X.Write((']'));
+[e ( *U . _RN487X 0 (1 -> -> 93 `ui `uc ]
+"493
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 493: }
+[e :UE 1730 ]
+}
+"495
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 495: static void LIGHTBLUE_SplitWord(char* payload, int16_t value)
+[v _LIGHTBLUE_SplitWord `(v ~T0 @X0 1 sf2`*uc`s ]
+"496
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 496: {
+{
+[e :U _LIGHTBLUE_SplitWord ]
+"495
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 495: static void LIGHTBLUE_SplitWord(char* payload, int16_t value)
+[v _payload `*uc ~T0 @X0 1 r1 ]
+[v _value `s ~T0 @X0 1 r2 ]
+"496
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 496: {
+[f ]
+"497
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 497:     LIGHTBLUE_SplitByte(payload, value);
+[e ( _LIGHTBLUE_SplitByte (2 , _payload -> _value `c ]
+"498
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 498:     LIGHTBLUE_SplitByte(payload, value >> 8);
+[e ( _LIGHTBLUE_SplitByte (2 , _payload -> >> -> _value `i -> 8 `i `c ]
+"499
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 499: }
+[e :UE 1734 ]
+}
+"501
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 501: static void LIGHTBLUE_SplitByte(char* payload, int8_t value)
+[v _LIGHTBLUE_SplitByte `(v ~T0 @X0 1 sf2`*uc`c ]
+"502
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 502: {
+{
+[e :U _LIGHTBLUE_SplitByte ]
+"501
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 501: static void LIGHTBLUE_SplitByte(char* payload, int8_t value)
+[v _payload `*uc ~T0 @X0 1 r1 ]
+[v _value `c ~T0 @X0 1 r2 ]
+"502
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 502: {
+[f ]
+"503
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 503:     payload += strlen(payload);
+[e =+ _payload * -> ( _strlen (1 -> _payload `*Cuc `ux -> -> # *U _payload `ui `ux ]
+"504
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 504:     *payload++ = (_hex[(value >> 4) & 0xF]);
+[e = *U ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x *U + &U __hex * -> -> & >> -> _value `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux ]
+"505
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 505:     *payload++ = (_hex[(value) & 0xF]);
+[e = *U ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x *U + &U __hex * -> -> & -> _value `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux ]
+"506
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 506:     *payload = '\0';
+[e = *U _payload -> -> 0 `ui `uc ]
+"507
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 507: }
+[e :UE 1735 ]
+}
+"509
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 509: static uint8_t LIGHTBLUE_GetButtonValue(void)
+[v _LIGHTBLUE_GetButtonValue `(uc ~T0 @X0 1 sf ]
+"510
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 510: {
+{
+[e :U _LIGHTBLUE_GetButtonValue ]
+[f ]
+"511
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 511:     return (0x01) - PORTAbits.RA7;
+[e ) -> - -> 1 `i -> . . _PORTAbits 0 7 `i `uc ]
+[e $UE 1736  ]
+"512
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 512: }
+[e :UE 1736 ]
+}
+"514
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 514: static uint8_t LIGHTBLUE_GetAccState(void)
+[v _LIGHTBLUE_GetAccState `(uc ~T0 @X0 1 sf ]
+"515
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 515: {
+{
+[e :U _LIGHTBLUE_GetAccState ]
+[f ]
+"516
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 516:     return accelerometerInterruptBits.AccelerometerInterruptBits;
+[e ) . _accelerometerInterruptBits 1 ]
+[e $UE 1737  ]
+"517
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 517: }
+[e :UE 1737 ]
+}
+"519
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 519: static uint8_t LIGHTBLUE_GetDataLedValue(void)
+[v _LIGHTBLUE_GetDataLedValue `(uc ~T0 @X0 1 sf ]
+"520
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 520: {
+{
+[e :U _LIGHTBLUE_GetDataLedValue ]
+[f ]
+"521
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 521:     return (0x01) - PORTAbits.RA5;
+[e ) -> - -> 1 `i -> . . _PORTAbits 0 5 `i `uc ]
+[e $UE 1738  ]
+"522
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 522: }
+[e :UE 1738 ]
+}
+"524
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 524: static uint8_t LIGHTBLUE_GetErrorLedValue(void)
+[v _LIGHTBLUE_GetErrorLedValue `(uc ~T0 @X0 1 sf ]
+"525
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 525: {
+{
+[e :U _LIGHTBLUE_GetErrorLedValue ]
+[f ]
+"526
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 526:     return (0x01) - (bitMap.ioStateBitMap.p2_2_state);
+[e ) -> - -> 1 `i -> . . . . _bitMap 1 1 1 0 `i `uc ]
+[e $UE 1739  ]
+"527
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 527: }
+[e :UE 1739 ]
+}
+"529
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 529: static void LIGHTBLUE_SetErrorLedValue(_Bool value)
+[v _LIGHTBLUE_SetErrorLedValue `(v ~T0 @X0 1 sf1`a ]
+"530
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 530: {
+{
+[e :U _LIGHTBLUE_SetErrorLedValue ]
+"529
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 529: static void LIGHTBLUE_SetErrorLedValue(_Bool value)
+[v _value `a ~T0 @X0 1 r1 ]
+"530
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 530: {
+[f ]
+"531
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 531:     (bitMap.ioStateBitMap.p2_2_state) = (0x01) - value;
+[e = . . . . _bitMap 1 1 1 0 -> - -> 1 `i -> _value `i `uc ]
+"532
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 532:     LIGHTBLUE_UpdateErrorLed();
+[e ( _LIGHTBLUE_UpdateErrorLed ..  ]
+"533
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 533: }
+[e :UE 1740 ]
+}
+"535
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 535: static void LIGHTBLUE_UpdateErrorLed(void)
+[v _LIGHTBLUE_UpdateErrorLed `(v ~T0 @X0 1 sf ]
+"536
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 536: {
+{
+[e :U _LIGHTBLUE_UpdateErrorLed ]
+[f ]
+"537
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 537:     RN487X_EnterCmdMode();
+[e ( _RN487X_EnterCmdMode ..  ]
+"538
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 538:     RN487X.DelayMs((20));
+[e ( *U . _RN487X 7 (1 -> -> 20 `i `us ]
+"539
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 539:     RN487X_SetOutputs(bitMap);
+[e ( _RN487X_SetOutputs (1 _bitMap ]
+"540
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 540:     RN487X_EnterDataMode();
+[e ( _RN487X_EnterDataMode ..  ]
+"541
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 541: }
+[e :UE 1741 ]
+}
+"543
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 543: static void LIGHTBLUE_PerformAction(char id, uint8_t data)
+[v _LIGHTBLUE_PerformAction `(v ~T0 @X0 1 sf2`uc`uc ]
+"544
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 544: {
+{
+[e :U _LIGHTBLUE_PerformAction ]
+"543
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 543: static void LIGHTBLUE_PerformAction(char id, uint8_t data)
+[v _id `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+"544
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 544: {
+[f ]
+"545
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 545:     uint8_t led;
+[v _led `uc ~T0 @X0 1 a ]
+"547
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 547:     switch(id)
+[e $U 1744  ]
+"548
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 548:     {
+{
+"549
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 549:         case LED_STATE_ID:
+[e :U 1745 ]
+"550
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 550:             led = (data >> 4) & (0x01);
+[e = _led -> & >> -> _data `i -> 4 `i -> 1 `i `uc ]
+"551
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 551:             if(led == (0x00))
+[e $ ! == -> _led `i -> 0 `i 1746  ]
+"552
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 552:             {
+{
+"553
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 553:                 if((data & (0x01)) == (0x00))
+[e $ ! == & -> _data `i -> 1 `i -> 0 `i 1747  ]
+"554
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 554:                 {
+{
+"555
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 555:                     do { LATAbits.LATA5 = 1; } while(0);
+[e :U 1750 ]
+{
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+}
+[e :U 1749 ]
+"556
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 556:                 }
+}
+[e $U 1751  ]
+"557
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 557:                 else
+[e :U 1747 ]
+"558
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 558:                 {
+{
+"559
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 559:                     do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1754 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 1753 ]
+"560
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 560:                 }
+}
+[e :U 1751 ]
+"561
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 561:             }
+}
+[e $U 1755  ]
+"562
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 562:             else
+[e :U 1746 ]
+"563
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 563:             {
+{
+"564
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 564:                 LIGHTBLUE_SetErrorLedValue(data & (0x01));
+[e ( _LIGHTBLUE_SetErrorLedValue (1 -> & -> _data `i -> 1 `i `a ]
+"565
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 565:             }
+}
+[e :U 1755 ]
+"566
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 566:             break;
+[e $U 1743  ]
+"567
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 567:         case SERIAL_DATA_ID:
+[e :U 1756 ]
+"568
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 568:             uart[UART_CDC].Write(data);
+[e ( *U . *U + &U _uart * -> . `E12906 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 _data ]
+"569
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 569:             break;
+[e $U 1743  ]
+"570
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 570:         default:
+[e :U 1757 ]
+"571
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 571:             break;
+[e $U 1743  ]
+"572
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 572:     }
+}
+[e $U 1743  ]
+[e :U 1744 ]
+[e [\ _id , $ . `E12938 1 1745
+ , $ . `E12938 5 1756
+ 1757 ]
+[e :U 1743 ]
+"573
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 573: }
+[e :UE 1742 ]
+}
+[a 1C 49 46 49 46 48 0 ]

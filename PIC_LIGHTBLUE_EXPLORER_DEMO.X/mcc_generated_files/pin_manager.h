@@ -401,14 +401,6 @@ extern void (*IOCAF6_InterruptHandler)(void);
 */
 void IOCAF6_DefaultInterruptHandler(void);
 
-typedef union {
-    struct {
-        unsigned ACC : 1;
-        unsigned UNDEFINED : 7;
-    };
-    uint8_t INTERRUPTbits;
-}INTERRUPTbits_t;
-
 /**
  * @Param
     none
