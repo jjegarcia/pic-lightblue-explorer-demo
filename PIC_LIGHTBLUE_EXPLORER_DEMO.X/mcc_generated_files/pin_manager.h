@@ -193,6 +193,26 @@
 #define RB5_SetAnalogMode()         do { ANSELBbits.ANSB5 = 1; } while(0)
 #define RB5_SetDigitalMode()        do { ANSELBbits.ANSB5 = 0; } while(0)
 
+// get/set SPI_SS_EXT_DEVICE aliases
+#define SPI_SS_EXT_DEVICE_TRIS                 TRISCbits.TRISC0
+#define SPI_SS_EXT_DEVICE_LAT                  LATCbits.LATC0
+#define SPI_SS_EXT_DEVICE_PORT                 PORTCbits.RC0
+#define SPI_SS_EXT_DEVICE_WPU                  WPUCbits.WPUC0
+#define SPI_SS_EXT_DEVICE_OD                   ODCONCbits.ODCC0
+#define SPI_SS_EXT_DEVICE_ANS                  ANSELCbits.ANSC0
+#define SPI_SS_EXT_DEVICE_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define SPI_SS_EXT_DEVICE_GetValue()           PORTCbits.RC0
+#define SPI_SS_EXT_DEVICE_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+
 // get/set RC1 procedures
 #define RC1_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
 #define RC1_SetLow()             do { LATCbits.LATC1 = 0; } while(0)

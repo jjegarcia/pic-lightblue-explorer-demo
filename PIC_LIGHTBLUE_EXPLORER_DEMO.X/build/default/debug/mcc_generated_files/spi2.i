@@ -20473,7 +20473,7 @@ typedef struct {
 
 
 static const spi2_configuration_t spi2_configuration[] = {
-    { 0x0, 0x40, 0x1, 0 }
+    { 0x22, 0x40, 0x1, 0 }
 };
 
 void SPI2_Initialize(void)
@@ -20485,7 +20485,7 @@ void SPI2_Initialize(void)
     RC2PPS = 22;
 
     SSP2STAT = 0x40;
-    SSP2CON1 = 0x00;
+    SSP2CON1 = 0x22;
     SSP2ADD = 0x01;
     TRISCbits.TRISC1 = 0;
     SSP2CON1bits.SSPEN = 0;

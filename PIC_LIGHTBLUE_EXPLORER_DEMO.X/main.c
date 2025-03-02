@@ -71,7 +71,7 @@ bool ACC_Interrupt_is_high() {
 }
 void service_acceleremoterInterrupt(void);
 uint8_t flats = 0;
-
+void send_spi_read(void);
 /*
                          Main application
  */
@@ -85,47 +85,51 @@ int main(void) {
 
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
-    BMA253_Initialize();
+//    BMA253_Initialize();
     RN487X_Init();
     LIGHTBLUE_Initialize();
     while (1) {
-        if (RN487X_IsConnected() == true) {
-            service_acceleremoterInterrupt();
-            if (TIMER_FLAG_SET() == true) {
-                RESET_TIMER_INTERRUPT_FLAG;
-
-//                LIGHTBLUE_TemperatureSensor();
-//                LIGHTBLUE_AccelSensor();
-//                LIGHTBLUE_PushButton();
-//                LIGHTBLUE_LedState();
-//                LIGHTBLUE_SendProtocolVersion();
-            } else {
-                while (RN487X_DataReady()) {
-                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-                }
-                while (uart[UART_CDC].DataReady()) {
-                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-                    if ((lightBlueSerial[serialIndex] == '\r')
-                            || (lightBlueSerial[serialIndex] == '\n')
-                            || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-                        lightBlueSerial[serialIndex] = '\0';
-                        LIGHTBLUE_SendSerialData(lightBlueSerial);
-                        serialIndex = 0;
-                    } else {
-                        serialIndex++;
-                    }
-                }
-
-            }
-        } else {
-            while (RN487X_DataReady()) {
-                uart[UART_CDC].Write(RN487X_Read());
-        } 
-            while (uart[UART_CDC].DataReady()) {
-                RN487X.Write(uart[UART_CDC].Read());
+        send_spi_read();
     }
-        }
-    }
+        
+//        if (RN487X_IsConnected() == true) {
+//            service_acceleremoterInterrupt();
+//            send_spi_read();
+//            if (TIMER_FLAG_SET() == true) {
+//                RESET_TIMER_INTERRUPT_FLAG;
+//
+////                LIGHTBLUE_TemperatureSensor();
+////                LIGHTBLUE_AccelSensor();
+////                LIGHTBLUE_PushButton();
+////                LIGHTBLUE_LedState();
+////                LIGHTBLUE_SendProtocolVersion();
+//            } else {
+//                while (RN487X_DataReady()) {
+//                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+//                }
+//                while (uart[UART_CDC].DataReady()) {
+//                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+//                    if ((lightBlueSerial[serialIndex] == '\r')
+//                            || (lightBlueSerial[serialIndex] == '\n')
+//                            || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
+//                        lightBlueSerial[serialIndex] = '\0';
+//                        LIGHTBLUE_SendSerialData(lightBlueSerial);
+//                        serialIndex = 0;
+//                    } else {
+//                        serialIndex++;
+//                    }
+//                }
+//
+//            }
+//        } else {
+//            while (RN487X_DataReady()) {
+//                uart[UART_CDC].Write(RN487X_Read());
+//        } 
+//            while (uart[UART_CDC].DataReady()) {
+//                RN487X.Write(uart[UART_CDC].Read());
+//    }
+//        }
+//    }
     return 0;
 }
 
@@ -139,6 +143,18 @@ void service_acceleremoterInterrupt(void) {
             flats = 0;
             accelerometerInterruptBits.FLAT = 0;
         }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    SPI_SS_EXT_DEVICE_SetLow();
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        SPI_SS_EXT_DEVICE_SetHigh();
+        SPI2_Close();
+//        sendSpiReadRequest = false;
+
     }
 }
 /**

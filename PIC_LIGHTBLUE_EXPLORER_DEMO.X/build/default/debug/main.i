@@ -20291,17 +20291,17 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 286 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 311 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 334 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 358 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 382 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {
@@ -20936,7 +20936,7 @@ _Bool ACC_Interrupt_is_high() {
 }
 void service_acceleremoterInterrupt(void);
 uint8_t flats = 0;
-
+void send_spi_read(void);
 
 
 
@@ -20950,47 +20950,13 @@ int main(void) {
 
 
     (INTCONbits.PEIE = 1);
-    BMA253_Initialize();
+
     RN487X_Init();
     LIGHTBLUE_Initialize();
     while (1) {
-        if (RN487X_IsConnected() == 1) {
-            service_acceleremoterInterrupt();
-            if ((TMR0_HasOverflowOccured()) == 1) {
-                (PIR0bits.TMR0IF = 0);
-
-
-
-
-
-
-            } else {
-                while (RN487X_DataReady()) {
-                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-                }
-                while (uart[UART_CDC].DataReady()) {
-                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-                    if ((lightBlueSerial[serialIndex] == '\r')
-                            || (lightBlueSerial[serialIndex] == '\n')
-                            || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-                        lightBlueSerial[serialIndex] = '\0';
-                        LIGHTBLUE_SendSerialData(lightBlueSerial);
-                        serialIndex = 0;
-                    } else {
-                        serialIndex++;
-                    }
-                }
-
-            }
-        } else {
-            while (RN487X_DataReady()) {
-                uart[UART_CDC].Write(RN487X_Read());
-        }
-            while (uart[UART_CDC].DataReady()) {
-                RN487X.Write(uart[UART_CDC].Read());
+        send_spi_read();
     }
-        }
-    }
+# 133 "main.c"
     return 0;
 }
 
@@ -21004,5 +20970,17 @@ void service_acceleremoterInterrupt(void) {
             flats = 0;
             accelerometerInterruptBits.FLAT = 0;
         }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    do { LATCbits.LATC0 = 0; } while(0);
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        do { LATCbits.LATC0 = 1; } while(0);
+        SPI2_Close();
+
+
     }
 }

@@ -20424,17 +20424,17 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/rn487x/../mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 286 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 311 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 334 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 358 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 382 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {

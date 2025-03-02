@@ -13,12 +13,12 @@
   @Description
     This header file provides implementations for driver APIs for SPI2.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC16LF18456
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above or later
-        MPLAB             :  MPLAB X 5.45
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -56,7 +56,7 @@ typedef struct {
 
 //con1 == SSPxCON1, stat == SSPxSTAT, add == SSPxADD, operation == Master/Slave
 static const spi2_configuration_t spi2_configuration[] = {   
-    { 0x0, 0x40, 0x1, 0 }
+    { 0x22, 0x40, 0x1, 0 }
 };
 
 void SPI2_Initialize(void)
@@ -68,7 +68,7 @@ void SPI2_Initialize(void)
     RC2PPS    = 22;
     //SPI setup
     SSP2STAT = 0x40;
-    SSP2CON1 = 0x00;
+    SSP2CON1 = 0x22;
     SSP2ADD = 0x01;
     TRISCbits.TRISC1 = 0;
     SSP2CON1bits.SSPEN = 0;
