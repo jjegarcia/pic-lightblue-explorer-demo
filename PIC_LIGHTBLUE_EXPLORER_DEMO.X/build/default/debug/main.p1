@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"349 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 349:     struct {
+"385 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 385:     struct {
 [s S1680 :1 `uc 1 :7 `uc 1 ]
 [n S1680 . ACC UNDEFINED ]
-"348
-[; ;mcc_generated_files/pin_manager.h: 348: typedef union {
+"384
+[; ;mcc_generated_files/pin_manager.h: 384: typedef union {
 [u S1679 `S1680 1 `uc 1 ]
 [n S1679 . . INTERRUPTbits ]
 "285 ./mcc_generated_files/application/BMA253_accel.h
@@ -16,8 +16,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [u S1696 `S1697 1 `uc 1 ]
 [n S1696 . . AccelerometerInterruptBits ]
 [p mainexit ]
-"76 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
+"77 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 77: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "271 ./mcc_generated_files/rn487x/rn487x.h
 [; ;./mcc_generated_files/rn487x/rn487x.h: 271: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
@@ -71,48 +71,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "283
 [; ;./mcc_generated_files/rn487x/rn487x.h: 283: _Bool RN487X_DataReady(void);
 [v _RN487X_DataReady `(a ~T0 @X0 0 ef ]
-[v F12824 `(uc ~T0 @X0 0 tf ]
-[v F12826 `(v ~T0 @X0 0 tf1`uc ]
-[v F12829 `(a ~T0 @X0 0 tf ]
-[v F12831 `(a ~T0 @X0 0 tf ]
-[v F12834 `(v ~T0 @X0 0 tf ]
-[v F12833 `(v ~T0 @X0 0 tf1`*F12834 ]
-[v F12837 `(v ~T0 @X0 0 tf ]
-[v F12840 `(v ~T0 @X0 0 tf ]
-[v F12839 `(v ~T0 @X0 0 tf1`*F12840 ]
-[v F12843 `(a ~T0 @X0 0 tf ]
-[v F12845 `(v ~T0 @X0 0 tf ]
-[v F12847 `(v ~T0 @X0 0 tf ]
+[v F12845 `(uc ~T0 @X0 0 tf ]
+[v F12847 `(v ~T0 @X0 0 tf1`uc ]
+[v F12850 `(a ~T0 @X0 0 tf ]
+[v F12852 `(a ~T0 @X0 0 tf ]
+[v F12855 `(v ~T0 @X0 0 tf ]
+[v F12854 `(v ~T0 @X0 0 tf1`*F12855 ]
+[v F12858 `(v ~T0 @X0 0 tf ]
+[v F12861 `(v ~T0 @X0 0 tf ]
+[v F12860 `(v ~T0 @X0 0 tf1`*F12861 ]
+[v F12864 `(a ~T0 @X0 0 tf ]
+[v F12866 `(v ~T0 @X0 0 tf ]
+[v F12868 `(v ~T0 @X0 0 tf ]
 "51 ./mcc_generated_files/drivers/uart.h
 [; ;./mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1694 `*F12824 1 `*F12826 1 `*F12829 1 `*F12831 1 `*F12833 1 `*F12837 1 `*F12839 1 `*F12843 1 `*F12845 1 `*F12847 1 ]
+[s S1694 `*F12845 1 `*F12847 1 `*F12850 1 `*F12852 1 `*F12854 1 `*F12858 1 `*F12860 1 `*F12864 1 `*F12866 1 `*F12868 1 ]
 [n S1694 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
 "53
 [; ;./mcc_generated_files/drivers/uart.h: 53: extern const uart_functions_t uart[];
 [v _uart `CS1694 ~T0 @X0 -> 0 `x e ]
 "107 main.c
 [; ;main.c: 107:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-[c E12818 0 1 .. ]
-[n E12818 . UART_CDC UART_BLE  ]
+[c E12839 0 1 .. ]
+[n E12839 . UART_CDC UART_BLE  ]
 "111 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 111: void LIGHTBLUE_SendSerialData(char* serialData);
 [v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 0 ef1`*uc ]
-[v F12734 `(v ~T0 @X0 0 tf1`uc ]
-[v F12737 `(uc ~T0 @X0 0 tf ]
-[v F12739 `(a ~T0 @X0 0 tf ]
-[v F12741 `(a ~T0 @X0 0 tf ]
-[v F12743 `(v ~T0 @X0 0 tf1`a ]
-[v F12746 `(v ~T0 @X0 0 tf1`a ]
+[v F12755 `(v ~T0 @X0 0 tf1`uc ]
+[v F12758 `(uc ~T0 @X0 0 tf ]
+[v F12760 `(a ~T0 @X0 0 tf ]
+[v F12762 `(a ~T0 @X0 0 tf ]
+[v F12764 `(v ~T0 @X0 0 tf1`a ]
+[v F12767 `(v ~T0 @X0 0 tf1`a ]
 "125 main.c
 [; ;main.c: 125:                 RN487X.Write(uart[UART_CDC].Read());
-[c E12728 0 1 .. ]
-[n E12728 . TEST_MODE APPLICATION_MODE  ]
-[v F12749 `(v ~T0 @X0 0 tf1`E12728 ]
-[v F12752 `(v ~T0 @X0 0 tf1`us ]
-[v F12755 `(v ~T0 @X0 0 tf1`*uc ]
+[c E12749 0 1 .. ]
+[n E12749 . TEST_MODE APPLICATION_MODE  ]
+[v F12770 `(v ~T0 @X0 0 tf1`E12749 ]
+[v F12773 `(v ~T0 @X0 0 tf1`us ]
+[v F12776 `(v ~T0 @X0 0 tf1`*uc ]
 "48 ./mcc_generated_files/rn487x/rn487x_interface.h
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 48: {
-[s S1687 `*F12734 1 `*F12737 1 `*F12739 1 `*F12741 1 `*F12743 1 `*F12746 1 `*F12749 1 `*F12752 1 `*F12755 1 ]
+[s S1687 `*F12755 1 `*F12758 1 `*F12760 1 `*F12762 1 `*F12764 1 `*F12767 1 `*F12770 1 `*F12773 1 `*F12776 1 ]
 [n S1687 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
 "66
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
@@ -1692,8 +1692,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"356 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 356: volatile INTERRUPTbits_t iNTERRUPTbits;
+"392 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 392: volatile INTERRUPTbits_t iNTERRUPTbits;
 [v _iNTERRUPTbits `VS1679 ~T0 @X0 1 e ]
 "291 ./mcc_generated_files/application/BMA253_accel.h
 [; ;./mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
@@ -1802,7 +1802,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "107
 [; ;main.c: 107:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E12818 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
+[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
 "108
 [; ;main.c: 108:                     if ((lightBlueSerial[serialIndex] == '\r')
 [e $ ! || || == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 13 `ui == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 10 `ui == -> _serialIndex `ui - -> # _lightBlueSerial `ui -> -> 1 `i `ui 1712  ]
@@ -1837,7 +1837,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1709 ]
 "106
 [; ;main.c: 106:                 while (uart[UART_CDC].DataReady()) {
-[e $ != -> ( *U . *U + &U _uart * -> . `E12818 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1710  ]
+[e $ != -> ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1710  ]
 [e :U 1711 ]
 "119
 [; ;main.c: 119:             }
@@ -1856,9 +1856,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "122
 [; ;main.c: 122:                 uart[UART_CDC].Write(RN487X_Read());
-[e ( *U . *U + &U _uart * -> . `E12818 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
+[e ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
 "123
-[; ;main.c: 123:             }
+[; ;main.c: 123:         }
 }
 [e :U 1715 ]
 "121
@@ -1872,14 +1872,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "125
 [; ;main.c: 125:                 RN487X.Write(uart[UART_CDC].Read());
-[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E12818 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
+[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
 "126
-[; ;main.c: 126:             }
+[; ;main.c: 126:     }
 }
 [e :U 1718 ]
 "124
 [; ;main.c: 124:             while (uart[UART_CDC].DataReady()) {
-[e $ != -> ( *U . *U + &U _uart * -> . `E12818 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1719  ]
+[e $ != -> ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1719  ]
 [e :U 1720 ]
 "127
 [; ;main.c: 127:         }

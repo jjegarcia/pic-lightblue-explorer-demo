@@ -120,10 +120,10 @@ int main(void) {
         } else {
             while (RN487X_DataReady()) {
                 uart[UART_CDC].Write(RN487X_Read());
-            }
+        } 
             while (uart[UART_CDC].DataReady()) {
                 RN487X.Write(uart[UART_CDC].Read());
-            }
+    }
         }
     }
     return 0;
