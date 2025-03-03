@@ -20546,17 +20546,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/application/../pin_manager.h" 2
-# 250 "mcc_generated_files/application/../pin_manager.h"
+# 286 "mcc_generated_files/application/../pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 262 "mcc_generated_files/application/../pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 275 "mcc_generated_files/application/../pin_manager.h"
-void IOCAF6_ISR(void);
 # 298 "mcc_generated_files/application/../pin_manager.h"
+void PIN_MANAGER_IOC(void);
+# 311 "mcc_generated_files/application/../pin_manager.h"
+void IOCAF6_ISR(void);
+# 334 "mcc_generated_files/application/../pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 322 "mcc_generated_files/application/../pin_manager.h"
+# 358 "mcc_generated_files/application/../pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 346 "mcc_generated_files/application/../pin_manager.h"
+# 382 "mcc_generated_files/application/../pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {

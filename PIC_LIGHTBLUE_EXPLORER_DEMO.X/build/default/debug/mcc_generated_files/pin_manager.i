@@ -20286,17 +20286,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 250 "mcc_generated_files/pin_manager.h"
+# 286 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 262 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 275 "mcc_generated_files/pin_manager.h"
-void IOCAF6_ISR(void);
 # 298 "mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_IOC(void);
+# 311 "mcc_generated_files/pin_manager.h"
+void IOCAF6_ISR(void);
+# 334 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 322 "mcc_generated_files/pin_manager.h"
+# 358 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 346 "mcc_generated_files/pin_manager.h"
+# 382 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {
@@ -20393,13 +20393,17 @@ void PIN_MANAGER_Initialize(void)
 
 
     SSP1CLKPPS = 0x09;
+    SSP2DATPPS = 0x13;
     RB1PPS = 0x13;
     RB2PPS = 0x14;
+    RC1PPS = 0x15;
     RC4PPS = 0x25;
     RB4PPS = 0x0F;
+    RC2PPS = 0x16;
     RX2DTPPS = 0x15;
     SSP1DATPPS = 0x0A;
     RX1DTPPS = 0x0D;
+    SSP2CLKPPS = 0x11;
 }
 
 void PIN_MANAGER_IOC(void)
