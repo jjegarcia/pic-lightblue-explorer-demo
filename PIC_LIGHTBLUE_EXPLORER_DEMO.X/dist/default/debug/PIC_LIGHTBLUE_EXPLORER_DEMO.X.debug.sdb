@@ -183,6 +183,10 @@ I2C1_DATA_NACK 3
 I2C1_TIMEOUT 4
 I2C1_NULL 5
 ]
+"77 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+[e E358 . `uc
+SPI2_DEFAULT 0
+]
 "107 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 [e E12839 . `uc
 UART_CDC 0
@@ -192,10 +196,6 @@ UART_BLE 1
 [e E12749 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
-]
-"77 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
-[e E358 . `uc
-SPI2_DEFAULT 0
 ]
 "10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -619,7 +619,9 @@ SPI2_DEFAULT 0
 [v _rn487x_PrintMessage rn487x_PrintMessage `T(v  1 s 1 rn487x_PrintMessage ]
 "368
 [v _RN487X_MessageHandler RN487X_MessageHandler `(v  1 s 1 RN487X_MessageHandler ]
-"97 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+"62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+[v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
+"97
 [v _SPI2_ExchangeByte SPI2_ExchangeByte `(uc  1 e 1 0 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
@@ -669,7 +671,7 @@ SPI2_DEFAULT 0
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
 "778
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
-[s S3861 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S3711 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -679,8 +681,8 @@ SPI2_DEFAULT 0
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "795
-[u S3870 . 1 `S3861 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES3870  1 e 1 @20 ]
+[u S3720 . 1 `S3711 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES3720  1 e 1 @20 ]
 "840
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "861
@@ -761,7 +763,7 @@ SPI2_DEFAULT 0
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
 "6236
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S2797 . 1 `uc 1 BF 1 0 :1:0 
+[s S2801 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -771,33 +773,33 @@ SPI2_DEFAULT 0
 `uc 1 SMP 1 0 :1:7 
 ]
 "6345
-[s S2806 . 1 `uc 1 . 1 0 :2:0 
+[s S2810 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S2811 . 1 `uc 1 . 1 0 :2:0 
+[s S2815 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S2816 . 1 `uc 1 . 1 0 :2:0 
+[s S2820 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S2821 . 1 `uc 1 . 1 0 :2:0 
+[s S2825 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S2826 . 1 `uc 1 . 1 0 :2:0 
+[s S2830 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S2832 . 1 `uc 1 BF1 1 0 :1:0 
+[s S2836 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -806,66 +808,66 @@ SPI2_DEFAULT 0
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S2841 . 1 `uc 1 . 1 0 :2:0 
+[s S2845 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S2847 . 1 `uc 1 . 1 0 :2:0 
+[s S2851 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S2853 . 1 `uc 1 . 1 0 :2:0 
+[s S2857 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S2859 . 1 `uc 1 . 1 0 :2:0 
+[s S2863 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S2864 . 1 `uc 1 . 1 0 :2:0 
+[s S2868 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S2869 . 1 `uc 1 . 1 0 :2:0 
+[s S2873 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S2874 . 1 `uc 1 . 1 0 :2:0 
+[s S2878 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S2879 . 1 `uc 1 . 1 0 :2:0 
+[s S2883 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S2884 . 1 `S2797 1 . 1 0 `S2806 1 . 1 0 `S2811 1 . 1 0 `S2816 1 . 1 0 `S2821 1 . 1 0 `S2826 1 . 1 0 `S2832 1 . 1 0 `S2841 1 . 1 0 `S2847 1 . 1 0 `S2853 1 . 1 0 `S2859 1 . 1 0 `S2864 1 . 1 0 `S2869 1 . 1 0 `S2874 1 . 1 0 `S2879 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES2884  1 e 1 @399 ]
+[u S2888 . 1 `S2801 1 . 1 0 `S2810 1 . 1 0 `S2815 1 . 1 0 `S2820 1 . 1 0 `S2825 1 . 1 0 `S2830 1 . 1 0 `S2836 1 . 1 0 `S2845 1 . 1 0 `S2851 1 . 1 0 `S2857 1 . 1 0 `S2863 1 . 1 0 `S2868 1 . 1 0 `S2873 1 . 1 0 `S2878 1 . 1 0 `S2883 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES2888  1 e 1 @399 ]
 "6600
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S2639 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S2643 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6630
-[s S2645 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S2649 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S2650 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S2654 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -874,11 +876,11 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S2659 . 1 `S2639 1 . 1 0 `S2645 1 . 1 0 `S2650 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES2659  1 e 1 @400 ]
+[u S2663 . 1 `S2643 1 . 1 0 `S2649 1 . 1 0 `S2654 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES2663  1 e 1 @400 ]
 "6720
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S2718 . 1 `uc 1 SEN 1 0 :1:0 
+[s S2722 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -888,17 +890,17 @@ SPI2_DEFAULT 0
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6767
-[s S2727 . 1 `uc 1 . 1 0 :1:0 
+[s S2731 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S2730 . 1 `uc 1 . 1 0 :1:0 
+[s S2734 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S2737 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S2741 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -907,15 +909,15 @@ SPI2_DEFAULT 0
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S2746 . 1 `uc 1 . 1 0 :1:0 
+[s S2750 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S2753 . 1 `S2718 1 . 1 0 `S2727 1 . 1 0 `S2730 1 . 1 0 `S2737 1 . 1 0 `S2746 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES2753  1 e 1 @401 ]
+[u S2757 . 1 `S2722 1 . 1 0 `S2731 1 . 1 0 `S2734 1 . 1 0 `S2741 1 . 1 0 `S2750 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES2757  1 e 1 @401 ]
 "6969
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
 "6989
@@ -925,7 +927,7 @@ SPI2_DEFAULT 0
 "7543
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
 "7573
-[s S3893 . 1 `uc 1 SSPM02 1 0 :1:0 
+[s S3743 . 1 `uc 1 SSPM02 1 0 :1:0 
 `uc 1 SSPM12 1 0 :1:1 
 `uc 1 SSPM22 1 0 :1:2 
 `uc 1 SSPM32 1 0 :1:3 
@@ -934,8 +936,8 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV2 1 0 :1:6 
 `uc 1 WCOL2 1 0 :1:7 
 ]
-[u S3902 . 1 `S2639 1 . 1 0 `S2645 1 . 1 0 `S3893 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES3902  1 e 1 @410 ]
+[u S3752 . 1 `S2643 1 . 1 0 `S2649 1 . 1 0 `S3743 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES3752  1 e 1 @410 ]
 "7663
 [v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @411 ]
 "19404
@@ -944,27 +946,27 @@ SPI2_DEFAULT 0
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "19796
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S2579 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2583 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "19824
-[s S2585 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2589 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2591 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2595 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[u S2597 . 1 `S2579 1 . 1 0 `S2585 1 . 1 0 `S2591 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2597  1 e 1 @1438 ]
+[u S2601 . 1 `S2583 1 . 1 0 `S2589 1 . 1 0 `S2595 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2601  1 e 1 @1438 ]
 "19894
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
 [s S2262 . 1 `uc 1 INTF 1 0 :1:0 
@@ -1087,7 +1089,7 @@ SPI2_DEFAULT 0
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
 "34938
 [v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
-[s S2474 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S2478 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -1097,11 +1099,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAP7 1 0 :1:7 
 ]
 "35017
-[u S2483 . 1 `S2474 1 . 1 0 ]
+[u S2487 . 1 `S2478 1 . 1 0 ]
 "35017
 "35017
-[v _IOCAPbits IOCAPbits `VES2483  1 e 1 @7997 ]
-[s S2453 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[v _IOCAPbits IOCAPbits `VES2487  1 e 1 @7997 ]
+[s S2457 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -1111,11 +1113,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAN7 1 0 :1:7 
 ]
 "35079
-[u S2462 . 1 `S2453 1 . 1 0 ]
+[u S2466 . 1 `S2457 1 . 1 0 ]
 "35079
 "35079
-[v _IOCANbits IOCANbits `VES2462  1 e 1 @7998 ]
-[s S2432 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[v _IOCANbits IOCANbits `VES2466  1 e 1 @7998 ]
+[s S2436 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -1125,10 +1127,10 @@ SPI2_DEFAULT 0
 `uc 1 IOCAF7 1 0 :1:7 
 ]
 "35141
-[u S2441 . 1 `S2432 1 . 1 0 ]
+[u S2445 . 1 `S2436 1 . 1 0 ]
 "35141
 "35141
-[v _IOCAFbits IOCAFbits `VES2441  1 e 1 @7999 ]
+[v _IOCAFbits IOCAFbits `VES2445  1 e 1 @7999 ]
 "35186
 [v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
 "35248
@@ -1154,7 +1156,7 @@ SPI2_DEFAULT 0
 "36199
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-[v _statusBuffer@main$F3827 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+[v _statusBuffer@main$F3965 statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "66
 [v _lightBlueSerial lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
 "67
@@ -1273,13 +1275,13 @@ SPI2_DEFAULT 0
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
 "146 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E12565  1 e 32 0 ]
-[s S3182 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S3186 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S3182  1 e 29 0 ]
+[v _I2C1_Status I2C1_Status `S3186  1 e 29 0 ]
 "54 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _IOCAF6_InterruptHandler IOCAF6_InterruptHandler `*.37(v  1 e 2 0 ]
 [s S116 . 1 `uc 1 ACC 1 0 :1:0 
@@ -1305,9 +1307,9 @@ SPI2_DEFAULT 0
 [s S215 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
 "227
 [v _RN487X RN487X `DCS215  1 e 18 0 ]
-[s S3849 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S3699 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
-[v _spi2_configuration spi2_configuration `DC[1]S3849  1 s 4 spi2_configuration ]
+[v _spi2_configuration spi2_configuration `DC[1]S3699  1 s 4 spi2_configuration ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEus  1 e 2 0 ]
 "78 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
@@ -1373,6 +1375,11 @@ SPI2_DEFAULT 0
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "86
+} 0
+"62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+[v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
+{
+"75
 } 0
 "78 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]

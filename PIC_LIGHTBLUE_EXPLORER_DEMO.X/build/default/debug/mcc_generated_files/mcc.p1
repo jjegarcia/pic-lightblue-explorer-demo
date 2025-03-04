@@ -12,6 +12,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
 "89 mcc_generated_files/drivers/.././i2c1_master.h
 [v _I2C1_Initialize `(v ~T0 @X0 0 ef ]
+"63 mcc_generated_files/spi2.h
+[; ;mcc_generated_files/spi2.h: 63: void SPI2_Initialize(void);
+[v _SPI2_Initialize `(v ~T0 @X0 0 ef ]
 "286 mcc_generated_files/pin_manager.h
 [; ;mcc_generated_files/pin_manager.h: 286: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
@@ -1658,6 +1661,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;mcc_generated_files/mcc.c: 53:     I2C1_Initialize();
 [e ( _I2C1_Initialize ..  ]
+"54
+[; ;mcc_generated_files/mcc.c: 54:     SPI2_Initialize();
+[e ( _SPI2_Initialize ..  ]
 "55
 [; ;mcc_generated_files/mcc.c: 55:     PIN_MANAGER_Initialize();
 [e ( _PIN_MANAGER_Initialize ..  ]
