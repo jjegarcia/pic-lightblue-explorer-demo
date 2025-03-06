@@ -20286,17 +20286,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 250 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 275 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 322 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 346 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {
@@ -20307,7 +20307,7 @@ typedef union {
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
 
-volatile INTERRUPTbits_t iNTERRUPTbits;
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 49 "mcc_generated_files/pin_manager.c" 2
 
 
@@ -20323,9 +20323,9 @@ void PIN_MANAGER_Initialize(void)
 
 
     LATE = 0x00;
-    LATA = 0x31;
+    LATA = 0x11;
     LATB = 0x00;
-    LATC = 0xC1;
+    LATC = 0x01;
 
 
 
@@ -20333,7 +20333,7 @@ void PIN_MANAGER_Initialize(void)
     TRISE = 0x08;
     TRISA = 0xDE;
     TRISB = 0xEF;
-    TRISC = 0x25;
+    TRISC = 0xA8;
 
 
 
@@ -20393,13 +20393,17 @@ void PIN_MANAGER_Initialize(void)
 
 
     SSP1CLKPPS = 0x09;
+    SSP2DATPPS = 0x13;
     RB1PPS = 0x13;
     RB2PPS = 0x14;
+    RC1PPS = 0x15;
     RC4PPS = 0x25;
     RB4PPS = 0x0F;
+    RC2PPS = 0x16;
     RX2DTPPS = 0x15;
     SSP1DATPPS = 0x0A;
     RX1DTPPS = 0x0D;
+    SSP2CLKPPS = 0x11;
 }
 
 void PIN_MANAGER_IOC(void)
@@ -20417,7 +20421,7 @@ void PIN_MANAGER_IOC(void)
 void IOCAF6_ISR(void) {
 
 
-    (iNTERRUPTbits.ACC = 1);
+    (INTERRUPTbits.ACC = 1);
 
 
     if(IOCAF6_InterruptHandler)

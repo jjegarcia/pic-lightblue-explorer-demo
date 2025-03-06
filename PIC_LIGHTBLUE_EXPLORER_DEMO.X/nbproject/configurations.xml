@@ -96,8 +96,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>application</Elem>
-    <Elem>mcc_generated_files</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

@@ -193,6 +193,26 @@
 #define RB5_SetAnalogMode()         do { ANSELBbits.ANSB5 = 1; } while(0)
 #define RB5_SetDigitalMode()        do { ANSELBbits.ANSB5 = 0; } while(0)
 
+// get/set SPI_SS_EXT_DEVICE aliases
+#define SPI_SS_EXT_DEVICE_TRIS                 TRISCbits.TRISC0
+#define SPI_SS_EXT_DEVICE_LAT                  LATCbits.LATC0
+#define SPI_SS_EXT_DEVICE_PORT                 PORTCbits.RC0
+#define SPI_SS_EXT_DEVICE_WPU                  WPUCbits.WPUC0
+#define SPI_SS_EXT_DEVICE_OD                   ODCONCbits.ODCC0
+#define SPI_SS_EXT_DEVICE_ANS                  ANSELCbits.ANSC0
+#define SPI_SS_EXT_DEVICE_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define SPI_SS_EXT_DEVICE_GetValue()           PORTCbits.RC0
+#define SPI_SS_EXT_DEVICE_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define SPI_SS_EXT_DEVICE_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define SPI_SS_EXT_DEVICE_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+
 // get/set RC1 procedures
 #define RC1_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
 #define RC1_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
@@ -381,6 +401,87 @@ extern void (*IOCAF6_InterruptHandler)(void);
 */
 void IOCAF6_DefaultInterruptHandler(void);
 
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Interrupt on Change Handler for the IOCAF7 pin functionality
+ * @Example
+    IOCAF7_ISR();
+ */
+void IOCAF7_ISR(void);
+
+/**
+  @Summary
+    Interrupt Handler Setter for IOCAF7 pin interrupt-on-change functionality
+
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    InterruptHandler function pointer.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF7_SetInterruptHandler(MyInterruptHandler);
+
+*/
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+  @Summary
+    Dynamic Interrupt Handler for IOCAF7 pin
+
+  @Description
+    This is a dynamic interrupt handler to be used together with the IOCAF7_SetInterruptHandler() method.
+    This handler is called every time the IOCAF7 ISR is executed and allows any function to be registered at runtime.
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF7_SetInterruptHandler(IOCAF7_InterruptHandler);
+
+*/
+extern void (*IOCAF7_InterruptHandler)(void);
+
+/**
+  @Summary
+    Default Interrupt Handler for IOCAF7 pin
+
+  @Description
+    This is a predefined interrupt handler to be used together with the IOCAF7_SetInterruptHandler() method.
+    This handler is called every time the IOCAF7 ISR is executed. 
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF7_SetInterruptHandler(IOCAF7_DefaultInterruptHandler);
+
+*/
+void IOCAF7_DefaultInterruptHandler(void);
+
+void IOCAF7_DefaultInterruptHandler(void);
 typedef union {
     struct {
         unsigned ACC : 1;
@@ -389,14 +490,14 @@ typedef union {
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
 
-volatile INTERRUPTbits_t iNTERRUPTbits;
+volatile INTERRUPTbits_t INTERRUPTbits;
 
 
-#define ACC_INTERRUPT_SetHigh()         (iNTERRUPTbits.ACC = 1) 
-#define ACC_INTERRUPT_SetLow()          (iNTERRUPTbits.ACC = 0) 
-#define ACC_INTERRUPT_Toggle()          (iNTERRUPTbits.ACC = ~INTERRUPTbits.ACC)
-#define ACC_INTERRUPT_GetValue()        (iNTERRUPTbits.ACC)
-//#define ACC_INTERRUPT_Is_High()         (iNTERRUPTbits.ACC == 1)
+#define ACC_INTERRUPT_SetHigh()         (INTERRUPTbits.ACC = 1) 
+#define ACC_INTERRUPT_SetLow()          (INTERRUPTbits.ACC = 0) 
+#define ACC_INTERRUPT_Toggle()          (INTERRUPTbits.ACC = ~INTERRUPTbits.ACC)
+#define ACC_INTERRUPT_GetValue()        (INTERRUPTbits.ACC)
+#define ACC_Interrupt_is_high()         (INTERRUPTbits.ACC == 1)
 
 
 #endif // PIN_MANAGER_H

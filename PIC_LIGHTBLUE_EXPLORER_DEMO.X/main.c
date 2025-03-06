@@ -37,40 +37,7 @@
     SOFTWARE.
  */
 
-#include "mcc_generated_files/mcc.h"
-#include "mcc_generated_files/application/LIGHTBLUE_service.h"
-#include "mcc_generated_files/rn487x/rn487x_interface.h"
-#include "mcc_generated_files/rn487x/rn487x.h"
-#include "mcc_generated_files/drivers/uart.h"
-#include "mcc_generated_files/application/BMA253_accel.h"
-
-/** MACRO used to reference Periodic Timer overflow flag Set. 
- *  This is used by the application to have a semi-accurate 
- *  periodic task execution rate. 
- *  Strict adherence to time interval is not required.
- */
-#define TIMER_FLAG_SET()                (TMR0_HasOverflowOccured())
-/** MACRO used to reset the Periodic Timer overflow flag.
- *  This is used by the application to reload the semi-accurate
- *  periodic task execution.
- *  The rate allows for a (100%) drift prior to error
- *  Is susceptible to effect by extended BLE communication. 
- */
-#define RESET_TIMER_INTERRUPT_FLAG      (PIR0bits.TMR0IF = 0)
-/** MACRO used to configure the application used buffer sizes.
- *  This is used by the application for communication buffers.
- */
-#define MAX_BUFFER_SIZE                 (80)
-
-static char statusBuffer[MAX_BUFFER_SIZE]; /**< Status Buffer instance passed to RN487X drive used for Asynchronous Message Handling (see *asyncBuffer in rn487x.c) */
-static char lightBlueSerial[MAX_BUFFER_SIZE]; /**< Message Buffer used for CDC Serial communication when connected. Terminated by \r, \n, MAX character Passes messages to BLE for transmisison. */
-static uint8_t serialIndex; /**< Local index value for serial communication buffer. */
-
-bool ACC_Interrupt_is_high() {
-    return iNTERRUPTbits.ACC == 1;
-}
-void service_acceleremoterInterrupt(void);
-uint8_t flats = 0;
+#include "main.h"
 
 /*
                          Main application
@@ -91,14 +58,16 @@ int main(void) {
     while (1) {
         if (RN487X_IsConnected() == true) {
             service_acceleremoterInterrupt();
+            send_spi_read();
+            service_pushed();
             if (TIMER_FLAG_SET() == true) {
                 RESET_TIMER_INTERRUPT_FLAG;
 
-//                LIGHTBLUE_TemperatureSensor();
-//                LIGHTBLUE_AccelSensor();
-//                LIGHTBLUE_PushButton();
-//                LIGHTBLUE_LedState();
-//                LIGHTBLUE_SendProtocolVersion();
+                LIGHTBLUE_TemperatureSensor();
+                //                LIGHTBLUE_AccelSensor();
+                LIGHTBLUE_PushButton();
+                LIGHTBLUE_LedState();
+                LIGHTBLUE_SendProtocolVersion();
             } else {
                 while (RN487X_DataReady()) {
                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
@@ -129,6 +98,12 @@ int main(void) {
     return 0;
 }
 
+void service_pushed(void) {
+    if (pushed) {
+        pushed = false;
+    }
+}
+
 void service_acceleremoterInterrupt(void) {
     if (ACC_Interrupt_is_high()) {
         ACC_INTERRUPT_SetLow();
@@ -139,6 +114,18 @@ void service_acceleremoterInterrupt(void) {
             flats = 0;
             accelerometerInterruptBits.FLAT = 0;
         }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    SPI_SS_EXT_DEVICE_SetLow();
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        SPI_SS_EXT_DEVICE_SetHigh();
+        SPI2_Close();
+        sendSpiReadRequest = false;
+
     }
 }
 /**

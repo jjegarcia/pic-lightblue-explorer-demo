@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/rn487x/rn487x_interface.c"
+# 1 "mcc_generated_files/spi2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,89 +6,181 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/rn487x/rn487x_interface.c" 2
-# 28 "mcc_generated_files/rn487x/rn487x_interface.c"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
+# 1 "mcc_generated_files/spi2.c" 2
+# 47 "mcc_generated_files/spi2.c"
+# 1 "mcc_generated_files/spi2.h" 1
+# 54 "mcc_generated_files/spi2.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
 
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
 
 
 
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\features.h" 1 3
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
 # 128 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
+# 143 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short ssize_t;
 # 174 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __int24 int24_t;
 # 210 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __uint24 uint24_t;
-# 421 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
+# 255 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
 
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
 
 
 
 
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
 
 
 
 
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 28 "mcc_generated_files/rn487x/rn487x_interface.c" 2
 
-# 1 "mcc_generated_files/rn487x/rn487x_interface.h" 1
-# 30 "mcc_generated_files/rn487x/rn487x_interface.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 30 "mcc_generated_files/rn487x/rn487x_interface.h" 2
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 54 "mcc_generated_files/spi2.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
 # 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
@@ -174,49 +266,28 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 31 "mcc_generated_files/rn487x/rn487x_interface.h" 2
+# 55 "mcc_generated_files/spi2.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 56 "mcc_generated_files/spi2.h" 2
 
 
 
+typedef enum {
+    SPI2_DEFAULT
+} spi2_modes_t;
 
+void SPI2_Initialize(void);
+_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
+void SPI2_Close(void);
+uint8_t SPI2_ExchangeByte(uint8_t data);
+void SPI2_ExchangeBlock(void *block, size_t blockSize);
+void SPI2_WriteBlock(void *block, size_t blockSize);
+void SPI2_ReadBlock(void *block, size_t blockSize);
+void SPI2_WriteByte(uint8_t byte);
+uint8_t SPI2_ReadByte(void);
+# 47 "mcc_generated_files/spi2.c" 2
 
-
-typedef enum
-{
-    TEST_MODE = 0x00,
-    APPLICATION_MODE = 0x01
-}RN487X_SYSTEM_MODES_t;
-
-
-
-
-
-typedef struct
-{
-
-    void (*Write)(uint8_t);
-    uint8_t (*Read)(void);
-    _Bool (*TransmitDone)(void);
-    _Bool (*DataReady)(void);
-
-    void (*IndicateRx)(_Bool);
-
-    void (*ResetModule)(_Bool);
-
-    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
-
-    void (*DelayMs)(uint16_t);
-
-    void (*AsyncHandler)(char*);
-}iRN487X_FunctionPtrs_t;
-
-extern const iRN487X_FunctionPtrs_t RN487X;
-# 75 "mcc_generated_files/rn487x/rn487x_interface.h"
-_Bool RN487X_IsConnected(void);
-# 29 "mcc_generated_files/rn487x/rn487x_interface.c" 2
-
-# 1 "mcc_generated_files/rn487x/../mcc.h" 1
-# 49 "mcc_generated_files/rn487x/../mcc.h"
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -20390,669 +20461,101 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/rn487x/../mcc.h" 2
+# 48 "mcc_generated_files/spi2.c" 2
 
-# 1 "mcc_generated_files/device_config.h" 1
-# 50 "mcc_generated_files/rn487x/../mcc.h" 2
 
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 306 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 318 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 331 "mcc_generated_files/pin_manager.h"
-void IOCAF6_ISR(void);
-# 354 "mcc_generated_files/pin_manager.h"
-void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 378 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF6_InterruptHandler)(void);
-# 402 "mcc_generated_files/pin_manager.h"
-void IOCAF6_DefaultInterruptHandler(void);
+typedef struct {
+    uint8_t con1;
+    uint8_t stat;
+    uint8_t add;
+    uint8_t operation;
+} spi2_configuration_t;
 
-typedef union {
-    struct {
-        unsigned ACC : 1;
-        unsigned UNDEFINED : 7;
-    };
-    uint8_t INTERRUPTbits;
-}INTERRUPTbits_t;
 
-volatile INTERRUPTbits_t INTERRUPTbits;
-# 51 "mcc_generated_files/rn487x/../mcc.h" 2
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 143 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef short ssize_t;
-# 255 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 409 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-
-
-
-
-
-int ungetc(int, FILE *);
-int getch(void);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-
-
-
-
-void putch(char);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 2 3
-# 54 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 55 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/i2c1_master.h" 1
-# 58 "mcc_generated_files/i2c1_master.h"
-typedef enum {
-    I2C1_NOERR,
-    I2C1_BUSY,
-    I2C1_FAIL
-
-
-} i2c1_error_t;
-
-typedef enum
-{
-    I2C1_STOP=1,
-    I2C1_RESTART_READ,
-    I2C1_RESTART_WRITE,
-    I2C1_CONTINUE,
-    I2C1_RESET_LINK
-} i2c1_operations_t;
-
-typedef uint8_t i2c1_address_t;
-typedef i2c1_operations_t (*i2c1_callback_t)(void *funPtr);
-
-
-i2c1_operations_t I2C1_CallbackReturnStop(void *funPtr);
-i2c1_operations_t I2C1_CallbackReturnReset(void *funPtr);
-i2c1_operations_t I2C1_CallbackRestartWrite(void *funPtr);
-i2c1_operations_t I2C1_CallbackRestartRead(void *funPtr);
-
-
-
-
-
-
-void I2C1_Initialize(void);
-# 101 "mcc_generated_files/i2c1_master.h"
-i2c1_error_t I2C1_Open(i2c1_address_t address);
-# 111 "mcc_generated_files/i2c1_master.h"
-i2c1_error_t I2C1_Close(void);
-# 123 "mcc_generated_files/i2c1_master.h"
-i2c1_error_t I2C1_MasterOperation(_Bool read);
-
-
-
-
-i2c1_error_t I2C1_MasterWrite(void);
-
-
-
-
-i2c1_error_t I2C1_MasterRead(void);
-# 142 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetTimeout(uint8_t timeOut);
-# 152 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetDataCompleteCallback(i2c1_callback_t cb, void *ptr);
-# 174 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetWriteCollisionCallback(i2c1_callback_t cb, void *ptr);
-# 184 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
-# 194 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
-# 204 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
-# 56 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/spi2.h" 1
-# 59 "mcc_generated_files/spi2.h"
-typedef enum {
-    SPI2_DEFAULT
-} spi2_modes_t;
-
-void SPI2_Initialize(void);
-_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
-void SPI2_Close(void);
-uint8_t SPI2_ExchangeByte(uint8_t data);
-void SPI2_ExchangeBlock(void *block, size_t blockSize);
-void SPI2_WriteBlock(void *block, size_t blockSize);
-void SPI2_ReadBlock(void *block, size_t blockSize);
-void SPI2_WriteByte(uint8_t byte);
-uint8_t SPI2_ReadByte(void);
-# 57 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/tmr0.h" 1
-# 100 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 129 "mcc_generated_files/tmr0.h"
-void TMR0_StartTimer(void);
-# 161 "mcc_generated_files/tmr0.h"
-void TMR0_StopTimer(void);
-# 197 "mcc_generated_files/tmr0.h"
-uint16_t TMR0_ReadTimer(void);
-# 236 "mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint16_t timerVal);
-# 272 "mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 310 "mcc_generated_files/tmr0.h"
-_Bool TMR0_HasOverflowOccured(void);
-# 58 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/eusart2.h" 1
-# 75 "mcc_generated_files/eusart2.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}eusart2_status_t;
-
-
-
-
-extern volatile uint8_t eusart2TxBufferRemaining;
-extern volatile uint8_t eusart2RxCount;
-
-
-
-
-extern void (*EUSART2_TxDefaultInterruptHandler)(void);
-extern void (*EUSART2_RxDefaultInterruptHandler)(void);
-# 117 "mcc_generated_files/eusart2.h"
-void EUSART2_Initialize(void);
-# 165 "mcc_generated_files/eusart2.h"
-_Bool EUSART2_is_tx_ready(void);
-# 213 "mcc_generated_files/eusart2.h"
-_Bool EUSART2_is_rx_ready(void);
-# 260 "mcc_generated_files/eusart2.h"
-_Bool EUSART2_is_tx_done(void);
-# 308 "mcc_generated_files/eusart2.h"
-eusart2_status_t EUSART2_get_last_status(void);
-# 328 "mcc_generated_files/eusart2.h"
-uint8_t EUSART2_Read(void);
-# 348 "mcc_generated_files/eusart2.h"
-void EUSART2_Write(uint8_t txData);
-# 369 "mcc_generated_files/eusart2.h"
-void EUSART2_Transmit_ISR(void);
-# 390 "mcc_generated_files/eusart2.h"
-void EUSART2_Receive_ISR(void);
-# 411 "mcc_generated_files/eusart2.h"
-void EUSART2_RxDataHandler(void);
-# 429 "mcc_generated_files/eusart2.h"
-void EUSART2_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 447 "mcc_generated_files/eusart2.h"
-void EUSART2_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 465 "mcc_generated_files/eusart2.h"
-void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
-# 485 "mcc_generated_files/eusart2.h"
-void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 505 "mcc_generated_files/eusart2.h"
-void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/eusart1.h" 1
-# 76 "mcc_generated_files/eusart1.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}eusart1_status_t;
-
-
-
-
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-
-
-
-extern void (*EUSART1_TxDefaultInterruptHandler)(void);
-extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-# 118 "mcc_generated_files/eusart1.h"
-void EUSART1_Initialize(void);
-# 166 "mcc_generated_files/eusart1.h"
-_Bool EUSART1_is_tx_ready(void);
-# 214 "mcc_generated_files/eusart1.h"
-_Bool EUSART1_is_rx_ready(void);
-# 261 "mcc_generated_files/eusart1.h"
-_Bool EUSART1_is_tx_done(void);
-# 309 "mcc_generated_files/eusart1.h"
-eusart1_status_t EUSART1_get_last_status(void);
-# 329 "mcc_generated_files/eusart1.h"
-uint8_t EUSART1_Read(void);
-# 349 "mcc_generated_files/eusart1.h"
-void EUSART1_Write(uint8_t txData);
-# 370 "mcc_generated_files/eusart1.h"
-void EUSART1_Transmit_ISR(void);
-# 391 "mcc_generated_files/eusart1.h"
-void EUSART1_Receive_ISR(void);
-# 412 "mcc_generated_files/eusart1.h"
-void EUSART1_RxDataHandler(void);
-# 430 "mcc_generated_files/eusart1.h"
-void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 448 "mcc_generated_files/eusart1.h"
-void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 466 "mcc_generated_files/eusart1.h"
-void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 486 "mcc_generated_files/eusart1.h"
-void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 506 "mcc_generated_files/eusart1.h"
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 60 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/delay.h" 1
-# 34 "mcc_generated_files/delay.h"
-void DELAY_milliseconds(uint16_t milliseconds);
-void DELAY_microseconds(uint16_t microseconds);
-# 61 "mcc_generated_files/rn487x/../mcc.h" 2
-
-# 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
-# 37 "mcc_generated_files/drivers/i2c_simple_master.h"
-uint8_t i2c_read1ByteRegister(i2c1_address_t address, uint8_t reg);
-uint16_t i2c_read2ByteRegister(i2c1_address_t address, uint8_t reg);
-void i2c_write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data);
-void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
-
-void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
-void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
-void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
-# 62 "mcc_generated_files/rn487x/../mcc.h" 2
-# 77 "mcc_generated_files/rn487x/../mcc.h"
-void SYSTEM_Initialize(void);
-# 90 "mcc_generated_files/rn487x/../mcc.h"
-void OSCILLATOR_Initialize(void);
-# 103 "mcc_generated_files/rn487x/../mcc.h"
-void PMD_Initialize(void);
-# 30 "mcc_generated_files/rn487x/rn487x_interface.c" 2
-
-# 1 "mcc_generated_files/rn487x/../drivers/uart.h" 1
-# 34 "mcc_generated_files/rn487x/../drivers/uart.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
-# 34 "mcc_generated_files/rn487x/../drivers/uart.h" 2
-
-
-
-
-
-
-
-
-typedef enum {
-    UART_CDC ,
-    UART_BLE
-} uart_configurations_t;
-
-
-
-
-
-typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-
-extern const uart_functions_t uart[];
-# 31 "mcc_generated_files/rn487x/rn487x_interface.c" 2
-
-
-static _Bool connected = 0;
-# 45 "mcc_generated_files/rn487x/rn487x_interface.c"
-static void RN487X_Reset(_Bool value);
-# 57 "mcc_generated_files/rn487x/rn487x_interface.c"
-static void RN487X_IndicateRx(_Bool value);
-# 69 "mcc_generated_files/rn487x/rn487x_interface.c"
-static void RN487X_SetSystemMode(RN487X_SYSTEM_MODES_t mode);
-# 82 "mcc_generated_files/rn487x/rn487x_interface.c"
-static void RN487X_MessageHandler(char* message);
-# 98 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) void RN487X_Write(uint8_t txData);
-# 114 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) uint8_t RN487X_Read(void);
-# 130 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) _Bool RN487X_is_tx_done(void);
-# 146 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) _Bool RN487X_is_rx_ready(void);
-# 162 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount);
-# 171 "mcc_generated_files/rn487x/rn487x_interface.c"
-typedef enum
-{
-    DISCONNECT_MSG = 0,
-    STREAM_OPEN_MSG = 1,
-    GENERAL_MSG = 2,
-}RN487X_MESSAGE_TYPE;
-# 191 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) void rn487x_PrintMessageStart(void);
-# 201 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) void rn487x_PrintMessageEnd(void);
-# 212 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType);
-# 221 "mcc_generated_files/rn487x/rn487x_interface.c"
-static __attribute__((inline)) void rn487x_PrintMessage(char* passedMessage);
-
-
-
-
-
-const iRN487X_FunctionPtrs_t RN487X = {
-    .Write = RN487X_Write,
-    .Read = RN487X_Read,
-    .TransmitDone = RN487X_is_tx_done,
-    .DataReady = RN487X_is_rx_ready,
-    .IndicateRx = RN487X_IndicateRx,
-    .ResetModule = RN487X_Reset,
-    .SetSystemMode = RN487X_SetSystemMode,
-    .DelayMs = RN487X_Delay,
-    .AsyncHandler = RN487X_MessageHandler
+static const spi2_configuration_t spi2_configuration[] = {
+    { 0x0, 0x40, 0x1, 0 }
 };
 
-
-
-
-
-_Bool RN487X_IsConnected(void)
+void SPI2_Initialize(void)
 {
-    return connected;
+
+    SSP2CLKPPS = 17;
+    SSP2DATPPS = 19;
+    RC1PPS = 21;
+    RC2PPS = 22;
+
+    SSP2STAT = 0x40;
+    SSP2CON1 = 0x00;
+    SSP2ADD = 0x01;
+    TRISCbits.TRISC1 = 0;
+    SSP2CON1bits.SSPEN = 0;
 }
 
-
-
-
-
-static __attribute__((inline)) void RN487X_Write(uint8_t txData)
+_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration)
 {
-    uart[UART_BLE].Write(txData);
-}
-
-static __attribute__((inline)) uint8_t RN487X_Read(void)
-{
-    return uart[UART_BLE].Read();
-}
-
-static __attribute__((inline)) _Bool RN487X_is_tx_done(void)
-{
-    return uart[UART_BLE].TransmitDone();
-}
-
-static __attribute__((inline)) _Bool RN487X_is_rx_ready(void)
-{
-    return uart[UART_BLE].DataReady();
-}
-
-static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount)
-{
-    return DELAY_milliseconds(delayCount);
-}
-
-static void RN487X_Reset(_Bool value)
-{
-    if (1 == value)
+    if(!SSP2CON1bits.SSPEN)
     {
-        do { LATAbits.LATA0 = 0; } while(0);
+        SSP2STAT = spi2_configuration[spi2UniqueConfiguration].stat;
+        SSP2CON1 = spi2_configuration[spi2UniqueConfiguration].con1;
+        SSP2CON2 = 0x00;
+        SSP2ADD = spi2_configuration[spi2UniqueConfiguration].add;
+        TRISCbits.TRISC1 = spi2_configuration[spi2UniqueConfiguration].operation;
+        SSP2CON1bits.SSPEN = 1;
+        return 1;
     }
-    else
-    {
-        do { LATAbits.LATA0 = 1; } while(0);
-    }
+    return 0;
 }
 
-static void RN487X_IndicateRx(_Bool value)
+void SPI2_Close(void)
 {
-    if (1 == value)
+    SSP2CON1bits.SSPEN = 0;
+}
+
+uint8_t SPI2_ExchangeByte(uint8_t data)
+{
+    SSP2BUF = data;
+    while(!PIR3bits.SSP2IF);
+    PIR3bits.SSP2IF = 0;
+    return SSP2BUF;
+}
+
+void SPI2_ExchangeBlock(void *block, size_t blockSize)
+{
+    uint8_t *data = block;
+    while(blockSize--)
     {
-        do { LATCbits.LATC6 = 0; } while(0);
-    }
-    else
-    {
-        do { LATCbits.LATC6 = 1; } while(0);
+        SSP2BUF = *data;
+        while(!PIR3bits.SSP2IF);
+        PIR3bits.SSP2IF = 0;
+        *data++ = SSP2BUF;
     }
 }
 
-static void RN487X_SetSystemMode(RN487X_SYSTEM_MODES_t mode)
+
+void SPI2_WriteBlock(void *block, size_t blockSize)
 {
-
-    do { TRISAbits.TRISA7 = 0; } while(0);
-
-    if (APPLICATION_MODE == mode)
+    uint8_t *data = block;
+    while(blockSize--)
     {
-        do { LATAbits.LATA7 = 1; } while(0);
-    }
-    else
-    {
-        do { LATAbits.LATA7 = 0; } while(0);
-    }
-
-
-    do { TRISAbits.TRISA7 = 1; } while(0);
-}
-
-
-
-
-
-static __attribute__((inline)) void rn487x_PrintMessageStart(void)
-{
-    uart[UART_CDC].Write('<');
-    uart[UART_CDC].Write('<');
-    uart[UART_CDC].Write('<');
-    uart[UART_CDC].Write(' ');
-}
-
-static __attribute__((inline)) void rn487x_PrintMessageEnd(void)
-{
-    uart[UART_CDC].Write(' ');
-    uart[UART_CDC].Write('>');
-    uart[UART_CDC].Write('>');
-    uart[UART_CDC].Write('>');
-    uart[UART_CDC].Write(' ');
-    uart[UART_CDC].Write('\r');
-    uart[UART_CDC].Write('\n');
-}
-
-static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-{
-    if (DISCONNECT_MSG == messageType)
-    {
-        uart[UART_CDC].Write('[');
-    }
-    else if (STREAM_OPEN_MSG == messageType)
-    {
-        uart[UART_CDC].Write(']');
-    }
-    else
-    {
-
+        SPI2_ExchangeByte(*data++);
     }
 }
 
-static __attribute__((inline)) void rn487x_PrintMessage(char* passedMessage)
+void SPI2_ReadBlock(void *block, size_t blockSize)
 {
-    char printCharacter [(32)];
-    strcpy(printCharacter, passedMessage);
-    for (uint8_t messageIndex = 0; messageIndex < strlen(passedMessage); messageIndex++)
+    uint8_t *data = block;
+    while(blockSize--)
     {
-        uart[UART_CDC].Write(printCharacter[messageIndex]);
+        *data++ = SPI2_ExchangeByte(0);
     }
 }
 
-static void RN487X_MessageHandler(char* message)
+void SPI2_WriteByte(uint8_t byte)
 {
-    RN487X_MESSAGE_TYPE messageType;
-    rn487x_PrintMessageStart();
-    if (strstr(message, "DISCONNECT"))
-    {
-        messageType = DISCONNECT_MSG;
-        connected = 0;
-    }
-    else if (strstr(message, "STREAM_OPEN"))
-    {
-        messageType = STREAM_OPEN_MSG;
-        connected = 1;
-    }
-    else
-    {
-        messageType = GENERAL_MSG;
-    }
-    rn487x_PrintMessage(message);
-    rn487x_PrintMessageEnd();
-    rn487x_PrintIndicatorCharacters(messageType);
+    SSP2BUF = byte;
+}
+
+uint8_t SPI2_ReadByte(void)
+{
+    return SSP2BUF;
 }

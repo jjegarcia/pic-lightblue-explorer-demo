@@ -20291,17 +20291,17 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 250 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 275 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 322 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 346 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
 
 typedef union {
@@ -20312,7 +20312,7 @@ typedef union {
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
 
-volatile INTERRUPTbits_t iNTERRUPTbits;
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
@@ -20550,6 +20550,23 @@ void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/spi2.h" 1
+# 59 "mcc_generated_files/spi2.h"
+typedef enum {
+    SPI2_DEFAULT
+} spi2_modes_t;
+
+void SPI2_Initialize(void);
+_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
+void SPI2_Close(void);
+uint8_t SPI2_ExchangeByte(uint8_t data);
+void SPI2_ExchangeBlock(void *block, size_t blockSize);
+void SPI2_WriteBlock(void *block, size_t blockSize);
+void SPI2_ReadBlock(void *block, size_t blockSize);
+void SPI2_WriteByte(uint8_t byte);
+uint8_t SPI2_ReadByte(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -20565,7 +20582,7 @@ void TMR0_WriteTimer(uint16_t timerVal);
 void TMR0_Reload(void);
 # 310 "mcc_generated_files/tmr0.h"
 _Bool TMR0_HasOverflowOccured(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart2.h" 1
 # 75 "mcc_generated_files/eusart2.h"
@@ -20620,7 +20637,7 @@ void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart2.h"
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 58 "./mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -20675,13 +20692,13 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/delay.h" 1
 # 34 "mcc_generated_files/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
 void DELAY_microseconds(uint16_t microseconds);
-# 60 "./mcc_generated_files/mcc.h" 2
+# 61 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
 # 37 "mcc_generated_files/drivers/i2c_simple_master.h"
@@ -20693,12 +20710,12 @@ void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
 void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
 void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
 void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
-# 61 "./mcc_generated_files/mcc.h" 2
-# 76 "./mcc_generated_files/mcc.h"
+# 62 "./mcc_generated_files/mcc.h" 2
+# 77 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 89 "./mcc_generated_files/mcc.h"
+# 90 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 102 "./mcc_generated_files/mcc.h"
+# 103 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 40 "main.c" 2
 
@@ -20909,16 +20926,25 @@ typedef union {
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 # 45 "main.c" 2
-# 65 "main.c"
+
+
+# 1 "./main.h" 1
+# 14 "./main.h"
+_Bool pushed = 0;
+_Bool sendSpiReadRequest = 0;
+
+void send_spi_read(void);
+# 37 "./main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
 
-_Bool ACC_Interrupt_is_high() {
-    return iNTERRUPTbits.ACC == 1;
-}
 void service_acceleremoterInterrupt(void);
 uint8_t flats = 0;
+# 47 "main.c" 2
+# 74 "main.c"
+void service_acceleremoterInterrupt(void);
+
 
 
 
@@ -20939,14 +20965,15 @@ int main(void) {
     while (1) {
         if (RN487X_IsConnected() == 1) {
             service_acceleremoterInterrupt();
+            send_spi_read();
             if ((TMR0_HasOverflowOccured()) == 1) {
                 (PIR0bits.TMR0IF = 0);
 
-                LIGHTBLUE_TemperatureSensor();
-                LIGHTBLUE_AccelSensor();
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
+
+
+
+
+
             } else {
                 while (RN487X_DataReady()) {
                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
@@ -20978,8 +21005,8 @@ int main(void) {
 }
 
 void service_acceleremoterInterrupt(void) {
-    if (ACC_Interrupt_is_high()) {
-        (iNTERRUPTbits.ACC = 0);
+    if ((INTERRUPTbits.ACC == 1)) {
+        (INTERRUPTbits.ACC = 0);
         accelerometerInterruptBits.FLAT = 1;
         flats++;
         if (flats > 1) {
@@ -20987,5 +21014,17 @@ void service_acceleremoterInterrupt(void) {
             flats = 0;
             accelerometerInterruptBits.FLAT = 0;
         }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    do { LATCbits.LATC0 = 0; } while(0);
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        do { LATCbits.LATC0 = 1; } while(0);
+        SPI2_Close();
+        sendSpiReadRequest = 0;
+
     }
 }

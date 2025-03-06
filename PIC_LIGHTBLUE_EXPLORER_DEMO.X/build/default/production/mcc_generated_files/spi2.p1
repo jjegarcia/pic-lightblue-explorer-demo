@@ -1,133 +1,80 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"405 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 405:     struct {
-[s S1682 :1 `uc 1 :7 `uc 1 ]
-[n S1682 . ACC UNDEFINED ]
-"404
-[; ;mcc_generated_files/pin_manager.h: 404: typedef union {
-[u S1681 `S1682 1 `uc 1 ]
-[n S1681 . . INTERRUPTbits ]
-[v F210 `(v ~T0 @X0 0 tf1`uc ]
-[v F213 `(uc ~T0 @X0 0 tf ]
-[v F215 `(a ~T0 @X0 0 tf ]
-[v F217 `(a ~T0 @X0 0 tf ]
-[v F219 `(v ~T0 @X0 0 tf1`a ]
-[v F222 `(v ~T0 @X0 0 tf1`a ]
-"227 mcc_generated_files/rn487x/rn487x_interface.c
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 227: const iRN487X_FunctionPtrs_t RN487X = {
-[c E204 0 1 .. ]
-[n E204 . TEST_MODE APPLICATION_MODE  ]
-[v F225 `(v ~T0 @X0 0 tf1`E204 ]
-[v F228 `(v ~T0 @X0 0 tf1`us ]
-[v F231 `(v ~T0 @X0 0 tf1`*uc ]
-"48 mcc_generated_files/rn487x/rn487x_interface.h
-[; ;mcc_generated_files/rn487x/rn487x_interface.h: 48: {
-[s S2 `*F210 1 `*F213 1 `*F215 1 `*F217 1 `*F219 1 `*F222 1 `*F225 1 `*F228 1 `*F231 1 ]
-[n S2 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
-[v F12980 `(v ~T0 @X0 1 tf1`uc ]
-"98 mcc_generated_files/rn487x/rn487x_interface.c
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 98: static __attribute__((inline)) void RN487X_Write(uint8_t txData);
-[v _RN487X_Write `TF12980 ~T0 @X0 0 s ]
-[v F12983 `(uc ~T0 @X0 1 tf ]
-"114
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 114: static __attribute__((inline)) uint8_t RN487X_Read(void);
-[v _RN487X_Read `TF12983 ~T0 @X0 0 s ]
-[v F12985 `(a ~T0 @X0 1 tf ]
-"130
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 130: static __attribute__((inline)) _Bool RN487X_is_tx_done(void);
-[v _RN487X_is_tx_done `TF12985 ~T0 @X0 0 s ]
-[v F12987 `(a ~T0 @X0 1 tf ]
-"146
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 146: static __attribute__((inline)) _Bool RN487X_is_rx_ready(void);
-[v _RN487X_is_rx_ready `TF12987 ~T0 @X0 0 s ]
-"57
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 57: static void RN487X_IndicateRx(_Bool value);
-[v _RN487X_IndicateRx `(v ~T0 @X0 0 sf1`a ]
-"45
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 45: static void RN487X_Reset(_Bool value);
-[v _RN487X_Reset `(v ~T0 @X0 0 sf1`a ]
-"69
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 69: static void RN487X_SetSystemMode(RN487X_SYSTEM_MODES_t mode);
-[v _RN487X_SetSystemMode `(v ~T0 @X0 0 sf1`E204 ]
-[v F12989 `(v ~T0 @X0 1 tf1`us ]
-"162
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 162: static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount);
-[v _RN487X_Delay `TF12989 ~T0 @X0 0 s ]
-"82
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 82: static void RN487X_MessageHandler(char* message);
-[v _RN487X_MessageHandler `(v ~T0 @X0 0 sf1`*uc ]
-[v F12944 `(uc ~T0 @X0 0 tf ]
-[v F12946 `(v ~T0 @X0 0 tf1`uc ]
-[v F12949 `(a ~T0 @X0 0 tf ]
-[v F12951 `(a ~T0 @X0 0 tf ]
-[v F12954 `(v ~T0 @X0 0 tf ]
-[v F12953 `(v ~T0 @X0 0 tf1`*F12954 ]
-[v F12957 `(v ~T0 @X0 0 tf ]
-[v F12960 `(v ~T0 @X0 0 tf ]
-[v F12959 `(v ~T0 @X0 0 tf1`*F12960 ]
-[v F12963 `(a ~T0 @X0 0 tf ]
-[v F12965 `(v ~T0 @X0 0 tf ]
-[v F12967 `(v ~T0 @X0 0 tf ]
-"51 mcc_generated_files/rn487x/../drivers/uart.h
-[; ;mcc_generated_files/rn487x/../drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1689 `*F12944 1 `*F12946 1 `*F12949 1 `*F12951 1 `*F12953 1 `*F12957 1 `*F12959 1 `*F12963 1 `*F12965 1 `*F12967 1 ]
-[n S1689 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
-"53
-[; ;mcc_generated_files/rn487x/../drivers/uart.h: 53: extern const uart_functions_t uart[];
-[v _uart `CS1689 ~T0 @X0 -> 0 `x e ]
-"254 mcc_generated_files/rn487x/rn487x_interface.c
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 254:     uart[UART_BLE].Write(txData);
-[c E12938 0 1 .. ]
-[n E12938 . UART_CDC UART_BLE  ]
-"34 mcc_generated_files/delay.h
-[; ;mcc_generated_files/delay.h: 34: void DELAY_milliseconds(uint16_t milliseconds);
-[v _DELAY_milliseconds `(v ~T0 @X0 0 ef1`us ]
-"867 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 867:     struct {
-[s S51 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S51 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"866
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 866: typedef union {
-[u S50 `S51 1 ]
-[n S50 . . ]
-"878
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 878: extern volatile LATAbits_t LATAbits __attribute__((address(0x018)));
-[v _LATAbits `VS50 ~T0 @X0 0 e@24 ]
-"991
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 991:     struct {
-[s S55 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S55 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"990
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 990: typedef union {
-[u S54 `S55 1 ]
-[n S54 . . ]
-"1002
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 1002: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
-[v _LATCbits `VS54 ~T0 @X0 0 e@26 ]
-"660
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 660:     struct {
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
-"659
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 659: typedef union {
-[u S42 `S43 1 ]
-[n S42 . . ]
-"671
-[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 671: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x012)));
-[v _TRISAbits `VS42 ~T0 @X0 0 e@18 ]
-"342 mcc_generated_files/rn487x/rn487x_interface.c
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 342: static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-[c E12991 0 1 2 .. ]
-[n E12991 . DISCONNECT_MSG STREAM_OPEN_MSG GENERAL_MSG  ]
-"33 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
-[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"54
-[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-"51
-[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 51: char *strstr (const char *, const char *);
-[v _strstr `(*uc ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"50 mcc_generated_files/spi2.c
+[; ;mcc_generated_files/spi2.c: 50: typedef struct {
+[s S1681 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1681 . con1 stat add operation ]
+"32934 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32934: extern volatile unsigned char SSP2CLKPPS __attribute__((address(0x1EC8)));
+[v _SSP2CLKPPS `Vuc ~T0 @X0 0 e@7880 ]
+"32986
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 32986: extern volatile unsigned char SSP2DATPPS __attribute__((address(0x1EC9)));
+[v _SSP2DATPPS `Vuc ~T0 @X0 0 e@7881 ]
+"34284
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34284: extern volatile unsigned char RC1PPS __attribute__((address(0x1F21)));
+[v _RC1PPS `Vuc ~T0 @X0 0 e@7969 ]
+"34342
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 34342: extern volatile unsigned char RC2PPS __attribute__((address(0x1F22)));
+[v _RC2PPS `Vuc ~T0 @X0 0 e@7970 ]
+"7179
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7179: extern volatile unsigned char SSP2STAT __attribute__((address(0x199)));
+[v _SSP2STAT `Vuc ~T0 @X0 0 e@409 ]
+"7543
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7543: extern volatile unsigned char SSP2CON1 __attribute__((address(0x19A)));
+[v _SSP2CON1 `Vuc ~T0 @X0 0 e@410 ]
+"6989
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 6989: extern volatile unsigned char SSP2ADD __attribute__((address(0x197)));
+[v _SSP2ADD `Vuc ~T0 @X0 0 e@407 ]
+"784
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 784:     struct {
+[s S47 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S47 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"783
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 783: typedef union {
+[u S46 `S47 1 ]
+[n S46 . . ]
+"795
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 795: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x014)));
+[v _TRISCbits `VS46 ~T0 @X0 0 e@20 ]
+"7549
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7549:     struct {
+[s S334 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S334 . SSPM CKP SSPEN SSPOV WCOL ]
+"7556
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7556:     struct {
+[s S335 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S335 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"7562
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7562:     struct {
+[s S336 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S336 . SSPM02 SSPM12 SSPM22 SSPM32 CKP2 SSPEN2 SSPOV2 WCOL2 ]
+"7548
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7548: typedef union {
+[u S333 `S334 1 `S335 1 `S336 1 ]
+[n S333 . . . . ]
+"7573
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7573: extern volatile SSP2CON1bits_t SSP2CON1bits __attribute__((address(0x19A)));
+[v _SSP2CON1bits `VS333 ~T0 @X0 0 e@410 ]
+"77 mcc_generated_files/spi2.c
+[; ;mcc_generated_files/spi2.c: 77: _Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration)
+[c E358 0 .. ]
+[n E358 . SPI2_DEFAULT  ]
+"7663 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 7663: extern volatile unsigned char SSP2CON2 __attribute__((address(0x19B)));
+[v _SSP2CON2 `Vuc ~T0 @X0 0 e@411 ]
+"6969
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 6969: extern volatile unsigned char SSP2BUF __attribute__((address(0x196)));
+[v _SSP2BUF `Vuc ~T0 @X0 0 e@406 ]
+"22522
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22522:     struct {
+[s S1029 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1029 . SSP1IF BCL1IF SSP2IF BCL2IF TX1IF RC1IF TX2IF RC2IF ]
+"22521
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22521: typedef union {
+[u S1028 `S1029 1 ]
+[n S1028 . . ]
+"22533
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22533: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x70F)));
+[v _PIR3bits `VS1028 ~T0 @X0 0 e@1807 ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1700,550 +1647,326 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"412 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 412: volatile INTERRUPTbits_t INTERRUPTbits;
-[v _INTERRUPTbits `VS1681 ~T0 @X0 1 e ]
-"33 mcc_generated_files/rn487x/rn487x_interface.c
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 33: static _Bool connected = 0;
-[v _connected `a ~T0 @X0 1 s ]
-[i _connected
--> -> 0 `i `a
-]
-"227
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 227: const iRN487X_FunctionPtrs_t RN487X = {
-[v _RN487X `CS2 ~T0 @X0 1 e ]
-[i _RN487X
+"58 mcc_generated_files/spi2.c
+[; ;mcc_generated_files/spi2.c: 58: static const spi2_configuration_t spi2_configuration[] = {
+[v _spi2_configuration `CS1681 ~T0 @X0 -> -> 1 `i `ux s ]
+[i _spi2_configuration
 :U ..
 :U ..
-&U _RN487X_Write
-&U _RN487X_Read
-&U _RN487X_is_tx_done
-&U _RN487X_is_rx_ready
-&U _RN487X_IndicateRx
-&U _RN487X_Reset
-&U _RN487X_SetSystemMode
-&U _RN487X_Delay
-&U _RN487X_MessageHandler
+-> -> 0 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
 ..
 ..
 ]
-"243
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 243: _Bool RN487X_IsConnected(void)
-[v _RN487X_IsConnected `(a ~T0 @X0 1 ef ]
-"244
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 244: {
+"62
+[; ;mcc_generated_files/spi2.c: 62: void SPI2_Initialize(void)
+[v _SPI2_Initialize `(v ~T0 @X0 1 ef ]
+"63
+[; ;mcc_generated_files/spi2.c: 63: {
 {
-[e :U _RN487X_IsConnected ]
+[e :U _SPI2_Initialize ]
 [f ]
-"245
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 245:     return connected;
-[e ) _connected ]
-[e $UE 1690  ]
-"246
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 246: }
+"65
+[; ;mcc_generated_files/spi2.c: 65:     SSP2CLKPPS = 17;
+[e = _SSP2CLKPPS -> -> 17 `i `uc ]
+"66
+[; ;mcc_generated_files/spi2.c: 66:     SSP2DATPPS = 19;
+[e = _SSP2DATPPS -> -> 19 `i `uc ]
+"67
+[; ;mcc_generated_files/spi2.c: 67:     RC1PPS = 21;
+[e = _RC1PPS -> -> 21 `i `uc ]
+"68
+[; ;mcc_generated_files/spi2.c: 68:     RC2PPS = 22;
+[e = _RC2PPS -> -> 22 `i `uc ]
+"70
+[; ;mcc_generated_files/spi2.c: 70:     SSP2STAT = 0x40;
+[e = _SSP2STAT -> -> 64 `i `uc ]
+"71
+[; ;mcc_generated_files/spi2.c: 71:     SSP2CON1 = 0x00;
+[e = _SSP2CON1 -> -> 0 `i `uc ]
+"72
+[; ;mcc_generated_files/spi2.c: 72:     SSP2ADD = 0x01;
+[e = _SSP2ADD -> -> 1 `i `uc ]
+"73
+[; ;mcc_generated_files/spi2.c: 73:     TRISCbits.TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"74
+[; ;mcc_generated_files/spi2.c: 74:     SSP2CON1bits.SSPEN = 0;
+[e = . . _SSP2CON1bits 0 2 -> -> 0 `i `uc ]
+"75
+[; ;mcc_generated_files/spi2.c: 75: }
+[e :UE 1682 ]
+}
+"77
+[; ;mcc_generated_files/spi2.c: 77: _Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration)
+[v _SPI2_Open `(a ~T0 @X0 1 ef1`E358 ]
+"78
+[; ;mcc_generated_files/spi2.c: 78: {
+{
+[e :U _SPI2_Open ]
+"77
+[; ;mcc_generated_files/spi2.c: 77: _Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration)
+[v _spi2UniqueConfiguration `E358 ~T0 @X0 1 r1 ]
+"78
+[; ;mcc_generated_files/spi2.c: 78: {
+[f ]
+"79
+[; ;mcc_generated_files/spi2.c: 79:     if(!SSP2CON1bits.SSPEN)
+[e $ ! ! != -> . . _SSP2CON1bits 0 2 `i -> 0 `i 1684  ]
+"80
+[; ;mcc_generated_files/spi2.c: 80:     {
+{
+"81
+[; ;mcc_generated_files/spi2.c: 81:         SSP2STAT = spi2_configuration[spi2UniqueConfiguration].stat;
+[e = _SSP2STAT . *U + &U _spi2_configuration * -> _spi2UniqueConfiguration `ux -> -> # *U &U _spi2_configuration `ui `ux 1 ]
+"82
+[; ;mcc_generated_files/spi2.c: 82:         SSP2CON1 = spi2_configuration[spi2UniqueConfiguration].con1;
+[e = _SSP2CON1 . *U + &U _spi2_configuration * -> _spi2UniqueConfiguration `ux -> -> # *U &U _spi2_configuration `ui `ux 0 ]
+"83
+[; ;mcc_generated_files/spi2.c: 83:         SSP2CON2 = 0x00;
+[e = _SSP2CON2 -> -> 0 `i `uc ]
+"84
+[; ;mcc_generated_files/spi2.c: 84:         SSP2ADD = spi2_configuration[spi2UniqueConfiguration].add;
+[e = _SSP2ADD . *U + &U _spi2_configuration * -> _spi2UniqueConfiguration `ux -> -> # *U &U _spi2_configuration `ui `ux 2 ]
+"85
+[; ;mcc_generated_files/spi2.c: 85:         TRISCbits.TRISC1 = spi2_configuration[spi2UniqueConfiguration].operation;
+[e = . . _TRISCbits 0 1 . *U + &U _spi2_configuration * -> _spi2UniqueConfiguration `ux -> -> # *U &U _spi2_configuration `ui `ux 3 ]
+"86
+[; ;mcc_generated_files/spi2.c: 86:         SSP2CON1bits.SSPEN = 1;
+[e = . . _SSP2CON1bits 0 2 -> -> 1 `i `uc ]
+"87
+[; ;mcc_generated_files/spi2.c: 87:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1683  ]
+"88
+[; ;mcc_generated_files/spi2.c: 88:     }
+}
+[e :U 1684 ]
+"89
+[; ;mcc_generated_files/spi2.c: 89:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1683  ]
+"90
+[; ;mcc_generated_files/spi2.c: 90: }
+[e :UE 1683 ]
+}
+"92
+[; ;mcc_generated_files/spi2.c: 92: void SPI2_Close(void)
+[v _SPI2_Close `(v ~T0 @X0 1 ef ]
+"93
+[; ;mcc_generated_files/spi2.c: 93: {
+{
+[e :U _SPI2_Close ]
+[f ]
+"94
+[; ;mcc_generated_files/spi2.c: 94:     SSP2CON1bits.SSPEN = 0;
+[e = . . _SSP2CON1bits 0 2 -> -> 0 `i `uc ]
+"95
+[; ;mcc_generated_files/spi2.c: 95: }
+[e :UE 1685 ]
+}
+"97
+[; ;mcc_generated_files/spi2.c: 97: uint8_t SPI2_ExchangeByte(uint8_t data)
+[v _SPI2_ExchangeByte `(uc ~T0 @X0 1 ef1`uc ]
+"98
+[; ;mcc_generated_files/spi2.c: 98: {
+{
+[e :U _SPI2_ExchangeByte ]
+"97
+[; ;mcc_generated_files/spi2.c: 97: uint8_t SPI2_ExchangeByte(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"98
+[; ;mcc_generated_files/spi2.c: 98: {
+[f ]
+"99
+[; ;mcc_generated_files/spi2.c: 99:     SSP2BUF = data;
+[e = _SSP2BUF _data ]
+"100
+[; ;mcc_generated_files/spi2.c: 100:     while(!PIR3bits.SSP2IF);
+[e $U 1687  ]
+[e :U 1688 ]
+[e :U 1687 ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1688  ]
+[e :U 1689 ]
+"101
+[; ;mcc_generated_files/spi2.c: 101:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
+"102
+[; ;mcc_generated_files/spi2.c: 102:     return SSP2BUF;
+[e ) _SSP2BUF ]
+[e $UE 1686  ]
+"103
+[; ;mcc_generated_files/spi2.c: 103: }
+[e :UE 1686 ]
+}
+"105
+[; ;mcc_generated_files/spi2.c: 105: void SPI2_ExchangeBlock(void *block, size_t blockSize)
+[v _SPI2_ExchangeBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"106
+[; ;mcc_generated_files/spi2.c: 106: {
+{
+[e :U _SPI2_ExchangeBlock ]
+"105
+[; ;mcc_generated_files/spi2.c: 105: void SPI2_ExchangeBlock(void *block, size_t blockSize)
+[v _block `*v ~T0 @X0 1 r1 ]
+[v _blockSize `ui ~T0 @X0 1 r2 ]
+"106
+[; ;mcc_generated_files/spi2.c: 106: {
+[f ]
+"107
+[; ;mcc_generated_files/spi2.c: 107:     uint8_t *data = block;
+[v _data `*uc ~T0 @X0 1 a ]
+[e = _data -> _block `*uc ]
+"108
+[; ;mcc_generated_files/spi2.c: 108:     while(blockSize--)
+[e $U 1691  ]
+[e :U 1692 ]
+"109
+[; ;mcc_generated_files/spi2.c: 109:     {
+{
+"110
+[; ;mcc_generated_files/spi2.c: 110:         SSP2BUF = *data;
+[e = _SSP2BUF *U _data ]
+"111
+[; ;mcc_generated_files/spi2.c: 111:         while(!PIR3bits.SSP2IF);
+[e $U 1694  ]
+[e :U 1695 ]
+[e :U 1694 ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1695  ]
+[e :U 1696 ]
+"112
+[; ;mcc_generated_files/spi2.c: 112:         PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
+"113
+[; ;mcc_generated_files/spi2.c: 113:         *data++ = SSP2BUF;
+[e = *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x _SSP2BUF ]
+"114
+[; ;mcc_generated_files/spi2.c: 114:     }
+}
+[e :U 1691 ]
+"108
+[; ;mcc_generated_files/spi2.c: 108:     while(blockSize--)
+[e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 1692  ]
+[e :U 1693 ]
+"115
+[; ;mcc_generated_files/spi2.c: 115: }
 [e :UE 1690 ]
 }
-[v F13024 `(v ~T0 @X0 1 tf1`uc ]
-"252
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 252: static __attribute__((inline)) void RN487X_Write(uint8_t txData)
-[v _RN487X_Write `TF13024 ~T0 @X0 1 s ]
-"253
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 253: {
+"118
+[; ;mcc_generated_files/spi2.c: 118: void SPI2_WriteBlock(void *block, size_t blockSize)
+[v _SPI2_WriteBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"119
+[; ;mcc_generated_files/spi2.c: 119: {
 {
-[e :U _RN487X_Write ]
-"252
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 252: static __attribute__((inline)) void RN487X_Write(uint8_t txData)
-[v _txData `uc ~T0 @X0 1 r1 ]
-"253
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 253: {
+[e :U _SPI2_WriteBlock ]
+"118
+[; ;mcc_generated_files/spi2.c: 118: void SPI2_WriteBlock(void *block, size_t blockSize)
+[v _block `*v ~T0 @X0 1 r1 ]
+[v _blockSize `ui ~T0 @X0 1 r2 ]
+"119
+[; ;mcc_generated_files/spi2.c: 119: {
 [f ]
-"254
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 254:     uart[UART_BLE].Write(txData);
-[e ( *U . *U + &U _uart * -> . `E12938 1 `ux -> -> # *U &U _uart `ui `ux 1 (1 _txData ]
-"255
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 255: }
-[e :UE 1691 ]
-}
-[v F13030 `(uc ~T0 @X0 1 tf ]
-"257
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 257: static __attribute__((inline)) uint8_t RN487X_Read(void)
-[v _RN487X_Read `TF13030 ~T0 @X0 1 s ]
-"258
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 258: {
-{
-[e :U _RN487X_Read ]
-[f ]
-"259
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 259:     return uart[UART_BLE].Read();
-[e ) ( *U . *U + &U _uart * -> . `E12938 1 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
-[e $UE 1692  ]
-"260
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 260: }
-[e :UE 1692 ]
-}
-[v F13034 `(a ~T0 @X0 1 tf ]
-"262
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 262: static __attribute__((inline)) _Bool RN487X_is_tx_done(void)
-[v _RN487X_is_tx_done `TF13034 ~T0 @X0 1 s ]
-"263
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 263: {
-{
-[e :U _RN487X_is_tx_done ]
-[f ]
-"264
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 264:     return uart[UART_BLE].TransmitDone();
-[e ) ( *U . *U + &U _uart * -> . `E12938 1 `ux -> -> # *U &U _uart `ui `ux 7 ..  ]
-[e $UE 1693  ]
-"265
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 265: }
-[e :UE 1693 ]
-}
-[v F13038 `(a ~T0 @X0 1 tf ]
-"267
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 267: static __attribute__((inline)) _Bool RN487X_is_rx_ready(void)
-[v _RN487X_is_rx_ready `TF13038 ~T0 @X0 1 s ]
-"268
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 268: {
-{
-[e :U _RN487X_is_rx_ready ]
-[f ]
-"269
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 269:     return uart[UART_BLE].DataReady();
-[e ) ( *U . *U + &U _uart * -> . `E12938 1 `ux -> -> # *U &U _uart `ui `ux 3 ..  ]
-[e $UE 1694  ]
-"270
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 270: }
-[e :UE 1694 ]
-}
-[v F13042 `(v ~T0 @X0 1 tf1`us ]
-"272
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 272: static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount)
-[v _RN487X_Delay `TF13042 ~T0 @X0 1 s ]
-"273
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 273: {
-{
-[e :U _RN487X_Delay ]
-"272
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 272: static __attribute__((inline)) void RN487X_Delay(uint16_t delayCount)
-[v _delayCount `us ~T0 @X0 1 r1 ]
-"273
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 273: {
-[f ]
-"274
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 274:     return DELAY_milliseconds(delayCount);
-[e ) ( _DELAY_milliseconds (1 _delayCount ]
-[e $UE 1695  ]
-"275
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 275: }
-[e :UE 1695 ]
-}
-"277
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 277: static void RN487X_Reset(_Bool value)
-[v _RN487X_Reset `(v ~T0 @X0 1 sf1`a ]
-"278
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 278: {
-{
-[e :U _RN487X_Reset ]
-"277
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 277: static void RN487X_Reset(_Bool value)
-[v _value `a ~T0 @X0 1 r1 ]
-"278
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 278: {
-[f ]
-"279
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 279:     if (1 == value)
-[e $ ! == -> 1 `i -> _value `i 1697  ]
-"280
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 280:     {
-{
-"281
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 281:         do { LATAbits.LATA0 = 0; } while(0);
-[e :U 1700 ]
-{
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-}
+"120
+[; ;mcc_generated_files/spi2.c: 120:     uint8_t *data = block;
+[v _data `*uc ~T0 @X0 1 a ]
+[e = _data -> _block `*uc ]
+"121
+[; ;mcc_generated_files/spi2.c: 121:     while(blockSize--)
+[e $U 1698  ]
 [e :U 1699 ]
-"282
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 282:     }
-}
-[e $U 1701  ]
-"283
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 283:     else
-[e :U 1697 ]
-"284
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 284:     {
+"122
+[; ;mcc_generated_files/spi2.c: 122:     {
 {
-"285
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 285:         do { LATAbits.LATA0 = 1; } while(0);
-[e :U 1704 ]
+"123
+[; ;mcc_generated_files/spi2.c: 123:         SPI2_ExchangeByte(*data++);
+[e ( _SPI2_ExchangeByte (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+"124
+[; ;mcc_generated_files/spi2.c: 124:     }
+}
+[e :U 1698 ]
+"121
+[; ;mcc_generated_files/spi2.c: 121:     while(blockSize--)
+[e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 1699  ]
+[e :U 1700 ]
+"125
+[; ;mcc_generated_files/spi2.c: 125: }
+[e :UE 1697 ]
+}
+"127
+[; ;mcc_generated_files/spi2.c: 127: void SPI2_ReadBlock(void *block, size_t blockSize)
+[v _SPI2_ReadBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"128
+[; ;mcc_generated_files/spi2.c: 128: {
 {
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 1703 ]
-"286
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 286:     }
-}
-[e :U 1701 ]
-"287
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 287: }
-[e :UE 1696 ]
-}
-"289
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 289: static void RN487X_IndicateRx(_Bool value)
-[v _RN487X_IndicateRx `(v ~T0 @X0 1 sf1`a ]
-"290
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 290: {
-{
-[e :U _RN487X_IndicateRx ]
-"289
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 289: static void RN487X_IndicateRx(_Bool value)
-[v _value `a ~T0 @X0 1 r1 ]
-"290
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 290: {
+[e :U _SPI2_ReadBlock ]
+"127
+[; ;mcc_generated_files/spi2.c: 127: void SPI2_ReadBlock(void *block, size_t blockSize)
+[v _block `*v ~T0 @X0 1 r1 ]
+[v _blockSize `ui ~T0 @X0 1 r2 ]
+"128
+[; ;mcc_generated_files/spi2.c: 128: {
 [f ]
-"291
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 291:     if (1 == value)
-[e $ ! == -> 1 `i -> _value `i 1706  ]
-"292
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 292:     {
+"129
+[; ;mcc_generated_files/spi2.c: 129:     uint8_t *data = block;
+[v _data `*uc ~T0 @X0 1 a ]
+[e = _data -> _block `*uc ]
+"130
+[; ;mcc_generated_files/spi2.c: 130:     while(blockSize--)
+[e $U 1702  ]
+[e :U 1703 ]
+"131
+[; ;mcc_generated_files/spi2.c: 131:     {
 {
-"293
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 293:         do { LATCbits.LATC6 = 0; } while(0);
-[e :U 1709 ]
+"132
+[; ;mcc_generated_files/spi2.c: 132:         *data++ = SPI2_ExchangeByte(0);
+[e = *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ( _SPI2_ExchangeByte (1 -> -> 0 `i `uc ]
+"133
+[; ;mcc_generated_files/spi2.c: 133:     }
+}
+[e :U 1702 ]
+"130
+[; ;mcc_generated_files/spi2.c: 130:     while(blockSize--)
+[e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 1703  ]
+[e :U 1704 ]
+"134
+[; ;mcc_generated_files/spi2.c: 134: }
+[e :UE 1701 ]
+}
+"136
+[; ;mcc_generated_files/spi2.c: 136: void SPI2_WriteByte(uint8_t byte)
+[v _SPI2_WriteByte `(v ~T0 @X0 1 ef1`uc ]
+"137
+[; ;mcc_generated_files/spi2.c: 137: {
 {
-[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-}
-[e :U 1708 ]
-"294
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 294:     }
-}
-[e $U 1710  ]
-"295
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 295:     else
-[e :U 1706 ]
-"296
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 296:     {
-{
-"297
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 297:         do { LATCbits.LATC6 = 1; } while(0);
-[e :U 1713 ]
-{
-[e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
-}
-[e :U 1712 ]
-"298
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 298:     }
-}
-[e :U 1710 ]
-"299
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 299: }
+[e :U _SPI2_WriteByte ]
+"136
+[; ;mcc_generated_files/spi2.c: 136: void SPI2_WriteByte(uint8_t byte)
+[v _byte `uc ~T0 @X0 1 r1 ]
+"137
+[; ;mcc_generated_files/spi2.c: 137: {
+[f ]
+"138
+[; ;mcc_generated_files/spi2.c: 138:     SSP2BUF = byte;
+[e = _SSP2BUF _byte ]
+"139
+[; ;mcc_generated_files/spi2.c: 139: }
 [e :UE 1705 ]
 }
-"301
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 301: static void RN487X_SetSystemMode(RN487X_SYSTEM_MODES_t mode)
-[v _RN487X_SetSystemMode `(v ~T0 @X0 1 sf1`E204 ]
-"302
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 302: {
+"141
+[; ;mcc_generated_files/spi2.c: 141: uint8_t SPI2_ReadByte(void)
+[v _SPI2_ReadByte `(uc ~T0 @X0 1 ef ]
+"142
+[; ;mcc_generated_files/spi2.c: 142: {
 {
-[e :U _RN487X_SetSystemMode ]
-"301
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 301: static void RN487X_SetSystemMode(RN487X_SYSTEM_MODES_t mode)
-[v _mode `E204 ~T0 @X0 1 r1 ]
-"302
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 302: {
+[e :U _SPI2_ReadByte ]
 [f ]
-"304
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 304:     do { TRISAbits.TRISA7 = 0; } while(0);
-[e :U 1717 ]
-{
-[e = . . _TRISAbits 0 7 -> -> 0 `i `uc ]
+"143
+[; ;mcc_generated_files/spi2.c: 143:     return SSP2BUF;
+[e ) _SSP2BUF ]
+[e $UE 1706  ]
+"144
+[; ;mcc_generated_files/spi2.c: 144: }
+[e :UE 1706 ]
 }
-[e :U 1716 ]
-"306
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 306:     if (APPLICATION_MODE == mode)
-[e $ ! == -> . `E204 1 `ui -> _mode `ui 1718  ]
-"307
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 307:     {
-{
-"308
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 308:         do { LATAbits.LATA7 = 1; } while(0);
-[e :U 1721 ]
-{
-[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
-}
-[e :U 1720 ]
-"309
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 309:     }
-}
-[e $U 1722  ]
-"310
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 310:     else
-[e :U 1718 ]
-"311
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 311:     {
-{
-"312
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 312:         do { LATAbits.LATA7 = 0; } while(0);
-[e :U 1725 ]
-{
-[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
-}
-[e :U 1724 ]
-"313
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 313:     }
-}
-[e :U 1722 ]
-"316
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 316:     do { TRISAbits.TRISA7 = 1; } while(0);
-[e :U 1728 ]
-{
-[e = . . _TRISAbits 0 7 -> -> 1 `i `uc ]
-}
-[e :U 1727 ]
-"317
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 317: }
-[e :UE 1714 ]
-}
-[v F13051 `(v ~T0 @X0 1 tf ]
-"323
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 323: static __attribute__((inline)) void rn487x_PrintMessageStart(void)
-[v _rn487x_PrintMessageStart `TF13051 ~T0 @X0 1 s ]
-"324
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 324: {
-{
-[e :U _rn487x_PrintMessageStart ]
-[f ]
-"325
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 325:     uart[UART_CDC].Write('<');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
-"326
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 326:     uart[UART_CDC].Write('<');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
-"327
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 327:     uart[UART_CDC].Write('<');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 60 `ui `uc ]
-"328
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 328:     uart[UART_CDC].Write(' ');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
-"329
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 329: }
-[e :UE 1729 ]
-}
-[v F13065 `(v ~T0 @X0 1 tf ]
-"331
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 331: static __attribute__((inline)) void rn487x_PrintMessageEnd(void)
-[v _rn487x_PrintMessageEnd `TF13065 ~T0 @X0 1 s ]
-"332
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 332: {
-{
-[e :U _rn487x_PrintMessageEnd ]
-[f ]
-"333
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 333:     uart[UART_CDC].Write(' ');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
-"334
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 334:     uart[UART_CDC].Write('>');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
-"335
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 335:     uart[UART_CDC].Write('>');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
-"336
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 336:     uart[UART_CDC].Write('>');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 62 `ui `uc ]
-"337
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 337:     uart[UART_CDC].Write(' ');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 32 `ui `uc ]
-"338
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 338:     uart[UART_CDC].Write('\r');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 13 `ui `uc ]
-"339
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 339:     uart[UART_CDC].Write('\n');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 10 `ui `uc ]
-"340
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 340: }
-[e :UE 1730 ]
-}
-[v F13088 `(v ~T0 @X0 1 tf1`E12991 ]
-"342
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 342: static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-[v _rn487x_PrintIndicatorCharacters `TF13088 ~T0 @X0 1 s ]
-"343
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 343: {
-{
-[e :U _rn487x_PrintIndicatorCharacters ]
-"342
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 342: static __attribute__((inline)) void rn487x_PrintIndicatorCharacters(RN487X_MESSAGE_TYPE messageType)
-[v _messageType `E12991 ~T0 @X0 1 r1 ]
-"343
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 343: {
-[f ]
-"344
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 344:     if (DISCONNECT_MSG == messageType)
-[e $ ! == -> . `E12991 0 `ui -> _messageType `ui 1732  ]
-"345
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 345:     {
-{
-"346
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 346:         uart[UART_CDC].Write('[');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 91 `ui `uc ]
-"347
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 347:     }
-}
-[e $U 1733  ]
-"348
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 348:     else if (STREAM_OPEN_MSG == messageType)
-[e :U 1732 ]
-[e $ ! == -> . `E12991 1 `ui -> _messageType `ui 1734  ]
-"349
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 349:     {
-{
-"350
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 350:         uart[UART_CDC].Write(']');
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> -> 93 `ui `uc ]
-"351
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 351:     }
-}
-[e $U 1735  ]
-"352
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 352:     else
-[e :U 1734 ]
-"353
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 353:     {
-{
-"355
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 355:     }
-}
-[e :U 1735 ]
-[e :U 1733 ]
-"356
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 356: }
-[e :UE 1731 ]
-}
-[v F13097 `(v ~T0 @X0 1 tf1`*uc ]
-"358
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 358: static __attribute__((inline)) void rn487x_PrintMessage(char* passedMessage)
-[v _rn487x_PrintMessage `TF13097 ~T0 @X0 1 s ]
-"359
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 359: {
-{
-[e :U _rn487x_PrintMessage ]
-"358
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 358: static __attribute__((inline)) void rn487x_PrintMessage(char* passedMessage)
-[v _passedMessage `*uc ~T0 @X0 1 r1 ]
-"359
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 359: {
-[f ]
-"360
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 360:     char printCharacter [(32)];
-[v _printCharacter `uc ~T0 @X0 -> 32 `i a ]
-"361
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 361:     strcpy(printCharacter, passedMessage);
-[e ( _strcpy (2 , &U _printCharacter -> _passedMessage `*Cuc ]
-"362
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 362:     for (uint8_t messageIndex = 0; messageIndex < strlen(passedMessage); messageIndex++)
-{
-[v _messageIndex `uc ~T0 @X0 1 a ]
-[e = _messageIndex -> -> 0 `i `uc ]
-[e $U 1740  ]
-[e :U 1737 ]
-"363
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 363:     {
-{
-"364
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 364:         uart[UART_CDC].Write(printCharacter[messageIndex]);
-[e ( *U . *U + &U _uart * -> . `E12938 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> *U + &U _printCharacter * -> _messageIndex `ux -> -> # *U &U _printCharacter `ui `ux `uc ]
-"365
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 365:     }
-}
-[e ++ _messageIndex -> -> 1 `i `uc ]
-[e :U 1740 ]
-[e $ < -> _messageIndex `ui ( _strlen (1 -> _passedMessage `*Cuc 1737  ]
-[e :U 1738 ]
-}
-"366
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 366: }
-[e :UE 1736 ]
-}
-"368
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 368: static void RN487X_MessageHandler(char* message)
-[v _RN487X_MessageHandler `(v ~T0 @X0 1 sf1`*uc ]
-"369
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 369: {
-{
-[e :U _RN487X_MessageHandler ]
-"368
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 368: static void RN487X_MessageHandler(char* message)
-[v _message `*uc ~T0 @X0 1 r1 ]
-"369
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 369: {
-[f ]
-"370
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 370:     RN487X_MESSAGE_TYPE messageType;
-[v _messageType `E12991 ~T0 @X0 1 a ]
-"371
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 371:     rn487x_PrintMessageStart();
-[e ( _rn487x_PrintMessageStart ..  ]
-"372
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 372:     if (strstr(message, "DISCONNECT"))
-[e $ ! != ( _strstr (2 , -> _message `*Cuc :s 2C -> -> 0 `i `*uc 1742  ]
-"373
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 373:     {
-{
-"374
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 374:         messageType = DISCONNECT_MSG;
-[e = _messageType . `E12991 0 ]
-"375
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 375:         connected = 0;
-[e = _connected -> -> 0 `i `a ]
-"376
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 376:     }
-}
-[e $U 1743  ]
-"377
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 377:     else if (strstr(message, "STREAM_OPEN"))
-[e :U 1742 ]
-[e $ ! != ( _strstr (2 , -> _message `*Cuc :s 4C -> -> 0 `i `*uc 1744  ]
-"378
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 378:     {
-{
-"379
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 379:         messageType = STREAM_OPEN_MSG;
-[e = _messageType . `E12991 1 ]
-"380
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 380:         connected = 1;
-[e = _connected -> -> 1 `i `a ]
-"381
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 381:     }
-}
-[e $U 1745  ]
-"382
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 382:     else
-[e :U 1744 ]
-"383
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 383:     {
-{
-"384
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 384:         messageType = GENERAL_MSG;
-[e = _messageType . `E12991 2 ]
-"385
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 385:     }
-}
-[e :U 1745 ]
-[e :U 1743 ]
-"386
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 386:     rn487x_PrintMessage(message);
-[e ( _rn487x_PrintMessage (1 _message ]
-"387
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 387:     rn487x_PrintMessageEnd();
-[e ( _rn487x_PrintMessageEnd ..  ]
-"388
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 388:     rn487x_PrintIndicatorCharacters(messageType);
-[e ( _rn487x_PrintIndicatorCharacters (1 _messageType ]
-"389
-[; ;mcc_generated_files/rn487x/rn487x_interface.c: 389: }
-[e :UE 1741 ]
-}
-[a 1C 68 73 83 67 79 78 78 69 67 84 0 ]
-[a 2C 68 73 83 67 79 78 78 69 67 84 0 ]
-[a 3C 83 84 82 69 65 77 95 79 80 69 78 0 ]
-[a 4C 83 84 82 69 65 77 95 79 80 69 78 0 ]

@@ -20307,19 +20307,28 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 286 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 311 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 334 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 358 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 382 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
+# 414 "mcc_generated_files/pin_manager.h"
+void IOCAF7_ISR(void);
+# 434 "mcc_generated_files/pin_manager.h"
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
+# 458 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF7_InterruptHandler)(void);
+# 482 "mcc_generated_files/pin_manager.h"
+void IOCAF7_DefaultInterruptHandler(void);
 
+void IOCAF7_DefaultInterruptHandler(void);
 typedef union {
     struct {
         unsigned ACC : 1;
@@ -20328,7 +20337,7 @@ typedef union {
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
 
-volatile INTERRUPTbits_t iNTERRUPTbits;
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 51 "mcc_generated_files/mcc.h" 2
 
 

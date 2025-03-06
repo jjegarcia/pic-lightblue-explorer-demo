@@ -47,11 +47,12 @@
 */
 
 #include "pin_manager.h"
-
+#include "../main.h"
 
 
 
 void (*IOCAF6_InterruptHandler)(void);
+void (*IOCAF7_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -60,9 +61,9 @@ void PIN_MANAGER_Initialize(void)
     LATx registers
     */
     LATE = 0x00;
-    LATA = 0x31;
+    LATA = 0x11;
     LATB = 0x00;
-    LATC = 0xC1;
+    LATC = 0x01;
 
     /**
     TRISx registers
@@ -70,7 +71,7 @@ void PIN_MANAGER_Initialize(void)
     TRISE = 0x08;
     TRISA = 0xDE;
     TRISB = 0xEF;
-    TRISC = 0x25;
+    TRISC = 0xA8;
 
     /**
     ANSELx registers
@@ -98,9 +99,9 @@ void PIN_MANAGER_Initialize(void)
     /**
     SLRCONx registers
     */
-    SLRCONA = 0xFF;
+    SLRCONA = 0x7E;
     SLRCONB = 0xFF;
-    SLRCONC = 0xFF;
+    SLRCONC = 0x3F;
 
     /**
     INLVLx registers
@@ -115,15 +116,22 @@ void PIN_MANAGER_Initialize(void)
     */
     //interrupt on change for group IOCAF - flag
     IOCAFbits.IOCAF6 = 0;
+    //interrupt on change for group IOCAF - flag
+    IOCAFbits.IOCAF7 = 0;
     //interrupt on change for group IOCAN - negative
     IOCANbits.IOCAN6 = 0;
+    //interrupt on change for group IOCAN - negative
+    IOCANbits.IOCAN7 = 1;
     //interrupt on change for group IOCAP - positive
     IOCAPbits.IOCAP6 = 1;
+    //interrupt on change for group IOCAP - positive
+    IOCAPbits.IOCAP7 = 0;
 
 
 
     // register default IOC callback functions at runtime; use these methods to register a custom function
     IOCAF6_SetInterruptHandler(IOCAF6_DefaultInterruptHandler);
+    IOCAF7_SetInterruptHandler(IOCAF7_DefaultInterruptHandler);
    
     // Enable IOCI interrupt 
     PIE0bits.IOCIE = 1; 
@@ -150,6 +158,11 @@ void PIN_MANAGER_IOC(void)
     {
         IOCAF6_ISR();  
     }	
+	// interrupt on change for pin IOCAF7
+    if(IOCAFbits.IOCAF7 == 1)
+    {
+        IOCAF7_ISR();  
+}
 }
 
 /**
@@ -181,6 +194,37 @@ void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)){
 void IOCAF6_DefaultInterruptHandler(void){
     // add your IOCAF6 interrupt custom code
     // or set custom function using IOCAF6_SetInterruptHandler()
+}
+
+/**
+   IOCAF7 Interrupt Service Routine
+*/
+void IOCAF7_ISR(void) {
+
+    // Add custom IOCAF7 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IOCAF7_InterruptHandler)
+    {
+        IOCAF7_InterruptHandler();
+    }
+    IOCAFbits.IOCAF7 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IOCAF7 at application runtime
+*/
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF7_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IOCAF7
+*/
+void IOCAF7_DefaultInterruptHandler(void){
+    pushed=true;
+    // add your IOCAF7 interrupt custom code
+    // or set custom function using IOCAF7_SetInterruptHandler()
 }
 
 /**

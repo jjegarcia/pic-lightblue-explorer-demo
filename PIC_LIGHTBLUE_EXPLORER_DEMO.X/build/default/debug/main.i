@@ -8,6 +8,14 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 # 40 "main.c"
+# 1 "./main.h" 1
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 1 "./main.h" 2
+
+
+
+
+
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 1 3
@@ -20291,19 +20299,28 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 286 "mcc_generated_files/pin_manager.h"
+# 306 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 298 "mcc_generated_files/pin_manager.h"
+# 318 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 311 "mcc_generated_files/pin_manager.h"
+# 331 "mcc_generated_files/pin_manager.h"
 void IOCAF6_ISR(void);
-# 334 "mcc_generated_files/pin_manager.h"
+# 354 "mcc_generated_files/pin_manager.h"
 void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 358 "mcc_generated_files/pin_manager.h"
+# 378 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF6_InterruptHandler)(void);
-# 382 "mcc_generated_files/pin_manager.h"
+# 402 "mcc_generated_files/pin_manager.h"
 void IOCAF6_DefaultInterruptHandler(void);
+# 414 "mcc_generated_files/pin_manager.h"
+void IOCAF7_ISR(void);
+# 434 "mcc_generated_files/pin_manager.h"
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
+# 458 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF7_InterruptHandler)(void);
+# 482 "mcc_generated_files/pin_manager.h"
+void IOCAF7_DefaultInterruptHandler(void);
 
+void IOCAF7_DefaultInterruptHandler(void);
 typedef union {
     struct {
         unsigned ACC : 1;
@@ -20312,12 +20329,10 @@ typedef union {
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
 
-volatile INTERRUPTbits_t iNTERRUPTbits;
+volatile INTERRUPTbits_t INTERRUPTbits;
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 1 3
 
@@ -20717,7 +20732,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 103 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 40 "main.c" 2
+# 6 "./main.h" 2
 
 # 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
 # 36 "./mcc_generated_files/application/LIGHTBLUE_service.h"
@@ -20738,7 +20753,7 @@ void LIGHTBLUE_SendSerialData(char* serialData);
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 
 void LIGHTBLUE_AccState(void);
-# 41 "main.c" 2
+# 7 "./main.h" 2
 
 # 1 "./mcc_generated_files/rn487x/rn487x_interface.h" 1
 # 37 "./mcc_generated_files/rn487x/rn487x_interface.h"
@@ -20774,7 +20789,7 @@ typedef struct
 extern const iRN487X_FunctionPtrs_t RN487X;
 # 75 "./mcc_generated_files/rn487x/rn487x_interface.h"
 _Bool RN487X_IsConnected(void);
-# 42 "main.c" 2
+# 8 "./main.h" 2
 
 # 1 "./mcc_generated_files/rn487x/rn487x.h" 1
 # 31 "./mcc_generated_files/rn487x/rn487x.h"
@@ -20858,7 +20873,7 @@ _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
 _Bool RN487X_DataReady(void);
 # 293 "./mcc_generated_files/rn487x/rn487x.h"
 uint8_t RN487X_Read(void);
-# 43 "main.c" 2
+# 9 "./main.h" 2
 
 # 1 "./mcc_generated_files/drivers/uart.h" 1
 # 34 "./mcc_generated_files/drivers/uart.h"
@@ -20889,7 +20904,7 @@ typedef enum {
 typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
 
 extern const uart_functions_t uart[];
-# 44 "main.c" 2
+# 10 "./main.h" 2
 
 # 1 "./mcc_generated_files/application/BMA253_accel.h" 1
 # 223 "./mcc_generated_files/application/BMA253_accel.h"
@@ -20925,17 +20940,24 @@ typedef union {
     uint8_t AccelerometerInterruptBits;
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
-# 45 "main.c" 2
-# 65 "main.c"
+# 11 "./main.h" 2
+
+
+
+_Bool pushed = 0;
+_Bool sendSpiReadRequest = 0;
+uint8_t flats = 0;
+# 31 "./main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
 
-_Bool ACC_Interrupt_is_high() {
-    return iNTERRUPTbits.ACC == 1;
-}
 void service_acceleremoterInterrupt(void);
-uint8_t flats = 0;
+void send_spi_read(void);
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+# 40 "main.c" 2
+
 
 
 
@@ -20956,14 +20978,16 @@ int main(void) {
     while (1) {
         if (RN487X_IsConnected() == 1) {
             service_acceleremoterInterrupt();
-            if ((TMR0_HasOverflowOccured()) == 1) {
+            send_spi_read();
+            service_pushed();
+            if ((PIR0bits.TMR0IF) == 1) {
                 (PIR0bits.TMR0IF = 0);
 
+                LIGHTBLUE_TemperatureSensor();
 
-
-
-
-
+                LIGHTBLUE_PushButton();
+                LIGHTBLUE_LedState();
+                LIGHTBLUE_SendProtocolVersion();
             } else {
                 while (RN487X_DataReady()) {
                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
@@ -20994,9 +21018,15 @@ int main(void) {
     return 0;
 }
 
+void service_pushed(void) {
+    if (pushed) {
+        pushed = 0;
+    }
+}
+
 void service_acceleremoterInterrupt(void) {
-    if (ACC_Interrupt_is_high()) {
-        (iNTERRUPTbits.ACC = 0);
+    if ((INTERRUPTbits.ACC == 1)) {
+        (INTERRUPTbits.ACC = 0);
         accelerometerInterruptBits.FLAT = 1;
         flats++;
         if (flats > 1) {
@@ -21004,5 +21034,17 @@ void service_acceleremoterInterrupt(void) {
             flats = 0;
             accelerometerInterruptBits.FLAT = 0;
         }
+    }
+}
+
+void send_spi_read(void) {
+    static uint8_t data[4];
+    do { LATCbits.LATC0 = 0; } while(0);
+    if (SPI2_Open(0)) {
+        SPI2_ReadBlock(data, 4);
+        do { LATCbits.LATC0 = 1; } while(0);
+        SPI2_Close();
+        sendSpiReadRequest = 0;
+
     }
 }

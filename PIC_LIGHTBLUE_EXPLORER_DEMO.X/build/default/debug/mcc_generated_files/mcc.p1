@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"385 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 385:     struct {
+"486 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 486:     struct {
 [s S1680 :1 `uc 1 :7 `uc 1 ]
 [n S1680 . ACC UNDEFINED ]
-"384
-[; ;mcc_generated_files/pin_manager.h: 384: typedef union {
+"485
+[; ;mcc_generated_files/pin_manager.h: 485: typedef union {
 [u S1679 `S1680 1 `uc 1 ]
 [n S1679 . . INTERRUPTbits ]
 "103 mcc_generated_files/mcc.h
@@ -15,8 +15,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63 mcc_generated_files/spi2.h
 [; ;mcc_generated_files/spi2.h: 63: void SPI2_Initialize(void);
 [v _SPI2_Initialize `(v ~T0 @X0 0 ef ]
-"286 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 286: void PIN_MANAGER_Initialize (void);
+"306 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 306: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
 "90 mcc_generated_files/mcc.h
 [; ;mcc_generated_files/mcc.h: 90: void OSCILLATOR_Initialize(void);
@@ -1644,9 +1644,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"392 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 392: volatile INTERRUPTbits_t iNTERRUPTbits;
-[v _iNTERRUPTbits `VS1679 ~T0 @X0 1 e ]
+"493 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 493: volatile INTERRUPTbits_t INTERRUPTbits;
+[v _INTERRUPTbits `VS1679 ~T0 @X0 1 e ]
 "50 mcc_generated_files/mcc.c
 [; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]

@@ -1,10 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"385 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 385:     struct {
+"486 ./mcc_generated_files/pin_manager.h
 [s S1680 :1 `uc 1 :7 `uc 1 ]
 [n S1680 . ACC UNDEFINED ]
-"384
-[; ;mcc_generated_files/pin_manager.h: 384: typedef union {
+"485
 [u S1679 `S1680 1 `uc 1 ]
 [n S1679 . . INTERRUPTbits ]
 "285 ./mcc_generated_files/application/BMA253_accel.h
@@ -45,12 +43,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75 ./mcc_generated_files/rn487x/rn487x_interface.h
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 75: _Bool RN487X_IsConnected(void);
 [v _RN487X_IsConnected `(a ~T0 @X0 0 ef ]
-"72 main.c
-[; ;main.c: 72: void service_acceleremoterInterrupt(void);
+"38 ./main.h
+[; ;./main.h: 38: void service_acceleremoterInterrupt(void);
 [v _service_acceleremoterInterrupt `(v ~T0 @X0 0 ef ]
-"310 mcc_generated_files/tmr0.h
-[; ;mcc_generated_files/tmr0.h: 310: _Bool TMR0_HasOverflowOccured(void);
-[v _TMR0_HasOverflowOccured `(a ~T0 @X0 0 ef ]
+"36
+[; ;./main.h: 36: void send_spi_read(void);
+[v _send_spi_read `(v ~T0 @X0 0 ef ]
+"37
+[; ;./main.h: 37: void service_pushed(void);
+[v _service_pushed `(v ~T0 @X0 0 ef ]
 "22417 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22417:     struct {
 [s S1021 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -62,7 +63,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22424
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22424: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
 [v _PIR0bits `VS1020 ~T0 @X0 0 e@1804 ]
-"126 ./mcc_generated_files/application/LIGHTBLUE_service.h
+"50 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 50: void LIGHTBLUE_TemperatureSensor(void);
+[v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 0 ef ]
+"75
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 75: void LIGHTBLUE_PushButton(void);
+[v _LIGHTBLUE_PushButton `(v ~T0 @X0 0 ef ]
+"89
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 89: void LIGHTBLUE_LedState(void);
+[v _LIGHTBLUE_LedState `(v ~T0 @X0 0 ef ]
+"100
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 100: void LIGHTBLUE_SendProtocolVersion(void);
+[v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 0 ef ]
+"126
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 126: void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 [v _LIGHTBLUE_ParseIncomingPacket `(v ~T0 @X0 0 ef1`uc ]
 "293 ./mcc_generated_files/rn487x/rn487x.h
@@ -71,48 +84,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "283
 [; ;./mcc_generated_files/rn487x/rn487x.h: 283: _Bool RN487X_DataReady(void);
 [v _RN487X_DataReady `(a ~T0 @X0 0 ef ]
-[v F12845 `(uc ~T0 @X0 0 tf ]
-[v F12847 `(v ~T0 @X0 0 tf1`uc ]
-[v F12850 `(a ~T0 @X0 0 tf ]
-[v F12852 `(a ~T0 @X0 0 tf ]
-[v F12855 `(v ~T0 @X0 0 tf ]
-[v F12854 `(v ~T0 @X0 0 tf1`*F12855 ]
-[v F12858 `(v ~T0 @X0 0 tf ]
-[v F12861 `(v ~T0 @X0 0 tf ]
-[v F12860 `(v ~T0 @X0 0 tf1`*F12861 ]
-[v F12864 `(a ~T0 @X0 0 tf ]
-[v F12866 `(v ~T0 @X0 0 tf ]
-[v F12868 `(v ~T0 @X0 0 tf ]
+[v F12854 `(uc ~T0 @X0 0 tf ]
+[v F12856 `(v ~T0 @X0 0 tf1`uc ]
+[v F12859 `(a ~T0 @X0 0 tf ]
+[v F12861 `(a ~T0 @X0 0 tf ]
+[v F12864 `(v ~T0 @X0 0 tf ]
+[v F12863 `(v ~T0 @X0 0 tf1`*F12864 ]
+[v F12867 `(v ~T0 @X0 0 tf ]
+[v F12870 `(v ~T0 @X0 0 tf ]
+[v F12869 `(v ~T0 @X0 0 tf1`*F12870 ]
+[v F12873 `(a ~T0 @X0 0 tf ]
+[v F12875 `(v ~T0 @X0 0 tf ]
+[v F12877 `(v ~T0 @X0 0 tf ]
 "51 ./mcc_generated_files/drivers/uart.h
 [; ;./mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1694 `*F12845 1 `*F12847 1 `*F12850 1 `*F12852 1 `*F12854 1 `*F12858 1 `*F12860 1 `*F12864 1 `*F12866 1 `*F12868 1 ]
+[s S1694 `*F12854 1 `*F12856 1 `*F12859 1 `*F12861 1 `*F12863 1 `*F12867 1 `*F12869 1 `*F12873 1 `*F12875 1 `*F12877 1 ]
 [n S1694 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
 "53
 [; ;./mcc_generated_files/drivers/uart.h: 53: extern const uart_functions_t uart[];
 [v _uart `CS1694 ~T0 @X0 -> 0 `x e ]
-"107 main.c
-[; ;main.c: 107:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-[c E12839 0 1 .. ]
-[n E12839 . UART_CDC UART_BLE  ]
+"76 main.c
+[; ;main.c: 76:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+[c E12848 0 1 .. ]
+[n E12848 . UART_CDC UART_BLE  ]
 "111 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 111: void LIGHTBLUE_SendSerialData(char* serialData);
 [v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 0 ef1`*uc ]
-[v F12755 `(v ~T0 @X0 0 tf1`uc ]
-[v F12758 `(uc ~T0 @X0 0 tf ]
-[v F12760 `(a ~T0 @X0 0 tf ]
-[v F12762 `(a ~T0 @X0 0 tf ]
-[v F12764 `(v ~T0 @X0 0 tf1`a ]
-[v F12767 `(v ~T0 @X0 0 tf1`a ]
-"125 main.c
-[; ;main.c: 125:                 RN487X.Write(uart[UART_CDC].Read());
-[c E12749 0 1 .. ]
-[n E12749 . TEST_MODE APPLICATION_MODE  ]
-[v F12770 `(v ~T0 @X0 0 tf1`E12749 ]
-[v F12773 `(v ~T0 @X0 0 tf1`us ]
-[v F12776 `(v ~T0 @X0 0 tf1`*uc ]
+[v F12764 `(v ~T0 @X0 0 tf1`uc ]
+[v F12767 `(uc ~T0 @X0 0 tf ]
+[v F12769 `(a ~T0 @X0 0 tf ]
+[v F12771 `(a ~T0 @X0 0 tf ]
+[v F12773 `(v ~T0 @X0 0 tf1`a ]
+[v F12776 `(v ~T0 @X0 0 tf1`a ]
+"94 main.c
+[; ;main.c: 94:                 RN487X.Write(uart[UART_CDC].Read());
+[c E12758 0 1 .. ]
+[n E12758 . TEST_MODE APPLICATION_MODE  ]
+[v F12779 `(v ~T0 @X0 0 tf1`E12758 ]
+[v F12782 `(v ~T0 @X0 0 tf1`us ]
+[v F12785 `(v ~T0 @X0 0 tf1`*uc ]
 "48 ./mcc_generated_files/rn487x/rn487x_interface.h
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 48: {
-[s S1687 `*F12755 1 `*F12758 1 `*F12760 1 `*F12762 1 `*F12764 1 `*F12767 1 `*F12770 1 `*F12773 1 `*F12776 1 ]
+[s S1687 `*F12764 1 `*F12767 1 `*F12769 1 `*F12771 1 `*F12773 1 `*F12776 1 `*F12779 1 `*F12782 1 `*F12785 1 ]
 [n S1687 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
 "66
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
@@ -120,6 +133,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "128 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 128: void LIGHTBLUE_AccState(void);
 [v _LIGHTBLUE_AccState `(v ~T0 @X0 0 ef ]
+"991 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 991:     struct {
+[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S53 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"990
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 990: typedef union {
+[u S52 `S53 1 ]
+[n S52 . . ]
+"1002
+[; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 1002: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
+[v _LATCbits `VS52 ~T0 @X0 0 e@26 ]
+"123 main.c
+[; ;main.c: 123:     if (SPI2_Open(0)) {
+[c E12592 0 .. ]
+[n E12592 . SPI2_DEFAULT  ]
+"64 mcc_generated_files/spi2.h
+[; ;mcc_generated_files/spi2.h: 64: _Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
+[v _SPI2_Open `(a ~T0 @X0 0 ef1`E12592 ]
+"69
+[; ;mcc_generated_files/spi2.h: 69: void SPI2_ReadBlock(void *block, size_t blockSize);
+[v _SPI2_ReadBlock `(v ~T0 @X0 0 ef2`*v`ui ]
+"65
+[; ;mcc_generated_files/spi2.h: 65: void SPI2_Close(void);
+[v _SPI2_Close `(v ~T0 @X0 0 ef ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1692,254 +1729,334 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36580
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 36580: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"392 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 392: volatile INTERRUPTbits_t iNTERRUPTbits;
-[v _iNTERRUPTbits `VS1679 ~T0 @X0 1 e ]
+"493 ./mcc_generated_files/pin_manager.h
+[v _INTERRUPTbits `VS1679 ~T0 @X0 1 e ]
 "291 ./mcc_generated_files/application/BMA253_accel.h
 [; ;./mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 [v _accelerometerInterruptBits `VS1696 ~T0 @X0 1 e ]
-"65 main.c
-[; ;main.c: 65: static char statusBuffer[(80)];
-[v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
-"66
-[; ;main.c: 66: static char lightBlueSerial[(80)];
-[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
-"67
-[; ;main.c: 67: static uint8_t serialIndex;
-[v _serialIndex `uc ~T0 @X0 1 s ]
-"69
-[; ;main.c: 69: _Bool ACC_Interrupt_is_high() {
-[v _ACC_Interrupt_is_high `(a ~T0 @X0 1 ef ]
-{
-[e :U _ACC_Interrupt_is_high ]
-[f ]
-"70
-[; ;main.c: 70:     return iNTERRUPTbits.ACC == 1;
-[e ) -> -> == -> . . _iNTERRUPTbits 0 0 `i -> 1 `i `i `a ]
-[e $UE 1698  ]
-"71
-[; ;main.c: 71: }
-[e :UE 1698 ]
-}
-"73
-[; ;main.c: 73: uint8_t flats = 0;
+"14 ./main.h
+[; ;./main.h: 14: _Bool pushed = 0;
+[v _pushed `a ~T0 @X0 1 e ]
+[i _pushed
+-> -> 0 `i `a
+]
+"15
+[; ;./main.h: 15: _Bool sendSpiReadRequest = 0;
+[v _sendSpiReadRequest `a ~T0 @X0 1 e ]
+[i _sendSpiReadRequest
+-> -> 0 `i `a
+]
+"16
+[; ;./main.h: 16: uint8_t flats = 0;
 [v _flats `uc ~T0 @X0 1 e ]
 [i _flats
 -> -> 0 `i `uc
 ]
+"31
+[; ;./main.h: 31: static char statusBuffer[(80)];
+[v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
+"32
+[; ;./main.h: 32: static char lightBlueSerial[(80)];
+[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
+"33
+[; ;./main.h: 33: static uint8_t serialIndex;
+[v _serialIndex `uc ~T0 @X0 1 s ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"78
-[; ;main.c: 78: int main(void) {
+"45 main.c
+[; ;main.c: 45: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"80
-[; ;main.c: 80:     SYSTEM_Initialize();
+"47
+[; ;main.c: 47:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"81
-[; ;main.c: 81:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof (statusBuffer));
+"48
+[; ;main.c: 48:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof (statusBuffer));
 [e ( _RN487X_SetAsyncMessageHandler (2 , &U _statusBuffer -> -> # _statusBuffer `ui `uc ]
-"84
-[; ;main.c: 84:     (INTCONbits.GIE = 1);
+"51
+[; ;main.c: 51:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"87
-[; ;main.c: 87:     (INTCONbits.PEIE = 1);
+"54
+[; ;main.c: 54:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"88
-[; ;main.c: 88:     BMA253_Initialize();
+"55
+[; ;main.c: 55:     BMA253_Initialize();
 [e ( _BMA253_Initialize ..  ]
-"89
-[; ;main.c: 89:     RN487X_Init();
+"56
+[; ;main.c: 56:     RN487X_Init();
 [e ( _RN487X_Init ..  ]
-"90
-[; ;main.c: 90:     LIGHTBLUE_Initialize();
+"57
+[; ;main.c: 57:     LIGHTBLUE_Initialize();
 [e ( _LIGHTBLUE_Initialize ..  ]
-"91
-[; ;main.c: 91:     while (1) {
-[e :U 1701 ]
+"58
+[; ;main.c: 58:     while (1) {
+[e :U 1700 ]
 {
-"92
-[; ;main.c: 92:         if (RN487X_IsConnected() == 1) {
-[e $ ! == -> ( _RN487X_IsConnected ..  `i -> 1 `i 1703  ]
+"59
+[; ;main.c: 59:         if (RN487X_IsConnected() == 1) {
+[e $ ! == -> ( _RN487X_IsConnected ..  `i -> 1 `i 1702  ]
 {
-"93
-[; ;main.c: 93:             service_acceleremoterInterrupt();
+"60
+[; ;main.c: 60:             service_acceleremoterInterrupt();
 [e ( _service_acceleremoterInterrupt ..  ]
-"94
-[; ;main.c: 94:             if ((TMR0_HasOverflowOccured()) == 1) {
-[e $ ! == -> ( _TMR0_HasOverflowOccured ..  `i -> 1 `i 1704  ]
+"61
+[; ;main.c: 61:             send_spi_read();
+[e ( _send_spi_read ..  ]
+"62
+[; ;main.c: 62:             service_pushed();
+[e ( _service_pushed ..  ]
+"63
+[; ;main.c: 63:             if ((PIR0bits.TMR0IF) == 1) {
+[e $ ! == -> . . _PIR0bits 0 3 `i -> 1 `i 1703  ]
 {
-"95
-[; ;main.c: 95:                 (PIR0bits.TMR0IF = 0);
+"64
+[; ;main.c: 64:                 (PIR0bits.TMR0IF = 0);
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-"102
-[; ;main.c: 102:             } else {
+"66
+[; ;main.c: 66:                 LIGHTBLUE_TemperatureSensor();
+[e ( _LIGHTBLUE_TemperatureSensor ..  ]
+"68
+[; ;main.c: 68:                 LIGHTBLUE_PushButton();
+[e ( _LIGHTBLUE_PushButton ..  ]
+"69
+[; ;main.c: 69:                 LIGHTBLUE_LedState();
+[e ( _LIGHTBLUE_LedState ..  ]
+"70
+[; ;main.c: 70:                 LIGHTBLUE_SendProtocolVersion();
+[e ( _LIGHTBLUE_SendProtocolVersion ..  ]
+"71
+[; ;main.c: 71:             } else {
 }
-[e $U 1705  ]
-[e :U 1704 ]
-{
-"103
-[; ;main.c: 103:                 while (RN487X_DataReady()) {
-[e $U 1706  ]
-[e :U 1707 ]
-{
-"104
-[; ;main.c: 104:                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-[e ( _LIGHTBLUE_ParseIncomingPacket (1 -> ( _RN487X_Read ..  `uc ]
-"105
-[; ;main.c: 105:                 }
-}
-[e :U 1706 ]
-"103
-[; ;main.c: 103:                 while (RN487X_DataReady()) {
-[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1707  ]
-[e :U 1708 ]
-"106
-[; ;main.c: 106:                 while (uart[UART_CDC].DataReady()) {
-[e $U 1709  ]
-[e :U 1710 ]
-{
-"107
-[; ;main.c: 107:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
-"108
-[; ;main.c: 108:                     if ((lightBlueSerial[serialIndex] == '\r')
-[e $ ! || || == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 13 `ui == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 10 `ui == -> _serialIndex `ui - -> # _lightBlueSerial `ui -> -> 1 `i `ui 1712  ]
-"110
-[; ;main.c: 110:                             || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-{
-"111
-[; ;main.c: 111:                         lightBlueSerial[serialIndex] = '\0';
-[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> -> 0 `ui `uc ]
-"112
-[; ;main.c: 112:                         LIGHTBLUE_SendSerialData(lightBlueSerial);
-[e ( _LIGHTBLUE_SendSerialData (1 &U _lightBlueSerial ]
-"113
-[; ;main.c: 113:                         serialIndex = 0;
-[e = _serialIndex -> -> 0 `i `uc ]
-"114
-[; ;main.c: 114:                     } else {
-}
-[e $U 1713  ]
-[e :U 1712 ]
-{
-"115
-[; ;main.c: 115:                         serialIndex++;
-[e ++ _serialIndex -> -> 1 `i `uc ]
-"116
-[; ;main.c: 116:                     }
-}
-[e :U 1713 ]
-"117
-[; ;main.c: 117:                 }
-}
-[e :U 1709 ]
-"106
-[; ;main.c: 106:                 while (uart[UART_CDC].DataReady()) {
-[e $ != -> ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1710  ]
-[e :U 1711 ]
-"119
-[; ;main.c: 119:             }
-}
-[e :U 1705 ]
-"120
-[; ;main.c: 120:         } else {
-}
-[e $U 1714  ]
+[e $U 1704  ]
 [e :U 1703 ]
 {
-"121
-[; ;main.c: 121:             while (RN487X_DataReady()) {
-[e $U 1715  ]
-[e :U 1716 ]
+"72
+[; ;main.c: 72:                 while (RN487X_DataReady()) {
+[e $U 1705  ]
+[e :U 1706 ]
 {
-"122
-[; ;main.c: 122:                 uart[UART_CDC].Write(RN487X_Read());
-[e ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
-"123
-[; ;main.c: 123:             }
+"73
+[; ;main.c: 73:                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+[e ( _LIGHTBLUE_ParseIncomingPacket (1 -> ( _RN487X_Read ..  `uc ]
+"74
+[; ;main.c: 74:                 }
 }
+[e :U 1705 ]
+"72
+[; ;main.c: 72:                 while (RN487X_DataReady()) {
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1706  ]
+[e :U 1707 ]
+"75
+[; ;main.c: 75:                 while (uart[UART_CDC].DataReady()) {
+[e $U 1708  ]
+[e :U 1709 ]
+{
+"76
+[; ;main.c: 76:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
+"77
+[; ;main.c: 77:                     if ((lightBlueSerial[serialIndex] == '\r')
+[e $ ! || || == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 13 `ui == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 10 `ui == -> _serialIndex `ui - -> # _lightBlueSerial `ui -> -> 1 `i `ui 1711  ]
+"79
+[; ;main.c: 79:                             || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
+{
+"80
+[; ;main.c: 80:                         lightBlueSerial[serialIndex] = '\0';
+[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> -> 0 `ui `uc ]
+"81
+[; ;main.c: 81:                         LIGHTBLUE_SendSerialData(lightBlueSerial);
+[e ( _LIGHTBLUE_SendSerialData (1 &U _lightBlueSerial ]
+"82
+[; ;main.c: 82:                         serialIndex = 0;
+[e = _serialIndex -> -> 0 `i `uc ]
+"83
+[; ;main.c: 83:                     } else {
+}
+[e $U 1712  ]
+[e :U 1711 ]
+{
+"84
+[; ;main.c: 84:                         serialIndex++;
+[e ++ _serialIndex -> -> 1 `i `uc ]
+"85
+[; ;main.c: 85:                     }
+}
+[e :U 1712 ]
+"86
+[; ;main.c: 86:                 }
+}
+[e :U 1708 ]
+"75
+[; ;main.c: 75:                 while (uart[UART_CDC].DataReady()) {
+[e $ != -> ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1709  ]
+[e :U 1710 ]
+"88
+[; ;main.c: 88:             }
+}
+[e :U 1704 ]
+"89
+[; ;main.c: 89:         } else {
+}
+[e $U 1713  ]
+[e :U 1702 ]
+{
+"90
+[; ;main.c: 90:             while (RN487X_DataReady()) {
+[e $U 1714  ]
 [e :U 1715 ]
-"121
-[; ;main.c: 121:             while (RN487X_DataReady()) {
-[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1716  ]
-[e :U 1717 ]
-"124
-[; ;main.c: 124:             while (uart[UART_CDC].DataReady()) {
-[e $U 1718  ]
-[e :U 1719 ]
 {
-"125
-[; ;main.c: 125:                 RN487X.Write(uart[UART_CDC].Read());
-[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
-"126
-[; ;main.c: 126:             }
-}
-[e :U 1718 ]
-"124
-[; ;main.c: 124:             while (uart[UART_CDC].DataReady()) {
-[e $ != -> ( *U . *U + &U _uart * -> . `E12839 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1719  ]
-[e :U 1720 ]
-"127
-[; ;main.c: 127:         }
+"91
+[; ;main.c: 91:                 uart[UART_CDC].Write(RN487X_Read());
+[e ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
+"92
+[; ;main.c: 92:             }
 }
 [e :U 1714 ]
-"128
-[; ;main.c: 128:     }
+"90
+[; ;main.c: 90:             while (RN487X_DataReady()) {
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1715  ]
+[e :U 1716 ]
+"93
+[; ;main.c: 93:             while (uart[UART_CDC].DataReady()) {
+[e $U 1717  ]
+[e :U 1718 ]
+{
+"94
+[; ;main.c: 94:                 RN487X.Write(uart[UART_CDC].Read());
+[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
+"95
+[; ;main.c: 95:             }
 }
-[e :U 1700 ]
-[e $U 1701  ]
-[e :U 1702 ]
-"129
-[; ;main.c: 129:     return 0;
+[e :U 1717 ]
+"93
+[; ;main.c: 93:             while (uart[UART_CDC].DataReady()) {
+[e $ != -> ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1718  ]
+[e :U 1719 ]
+"96
+[; ;main.c: 96:         }
+}
+[e :U 1713 ]
+"97
+[; ;main.c: 97:     }
+}
+[e :U 1699 ]
+[e $U 1700  ]
+[e :U 1701 ]
+"98
+[; ;main.c: 98:     return 0;
 [e ) -> 0 `i ]
-[e $UE 1699  ]
-"130
-[; ;main.c: 130: }
-[e :UE 1699 ]
+[e $UE 1698  ]
+"99
+[; ;main.c: 99: }
+[e :UE 1698 ]
 }
-"132
-[; ;main.c: 132: void service_acceleremoterInterrupt(void) {
+"101
+[; ;main.c: 101: void service_pushed(void) {
+[v _service_pushed `(v ~T0 @X0 1 ef ]
+{
+[e :U _service_pushed ]
+[f ]
+"102
+[; ;main.c: 102:     if (pushed) {
+[e $ ! != -> _pushed `i -> 0 `i 1721  ]
+{
+"103
+[; ;main.c: 103:         pushed = 0;
+[e = _pushed -> -> 0 `i `a ]
+"104
+[; ;main.c: 104:     }
+}
+[e :U 1721 ]
+"105
+[; ;main.c: 105: }
+[e :UE 1720 ]
+}
+"107
+[; ;main.c: 107: void service_acceleremoterInterrupt(void) {
 [v _service_acceleremoterInterrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _service_acceleremoterInterrupt ]
 [f ]
-"133
-[; ;main.c: 133:     if (ACC_Interrupt_is_high()) {
-[e $ ! != -> ( _ACC_Interrupt_is_high ..  `i -> 0 `i 1722  ]
+"108
+[; ;main.c: 108:     if ((INTERRUPTbits.ACC == 1)) {
+[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1723  ]
 {
-"134
-[; ;main.c: 134:         (iNTERRUPTbits.ACC = 0);
-[e = . . _iNTERRUPTbits 0 0 -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:         accelerometerInterruptBits.FLAT = 1;
+"109
+[; ;main.c: 109:         (INTERRUPTbits.ACC = 0);
+[e = . . _INTERRUPTbits 0 0 -> -> 0 `i `uc ]
+"110
+[; ;main.c: 110:         accelerometerInterruptBits.FLAT = 1;
 [e = . . _accelerometerInterruptBits 0 1 -> -> 1 `i `uc ]
-"136
-[; ;main.c: 136:         flats++;
+"111
+[; ;main.c: 111:         flats++;
 [e ++ _flats -> -> 1 `i `uc ]
-"137
-[; ;main.c: 137:         if (flats > 1) {
-[e $ ! > -> _flats `i -> 1 `i 1723  ]
+"112
+[; ;main.c: 112:         if (flats > 1) {
+[e $ ! > -> _flats `i -> 1 `i 1724  ]
 {
-"138
-[; ;main.c: 138:             LIGHTBLUE_AccState();
+"113
+[; ;main.c: 113:             LIGHTBLUE_AccState();
 [e ( _LIGHTBLUE_AccState ..  ]
-"139
-[; ;main.c: 139:             flats = 0;
+"114
+[; ;main.c: 114:             flats = 0;
 [e = _flats -> -> 0 `i `uc ]
-"140
-[; ;main.c: 140:             accelerometerInterruptBits.FLAT = 0;
+"115
+[; ;main.c: 115:             accelerometerInterruptBits.FLAT = 0;
 [e = . . _accelerometerInterruptBits 0 1 -> -> 0 `i `uc ]
-"141
-[; ;main.c: 141:         }
+"116
+[; ;main.c: 116:         }
+}
+[e :U 1724 ]
+"117
+[; ;main.c: 117:     }
 }
 [e :U 1723 ]
-"142
-[; ;main.c: 142:     }
+"118
+[; ;main.c: 118: }
+[e :UE 1722 ]
 }
-[e :U 1722 ]
-"143
-[; ;main.c: 143: }
-[e :UE 1721 ]
+"120
+[; ;main.c: 120: void send_spi_read(void) {
+[v _send_spi_read `(v ~T0 @X0 1 ef ]
+{
+[e :U _send_spi_read ]
+[f ]
+"121
+[; ;main.c: 121:     static uint8_t data[4];
+[v F12935 `uc ~T0 @X0 -> 4 `i s data ]
+"122
+[; ;main.c: 122:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 1728 ]
+{
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 1727 ]
+"123
+[; ;main.c: 123:     if (SPI2_Open(0)) {
+[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12592 `i -> 0 `i 1729  ]
+{
+"124
+[; ;main.c: 124:         SPI2_ReadBlock(data, 4);
+[e ( _SPI2_ReadBlock (2 , -> &U F12935 `*v -> -> 4 `i `ui ]
+"125
+[; ;main.c: 125:         do { LATCbits.LATC0 = 1; } while(0);
+[e :U 1732 ]
+{
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 1731 ]
+"126
+[; ;main.c: 126:         SPI2_Close();
+[e ( _SPI2_Close ..  ]
+"127
+[; ;main.c: 127:         sendSpiReadRequest = 0;
+[e = _sendSpiReadRequest -> -> 0 `i `a ]
+"129
+[; ;main.c: 129:     }
+}
+[e :U 1729 ]
+"130
+[; ;main.c: 130: }
+[e :UE 1725 ]
 }
