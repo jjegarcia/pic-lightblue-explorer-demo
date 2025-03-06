@@ -8,6 +8,8 @@
 # 2 "<built-in>" 2
 # 1 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
 # 27 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 1 "mcc_generated_files/application/LIGHTBLUE_service.h" 1
+# 26 "mcc_generated_files/application/LIGHTBLUE_service.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
 
 
@@ -113,7 +115,7 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 27 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 26 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
@@ -177,32 +179,10 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 28 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 27 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 29 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
-
-# 1 "mcc_generated_files/application/LIGHTBLUE_service.h" 1
-# 36 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_Initialize(void);
-# 50 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_TemperatureSensor(void);
-# 64 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_AccelSensor(void);
-# 75 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_PushButton(void);
-# 89 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_LedState(void);
-# 100 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendProtocolVersion(void);
-# 111 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendSerialData(char* serialData);
-# 126 "mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
-
-void LIGHTBLUE_AccState(void);
-# 30 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
-
+# 28 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 
 # 1 "mcc_generated_files/application/../rn487x/rn487x.h" 1
@@ -287,7 +267,7 @@ _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
 _Bool RN487X_DataReady(void);
 # 293 "mcc_generated_files/application/../rn487x/rn487x.h"
 uint8_t RN487X_Read(void);
-# 33 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 30 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "mcc_generated_files/application/../rn487x/rn487x_interface.h" 1
 # 37 "mcc_generated_files/application/../rn487x/rn487x_interface.h"
@@ -323,7 +303,7 @@ typedef struct
 extern const iRN487X_FunctionPtrs_t RN487X;
 # 75 "mcc_generated_files/application/../rn487x/rn487x_interface.h"
 _Bool RN487X_IsConnected(void);
-# 34 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 31 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "mcc_generated_files/application/BMA253_accel.h" 1
 # 223 "mcc_generated_files/application/BMA253_accel.h"
@@ -359,7 +339,7 @@ typedef union {
     uint8_t AccelerometerInterruptBits;
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
-# 35 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 32 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "mcc_generated_files/application/MCP9844_temp_sensor.h" 1
 # 112 "mcc_generated_files/application/MCP9844_temp_sensor.h"
@@ -368,7 +348,7 @@ void MCP9844_GetTemperatureValue(int16_t *temperature);
 uint16_t MCP9844_GetManufacture(void);
 # 130 "mcc_generated_files/application/MCP9844_temp_sensor.h"
 uint16_t MCP9844_GetDevice(void);
-# 36 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 33 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "mcc_generated_files/application/../pin_manager.h" 1
 # 54 "mcc_generated_files/application/../pin_manager.h"
@@ -20577,7 +20557,7 @@ typedef union {
 }INTERRUPTbits_t;
 
 volatile INTERRUPTbits_t INTERRUPTbits;
-# 37 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+# 34 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "mcc_generated_files/application/../drivers/uart.h" 1
 # 34 "mcc_generated_files/application/../drivers/uart.h"
@@ -20870,10 +20850,23 @@ typedef enum {
 typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
 
 extern const uart_functions_t uart[];
-# 38 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
-# 177 "mcc_generated_files/application/LIGHTBLUE_service.c"
-typedef enum
-{
+# 35 "mcc_generated_files/application/LIGHTBLUE_service.h" 2
+# 46 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_Initialize(void);
+# 60 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_TemperatureSensor(void);
+# 74 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_AccelSensor(void);
+# 85 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_PushButton(void);
+# 99 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_LedState(void);
+# 110 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendProtocolVersion(void);
+# 121 "mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendSerialData(char* serialData);
+# 274 "mcc_generated_files/application/LIGHTBLUE_service.h"
+typedef enum {
     PROTOCOL_VERSION_ID = 'V',
     LED_STATE_ID = 'L',
     BUTTON_STATE_ID = 'P',
@@ -20882,17 +20875,11 @@ typedef enum
     SERIAL_DATA_ID = 'S',
     ERROR_ID = 'R',
     UI_CONFIG_DATA_ID = 'U',
-    ACC_STATE = 'A'
-}PROTOCOL_PACKET_TYPES_t;
-
-
-
-
-
-
-
-typedef enum
-{
+    ACC_STATE = 'A',
+    THERMOCOUPLE_TEMPERATURE_ID = 'K'
+} PROTOCOL_PACKET_TYPES_t;
+# 294 "mcc_generated_files/application/LIGHTBLUE_service.h"
+typedef enum {
     IDLE = 0,
     SEQUENCE_NUMBER = 1,
     PACKET_ID = 2,
@@ -20901,15 +20888,15 @@ typedef enum
     PAYLOAD_0 = 5,
     PAYLOAD_1 = 6
 
-}PACKET_PARSER_STATE_t;
+} PACKET_PARSER_STATE_t;
 
 const char * const protocol_version_number = "1.1.0";
 static char _hex[] = "0123456789ABCDEF";
 static uint8_t sequenceNumber = 0;
 static volatile rn487x_gpio_bitmap_t bitMap;
-# 227 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 324 "mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_SendPacket(char packetID, char* payload);
-# 236 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 333 "mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
 
 
@@ -20934,9 +20921,9 @@ static uint8_t LIGHTBLUE_GetButtonValue(void);
 
 
 static uint8_t LIGHTBLUE_GetAccState(void);
-# 269 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 366 "mcc_generated_files/application/LIGHTBLUE_service.h"
 static uint8_t LIGHTBLUE_GetDataLedValue(void);
-# 278 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 375 "mcc_generated_files/application/LIGHTBLUE_service.h"
 static uint8_t LIGHTBLUE_GetErrorLedValue(void);
 
 
@@ -20954,17 +20941,22 @@ static void LIGHTBLUE_SetErrorLedValue(_Bool value);
 
 
 static void LIGHTBLUE_UpdateErrorLed(void);
-# 308 "mcc_generated_files/application/LIGHTBLUE_service.c"
+# 405 "mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_PerformAction(char id, uint8_t data);
 
-void LIGHTBLUE_Initialize(void)
-{
+void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+
+void LIGHTBLUE_AccState(void);
+void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
+# 27 "mcc_generated_files/application/LIGHTBLUE_service.c" 2
+
+
+void LIGHTBLUE_Initialize(void) {
     bitMap.ioBitMap.gpioBitMap = 0x01;
     bitMap.ioStateBitMap.gpioStateBitMap = 0x01;
 }
 
-void LIGHTBLUE_TemperatureSensor(void)
-{
+void LIGHTBLUE_TemperatureSensor(void) {
     char payload[5];
     int16_t temperature;
 
@@ -20976,8 +20968,16 @@ void LIGHTBLUE_TemperatureSensor(void)
     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
 }
 
-void LIGHTBLUE_AccelSensor(void)
-{
+void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
+    char payload[10];
+    *payload = '\0';
+    for (int i = 0; i < 4; i++) {
+        LIGHTBLUE_SplitByte(payload,*temperature++);
+    }
+    LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+}
+
+void LIGHTBLUE_AccelSensor(void) {
     char payload[13];
     BMA253_ACCEL_DATA_t accelData;
 
@@ -20992,8 +20992,7 @@ void LIGHTBLUE_AccelSensor(void)
     LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
 }
 
-void LIGHTBLUE_PushButton(void)
-{
+void LIGHTBLUE_PushButton(void) {
     char payload[3];
     uint8_t button = LIGHTBLUE_GetButtonValue();
 
@@ -21003,8 +21002,7 @@ void LIGHTBLUE_PushButton(void)
     LIGHTBLUE_SendPacket(BUTTON_STATE_ID, payload);
 }
 
-void LIGHTBLUE_AccState(void)
-{
+void LIGHTBLUE_AccState(void) {
     char payload[3];
     uint8_t acc = LIGHTBLUE_GetAccState();
 
@@ -21014,9 +21012,7 @@ void LIGHTBLUE_AccState(void)
     LIGHTBLUE_SendPacket(ACC_STATE, payload);
 }
 
-
-void LIGHTBLUE_LedState(void)
-{
+void LIGHTBLUE_LedState(void) {
     char payload[3];
     uint8_t led;
 
@@ -21034,16 +21030,14 @@ void LIGHTBLUE_LedState(void)
     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
 }
 
-void LIGHTBLUE_SendProtocolVersion(void)
-{
+void LIGHTBLUE_SendProtocolVersion(void) {
     char payload[19];
     uint8_t value;
     uint8_t dataIndex;
 
     *payload = '\0';
 
-    for(dataIndex = 0; dataIndex < strlen(protocol_version_number); dataIndex++)
-    {
+    for (dataIndex = 0; dataIndex < strlen(protocol_version_number); dataIndex++) {
         value = protocol_version_number[dataIndex];
         LIGHTBLUE_SplitByte(payload, value);
     }
@@ -21051,8 +21045,7 @@ void LIGHTBLUE_SendProtocolVersion(void)
     LIGHTBLUE_SendPacket(PROTOCOL_VERSION_ID, payload);
 }
 
-void LIGHTBLUE_SendSerialData(char* serialData)
-{
+void LIGHTBLUE_SendSerialData(char* serialData) {
     uint8_t length = strlen(serialData) * 2;
 
     RN487X.Write(('['));
@@ -21060,23 +21053,20 @@ void LIGHTBLUE_SendSerialData(char* serialData)
     RN487X.Write(SERIAL_DATA_ID);
     RN487X.Write((_hex[(length >> 4) & 0xF]));
     RN487X.Write((_hex[(length) & 0xF]));
-    while(*serialData)
-    {
+    while (*serialData) {
         RN487X.Write((_hex[(*serialData >> 4) & 0xF]));
         RN487X.Write((_hex[(*serialData++) & 0xF]));
     }
     RN487X.Write((']'));
 }
 
-void LIGHTBLUE_ParseIncomingPacket(char receivedByte)
-{
+void LIGHTBLUE_ParseIncomingPacket(char receivedByte) {
     static PACKET_PARSER_STATE_t parserState = IDLE;
     static uint8_t length = 0;
     static uint16_t data = 0;
     static char packetID = '\0';
 
-    switch(parserState)
-    {
+    switch (parserState) {
         case SEQUENCE_NUMBER:
 
             parserState = PACKET_ID;
@@ -21096,12 +21086,9 @@ void LIGHTBLUE_ParseIncomingPacket(char receivedByte)
         case PAYLOAD_0:
             data = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
             length--;
-            if (length == 0)
-            {
+            if (length == 0) {
                 parserState = IDLE;
-            }
-            else
-            {
+            } else {
                 parserState = PAYLOAD_1;
             }
             break;
@@ -21109,108 +21096,86 @@ void LIGHTBLUE_ParseIncomingPacket(char receivedByte)
             data = (data << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
             LIGHTBLUE_PerformAction(packetID, data);
             length--;
-            if (length == 0)
-            {
+            if (length == 0) {
                 parserState = IDLE;
-            }
-            else
-            {
+            } else {
                 parserState = PAYLOAD_0;
             }
             break;
         case IDLE:
         default:
-            if (receivedByte == ('['))
-            {
+            if (receivedByte == ('[')) {
                 parserState = SEQUENCE_NUMBER;
             }
             break;
     }
 }
 
-static void LIGHTBLUE_SendPacket(char packetID, char* payload)
-{
+static void LIGHTBLUE_SendPacket(char packetID, char* payload) {
     RN487X.Write(('['));
     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
     RN487X.Write(packetID);
     RN487X.Write((_hex[(strlen(payload) >> 4) & 0xF]));
     RN487X.Write((_hex[(strlen(payload)) & 0xF]));
-    while (*payload)
-    {
-        RN487X.Write((*(uint8_t *)payload++));
+    while (*payload) {
+        RN487X.Write((*(uint8_t *) payload++));
     }
     RN487X.Write((']'));
 }
 
-static void LIGHTBLUE_SplitWord(char* payload, int16_t value)
-{
+static void LIGHTBLUE_SplitWord(char* payload, int16_t value) {
     LIGHTBLUE_SplitByte(payload, value);
     LIGHTBLUE_SplitByte(payload, value >> 8);
 }
 
-static void LIGHTBLUE_SplitByte(char* payload, int8_t value)
-{
+static void LIGHTBLUE_SplitByte(char* payload, int8_t value) {
     payload += strlen(payload);
     *payload++ = (_hex[(value >> 4) & 0xF]);
     *payload++ = (_hex[(value) & 0xF]);
     *payload = '\0';
 }
 
-static uint8_t LIGHTBLUE_GetButtonValue(void)
-{
+static uint8_t LIGHTBLUE_GetButtonValue(void) {
     return (0x01) - PORTAbits.RA7;
 }
 
-static uint8_t LIGHTBLUE_GetAccState(void)
-{
+static uint8_t LIGHTBLUE_GetAccState(void) {
     return accelerometerInterruptBits.AccelerometerInterruptBits;
 }
 
-static uint8_t LIGHTBLUE_GetDataLedValue(void)
-{
+static uint8_t LIGHTBLUE_GetDataLedValue(void) {
     return (0x01) - PORTAbits.RA5;
 }
 
-static uint8_t LIGHTBLUE_GetErrorLedValue(void)
-{
+static uint8_t LIGHTBLUE_GetErrorLedValue(void) {
     return (0x01) - (bitMap.ioStateBitMap.p2_2_state);
 }
 
-static void LIGHTBLUE_SetErrorLedValue(_Bool value)
-{
+static void LIGHTBLUE_SetErrorLedValue(_Bool value) {
     (bitMap.ioStateBitMap.p2_2_state) = (0x01) - value;
     LIGHTBLUE_UpdateErrorLed();
 }
 
-static void LIGHTBLUE_UpdateErrorLed(void)
-{
+static void LIGHTBLUE_UpdateErrorLed(void) {
     RN487X_EnterCmdMode();
     RN487X.DelayMs((20));
     RN487X_SetOutputs(bitMap);
     RN487X_EnterDataMode();
 }
 
-static void LIGHTBLUE_PerformAction(char id, uint8_t data)
-{
+static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
     uint8_t led;
 
-    switch(id)
-    {
+    switch (id) {
         case LED_STATE_ID:
             led = (data >> 4) & (0x01);
-            if(led == (0x00))
-            {
-                if((data & (0x01)) == (0x00))
-                {
+            if (led == (0x00)) {
+                if ((data & (0x01)) == (0x00)) {
                     do { LATAbits.LATA5 = 1; } while(0);
-                }
-                else
-                {
+                } else {
                     do { LATAbits.LATA5 = 0; } while(0);
                 }
-            }
-            else
-            {
+            } else {
                 LIGHTBLUE_SetErrorLedValue(data & (0x01));
             }
             break;

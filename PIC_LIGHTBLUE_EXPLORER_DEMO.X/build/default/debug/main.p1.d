@@ -13,7 +13,8 @@ mcc_generated_files/eusart1.h  \
 mcc_generated_files/delay.h  \
 mcc_generated_files/drivers/i2c_simple_master.h  \
 mcc_generated_files/application/LIGHTBLUE_service.h  \
-mcc_generated_files/rn487x/rn487x_interface.h  \
-mcc_generated_files/rn487x/rn487x.h  \
-mcc_generated_files/drivers/uart.h  \
-mcc_generated_files/application/BMA253_accel.h 
+mcc_generated_files/application/../rn487x/rn487x.h  \
+mcc_generated_files/application/../rn487x/rn487x_interface.h  \
+mcc_generated_files/application/BMA253_accel.h  \
+mcc_generated_files/application/MCP9844_temp_sensor.h  \
+mcc_generated_files/application/../drivers/uart.h 

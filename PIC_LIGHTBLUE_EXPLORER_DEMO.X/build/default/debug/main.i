@@ -20735,67 +20735,73 @@ void PMD_Initialize(void);
 # 6 "./main.h" 2
 
 # 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
-# 36 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_Initialize(void);
-# 50 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_TemperatureSensor(void);
-# 64 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_AccelSensor(void);
-# 75 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_PushButton(void);
-# 89 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_LedState(void);
-# 100 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendProtocolVersion(void);
-# 111 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendSerialData(char* serialData);
-# 126 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+# 27 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
 
-void LIGHTBLUE_AccState(void);
-# 7 "./main.h" 2
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
 
-# 1 "./mcc_generated_files/rn487x/rn487x_interface.h" 1
-# 37 "./mcc_generated_files/rn487x/rn487x_interface.h"
-typedef enum
-{
-    TEST_MODE = 0x00,
-    APPLICATION_MODE = 0x01
-}RN487X_SYSTEM_MODES_t;
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
 
 
 
 
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
-typedef struct
-{
 
-    void (*Write)(uint8_t);
-    uint8_t (*Read)(void);
-    _Bool (*TransmitDone)(void);
-    _Bool (*DataReady)(void);
 
-    void (*IndicateRx)(_Bool);
 
-    void (*ResetModule)(_Bool);
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 27 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
-    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
 
-    void (*DelayMs)(uint16_t);
 
-    void (*AsyncHandler)(char*);
-}iRN487X_FunctionPtrs_t;
-
-extern const iRN487X_FunctionPtrs_t RN487X;
-# 75 "./mcc_generated_files/rn487x/rn487x_interface.h"
-_Bool RN487X_IsConnected(void);
-# 8 "./main.h" 2
-
-# 1 "./mcc_generated_files/rn487x/rn487x.h" 1
-# 31 "./mcc_generated_files/rn487x/rn487x.h"
-# 1 "./mcc_generated_files/rn487x/rn487x.h" 1
-# 31 "./mcc_generated_files/rn487x/rn487x.h" 2
-# 53 "./mcc_generated_files/rn487x/rn487x.h"
+# 1 "./mcc_generated_files/application/../rn487x/rn487x.h" 1
+# 31 "./mcc_generated_files/application/../rn487x/rn487x.h"
+# 1 "./mcc_generated_files/application/../rn487x/rn487x.h" 1
+# 31 "./mcc_generated_files/application/../rn487x/rn487x.h" 2
+# 53 "./mcc_generated_files/application/../rn487x/rn487x.h"
 typedef union
 {
     uint8_t gpioBitMap;
@@ -20843,68 +20849,73 @@ typedef union
         rn487x_gpio_stateBitMap_t ioStateBitMap;
     };
 }rn487x_gpio_bitmap_t;
-# 111 "./mcc_generated_files/rn487x/rn487x.h"
+# 111 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_Init(void);
-# 124 "./mcc_generated_files/rn487x/rn487x.h"
+# 124 "./mcc_generated_files/application/../rn487x/rn487x.h"
 void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
-# 140 "./mcc_generated_files/rn487x/rn487x.h"
+# 140 "./mcc_generated_files/application/../rn487x/rn487x.h"
 uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
-# 156 "./mcc_generated_files/rn487x/rn487x.h"
+# 156 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
-# 168 "./mcc_generated_files/rn487x/rn487x.h"
+# 168 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_ReadDefaultResponse(void);
-# 182 "./mcc_generated_files/rn487x/rn487x.h"
+# 182 "./mcc_generated_files/application/../rn487x/rn487x.h"
 void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
-# 194 "./mcc_generated_files/rn487x/rn487x.h"
+# 194 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_EnterCmdMode(void);
-# 206 "./mcc_generated_files/rn487x/rn487x.h"
+# 206 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_EnterDataMode(void);
-# 219 "./mcc_generated_files/rn487x/rn487x.h"
+# 219 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
-# 232 "./mcc_generated_files/rn487x/rn487x.h"
+# 232 "./mcc_generated_files/application/../rn487x/rn487x.h"
 rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
-# 245 "./mcc_generated_files/rn487x/rn487x.h"
+# 245 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_RebootCmd(void);
-# 257 "./mcc_generated_files/rn487x/rn487x.h"
+# 257 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_Disconnect(void);
-# 271 "./mcc_generated_files/rn487x/rn487x.h"
+# 271 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
-# 283 "./mcc_generated_files/rn487x/rn487x.h"
+# 283 "./mcc_generated_files/application/../rn487x/rn487x.h"
 _Bool RN487X_DataReady(void);
-# 293 "./mcc_generated_files/rn487x/rn487x.h"
+# 293 "./mcc_generated_files/application/../rn487x/rn487x.h"
 uint8_t RN487X_Read(void);
-# 9 "./main.h" 2
+# 30 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
-# 1 "./mcc_generated_files/drivers/uart.h" 1
-# 34 "./mcc_generated_files/drivers/uart.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
-# 34 "./mcc_generated_files/drivers/uart.h" 2
+# 1 "./mcc_generated_files/application/../rn487x/rn487x_interface.h" 1
+# 37 "./mcc_generated_files/application/../rn487x/rn487x_interface.h"
+typedef enum
+{
+    TEST_MODE = 0x00,
+    APPLICATION_MODE = 0x01
+}RN487X_SYSTEM_MODES_t;
 
 
 
 
 
+typedef struct
+{
 
+    void (*Write)(uint8_t);
+    uint8_t (*Read)(void);
+    _Bool (*TransmitDone)(void);
+    _Bool (*DataReady)(void);
 
+    void (*IndicateRx)(_Bool);
 
-typedef enum {
-    UART_CDC ,
-    UART_BLE
-} uart_configurations_t;
+    void (*ResetModule)(_Bool);
 
+    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
 
+    void (*DelayMs)(uint16_t);
 
+    void (*AsyncHandler)(char*);
+}iRN487X_FunctionPtrs_t;
 
-
-typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-
-extern const uart_functions_t uart[];
-# 10 "./main.h" 2
+extern const iRN487X_FunctionPtrs_t RN487X;
+# 75 "./mcc_generated_files/application/../rn487x/rn487x_interface.h"
+_Bool RN487X_IsConnected(void);
+# 31 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
 
 # 1 "./mcc_generated_files/application/BMA253_accel.h" 1
 # 223 "./mcc_generated_files/application/BMA253_accel.h"
@@ -20940,7 +20951,146 @@ typedef union {
     uint8_t AccelerometerInterruptBits;
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
-# 11 "./main.h" 2
+# 32 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+# 1 "./mcc_generated_files/application/MCP9844_temp_sensor.h" 1
+# 112 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
+void MCP9844_GetTemperatureValue(int16_t *temperature);
+# 121 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
+uint16_t MCP9844_GetManufacture(void);
+# 130 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
+uint16_t MCP9844_GetDevice(void);
+# 33 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+
+# 1 "./mcc_generated_files/application/../drivers/uart.h" 1
+# 34 "./mcc_generated_files/application/../drivers/uart.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
+# 34 "./mcc_generated_files/application/../drivers/uart.h" 2
+
+
+
+
+
+
+
+
+typedef enum {
+    UART_CDC ,
+    UART_BLE
+} uart_configurations_t;
+
+
+
+
+
+typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+
+extern const uart_functions_t uart[];
+# 35 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+# 46 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_Initialize(void);
+# 60 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_TemperatureSensor(void);
+# 74 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_AccelSensor(void);
+# 85 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_PushButton(void);
+# 99 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_LedState(void);
+# 110 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendProtocolVersion(void);
+# 121 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendSerialData(char* serialData);
+# 274 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+typedef enum {
+    PROTOCOL_VERSION_ID = 'V',
+    LED_STATE_ID = 'L',
+    BUTTON_STATE_ID = 'P',
+    TEMPERATURE_DATA_ID = 'T',
+    ACCEL_DATA_ID = 'X',
+    SERIAL_DATA_ID = 'S',
+    ERROR_ID = 'R',
+    UI_CONFIG_DATA_ID = 'U',
+    ACC_STATE = 'A',
+    THERMOCOUPLE_TEMPERATURE_ID = 'K'
+} PROTOCOL_PACKET_TYPES_t;
+# 294 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+typedef enum {
+    IDLE = 0,
+    SEQUENCE_NUMBER = 1,
+    PACKET_ID = 2,
+    PAYLOAD_SIZE_0 = 3,
+    PAYLOAD_SIZE_1 = 4,
+    PAYLOAD_0 = 5,
+    PAYLOAD_1 = 6
+
+} PACKET_PARSER_STATE_t;
+
+const char * const protocol_version_number = "1.1.0";
+static char _hex[] = "0123456789ABCDEF";
+static uint8_t sequenceNumber = 0;
+static volatile rn487x_gpio_bitmap_t bitMap;
+# 324 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static void LIGHTBLUE_SendPacket(char packetID, char* payload);
+# 333 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
+
+
+
+
+
+
+
+static void LIGHTBLUE_SplitByte(char* payload, int8_t value);
+
+
+
+
+
+
+
+static uint8_t LIGHTBLUE_GetButtonValue(void);
+
+
+
+
+
+
+static uint8_t LIGHTBLUE_GetAccState(void);
+# 366 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static uint8_t LIGHTBLUE_GetDataLedValue(void);
+# 375 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static uint8_t LIGHTBLUE_GetErrorLedValue(void);
+
+
+
+
+
+
+
+static void LIGHTBLUE_SetErrorLedValue(_Bool value);
+
+
+
+
+
+
+
+static void LIGHTBLUE_UpdateErrorLed(void);
+# 405 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static void LIGHTBLUE_PerformAction(char id, uint8_t data);
+
+void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+
+void LIGHTBLUE_AccState(void);
+void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
+# 7 "./main.h" 2
 # 34 "./main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
@@ -20987,7 +21137,7 @@ int main(void) {
             service_pushed();
             if ((PIR0bits.TMR0IF) == 1) {
                 (PIR0bits.TMR0IF = 0);
-
+                send_spi_read();
                 LIGHTBLUE_TemperatureSensor();
 
                 LIGHTBLUE_PushButton();
@@ -21049,6 +21199,7 @@ void send_spi_read(void) {
         sendSpiReadRequest = 0;
         SPI2_ReadBlock(data, 4);
         do { LATCbits.LATC0 = 1; } while(0);
+        LIGHTBLUE_Send_Thermocouple(data);
         SPI2_Close();
     }
 }

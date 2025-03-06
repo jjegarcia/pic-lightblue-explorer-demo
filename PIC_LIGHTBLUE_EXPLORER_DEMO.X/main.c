@@ -62,7 +62,7 @@ int main(void) {
             service_pushed();
             if (TIMER_FLAG_SET() == true) {
                 RESET_TIMER_INTERRUPT_FLAG;
-
+                send_spi_read();
                 LIGHTBLUE_TemperatureSensor();
                 //                LIGHTBLUE_AccelSensor();
                 LIGHTBLUE_PushButton();
@@ -124,6 +124,7 @@ void send_spi_read(void) {
         sendSpiReadRequest = false;
         SPI2_ReadBlock(data, 4);
         SPI_SS_EXT_DEVICE_SetHigh();
+        LIGHTBLUE_Send_Thermocouple(data);
         SPI2_Close();
     }
 }

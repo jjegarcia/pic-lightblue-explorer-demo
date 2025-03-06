@@ -13,12 +13,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/application/BMA253_accel.h: 284: typedef union {
 [u S1696 `S1697 1 `uc 1 ]
 [n S1696 . . AccelerometerInterruptBits ]
+"57 ./mcc_generated_files/rn487x/rn487x.h
+[s S1689 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S1689 . p2_2 p2_4 p3_5 p1_2 p1_3 reserved ]
+"54
+[u S1688 `uc 1 `S1689 1 ]
+[n S1688 . gpioBitMap . ]
+"76
+[s S1691 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S1691 . p2_2_state p2_4_state p3_5_state p1_2_state p1_3_state reserved ]
+"73
+[u S1690 `uc 1 `S1691 1 ]
+[n S1690 . gpioStateBitMap . ]
+"95
+[s S1693 `S1688 1 `S1690 1 ]
+[n S1693 . ioBitMap ioStateBitMap ]
+"92
+[u S1692 `us 1 `S1693 1 ]
+[n S1692 . gpioMap . ]
 [p mainexit ]
 "77 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 77: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "271 ./mcc_generated_files/rn487x/rn487x.h
-[; ;./mcc_generated_files/rn487x/rn487x.h: 271: _Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
 [v _RN487X_SetAsyncMessageHandler `(a ~T0 @X0 0 ef2`*uc`uc ]
 "420 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 420:     struct {
@@ -35,13 +52,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/application/BMA253_accel.h: 237: void BMA253_Initialize(void);
 [v _BMA253_Initialize `(v ~T0 @X0 0 ef ]
 "111 ./mcc_generated_files/rn487x/rn487x.h
-[; ;./mcc_generated_files/rn487x/rn487x.h: 111: _Bool RN487X_Init(void);
 [v _RN487X_Init `(a ~T0 @X0 0 ef ]
-"36 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 36: void LIGHTBLUE_Initialize(void);
+"46 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 46: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
 "75 ./mcc_generated_files/rn487x/rn487x_interface.h
-[; ;./mcc_generated_files/rn487x/rn487x_interface.h: 75: _Bool RN487X_IsConnected(void);
 [v _RN487X_IsConnected `(a ~T0 @X0 0 ef ]
 "41 ./main.h
 [; ;./main.h: 41: void service_acceleremoterInterrupt(void);
@@ -63,75 +78,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22424
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22424: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
 [v _PIR0bits `VS1020 ~T0 @X0 0 e@1804 ]
-"50 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 50: void LIGHTBLUE_TemperatureSensor(void);
+"60 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 60: void LIGHTBLUE_TemperatureSensor(void);
 [v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 0 ef ]
-"75
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 75: void LIGHTBLUE_PushButton(void);
+"85
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 85: void LIGHTBLUE_PushButton(void);
 [v _LIGHTBLUE_PushButton `(v ~T0 @X0 0 ef ]
-"89
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 89: void LIGHTBLUE_LedState(void);
+"99
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 99: void LIGHTBLUE_LedState(void);
 [v _LIGHTBLUE_LedState `(v ~T0 @X0 0 ef ]
-"100
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 100: void LIGHTBLUE_SendProtocolVersion(void);
+"110
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 110: void LIGHTBLUE_SendProtocolVersion(void);
 [v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 0 ef ]
-"126
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 126: void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+"407
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 407: void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 [v _LIGHTBLUE_ParseIncomingPacket `(v ~T0 @X0 0 ef1`uc ]
 "293 ./mcc_generated_files/rn487x/rn487x.h
-[; ;./mcc_generated_files/rn487x/rn487x.h: 293: uint8_t RN487X_Read(void);
 [v _RN487X_Read `(uc ~T0 @X0 0 ef ]
 "283
-[; ;./mcc_generated_files/rn487x/rn487x.h: 283: _Bool RN487X_DataReady(void);
 [v _RN487X_DataReady `(a ~T0 @X0 0 ef ]
-[v F12854 `(uc ~T0 @X0 0 tf ]
-[v F12856 `(v ~T0 @X0 0 tf1`uc ]
-[v F12859 `(a ~T0 @X0 0 tf ]
-[v F12861 `(a ~T0 @X0 0 tf ]
-[v F12864 `(v ~T0 @X0 0 tf ]
-[v F12863 `(v ~T0 @X0 0 tf1`*F12864 ]
-[v F12867 `(v ~T0 @X0 0 tf ]
-[v F12870 `(v ~T0 @X0 0 tf ]
-[v F12869 `(v ~T0 @X0 0 tf1`*F12870 ]
-[v F12873 `(a ~T0 @X0 0 tf ]
-[v F12875 `(v ~T0 @X0 0 tf ]
-[v F12877 `(v ~T0 @X0 0 tf ]
+[v F13037 `(uc ~T0 @X0 0 tf ]
+[v F13039 `(v ~T0 @X0 0 tf1`uc ]
+[v F13042 `(a ~T0 @X0 0 tf ]
+[v F13044 `(a ~T0 @X0 0 tf ]
+[v F13047 `(v ~T0 @X0 0 tf ]
+[v F13046 `(v ~T0 @X0 0 tf1`*F13047 ]
+[v F13050 `(v ~T0 @X0 0 tf ]
+[v F13053 `(v ~T0 @X0 0 tf ]
+[v F13052 `(v ~T0 @X0 0 tf1`*F13053 ]
+[v F13056 `(a ~T0 @X0 0 tf ]
+[v F13058 `(v ~T0 @X0 0 tf ]
+[v F13060 `(v ~T0 @X0 0 tf ]
 "51 ./mcc_generated_files/drivers/uart.h
-[; ;./mcc_generated_files/drivers/uart.h: 51: typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-[s S1694 `*F12854 1 `*F12856 1 `*F12859 1 `*F12861 1 `*F12863 1 `*F12867 1 `*F12869 1 `*F12873 1 `*F12875 1 `*F12877 1 ]
-[n S1694 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
+[s S1698 `*F13037 1 `*F13039 1 `*F13042 1 `*F13044 1 `*F13046 1 `*F13050 1 `*F13052 1 `*F13056 1 `*F13058 1 `*F13060 1 ]
+[n S1698 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
 "53
-[; ;./mcc_generated_files/drivers/uart.h: 53: extern const uart_functions_t uart[];
-[v _uart `CS1694 ~T0 @X0 -> 0 `x e ]
+[v _uart `CS1698 ~T0 @X0 -> 0 `x e ]
 "76 main.c
 [; ;main.c: 76:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-[c E12848 0 1 .. ]
-[n E12848 . UART_CDC UART_BLE  ]
-"111 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 111: void LIGHTBLUE_SendSerialData(char* serialData);
+[c E13031 0 1 .. ]
+[n E13031 . UART_CDC UART_BLE  ]
+"121 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 121: void LIGHTBLUE_SendSerialData(char* serialData);
 [v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 0 ef1`*uc ]
-[v F12764 `(v ~T0 @X0 0 tf1`uc ]
-[v F12767 `(uc ~T0 @X0 0 tf ]
-[v F12769 `(a ~T0 @X0 0 tf ]
-[v F12771 `(a ~T0 @X0 0 tf ]
-[v F12773 `(v ~T0 @X0 0 tf1`a ]
-[v F12776 `(v ~T0 @X0 0 tf1`a ]
+[v F12977 `(v ~T0 @X0 0 tf1`uc ]
+[v F12980 `(uc ~T0 @X0 0 tf ]
+[v F12982 `(a ~T0 @X0 0 tf ]
+[v F12984 `(a ~T0 @X0 0 tf ]
+[v F12986 `(v ~T0 @X0 0 tf1`a ]
+[v F12989 `(v ~T0 @X0 0 tf1`a ]
 "94 main.c
 [; ;main.c: 94:                 RN487X.Write(uart[UART_CDC].Read());
-[c E12758 0 1 .. ]
-[n E12758 . TEST_MODE APPLICATION_MODE  ]
-[v F12779 `(v ~T0 @X0 0 tf1`E12758 ]
-[v F12782 `(v ~T0 @X0 0 tf1`us ]
-[v F12785 `(v ~T0 @X0 0 tf1`*uc ]
+[c E12971 0 1 .. ]
+[n E12971 . TEST_MODE APPLICATION_MODE  ]
+[v F12992 `(v ~T0 @X0 0 tf1`E12971 ]
+[v F12995 `(v ~T0 @X0 0 tf1`us ]
+[v F12998 `(v ~T0 @X0 0 tf1`*uc ]
 "48 ./mcc_generated_files/rn487x/rn487x_interface.h
-[; ;./mcc_generated_files/rn487x/rn487x_interface.h: 48: {
-[s S1687 `*F12764 1 `*F12767 1 `*F12769 1 `*F12771 1 `*F12773 1 `*F12776 1 `*F12779 1 `*F12782 1 `*F12785 1 ]
-[n S1687 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
+[s S1694 `*F12977 1 `*F12980 1 `*F12982 1 `*F12984 1 `*F12986 1 `*F12989 1 `*F12992 1 `*F12995 1 `*F12998 1 ]
+[n S1694 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
 "66
-[; ;./mcc_generated_files/rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
-[v _RN487X `CS1687 ~T0 @X0 0 e ]
-"128 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 128: void LIGHTBLUE_AccState(void);
+[v _RN487X `CS1694 ~T0 @X0 0 e ]
+"409 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 409: void LIGHTBLUE_AccState(void);
 [v _LIGHTBLUE_AccState `(v ~T0 @X0 0 ef ]
 "991 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 991:     struct {
@@ -154,7 +163,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "69
 [; ;mcc_generated_files/spi2.h: 69: void SPI2_ReadBlock(void *block, size_t blockSize);
 [v _SPI2_ReadBlock `(v ~T0 @X0 0 ef2`*v`ui ]
-"65
+"410 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 410: void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
+[v _LIGHTBLUE_Send_Thermocouple `(v ~T0 @X0 0 ef1`*uc ]
+"65 mcc_generated_files/spi2.h
 [; ;mcc_generated_files/spi2.h: 65: void SPI2_Close(void);
 [v _SPI2_Close `(v ~T0 @X0 0 ef ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
@@ -1734,6 +1746,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 "291 ./mcc_generated_files/application/BMA253_accel.h
 [; ;./mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 [v _accelerometerInterruptBits `VS1696 ~T0 @X0 1 e ]
+[v F13093 `*Cuc ~T0 @X0 1 t ]
+"305 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 305: const char * const protocol_version_number = "1.1.0";
+[v _protocol_version_number `C*Cuc ~T0 @X0 1 e ]
+[i _protocol_version_number
+:s 1C
+]
+"306
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 306: static char _hex[] = "0123456789ABCDEF";
+[v __hex `uc ~T0 @X0 -> 17 `i s ]
+[i __hex
+:U ..
+-> 48 `c
+-> 49 `c
+-> 50 `c
+-> 51 `c
+-> 52 `c
+-> 53 `c
+-> 54 `c
+-> 55 `c
+-> 56 `c
+-> 57 `c
+-> 65 `c
+-> 66 `c
+-> 67 `c
+-> 68 `c
+-> 69 `c
+-> 70 `c
+-> 0 `c
+..
+]
+"307
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 307: static uint8_t sequenceNumber = 0;
+[v _sequenceNumber `uc ~T0 @X0 1 s ]
+[i _sequenceNumber
+-> -> 0 `i `uc
+]
+"308
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 308: static volatile rn487x_gpio_bitmap_t bitMap;
+[v _bitMap `VS1692 ~T0 @X0 1 s ]
 "34 ./main.h
 [; ;./main.h: 34: static char statusBuffer[(80)];
 [v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
@@ -1791,11 +1843,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LIGHTBLUE_Initialize ..  ]
 "58
 [; ;main.c: 58:     while (1) {
-[e :U 1700 ]
+[e :U 1701 ]
 {
 "59
 [; ;main.c: 59:         if (RN487X_IsConnected() == 1) {
-[e $ ! == -> ( _RN487X_IsConnected ..  `i -> 1 `i 1702  ]
+[e $ ! == -> ( _RN487X_IsConnected ..  `i -> 1 `i 1703  ]
 {
 "60
 [; ;main.c: 60:             service_acceleremoterInterrupt();
@@ -1808,11 +1860,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _service_pushed ..  ]
 "63
 [; ;main.c: 63:             if ((PIR0bits.TMR0IF) == 1) {
-[e $ ! == -> . . _PIR0bits 0 3 `i -> 1 `i 1703  ]
+[e $ ! == -> . . _PIR0bits 0 3 `i -> 1 `i 1704  ]
 {
 "64
 [; ;main.c: 64:                 (PIR0bits.TMR0IF = 0);
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
+"65
+[; ;main.c: 65:                 send_spi_read();
+[e ( _send_spi_read ..  ]
 "66
 [; ;main.c: 66:                 LIGHTBLUE_TemperatureSensor();
 [e ( _LIGHTBLUE_TemperatureSensor ..  ]
@@ -1828,13 +1883,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71
 [; ;main.c: 71:             } else {
 }
-[e $U 1704  ]
-[e :U 1703 ]
+[e $U 1705  ]
+[e :U 1704 ]
 {
 "72
 [; ;main.c: 72:                 while (RN487X_DataReady()) {
-[e $U 1705  ]
-[e :U 1706 ]
+[e $U 1706  ]
+[e :U 1707 ]
 {
 "73
 [; ;main.c: 73:                     LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
@@ -1842,22 +1897,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "74
 [; ;main.c: 74:                 }
 }
-[e :U 1705 ]
+[e :U 1706 ]
 "72
 [; ;main.c: 72:                 while (RN487X_DataReady()) {
-[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1706  ]
-[e :U 1707 ]
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1707  ]
+[e :U 1708 ]
 "75
 [; ;main.c: 75:                 while (uart[UART_CDC].DataReady()) {
-[e $U 1708  ]
-[e :U 1709 ]
+[e $U 1709  ]
+[e :U 1710 ]
 {
 "76
 [; ;main.c: 76:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
+[e = *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux -> ( *U . *U + &U _uart * -> . `E13031 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  `uc ]
 "77
 [; ;main.c: 77:                     if ((lightBlueSerial[serialIndex] == '\r')
-[e $ ! || || == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 13 `ui == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 10 `ui == -> _serialIndex `ui - -> # _lightBlueSerial `ui -> -> 1 `i `ui 1711  ]
+[e $ ! || || == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 13 `ui == -> *U + &U _lightBlueSerial * -> _serialIndex `ux -> -> # *U &U _lightBlueSerial `ui `ux `ui -> 10 `ui == -> _serialIndex `ui - -> # _lightBlueSerial `ui -> -> 1 `i `ui 1712  ]
 "79
 [; ;main.c: 79:                             || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
 {
@@ -1873,8 +1928,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [; ;main.c: 83:                     } else {
 }
-[e $U 1712  ]
-[e :U 1711 ]
+[e $U 1713  ]
+[e :U 1712 ]
 {
 "84
 [; ;main.c: 84:                         serialIndex++;
@@ -1882,74 +1937,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "85
 [; ;main.c: 85:                     }
 }
-[e :U 1712 ]
+[e :U 1713 ]
 "86
 [; ;main.c: 86:                 }
 }
-[e :U 1708 ]
+[e :U 1709 ]
 "75
 [; ;main.c: 75:                 while (uart[UART_CDC].DataReady()) {
-[e $ != -> ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1709  ]
-[e :U 1710 ]
+[e $ != -> ( *U . *U + &U _uart * -> . `E13031 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1710  ]
+[e :U 1711 ]
 "88
 [; ;main.c: 88:             }
 }
-[e :U 1704 ]
+[e :U 1705 ]
 "89
 [; ;main.c: 89:         } else {
 }
-[e $U 1713  ]
-[e :U 1702 ]
+[e $U 1714  ]
+[e :U 1703 ]
 {
 "90
 [; ;main.c: 90:             while (RN487X_DataReady()) {
-[e $U 1714  ]
-[e :U 1715 ]
+[e $U 1715  ]
+[e :U 1716 ]
 {
 "91
 [; ;main.c: 91:                 uart[UART_CDC].Write(RN487X_Read());
-[e ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
+[e ( *U . *U + &U _uart * -> . `E13031 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 ( _RN487X_Read ..  ]
 "92
 [; ;main.c: 92:             }
 }
-[e :U 1714 ]
+[e :U 1715 ]
 "90
 [; ;main.c: 90:             while (RN487X_DataReady()) {
-[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1715  ]
-[e :U 1716 ]
-"93
-[; ;main.c: 93:             while (uart[UART_CDC].DataReady()) {
-[e $U 1717  ]
-[e :U 1718 ]
-{
-"94
-[; ;main.c: 94:                 RN487X.Write(uart[UART_CDC].Read());
-[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
-"95
-[; ;main.c: 95:             }
-}
+[e $ != -> ( _RN487X_DataReady ..  `i -> 0 `i 1716  ]
 [e :U 1717 ]
 "93
 [; ;main.c: 93:             while (uart[UART_CDC].DataReady()) {
-[e $ != -> ( *U . *U + &U _uart * -> . `E12848 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1718  ]
+[e $U 1718  ]
 [e :U 1719 ]
+{
+"94
+[; ;main.c: 94:                 RN487X.Write(uart[UART_CDC].Read());
+[e ( *U . _RN487X 0 (1 ( *U . *U + &U _uart * -> . `E13031 0 `ux -> -> # *U &U _uart `ui `ux 0 ..  ]
+"95
+[; ;main.c: 95:             }
+}
+[e :U 1718 ]
+"93
+[; ;main.c: 93:             while (uart[UART_CDC].DataReady()) {
+[e $ != -> ( *U . *U + &U _uart * -> . `E13031 0 `ux -> -> # *U &U _uart `ui `ux 3 ..  `i -> 0 `i 1719  ]
+[e :U 1720 ]
 "96
 [; ;main.c: 96:         }
 }
-[e :U 1713 ]
+[e :U 1714 ]
 "97
 [; ;main.c: 97:     }
 }
-[e :U 1699 ]
-[e $U 1700  ]
-[e :U 1701 ]
+[e :U 1700 ]
+[e $U 1701  ]
+[e :U 1702 ]
 "98
 [; ;main.c: 98:     return 0;
 [e ) -> 0 `i ]
-[e $UE 1698  ]
+[e $UE 1699  ]
 "99
 [; ;main.c: 99: }
-[e :UE 1698 ]
+[e :UE 1699 ]
 }
 "101
 [; ;main.c: 101: void service_pushed(void) {
@@ -1959,7 +2014,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "102
 [; ;main.c: 102:     if ((pushed==1)) {
-[e $ ! == -> _pushed `i -> 1 `i 1721  ]
+[e $ ! == -> _pushed `i -> 1 `i 1722  ]
 {
 "103
 [; ;main.c: 103:         (pushed = 0);
@@ -1967,10 +2022,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;main.c: 104:     }
 }
-[e :U 1721 ]
+[e :U 1722 ]
 "105
 [; ;main.c: 105: }
-[e :UE 1720 ]
+[e :UE 1721 ]
 }
 "107
 [; ;main.c: 107: void service_acceleremoterInterrupt(void) {
@@ -1980,7 +2035,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "108
 [; ;main.c: 108:     if ((INTERRUPTbits.ACC == 1)) {
-[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1723  ]
+[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1724  ]
 {
 "109
 [; ;main.c: 109:         (INTERRUPTbits.ACC = 0);
@@ -1993,7 +2048,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _flats -> -> 1 `i `uc ]
 "112
 [; ;main.c: 112:         if (flats > 1) {
-[e $ ! > -> _flats `i -> 1 `i 1724  ]
+[e $ ! > -> _flats `i -> 1 `i 1725  ]
 {
 "113
 [; ;main.c: 113:             LIGHTBLUE_AccState();
@@ -2007,14 +2062,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "116
 [; ;main.c: 116:         }
 }
-[e :U 1724 ]
+[e :U 1725 ]
 "117
 [; ;main.c: 117:     }
 }
-[e :U 1723 ]
+[e :U 1724 ]
 "118
 [; ;main.c: 118: }
-[e :UE 1722 ]
+[e :UE 1723 ]
 }
 "120
 [; ;main.c: 120: void send_spi_read(void) {
@@ -2024,39 +2079,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "121
 [; ;main.c: 121:     static uint8_t data[4];
-[v F12935 `uc ~T0 @X0 -> 4 `i s data ]
+[v F13153 `uc ~T0 @X0 -> 4 `i s data ]
 "122
 [; ;main.c: 122:     do { LATCbits.LATC0 = 0; } while(0);
-[e :U 1728 ]
+[e :U 1729 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 1727 ]
+[e :U 1728 ]
 "123
 [; ;main.c: 123:     if (SPI2_Open(0)) {
-[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12592 `i -> 0 `i 1729  ]
+[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12592 `i -> 0 `i 1730  ]
 {
 "124
 [; ;main.c: 124:         sendSpiReadRequest = 0;
 [e = _sendSpiReadRequest -> -> 0 `i `a ]
 "125
 [; ;main.c: 125:         SPI2_ReadBlock(data, 4);
-[e ( _SPI2_ReadBlock (2 , -> &U F12935 `*v -> -> 4 `i `ui ]
+[e ( _SPI2_ReadBlock (2 , -> &U F13153 `*v -> -> 4 `i `ui ]
 "126
 [; ;main.c: 126:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1732 ]
+[e :U 1733 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 1731 ]
+[e :U 1732 ]
 "127
-[; ;main.c: 127:         SPI2_Close();
-[e ( _SPI2_Close ..  ]
+[; ;main.c: 127:         LIGHTBLUE_Send_Thermocouple(data);
+[e ( _LIGHTBLUE_Send_Thermocouple (1 &U F13153 ]
 "128
-[; ;main.c: 128:     }
-}
-[e :U 1729 ]
+[; ;main.c: 128:         SPI2_Close();
+[e ( _SPI2_Close ..  ]
 "129
-[; ;main.c: 129: }
-[e :UE 1725 ]
+[; ;main.c: 129:     }
 }
+[e :U 1730 ]
+"130
+[; ;main.c: 130: }
+[e :UE 1726 ]
+}
+[a 1C 49 46 49 46 48 0 ]
