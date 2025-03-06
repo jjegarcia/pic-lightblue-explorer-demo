@@ -573,21 +573,21 @@ SPI2_DEFAULT 0
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "78
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"154
+"152
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"171
+"166
 [v _IOCAF6_ISR IOCAF6_ISR `(v  1 e 1 0 ]
-"187
+"181
 [v _IOCAF6_SetInterruptHandler IOCAF6_SetInterruptHandler `(v  1 e 1 0 ]
-"194
+"188
 [v _IOCAF6_DefaultInterruptHandler IOCAF6_DefaultInterruptHandler `(v  1 e 1 0 ]
-"202
+"196
 [v _IOCAF7_ISR IOCAF7_ISR `(v  1 e 1 0 ]
-"217
+"210
 [v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
-"224
+"217
 [v _IOCAF7_DefaultInterruptHandler IOCAF7_DefaultInterruptHandler `(v  1 e 1 0 ]
 "54 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_Init RN487X_Init `(a  1 e 1 0 ]
@@ -651,18 +651,18 @@ SPI2_DEFAULT 0
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
-"14 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.h
+"34 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.h
+[v _statusBuffer@main$F4030 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+"35
+[v _lightBlueSerial@main$F4031 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
+"36
+[v _serialIndex@main$F4032 serialIndex `uc  1 s 1 serialIndex ]
+"43
 [v _pushed pushed `a  1 e 1 0 ]
-"15
+"51
 [v _sendSpiReadRequest sendSpiReadRequest `a  1 e 1 0 ]
-"16
+"52
 [v _flats flats `uc  1 e 1 0 ]
-"31
-[v _statusBuffer@main$F4033 statusBuffer `[80]uc  1 s 80 statusBuffer ]
-"32
-[v _lightBlueSerial@main$F4034 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
-"33
-[v _serialIndex@main$F4035 serialIndex `uc  1 s 1 serialIndex ]
 [s S22 . 1 `uc 1 UNDEFINED 1 0 :7:0 
 `uc 1 FLAT 1 0 :1:7 
 ]
@@ -1376,7 +1376,7 @@ SPI2_DEFAULT 0
 {
 "121
 [v send_spi_read@data data `[4]uc  1 s 4 data ]
-"130
+"129
 } 0
 "127 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
@@ -1434,22 +1434,22 @@ SPI2_DEFAULT 0
 {
 "96
 } 0
-"58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"152
+"150
 } 0
-"217
+"210
 [v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IOCAF7_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 1 ]
-"219
+"212
 } 0
-"187
+"181
 [v _IOCAF6_SetInterruptHandler IOCAF6_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IOCAF6_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 1 ]
-"189
+"183
 } 0
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -2368,30 +2368,30 @@ SPI2_DEFAULT 0
 {
 "86
 } 0
-"154 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
+"152 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"166
+"161
 } 0
-"202
+"196
 [v _IOCAF7_ISR IOCAF7_ISR `(v  1 e 1 0 ]
 {
-"212
+"205
 } 0
-"224
+"217
 [v _IOCAF7_DefaultInterruptHandler IOCAF7_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"228
+"221
 } 0
-"171
+"166
 [v _IOCAF6_ISR IOCAF6_ISR `(v  1 e 1 0 ]
 {
-"182
+"176
 } 0
-"194
+"188
 [v _IOCAF6_DefaultInterruptHandler IOCAF6_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"197
+"191
 } 0
 "206 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Transmit_ISR EUSART1_Transmit_ISR `(v  1 e 1 0 ]

@@ -20941,13 +20941,7 @@ typedef union {
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 # 11 "./main.h" 2
-
-
-
-_Bool pushed = 0;
-_Bool sendSpiReadRequest = 0;
-uint8_t flats = 0;
-# 31 "./main.h"
+# 34 "./main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
@@ -20956,6 +20950,17 @@ void service_acceleremoterInterrupt(void);
 void send_spi_read(void);
 void service_pushed(void);
 void service_acceleremoterInterrupt(void);
+
+_Bool pushed = 0;
+
+
+
+
+
+
+
+_Bool sendSpiReadRequest = 0;
+uint8_t flats = 0;
 # 40 "main.c" 2
 
 
@@ -21019,20 +21024,20 @@ int main(void) {
 }
 
 void service_pushed(void) {
-    if (pushed) {
-        pushed = 0;
+    if ((pushed==1)) {
+        (pushed = 0);
     }
 }
 
 void service_acceleremoterInterrupt(void) {
     if ((INTERRUPTbits.ACC == 1)) {
         (INTERRUPTbits.ACC = 0);
-        accelerometerInterruptBits.FLAT = 1;
+        (accelerometerInterruptBits.FLAT = 1);
         flats++;
         if (flats > 1) {
             LIGHTBLUE_AccState();
             flats = 0;
-            accelerometerInterruptBits.FLAT = 0;
+            (accelerometerInterruptBits.FLAT = 0);
         }
     }
 }
@@ -21041,10 +21046,9 @@ void send_spi_read(void) {
     static uint8_t data[4];
     do { LATCbits.LATC0 = 0; } while(0);
     if (SPI2_Open(0)) {
+        sendSpiReadRequest = 0;
         SPI2_ReadBlock(data, 4);
         do { LATCbits.LATC0 = 1; } while(0);
         SPI2_Close();
-        sendSpiReadRequest = 0;
-
     }
 }

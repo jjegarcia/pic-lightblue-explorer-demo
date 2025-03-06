@@ -99,20 +99,20 @@ int main(void) {
 }
 
 void service_pushed(void) {
-    if (pushed) {
-        pushed = false;
+    if (PUSHED_INTERRUPT_Is_High()) {
+        PUSHED_INTERRUPT_SetLow();
     }
 }
 
 void service_acceleremoterInterrupt(void) {
-    if (ACC_Interrupt_is_high()) {
+    if (ACC_INTERRUPT_Is_High()) {
         ACC_INTERRUPT_SetLow();
-        accelerometerInterruptBits.FLAT = 1;
+        ACC_INTERRUPT_FLAT_SetHigh();
         flats++;
         if (flats > 1) {
             LIGHTBLUE_AccState();
             flats = 0;
-            accelerometerInterruptBits.FLAT = 0;
+            ACC_INTERRUPT_FLAT_SetLow();
         }
     }
 }
@@ -121,11 +121,10 @@ void send_spi_read(void) {
     static uint8_t data[4];
     SPI_SS_EXT_DEVICE_SetLow();
     if (SPI2_Open(0)) {
+        sendSpiReadRequest = false;
         SPI2_ReadBlock(data, 4);
         SPI_SS_EXT_DEVICE_SetHigh();
         SPI2_Close();
-        sendSpiReadRequest = false;
-
     }
 }
 /**

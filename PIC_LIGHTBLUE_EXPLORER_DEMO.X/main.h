@@ -11,33 +11,6 @@
 #include "mcc_generated_files/application/BMA253_accel.h"
 #include "mcc_generated_files/pin_manager.h"
 
-bool pushed = false;
-bool sendSpiReadRequest = false;
-uint8_t flats = 0;
-
-#define TIMER_FLAG_SET()                (TMR0_HasOverflowOccured())
-/** MACRO used to reset the Periodic Timer overflow flag.
- *  This is used by the application to reload the semi-accurate
- *  periodic task execution.
- *  The rate allows for a (100%) drift prior to error
- *  Is susceptible to effect by extended BLE communication. 
- */
-#define RESET_TIMER_INTERRUPT_FLAG      (PIR0bits.TMR0IF = 0)
-/** MACRO used to configure the application used buffer sizes.
- *  This is used by the application for communication buffers.
- */
-#define MAX_BUFFER_SIZE                 (80)
-
-static char statusBuffer[MAX_BUFFER_SIZE]; /**< Status Buffer instance passed to RN487X drive used for Asynchronous Message Handling (see *asyncBuffer in rn487x.c) */
-static char lightBlueSerial[MAX_BUFFER_SIZE]; /**< Message Buffer used for CDC Serial communication when connected. Terminated by \r, \n, MAX character Passes messages to BLE for transmisison. */
-static uint8_t serialIndex; /**< Local index value for serial communication buffer. */
-
-void service_acceleremoterInterrupt(void);
-void send_spi_read(void);
-void service_pushed(void);
-void service_acceleremoterInterrupt(void);
-
-
 /** MACRO used to reference Periodic Timer overflow flag Set. 
  *  This is used by the application to have a semi-accurate 
  *  periodic task execution rate. 
@@ -57,5 +30,25 @@ void service_acceleremoterInterrupt(void);
  */
 #define MAX_BUFFER_SIZE                 (80)
 
+
+static char statusBuffer[MAX_BUFFER_SIZE]; /**< Status Buffer instance passed to RN487X drive used for Asynchronous Message Handling (see *asyncBuffer in rn487x.c) */
+static char lightBlueSerial[MAX_BUFFER_SIZE]; /**< Message Buffer used for CDC Serial communication when connected. Terminated by \r, \n, MAX character Passes messages to BLE for transmisison. */
+static uint8_t serialIndex; /**< Local index value for serial communication buffer. */
+
+void service_acceleremoterInterrupt(void);
+void send_spi_read(void);
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+
+bool pushed = false;
+#define PUSHED_INTERRUPT_SetHigh()         (pushed = true) 
+#define PUSHED_INTERRUPT_SetLow()          (pushed = false) 
+#define PUSHED_INTERRUPT_Toggle()          (pushed = ~pushed)
+#define PUSHED_INTERRUPT_GetValue()        (pushed)
+#define PUSHED_INTERRUPT_Is_High()         (pushed==true)
+
+
+bool sendSpiReadRequest = false;
+uint8_t flats = 0;
 
 #endif

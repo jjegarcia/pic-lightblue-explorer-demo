@@ -43,14 +43,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75 ./mcc_generated_files/rn487x/rn487x_interface.h
 [; ;./mcc_generated_files/rn487x/rn487x_interface.h: 75: _Bool RN487X_IsConnected(void);
 [v _RN487X_IsConnected `(a ~T0 @X0 0 ef ]
-"38 ./main.h
-[; ;./main.h: 38: void service_acceleremoterInterrupt(void);
+"41 ./main.h
+[; ;./main.h: 41: void service_acceleremoterInterrupt(void);
 [v _service_acceleremoterInterrupt `(v ~T0 @X0 0 ef ]
-"36
-[; ;./main.h: 36: void send_spi_read(void);
+"39
+[; ;./main.h: 39: void send_spi_read(void);
 [v _send_spi_read `(v ~T0 @X0 0 ef ]
-"37
-[; ;./main.h: 37: void service_pushed(void);
+"40
+[; ;./main.h: 40: void service_pushed(void);
 [v _service_pushed `(v ~T0 @X0 0 ef ]
 "22417 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22417:     struct {
@@ -1734,33 +1734,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "291 ./mcc_generated_files/application/BMA253_accel.h
 [; ;./mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 [v _accelerometerInterruptBits `VS1696 ~T0 @X0 1 e ]
-"14 ./main.h
-[; ;./main.h: 14: _Bool pushed = 0;
+"34 ./main.h
+[; ;./main.h: 34: static char statusBuffer[(80)];
+[v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
+"35
+[; ;./main.h: 35: static char lightBlueSerial[(80)];
+[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
+"36
+[; ;./main.h: 36: static uint8_t serialIndex;
+[v _serialIndex `uc ~T0 @X0 1 s ]
+"43
+[; ;./main.h: 43: _Bool pushed = 0;
 [v _pushed `a ~T0 @X0 1 e ]
 [i _pushed
 -> -> 0 `i `a
 ]
-"15
-[; ;./main.h: 15: _Bool sendSpiReadRequest = 0;
+"51
+[; ;./main.h: 51: _Bool sendSpiReadRequest = 0;
 [v _sendSpiReadRequest `a ~T0 @X0 1 e ]
 [i _sendSpiReadRequest
 -> -> 0 `i `a
 ]
-"16
-[; ;./main.h: 16: uint8_t flats = 0;
+"52
+[; ;./main.h: 52: uint8_t flats = 0;
 [v _flats `uc ~T0 @X0 1 e ]
 [i _flats
 -> -> 0 `i `uc
 ]
-"31
-[; ;./main.h: 31: static char statusBuffer[(80)];
-[v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
-"32
-[; ;./main.h: 32: static char lightBlueSerial[(80)];
-[v _lightBlueSerial `uc ~T0 @X0 -> 80 `i s ]
-"33
-[; ;./main.h: 33: static uint8_t serialIndex;
-[v _serialIndex `uc ~T0 @X0 1 s ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "45 main.c
 [; ;main.c: 45: int main(void) {
@@ -1958,11 +1958,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _service_pushed ]
 [f ]
 "102
-[; ;main.c: 102:     if (pushed) {
-[e $ ! != -> _pushed `i -> 0 `i 1721  ]
+[; ;main.c: 102:     if ((pushed==1)) {
+[e $ ! == -> _pushed `i -> 1 `i 1721  ]
 {
 "103
-[; ;main.c: 103:         pushed = 0;
+[; ;main.c: 103:         (pushed = 0);
 [e = _pushed -> -> 0 `i `a ]
 "104
 [; ;main.c: 104:     }
@@ -1986,7 +1986,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 109:         (INTERRUPTbits.ACC = 0);
 [e = . . _INTERRUPTbits 0 0 -> -> 0 `i `uc ]
 "110
-[; ;main.c: 110:         accelerometerInterruptBits.FLAT = 1;
+[; ;main.c: 110:         (accelerometerInterruptBits.FLAT = 1);
 [e = . . _accelerometerInterruptBits 0 1 -> -> 1 `i `uc ]
 "111
 [; ;main.c: 111:         flats++;
@@ -2002,7 +2002,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 114:             flats = 0;
 [e = _flats -> -> 0 `i `uc ]
 "115
-[; ;main.c: 115:             accelerometerInterruptBits.FLAT = 0;
+[; ;main.c: 115:             (accelerometerInterruptBits.FLAT = 0);
 [e = . . _accelerometerInterruptBits 0 1 -> -> 0 `i `uc ]
 "116
 [; ;main.c: 116:         }
@@ -2037,26 +2037,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12592 `i -> 0 `i 1729  ]
 {
 "124
-[; ;main.c: 124:         SPI2_ReadBlock(data, 4);
-[e ( _SPI2_ReadBlock (2 , -> &U F12935 `*v -> -> 4 `i `ui ]
+[; ;main.c: 124:         sendSpiReadRequest = 0;
+[e = _sendSpiReadRequest -> -> 0 `i `a ]
 "125
-[; ;main.c: 125:         do { LATCbits.LATC0 = 1; } while(0);
+[; ;main.c: 125:         SPI2_ReadBlock(data, 4);
+[e ( _SPI2_ReadBlock (2 , -> &U F12935 `*v -> -> 4 `i `ui ]
+"126
+[; ;main.c: 126:         do { LATCbits.LATC0 = 1; } while(0);
 [e :U 1732 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 1731 ]
-"126
-[; ;main.c: 126:         SPI2_Close();
-[e ( _SPI2_Close ..  ]
 "127
-[; ;main.c: 127:         sendSpiReadRequest = 0;
-[e = _sendSpiReadRequest -> -> 0 `i `a ]
-"129
-[; ;main.c: 129:     }
+[; ;main.c: 127:         SPI2_Close();
+[e ( _SPI2_Close ..  ]
+"128
+[; ;main.c: 128:     }
 }
 [e :U 1729 ]
-"130
-[; ;main.c: 130: }
+"129
+[; ;main.c: 129: }
 [e :UE 1725 ]
 }

@@ -290,5 +290,11 @@ typedef union {
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 
+#define ACC_INTERRUPT_FLAT_SetHigh()         (accelerometerInterruptBits.FLAT = 1) 
+#define ACC_INTERRUPT_FLAT_SetLow()          (accelerometerInterruptBits.FLAT = 0) 
+#define ACC_INTERRUPT__FLAT_Toggle()          (accelerometerInterruptBits.FLAT = ~accelerometerInterruptBits.ACC)
+#define ACC_INTERRUPT_FLAT_GetValue()        (accelerometerInterruptBits.FLAT)
+#define ACC_INTERRUPT_FLAT_Is_High()         (accelerometerInterruptBits.FLAT == 1)
+
 #endif	/* BMA253_ACCEL_H */
 

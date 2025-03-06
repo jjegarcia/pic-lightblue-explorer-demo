@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Thu Mar 06 10:10:38 2025
+                                                                                               Thu Mar 06 13:55:46 2025
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16LF18456
@@ -10257,15 +10257,15 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  10243     0024                     	ds	2
  10244     0026                     _bitMap:
  10245     0026                     	ds	2
- 10246     0028                     _serialIndex@main$F4035:
+ 10246     0028                     _serialIndex@main$F4032:
  10247     0028                     	ds	1
- 10248     0029                     _serialIndex:
+ 10248     0029                     _flats:
  10249     0029                     	ds	1
- 10250     002A                     _flats:
+ 10250     002A                     _sendSpiReadRequest:
  10251     002A                     	ds	1
- 10252     002B                     _sendSpiReadRequest:
+ 10252     002B                     _pushed:
  10253     002B                     	ds	1
- 10254     002C                     _pushed:
+ 10254     002C                     _serialIndex:
  10255     002C                     	ds	1
  10256     002D                     _eusart1RxLastError:
  10257     002D                     	ds	1
@@ -10365,7 +10365,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  10351                           
  10352                           	psect	bssBANK5
  10353     02A0                     __pbssBANK5:
- 10354     02A0                     _lightBlueSerial@main$F4034:
+ 10354     02A0                     _lightBlueSerial@main$F4031:
  10355     02A0                     	ds	80
  10356                           
  10357                           	psect	bssBANK6
@@ -10375,12 +10375,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  10361                           
  10362                           	psect	bssBANK7
  10363     03A0                     __pbssBANK7:
- 10364     03A0                     _statusBuffer@main$F4033:
+ 10364     03A0                     _statusBuffer@main$F4030:
  10365     03A0                     	ds	80
  10366                           
  10367                           	psect	bssBANK8
  10368     0420                     __pbssBANK8:
- 10369     0420                     _statusBuffer@main$F2565:
+ 10369     0420                     _statusBuffer@main$F2562:
  10370     0420                     	ds	80
  10371                           
  10372                           	psect	bssBANK9
@@ -11913,7 +11913,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  11894                           ;main.c: 48:     RN487X_SetAsyncMessageHandler(statusBuffer, sizeof (statusBuffer));
  11895     00BB  3050               	movlw	80
  11896     00BC  00F1               	movwf	RN487X_SetAsyncMessageHandler@len
- 11897     00BD  30A0               	movlw	(low (_statusBuffer@main$F4033| (0+768)))& (0+255)
+ 11897     00BD  30A0               	movlw	(low (_statusBuffer@main$F4030| (0+768)))& (0+255)
  11898     00BE  3189  2175  3180   	fcall	_RN487X_SetAsyncMessageHandler
  11899     00C1                     l9988:
  11900                           
@@ -12019,8 +12019,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12000     0107  3180               	pagesel	$
  12001     0108  0140               	movlb	0	; select bank0
  12002     0109  00ED               	movwf	??_main
- 12003     010A  0828               	movf	_serialIndex@main$F4035,w
- 12004     010B  3EA0               	addlw	(low (_lightBlueSerial@main$F4034| (0+512)))& (0+255)
+ 12003     010A  0828               	movf	_serialIndex@main$F4032,w
+ 12004     010B  3EA0               	addlw	(low (_lightBlueSerial@main$F4031| (0+512)))& (0+255)
  12005     010C  0086               	movwf	6
  12006     010D  3002               	movlw	2	; select bank5/6
  12007     010E  0087               	movwf	7
@@ -12029,8 +12029,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12010     0111                     l10012:
  12011                           
  12012                           ;main.c: 77:                     if ((lightBlueSerial[serialIndex] == '\r')
- 12013     0111  0828               	movf	_serialIndex@main$F4035,w
- 12014     0112  3EA0               	addlw	(low (_lightBlueSerial@main$F4034| (0+512)))& (0+255)
+ 12013     0111  0828               	movf	_serialIndex@main$F4032,w
+ 12014     0112  3EA0               	addlw	(low (_lightBlueSerial@main$F4031| (0+512)))& (0+255)
  12015     0113  0086               	movwf	6
  12016     0114  3002               	movlw	2	; select bank5/6
  12017     0115  0087               	movwf	7
@@ -12043,8 +12043,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12024     011B  292D               	goto	l10018
  12025     011C                     u5750:
  12026     011C                     l10014:
- 12027     011C  0828               	movf	_serialIndex@main$F4035,w
- 12028     011D  3EA0               	addlw	(low (_lightBlueSerial@main$F4034| (0+512)))& (0+255)
+ 12027     011C  0828               	movf	_serialIndex@main$F4032,w
+ 12028     011D  3EA0               	addlw	(low (_lightBlueSerial@main$F4031| (0+512)))& (0+255)
  12029     011E  0086               	movwf	6
  12030     011F  3002               	movlw	2	; select bank5/6
  12031     0120  0087               	movwf	7
@@ -12058,7 +12058,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12039     0127                     u5760:
  12040     0127                     l10016:
  12041     0127  304F               	movlw	79
- 12042     0128  0628               	xorwf	_serialIndex@main$F4035,w
+ 12042     0128  0628               	xorwf	_serialIndex@main$F4032,w
  12043     0129  1D03               	btfss	3,2
  12044     012A  292C               	goto	u5771
  12045     012B  292D               	goto	u5770
@@ -12069,8 +12069,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12050                           
  12051                           ;main.c: 79:                             || (serialIndex == (sizeof (lightBlueSerial) - 
       +                          1))) {;main.c: 80:                         lightBlueSerial[serialIndex] = '\0';
- 12052     012D  0828               	movf	_serialIndex@main$F4035,w
- 12053     012E  3EA0               	addlw	(low (_lightBlueSerial@main$F4034| (0+512)))& (0+255)
+ 12052     012D  0828               	movf	_serialIndex@main$F4032,w
+ 12053     012E  3EA0               	addlw	(low (_lightBlueSerial@main$F4031| (0+512)))& (0+255)
  12054     012F  0086               	movwf	6
  12055     0130  3002               	movlw	2	; select bank5/6
  12056     0131  0087               	movwf	7
@@ -12078,13 +12078,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12058     0133                     l10020:
  12059                           
  12060                           ;main.c: 81:                         LIGHTBLUE_SendSerialData(lightBlueSerial);
- 12061     0133  30A0               	movlw	(low (_lightBlueSerial@main$F4034| (0+512)))& (0+255)
+ 12061     0133  30A0               	movlw	(low (_lightBlueSerial@main$F4031| (0+512)))& (0+255)
  12062     0134  3182  2256  3180   	fcall	_LIGHTBLUE_SendSerialData
  12063     0137                     l10022:
  12064                           
  12065                           ;main.c: 82:                         serialIndex = 0;
  12066     0137  0140               	movlb	0	; select bank0
- 12067     0138  01A8               	clrf	_serialIndex@main$F4035
+ 12067     0138  01A8               	clrf	_serialIndex@main$F4032
  12068                           
  12069                           ;main.c: 83:                     } else {
  12070     0139  293E               	goto	l10026
@@ -12094,7 +12094,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12074     013A  3001               	movlw	1
  12075     013B  00ED               	movwf	??_main
  12076     013C  086D               	movf	??_main,w
- 12077     013D  07A8               	addwf	_serialIndex@main$F4035,f
+ 12077     013D  07A8               	addwf	_serialIndex@main$F4032,f
  12078     013E                     l10026:
  12079                           
  12080                           ;main.c: 75:                 while (uart[UART_CDC].DataReady()) {
@@ -12238,10 +12238,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12213                           ; Regs used in _service_pushed: [wreg+status,2+status,0]
  12214                           
  12215                           
- 12216                           ;main.c: 102:     if (pushed) {
+ 12216                           ;main.c: 102:     if ((pushed==1)) {
  12217     170F  0140               	movlb	0	; select bank0
- 12218     1710  082C               	movf	_pushed,w
- 12219     1711  1903               	btfsc	3,2
+ 12218     1710  032B               	decf	_pushed,w
+ 12219     1711  1D03               	btfss	3,2
  12220     1712  2F14               	goto	u5361
  12221     1713  2F15               	goto	u5360
  12222     1714                     u5361:
@@ -12249,8 +12249,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12224     1715                     u5360:
  12225     1715                     l9648:
  12226                           
- 12227                           ;main.c: 103:         pushed = 0;
- 12228     1715  01AC               	clrf	_pushed
+ 12227                           ;main.c: 103:         (pushed = 0);
+ 12228     1715  01AB               	clrf	_pushed
  12229     1716                     l2224:
  12230     1716  0008               	return
  12231     1717                     __end_of_service_pushed:
@@ -12314,7 +12314,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12283                           ;main.c: 109:         (INTERRUPTbits.ACC = 0);
  12284     0A07  1045               	bcf	_INTERRUPTbits,0	;volatile
  12285                           
- 12286                           ;main.c: 110:         accelerometerInterruptBits.FLAT = 1;
+ 12286                           ;main.c: 110:         (accelerometerInterruptBits.FLAT = 1);
  12287     0A08  17C7               	bsf	_accelerometerInterruptBits,7	;volatile
  12288     0A09                     l9626:
  12289                           
@@ -12322,12 +12322,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12291     0A09  3001               	movlw	1
  12292     0A0A  00FB               	movwf	??_service_acceleremoterInterrupt
  12293     0A0B  087B               	movf	??_service_acceleremoterInterrupt,w
- 12294     0A0C  07AA               	addwf	_flats,f
+ 12294     0A0C  07A9               	addwf	_flats,f
  12295     0A0D                     l9628:
  12296                           
  12297                           ;main.c: 112:         if (flats > 1) {
  12298     0A0D  3002               	movlw	2
- 12299     0A0E  022A               	subwf	_flats,w
+ 12299     0A0E  0229               	subwf	_flats,w
  12300     0A0F  1C03               	skipc
  12301     0A10  2A12               	goto	u5341
  12302     0A11  2A13               	goto	u5340
@@ -12342,10 +12342,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12311                           
  12312                           ;main.c: 114:             flats = 0;
  12313     0A16  0140               	movlb	0	; select bank0
- 12314     0A17  01AA               	clrf	_flats
+ 12314     0A17  01A9               	clrf	_flats
  12315     0A18                     l9634:
  12316                           
- 12317                           ;main.c: 115:             accelerometerInterruptBits.FLAT = 0;
+ 12317                           ;main.c: 115:             (accelerometerInterruptBits.FLAT = 0);
  12318     0A18  13C7               	bcf	_accelerometerInterruptBits,7	;volatile
  12319     0A19                     l2229:
  12320     0A19  0008               	return
@@ -12546,25 +12546,25 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  12494     0AA5                     u5350:
  12495     0AA5                     l9638:
  12496                           
- 12497                           ;main.c: 124:         SPI2_ReadBlock(data, 4);
- 12498     0AA5  3004               	movlw	4
- 12499     0AA6  00F2               	movwf	SPI2_ReadBlock@blockSize
- 12500     0AA7  3000               	movlw	0
- 12501     0AA8  00F3               	movwf	SPI2_ReadBlock@blockSize+1
- 12502     0AA9  30E7               	movlw	(low (send_spi_read@data| 0))& (0+255)
- 12503     0AAA  318A  22ED  318A   	fcall	_SPI2_ReadBlock
- 12504     0AAD                     l9640:
- 12505     0AAD  0140               	movlb	0	; select bank0
- 12506     0AAE  141A               	bsf	26,0	;volatile
- 12507     0AAF                     l9642:
- 12508                           
- 12509                           ;main.c: 126:         SPI2_Close();
- 12510     0AAF  3196  2620  318A   	fcall	_SPI2_Close
- 12511     0AB2                     l9644:
- 12512                           
- 12513                           ;main.c: 127:         sendSpiReadRequest = 0;
- 12514     0AB2  0140               	movlb	0	; select bank0
- 12515     0AB3  01AB               	clrf	_sendSpiReadRequest
+ 12497                           ;main.c: 124:         sendSpiReadRequest = 0;
+ 12498     0AA5  0140               	movlb	0	; select bank0
+ 12499     0AA6  01AA               	clrf	_sendSpiReadRequest
+ 12500     0AA7                     l9640:
+ 12501                           
+ 12502                           ;main.c: 125:         SPI2_ReadBlock(data, 4);
+ 12503     0AA7  3004               	movlw	4
+ 12504     0AA8  00F2               	movwf	SPI2_ReadBlock@blockSize
+ 12505     0AA9  3000               	movlw	0
+ 12506     0AAA  00F3               	movwf	SPI2_ReadBlock@blockSize+1
+ 12507     0AAB  30E7               	movlw	(low (send_spi_read@data| 0))& (0+255)
+ 12508     0AAC  318A  22ED  318A   	fcall	_SPI2_ReadBlock
+ 12509     0AAF                     l9642:
+ 12510     0AAF  0140               	movlb	0	; select bank0
+ 12511     0AB0  141A               	bsf	26,0	;volatile
+ 12512     0AB1                     l9644:
+ 12513                           
+ 12514                           ;main.c: 127:         SPI2_Close();
+ 12515     0AB1  3196  2620  318A   	fcall	_SPI2_Close
  12516     0AB4                     l2239:
  12517     0AB4  0008               	return
  12518     0AB5                     __end_of_send_spi_read:
@@ -13291,7 +13291,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13189     0472                     __ptext14:	
  13190 ;; *************** function _PIN_MANAGER_Initialize *****************
  13191 ;; Defined at:
- 13192 ;;		line 58 in file "mcc_generated_files/pin_manager.c"
+ 13192 ;;		line 57 in file "mcc_generated_files/pin_manager.c"
  13193 ;; Parameters:    Size  Location     Type
  13194 ;;		None
  13195 ;; Auto vars:     Size  Location     Type
@@ -13333,142 +13333,142 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13226                           ; Regs used in _PIN_MANAGER_Initialize: [wreg+status,2+status,0+pclath+cstack]
  13227                           
  13228                           
- 13229                           ;mcc_generated_files/pin_manager.c: 63:     LATE = 0x00;
+ 13229                           ;mcc_generated_files/pin_manager.c: 61:     LATE = 0x00;
  13230     0472  0140               	movlb	0	; select bank0
  13231     0473  019C               	clrf	28	;volatile
  13232     0474                     l9288:
  13233                           
- 13234                           ;mcc_generated_files/pin_manager.c: 64:     LATA = 0x11;
+ 13234                           ;mcc_generated_files/pin_manager.c: 62:     LATA = 0x11;
  13235     0474  3011               	movlw	17
  13236     0475  0098               	movwf	24	;volatile
  13237     0476                     l9290:
  13238                           
- 13239                           ;mcc_generated_files/pin_manager.c: 65:     LATB = 0x00;
+ 13239                           ;mcc_generated_files/pin_manager.c: 63:     LATB = 0x00;
  13240     0476  0199               	clrf	25	;volatile
  13241                           
- 13242                           ;mcc_generated_files/pin_manager.c: 66:     LATC = 0x01;
+ 13242                           ;mcc_generated_files/pin_manager.c: 64:     LATC = 0x01;
  13243     0477  3001               	movlw	1
  13244     0478  009A               	movwf	26	;volatile
  13245                           
- 13246                           ;mcc_generated_files/pin_manager.c: 71:     TRISE = 0x08;
+ 13246                           ;mcc_generated_files/pin_manager.c: 69:     TRISE = 0x08;
  13247     0479  3008               	movlw	8
  13248     047A  0096               	movwf	22	;volatile
  13249                           
- 13250                           ;mcc_generated_files/pin_manager.c: 72:     TRISA = 0xDE;
+ 13250                           ;mcc_generated_files/pin_manager.c: 70:     TRISA = 0xDE;
  13251     047B  30DE               	movlw	222
  13252     047C  0092               	movwf	18	;volatile
  13253                           
- 13254                           ;mcc_generated_files/pin_manager.c: 73:     TRISB = 0xEF;
+ 13254                           ;mcc_generated_files/pin_manager.c: 71:     TRISB = 0xEF;
  13255     047D  30EF               	movlw	239
  13256     047E  0093               	movwf	19	;volatile
  13257                           
- 13258                           ;mcc_generated_files/pin_manager.c: 74:     TRISC = 0xA8;
+ 13258                           ;mcc_generated_files/pin_manager.c: 72:     TRISC = 0xA8;
  13259     047F  30A8               	movlw	168
  13260     0480  0094               	movwf	20	;volatile
  13261     0481                     l9292:
  13262                           
- 13263                           ;mcc_generated_files/pin_manager.c: 79:     ANSELC = 0x00;
+ 13263                           ;mcc_generated_files/pin_manager.c: 77:     ANSELC = 0x00;
  13264     0481  017E               	movlb	62	; select bank62
  13265     0482  01CE               	clrf	78	;volatile
  13266     0483                     l9294:
  13267                           
- 13268                           ;mcc_generated_files/pin_manager.c: 80:     ANSELB = 0xC9;
+ 13268                           ;mcc_generated_files/pin_manager.c: 78:     ANSELB = 0xC9;
  13269     0483  30C9               	movlw	201
  13270     0484  00C3               	movwf	67	;volatile
  13271     0485                     l9296:
  13272                           
- 13273                           ;mcc_generated_files/pin_manager.c: 81:     ANSELA = 0x0E;
+ 13273                           ;mcc_generated_files/pin_manager.c: 79:     ANSELA = 0x0E;
  13274     0485  300E               	movlw	14
  13275     0486  00B8               	movwf	56	;volatile
  13276     0487                     l9298:
  13277                           
- 13278                           ;mcc_generated_files/pin_manager.c: 86:     WPUE = 0x00;
+ 13278                           ;mcc_generated_files/pin_manager.c: 84:     WPUE = 0x00;
  13279     0487  01E5               	clrf	101	;volatile
  13280     0488                     l9300:
  13281                           
- 13282                           ;mcc_generated_files/pin_manager.c: 87:     WPUB = 0x00;
+ 13282                           ;mcc_generated_files/pin_manager.c: 85:     WPUB = 0x00;
  13283     0488  01C4               	clrf	68	;volatile
  13284     0489                     l9302:
  13285                           
- 13286                           ;mcc_generated_files/pin_manager.c: 88:     WPUA = 0x00;
+ 13286                           ;mcc_generated_files/pin_manager.c: 86:     WPUA = 0x00;
  13287     0489  01B9               	clrf	57	;volatile
  13288     048A                     l9304:
  13289                           
- 13290                           ;mcc_generated_files/pin_manager.c: 89:     WPUC = 0x00;
+ 13290                           ;mcc_generated_files/pin_manager.c: 87:     WPUC = 0x00;
  13291     048A  01CF               	clrf	79	;volatile
  13292     048B                     l9306:
  13293                           
- 13294                           ;mcc_generated_files/pin_manager.c: 94:     ODCONE = 0x00;
+ 13294                           ;mcc_generated_files/pin_manager.c: 92:     ODCONE = 0x00;
  13295     048B  01E6               	clrf	102	;volatile
  13296     048C                     l9308:
  13297                           
- 13298                           ;mcc_generated_files/pin_manager.c: 95:     ODCONA = 0x00;
+ 13298                           ;mcc_generated_files/pin_manager.c: 93:     ODCONA = 0x00;
  13299     048C  01BA               	clrf	58	;volatile
  13300     048D                     l9310:
  13301                           
- 13302                           ;mcc_generated_files/pin_manager.c: 96:     ODCONB = 0x00;
+ 13302                           ;mcc_generated_files/pin_manager.c: 94:     ODCONB = 0x00;
  13303     048D  01C5               	clrf	69	;volatile
  13304     048E                     l9312:
  13305                           
- 13306                           ;mcc_generated_files/pin_manager.c: 97:     ODCONC = 0x00;
+ 13306                           ;mcc_generated_files/pin_manager.c: 95:     ODCONC = 0x00;
  13307     048E  01D0               	clrf	80	;volatile
  13308     048F                     l9314:
  13309                           
- 13310                           ;mcc_generated_files/pin_manager.c: 102:     SLRCONA = 0x7E;
+ 13310                           ;mcc_generated_files/pin_manager.c: 100:     SLRCONA = 0x7E;
  13311     048F  307E               	movlw	126
  13312     0490  00BB               	movwf	59	;volatile
  13313     0491                     l9316:
  13314                           
- 13315                           ;mcc_generated_files/pin_manager.c: 103:     SLRCONB = 0xFF;
+ 13315                           ;mcc_generated_files/pin_manager.c: 101:     SLRCONB = 0xFF;
  13316     0491  30FF               	movlw	255
  13317     0492  00C6               	movwf	70	;volatile
  13318     0493                     l9318:
  13319                           
- 13320                           ;mcc_generated_files/pin_manager.c: 104:     SLRCONC = 0x3F;
+ 13320                           ;mcc_generated_files/pin_manager.c: 102:     SLRCONC = 0x3F;
  13321     0493  303F               	movlw	63
  13322     0494  00D1               	movwf	81	;volatile
  13323     0495                     l9320:
  13324                           
- 13325                           ;mcc_generated_files/pin_manager.c: 109:     INLVLA = 0x3F;
+ 13325                           ;mcc_generated_files/pin_manager.c: 107:     INLVLA = 0x3F;
  13326     0495  303F               	movlw	63
  13327     0496  00BC               	movwf	60	;volatile
  13328     0497                     l9322:
  13329                           
- 13330                           ;mcc_generated_files/pin_manager.c: 110:     INLVLB = 0x3F;
+ 13330                           ;mcc_generated_files/pin_manager.c: 108:     INLVLB = 0x3F;
  13331     0497  303F               	movlw	63
  13332     0498  00C7               	movwf	71	;volatile
  13333     0499                     l9324:
  13334                           
- 13335                           ;mcc_generated_files/pin_manager.c: 111:     INLVLC = 0x3F;
+ 13335                           ;mcc_generated_files/pin_manager.c: 109:     INLVLC = 0x3F;
  13336     0499  303F               	movlw	63
  13337     049A  00D2               	movwf	82	;volatile
  13338     049B                     l9326:
  13339                           
- 13340                           ;mcc_generated_files/pin_manager.c: 118:     IOCAFbits.IOCAF6 = 0;
+ 13340                           ;mcc_generated_files/pin_manager.c: 116:     IOCAFbits.IOCAF6 = 0;
  13341     049B  133F               	bcf	63,6	;volatile
  13342     049C                     l9328:
  13343                           
- 13344                           ;mcc_generated_files/pin_manager.c: 120:     IOCAFbits.IOCAF7 = 0;
+ 13344                           ;mcc_generated_files/pin_manager.c: 118:     IOCAFbits.IOCAF7 = 0;
  13345     049C  13BF               	bcf	63,7	;volatile
  13346     049D                     l9330:
  13347                           
- 13348                           ;mcc_generated_files/pin_manager.c: 122:     IOCANbits.IOCAN6 = 0;
+ 13348                           ;mcc_generated_files/pin_manager.c: 120:     IOCANbits.IOCAN6 = 0;
  13349     049D  133E               	bcf	62,6	;volatile
  13350     049E                     l9332:
  13351                           
- 13352                           ;mcc_generated_files/pin_manager.c: 124:     IOCANbits.IOCAN7 = 1;
+ 13352                           ;mcc_generated_files/pin_manager.c: 122:     IOCANbits.IOCAN7 = 1;
  13353     049E  17BE               	bsf	62,7	;volatile
  13354     049F                     l9334:
  13355                           
- 13356                           ;mcc_generated_files/pin_manager.c: 126:     IOCAPbits.IOCAP6 = 1;
+ 13356                           ;mcc_generated_files/pin_manager.c: 124:     IOCAPbits.IOCAP6 = 1;
  13357     049F  173D               	bsf	61,6	;volatile
  13358     04A0                     l9336:
  13359                           
- 13360                           ;mcc_generated_files/pin_manager.c: 128:     IOCAPbits.IOCAP7 = 0;
+ 13360                           ;mcc_generated_files/pin_manager.c: 126:     IOCAPbits.IOCAP7 = 0;
  13361     04A0  13BD               	bcf	61,7	;volatile
  13362     04A1                     l9338:
  13363                           
- 13364                           ;mcc_generated_files/pin_manager.c: 133:     IOCAF6_SetInterruptHandler(IOCAF6_DefaultIn
+ 13364                           ;mcc_generated_files/pin_manager.c: 131:     IOCAF6_SetInterruptHandler(IOCAF6_DefaultIn
       +                          terruptHandler);
  13365     04A1  30FD               	movlw	low _IOCAF6_DefaultInterruptHandler
  13366     04A2  00F1               	movwf	IOCAF6_SetInterruptHandler@InterruptHandler
@@ -13477,7 +13477,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13369     04A5  3196  26E0  3184   	fcall	_IOCAF6_SetInterruptHandler
  13370     04A8                     l9340:
  13371                           
- 13372                           ;mcc_generated_files/pin_manager.c: 134:     IOCAF7_SetInterruptHandler(IOCAF7_DefaultIn
+ 13372                           ;mcc_generated_files/pin_manager.c: 132:     IOCAF7_SetInterruptHandler(IOCAF7_DefaultIn
       +                          terruptHandler);
  13373     04A8  3036               	movlw	low _IOCAF7_DefaultInterruptHandler
  13374     04A9  00F1               	movwf	IOCAF7_SetInterruptHandler@InterruptHandler
@@ -13486,70 +13486,70 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13377     04AC  3196  26E6  3184   	fcall	_IOCAF7_SetInterruptHandler
  13378     04AF                     l9342:
  13379                           
- 13380                           ;mcc_generated_files/pin_manager.c: 137:     PIE0bits.IOCIE = 1;
+ 13380                           ;mcc_generated_files/pin_manager.c: 135:     PIE0bits.IOCIE = 1;
  13381     04AF  014E               	movlb	14	; select bank14
  13382     04B0  1616               	bsf	22,4	;volatile
  13383     04B1                     l9344:
  13384                           
- 13385                           ;mcc_generated_files/pin_manager.c: 140:     SSP1CLKPPS = 0x09;
+ 13385                           ;mcc_generated_files/pin_manager.c: 138:     SSP1CLKPPS = 0x09;
  13386     04B1  3009               	movlw	9
  13387     04B2  017D               	movlb	61	; select bank61
  13388     04B3  00C5               	movwf	69	;volatile
  13389     04B4                     l9346:
  13390                           
- 13391                           ;mcc_generated_files/pin_manager.c: 141:     SSP2DATPPS = 0x13;
+ 13391                           ;mcc_generated_files/pin_manager.c: 139:     SSP2DATPPS = 0x13;
  13392     04B4  3013               	movlw	19
  13393     04B5  00C9               	movwf	73	;volatile
  13394     04B6                     l9348:
  13395                           
- 13396                           ;mcc_generated_files/pin_manager.c: 142:     RB1PPS = 0x13;
+ 13396                           ;mcc_generated_files/pin_manager.c: 140:     RB1PPS = 0x13;
  13397     04B6  3013               	movlw	19
  13398     04B7  017E               	movlb	62	; select bank62
  13399     04B8  0099               	movwf	25	;volatile
  13400     04B9                     l9350:
  13401                           
- 13402                           ;mcc_generated_files/pin_manager.c: 143:     RB2PPS = 0x14;
+ 13402                           ;mcc_generated_files/pin_manager.c: 141:     RB2PPS = 0x14;
  13403     04B9  3014               	movlw	20
  13404     04BA  009A               	movwf	26	;volatile
  13405     04BB                     l9352:
  13406                           
- 13407                           ;mcc_generated_files/pin_manager.c: 144:     RC1PPS = 0x15;
+ 13407                           ;mcc_generated_files/pin_manager.c: 142:     RC1PPS = 0x15;
  13408     04BB  3015               	movlw	21
  13409     04BC  00A1               	movwf	33	;volatile
  13410     04BD                     l9354:
  13411                           
- 13412                           ;mcc_generated_files/pin_manager.c: 145:     RC4PPS = 0x25;
+ 13412                           ;mcc_generated_files/pin_manager.c: 143:     RC4PPS = 0x25;
  13413     04BD  3025               	movlw	37
  13414     04BE  00A4               	movwf	36	;volatile
  13415     04BF                     l9356:
  13416                           
- 13417                           ;mcc_generated_files/pin_manager.c: 146:     RB4PPS = 0x0F;
+ 13417                           ;mcc_generated_files/pin_manager.c: 144:     RB4PPS = 0x0F;
  13418     04BF  300F               	movlw	15
  13419     04C0  009C               	movwf	28	;volatile
  13420     04C1                     l9358:
  13421                           
- 13422                           ;mcc_generated_files/pin_manager.c: 147:     RC2PPS = 0x16;
+ 13422                           ;mcc_generated_files/pin_manager.c: 145:     RC2PPS = 0x16;
  13423     04C1  3016               	movlw	22
  13424     04C2  00A2               	movwf	34	;volatile
  13425     04C3                     l9360:
  13426                           
- 13427                           ;mcc_generated_files/pin_manager.c: 148:     RX2DTPPS = 0x15;
+ 13427                           ;mcc_generated_files/pin_manager.c: 146:     RX2DTPPS = 0x15;
  13428     04C3  3015               	movlw	21
  13429     04C4  017D               	movlb	61	; select bank61
  13430     04C5  00CD               	movwf	77	;volatile
  13431     04C6                     l9362:
  13432                           
- 13433                           ;mcc_generated_files/pin_manager.c: 149:     SSP1DATPPS = 0x0A;
+ 13433                           ;mcc_generated_files/pin_manager.c: 147:     SSP1DATPPS = 0x0A;
  13434     04C6  300A               	movlw	10
  13435     04C7  00C6               	movwf	70	;volatile
  13436     04C8                     l9364:
  13437                           
- 13438                           ;mcc_generated_files/pin_manager.c: 150:     RX1DTPPS = 0x0D;
+ 13438                           ;mcc_generated_files/pin_manager.c: 148:     RX1DTPPS = 0x0D;
  13439     04C8  300D               	movlw	13
  13440     04C9  00CB               	movwf	75	;volatile
  13441     04CA                     l9366:
  13442                           
- 13443                           ;mcc_generated_files/pin_manager.c: 151:     SSP2CLKPPS = 0x11;
+ 13443                           ;mcc_generated_files/pin_manager.c: 149:     SSP2CLKPPS = 0x11;
  13444     04CA  3011               	movlw	17
  13445     04CB  00C8               	movwf	72	;volatile
  13446     04CC                     l1498:
@@ -13560,7 +13560,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13451     16E6                     __ptext15:	
  13452 ;; *************** function _IOCAF7_SetInterruptHandler *****************
  13453 ;; Defined at:
- 13454 ;;		line 217 in file "mcc_generated_files/pin_manager.c"
+ 13454 ;;		line 210 in file "mcc_generated_files/pin_manager.c"
  13455 ;; Parameters:    Size  Location     Type
  13456 ;;  InterruptHan    2    1[COMMON] PTR FTN()void 
  13457 ;;		 -> IOCAF7_DefaultInterruptHandler(1), 
@@ -13602,7 +13602,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13488                           ; Regs used in _IOCAF7_SetInterruptHandler: [wreg]
  13489                           
  13490                           
- 13491                           ;mcc_generated_files/pin_manager.c: 218:     IOCAF7_InterruptHandler = InterruptHandler;
+ 13491                           ;mcc_generated_files/pin_manager.c: 211:     IOCAF7_InterruptHandler = InterruptHandler;
  13492     16E6  0872               	movf	IOCAF7_SetInterruptHandler@InterruptHandler+1,w
  13493     16E7  0141               	movlb	1	; select bank1
  13494     16E8  00EC               	movwf	(_IOCAF7_InterruptHandler+1)^(0+128)
@@ -13616,7 +13616,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13502     16E0                     __ptext16:	
  13503 ;; *************** function _IOCAF6_SetInterruptHandler *****************
  13504 ;; Defined at:
- 13505 ;;		line 187 in file "mcc_generated_files/pin_manager.c"
+ 13505 ;;		line 181 in file "mcc_generated_files/pin_manager.c"
  13506 ;; Parameters:    Size  Location     Type
  13507 ;;  InterruptHan    2    1[COMMON] PTR FTN()void 
  13508 ;;		 -> IOCAF6_DefaultInterruptHandler(1), 
@@ -13658,7 +13658,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  13539                           ; Regs used in _IOCAF6_SetInterruptHandler: [wreg]
  13540                           
  13541                           
- 13542                           ;mcc_generated_files/pin_manager.c: 188:     IOCAF6_InterruptHandler = InterruptHandler;
+ 13542                           ;mcc_generated_files/pin_manager.c: 182:     IOCAF6_InterruptHandler = InterruptHandler;
  13543     16E0  0872               	movf	IOCAF6_SetInterruptHandler@InterruptHandler+1,w
  13544     16E1  0141               	movlb	1	; select bank1
  13545     16E2  00EE               	movwf	(_IOCAF6_InterruptHandler+1)^(0+128)
@@ -14709,11 +14709,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  14504 ;;		line 328 in file "mcc_generated_files/rn487x/rn487x.c"
  14505 ;; Parameters:    Size  Location     Type
  14506 ;;  pBuffer         1    wreg     PTR unsigned char 
- 14507 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), 
+ 14507 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), 
  14508 ;;  len             1    1[COMMON] unsigned char 
  14509 ;; Auto vars:     Size  Location     Type
  14510 ;;  pBuffer         1    2[COMMON] PTR unsigned char 
- 14511 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), 
+ 14511 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), 
  14512 ;; Return value:  Size  Location     Type
  14513 ;;                  1    wreg      _Bool 
  14514 ;; Registers used:
@@ -15158,7 +15158,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  14920 ;;		line 368 in file "mcc_generated_files/rn487x/rn487x_interface.c"
  14921 ;; Parameters:    Size  Location     Type
  14922 ;;  message         1   11[COMMON] PTR unsigned char 
- 14923 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 14923 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  14924 ;; Auto vars:     Size  Location     Type
  14925 ;;  messageType     1   34[BANK0 ] enum E13000
  14926 ;; Return value:  Size  Location     Type
@@ -15296,12 +15296,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  15045 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strstr.c"
  15046 ;; Parameters:    Size  Location     Type
  15047 ;;  h               1    wreg     PTR const unsigned char 
- 15048 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15048 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15049 ;;  n               2    7[COMMON] PTR const unsigned char 
  15050 ;;		 -> STR_5(12), STR_3(11), 
  15051 ;; Auto vars:     Size  Location     Type
  15052 ;;  h               1    2[BANK0 ] PTR const unsigned char 
- 15053 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15053 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15054 ;;  nl              2    0[BANK0 ] unsigned int 
  15055 ;; Return value:  Size  Location     Type
  15056 ;;                  1    wreg      PTR unsigned char 
@@ -15437,13 +15437,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  15181 ;;		line 3 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strncmp.c"
  15182 ;; Parameters:    Size  Location     Type
  15183 ;;  l               1    wreg     PTR const unsigned char 
- 15184 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15184 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15185 ;;  r               2    1[COMMON] PTR const unsigned char 
  15186 ;;		 -> STR_5(12), STR_3(11), 
  15187 ;;  n               2    3[COMMON] unsigned int 
  15188 ;; Auto vars:     Size  Location     Type
  15189 ;;  l               1    6[COMMON] PTR const unsigned char 
- 15190 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15190 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15191 ;; Return value:  Size  Location     Type
  15192 ;;                  2    1[COMMON] int 
  15193 ;; Registers used:
@@ -15592,11 +15592,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  15331 ;;		line 3 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strchr.c"
  15332 ;; Parameters:    Size  Location     Type
  15333 ;;  s               1    wreg     PTR const unsigned char 
- 15334 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15334 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15335 ;;  c               2    1[COMMON] int 
  15336 ;; Auto vars:     Size  Location     Type
  15337 ;;  s               1    3[COMMON] PTR const unsigned char 
- 15338 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15338 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15339 ;; Return value:  Size  Location     Type
  15340 ;;                  1    wreg      PTR unsigned char 
  15341 ;; Registers used:
@@ -15917,10 +15917,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  15641 ;;		line 358 in file "mcc_generated_files/rn487x/rn487x_interface.c"
  15642 ;; Parameters:    Size  Location     Type
  15643 ;;  passedMessag    1    wreg     PTR unsigned char 
- 15644 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15644 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15645 ;; Auto vars:     Size  Location     Type
  15646 ;;  passedMessag    1   32[BANK0 ] PTR unsigned char 
- 15647 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15647 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15648 ;;  messageIndex    1   33[BANK0 ] unsigned char 
  15649 ;;  printCharact   32    0[BANK0 ] unsigned char [32]
  15650 ;; Return value:  Size  Location     Type
@@ -16046,7 +16046,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  15759 ;;  dest            1    wreg     PTR unsigned char 
  15760 ;;		 -> rn487x_PrintMessage@printCharacter(32), 
  15761 ;;  src             1    1[COMMON] PTR const unsigned char 
- 15762 ;;		 -> statusBuffer@main$F4033(80), statusBuffer(80), NULL(0), 
+ 15762 ;;		 -> statusBuffer@main$F4030(80), statusBuffer(80), NULL(0), 
  15763 ;; Auto vars:     Size  Location     Type
  15764 ;;  dest            1    3[COMMON] PTR unsigned char 
  15765 ;;		 -> rn487x_PrintMessage@printCharacter(32), 
@@ -17330,10 +17330,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  16919 ;;		line 404 in file "mcc_generated_files/application/LIGHTBLUE_service.c"
  16920 ;; Parameters:    Size  Location     Type
  16921 ;;  serialData      1    wreg     PTR unsigned char 
- 16922 ;;		 -> lightBlueSerial@main$F4034(80), 
+ 16922 ;;		 -> lightBlueSerial@main$F4031(80), 
  16923 ;; Auto vars:     Size  Location     Type
  16924 ;;  serialData      1    9[COMMON] PTR unsigned char 
- 16925 ;;		 -> lightBlueSerial@main$F4034(80), 
+ 16925 ;;		 -> lightBlueSerial@main$F4031(80), 
  16926 ;;  length          1    8[COMMON] unsigned char 
  16927 ;; Return value:  Size  Location     Type
  16928 ;;                  1    wreg      void 
@@ -20511,14 +20511,14 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  19854 ;;		line 5 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c"
  19855 ;; Parameters:    Size  Location     Type
  19856 ;;  s               2    1[COMMON] PTR const unsigned char 
- 19857 ;;		 -> lightBlueSerial@main$F4034(80), statusBuffer@main$F4033(80), STR_5(12), STR_3(11), 
+ 19857 ;;		 -> lightBlueSerial@main$F4031(80), statusBuffer@main$F4030(80), STR_5(12), STR_3(11), 
  19858 ;;		 -> statusBuffer(80), NULL(0), LIGHTBLUE_SendProtocolVersion@payload(19), LIGHTBLUE_LedState@payload(3), 
  19859 ;;		 -> LIGHTBLUE_AccState@payload(3), LIGHTBLUE_PushButton@payload(3), LIGHTBLUE_AccelSensor@payload(13), LIGHTBLUE_Tem
       +peratureSensor@payload(5), 
  19860 ;;		 -> STR_1(6), 
  19861 ;; Auto vars:     Size  Location     Type
  19862 ;;  a               2    4[COMMON] PTR const unsigned char 
- 19863 ;;		 -> lightBlueSerial@main$F4034(80), statusBuffer@main$F4033(80), STR_5(12), STR_3(11), 
+ 19863 ;;		 -> lightBlueSerial@main$F4031(80), statusBuffer@main$F4030(80), STR_5(12), STR_3(11), 
  19864 ;;		 -> statusBuffer(80), NULL(0), LIGHTBLUE_SendProtocolVersion@payload(19), LIGHTBLUE_LedState@payload(3), 
  19865 ;;		 -> LIGHTBLUE_AccState@payload(3), LIGHTBLUE_PushButton@payload(3), LIGHTBLUE_AccelSensor@payload(13), LIGHTBLUE_Tem
       +peratureSensor@payload(5), 
@@ -25966,7 +25966,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24789     083C                     __ptext146:	
  24790 ;; *************** function _PIN_MANAGER_IOC *****************
  24791 ;; Defined at:
- 24792 ;;		line 154 in file "mcc_generated_files/pin_manager.c"
+ 24792 ;;		line 152 in file "mcc_generated_files/pin_manager.c"
  24793 ;; Parameters:    Size  Location     Type
  24794 ;;		None
  24795 ;; Auto vars:     Size  Location     Type
@@ -26008,7 +26008,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24826                           ; Regs used in _PIN_MANAGER_IOC: [wreg+status,2+status,0+pclath+cstack]
  24827                           
  24828                           
- 24829                           ;mcc_generated_files/pin_manager.c: 157:     if(IOCAFbits.IOCAF6 == 1)
+ 24829                           ;mcc_generated_files/pin_manager.c: 154:     if (IOCAFbits.IOCAF6 == 1) {
  24830     083C  017E               	movlb	62	; select bank62
  24831     083D  1F3F               	btfss	63,6	;volatile
  24832     083E  2840               	goto	u347_21
@@ -26018,12 +26018,11 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24836     0841                     u347_20:
  24837     0841                     i1l7360:
  24838                           
- 24839                           ;mcc_generated_files/pin_manager.c: 158:     {;mcc_generated_files/pin_manager.c: 159:  
-      +                                 IOCAF6_ISR();
+ 24839                           ;mcc_generated_files/pin_manager.c: 155:         IOCAF6_ISR();
  24840     0841  3188  202B  3188   	fcall	_IOCAF6_ISR
  24841     0844                     i1l7362:
  24842                           
- 24843                           ;mcc_generated_files/pin_manager.c: 162:     if(IOCAFbits.IOCAF7 == 1)
+ 24843                           ;mcc_generated_files/pin_manager.c: 158:     if (IOCAFbits.IOCAF7 == 1) {
  24844     0844  017E               	movlb	62	; select bank62
  24845     0845  1FBF               	btfss	63,7	;volatile
  24846     0846  2848               	goto	u348_21
@@ -26033,8 +26032,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24850     0849                     u348_20:
  24851     0849                     i1l7364:
  24852                           
- 24853                           ;mcc_generated_files/pin_manager.c: 163:     {;mcc_generated_files/pin_manager.c: 164:  
-      +                                 IOCAF7_ISR();
+ 24853                           ;mcc_generated_files/pin_manager.c: 159:         IOCAF7_ISR();
  24854     0849  3188  200D  3188   	fcall	_IOCAF7_ISR
  24855     084C                     i1l1503:
  24856     084C  0008               	return
@@ -26044,7 +26042,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24860     080D                     __ptext147:	
  24861 ;; *************** function _IOCAF7_ISR *****************
  24862 ;; Defined at:
- 24863 ;;		line 202 in file "mcc_generated_files/pin_manager.c"
+ 24863 ;;		line 196 in file "mcc_generated_files/pin_manager.c"
  24864 ;; Parameters:    Size  Location     Type
  24865 ;;		None
  24866 ;; Auto vars:     Size  Location     Type
@@ -26086,7 +26084,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24897                           ; Regs used in _IOCAF7_ISR: [wreg+status,2+status,0+pclath+cstack]
  24898                           
  24899                           
- 24900                           ;mcc_generated_files/pin_manager.c: 207:     if(IOCAF7_InterruptHandler)
+ 24900                           ;mcc_generated_files/pin_manager.c: 201:     if (IOCAF7_InterruptHandler) {
  24901     080D  0141               	movlb	1	; select bank1
  24902     080E  086B               	movf	_IOCAF7_InterruptHandler^(0+128),w
  24903     080F  046C               	iorwf	(_IOCAF7_InterruptHandler+1)^(0+128),w
@@ -26098,8 +26096,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24909     0814                     u309_20:
  24910     0814                     i1l6884:
  24911                           
- 24912                           ;mcc_generated_files/pin_manager.c: 208:     {;mcc_generated_files/pin_manager.c: 209:  
-      +                                 IOCAF7_InterruptHandler();
+ 24912                           ;mcc_generated_files/pin_manager.c: 202:         IOCAF7_InterruptHandler();
  24913     0814  086C               	movf	(_IOCAF7_InterruptHandler+1)^(0+128),w
  24914     0815  008A               	movwf	10
  24915     0816  086B               	movf	_IOCAF7_InterruptHandler^(0+128),w
@@ -26107,7 +26104,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24917     0818  3188               	pagesel	$
  24918     0819                     i1l6886:
  24919                           
- 24920                           ;mcc_generated_files/pin_manager.c: 211:     IOCAFbits.IOCAF7 = 0;
+ 24920                           ;mcc_generated_files/pin_manager.c: 204:     IOCAFbits.IOCAF7 = 0;
  24921     0819  017E               	movlb	62	; select bank62
  24922     081A  13BF               	bcf	63,7	;volatile
  24923     081B                     i1l1517:
@@ -26118,7 +26115,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24928     1636                     __ptext148:	
  24929 ;; *************** function _IOCAF7_DefaultInterruptHandler *****************
  24930 ;; Defined at:
- 24931 ;;		line 224 in file "mcc_generated_files/pin_manager.c"
+ 24931 ;;		line 217 in file "mcc_generated_files/pin_manager.c"
  24932 ;; Parameters:    Size  Location     Type
  24933 ;;		None
  24934 ;; Auto vars:     Size  Location     Type
@@ -26159,10 +26156,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24964                           ; Regs used in _IOCAF7_DefaultInterruptHandler: []
  24965                           
  24966                           
- 24967                           ;mcc_generated_files/pin_manager.c: 225:     pushed=1;
+ 24967                           ;mcc_generated_files/pin_manager.c: 218:     (pushed = 1);
  24968     1636  0140               	movlb	0	; select bank0
- 24969     1637  01AC               	clrf	_pushed
- 24970     1638  0AAC               	incf	_pushed,f
+ 24969     1637  01AB               	clrf	_pushed
+ 24970     1638  0AAB               	incf	_pushed,f
  24971     1639                     i1l1523:
  24972     1639  0008               	return
  24973     163A                     __end_of_IOCAF7_DefaultInterruptHandler:
@@ -26171,7 +26168,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  24976     082B                     __ptext149:	
  24977 ;; *************** function _IOCAF6_ISR *****************
  24978 ;; Defined at:
- 24979 ;;		line 171 in file "mcc_generated_files/pin_manager.c"
+ 24979 ;;		line 166 in file "mcc_generated_files/pin_manager.c"
  24980 ;; Parameters:    Size  Location     Type
  24981 ;;		None
  24982 ;; Auto vars:     Size  Location     Type
@@ -26213,12 +26210,12 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  25013                           ; Regs used in _IOCAF6_ISR: [wreg+status,2+status,0+pclath+cstack]
  25014                           
  25015                           
- 25016                           ;mcc_generated_files/pin_manager.c: 174:     (INTERRUPTbits.ACC = 1);
+ 25016                           ;mcc_generated_files/pin_manager.c: 169:     (INTERRUPTbits.ACC = 1);
  25017     082B  0140               	movlb	0	; select bank0
  25018     082C  1445               	bsf	_INTERRUPTbits,0	;volatile
  25019     082D                     i1l6876:
  25020                           
- 25021                           ;mcc_generated_files/pin_manager.c: 177:     if(IOCAF6_InterruptHandler)
+ 25021                           ;mcc_generated_files/pin_manager.c: 172:     if (IOCAF6_InterruptHandler) {
  25022     082D  0141               	movlb	1	; select bank1
  25023     082E  086D               	movf	_IOCAF6_InterruptHandler^(0+128),w
  25024     082F  046E               	iorwf	(_IOCAF6_InterruptHandler+1)^(0+128),w
@@ -26230,8 +26227,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  25030     0834                     u308_20:
  25031     0834                     i1l6878:
  25032                           
- 25033                           ;mcc_generated_files/pin_manager.c: 178:     {;mcc_generated_files/pin_manager.c: 179:  
-      +                                 IOCAF6_InterruptHandler();
+ 25033                           ;mcc_generated_files/pin_manager.c: 173:         IOCAF6_InterruptHandler();
  25034     0834  086E               	movf	(_IOCAF6_InterruptHandler+1)^(0+128),w
  25035     0835  008A               	movwf	10
  25036     0836  086D               	movf	_IOCAF6_InterruptHandler^(0+128),w
@@ -26239,7 +26235,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  25038     0838  3188               	pagesel	$
  25039     0839                     i1l6880:
  25040                           
- 25041                           ;mcc_generated_files/pin_manager.c: 181:     IOCAFbits.IOCAF6 = 0;
+ 25041                           ;mcc_generated_files/pin_manager.c: 175:     IOCAFbits.IOCAF6 = 0;
  25042     0839  017E               	movlb	62	; select bank62
  25043     083A  133F               	bcf	63,6	;volatile
  25044     083B                     i1l1507:
@@ -26250,7 +26246,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  25049     15FD                     __ptext150:	
  25050 ;; *************** function _IOCAF6_DefaultInterruptHandler *****************
  25051 ;; Defined at:
- 25052 ;;		line 194 in file "mcc_generated_files/pin_manager.c"
+ 25052 ;;		line 188 in file "mcc_generated_files/pin_manager.c"
  25053 ;; Parameters:    Size  Location     Type
  25054 ;;		None
  25055 ;; Auto vars:     Size  Location     Type
@@ -27444,7 +27440,7 @@ Auto Spaces:
 Pointer List with Targets:
 
     asyncBuffer	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     bufferBlock$data	PTR unsigned char  size(2) Largest target is 0
 
@@ -27668,7 +27664,7 @@ Pointer List with Targets:
 		 -> LIGHTBLUE_SendProtocolVersion@payload(BANK0[19]), LIGHTBLUE_TemperatureSensor@payload(BANK0[5]), 
 
     LIGHTBLUE_SendSerialData@serialData	PTR unsigned char  size(1) Largest target is 80
-		 -> lightBlueSerial@main$F4034(BANK5[80]), 
+		 -> lightBlueSerial@main$F4031(BANK5[80]), 
 
     LIGHTBLUE_SplitByte@payload	PTR unsigned char  size(1) Largest target is 19
 		 -> LIGHTBLUE_AccelSensor@payload(COMMON[13]), LIGHTBLUE_AccState@payload(BANK0[3]), LIGHTBLUE_LedState@payload(BANK0[3]), LIGHTBLUE_PushButton@payload(BANK0[3]), 
@@ -27686,7 +27682,7 @@ Pointer List with Targets:
 		 -> i2c_write1ByteRegister@data(BANK0[1]), i2c_write2ByteRegister@data(COMMON[2]), NULL(NULL[0]), 
 
     pHead	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     protocol_version_number	const PTR const unsigned char  size(2) Largest target is 6
 		 -> STR_1(CODE[6]), 
@@ -27756,10 +27752,10 @@ Pointer List with Targets:
 		 -> STR_6(CODE[6]), 
 
     RN487X_MessageHandler@message	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     rn487x_PrintMessage@passedMessage	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     RN487X_ReadMsg@expectedMsg	PTR const unsigned char  size(2) Largest target is 11
 		 -> RN487X_EnterCmdMode@cmdPrompt(CODE[5]), RN487X_EnterDataMode@cmdPrompt(CODE[5]), RN487X_GetInputsValues@ioValue(COMMON[2]), RN487X_RebootCmd@reboot(CODE[11]), 
@@ -27768,12 +27764,12 @@ Pointer List with Targets:
 		 -> cmdBuf(BANK4[64]), 
 
     RN487X_SetAsyncMessageHandler@pBuffer	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), 
 
     S1013$data	PTR unsigned char  size(2) Largest target is 0
 
     S215$8$0	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     S215$AsyncHandler	PTR FTN(PTR unsigned char ,)void  size(2) Largest target is 1
 		 -> RN487X_MessageHandler(), 
@@ -27874,13 +27870,13 @@ Pointer List with Targets:
     S667$data_ptr	PTR unsigned char  size(2) Largest target is 0
 
     sp__strchr	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     sp__strcpy	PTR unsigned char  size(1) Largest target is 32
 		 -> rn487x_PrintMessage@printCharacter(BANK0[32]), 
 
     sp__strstr	PTR unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     SPI2_ReadBlock@block	PTR void  size(1) Largest target is 4
 		 -> send_spi_read@data(BANK1[4]), 
@@ -27889,7 +27885,7 @@ Pointer List with Targets:
 		 -> send_spi_read@data(BANK1[4]), 
 
     strchr@s	PTR const unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     strcpy@d	PTR unsigned char  size(1) Largest target is 32
 		 -> rn487x_PrintMessage@printCharacter(BANK0[32]), 
@@ -27898,28 +27894,28 @@ Pointer List with Targets:
 		 -> rn487x_PrintMessage@printCharacter(BANK0[32]), 
 
     strcpy@src	PTR const unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     strlen@a	PTR const unsigned char  size(2) Largest target is 80
 		 -> LIGHTBLUE_AccelSensor@payload(COMMON[13]), LIGHTBLUE_AccState@payload(BANK0[3]), LIGHTBLUE_LedState@payload(BANK0[3]), LIGHTBLUE_PushButton@payload(BANK0[3]), 
-		 -> LIGHTBLUE_SendProtocolVersion@payload(BANK0[19]), LIGHTBLUE_TemperatureSensor@payload(BANK0[5]), lightBlueSerial@main$F4034(BANK5[80]), statusBuffer(BANK6[80]), 
-		 -> statusBuffer@main$F4033(BANK7[80]), STR_1(CODE[6]), STR_3(CODE[11]), STR_5(CODE[12]), 
+		 -> LIGHTBLUE_SendProtocolVersion@payload(BANK0[19]), LIGHTBLUE_TemperatureSensor@payload(BANK0[5]), lightBlueSerial@main$F4031(BANK5[80]), statusBuffer(BANK6[80]), 
+		 -> statusBuffer@main$F4030(BANK7[80]), STR_1(CODE[6]), STR_3(CODE[11]), STR_5(CODE[12]), 
 		 -> NULL(NULL[0]), 
 
     strlen@s	PTR const unsigned char  size(2) Largest target is 80
 		 -> LIGHTBLUE_AccelSensor@payload(COMMON[13]), LIGHTBLUE_AccState@payload(BANK0[3]), LIGHTBLUE_LedState@payload(BANK0[3]), LIGHTBLUE_PushButton@payload(BANK0[3]), 
-		 -> LIGHTBLUE_SendProtocolVersion@payload(BANK0[19]), LIGHTBLUE_TemperatureSensor@payload(BANK0[5]), lightBlueSerial@main$F4034(BANK5[80]), statusBuffer(BANK6[80]), 
-		 -> statusBuffer@main$F4033(BANK7[80]), STR_1(CODE[6]), STR_3(CODE[11]), STR_5(CODE[12]), 
+		 -> LIGHTBLUE_SendProtocolVersion@payload(BANK0[19]), LIGHTBLUE_TemperatureSensor@payload(BANK0[5]), lightBlueSerial@main$F4031(BANK5[80]), statusBuffer(BANK6[80]), 
+		 -> statusBuffer@main$F4030(BANK7[80]), STR_1(CODE[6]), STR_3(CODE[11]), STR_5(CODE[12]), 
 		 -> NULL(NULL[0]), 
 
     strncmp@l	PTR const unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     strncmp@r	PTR const unsigned char  size(2) Largest target is 12
 		 -> STR_3(CODE[11]), STR_5(CODE[12]), 
 
     strstr@h	PTR const unsigned char  size(1) Largest target is 80
-		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4033(BANK7[80]), NULL(NULL[0]), 
+		 -> statusBuffer(BANK6[80]), statusBuffer@main$F4030(BANK7[80]), NULL(NULL[0]), 
 
     strstr@n	PTR const unsigned char  size(2) Largest target is 12
 		 -> STR_3(CODE[11]), STR_5(CODE[12]), 
@@ -29558,7 +29554,7 @@ SFR63                0      0       0      64        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Thu Mar 06 10:10:38 2025
+Symbol Table                                                                                   Thu Mar 06 13:55:46 2025
 
                                  _eusart1TxBufferRemaining 0031  
                                    ?_EUSART2_RxDataHandler 0070  
@@ -30207,7 +30203,7 @@ Symbol Table                                                                    
                                                      l9608 0A4F  
                                                      l9392 051B  
                                                      l9384 04D3  
-                                                     l9640 0AAD  
+                                                     l9640 0AA7  
                                                      l9632 0A16  
                                                      l9624 0A07  
                                                      l8674 1605  
@@ -30274,7 +30270,7 @@ Symbol Table                                                                    
                                                      l8924 0EEC  
                                                      l9572 0981  
                                                      l9388 04F4  
-                                                     l9644 0AB2  
+                                                     l9644 0AB1  
                                                      l9636 0A9C  
                                                      l9628 0A0D  
                                                      l8838 09C7  
@@ -30694,7 +30690,7 @@ Symbol Table                                                                    
                                         ??_I2C1_Initialize 0071  
                                                     _pHead 003D  
                                   __end_of_PIN_MANAGER_IOC 084D  
-                                                    _flats 002A  
+                                                    _flats 0029  
                                            ??_RN487X_Delay 0076  
                                            ??_RN487X_Reset 0072  
                                     _i2c_read1ByteRegister 06AE  
@@ -30753,7 +30749,7 @@ Symbol Table                                                                    
                                        __end_of_I2C1_DO_RX 07C7  
                                        __end_of_I2C1_DO_TX 05C7  
                                       ??_SPI2_ExchangeByte 0071  
-                                   _serialIndex@main$F4035 0028  
+                                   _serialIndex@main$F4032 0028  
                                          _RN487X_DataReady 0AD1  
                                        __end_of_I2C1_Close 09D2  
                                __end_of_EUSART2_Initialize 1000  
@@ -30962,7 +30958,7 @@ Symbol Table                                                                    
                                        ??_I2C1_MasterWrite 007B  
                    LIGHTBLUE_TemperatureSensor@temperature 0065  
                                                    _cmdBuf 0220  
-                               _lightBlueSerial@main$F4034 02A0  
+                               _lightBlueSerial@main$F4031 02A0  
                                                    _bitMap 0026  
                                 RN487X_FilterData@readChar 006C  
                                  ?_EUSART1_SetErrorHandler 0071  
@@ -30970,7 +30966,7 @@ Symbol Table                                                                    
                               _EUSART2_FramingErrorHandler 015A  
                          ??_EUSART1_SetOverrunErrorHandler 0073  
                           ?_EUSART1_SetOverrunErrorHandler 0071  
-                                                   _pushed 002C  
+                                                   _pushed 002B  
                         __end_of_LIGHTBLUE_GetDataLedValue 169E  
                                                    _strchr 0A33  
                                  ??_I2C1_DO_SEND_ADR_WRITE 0072  
@@ -31168,7 +31164,7 @@ __end_of_rdBlkRegCompleteHandler@i2c1_master_example$F1266 0A02
                                           _asyncBufferSize 003E  
                                     ??_LIGHTBLUE_SplitByte 0077  
                                        _i2c1_fsmStateTable 1028  
-                                       _sendSpiReadRequest 002B  
+                                       _sendSpiReadRequest 002A  
                                        _i2c1_driver_i2cISR 00E5  
                                     ??_LIGHTBLUE_SplitWord 007B  
                                       ??_I2C1_MasterIsNack 0071  
@@ -31315,8 +31311,8 @@ __end_of_rdBlkRegCompleteHandler@i2c1_master_example$F1266 0A02
                                     ??_rn487x_PrintMessage 0076  
                                    ??_RN487X_EnterDataMode 007B  
                                      _LIGHTBLUE_Initialize 1692  
-                                  _statusBuffer@main$F4033 03A0  
-                                  _statusBuffer@main$F2565 0420  
+                                  _statusBuffer@main$F4030 03A0  
+                                  _statusBuffer@main$F2562 0420  
                                   ??_i2c_read1ByteRegister 007B  
                                        ?_RN487X_SetOutputs 0048  
                                   _IOCAF6_InterruptHandler 00ED  
@@ -31882,7 +31878,7 @@ __end_of_rdBlkRegCompleteHandler@i2c1_master_example$F1266 0A02
                                   _I2C1_CallbackReturnStop 15FE  
                              __end_of_EUSART1_Transmit_ISR 0B6F  
                           ??_LIGHTBLUE_ParseIncomingPacket 0053  
-                                              _serialIndex 0029  
+                                              _serialIndex 002C  
                                      _RN487X_SetSystemMode 17A5  
                                      _I2C1_DO_ADDRESS_NACK 0C9C  
                                    ?_I2C1_MasterDisableIrq 0070  

@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.46\pic\dat\20240104201356_en.msgs \
   -cn -h+dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.sym \
   --cmf=dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.cmf -z \
-  -Q16LF18456 -oC:\Users\jjega\AppData\Local\Temp\xcAscmo.\driver_tmp_3.o \
+  -Q16LF18456 -oC:\Users\jjega\AppData\Local\Temp\xcAs38s.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/debug/PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.map \
-  --md=C:\Users\jjega\AppData\Local\Temp\xcAscmo.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\jjega\AppData\Local\Temp\xcAs38s.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=02320h-027EFh -pstack=STACK \
   -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh -ASTRING=00h-0FFhx64 \
   -ACONST=00h-0FFhx64 -AENTRY=00h-0FFhx64 -ACOMMON=070h-07Fh \
@@ -50,7 +50,7 @@ Linker command line:
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\jjega\AppData\Local\Temp\xcAscmo.\driver_tmp_15.o \
+  C:\Users\jjega\AppData\Local\Temp\xcAs38s.\driver_tmp_15.o \
   dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o 
 
 Object code version is 3.11
@@ -60,7 +60,7 @@ Machine type is 16LF18456
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\jjega\AppData\Local\Temp\xcAscmo.\driver_tmp_15.o
+C:\Users\jjega\AppData\Local\Temp\xcAs38s.\driver_tmp_15.o
                 stack                              2320     2320      4D0     2320       2
                 end_init                             55       55        2        8       0
                 reset_vec                             0        0        2        0       0
@@ -2218,7 +2218,7 @@ _eusart2TxBuffer                                           bssBANK1     000DD
 _eusart2TxBufferRemaining                                  bssBANK0     00037
 _eusart2TxHead                                             bssBANK0     00039
 _eusart2TxTail                                             bssBANK0     00038
-_flats                                                     bssBANK0     0002A
+_flats                                                     bssBANK0     00029
 _fsmStateTable                                             stringtext3  01048
 _i2c1_driver_busCollisionISR                               bssBANK0     00022
 _i2c1_driver_i2cISR                                        bssBANK1     000E5
@@ -2229,12 +2229,12 @@ _i2c_read1ByteRegister                                     text91       006AE
 _i2c_read2ByteRegister                                     text55       00741
 _i2c_status                                                bssBANK2     00120
 _i2c_write1ByteRegister                                    text90       00DA0
-_lightBlueSerial@main$F4034                                bssBANK5     002A0
+_lightBlueSerial@main$F4031                                bssBANK5     002A0
 _main                                                      maintext     000B8
 _main$5046                                                 cstackBANK1  000EF
 _pHead                                                     bssBANK0     0003D
 _peek                                                      bssBANK0     0003C
-_pushed                                                    bssBANK0     0002C
+_pushed                                                    bssBANK0     0002B
 _rad                                                       bssBANK0     00046
 _rd1RegCompleteHandler                                     text132      0086F
 _rd1RegCompleteHandler@i2c1_master_example$F1232           text128      008A2
@@ -2248,15 +2248,15 @@ _rn487x_PrintIndicatorCharacters                           text43       00B6F
 _rn487x_PrintMessage                                       text41       00EA1
 _rn487x_PrintMessageEnd                                    text40       005C7
 _rn487x_PrintMessageStart                                  text39       00D45
-_sendSpiReadRequest                                        bssBANK0     0002B
+_sendSpiReadRequest                                        bssBANK0     0002A
 _send_spi_read                                             text5        00A9A
 _sequenceNumber                                            bssBANK0     00044
-_serialIndex@main$F4035                                    bssBANK0     00028
+_serialIndex@main$F4032                                    bssBANK0     00028
 _service_acceleremoterInterrupt                            text2        00A02
 _service_pushed                                            text1        0170F
 _spi2_configuration                                        stringtext5  01832
 _statusBuffer                                              bssBANK6     00320
-_statusBuffer@main$F4033                                   bssBANK7     003A0
+_statusBuffer@main$F4030                                   bssBANK7     003A0
 _strchr                                                    text38       00A33
 _strcpy                                                    text42       0090C
 _strlen                                                    text82       00A1A

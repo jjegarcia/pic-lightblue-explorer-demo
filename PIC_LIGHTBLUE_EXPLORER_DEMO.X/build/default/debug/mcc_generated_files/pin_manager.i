@@ -20942,13 +20942,7 @@ typedef union {
 }AccelerometerInterruptBits_t;
 volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 # 11 "mcc_generated_files/../main.h" 2
-
-
-
-_Bool pushed = 0;
-_Bool sendSpiReadRequest = 0;
-uint8_t flats = 0;
-# 31 "mcc_generated_files/../main.h"
+# 34 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
@@ -20957,6 +20951,17 @@ void service_acceleremoterInterrupt(void);
 void send_spi_read(void);
 void service_pushed(void);
 void service_acceleremoterInterrupt(void);
+
+_Bool pushed = 0;
+
+
+
+
+
+
+
+_Bool sendSpiReadRequest = 0;
+uint8_t flats = 0;
 # 50 "mcc_generated_files/pin_manager.c" 2
 
 
@@ -20965,9 +20970,7 @@ void service_acceleremoterInterrupt(void);
 void (*IOCAF6_InterruptHandler)(void);
 void (*IOCAF7_InterruptHandler)(void);
 
-
-void PIN_MANAGER_Initialize(void)
-{
+void PIN_MANAGER_Initialize(void) {
 
 
 
@@ -21062,18 +21065,15 @@ void PIN_MANAGER_Initialize(void)
     SSP2CLKPPS = 0x11;
 }
 
-void PIN_MANAGER_IOC(void)
-{
+void PIN_MANAGER_IOC(void) {
 
-    if(IOCAFbits.IOCAF6 == 1)
-    {
+    if (IOCAFbits.IOCAF6 == 1) {
         IOCAF6_ISR();
     }
 
-    if(IOCAFbits.IOCAF7 == 1)
-    {
+    if (IOCAFbits.IOCAF7 == 1) {
         IOCAF7_ISR();
-}
+    }
 }
 
 
@@ -21085,8 +21085,7 @@ void IOCAF6_ISR(void) {
     (INTERRUPTbits.ACC = 1);
 
 
-    if(IOCAF6_InterruptHandler)
-    {
+    if (IOCAF6_InterruptHandler) {
         IOCAF6_InterruptHandler();
     }
     IOCAFbits.IOCAF6 = 0;
@@ -21095,14 +21094,14 @@ void IOCAF6_ISR(void) {
 
 
 
-void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)){
+void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)) {
     IOCAF6_InterruptHandler = InterruptHandler;
 }
 
 
 
 
-void IOCAF6_DefaultInterruptHandler(void){
+void IOCAF6_DefaultInterruptHandler(void) {
 
 
 }
@@ -21115,8 +21114,7 @@ void IOCAF7_ISR(void) {
 
 
 
-    if(IOCAF7_InterruptHandler)
-    {
+    if (IOCAF7_InterruptHandler) {
         IOCAF7_InterruptHandler();
     }
     IOCAFbits.IOCAF7 = 0;
@@ -21125,15 +21123,15 @@ void IOCAF7_ISR(void) {
 
 
 
-void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)){
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)) {
     IOCAF7_InterruptHandler = InterruptHandler;
 }
 
 
 
 
-void IOCAF7_DefaultInterruptHandler(void){
-    pushed=1;
+void IOCAF7_DefaultInterruptHandler(void) {
+    (pushed = 1);
 
 
 }
