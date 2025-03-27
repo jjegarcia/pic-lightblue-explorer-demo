@@ -485,7 +485,8 @@ void IOCAF7_DefaultInterruptHandler(void);
 typedef union {
     struct {
         unsigned ACC : 1;
-        unsigned UNDEFINED : 7;
+        unsigned HARDWARE : 1;
+        unsigned UNDEFINED : 6;
     };
     uint8_t INTERRUPTbits;
 }INTERRUPTbits_t;
@@ -493,12 +494,17 @@ typedef union {
 volatile INTERRUPTbits_t INTERRUPTbits;
 
 
+#define HARDWARE_INTERRUPT_SetHigh()         (INTERRUPTbits.HARDWARE = 1) 
+#define HARDWARE_INTERRUPT_SetLow()          (INTERRUPTbits.HARDWARE = 0) 
+#define HARDWARE_INTERRUPT_Toggle()          (INTERRUPTbits.HARDWARE = ~INTERRUPTbits.ACC)
+#define HARDWARE_INTERRUPT_GetValue()        (INTERRUPTbits.HARDWARE)
+#define HARDWARE_INTERRUPT_Is_High()         (INTERRUPTbits.HARDWARE == 1)
+
 #define ACC_INTERRUPT_SetHigh()         (INTERRUPTbits.ACC = 1) 
 #define ACC_INTERRUPT_SetLow()          (INTERRUPTbits.ACC = 0) 
 #define ACC_INTERRUPT_Toggle()          (INTERRUPTbits.ACC = ~INTERRUPTbits.ACC)
 #define ACC_INTERRUPT_GetValue()        (INTERRUPTbits.ACC)
 #define ACC_INTERRUPT_Is_High()         (INTERRUPTbits.ACC == 1)
-
 
 #endif // PIN_MANAGER_H
 /**

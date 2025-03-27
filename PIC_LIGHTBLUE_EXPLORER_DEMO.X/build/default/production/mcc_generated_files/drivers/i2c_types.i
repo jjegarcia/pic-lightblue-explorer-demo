@@ -4,25 +4,25 @@
 # 288 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\language_support.h" 1 3
+# 1 "/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "mcc_generated_files/drivers/i2c_types.c" 2
 # 23 "mcc_generated_files/drivers/i2c_types.c"
 # 1 "mcc_generated_files/drivers/i2c_types.h" 1
 # 26 "mcc_generated_files/drivers/i2c_types.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdint.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 133 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned short uintptr_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef short intptr_t;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/musl_xc8.h" 1 3
+# 5 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdint.h" 2 3
+# 22 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdint.h" 3
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 1 3
+# 127 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
 typedef signed char int8_t;
 
 
@@ -45,7 +45,7 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
-# 194 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+# 188 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
 typedef long long intmax_t;
 
 
@@ -74,9 +74,9 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
-# 235 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+# 229 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
-# 27 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+# 23 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdint.h" 2 3
 
 typedef int8_t int_fast8_t;
 
@@ -108,38 +108,41 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/stdint.h" 1 3
+# 144 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdint.h" 3
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/stdint.h" 1 3
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
-# 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 26 "mcc_generated_files/drivers/i2c_types.h" 2
+# 145 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdint.h" 2 3
+# 27 "mcc_generated_files/drivers/i2c_types.h" 2
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdio.h" 1 3
+# 10 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdio.h" 3
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/features.h" 1 3
+# 11 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdio.h" 2 3
+# 24 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdio.h" 3
+# 1 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 1 3
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\features.h" 1 3
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+
+
+
+
 typedef void * va_list[1];
 
 
 
 
 typedef void * __isoc_va_list[1];
-# 128 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+# 122 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned size_t;
-# 143 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef short ssize_t;
-# 255 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+# 137 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
 typedef long long off_t;
-# 409 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+# 399 "/Applications/microchip/xc8/v2.41/pic/include/c99/bits/alltypes.h" 3
 typedef struct _IO_FILE FILE;
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
+# 25 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdio.h" 2 3
+# 52 "/Applications/microchip/xc8/v2.41/pic/include/c99/stdio.h" 3
 typedef union _G_fpos64_t {
  char __opaque[16];
  double __align;
@@ -178,22 +181,12 @@ size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
 int fgetc(FILE *);
 int getc(FILE *);
 int getchar(void);
-
-
-
-
-
 int ungetc(int, FILE *);
 int getch(void);
 
 int fputc(int, FILE *);
 int putc(int, FILE *);
 int putchar(int);
-
-
-
-
-
 void putch(char);
 
 char *fgets(char *restrict, int, FILE *restrict);
@@ -274,8 +267,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 27 "mcc_generated_files/drivers/i2c_types.h" 2
-
+# 28 "mcc_generated_files/drivers/i2c_types.h" 2
 
 typedef enum {
     I2C_NOERR,
@@ -303,8 +295,7 @@ i2c_operations_t i2c_returnStop(void *p);
 i2c_operations_t i2c_returnReset(void *p);
 i2c_operations_t i2c_restartWrite(void *p);
 i2c_operations_t i2c_restartRead(void *p);
-# 23 "mcc_generated_files/drivers/i2c_types.c" 2
-
+# 24 "mcc_generated_files/drivers/i2c_types.c" 2
 
 i2c_operations_t i2c_returnStop(void *p)
 {

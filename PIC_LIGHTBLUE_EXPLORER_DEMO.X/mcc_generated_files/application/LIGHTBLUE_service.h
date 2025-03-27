@@ -272,16 +272,20 @@ LIGHTBLUE_PerformAction private function. Use of types is handled in packet
 format functions used to specific application transmission features. 
  */
 typedef enum {
-    PROTOCOL_VERSION_ID = 'V',
-    LED_STATE_ID = 'L',
-    BUTTON_STATE_ID = 'P',
-    TEMPERATURE_DATA_ID = 'T',
-    ACCEL_DATA_ID = 'X',
-    SERIAL_DATA_ID = 'S',
-    ERROR_ID = 'R',
-    UI_CONFIG_DATA_ID = 'U',
-    ACC_STATE = 'A',
-    THERMOCOUPLE_TEMPERATURE_ID = 'K'
+    PROTOCOL_VERSION_ID                 = 'V',
+    LED_STATE_ID                        = 'L',
+    BUTTON_STATE_ID                     = 'P',
+    TEMPERATURE_DATA_ID                 = 'T',
+    ACCEL_DATA_ID                       = 'X',
+    SERIAL_DATA_ID                      = 'S',
+    ERROR_ID                            = 'R',
+    UI_CONFIG_DATA_ID                   = 'U',
+    ACC_FLAT_STATE_ID                   = 'F',
+    THERMOCOUPLE_TEMPERATURE_ID         = 'K',
+    RESET_REQUEST_ID                    = 'O',
+    BUZZ_REQUEST_ID                     = 'B',
+    ALERT_REQUEST_ID                    = 'A',
+    HARDWARE_INTERRUPT_REQUEST_ID       = 'H'        
 } PROTOCOL_PACKET_TYPES_t;
 
 /**
@@ -408,5 +412,82 @@ void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 
 void LIGHTBLUE_AccState(void); 
 void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
+
+typedef union {
+    struct {
+        unsigned ACC_FLAT_STATE             : 1;
+        unsigned THERMOCOUPLE_TEMPERATURE   : 1;
+        unsigned BUZZ_REQUEST               : 1;
+        unsigned ALERT_REQUEST              : 1;
+        unsigned HARDWARE_INTERRUPT_REQUEST : 1;
+        unsigned UNUSED                     : 3;
+    };
+    uint8_t FeatureBits;
+}FeatureBits_t;
+
+static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
+
+#define ACKNOWLEDGED_ACC_FLAT_STATE_SetHigh()                           (FeatureBits.ACC_FLAT_STATE = 1) 
+#define ACKNOWLEDGED_ACC_FLAT_STATE_SetLow()                            (FeatureBits.ACC_FLAT_STATE = 0) 
+#define ACKNOWLEDGED_ACC_FLAT_STATE_Toggle()                            (FeatureBits.ACC_FLAT_STATE = ~FeatureBits.ACC_FLAT_STATE)
+#define ACKNOWLEDGED_ACC_FLAT_STATE_GetValue()                          (FeatureBits.ACC_FLAT_STATE)
+#define ACKNOWLEDGED_ACC_FLAT_STATE_Is_High()                           (FeatureBits.ACC_FLAT_STATE == 1)
+
+#define ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_SetHigh()                 (FeatureBits.THERMOCOUPLE_TEMPERATURE = 1) 
+#define ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_SetLow()                  (FeatureBits.THERMOCOUPLE_TEMPERATURE = 0) 
+#define ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_Toggle()                  (FeatureBits.THERMOCOUPLE_TEMPERATURE = ~FeatureBits.THERMOCOUPLE_TEMPERATURE)
+#define ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_GetValue()                (FeatureBits.THERMOCOUPLE_TEMPERATURE)
+#define ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_Is_High()                 (FeatureBits.THERMOCOUPLE_TEMPERATURE == 1)
+
+#define ACKNOWLEDGED_BUZZ_REQUEST_SetHigh()                             (FeatureBits.BUZZ_REQUEST = 1) 
+#define ACKNOWLEDGED_BUZZ_REQUEST_SetLow()                              (FeatureBits.BUZZ_REQUEST = 0) 
+#define ACKNOWLEDGED_BUZZ_REQUEST_Toggle()                              (FeatureBits.BUZZ_REQUEST = ~FeatureBits.BUZZ_REQUEST)
+#define ACKNOWLEDGED_BUZZ_REQUEST_GetValue()                            (FeatureBits.BUZZ_REQUEST)
+#define ACKNOWLEDGED_BUZZ_REQUEST_Is_High()                             (FeatureBits.BUZZ_REQUEST == 1)
+
+#define ACKNOWLEDGED_ALERT_REQUEST_SetHigh()                            (FeatureBits.ALERT_REQUEST = 1) 
+#define ACKNOWLEDGED_ALERT_REQUEST_SetLow()                             (FeatureBits.ALERT_REQUEST = 0) 
+#define ACKNOWLEDGED_ALERT_REQUEST_Toggle()                             (FeatureBits.ALERT_REQUEST = ~FeatureBits.ALERT_REQUEST)
+#define ACKNOWLEDGED_ALERT_REQUEST_GetValue()                           (FeatureBits.ALERT_REQUEST)
+#define ACKNOWLEDGED_ALERT_REQUEST_Is_High()                            (FeatureBits.ALERT_REQUEST == 1)
+
+#define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_SetHigh()               (FeatureBits.HARDWARE_INTERRUPT_REQUEST = 1) 
+#define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_SetLow()                (FeatureBits.HARDWARE_INTERRUPT_REQUEST = 0) 
+#define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_Toggle()                (FeatureBits.HARDWARE_INTERRUPT_REQUEST = ~FeatureBits.HARDWARE_INTERRUPT_REQUEST)
+#define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_GetValue()              (FeatureBits.HARDWARE_INTERRUPT_REQUEST)
+#define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_Is_High()               (FeatureBits.HARDWARE_INTERRUPT_REQUEST == 1)
+
+static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+
+#define ACKNOWLEDGED_ENABLED_ACC_FLAT_STATE_SetHigh()                   (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 1) 
+#define ACKNOWLEDGED_ENABLED_ACC_FLAT_STATE_SetLow()                    (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 0) 
+#define ACKNOWLEDGED_ENABLED_ACC_FLAT_STATE_Toggle()                    (FEATURE_ENABLEDBits.ACC_FLAT_STATE = ~FEATURE_ENABLEDBits.ACC_FLAT_STATE)
+#define ACKNOWLEDGED_ENABLED_ACC_FLAT_STATE_GetValue()                  (FEATURE_ENABLEDBits.ACC_FLAT_STATE)
+#define ACKNOWLEDGED_ENABLED_ACC_FLAT_STATE_Is_High()                   (FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)
+
+#define ACKNOWLEDGED_ENABLED_THERMOCOUPLE_TEMPERATURE_SetHigh()         (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE = 1) 
+#define ACKNOWLEDGED_ENABLED_THERMOCOUPLE_TEMPERATURE_SetLow()          (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE = 0) 
+#define ACKNOWLEDGED_ENABLED_THERMOCOUPLE_TEMPERATURE_Toggle()          (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE = ~FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE)
+#define ACKNOWLEDGED_ENABLED_THERMOCOUPLE_TEMPERATURE_GetValue()        (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE)
+#define ACKNOWLEDGED_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()         (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)
+
+#define ACKNOWLEDGED_ENABLED_BUZZ_REQUEST_SetHigh()                     (FEATURE_ENABLEDBits.BUZZ_REQUEST = 1) 
+#define ACKNOWLEDGED_ENABLED_TBUZZ_REQUEST_SetLow()                     (FEATURE_ENABLEDBits.BUZZ_REQUEST = 0) 
+#define ACKNOWLEDGED_ENABLED_BUZZ_REQUEST_Toggle()                      (FEATURE_ENABLEDBits.BUZZ_REQUEST = ~FEATURE_ENABLEDBits.BUZZ_REQUEST)
+#define ACKNOWLEDGED_ENABLED_BUZZ_REQUEST_GetValue()                    (FEATURE_ENABLEDBits.BUZZ_REQUEST)
+#define ACKNOWLEDGED_ENABLED_BUZZ_REQUEST_Is_High()                     (FEATURE_ENABLEDBits.BUZZ_REQUEST == 1)
+
+#define ACKNOWLEDGED_ENABLED_ALERT_REQUEST_SetHigh()                    (FEATURE_ENABLEDBits.ALERT_REQUEST = 1) 
+#define ACKNOWLEDGED_ENABLED_ALERT_REQUEST_SetLow()                     (FEATURE_ENABLEDBits.ALERT_REQUEST = 0) 
+#define ACKNOWLEDGED_ENABLED_ALERT_REQUEST_Toggle()                     (FEATURE_ENABLEDBits.ALERT_REQUEST = ~FEATURE_ENABLEDBits.ALERT_REQUEST)
+#define ACKNOWLEDGED_ENABLED_ALERT_REQUEST_GetValue()                   (FEATURE_ENABLEDBits.ALERT_REQUEST)
+#define ACKNOWLEDGED_ENABLED_ALERT_REQUEST_Is_High()                    (FEATURE_ENABLEDBits.ALERT_REQUEST == 1)
+
+#define ACKNOWLEDGED_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetHigh()       (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = 1) 
+#define ACKNOWLEDGED_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetLow()        (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = 0) 
+#define ACKNOWLEDGED_ENABLED_HARDWARE_INTERRUPT_REQUEST_Toggle()        (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = ~FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST)
+#define ACKNOWLEDGED_ENABLED_HARDWARE_INTERRUPT_REQUEST_GetValue()      (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST)
+#define ACKNOWLEDGED_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()       (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)
+
 #endif	/* LIGHTBLUE_SERVICE_H */
 

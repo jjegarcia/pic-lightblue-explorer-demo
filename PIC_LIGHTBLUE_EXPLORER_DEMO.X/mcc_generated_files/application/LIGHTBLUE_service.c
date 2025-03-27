@@ -83,8 +83,8 @@ void LIGHTBLUE_AccState(void) {
 
     *payload = '\0';
     LIGHTBLUE_SplitByte(payload, acc);
-
-    LIGHTBLUE_SendPacket(ACC_STATE, payload);
+    
+    LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
 }
 
 void LIGHTBLUE_LedState(void) {
@@ -254,8 +254,26 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
                 LIGHTBLUE_SetErrorLedValue(data & NIBBLE_MASK);
             }
             break;
+        case RESET_REQUEST_ID:
+            RESET();
+            break;
         case SERIAL_DATA_ID:
             uart[UART_CDC].Write(data); // echo out the terminal for now
+            break;
+        case ACC_FLAT_STATE_ID:
+            ACKNOWLEDGED_ACC_FLAT_STATE_SetLow();
+            break;
+        case THERMOCOUPLE_TEMPERATURE_ID:
+            ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_SetLow();
+            break;
+        case BUZZ_REQUEST_ID:
+            ACKNOWLEDGED_BUZZ_REQUEST_SetLow();
+            break;
+        case ALERT_REQUEST_ID:
+            ACKNOWLEDGED_ALERT_REQUEST_SetLow();
+            break;
+        case HARDWARE_INTERRUPT_REQUEST_ID:
+            ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_SetLow();
             break;
         default:
             break;
