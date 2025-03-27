@@ -58,11 +58,11 @@ int main(void) {
     while (1) {
         if (RN487X_IsConnected() == true) {
             service_acceleremoterInterrupt();
-            send_spi_read();
+            service_thermocouple();
             service_pushed();
             if (TIMER_FLAG_SET() == true) {
                 RESET_TIMER_INTERRUPT_FLAG;
-                send_spi_read();
+                service_thermocouple();
                 LIGHTBLUE_TemperatureSensor();
                 //                LIGHTBLUE_AccelSensor();
                 LIGHTBLUE_PushButton();
@@ -99,33 +99,40 @@ int main(void) {
 }
 
 void service_pushed(void) {
-    if (PUSHED_INTERRUPT_Is_High()) {
-        PUSHED_INTERRUPT_SetLow();
-    }
-}
+    if (FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
+        if (PUSHED_INTERRUPT_Is_High()) {
 
-void service_acceleremoterInterrupt(void) {
-    if (ACC_INTERRUPT_Is_High()) {
-        ACC_INTERRUPT_SetLow();
-        ACC_INTERRUPT_FLAT_SetHigh();
-        flats++;
-        if (flats > 1) {
-            LIGHTBLUE_AccState();
-            flats = 0;
-            ACC_INTERRUPT_FLAT_SetLow();
+            PUSHED_INTERRUPT_SetLow();
         }
     }
 }
 
-void send_spi_read(void) {
-    static uint8_t data[4];
-    SPI_SS_EXT_DEVICE_SetLow();
-    if (SPI2_Open(0)) {
-        sendSpiReadRequest = false;
-        SPI2_ReadBlock(data, 4);
-        SPI_SS_EXT_DEVICE_SetHigh();
-        LIGHTBLUE_Send_Thermocouple(data);
-        SPI2_Close();
+void service_acceleremoterInterrupt(void) {
+    if (FEATURE_ENABLED_ACC_FLAT_STATE_Is_High()) {
+        if (ACC_INTERRUPT_Is_High()) {
+            ACC_INTERRUPT_SetLow();
+            ACC_INTERRUPT_FLAT_SetHigh();
+            flats++;
+            if (flats > 1) {
+                ACC_INTERRUPT_FLAT_SetLow();
+                LIGHTBLUE_AccState();
+                flats = 0;
+            }
+        }
+    }
+}
+
+void service_thermocouple(void) {
+    if (FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()) {
+        static uint8_t data[4];
+        SPI_SS_EXT_DEVICE_SetLow();
+        if (SPI2_Open(0)) {
+            sendSpiReadRequest = false;
+            SPI2_ReadBlock(data, 4);
+            SPI_SS_EXT_DEVICE_SetHigh();
+            LIGHTBLUE_Send_Thermocouple(data);
+            SPI2_Close();
+        }
     }
 }
 /**

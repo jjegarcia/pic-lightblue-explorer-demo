@@ -29,6 +29,13 @@
 void LIGHTBLUE_Initialize(void) {
     bitMap.ioBitMap.gpioBitMap = 0x01;
     bitMap.ioStateBitMap.gpioStateBitMap = 0x01;
+    setProtocol_Features();
+    }
+
+void setProtocol_Features(void){
+    FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_SetHigh();
+    FEATURE_ENABLED_ACC_FLAT_STATE_SetHigh();
+    FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetHigh();
 }
 
 void LIGHTBLUE_TemperatureSensor(void) {

@@ -36,7 +36,7 @@ static char lightBlueSerial[MAX_BUFFER_SIZE]; /**< Message Buffer used for CDC S
 static uint8_t serialIndex; /**< Local index value for serial communication buffer. */
 
 void service_acceleremoterInterrupt(void);
-void send_spi_read(void);
+void service_thermocouple(void);
 void service_pushed(void);
 void service_acceleremoterInterrupt(void);
 

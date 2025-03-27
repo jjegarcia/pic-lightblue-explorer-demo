@@ -31,12 +31,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92
 [u S1692 `us 1 `S1693 1 ]
 [n S1692 . gpioMap . ]
-"417 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 417:     struct {
+"419 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 419:     struct {
 [s S1700 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
 [n S1700 . ACC_FLAT_STATE THERMOCOUPLE_TEMPERATURE BUZZ_REQUEST ALERT_REQUEST HARDWARE_INTERRUPT_REQUEST UNUSED ]
-"416
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 416: typedef union {
+"418
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 418: typedef union {
 [u S1699 `S1700 1 `uc 1 ]
 [n S1699 . . FeatureBits ]
 [p mainexit ]
@@ -70,8 +70,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./main.h: 41: void service_acceleremoterInterrupt(void);
 [v _service_acceleremoterInterrupt `(v ~T0 @X0 0 ef ]
 "39
-[; ;./main.h: 39: void send_spi_read(void);
-[v _send_spi_read `(v ~T0 @X0 0 ef ]
+[; ;./main.h: 39: void service_thermocouple(void);
+[v _service_thermocouple `(v ~T0 @X0 0 ef ]
 "40
 [; ;./main.h: 40: void service_pushed(void);
 [v _service_pushed `(v ~T0 @X0 0 ef ]
@@ -86,20 +86,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22424
 [; ;/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/proc/pic16lf18456.h: 22424: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
 [v _PIR0bits `VS1020 ~T0 @X0 0 e@1804 ]
-"60 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 60: void LIGHTBLUE_TemperatureSensor(void);
+"62 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 62: void LIGHTBLUE_TemperatureSensor(void);
 [v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 0 ef ]
-"85
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 85: void LIGHTBLUE_PushButton(void);
+"87
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 87: void LIGHTBLUE_PushButton(void);
 [v _LIGHTBLUE_PushButton `(v ~T0 @X0 0 ef ]
-"99
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 99: void LIGHTBLUE_LedState(void);
+"101
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 101: void LIGHTBLUE_LedState(void);
 [v _LIGHTBLUE_LedState `(v ~T0 @X0 0 ef ]
-"110
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 110: void LIGHTBLUE_SendProtocolVersion(void);
+"112
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 112: void LIGHTBLUE_SendProtocolVersion(void);
 [v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 0 ef ]
-"411
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 411: void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+"413
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 413: void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 [v _LIGHTBLUE_ParseIncomingPacket `(v ~T0 @X0 0 ef1`uc ]
 "293 ./mcc_generated_files/rn487x/rn487x.h
 [v _RN487X_Read `(uc ~T0 @X0 0 ef ]
@@ -126,8 +126,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 76:                     lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
 [c E13022 0 1 .. ]
 [n E13022 . UART_CDC UART_BLE  ]
-"121 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 121: void LIGHTBLUE_SendSerialData(char* serialData);
+"123 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 123: void LIGHTBLUE_SendSerialData(char* serialData);
 [v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 0 ef1`*uc ]
 [v F12968 `(v ~T0 @X0 0 tf1`uc ]
 [v F12971 `(uc ~T0 @X0 0 tf ]
@@ -147,8 +147,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1694 . Write Read TransmitDone DataReady IndicateRx ResetModule SetSystemMode DelayMs AsyncHandler ]
 "66
 [v _RN487X `CS1694 ~T0 @X0 0 e ]
-"413 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 413: void LIGHTBLUE_AccState(void);
+"415 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 415: void LIGHTBLUE_AccState(void);
 [v _LIGHTBLUE_AccState `(v ~T0 @X0 0 ef ]
 "991 /Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/proc/pic16lf18456.h
 [; ;/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/proc/pic16lf18456.h: 991:     struct {
@@ -161,8 +161,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1002
 [; ;/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/proc/pic16lf18456.h: 1002: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
 [v _LATCbits `VS52 ~T0 @X0 0 e@26 ]
-"123 main.c
-[; ;main.c: 123:     if (SPI2_Open(0)) {
+"129 main.c
+[; ;main.c: 129:         if (SPI2_Open(0)) {
 [c E12583 0 .. ]
 [n E12583 . SPI2_DEFAULT  ]
 "64 mcc_generated_files/spi2.h
@@ -171,8 +171,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "69
 [; ;mcc_generated_files/spi2.h: 69: void SPI2_ReadBlock(void *block, size_t blockSize);
 [v _SPI2_ReadBlock `(v ~T0 @X0 0 ef2`*v`ui ]
-"414 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 414: void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
+"416 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 416: void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
 [v _LIGHTBLUE_Send_Thermocouple `(v ~T0 @X0 0 ef1`*uc ]
 "65 mcc_generated_files/spi2.h
 [; ;mcc_generated_files/spi2.h: 65: void SPI2_Close(void);
@@ -1754,15 +1754,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "291 ./mcc_generated_files/application/BMA253_accel.h
 [; ;./mcc_generated_files/application/BMA253_accel.h: 291: volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
 [v _accelerometerInterruptBits `VS1696 ~T0 @X0 1 e ]
-[v F13088 `*Cuc ~T0 @X0 1 t ]
-"309 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 309: const char * const protocol_version_number = "1.1.0";
+[v F13089 `*Cuc ~T0 @X0 1 t ]
+"311 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 311: const char * const protocol_version_number = "1.1.0";
 [v _protocol_version_number `C*Cuc ~T0 @X0 1 e ]
 [i _protocol_version_number
 :s 1C
 ]
-"310
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 310: static char _hex[] = "0123456789ABCDEF";
+"312
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 312: static char _hex[] = "0123456789ABCDEF";
 [v __hex `uc ~T0 @X0 -> 17 `i s ]
 [i __hex
 :U ..
@@ -1785,17 +1785,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"311
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 311: static uint8_t sequenceNumber = 0;
+"313
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 313: static uint8_t sequenceNumber = 0;
 [v _sequenceNumber `uc ~T0 @X0 1 s ]
 [i _sequenceNumber
 -> -> 0 `i `uc
 ]
-"312
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 312: static volatile rn487x_gpio_bitmap_t bitMap;
+"314
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 314: static volatile rn487x_gpio_bitmap_t bitMap;
 [v _bitMap `VS1692 ~T0 @X0 1 s ]
-"428
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 428: static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
+"430
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 430: static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
 [v _FeatureBits `S1699 ~T0 @X0 1 s ]
 [i _FeatureBits
 :U 1
@@ -1804,8 +1804,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"460
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 460: static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+"462
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 462: static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 [v _FEATURE_ENABLEDBits `S1699 ~T0 @X0 1 s ]
 [i _FEATURE_ENABLEDBits
 :U 1
@@ -1881,8 +1881,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 60:             service_acceleremoterInterrupt();
 [e ( _service_acceleremoterInterrupt ..  ]
 "61
-[; ;main.c: 61:             send_spi_read();
-[e ( _send_spi_read ..  ]
+[; ;main.c: 61:             service_thermocouple();
+[e ( _service_thermocouple ..  ]
 "62
 [; ;main.c: 62:             service_pushed();
 [e ( _service_pushed ..  ]
@@ -1894,8 +1894,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 64:                 (PIR0bits.TMR0IF = 0);
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
 "65
-[; ;main.c: 65:                 send_spi_read();
-[e ( _send_spi_read ..  ]
+[; ;main.c: 65:                 service_thermocouple();
+[e ( _service_thermocouple ..  ]
 "66
 [; ;main.c: 66:                 LIGHTBLUE_TemperatureSensor();
 [e ( _LIGHTBLUE_TemperatureSensor ..  ]
@@ -2041,109 +2041,133 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _service_pushed ]
 [f ]
 "102
-[; ;main.c: 102:     if ((pushed==1)) {
-[e $ ! == -> _pushed `i -> 1 `i 1724  ]
+[; ;main.c: 102:     if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 4 `i -> 1 `i 1724  ]
 {
 "103
-[; ;main.c: 103:         (pushed = 0);
+[; ;main.c: 103:         if ((pushed==1)) {
+[e $ ! == -> _pushed `i -> 1 `i 1725  ]
+{
+"105
+[; ;main.c: 105:             (pushed = 0);
 [e = _pushed -> -> 0 `i `a ]
-"104
-[; ;main.c: 104:     }
+"106
+[; ;main.c: 106:         }
+}
+[e :U 1725 ]
+"107
+[; ;main.c: 107:     }
 }
 [e :U 1724 ]
-"105
-[; ;main.c: 105: }
+"108
+[; ;main.c: 108: }
 [e :UE 1723 ]
 }
-"107
-[; ;main.c: 107: void service_acceleremoterInterrupt(void) {
+"110
+[; ;main.c: 110: void service_acceleremoterInterrupt(void) {
 [v _service_acceleremoterInterrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _service_acceleremoterInterrupt ]
 [f ]
-"108
-[; ;main.c: 108:     if ((INTERRUPTbits.ACC == 1)) {
-[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1726  ]
-{
-"109
-[; ;main.c: 109:         (INTERRUPTbits.ACC = 0);
-[e = . . _INTERRUPTbits 0 0 -> -> 0 `i `uc ]
-"110
-[; ;main.c: 110:         (accelerometerInterruptBits.FLAT = 1);
-[e = . . _accelerometerInterruptBits 0 1 -> -> 1 `i `uc ]
 "111
-[; ;main.c: 111:         flats++;
-[e ++ _flats -> -> 1 `i `uc ]
+[; ;main.c: 111:     if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 0 `i -> 1 `i 1727  ]
+{
 "112
-[; ;main.c: 112:         if (flats > 1) {
-[e $ ! > -> _flats `i -> 1 `i 1727  ]
+[; ;main.c: 112:         if ((INTERRUPTbits.ACC == 1)) {
+[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1728  ]
 {
 "113
-[; ;main.c: 113:             LIGHTBLUE_AccState();
-[e ( _LIGHTBLUE_AccState ..  ]
+[; ;main.c: 113:             (INTERRUPTbits.ACC = 0);
+[e = . . _INTERRUPTbits 0 0 -> -> 0 `i `uc ]
 "114
-[; ;main.c: 114:             flats = 0;
-[e = _flats -> -> 0 `i `uc ]
+[; ;main.c: 114:             (accelerometerInterruptBits.FLAT = 1);
+[e = . . _accelerometerInterruptBits 0 1 -> -> 1 `i `uc ]
 "115
-[; ;main.c: 115:             (accelerometerInterruptBits.FLAT = 0);
-[e = . . _accelerometerInterruptBits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 115:             flats++;
+[e ++ _flats -> -> 1 `i `uc ]
 "116
-[; ;main.c: 116:         }
+[; ;main.c: 116:             if (flats > 1) {
+[e $ ! > -> _flats `i -> 1 `i 1729  ]
+{
+"117
+[; ;main.c: 117:                 (accelerometerInterruptBits.FLAT = 0);
+[e = . . _accelerometerInterruptBits 0 1 -> -> 0 `i `uc ]
+"118
+[; ;main.c: 118:                 LIGHTBLUE_AccState();
+[e ( _LIGHTBLUE_AccState ..  ]
+"119
+[; ;main.c: 119:                 flats = 0;
+[e = _flats -> -> 0 `i `uc ]
+"120
+[; ;main.c: 120:             }
+}
+[e :U 1729 ]
+"121
+[; ;main.c: 121:         }
+}
+[e :U 1728 ]
+"122
+[; ;main.c: 122:     }
 }
 [e :U 1727 ]
-"117
-[; ;main.c: 117:     }
+"123
+[; ;main.c: 123: }
+[e :UE 1726 ]
 }
-[e :U 1726 ]
-"118
-[; ;main.c: 118: }
-[e :UE 1725 ]
-}
-"120
-[; ;main.c: 120: void send_spi_read(void) {
-[v _send_spi_read `(v ~T0 @X0 1 ef ]
+"125
+[; ;main.c: 125: void service_thermocouple(void) {
+[v _service_thermocouple `(v ~T0 @X0 1 ef ]
 {
-[e :U _send_spi_read ]
+[e :U _service_thermocouple ]
 [f ]
-"121
-[; ;main.c: 121:     static uint8_t data[4];
-[v F13161 `uc ~T0 @X0 -> 4 `i s data ]
-"122
-[; ;main.c: 122:     do { LATCbits.LATC0 = 0; } while(0);
-[e :U 1731 ]
+"126
+[; ;main.c: 126:     if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 1 `i -> 1 `i 1731  ]
+{
+"127
+[; ;main.c: 127:         static uint8_t data[4];
+[v F13162 `uc ~T0 @X0 -> 4 `i s data ]
+"128
+[; ;main.c: 128:         do { LATCbits.LATC0 = 0; } while(0);
+[e :U 1734 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 1730 ]
-"123
-[; ;main.c: 123:     if (SPI2_Open(0)) {
-[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12583 `i -> 0 `i 1732  ]
+[e :U 1733 ]
+"129
+[; ;main.c: 129:         if (SPI2_Open(0)) {
+[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12583 `i -> 0 `i 1735  ]
 {
-"124
-[; ;main.c: 124:         sendSpiReadRequest = 0;
+"130
+[; ;main.c: 130:             sendSpiReadRequest = 0;
 [e = _sendSpiReadRequest -> -> 0 `i `a ]
-"125
-[; ;main.c: 125:         SPI2_ReadBlock(data, 4);
-[e ( _SPI2_ReadBlock (2 , -> &U F13161 `*v -> -> 4 `i `ui ]
-"126
-[; ;main.c: 126:         do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1735 ]
+"131
+[; ;main.c: 131:             SPI2_ReadBlock(data, 4);
+[e ( _SPI2_ReadBlock (2 , -> &U F13162 `*v -> -> 4 `i `ui ]
+"132
+[; ;main.c: 132:             do { LATCbits.LATC0 = 1; } while(0);
+[e :U 1738 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 1734 ]
-"127
-[; ;main.c: 127:         LIGHTBLUE_Send_Thermocouple(data);
-[e ( _LIGHTBLUE_Send_Thermocouple (1 &U F13161 ]
-"128
-[; ;main.c: 128:         SPI2_Close();
+[e :U 1737 ]
+"133
+[; ;main.c: 133:             LIGHTBLUE_Send_Thermocouple(data);
+[e ( _LIGHTBLUE_Send_Thermocouple (1 &U F13162 ]
+"134
+[; ;main.c: 134:             SPI2_Close();
 [e ( _SPI2_Close ..  ]
-"129
-[; ;main.c: 129:     }
+"135
+[; ;main.c: 135:         }
 }
-[e :U 1732 ]
-"130
-[; ;main.c: 130: }
-[e :UE 1728 ]
+[e :U 1735 ]
+"136
+[; ;main.c: 136:     }
+}
+[e :U 1731 ]
+"137
+[; ;main.c: 137: }
+[e :UE 1730 ]
 }
 [a 1C 49 46 49 46 48 0 ]

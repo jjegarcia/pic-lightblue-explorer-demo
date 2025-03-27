@@ -20956,19 +20956,21 @@ extern const uart_functions_t uart[];
 # 36 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
 # 46 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_Initialize(void);
-# 60 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+
+void setProtocol_Features(void);
+# 62 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_TemperatureSensor(void);
-# 74 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 76 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_AccelSensor(void);
-# 85 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 87 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_PushButton(void);
-# 99 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 101 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_LedState(void);
-# 110 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 112 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendProtocolVersion(void);
-# 121 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 123 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendSerialData(char* serialData);
-# 274 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 276 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 typedef enum {
     PROTOCOL_VERSION_ID = 'V',
     LED_STATE_ID = 'L',
@@ -20985,7 +20987,7 @@ typedef enum {
     ALERT_REQUEST_ID = 'A',
     HARDWARE_INTERRUPT_REQUEST_ID = 'H'
 } PROTOCOL_PACKET_TYPES_t;
-# 298 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 300 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 typedef enum {
     IDLE = 0,
     SEQUENCE_NUMBER = 1,
@@ -21001,9 +21003,9 @@ const char * const protocol_version_number = "1.1.0";
 static char _hex[] = "0123456789ABCDEF";
 static uint8_t sequenceNumber = 0;
 static volatile rn487x_gpio_bitmap_t bitMap;
-# 328 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 330 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_SendPacket(char packetID, char* payload);
-# 337 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 339 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
 
 
@@ -21028,9 +21030,9 @@ static uint8_t LIGHTBLUE_GetButtonValue(void);
 
 
 static uint8_t LIGHTBLUE_GetAccState(void);
-# 370 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 372 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static uint8_t LIGHTBLUE_GetDataLedValue(void);
-# 379 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 381 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static uint8_t LIGHTBLUE_GetErrorLedValue(void);
 
 
@@ -21048,7 +21050,7 @@ static void LIGHTBLUE_SetErrorLedValue(_Bool value);
 
 
 static void LIGHTBLUE_UpdateErrorLed(void);
-# 409 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 411 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_PerformAction(char id, uint8_t data);
 
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
@@ -21069,7 +21071,7 @@ typedef union {
 }FeatureBits_t;
 
 static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
-# 460 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 462 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 # 8 "./main.h" 2
 # 34 "./main.h"
@@ -21078,7 +21080,7 @@ static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
 
 void service_acceleremoterInterrupt(void);
-void send_spi_read(void);
+void service_thermocouple(void);
 void service_pushed(void);
 void service_acceleremoterInterrupt(void);
 
@@ -21113,11 +21115,11 @@ int main(void) {
     while (1) {
         if (RN487X_IsConnected() == 1) {
             service_acceleremoterInterrupt();
-            send_spi_read();
+            service_thermocouple();
             service_pushed();
             if ((PIR0bits.TMR0IF) == 1) {
                 (PIR0bits.TMR0IF = 0);
-                send_spi_read();
+                service_thermocouple();
                 LIGHTBLUE_TemperatureSensor();
 
                 LIGHTBLUE_PushButton();
@@ -21154,32 +21156,39 @@ int main(void) {
 }
 
 void service_pushed(void) {
-    if ((pushed==1)) {
-        (pushed = 0);
-    }
-}
+    if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+        if ((pushed==1)) {
 
-void service_acceleremoterInterrupt(void) {
-    if ((INTERRUPTbits.ACC == 1)) {
-        (INTERRUPTbits.ACC = 0);
-        (accelerometerInterruptBits.FLAT = 1);
-        flats++;
-        if (flats > 1) {
-            LIGHTBLUE_AccState();
-            flats = 0;
-            (accelerometerInterruptBits.FLAT = 0);
+            (pushed = 0);
         }
     }
 }
 
-void send_spi_read(void) {
-    static uint8_t data[4];
-    do { LATCbits.LATC0 = 0; } while(0);
-    if (SPI2_Open(0)) {
-        sendSpiReadRequest = 0;
-        SPI2_ReadBlock(data, 4);
-        do { LATCbits.LATC0 = 1; } while(0);
-        LIGHTBLUE_Send_Thermocouple(data);
-        SPI2_Close();
+void service_acceleremoterInterrupt(void) {
+    if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
+        if ((INTERRUPTbits.ACC == 1)) {
+            (INTERRUPTbits.ACC = 0);
+            (accelerometerInterruptBits.FLAT = 1);
+            flats++;
+            if (flats > 1) {
+                (accelerometerInterruptBits.FLAT = 0);
+                LIGHTBLUE_AccState();
+                flats = 0;
+            }
+        }
+    }
+}
+
+void service_thermocouple(void) {
+    if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+        static uint8_t data[4];
+        do { LATCbits.LATC0 = 0; } while(0);
+        if (SPI2_Open(0)) {
+            sendSpiReadRequest = 0;
+            SPI2_ReadBlock(data, 4);
+            do { LATCbits.LATC0 = 1; } while(0);
+            LIGHTBLUE_Send_Thermocouple(data);
+            SPI2_Close();
+        }
     }
 }
