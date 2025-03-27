@@ -36,6 +36,9 @@ void setProtocol_Features(void) {
     FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_SetHigh();
     FEATURE_ENABLED_ACC_FLAT_STATE_SetHigh();
     FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetHigh();
+    FEATURE_ENABLED_LED_STATE_SetHigh();
+    FEATURE_ENABLED_RESET_REQUEST_SetHigh();
+    FEATURE_ENABLED_SERIAL_DATA_SetHigh();
 }
 
 void LIGHTBLUE_TemperatureSensor(void) {
@@ -262,22 +265,28 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
 
     switch (id) {
         case LED_STATE_ID:
-            led = (data >> 4) & NIBBLE_MASK;
-            if (led == DATA_LED_IDENTIFIER) {
-                if ((data & NIBBLE_MASK) == LIGHTBLUE_OFF) {
-                    DataLedOff();
+            if (FEATURE_ENABLED_LED_STATE_REQUEST_Is_High()) {
+                led = (data >> 4) & NIBBLE_MASK;
+                if (led == DATA_LED_IDENTIFIER) {
+                    if ((data & NIBBLE_MASK) == LIGHTBLUE_OFF) {
+                        DataLedOff();
+                    } else {
+                        DataLedOn();
+                    }
                 } else {
-                    DataLedOn();
+                    LIGHTBLUE_SetErrorLedValue(data & NIBBLE_MASK);
                 }
-            } else {
-                LIGHTBLUE_SetErrorLedValue(data & NIBBLE_MASK);
             }
             break;
         case RESET_REQUEST_ID:
-            RESET();
+            if (FEATURE_ENABLED_RESET_REQUEST_Is_High()) {
+                RESET();
+            }
             break;
         case SERIAL_DATA_ID:
-            uart[UART_CDC].Write(data); // echo out the terminal for now
+            if (FEATURE_ENABLED_SERIAL_DATA_Is_High()) {
+                uart[UART_CDC].Write(data); // echo out the terminal for now
+            }
             break;
         case ACC_FLAT_STATE_ID:
             if (FEATURE_ENABLED_ACC_FLAT_STATE_Is_High()) {

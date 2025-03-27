@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16LF18456 ]
 [d frameptr 6 ]
-"50 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"53 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [e E12929 . `uc
 PROTOCOL_VERSION_ID 86
 LED_STATE_ID 76
@@ -20,12 +20,12 @@ BUZZ_REQUEST_ID 66
 ALERT_REQUEST_ID 65
 HARDWARE_INTERRUPT_REQUEST_ID 72
 ]
-"145
+"148
 [e E261 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
-"158
+"161
 [e E12945 . `uc
 IDLE 0
 SEQUENCE_NUMBER 1
@@ -35,7 +35,7 @@ PAYLOAD_SIZE_1 4
 PAYLOAD_0 5
 PAYLOAD_1 6
 ]
-"280
+"288
 [e E12887 . `uc
 UART_CDC 0
 UART_BLE 1
@@ -252,43 +252,43 @@ SPI2_DEFAULT 0
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
 "35
 [v _setProtocol_Features setProtocol_Features `(v  1 e 1 0 ]
-"41
+"44
 [v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
-"53
+"56
 [v _LIGHTBLUE_Send_Thermocouple LIGHTBLUE_Send_Thermocouple `(v  1 e 1 0 ]
-"77
+"80
 [v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
-"87
+"90
 [v _LIGHTBLUE_Hardware_Interrupt LIGHTBLUE_Hardware_Interrupt `(v  1 e 1 0 ]
-"97
+"100
 [v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
-"109
+"112
 [v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
-"127
+"130
 [v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
-"142
+"145
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
-"157
+"160
 [v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
-"208
+"211
 [v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
-"220
+"223
 [v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
-"225
+"228
 [v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
-"232
+"235
 [v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
-"236
+"239
 [v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
-"240
+"243
 [v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
-"244
+"247
 [v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
-"248
+"251
 [v _LIGHTBLUE_SetErrorLedValue LIGHTBLUE_SetErrorLedValue `(v  1 s 1 LIGHTBLUE_SetErrorLedValue ]
-"253
+"256
 [v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
-"260
+"263
 [v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
 "70 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/MCP9844_temp_sensor.c
 [v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
@@ -1421,52 +1421,52 @@ SPI2_DEFAULT 0
 {
 "95
 } 0
-"53 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"56 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Send_Thermocouple LIGHTBLUE_Send_Thermocouple `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_Send_Thermocouple@temperature temperature `*.4uc  1 a 1 wreg ]
-"56
+"59
 [v LIGHTBLUE_Send_Thermocouple@i i `i  1 a 2 11 ]
-"54
+"57
 [v LIGHTBLUE_Send_Thermocouple@payload payload `[10]uc  1 a 10 0 ]
-"53
+"56
 [v LIGHTBLUE_Send_Thermocouple@temperature temperature `*.4uc  1 a 1 wreg ]
-"55
+"58
 [v LIGHTBLUE_Send_Thermocouple@temperature temperature `*.4uc  1 a 1 10 ]
-"60
+"63
 } 0
 "101 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.c
 [v _service_pushed service_pushed `(v  1 e 1 0 ]
 {
 "108
 } 0
-"87 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"90 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Hardware_Interrupt LIGHTBLUE_Hardware_Interrupt `(v  1 e 1 0 ]
 {
-"88
+"91
 [v LIGHTBLUE_Hardware_Interrupt@payload payload `[3]uc  1 a 3 1 ]
-"89
+"92
 [v LIGHTBLUE_Hardware_Interrupt@button button `uc  1 a 1 0 ]
-"95
+"98
 } 0
 "110 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.c
 [v _service_acceleremoterInterrupt service_acceleremoterInterrupt `(v  1 e 1 0 ]
 {
 "123
 } 0
-"97 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"100 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
 {
-"98
+"101
 [v LIGHTBLUE_AccState@payload payload `[3]uc  1 a 3 1 ]
-"99
+"102
 [v LIGHTBLUE_AccState@acc acc `uc  1 a 1 0 ]
-"107
+"110
 } 0
-"236
+"239
 [v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
 {
-"238
+"241
 } 0
 "50 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1751,14 +1751,14 @@ SPI2_DEFAULT 0
 [v RN487X_IndicateRx@value value `a  1 p 1 1 ]
 "299
 } 0
-"41 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"44 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
 {
-"42
+"45
 [v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 24 ]
-"43
+"46
 [v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 29 ]
-"51
+"54
 } 0
 "70 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/MCP9844_temp_sensor.c
 [v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
@@ -1792,92 +1792,92 @@ SPI2_DEFAULT 0
 [v i2c_read2ByteRegister@address address `uc  1 a 1 10 ]
 "148
 } 0
-"220 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"223 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
 {
 [v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
 [v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
 [v LIGHTBLUE_SplitWord@value value `s  1 p 2 9 ]
 [v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 11 ]
-"223
+"226
 } 0
-"142
+"145
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
-"143
+"146
 [v LIGHTBLUE_SendSerialData@length length `uc  1 a 1 8 ]
-"142
+"145
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 9 ]
-"155
+"158
 } 0
-"127
+"130
 [v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
 {
-"128
+"131
 [v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 2 ]
-"130
+"133
 [v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 22 ]
-"129
+"132
 [v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
-"140
+"143
 } 0
-"77
+"80
 [v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
 {
-"78
+"81
 [v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
-"79
+"82
 [v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
-"85
+"88
 } 0
-"232
+"235
 [v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
 {
-"234
+"237
 } 0
-"157
+"160
 [v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 wreg ]
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 wreg ]
-"158
-[v LIGHTBLUE_ParseIncomingPacket@parserState parserState `E12945  1 s 1 parserState ]
-"159
-[v LIGHTBLUE_ParseIncomingPacket@length length `uc  1 s 1 length ]
-"160
-[v LIGHTBLUE_ParseIncomingPacket@data data `us  1 s 2 data ]
 "161
+[v LIGHTBLUE_ParseIncomingPacket@parserState parserState `E12945  1 s 1 parserState ]
+"162
+[v LIGHTBLUE_ParseIncomingPacket@length length `uc  1 s 1 length ]
+"163
+[v LIGHTBLUE_ParseIncomingPacket@data data `us  1 s 2 data ]
+"164
 [v LIGHTBLUE_ParseIncomingPacket@packetID packetID `uc  1 s 1 packetID ]
-"157
+"160
 [v LIGHTBLUE_ParseIncomingPacket@receivedByte receivedByte `uc  1 a 1 20 ]
-"206
+"209
 } 0
-"260
+"263
 [v _LIGHTBLUE_PerformAction LIGHTBLUE_PerformAction `(v  1 s 1 LIGHTBLUE_PerformAction ]
 {
 [v LIGHTBLUE_PerformAction@id id `uc  1 a 1 wreg ]
-"261
+"264
 [v LIGHTBLUE_PerformAction@led led `uc  1 a 1 11 ]
-"260
+"263
 [v LIGHTBLUE_PerformAction@id id `uc  1 a 1 wreg ]
 [v LIGHTBLUE_PerformAction@data data `uc  1 p 1 7 ]
 [v LIGHTBLUE_PerformAction@id id `uc  1 a 1 10 ]
-"311
+"320
 } 0
-"248
+"251
 [v _LIGHTBLUE_SetErrorLedValue LIGHTBLUE_SetErrorLedValue `(v  1 s 1 LIGHTBLUE_SetErrorLedValue ]
 {
 [v LIGHTBLUE_SetErrorLedValue@value value `a  1 a 1 wreg ]
 [v LIGHTBLUE_SetErrorLedValue@value value `a  1 a 1 wreg ]
 [v LIGHTBLUE_SetErrorLedValue@value value `a  1 a 1 6 ]
-"251
+"254
 } 0
-"253
+"256
 [v _LIGHTBLUE_UpdateErrorLed LIGHTBLUE_UpdateErrorLed `(v  1 s 1 LIGHTBLUE_UpdateErrorLed ]
 {
-"258
+"261
 } 0
 "223 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_SetOutputs RN487X_SetOutputs `(a  1 e 1 0 ]
@@ -2006,32 +2006,32 @@ SPI2_DEFAULT 0
 [v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 1 ]
 "42
 } 0
-"109 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"112 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
 {
-"110
+"113
 [v LIGHTBLUE_LedState@payload payload `[3]uc  1 a 3 0 ]
-"111
+"114
 [v LIGHTBLUE_LedState@led led `uc  1 a 1 3 ]
-"125
+"128
 } 0
-"225
+"228
 [v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
 {
 [v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
 [v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
 [v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
 [v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 8 ]
-"230
+"233
 } 0
-"208
+"211
 [v _LIGHTBLUE_SendPacket LIGHTBLUE_SendPacket `(v  1 s 1 LIGHTBLUE_SendPacket ]
 {
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendPacket@payload payload `*.4uc  1 p 1 7 ]
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 10 ]
-"218
+"221
 } 0
 "5 /Applications/microchip/xc8/v2.41/pic/sources/c99/common/strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -2060,15 +2060,15 @@ SPI2_DEFAULT 0
 [v EUSART2_Write@txData txData `uc  1 p 1 1 ]
 "194
 } 0
-"244 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
+"247 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
 {
-"246
+"249
 } 0
-"240
+"243
 [v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
 {
-"242
+"245
 } 0
 "29
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
@@ -2078,7 +2078,7 @@ SPI2_DEFAULT 0
 "35
 [v _setProtocol_Features setProtocol_Features `(v  1 e 1 0 ]
 {
-"39
+"42
 } 0
 "70 /Users/jgarc609/github/pic-lightblue-explorer-demo/PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/application/BMA253_accel.c
 [v _BMA253_Initialize BMA253_Initialize `(v  1 e 1 0 ]

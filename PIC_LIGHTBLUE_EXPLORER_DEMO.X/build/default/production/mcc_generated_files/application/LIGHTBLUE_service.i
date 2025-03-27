@@ -20954,6 +20954,9 @@ void setProtocol_Features(void) {
     (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE = 1);
     (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 1);
     (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = 1);
+    (FEATURE_ENABLEDBits.LED_STATE = 1);
+    (FEATURE_ENABLEDBits.RESET_REQUEST = 1);
+    (FEATURE_ENABLEDBits.SERIAL_DATA = 1);
 }
 
 void LIGHTBLUE_TemperatureSensor(void) {
@@ -21180,22 +21183,28 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
 
     switch (id) {
         case LED_STATE_ID:
-            led = (data >> 4) & (0x01);
-            if (led == (0x00)) {
-                if ((data & (0x01)) == (0x00)) {
-                    do { LATAbits.LATA5 = 1; } while(0);
+            if ((FEATURE_ENABLEDBits.LED_STATE == 1)) {
+                led = (data >> 4) & (0x01);
+                if (led == (0x00)) {
+                    if ((data & (0x01)) == (0x00)) {
+                        do { LATAbits.LATA5 = 1; } while(0);
+                    } else {
+                        do { LATAbits.LATA5 = 0; } while(0);
+                    }
                 } else {
-                    do { LATAbits.LATA5 = 0; } while(0);
+                    LIGHTBLUE_SetErrorLedValue(data & (0x01));
                 }
-            } else {
-                LIGHTBLUE_SetErrorLedValue(data & (0x01));
             }
             break;
         case RESET_REQUEST_ID:
-            __asm("reset");
+            if ((FEATURE_ENABLEDBits.RESET_REQUEST == 1)) {
+                __asm("reset");
+            }
             break;
         case SERIAL_DATA_ID:
-            uart[UART_CDC].Write(data);
+            if ((FEATURE_ENABLEDBits.SERIAL_DATA == 1)) {
+                uart[UART_CDC].Write(data);
+            }
             break;
         case ACC_FLAT_STATE_ID:
             if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {

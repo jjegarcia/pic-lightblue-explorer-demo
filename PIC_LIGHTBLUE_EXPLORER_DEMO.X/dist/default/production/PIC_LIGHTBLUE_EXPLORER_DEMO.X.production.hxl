@@ -1,26 +1,26 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcprQW4HY/driver_tmp_3.o
+ /tmp/xcORmjbtS/driver_tmp_3.o
  -Odist/default/production/PIC_LIGHTBLUE_EXPLORER_DEMO.X.production.hex
  -logfile=dist/default/production/PIC_LIGHTBLUE_EXPLORER_DEMO.X.production.hxl
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 20F3h		(/tmp/xcprQW4HY/driver_tmp_3.o)
-  2A32h - 3073h		(/tmp/xcprQW4HY/driver_tmp_3.o)
-  10000h - 10007h		(/tmp/xcprQW4HY/driver_tmp_3.o)
-  1000Eh - 10017h		(/tmp/xcprQW4HY/driver_tmp_3.o)
+  0h - 20CFh		(/tmp/xcORmjbtS/driver_tmp_3.o)
+  2A14h - 3097h		(/tmp/xcORmjbtS/driver_tmp_3.o)
+  10000h - 10007h		(/tmp/xcORmjbtS/driver_tmp_3.o)
+  1000Eh - 10017h		(/tmp/xcORmjbtS/driver_tmp_3.o)
  Unused ranges:
-  20F4h - 2A31h
-  3074h - FFFFh
+  20D0h - 2A13h
+  3098h - FFFFh
   10008h - 1000Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcprQW4HY/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcORmjbtS/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -549,11 +549,10 @@
 000020A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000020B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000020C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000020D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000020E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000020F0 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00002A30 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002A10 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002A20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002A30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002A40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002A50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002A60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -653,7 +652,9 @@
 00003040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003070 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
+00003070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003080 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003090 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00010000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- H1 H1
 00010010 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --

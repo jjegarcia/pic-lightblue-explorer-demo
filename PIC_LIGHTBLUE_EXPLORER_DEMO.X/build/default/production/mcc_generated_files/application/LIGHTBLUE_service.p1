@@ -59,8 +59,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "331
 [; ;mcc_generated_files/application/LIGHTBLUE_service.h: 331: static void LIGHTBLUE_SendPacket(char packetID, char* payload);
 [v _LIGHTBLUE_SendPacket `(v ~T0 @X0 0 sf2`uc`*uc ]
-"50 mcc_generated_files/application/LIGHTBLUE_service.c
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 50:     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
+"53 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 53:     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
 [c E12929 86 76 80 84 88 83 82 85 70 75 79 66 65 72 .. ]
 [n E12929 . PROTOCOL_VERSION_ID LED_STATE_ID BUTTON_STATE_ID TEMPERATURE_DATA_ID ACCEL_DATA_ID SERIAL_DATA_ID ERROR_ID UI_CONFIG_DATA_ID ACC_FLAT_STATE_ID THERMOCOUPLE_TEMPERATURE_ID RESET_REQUEST_ID BUZZ_REQUEST_ID ALERT_REQUEST_ID HARDWARE_INTERRUPT_REQUEST_ID  ]
 "348 mcc_generated_files/application/LIGHTBLUE_service.h
@@ -94,8 +94,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F274 `(a ~T0 @X0 0 tf ]
 [v F276 `(v ~T0 @X0 0 tf1`a ]
 [v F279 `(v ~T0 @X0 0 tf1`a ]
-"145 mcc_generated_files/application/LIGHTBLUE_service.c
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 145:     RN487X.Write(('['));
+"148 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 148:     RN487X.Write(('['));
 [c E261 0 1 .. ]
 [n E261 . TEST_MODE APPLICATION_MODE  ]
 [v F282 `(v ~T0 @X0 0 tf1`E261 ]
@@ -108,8 +108,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "66
 [; ;mcc_generated_files/application/../rn487x/rn487x_interface.h: 66: extern const iRN487X_FunctionPtrs_t RN487X;
 [v _RN487X `CS8 ~T0 @X0 0 e ]
-"158 mcc_generated_files/application/LIGHTBLUE_service.c
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 158:     static PACKET_PARSER_STATE_t parserState = IDLE;
+"161 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 161:     static PACKET_PARSER_STATE_t parserState = IDLE;
 [c E12945 0 1 2 3 4 5 6 .. ]
 [n E12945 . IDLE SEQUENCE_NUMBER PACKET_ID PAYLOAD_SIZE_0 PAYLOAD_SIZE_1 PAYLOAD_0 PAYLOAD_1  ]
 "412 mcc_generated_files/application/LIGHTBLUE_service.h
@@ -168,8 +168,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;mcc_generated_files/application/../drivers/uart.h: 53: extern const uart_functions_t uart[];
 [v _uart `CS1698 ~T0 @X0 -> 0 `x e ]
-"280 mcc_generated_files/application/LIGHTBLUE_service.c
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 280:             uart[UART_CDC].Write(data);
+"288 mcc_generated_files/application/LIGHTBLUE_service.c
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 288:                 uart[UART_CDC].Write(data);
 [c E12887 0 1 .. ]
 [n E12887 . UART_CDC UART_BLE  ]
 "291 mcc_generated_files/application/BMA253_accel.h
@@ -1845,52 +1845,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 38:     (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = 1);
 [e = . . _FEATURE_ENABLEDBits 0 4 -> -> 1 `i `uc ]
 "39
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 39: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 39:     (FEATURE_ENABLEDBits.LED_STATE = 1);
+[e = . . _FEATURE_ENABLEDBits 0 5 -> -> 1 `i `uc ]
+"40
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 40:     (FEATURE_ENABLEDBits.RESET_REQUEST = 1);
+[e = . . _FEATURE_ENABLEDBits 0 6 -> -> 1 `i `uc ]
+"41
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 41:     (FEATURE_ENABLEDBits.SERIAL_DATA = 1);
+[e = . . _FEATURE_ENABLEDBits 0 7 -> -> 1 `i `uc ]
+"42
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 42: }
 [e :UE 1702 ]
 }
-"41
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 41: void LIGHTBLUE_TemperatureSensor(void) {
+"44
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 44: void LIGHTBLUE_TemperatureSensor(void) {
 [v _LIGHTBLUE_TemperatureSensor `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_TemperatureSensor ]
 [f ]
-"42
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 42:     char payload[5];
-[v _payload `uc ~T0 @X0 -> 5 `i a ]
-"43
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 43:     int16_t temperature;
-[v _temperature `s ~T0 @X0 1 a ]
 "45
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 45:     *payload = '\0';
-[e = *U &U _payload -> -> 0 `ui `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 45:     char payload[5];
+[v _payload `uc ~T0 @X0 -> 5 `i a ]
 "46
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 46:     MCP9844_GetTemperatureValue(&temperature);
-[e ( _MCP9844_GetTemperatureValue (1 &U _temperature ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 46:     int16_t temperature;
+[v _temperature `s ~T0 @X0 1 a ]
 "48
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 48:     LIGHTBLUE_SplitWord(payload, temperature);
-[e ( _LIGHTBLUE_SplitWord (2 , &U _payload _temperature ]
-"50
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 50:     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
-[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 3 `uc &U _payload ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 48:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"49
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 49:     MCP9844_GetTemperatureValue(&temperature);
+[e ( _MCP9844_GetTemperatureValue (1 &U _temperature ]
 "51
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 51: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 51:     LIGHTBLUE_SplitWord(payload, temperature);
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload _temperature ]
+"53
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 53:     LIGHTBLUE_SendPacket(TEMPERATURE_DATA_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 3 `uc &U _payload ]
+"54
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 54: }
 [e :UE 1703 ]
 }
-"53
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 53: void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
+"56
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 56: void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
 [v _LIGHTBLUE_Send_Thermocouple `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _LIGHTBLUE_Send_Thermocouple ]
 [v _temperature `*uc ~T0 @X0 1 r1 ]
 [f ]
-"54
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 54:     char payload[10];
+"57
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 57:     char payload[10];
 [v _payload `uc ~T0 @X0 -> 10 `i a ]
-"55
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 55:     *payload = '\0';
+"58
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 58:     *payload = '\0';
 [e = *U &U _payload -> -> 0 `ui `uc ]
-"56
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 56:     for (int i = 0; i < 4; i++) {
+"59
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 59:     for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1898,455 +1907,455 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1706  ]
 [e :U 1705 ]
 {
-"57
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 57:         LIGHTBLUE_SplitByte(payload, *temperature++);
+"60
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 60:         LIGHTBLUE_SplitByte(payload, *temperature++);
 [e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> *U ++ _temperature * -> -> 1 `i `x -> -> # *U _temperature `i `x `c ]
-"58
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 58:     }
+"61
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 61:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 1705  ]
 [e :U 1706 ]
 }
-"59
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 59:     LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+"62
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 62:     LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
 [e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 9 `uc &U _payload ]
-"60
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 60: }
+"63
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 63: }
 [e :UE 1704 ]
 }
-"62
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 62: void LIGHTBLUE_AccelSensor(void) {
+"65
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 65: void LIGHTBLUE_AccelSensor(void) {
 [v _LIGHTBLUE_AccelSensor `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_AccelSensor ]
 [f ]
-"63
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 63:     char payload[13];
-[v _payload `uc ~T0 @X0 -> 13 `i a ]
-"64
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 64:     BMA253_ACCEL_DATA_t accelData;
-[v _accelData `S9 ~T0 @X0 1 a ]
 "66
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 66:     *payload = '\0';
-[e = *U &U _payload -> -> 0 `ui `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 66:     char payload[13];
+[v _payload `uc ~T0 @X0 -> 13 `i a ]
 "67
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 67:     BMA253_GetAccelDataXYZ(&accelData);
-[e ( _BMA253_GetAccelDataXYZ (1 &U _accelData ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 67:     BMA253_ACCEL_DATA_t accelData;
+[v _accelData `S9 ~T0 @X0 1 a ]
+"69
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 69:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
 "70
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 70:     LIGHTBLUE_SplitWord(payload, (accelData.x & 0x0FFF));
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 70:     BMA253_GetAccelDataXYZ(&accelData);
+[e ( _BMA253_GetAccelDataXYZ (1 &U _accelData ]
+"73
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 73:     LIGHTBLUE_SplitWord(payload, (accelData.x & 0x0FFF));
 [e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 0 `i -> 4095 `i `s ]
-"71
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 71:     LIGHTBLUE_SplitWord(payload, (accelData.y & 0x0FFF));
-[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 1 `i -> 4095 `i `s ]
-"72
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 72:     LIGHTBLUE_SplitWord(payload, (accelData.z & 0x0FFF));
-[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 2 `i -> 4095 `i `s ]
 "74
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 74:     LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
-[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 4 `uc &U _payload ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 74:     LIGHTBLUE_SplitWord(payload, (accelData.y & 0x0FFF));
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 1 `i -> 4095 `i `s ]
 "75
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 75: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 75:     LIGHTBLUE_SplitWord(payload, (accelData.z & 0x0FFF));
+[e ( _LIGHTBLUE_SplitWord (2 , &U _payload -> & -> . _accelData 2 `i -> 4095 `i `s ]
+"77
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 77:     LIGHTBLUE_SendPacket(ACCEL_DATA_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 4 `uc &U _payload ]
+"78
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 78: }
 [e :UE 1708 ]
 }
-"77
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 77: void LIGHTBLUE_PushButton(void) {
+"80
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 80: void LIGHTBLUE_PushButton(void) {
 [v _LIGHTBLUE_PushButton `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_PushButton ]
 [f ]
-"78
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 78:     char payload[3];
+"81
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 81:     char payload[3];
 [v _payload `uc ~T0 @X0 -> 3 `i a ]
-"79
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 79:     uint8_t button = LIGHTBLUE_GetButtonValue();
+"82
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 82:     uint8_t button = LIGHTBLUE_GetButtonValue();
 [v _button `uc ~T0 @X0 1 a ]
 [e = _button ( _LIGHTBLUE_GetButtonValue ..  ]
-"81
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 81:     *payload = '\0';
-[e = *U &U _payload -> -> 0 `ui `uc ]
-"82
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 82:     LIGHTBLUE_SplitByte(payload, button);
-[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _button `c ]
 "84
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 84:     LIGHTBLUE_SendPacket(BUTTON_STATE_ID, payload);
-[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 2 `uc &U _payload ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 84:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
 "85
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 85: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 85:     LIGHTBLUE_SplitByte(payload, button);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _button `c ]
+"87
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 87:     LIGHTBLUE_SendPacket(BUTTON_STATE_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 2 `uc &U _payload ]
+"88
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 88: }
 [e :UE 1709 ]
 }
-"87
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 87: void LIGHTBLUE_Hardware_Interrupt() {
+"90
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 90: void LIGHTBLUE_Hardware_Interrupt() {
 [v _LIGHTBLUE_Hardware_Interrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_Hardware_Interrupt ]
 [f ]
-"88
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 88:     char payload[3];
+"91
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 91:     char payload[3];
 [v _payload `uc ~T0 @X0 -> 3 `i a ]
-"89
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 89:     uint8_t button = LIGHTBLUE_GetButtonValue();
+"92
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 92:     uint8_t button = LIGHTBLUE_GetButtonValue();
 [v _button `uc ~T0 @X0 1 a ]
 [e = _button ( _LIGHTBLUE_GetButtonValue ..  ]
-"91
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 91:     *payload = '\0';
-[e = *U &U _payload -> -> 0 `ui `uc ]
-"92
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 92:     LIGHTBLUE_SplitByte(payload, button);
-[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _button `c ]
 "94
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 94:     LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
-[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 13 `uc &U _payload ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 94:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
 "95
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 95: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 95:     LIGHTBLUE_SplitByte(payload, button);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _button `c ]
+"97
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 97:     LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 13 `uc &U _payload ]
+"98
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 98: }
 [e :UE 1710 ]
 }
-"97
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 97: void LIGHTBLUE_AccState(void) {
+"100
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 100: void LIGHTBLUE_AccState(void) {
 [v _LIGHTBLUE_AccState `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_AccState ]
 [f ]
-"98
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 98:     char payload[3];
+"101
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 101:     char payload[3];
 [v _payload `uc ~T0 @X0 -> 3 `i a ]
-"99
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 99:     uint8_t acc = LIGHTBLUE_GetAccState();
+"102
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 102:     uint8_t acc = LIGHTBLUE_GetAccState();
 [v _acc `uc ~T0 @X0 1 a ]
 [e = _acc ( _LIGHTBLUE_GetAccState ..  ]
-"101
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 101:     *payload = '\0';
-[e = *U &U _payload -> -> 0 `ui `uc ]
-"102
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 102:     LIGHTBLUE_SplitByte(payload, acc);
-[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _acc `c ]
 "104
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 104:     while (!(FeatureBits.ACC_FLAT_STATE == 1)) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 104:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
+"105
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 105:     LIGHTBLUE_SplitByte(payload, acc);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _acc `c ]
+"107
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 107:     while (!(FeatureBits.ACC_FLAT_STATE == 1)) {
 [e $U 1712  ]
 [e :U 1713 ]
 {
-"105
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 105:         LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
+"108
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 108:         LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
 [e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 8 `uc &U _payload ]
-"106
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 106:     }
+"109
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 109:     }
 }
 [e :U 1712 ]
-"104
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 104:     while (!(FeatureBits.ACC_FLAT_STATE == 1)) {
+"107
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 107:     while (!(FeatureBits.ACC_FLAT_STATE == 1)) {
 [e $ ! == -> . . _FeatureBits 0 0 `i -> 1 `i 1713  ]
 [e :U 1714 ]
-"107
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 107: }
+"110
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 110: }
 [e :UE 1711 ]
 }
-"109
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 109: void LIGHTBLUE_LedState(void) {
+"112
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 112: void LIGHTBLUE_LedState(void) {
 [v _LIGHTBLUE_LedState `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_LedState ]
 [f ]
-"110
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 110:     char payload[3];
-[v _payload `uc ~T0 @X0 -> 3 `i a ]
-"111
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 111:     uint8_t led;
-[v _led `uc ~T0 @X0 1 a ]
 "113
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 113:     led = (0x00) + LIGHTBLUE_GetDataLedValue();
-[e = _led -> + -> 0 `i -> ( _LIGHTBLUE_GetDataLedValue ..  `i `uc ]
-"115
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 115:     *payload = '\0';
-[e = *U &U _payload -> -> 0 `ui `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 113:     char payload[3];
+[v _payload `uc ~T0 @X0 -> 3 `i a ]
+"114
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 114:     uint8_t led;
+[v _led `uc ~T0 @X0 1 a ]
 "116
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 116:     LIGHTBLUE_SplitByte(payload, led);
-[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _led `c ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 116:     led = (0x00) + LIGHTBLUE_GetDataLedValue();
+[e = _led -> + -> 0 `i -> ( _LIGHTBLUE_GetDataLedValue ..  `i `uc ]
 "118
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 118:     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
-[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 1 `uc &U _payload ]
-"120
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 120:     led = (0x10) + LIGHTBLUE_GetErrorLedValue();
-[e = _led -> + -> 16 `i -> ( _LIGHTBLUE_GetErrorLedValue ..  `i `uc ]
-"121
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 121:     *payload = '\0';
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 118:     *payload = '\0';
 [e = *U &U _payload -> -> 0 `ui `uc ]
-"122
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 122:     LIGHTBLUE_SplitByte(payload, led);
+"119
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 119:     LIGHTBLUE_SplitByte(payload, led);
 [e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _led `c ]
-"124
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 124:     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
+"121
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 121:     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
 [e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 1 `uc &U _payload ]
+"123
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 123:     led = (0x10) + LIGHTBLUE_GetErrorLedValue();
+[e = _led -> + -> 16 `i -> ( _LIGHTBLUE_GetErrorLedValue ..  `i `uc ]
+"124
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 124:     *payload = '\0';
+[e = *U &U _payload -> -> 0 `ui `uc ]
 "125
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 125: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 125:     LIGHTBLUE_SplitByte(payload, led);
+[e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _led `c ]
+"127
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 127:     LIGHTBLUE_SendPacket(LED_STATE_ID, payload);
+[e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 1 `uc &U _payload ]
+"128
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 128: }
 [e :UE 1715 ]
 }
-"127
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 127: void LIGHTBLUE_SendProtocolVersion(void) {
+"130
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 130: void LIGHTBLUE_SendProtocolVersion(void) {
 [v _LIGHTBLUE_SendProtocolVersion `(v ~T0 @X0 1 ef ]
 {
 [e :U _LIGHTBLUE_SendProtocolVersion ]
 [f ]
-"128
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 128:     char payload[19];
+"131
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 131:     char payload[19];
 [v _payload `uc ~T0 @X0 -> 19 `i a ]
-"129
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 129:     uint8_t value;
-[v _value `uc ~T0 @X0 1 a ]
-"130
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 130:     uint8_t dataIndex;
-[v _dataIndex `uc ~T0 @X0 1 a ]
 "132
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 132:     *payload = '\0';
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 132:     uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
+"133
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 133:     uint8_t dataIndex;
+[v _dataIndex `uc ~T0 @X0 1 a ]
+"135
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 135:     *payload = '\0';
 [e = *U &U _payload -> -> 0 `ui `uc ]
-"134
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 134:     for (dataIndex = 0; dataIndex < strlen(protocol_version_number); dataIndex++) {
+"137
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 137:     for (dataIndex = 0; dataIndex < strlen(protocol_version_number); dataIndex++) {
 {
 [e = _dataIndex -> -> 0 `i `uc ]
 [e $U 1720  ]
 [e :U 1717 ]
 {
-"135
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 135:         value = protocol_version_number[dataIndex];
+"138
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 138:         value = protocol_version_number[dataIndex];
 [e = _value -> *U + _protocol_version_number * -> _dataIndex `ux -> -> # *U _protocol_version_number `ui `ux `uc ]
-"136
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 136:         LIGHTBLUE_SplitByte(payload, value);
+"139
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 139:         LIGHTBLUE_SplitByte(payload, value);
 [e ( _LIGHTBLUE_SplitByte (2 , &U _payload -> _value `c ]
-"137
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 137:     }
+"140
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 140:     }
 }
 [e ++ _dataIndex -> -> 1 `i `uc ]
 [e :U 1720 ]
 [e $ < -> _dataIndex `ui ( _strlen (1 _protocol_version_number 1717  ]
 [e :U 1718 ]
 }
-"139
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 139:     LIGHTBLUE_SendPacket(PROTOCOL_VERSION_ID, payload);
+"142
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 142:     LIGHTBLUE_SendPacket(PROTOCOL_VERSION_ID, payload);
 [e ( _LIGHTBLUE_SendPacket (2 , -> . `E12929 0 `uc &U _payload ]
-"140
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 140: }
+"143
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 143: }
 [e :UE 1716 ]
 }
-"142
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 142: void LIGHTBLUE_SendSerialData(char* serialData) {
+"145
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 145: void LIGHTBLUE_SendSerialData(char* serialData) {
 [v _LIGHTBLUE_SendSerialData `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _LIGHTBLUE_SendSerialData ]
 [v _serialData `*uc ~T0 @X0 1 r1 ]
 [f ]
-"143
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 143:     uint8_t length = strlen(serialData) * 2;
+"146
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 146:     uint8_t length = strlen(serialData) * 2;
 [v _length `uc ~T0 @X0 1 a ]
 [e = _length -> * ( _strlen (1 -> _serialData `*Cuc -> -> 2 `i `ui `uc ]
-"145
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 145:     RN487X.Write(('['));
-[e ( *U . _RN487X 0 (1 -> -> 91 `ui `uc ]
-"146
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 146:     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
-[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> ++ _sequenceNumber -> -> 1 `i `uc `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
-"147
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 147:     RN487X.Write(SERIAL_DATA_ID);
-[e ( *U . _RN487X 0 (1 -> . `E12929 5 `uc ]
 "148
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 148:     RN487X.Write((_hex[(length >> 4) & 0xF]));
-[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & >> -> _length `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 148:     RN487X.Write(('['));
+[e ( *U . _RN487X 0 (1 -> -> 91 `ui `uc ]
 "149
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 149:     RN487X.Write((_hex[(length) & 0xF]));
-[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> _length `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 149:     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> ++ _sequenceNumber -> -> 1 `i `uc `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
 "150
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 150:     while (*serialData) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 150:     RN487X.Write(SERIAL_DATA_ID);
+[e ( *U . _RN487X 0 (1 -> . `E12929 5 `uc ]
+"151
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 151:     RN487X.Write((_hex[(length >> 4) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & >> -> _length `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"152
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 152:     RN487X.Write((_hex[(length) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> _length `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"153
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 153:     while (*serialData) {
 [e $U 1722  ]
 [e :U 1723 ]
 {
-"151
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 151:         RN487X.Write((_hex[(*serialData >> 4) & 0xF]));
+"154
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 154:         RN487X.Write((_hex[(*serialData >> 4) & 0xF]));
 [e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & >> -> *U _serialData `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
-"152
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 152:         RN487X.Write((_hex[(*serialData++) & 0xF]));
+"155
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 155:         RN487X.Write((_hex[(*serialData++) & 0xF]));
 [e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> *U ++ _serialData * -> -> 1 `i `x -> -> # *U _serialData `i `x `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
-"153
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 153:     }
+"156
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 156:     }
 }
 [e :U 1722 ]
-"150
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 150:     while (*serialData) {
+"153
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 153:     while (*serialData) {
 [e $ != -> *U _serialData `i -> 0 `i 1723  ]
 [e :U 1724 ]
-"154
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 154:     RN487X.Write((']'));
+"157
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 157:     RN487X.Write((']'));
 [e ( *U . _RN487X 0 (1 -> -> 93 `ui `uc ]
-"155
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 155: }
+"158
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 158: }
 [e :UE 1721 ]
 }
-"157
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 157: void LIGHTBLUE_ParseIncomingPacket(char receivedByte) {
+"160
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 160: void LIGHTBLUE_ParseIncomingPacket(char receivedByte) {
 [v _LIGHTBLUE_ParseIncomingPacket `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _LIGHTBLUE_ParseIncomingPacket ]
 [v _receivedByte `uc ~T0 @X0 1 r1 ]
 [f ]
-"158
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 158:     static PACKET_PARSER_STATE_t parserState = IDLE;
+"161
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 161:     static PACKET_PARSER_STATE_t parserState = IDLE;
 [v F13055 `E12945 ~T0 @X0 1 s parserState ]
 [i F13055
 . `E12945 0
 ]
-"159
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 159:     static uint8_t length = 0;
+"162
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 162:     static uint8_t length = 0;
 [v F13056 `uc ~T0 @X0 1 s length ]
 [i F13056
 -> -> 0 `i `uc
 ]
-"160
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 160:     static uint16_t data = 0;
+"163
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 163:     static uint16_t data = 0;
 [v F13057 `us ~T0 @X0 1 s data ]
 [i F13057
 -> -> 0 `i `us
 ]
-"161
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 161:     static char packetID = '\0';
+"164
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 164:     static char packetID = '\0';
 [v F13058 `uc ~T0 @X0 1 s packetID ]
 [i F13058
 -> -> 0 `ui `uc
 ]
-"163
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 163:     switch (parserState) {
+"166
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 166:     switch (parserState) {
 [e $U 1727  ]
 {
-"164
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 164:         case SEQUENCE_NUMBER:
-[e :U 1728 ]
-"166
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 166:             parserState = PACKET_ID;
-[e = F13055 . `E12945 2 ]
 "167
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 167:             break;
-[e $U 1726  ]
-"168
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 168:         case PACKET_ID:
-[e :U 1729 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 167:         case SEQUENCE_NUMBER:
+[e :U 1728 ]
 "169
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 169:             packetID = receivedByte;
-[e = F13058 _receivedByte ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 169:             parserState = PACKET_ID;
+[e = F13055 . `E12945 2 ]
 "170
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 170:             parserState = PAYLOAD_SIZE_0;
-[e = F13055 . `E12945 3 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 170:             break;
+[e $U 1726  ]
 "171
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 171:             break;
-[e $U 1726  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 171:         case PACKET_ID:
+[e :U 1729 ]
 "172
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 172:         case PAYLOAD_SIZE_0:
-[e :U 1730 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 172:             packetID = receivedByte;
+[e = F13058 _receivedByte ]
 "173
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 173:             length = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13056 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 173:             parserState = PAYLOAD_SIZE_0;
+[e = F13055 . `E12945 3 ]
 "174
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 174:             parserState = PAYLOAD_SIZE_1;
-[e = F13055 . `E12945 4 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 174:             break;
+[e $U 1726  ]
 "175
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 175:             break;
-[e $U 1726  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 175:         case PAYLOAD_SIZE_0:
+[e :U 1730 ]
 "176
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 176:         case PAYLOAD_SIZE_1:
-[e :U 1731 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 176:             length = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13056 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
 "177
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 177:             length = (length << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13056 -> + -> << -> F13056 `i -> 4 `i `ui ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 177:             parserState = PAYLOAD_SIZE_1;
+[e = F13055 . `E12945 4 ]
 "178
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 178:             parserState = PAYLOAD_0;
-[e = F13055 . `E12945 5 ]
-"179
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 179:             break;
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 178:             break;
 [e $U 1726  ]
+"179
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 179:         case PAYLOAD_SIZE_1:
+[e :U 1731 ]
 "180
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 180:         case PAYLOAD_0:
-[e :U 1732 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 180:             length = (length << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13056 -> + -> << -> F13056 `i -> 4 `i `ui ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
 "181
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 181:             data = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13057 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 181:             parserState = PAYLOAD_0;
+[e = F13055 . `E12945 5 ]
 "182
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 182:             length--;
-[e -- F13056 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 182:             break;
+[e $U 1726  ]
 "183
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 183:             if (length == 0) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 183:         case PAYLOAD_0:
+[e :U 1732 ]
+"184
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 184:             data = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13057 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+"185
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 185:             length--;
+[e -- F13056 -> -> 1 `i `uc ]
+"186
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 186:             if (length == 0) {
 [e $ ! == -> F13056 `i -> 0 `i 1733  ]
 {
-"184
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 184:                 parserState = IDLE;
+"187
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 187:                 parserState = IDLE;
 [e = F13055 . `E12945 0 ]
-"185
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 185:             } else {
+"188
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 188:             } else {
 }
 [e $U 1734  ]
 [e :U 1733 ]
 {
-"186
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 186:                 parserState = PAYLOAD_1;
+"189
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 189:                 parserState = PAYLOAD_1;
 [e = F13055 . `E12945 6 ]
-"187
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 187:             }
+"190
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 190:             }
 }
 [e :U 1734 ]
-"188
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 188:             break;
-[e $U 1726  ]
-"189
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 189:         case PAYLOAD_1:
-[e :U 1735 ]
-"190
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 190:             data = (data << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13057 -> + << -> F13057 `ui -> 4 `i ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
 "191
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 191:             LIGHTBLUE_PerformAction(packetID, data);
-[e ( _LIGHTBLUE_PerformAction (2 , F13058 -> F13057 `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 191:             break;
+[e $U 1726  ]
 "192
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 192:             length--;
-[e -- F13056 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 192:         case PAYLOAD_1:
+[e :U 1735 ]
 "193
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 193:             if (length == 0) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 193:             data = (data << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
+[e = F13057 -> + << -> F13057 `ui -> 4 `i ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+"194
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 194:             LIGHTBLUE_PerformAction(packetID, data);
+[e ( _LIGHTBLUE_PerformAction (2 , F13058 -> F13057 `uc ]
+"195
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 195:             length--;
+[e -- F13056 -> -> 1 `i `uc ]
+"196
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 196:             if (length == 0) {
 [e $ ! == -> F13056 `i -> 0 `i 1736  ]
 {
-"194
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 194:                 parserState = IDLE;
+"197
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 197:                 parserState = IDLE;
 [e = F13055 . `E12945 0 ]
-"195
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 195:             } else {
+"198
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 198:             } else {
 }
 [e $U 1737  ]
 [e :U 1736 ]
 {
-"196
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 196:                 parserState = PAYLOAD_0;
+"199
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 199:                 parserState = PAYLOAD_0;
 [e = F13055 . `E12945 5 ]
-"197
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 197:             }
+"200
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 200:             }
 }
 [e :U 1737 ]
-"198
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 198:             break;
-[e $U 1726  ]
-"199
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 199:         case IDLE:
-[e :U 1738 ]
-"200
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 200:         default:
-[e :U 1739 ]
 "201
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 201:             if (receivedByte == ('[')) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 201:             break;
+[e $U 1726  ]
+"202
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 202:         case IDLE:
+[e :U 1738 ]
+"203
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 203:         default:
+[e :U 1739 ]
+"204
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 204:             if (receivedByte == ('[')) {
 [e $ ! == -> _receivedByte `ui -> 91 `ui 1740  ]
 {
-"202
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 202:                 parserState = SEQUENCE_NUMBER;
+"205
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 205:                 parserState = SEQUENCE_NUMBER;
 [e = F13055 . `E12945 1 ]
-"203
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 203:             }
+"206
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 206:             }
 }
 [e :U 1740 ]
-"204
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 204:             break;
+"207
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 207:             break;
 [e $U 1726  ]
-"205
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 205:     }
+"208
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 208:     }
 }
 [e $U 1726  ]
 [e :U 1727 ]
@@ -2359,388 +2368,412 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E12945 0 `ui 1738
  1739 ]
 [e :U 1726 ]
-"206
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 206: }
+"209
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 209: }
 [e :UE 1725 ]
 }
-"208
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 208: static void LIGHTBLUE_SendPacket(char packetID, char* payload) {
+"211
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 211: static void LIGHTBLUE_SendPacket(char packetID, char* payload) {
 [v _LIGHTBLUE_SendPacket `(v ~T0 @X0 1 sf2`uc`*uc ]
 {
 [e :U _LIGHTBLUE_SendPacket ]
 [v _packetID `uc ~T0 @X0 1 r1 ]
 [v _payload `*uc ~T0 @X0 1 r2 ]
 [f ]
-"209
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 209:     RN487X.Write(('['));
-[e ( *U . _RN487X 0 (1 -> -> 91 `ui `uc ]
-"210
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 210:     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
-[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> ++ _sequenceNumber -> -> 1 `i `uc `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
-"211
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 211:     RN487X.Write(packetID);
-[e ( *U . _RN487X 0 (1 -> _packetID `uc ]
 "212
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 212:     RN487X.Write((_hex[(strlen(payload) >> 4) & 0xF]));
-[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> & >> ( _strlen (1 -> _payload `*Cuc -> 4 `i -> -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 212:     RN487X.Write(('['));
+[e ( *U . _RN487X 0 (1 -> -> 91 `ui `uc ]
 "213
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 213:     RN487X.Write((_hex[(strlen(payload)) & 0xF]));
-[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> & ( _strlen (1 -> _payload `*Cuc -> -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 213:     RN487X.Write((_hex[(sequenceNumber++) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> -> & -> ++ _sequenceNumber -> -> 1 `i `uc `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
 "214
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 214:     while (*payload) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 214:     RN487X.Write(packetID);
+[e ( *U . _RN487X 0 (1 -> _packetID `uc ]
+"215
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 215:     RN487X.Write((_hex[(strlen(payload) >> 4) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> & >> ( _strlen (1 -> _payload `*Cuc -> 4 `i -> -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"216
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 216:     RN487X.Write((_hex[(strlen(payload)) & 0xF]));
+[e ( *U . _RN487X 0 (1 -> *U + &U __hex * -> & ( _strlen (1 -> _payload `*Cuc -> -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux `uc ]
+"217
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 217:     while (*payload) {
 [e $U 1742  ]
 [e :U 1743 ]
 {
-"215
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 215:         RN487X.Write((*(uint8_t *) payload++));
+"218
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 218:         RN487X.Write((*(uint8_t *) payload++));
 [e ( *U . _RN487X 0 (1 *U -> ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x `*uc ]
-"216
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 216:     }
+"219
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 219:     }
 }
 [e :U 1742 ]
-"214
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 214:     while (*payload) {
+"217
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 217:     while (*payload) {
 [e $ != -> *U _payload `i -> 0 `i 1743  ]
 [e :U 1744 ]
-"217
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 217:     RN487X.Write((']'));
+"220
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 220:     RN487X.Write((']'));
 [e ( *U . _RN487X 0 (1 -> -> 93 `ui `uc ]
-"218
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 218: }
+"221
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 221: }
 [e :UE 1741 ]
 }
-"220
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 220: static void LIGHTBLUE_SplitWord(char* payload, int16_t value) {
+"223
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 223: static void LIGHTBLUE_SplitWord(char* payload, int16_t value) {
 [v _LIGHTBLUE_SplitWord `(v ~T0 @X0 1 sf2`*uc`s ]
 {
 [e :U _LIGHTBLUE_SplitWord ]
 [v _payload `*uc ~T0 @X0 1 r1 ]
 [v _value `s ~T0 @X0 1 r2 ]
 [f ]
-"221
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 221:     LIGHTBLUE_SplitByte(payload, value);
+"224
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 224:     LIGHTBLUE_SplitByte(payload, value);
 [e ( _LIGHTBLUE_SplitByte (2 , _payload -> _value `c ]
-"222
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 222:     LIGHTBLUE_SplitByte(payload, value >> 8);
+"225
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 225:     LIGHTBLUE_SplitByte(payload, value >> 8);
 [e ( _LIGHTBLUE_SplitByte (2 , _payload -> >> -> _value `i -> 8 `i `c ]
-"223
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 223: }
+"226
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 226: }
 [e :UE 1745 ]
 }
-"225
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 225: static void LIGHTBLUE_SplitByte(char* payload, int8_t value) {
+"228
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 228: static void LIGHTBLUE_SplitByte(char* payload, int8_t value) {
 [v _LIGHTBLUE_SplitByte `(v ~T0 @X0 1 sf2`*uc`c ]
 {
 [e :U _LIGHTBLUE_SplitByte ]
 [v _payload `*uc ~T0 @X0 1 r1 ]
 [v _value `c ~T0 @X0 1 r2 ]
 [f ]
-"226
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 226:     payload += strlen(payload);
-[e =+ _payload * -> ( _strlen (1 -> _payload `*Cuc `ux -> -> # *U _payload `ui `ux ]
-"227
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 227:     *payload++ = (_hex[(value >> 4) & 0xF]);
-[e = *U ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x *U + &U __hex * -> -> & >> -> _value `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux ]
-"228
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 228:     *payload++ = (_hex[(value) & 0xF]);
-[e = *U ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x *U + &U __hex * -> -> & -> _value `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux ]
 "229
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 229:     *payload = '\0';
-[e = *U _payload -> -> 0 `ui `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 229:     payload += strlen(payload);
+[e =+ _payload * -> ( _strlen (1 -> _payload `*Cuc `ux -> -> # *U _payload `ui `ux ]
 "230
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 230: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 230:     *payload++ = (_hex[(value >> 4) & 0xF]);
+[e = *U ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x *U + &U __hex * -> -> & >> -> _value `i -> 4 `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux ]
+"231
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 231:     *payload++ = (_hex[(value) & 0xF]);
+[e = *U ++ _payload * -> -> 1 `i `x -> -> # *U _payload `i `x *U + &U __hex * -> -> & -> _value `i -> 15 `i `ui `ux -> -> # *U &U __hex `ui `ux ]
+"232
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 232:     *payload = '\0';
+[e = *U _payload -> -> 0 `ui `uc ]
+"233
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 233: }
 [e :UE 1746 ]
 }
-"232
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 232: static uint8_t LIGHTBLUE_GetButtonValue(void) {
+"235
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 235: static uint8_t LIGHTBLUE_GetButtonValue(void) {
 [v _LIGHTBLUE_GetButtonValue `(uc ~T0 @X0 1 sf ]
 {
 [e :U _LIGHTBLUE_GetButtonValue ]
 [f ]
-"233
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 233:     return (0x01) - PORTAbits.RA7;
+"236
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 236:     return (0x01) - PORTAbits.RA7;
 [e ) -> - -> 1 `i -> . . _PORTAbits 0 7 `i `uc ]
 [e $UE 1747  ]
-"234
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 234: }
+"237
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 237: }
 [e :UE 1747 ]
 }
-"236
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 236: static uint8_t LIGHTBLUE_GetAccState(void) {
+"239
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 239: static uint8_t LIGHTBLUE_GetAccState(void) {
 [v _LIGHTBLUE_GetAccState `(uc ~T0 @X0 1 sf ]
 {
 [e :U _LIGHTBLUE_GetAccState ]
 [f ]
-"237
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 237:     return accelerometerInterruptBits.AccelerometerInterruptBits;
+"240
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 240:     return accelerometerInterruptBits.AccelerometerInterruptBits;
 [e ) . _accelerometerInterruptBits 1 ]
 [e $UE 1748  ]
-"238
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 238: }
+"241
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 241: }
 [e :UE 1748 ]
 }
-"240
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 240: static uint8_t LIGHTBLUE_GetDataLedValue(void) {
+"243
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 243: static uint8_t LIGHTBLUE_GetDataLedValue(void) {
 [v _LIGHTBLUE_GetDataLedValue `(uc ~T0 @X0 1 sf ]
 {
 [e :U _LIGHTBLUE_GetDataLedValue ]
 [f ]
-"241
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 241:     return (0x01) - PORTAbits.RA5;
+"244
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 244:     return (0x01) - PORTAbits.RA5;
 [e ) -> - -> 1 `i -> . . _PORTAbits 0 5 `i `uc ]
 [e $UE 1749  ]
-"242
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 242: }
+"245
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 245: }
 [e :UE 1749 ]
 }
-"244
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 244: static uint8_t LIGHTBLUE_GetErrorLedValue(void) {
+"247
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 247: static uint8_t LIGHTBLUE_GetErrorLedValue(void) {
 [v _LIGHTBLUE_GetErrorLedValue `(uc ~T0 @X0 1 sf ]
 {
 [e :U _LIGHTBLUE_GetErrorLedValue ]
 [f ]
-"245
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 245:     return (0x01) - (bitMap.ioStateBitMap.p2_2_state);
+"248
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 248:     return (0x01) - (bitMap.ioStateBitMap.p2_2_state);
 [e ) -> - -> 1 `i -> . . . . _bitMap 1 1 1 0 `i `uc ]
 [e $UE 1750  ]
-"246
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 246: }
+"249
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 249: }
 [e :UE 1750 ]
 }
-"248
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 248: static void LIGHTBLUE_SetErrorLedValue(_Bool value) {
+"251
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 251: static void LIGHTBLUE_SetErrorLedValue(_Bool value) {
 [v _LIGHTBLUE_SetErrorLedValue `(v ~T0 @X0 1 sf1`a ]
 {
 [e :U _LIGHTBLUE_SetErrorLedValue ]
 [v _value `a ~T0 @X0 1 r1 ]
 [f ]
-"249
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 249:     (bitMap.ioStateBitMap.p2_2_state) = (0x01) - value;
+"252
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 252:     (bitMap.ioStateBitMap.p2_2_state) = (0x01) - value;
 [e = . . . . _bitMap 1 1 1 0 -> - -> 1 `i -> _value `i `uc ]
-"250
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 250:     LIGHTBLUE_UpdateErrorLed();
+"253
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 253:     LIGHTBLUE_UpdateErrorLed();
 [e ( _LIGHTBLUE_UpdateErrorLed ..  ]
-"251
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 251: }
+"254
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 254: }
 [e :UE 1751 ]
 }
-"253
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 253: static void LIGHTBLUE_UpdateErrorLed(void) {
+"256
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 256: static void LIGHTBLUE_UpdateErrorLed(void) {
 [v _LIGHTBLUE_UpdateErrorLed `(v ~T0 @X0 1 sf ]
 {
 [e :U _LIGHTBLUE_UpdateErrorLed ]
 [f ]
-"254
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 254:     RN487X_EnterCmdMode();
-[e ( _RN487X_EnterCmdMode ..  ]
-"255
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 255:     RN487X.DelayMs((20));
-[e ( *U . _RN487X 7 (1 -> -> 20 `i `us ]
-"256
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 256:     RN487X_SetOutputs(bitMap);
-[e ( _RN487X_SetOutputs (1 _bitMap ]
 "257
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 257:     RN487X_EnterDataMode();
-[e ( _RN487X_EnterDataMode ..  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 257:     RN487X_EnterCmdMode();
+[e ( _RN487X_EnterCmdMode ..  ]
 "258
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 258: }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 258:     RN487X.DelayMs((20));
+[e ( *U . _RN487X 7 (1 -> -> 20 `i `us ]
+"259
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 259:     RN487X_SetOutputs(bitMap);
+[e ( _RN487X_SetOutputs (1 _bitMap ]
+"260
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 260:     RN487X_EnterDataMode();
+[e ( _RN487X_EnterDataMode ..  ]
+"261
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 261: }
 [e :UE 1752 ]
 }
-"260
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 260: static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
+"263
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 263: static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
 [v _LIGHTBLUE_PerformAction `(v ~T0 @X0 1 sf2`uc`uc ]
 {
 [e :U _LIGHTBLUE_PerformAction ]
 [v _id `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"261
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 261:     uint8_t led;
+"264
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 264:     uint8_t led;
 [v _led `uc ~T0 @X0 1 a ]
-"263
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 263:     switch (id) {
+"266
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 266:     switch (id) {
 [e $U 1755  ]
 {
-"264
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 264:         case LED_STATE_ID:
-[e :U 1756 ]
-"265
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 265:             led = (data >> 4) & (0x01);
-[e = _led -> & >> -> _data `i -> 4 `i -> 1 `i `uc ]
-"266
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 266:             if (led == (0x00)) {
-[e $ ! == -> _led `i -> 0 `i 1757  ]
-{
 "267
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 267:                 if ((data & (0x01)) == (0x00)) {
-[e $ ! == & -> _data `i -> 1 `i -> 0 `i 1758  ]
-{
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 267:         case LED_STATE_ID:
+[e :U 1756 ]
 "268
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 268:                     do { LATAbits.LATA5 = 1; } while(0);
-[e :U 1761 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 268:             if ((FEATURE_ENABLEDBits.LED_STATE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 5 `i -> 1 `i 1757  ]
+{
+"269
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 269:                 led = (data >> 4) & (0x01);
+[e = _led -> & >> -> _data `i -> 4 `i -> 1 `i `uc ]
+"270
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 270:                 if (led == (0x00)) {
+[e $ ! == -> _led `i -> 0 `i 1758  ]
+{
+"271
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 271:                     if ((data & (0x01)) == (0x00)) {
+[e $ ! == & -> _data `i -> 1 `i -> 0 `i 1759  ]
+{
+"272
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 272:                         do { LATAbits.LATA5 = 1; } while(0);
+[e :U 1762 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 1760 ]
-"269
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 269:                 } else {
+[e :U 1761 ]
+"273
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 273:                     } else {
 }
-[e $U 1762  ]
-[e :U 1758 ]
+[e $U 1763  ]
+[e :U 1759 ]
 {
-"270
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 270:                     do { LATAbits.LATA5 = 0; } while(0);
-[e :U 1765 ]
+"274
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 274:                         do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1766 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 1764 ]
-"271
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 271:                 }
-}
-[e :U 1762 ]
-"272
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 272:             } else {
-}
-[e $U 1766  ]
-[e :U 1757 ]
-{
-"273
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 273:                 LIGHTBLUE_SetErrorLedValue(data & (0x01));
-[e ( _LIGHTBLUE_SetErrorLedValue (1 -> & -> _data `i -> 1 `i `a ]
-"274
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 274:             }
-}
-[e :U 1766 ]
+[e :U 1765 ]
 "275
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 275:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 275:                     }
+}
+[e :U 1763 ]
 "276
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 276:         case RESET_REQUEST_ID:
-[e :U 1767 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 276:                 } else {
+}
+[e $U 1767  ]
+[e :U 1758 ]
+{
 "277
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 277:             __asm("reset");
-[; <" reset ;# ">
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 277:                     LIGHTBLUE_SetErrorLedValue(data & (0x01));
+[e ( _LIGHTBLUE_SetErrorLedValue (1 -> & -> _data `i -> 1 `i `a ]
 "278
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 278:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 278:                 }
+}
+[e :U 1767 ]
 "279
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 279:         case SERIAL_DATA_ID:
-[e :U 1768 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 279:             }
+}
+[e :U 1757 ]
 "280
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 280:             uart[UART_CDC].Write(data);
-[e ( *U . *U + &U _uart * -> . `E12887 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 _data ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 280:             break;
+[e $U 1754  ]
 "281
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 281:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 281:         case RESET_REQUEST_ID:
+[e :U 1768 ]
 "282
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 282:         case ACC_FLAT_STATE_ID:
-[e :U 1769 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 282:             if ((FEATURE_ENABLEDBits.RESET_REQUEST == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 6 `i -> 1 `i 1769  ]
+{
 "283
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 283:             if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 0 `i -> 1 `i 1770  ]
-{
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 283:                 __asm("reset");
+[; <" reset ;# ">
 "284
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 284:                 (FeatureBits.ACC_FLAT_STATE = 1);
-[e = . . _FeatureBits 0 0 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 284:             }
+}
+[e :U 1769 ]
 "285
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 285:             }
-}
-[e :U 1770 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 285:             break;
+[e $U 1754  ]
 "286
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 286:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 286:         case SERIAL_DATA_ID:
+[e :U 1770 ]
 "287
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 287:         case THERMOCOUPLE_TEMPERATURE_ID:
-[e :U 1771 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 287:             if ((FEATURE_ENABLEDBits.SERIAL_DATA == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 7 `i -> 1 `i 1771  ]
+{
 "288
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 288:             if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 1 `i -> 1 `i 1772  ]
-{
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 288:                 uart[UART_CDC].Write(data);
+[e ( *U . *U + &U _uart * -> . `E12887 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 _data ]
 "289
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 289:                 (FeatureBits.THERMOCOUPLE_TEMPERATURE = 1);
-[e = . . _FeatureBits 0 1 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 289:             }
+}
+[e :U 1771 ]
 "290
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 290:             }
-}
-[e :U 1772 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 290:             break;
+[e $U 1754  ]
 "291
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 291:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 291:         case ACC_FLAT_STATE_ID:
+[e :U 1772 ]
 "292
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 292:         case BUZZ_REQUEST_ID:
-[e :U 1773 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 292:             if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 0 `i -> 1 `i 1773  ]
+{
 "293
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 293:             if ((FEATURE_ENABLEDBits.BUZZ_REQUEST == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 2 `i -> 1 `i 1774  ]
-{
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 293:                 (FeatureBits.ACC_FLAT_STATE = 1);
+[e = . . _FeatureBits 0 0 -> -> 1 `i `uc ]
 "294
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 294:                 (FeatureBits.BUZZ_REQUEST = 1);
-[e = . . _FeatureBits 0 2 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 294:             }
+}
+[e :U 1773 ]
 "295
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 295:             }
-}
-[e :U 1774 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 295:             break;
+[e $U 1754  ]
 "296
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 296:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 296:         case THERMOCOUPLE_TEMPERATURE_ID:
+[e :U 1774 ]
 "297
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 297:         case ALERT_REQUEST_ID:
-[e :U 1775 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 297:             if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 1 `i -> 1 `i 1775  ]
+{
 "298
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 298:             if ((FEATURE_ENABLEDBits.ALERT_REQUEST == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 3 `i -> 1 `i 1776  ]
-{
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 298:                 (FeatureBits.THERMOCOUPLE_TEMPERATURE = 1);
+[e = . . _FeatureBits 0 1 -> -> 1 `i `uc ]
 "299
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 299:                 (FeatureBits.ALERT_REQUEST = 1);
-[e = . . _FeatureBits 0 3 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 299:             }
+}
+[e :U 1775 ]
 "300
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 300:             }
-}
-[e :U 1776 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 300:             break;
+[e $U 1754  ]
 "301
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 301:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 301:         case BUZZ_REQUEST_ID:
+[e :U 1776 ]
 "302
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 302:         case HARDWARE_INTERRUPT_REQUEST_ID:
-[e :U 1777 ]
-"303
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 303:             if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 4 `i -> 1 `i 1778  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 302:             if ((FEATURE_ENABLEDBits.BUZZ_REQUEST == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 2 `i -> 1 `i 1777  ]
 {
+"303
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 303:                 (FeatureBits.BUZZ_REQUEST = 1);
+[e = . . _FeatureBits 0 2 -> -> 1 `i `uc ]
 "304
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 304:                 (FeatureBits.HARDWARE_INTERRUPT_REQUEST = 1);
-[e = . . _FeatureBits 0 4 -> -> 1 `i `uc ]
-"305
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 305:             }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 304:             }
 }
-[e :U 1778 ]
+[e :U 1777 ]
+"305
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 305:             break;
+[e $U 1754  ]
 "306
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 306:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 306:         case ALERT_REQUEST_ID:
+[e :U 1778 ]
+"307
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 307:             if ((FEATURE_ENABLEDBits.ALERT_REQUEST == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 3 `i -> 1 `i 1779  ]
+{
 "308
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 308:         default:
-[e :U 1779 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 308:                 (FeatureBits.ALERT_REQUEST = 1);
+[e = . . _FeatureBits 0 3 -> -> 1 `i `uc ]
 "309
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 309:             break;
-[e $U 1754  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 309:             }
+}
+[e :U 1779 ]
 "310
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 310:     }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 310:             break;
+[e $U 1754  ]
+"311
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 311:         case HARDWARE_INTERRUPT_REQUEST_ID:
+[e :U 1780 ]
+"312
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 312:             if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 4 `i -> 1 `i 1781  ]
+{
+"313
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 313:                 (FeatureBits.HARDWARE_INTERRUPT_REQUEST = 1);
+[e = . . _FeatureBits 0 4 -> -> 1 `i `uc ]
+"314
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 314:             }
+}
+[e :U 1781 ]
+"315
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 315:             break;
+[e $U 1754  ]
+"317
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 317:         default:
+[e :U 1782 ]
+"318
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 318:             break;
+[e $U 1754  ]
+"319
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 319:     }
 }
 [e $U 1754  ]
 [e :U 1755 ]
 [e [\ -> _id `i , $ . `E12929 1 1756
- , $ . `E12929 10 1767
- , $ . `E12929 5 1768
- , $ . `E12929 8 1769
- , $ . `E12929 9 1771
- , $ . `E12929 11 1773
- , $ . `E12929 12 1775
- , $ . `E12929 13 1777
- 1779 ]
+ , $ . `E12929 10 1768
+ , $ . `E12929 5 1770
+ , $ . `E12929 8 1772
+ , $ . `E12929 9 1774
+ , $ . `E12929 11 1776
+ , $ . `E12929 12 1778
+ , $ . `E12929 13 1780
+ 1782 ]
 [e :U 1754 ]
-"311
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 311: }
+"320
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 320: }
 [e :UE 1753 ]
 }
 [a 1C 49 46 49 46 48 0 ]
