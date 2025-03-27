@@ -30,9 +30,9 @@ void LIGHTBLUE_Initialize(void) {
     bitMap.ioBitMap.gpioBitMap = 0x01;
     bitMap.ioStateBitMap.gpioStateBitMap = 0x01;
     setProtocol_Features();
-    }
+}
 
-void setProtocol_Features(void){
+void setProtocol_Features(void) {
     FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_SetHigh();
     FEATURE_ENABLED_ACC_FLAT_STATE_SetHigh();
     FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetHigh();
@@ -54,7 +54,7 @@ void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
     char payload[10];
     *payload = '\0';
     for (int i = 0; i < 4; i++) {
-        LIGHTBLUE_SplitByte(payload,*temperature++);
+        LIGHTBLUE_SplitByte(payload, *temperature++);
     }
     LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
 }
@@ -84,14 +84,26 @@ void LIGHTBLUE_PushButton(void) {
     LIGHTBLUE_SendPacket(BUTTON_STATE_ID, payload);
 }
 
+void LIGHTBLUE_Hardware_Interrupt() {
+    char payload[3];
+    uint8_t button = LIGHTBLUE_GetButtonValue();
+
+    *payload = '\0';
+    LIGHTBLUE_SplitByte(payload, button);
+
+    LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+}
+
 void LIGHTBLUE_AccState(void) {
     char payload[3];
     uint8_t acc = LIGHTBLUE_GetAccState();
 
     *payload = '\0';
     LIGHTBLUE_SplitByte(payload, acc);
-    
-    LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
+
+    while (!ACKNOWLEDGED_ACC_FLAT_STATE_Is_High()) {
+        LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
+    }
 }
 
 void LIGHTBLUE_LedState(void) {
@@ -268,20 +280,31 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
             uart[UART_CDC].Write(data); // echo out the terminal for now
             break;
         case ACC_FLAT_STATE_ID:
-            ACKNOWLEDGED_ACC_FLAT_STATE_SetLow();
+            if (FEATURE_ENABLED_ACC_FLAT_STATE_Is_High()) {
+                ACKNOWLEDGED_ACC_FLAT_STATE_SetHigh();
+            }
             break;
         case THERMOCOUPLE_TEMPERATURE_ID:
-            ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_SetLow();
+            if (FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()) {
+                ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_SetHigh();
+            }
             break;
         case BUZZ_REQUEST_ID:
-            ACKNOWLEDGED_BUZZ_REQUEST_SetLow();
+            if (FEATURE_ENABLED_BUZZ_REQUEST_Is_High()) {
+                ACKNOWLEDGED_BUZZ_REQUEST_SetHigh();
+            }
             break;
         case ALERT_REQUEST_ID:
-            ACKNOWLEDGED_ALERT_REQUEST_SetLow();
+            if (FEATURE_ENABLED_ALERT_REQUEST_Is_High()) {
+                ACKNOWLEDGED_ALERT_REQUEST_SetHigh();
+            }
             break;
         case HARDWARE_INTERRUPT_REQUEST_ID:
-            ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_SetLow();
+            if (FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
+                ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_SetHigh();
+            }
             break;
+
         default:
             break;
     }

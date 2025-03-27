@@ -20960,19 +20960,20 @@ extern const uart_functions_t uart[];
 void LIGHTBLUE_Initialize(void);
 
 void setProtocol_Features(void);
-# 62 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_Hardware_Interrupt();
+# 63 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_TemperatureSensor(void);
-# 76 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 77 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_AccelSensor(void);
-# 87 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 88 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_PushButton(void);
-# 101 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 102 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_LedState(void);
-# 112 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 113 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendProtocolVersion(void);
-# 123 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 124 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 void LIGHTBLUE_SendSerialData(char* serialData);
-# 276 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 277 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 typedef enum {
     PROTOCOL_VERSION_ID = 'V',
     LED_STATE_ID = 'L',
@@ -20989,7 +20990,7 @@ typedef enum {
     ALERT_REQUEST_ID = 'A',
     HARDWARE_INTERRUPT_REQUEST_ID = 'H'
 } PROTOCOL_PACKET_TYPES_t;
-# 300 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 301 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 typedef enum {
     IDLE = 0,
     SEQUENCE_NUMBER = 1,
@@ -21005,9 +21006,9 @@ const char * const protocol_version_number = "1.1.0";
 static char _hex[] = "0123456789ABCDEF";
 static uint8_t sequenceNumber = 0;
 static volatile rn487x_gpio_bitmap_t bitMap;
-# 330 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 331 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_SendPacket(char packetID, char* payload);
-# 339 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 340 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
 
 
@@ -21032,9 +21033,9 @@ static uint8_t LIGHTBLUE_GetButtonValue(void);
 
 
 static uint8_t LIGHTBLUE_GetAccState(void);
-# 372 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 373 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static uint8_t LIGHTBLUE_GetDataLedValue(void);
-# 381 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 382 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static uint8_t LIGHTBLUE_GetErrorLedValue(void);
 
 
@@ -21052,7 +21053,7 @@ static void LIGHTBLUE_SetErrorLedValue(_Bool value);
 
 
 static void LIGHTBLUE_UpdateErrorLed(void);
-# 411 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 412 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static void LIGHTBLUE_PerformAction(char id, uint8_t data);
 
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
@@ -21067,13 +21068,15 @@ typedef union {
         unsigned BUZZ_REQUEST : 1;
         unsigned ALERT_REQUEST : 1;
         unsigned HARDWARE_INTERRUPT_REQUEST : 1;
-        unsigned UNUSED : 3;
+        unsigned LED_STATE : 1;
+        unsigned RESET_REQUEST : 1;
+        unsigned SERIAL_DATA : 1;
     };
     uint8_t FeatureBits;
 }FeatureBits_t;
 
 static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
-# 462 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 484 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 # 8 "mcc_generated_files/../main.h" 2
 # 34 "mcc_generated_files/../main.h"

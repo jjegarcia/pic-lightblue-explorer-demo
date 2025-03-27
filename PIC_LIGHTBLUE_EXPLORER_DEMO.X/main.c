@@ -101,7 +101,7 @@ int main(void) {
 void service_pushed(void) {
     if (FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
         if (PUSHED_INTERRUPT_Is_High()) {
-
+            LIGHTBLUE_Hardware_Interrupt();
             PUSHED_INTERRUPT_SetLow();
         }
     }

@@ -46,6 +46,7 @@
 void LIGHTBLUE_Initialize(void);
 
 void setProtocol_Features(void);
+void LIGHTBLUE_Hardware_Interrupt();
 /**
  \ingroup LIGHTBLUE
  \brief  Public function used to issue Temperature Sensor data to the Light Blue application \n
@@ -422,7 +423,9 @@ typedef union {
         unsigned BUZZ_REQUEST               : 1;
         unsigned ALERT_REQUEST              : 1;
         unsigned HARDWARE_INTERRUPT_REQUEST : 1;
-        unsigned UNUSED                     : 3;
+        unsigned LED_STATE                  : 1;
+        unsigned RESET_REQUEST              : 1;
+        unsigned SERIAL_DATA                : 1;
     };
     uint8_t FeatureBits;
 }FeatureBits_t;
@@ -459,6 +462,25 @@ static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
 #define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_GetValue()              (FeatureBits.HARDWARE_INTERRUPT_REQUEST)
 #define ACKNOWLEDGED_HARDWARE_INTERRUPT_REQUEST_Is_High()               (FeatureBits.HARDWARE_INTERRUPT_REQUEST == 1)
 
+#define ACKNOWLEDGED_SERIAL_DATA_SetHigh()                              (FeatureBits.SERIAL_DATA = 1) 
+#define ACKNOWLEDGED_SERIAL_DATA_SetLow()                               (FeatureBits.SERIAL_DATA = 0) 
+#define ACKNOWLEDGED_SERIAL_DATA_Toggle()                               (FeatureBits.SERIAL_DATA = ~FeatureBits.SERIAL_DATA)
+#define ACKNOWLEDGED_SERIAL_DATA_GetValue()                             (FeatureBits.SERIAL_DATA)
+#define ACKNOWLEDGED_SERIAL_DATA_Is_High()                              (FeatureBits.SERIAL_DATA == 1)
+
+#define ACKNOWLEDGED_RESET_REQUEST_SetHigh()                            (FeatureBits.RESET_REQUEST = 1) 
+#define ACKNOWLEDGED_RESET_REQUEST_SetLow()                             (FeatureBits.RESET_REQUEST = 0) 
+#define ACKNOWLEDGED_RESET_REQUEST_Toggle()                             (FeatureBits.RESET_REQUEST = ~FeatureBits.RESET_REQUEST)
+#define ACKNOWLEDGED_RESET_REQUEST_GetValue()                           (FeatureBits.RESET_REQUEST)
+#define ACKNOWLEDGED_RESET_REQUEST_Is_High()                            (FeatureBits.RESET_REQUEST == 1)
+
+#define ACKNOWLEDGED_LED_STATE_SetHigh()                                (FeatureBits.LED_STATE = 1) 
+#define ACKNOWLEDGED_LED_STATE_SetLow()                                 (FeatureBits.LED_STATE = 0) 
+#define ACKNOWLEDGED_LED_STATE_Toggle()                                 (FeatureBits.LED_STATE = ~FeatureBits.LED_STATE)
+#define FACKNOWLEDGED_LED_STATE_GetValue()                              (FeatureBits.LED_STATE)
+#define ACKNOWLEDGED_LED_STATE_REQUEST_Is_High()                        (FeatureBits.LED_STATE == 1)
+
+
 static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 
 #define FEATURE_ENABLED_ACC_FLAT_STATE_SetHigh()                   (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 1) 
@@ -490,6 +512,24 @@ static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 #define FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Toggle()        (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = ~FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST)
 #define FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_GetValue()      (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST)
 #define FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()       (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)
+
+#define FEATURE_ENABLED_SERIAL_DATA_SetHigh()                      (FEATURE_ENABLEDBits.SERIAL_DATA = 1) 
+#define FEATURE_ENABLED_SERIAL_DATA_SetLow()                       (FEATURE_ENABLEDBits.SERIAL_DATA = 0) 
+#define FEATURE_ENABLED_SERIAL_DATA_Toggle()                       (FEATURE_ENABLEDBits.SERIAL_DATA = ~FEATURE_ENABLEDBits.SERIAL_DATA)
+#define FEATURE_ENABLED_SERIAL_DATA_GetValue()                     (FEATURE_ENABLEDBits.SERIAL_DATA)
+#define FEATURE_ENABLED_SERIAL_DATA_Is_High()                      (FEATURE_ENABLEDBits.SERIAL_DATA == 1)
+
+#define FEATURE_ENABLED_RESET_REQUEST_SetHigh()                    (FEATURE_ENABLEDBits.RESET_REQUEST = 1) 
+#define FEATURE_ENABLED_RESET_REQUEST_SetLow()                     (FEATURE_ENABLEDBits.RESET_REQUEST = 0) 
+#define FEATURE_ENABLED_RESET_REQUEST_Toggle()                     (FEATURE_ENABLEDBits.RESET_REQUEST = ~FEATURE_ENABLEDBits.RESET_REQUEST)
+#define FEATURE_ENABLED_RESET_REQUEST_GetValue()                   (FEATURE_ENABLEDBits.RESET_REQUEST)
+#define FEATURE_ENABLED_RESET_REQUEST_Is_High()                    (FEATURE_ENABLEDBits.RESET_REQUEST == 1)
+
+#define FEATURE_ENABLED_LED_STATE_SetHigh()                        (FEATURE_ENABLEDBits.LED_STATE = 1) 
+#define FEATURE_ENABLED_LED_STATE_SetLow()                         (FEATURE_ENABLEDBits.LED_STATE = 0) 
+#define FEATURE_ENABLED_LED_STATE_Toggle()                         (FEATURE_ENABLEDBits.LED_STATE = ~FEATURE_ENABLEDBits.LED_STATE)
+#define FEATURE_ENABLED_LED_STATE_GetValue()                       (FEATURE_ENABLEDBits.LED_STATE)
+#define FEATURE_ENABLED_LED_STATE_REQUEST_Is_High()                (FEATURE_ENABLEDBits.LED_STATE == 1)
 
 #endif	/* LIGHTBLUE_SERVICE_H */
 
