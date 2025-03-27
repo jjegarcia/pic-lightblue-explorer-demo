@@ -59,7 +59,10 @@ void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
     for (int i = 0; i < 4; i++) {
         LIGHTBLUE_SplitByte(payload, *temperature++);
     }
-    LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+    while (!FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()) {
+        LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+    }
+    FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_SetLow();
 }
 
 void LIGHTBLUE_AccelSensor(void) {
@@ -93,8 +96,10 @@ void LIGHTBLUE_Hardware_Interrupt() {
 
     *payload = '\0';
     LIGHTBLUE_SplitByte(payload, button);
-
-    LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+    while (!FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
+        LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+    }
+    FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetLow();
 }
 
 void LIGHTBLUE_AccState(void) {
@@ -107,6 +112,7 @@ void LIGHTBLUE_AccState(void) {
     while (!ACKNOWLEDGED_ACC_FLAT_STATE_Is_High()) {
         LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
     }
+    FEATURE_ENABLED_ACC_FLAT_STATE_SetLow();
 }
 
 void LIGHTBLUE_LedState(void) {

@@ -20977,7 +20977,10 @@ void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
     for (int i = 0; i < 4; i++) {
         LIGHTBLUE_SplitByte(payload, *temperature++);
     }
-    LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+    while (!(FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+        LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+    }
+    (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE = 0);
 }
 
 void LIGHTBLUE_AccelSensor(void) {
@@ -21011,8 +21014,10 @@ void LIGHTBLUE_Hardware_Interrupt() {
 
     *payload = '\0';
     LIGHTBLUE_SplitByte(payload, button);
-
-    LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+    while (!(FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+        LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+    }
+    (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = 0);
 }
 
 void LIGHTBLUE_AccState(void) {
@@ -21025,6 +21030,7 @@ void LIGHTBLUE_AccState(void) {
     while (!(FeatureBits.ACC_FLAT_STATE == 1)) {
         LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
     }
+    (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 0);
 }
 
 void LIGHTBLUE_LedState(void) {
