@@ -350,6 +350,8 @@ extern void __builtin_software_breakpoint(void);
 
 
 
+# 1 "mcc_generated_files/device_config.h" 1 3
+# 6 "/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -20419,8 +20421,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/xc.h" 2 3
 # 28 "mcc_generated_files/i2c1_driver.c" 2
-# 1 "mcc_generated_files/device_config.h" 1
-# 29 "mcc_generated_files/i2c1_driver.c" 2
+
 # 1 "mcc_generated_files/i2c1_driver.h" 1
 # 34 "mcc_generated_files/i2c1_driver.h"
 typedef void (*interruptHandler)(void);

@@ -435,6 +435,8 @@ extern void __builtin_software_breakpoint(void);
 
 
 
+# 1 "mcc_generated_files/device_config.h" 1 3
+# 6 "/Users/jgarc609/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8/pic/include/builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -20979,6 +20981,7 @@ void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
     }
     while (!(FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
         LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+       _delay((unsigned long)((2000)*(32000000/4000.0)));
     }
     (FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE = 0);
 }
@@ -21016,6 +21019,7 @@ void LIGHTBLUE_Hardware_Interrupt() {
     LIGHTBLUE_SplitByte(payload, button);
     while (!(FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
         LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+        _delay((unsigned long)((2000)*(32000000/4000.0)));
     }
     (FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST = 0);
 }
@@ -21029,7 +21033,8 @@ void LIGHTBLUE_AccState(void) {
 
     while (!(FeatureBits.ACC_FLAT_STATE == 1)) {
         LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
-    }
+        _delay((unsigned long)((2000)*(32000000/4000.0)));
+   }
     (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 0);
 }
 

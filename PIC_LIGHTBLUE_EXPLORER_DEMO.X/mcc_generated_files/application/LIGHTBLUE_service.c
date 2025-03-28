@@ -61,6 +61,7 @@ void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature) {
     }
     while (!FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()) {
         LIGHTBLUE_SendPacket(THERMOCOUPLE_TEMPERATURE_ID, payload);
+       __delay_ms(2000);
     }
     FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_SetLow();
 }
@@ -98,6 +99,7 @@ void LIGHTBLUE_Hardware_Interrupt() {
     LIGHTBLUE_SplitByte(payload, button);
     while (!FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
         LIGHTBLUE_SendPacket(HARDWARE_INTERRUPT_REQUEST_ID, payload);
+        __delay_ms(2000);
     }
     FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_SetLow();
 }
@@ -111,7 +113,8 @@ void LIGHTBLUE_AccState(void) {
 
     while (!ACKNOWLEDGED_ACC_FLAT_STATE_Is_High()) {
         LIGHTBLUE_SendPacket(ACC_FLAT_STATE_ID, payload);
-    }
+        __delay_ms(2000);
+   }
     FEATURE_ENABLED_ACC_FLAT_STATE_SetLow();
 }
 
