@@ -431,6 +431,7 @@ typedef union {
 }FeatureBits_t;
 
 static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
+#define ACNOWLEDGED_CLEAR_ALL (FeatureBits.FeatureBits=0)
 
 #define ACKNOWLEDGED_ACC_FLAT_STATE_SetHigh()                           (FeatureBits.ACC_FLAT_STATE = 1) 
 #define ACKNOWLEDGED_ACC_FLAT_STATE_SetLow()                            (FeatureBits.ACC_FLAT_STATE = 0) 
@@ -482,6 +483,7 @@ static FeatureBits_t FeatureBits = { .FeatureBits = 0 };
 
 
 static FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+#define FEATURE_DISBALE_ALL (FEATURE_ENABLEDBits.FeatureBits = 0)
 
 #define FEATURE_ENABLED_ACC_FLAT_STATE_SetHigh()                        (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 1) 
 #define FEATURE_ENABLED_ACC_FLAT_STATE_SetLow()                         (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 0) 
