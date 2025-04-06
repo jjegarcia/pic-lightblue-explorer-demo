@@ -21114,7 +21114,21 @@ volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
 # 485 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 # 7 "mcc_generated_files/../main.h" 2
-# 34 "mcc_generated_files/../main.h"
+
+
+
+
+
+
+# 1 "./mcc_generated_files/services.h" 1
+# 1 "mcc_generated_files/../main.h" 1
+# 1 "./mcc_generated_files/services.h" 2
+
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+void service_thermocouple(void);
+# 13 "mcc_generated_files/../main.h" 2
+# 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;

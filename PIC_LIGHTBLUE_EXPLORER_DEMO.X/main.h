@@ -10,6 +10,7 @@
 #include "mcc_generated_files/drivers/uart.h"
 #include "mcc_generated_files/application/BMA253_accel.h"
 #include "mcc_generated_files/pin_manager.h"
+#include "mcc_generated_files/services.h"
 
 /** MACRO used to reference Periodic Timer overflow flag Set. 
  *  This is used by the application to have a semi-accurate 

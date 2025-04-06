@@ -2,7 +2,6 @@ build/default/debug/mcc_generated_files/rn487x/rn487x_interface.p1:  \
 mcc_generated_files/rn487x/rn487x_interface.c  \
 mcc_generated_files/rn487x/rn487x_interface.h  \
 mcc_generated_files/rn487x/../mcc.h  \
-mcc_generated_files/device_config.h  \
 mcc_generated_files/pin_manager.h  \
 mcc_generated_files/interrupt_manager.h  \
 mcc_generated_files/i2c1_master.h  \

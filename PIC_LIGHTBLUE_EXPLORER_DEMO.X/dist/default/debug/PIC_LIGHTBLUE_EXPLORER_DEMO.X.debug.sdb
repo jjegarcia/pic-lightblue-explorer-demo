@@ -202,7 +202,7 @@ UART_BLE 1
 TEST_MODE 0
 APPLICATION_MODE 1
 ]
-"129
+"30 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [e E12593 . `uc
 SPI2_DEFAULT 0
 ]
@@ -226,12 +226,6 @@ SPI2_DEFAULT 0
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "45 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"101
-[v _service_pushed service_pushed `(v  1 e 1 0 ]
-"110
-[v _service_acceleremoterInterrupt service_acceleremoterInterrupt `(v  1 e 1 0 ]
-"125
-[v _service_thermocouple service_thermocouple `(v  1 e 1 0 ]
 "70 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/BMA253_accel.c
 [v _BMA253_Initialize BMA253_Initialize `(v  1 e 1 0 ]
 "83
@@ -650,6 +644,12 @@ SPI2_DEFAULT 0
 [v _rn487x_PrintMessage rn487x_PrintMessage `T(v  1 s 1 rn487x_PrintMessage ]
 "368
 [v _RN487X_MessageHandler RN487X_MessageHandler `(v  1 s 1 RN487X_MessageHandler ]
+"2 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _service_pushed service_pushed `(v  1 e 1 0 ]
+"11
+[v _service_acceleremoterInterrupt service_acceleremoterInterrupt `(v  1 e 1 0 ]
+"26
+[v _service_thermocouple service_thermocouple `(v  1 e 1 0 ]
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
 "77
@@ -662,18 +662,6 @@ SPI2_DEFAULT 0
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
 "65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
-"34 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.h
-[v _statusBuffer@main$F4242 statusBuffer `[80]uc  1 s 80 statusBuffer ]
-"35
-[v _lightBlueSerial@main$F4243 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
-"36
-[v _serialIndex@main$F4244 serialIndex `uc  1 s 1 serialIndex ]
-"43
-[v _pushed pushed `a  1 e 1 0 ]
-"51
-[v _sendSpiReadRequest sendSpiReadRequest `a  1 e 1 0 ]
-"52
-[v _flats flats `uc  1 e 1 0 ]
 [s S22 . 1 `uc 1 UNDEFINED 1 0 :7:0 
 `uc 1 FLAT 1 0 :1:7 
 ]
@@ -700,7 +688,8 @@ SPI2_DEFAULT 0
 [s S143 . 2 `S130 1 ioBitMap 1 0 `S140 1 ioStateBitMap 1 1 ]
 [u S146 . 2 `us 1 gpioMap 2 0 `S143 1 . 2 0 ]
 [v _bitMap@LIGHTBLUE_service$F2685 bitMap `VES146  1 s 2 bitMap ]
-[v _bitMap@LIGHTBLUE_service$F4219 bitMap `VES146  1 s 2 bitMap ]
+[v _bitMap@LIGHTBLUE_service$F4199 bitMap `VES146  1 s 2 bitMap ]
+[v _bitMap@LIGHTBLUE_service$F4321 bitMap `VES146  1 s 2 bitMap ]
 [s S149 . 1 `uc 1 ACC_FLAT_STATE 1 0 :1:0 
 `uc 1 THERMOCOUPLE_TEMPERATURE 1 0 :1:1 
 `uc 1 BUZZ_REQUEST 1 0 :1:2 
@@ -1244,6 +1233,18 @@ SPI2_DEFAULT 0
 [v _WPUE WPUE `VEuc  1 e 1 @8037 ]
 "36199
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+"35 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.h
+[v _statusBuffer@main$F4222 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+"36
+[v _lightBlueSerial@main$F4223 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
+"37
+[v _serialIndex@main$F4224 serialIndex `uc  1 s 1 serialIndex ]
+"44
+[v _pushed pushed `a  1 e 1 0 ]
+"52
+[v _sendSpiReadRequest sendSpiReadRequest `a  1 e 1 0 ]
+"53
+[v _flats flats `uc  1 e 1 0 ]
 "68 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/BMA253_accel.c
 [v _rad rad `uc  1 e 1 0 ]
 "313 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.h
@@ -1376,12 +1377,12 @@ SPI2_DEFAULT 0
 {
 "99
 } 0
-"125
+"26 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _service_thermocouple service_thermocouple `(v  1 e 1 0 ]
 {
-"127
+"28
 [v service_thermocouple@data data `[4]uc  1 s 4 data ]
-"137
+"38
 } 0
 "127 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
@@ -1433,10 +1434,10 @@ SPI2_DEFAULT 0
 [v LIGHTBLUE_Send_Thermocouple@temperature temperature `*.4uc  1 a 1 12 ]
 "67
 } 0
-"101 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
+"2 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _service_pushed service_pushed `(v  1 e 1 0 ]
 {
-"108
+"9
 } 0
 "94 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Hardware_Interrupt LIGHTBLUE_Hardware_Interrupt `(v  1 e 1 0 ]
@@ -1447,10 +1448,10 @@ SPI2_DEFAULT 0
 [v LIGHTBLUE_Hardware_Interrupt@button button `uc  1 a 1 2 ]
 "105
 } 0
-"110 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
+"11 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _service_acceleremoterInterrupt service_acceleremoterInterrupt `(v  1 e 1 0 ]
 {
-"123
+"24
 } 0
 "107 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]

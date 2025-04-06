@@ -21117,7 +21117,21 @@ volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
 # 485 "./mcc_generated_files/application/LIGHTBLUE_service.h"
 volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 # 7 "./main.h" 2
-# 34 "./main.h"
+
+
+
+
+
+
+# 1 "./mcc_generated_files/services.h" 1
+# 1 "mcc_generated_files/../main.h" 1
+# 1 "./mcc_generated_files/services.h" 2
+
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+void service_thermocouple(void);
+# 13 "mcc_generated_files/../main.h" 2
+# 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
 static char lightBlueSerial[(80)];
 static uint8_t serialIndex;
@@ -21197,42 +21211,4 @@ int main(void) {
         }
     }
     return 0;
-}
-
-void service_pushed(void) {
-    if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
-        if ((pushed==1)) {
-            LIGHTBLUE_Hardware_Interrupt();
-            (pushed = 0);
-        }
-    }
-}
-
-void service_acceleremoterInterrupt(void) {
-    if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
-        if ((INTERRUPTbits.ACC == 1)) {
-            (INTERRUPTbits.ACC = 0);
-            (accelerometerInterruptBits.FLAT = 1);
-            flats++;
-            if (flats > 1) {
-                (accelerometerInterruptBits.FLAT = 0);
-                LIGHTBLUE_AccState();
-                flats = 0;
-            }
-        }
-    }
-}
-
-void service_thermocouple(void) {
-    if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
-        static uint8_t data[4];
-        do { LATCbits.LATC0 = 0; } while(0);
-        if (SPI2_Open(0)) {
-            sendSpiReadRequest = 0;
-            SPI2_ReadBlock(data, 4);
-            do { LATCbits.LATC0 = 1; } while(0);
-            LIGHTBLUE_Send_Thermocouple(data);
-            SPI2_Close();
-        }
-    }
 }

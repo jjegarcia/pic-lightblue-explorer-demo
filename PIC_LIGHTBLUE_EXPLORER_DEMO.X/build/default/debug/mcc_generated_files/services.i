@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/interrupt_manager.c"
+# 1 "mcc_generated_files/services.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,123 +6,18 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/interrupt_manager.c" 2
-# 49 "mcc_generated_files/interrupt_manager.c"
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 49 "mcc_generated_files/interrupt_manager.h"
+# 1 "mcc_generated_files/services.c" 2
+# 1 "mcc_generated_files/services.h" 1
+# 1 "mcc_generated_files/../main.h" 1
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 49 "mcc_generated_files/interrupt_manager.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 133 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned short uintptr_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef short intptr_t;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-typedef long int32_t;
+# 1 "mcc_generated_files/../main.h" 2
 
 
 
 
 
-typedef long long int64_t;
-# 194 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 235 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 27 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 50 "mcc_generated_files/interrupt_manager.h" 2
-# 49 "mcc_generated_files/interrupt_manager.c" 2
-
-# 1 "mcc_generated_files/mcc.h" 1
-# 49 "mcc_generated_files/mcc.h"
+# 1 "./mcc_generated_files/mcc.h" 1
+# 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -136,7 +31,16 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 3
@@ -145,6 +49,10 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 128 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
+# 174 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 210 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdlib.h" 2 3
 
 int atoi (const char *);
@@ -232,7 +140,91 @@ extern void __builtin_software_breakpoint(void);
 
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
 
+
+
+
+typedef short int16_t;
+# 179 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 194 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 215 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
+# 5 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\builtins.h" 2 3
 # 1 "mcc_generated_files\\device_config.h" 1 3
 # 6 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\builtins.h" 2 3
 
@@ -20303,7 +20295,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
+# 49 "./mcc_generated_files/mcc.h" 2
 
 
 # 1 "mcc_generated_files/pin_manager.h" 1
@@ -20339,7 +20331,7 @@ typedef union {
 }INTERRUPTbits_t;
 
 volatile INTERRUPTbits_t INTERRUPTbits;
-# 51 "mcc_generated_files/mcc.h" 2
+# 51 "./mcc_generated_files/mcc.h" 2
 
 
 
@@ -20503,10 +20495,10 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 8 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 2 3
-# 54 "mcc_generated_files/mcc.h" 2
+# 54 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/interrupt_manager.h" 1
-# 55 "mcc_generated_files/mcc.h" 2
+# 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/i2c1_master.h" 1
 # 58 "mcc_generated_files/i2c1_master.h"
@@ -20572,7 +20564,7 @@ void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
 void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
 # 204 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
-# 56 "mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/spi2.h" 1
 # 59 "mcc_generated_files/spi2.h"
@@ -20589,7 +20581,7 @@ void SPI2_WriteBlock(void *block, size_t blockSize);
 void SPI2_ReadBlock(void *block, size_t blockSize);
 void SPI2_WriteByte(uint8_t byte);
 uint8_t SPI2_ReadByte(void);
-# 57 "mcc_generated_files/mcc.h" 2
+# 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
@@ -20606,7 +20598,7 @@ void TMR0_WriteTimer(uint16_t timerVal);
 void TMR0_Reload(void);
 # 310 "mcc_generated_files/tmr0.h"
 _Bool TMR0_HasOverflowOccured(void);
-# 58 "mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart2.h" 1
 # 75 "mcc_generated_files/eusart2.h"
@@ -20661,7 +20653,7 @@ void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart2.h"
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -20716,13 +20708,13 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 60 "mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/delay.h" 1
 # 34 "mcc_generated_files/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
 void DELAY_microseconds(uint16_t microseconds);
-# 61 "mcc_generated_files/mcc.h" 2
+# 61 "./mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
 # 37 "mcc_generated_files/drivers/i2c_simple_master.h"
@@ -20734,48 +20726,472 @@ void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
 void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
 void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
 void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
-# 62 "mcc_generated_files/mcc.h" 2
-# 77 "mcc_generated_files/mcc.h"
+# 62 "./mcc_generated_files/mcc.h" 2
+# 77 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 90 "mcc_generated_files/mcc.h"
+# 90 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 103 "mcc_generated_files/mcc.h"
+# 103 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 50 "mcc_generated_files/interrupt_manager.c" 2
+# 6 "mcc_generated_files/../main.h" 2
+
+# 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
+# 27 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
 
 
-void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 27 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+
+
+# 1 "./mcc_generated_files/application/../rn487x/rn487x.h" 1
+# 31 "./mcc_generated_files/application/../rn487x/rn487x.h"
+# 1 "./mcc_generated_files/application/../rn487x/rn487x.h" 1
+# 31 "./mcc_generated_files/application/../rn487x/rn487x.h" 2
+# 53 "./mcc_generated_files/application/../rn487x/rn487x.h"
+typedef union
+{
+    uint8_t gpioBitMap;
+    struct
+    {
+        unsigned p2_2 : 1;
+        unsigned p2_4 : 1;
+        unsigned p3_5 : 1;
+        unsigned p1_2 : 1;
+        unsigned p1_3 : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_ioBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint8_t gpioStateBitMap;
+    struct
+    {
+        unsigned p2_2_state : 1;
+        unsigned p2_4_state : 1;
+        unsigned p3_5_state : 1;
+        unsigned p1_2_state : 1;
+        unsigned p1_3_state : 1;
+        unsigned reserved : 3;
+    };
+}rn487x_gpio_stateBitMap_t;
+
+
+
+
+
+
+typedef union
+{
+    uint16_t gpioMap;
+    struct
+    {
+        rn487x_gpio_ioBitMap_t ioBitMap;
+        rn487x_gpio_stateBitMap_t ioStateBitMap;
+    };
+}rn487x_gpio_bitmap_t;
+# 111 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_Init(void);
+# 124 "./mcc_generated_files/application/../rn487x/rn487x.h"
+void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
+# 140 "./mcc_generated_files/application/../rn487x/rn487x.h"
+uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
+# 156 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
+# 168 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_ReadDefaultResponse(void);
+# 182 "./mcc_generated_files/application/../rn487x/rn487x.h"
+void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
+# 194 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_EnterCmdMode(void);
+# 206 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_EnterDataMode(void);
+# 219 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
+# 232 "./mcc_generated_files/application/../rn487x/rn487x.h"
+rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
+# 245 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_RebootCmd(void);
+# 257 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_Disconnect(void);
+# 271 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
+# 283 "./mcc_generated_files/application/../rn487x/rn487x.h"
+_Bool RN487X_DataReady(void);
+# 293 "./mcc_generated_files/application/../rn487x/rn487x.h"
+uint8_t RN487X_Read(void);
+# 30 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+# 1 "./mcc_generated_files/application/../rn487x/rn487x_interface.h" 1
+# 37 "./mcc_generated_files/application/../rn487x/rn487x_interface.h"
+typedef enum
+{
+    TEST_MODE = 0x00,
+    APPLICATION_MODE = 0x01
+}RN487X_SYSTEM_MODES_t;
+
+
+
+
+
+typedef struct
 {
 
-    if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
-    {
-        PIN_MANAGER_IOC();
-    }
-    else if(INTCONbits.PEIE == 1)
-    {
-        if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
-        {
-            EUSART2_TxDefaultInterruptHandler();
-        }
-        else if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
-        {
-            EUSART2_RxDefaultInterruptHandler();
-        }
-        else if(PIE3bits.TX1IE == 1 && PIR3bits.TX1IF == 1)
-        {
-            EUSART1_TxDefaultInterruptHandler();
-        }
-        else if(PIE3bits.RC1IE == 1 && PIR3bits.RC1IF == 1)
-        {
-            EUSART1_RxDefaultInterruptHandler();
-        }
-        else
-        {
+    void (*Write)(uint8_t);
+    uint8_t (*Read)(void);
+    _Bool (*TransmitDone)(void);
+    _Bool (*DataReady)(void);
 
+    void (*IndicateRx)(_Bool);
+
+    void (*ResetModule)(_Bool);
+
+    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
+
+    void (*DelayMs)(uint16_t);
+
+    void (*AsyncHandler)(char*);
+}iRN487X_FunctionPtrs_t;
+
+extern const iRN487X_FunctionPtrs_t RN487X;
+# 75 "./mcc_generated_files/application/../rn487x/rn487x_interface.h"
+_Bool RN487X_IsConnected(void);
+# 31 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+# 1 "./mcc_generated_files/application/BMA253_accel.h" 1
+# 223 "./mcc_generated_files/application/BMA253_accel.h"
+typedef struct
+{
+    int16_t x;
+    int16_t y;
+    int16_t z;
+}BMA253_ACCEL_DATA_t;
+# 237 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_Initialize(void);
+# 246 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataX(int16_t *xAccelData);
+# 255 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataY(int16_t *yAccelData);
+# 264 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataZ(int16_t *zAccelData);
+# 275 "./mcc_generated_files/application/BMA253_accel.h"
+void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData);
+
+
+
+
+
+
+uint8_t BMA253_GetAccelChipId(void);
+
+typedef union {
+    struct {
+        unsigned UNDEFINED : 7;
+        unsigned FLAT : 1;
+    };
+    uint8_t AccelerometerInterruptBits;
+}AccelerometerInterruptBits_t;
+volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
+# 32 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+# 1 "./mcc_generated_files/application/MCP9844_temp_sensor.h" 1
+# 112 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
+void MCP9844_GetTemperatureValue(int16_t *temperature);
+# 121 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
+uint16_t MCP9844_GetManufacture(void);
+# 130 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
+uint16_t MCP9844_GetDevice(void);
+# 33 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+
+
+# 1 "./mcc_generated_files/application/../drivers/uart.h" 1
+# 34 "./mcc_generated_files/application/../drivers/uart.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
+# 34 "./mcc_generated_files/application/../drivers/uart.h" 2
+
+
+
+
+
+
+
+
+typedef enum {
+    UART_CDC ,
+    UART_BLE
+} uart_configurations_t;
+
+
+
+
+
+typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
+
+extern const uart_functions_t uart[];
+# 35 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+# 46 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_Initialize(void);
+
+void setProtocol_Features(void);
+void LIGHTBLUE_Hardware_Interrupt();
+# 63 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_TemperatureSensor(void);
+# 77 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_AccelSensor(void);
+# 88 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_PushButton(void);
+# 102 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_LedState(void);
+# 113 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendProtocolVersion(void);
+# 124 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+void LIGHTBLUE_SendSerialData(char* serialData);
+# 277 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+typedef enum {
+    PROTOCOL_VERSION_ID = 'V',
+    LED_STATE_ID = 'L',
+    BUTTON_STATE_ID = 'P',
+    TEMPERATURE_DATA_ID = 'T',
+    ACCEL_DATA_ID = 'X',
+    SERIAL_DATA_ID = 'S',
+    ERROR_ID = 'R',
+    UI_CONFIG_DATA_ID = 'U',
+    ACC_FLAT_STATE_ID = 'F',
+    THERMOCOUPLE_TEMPERATURE_ID = 'K',
+    RESET_REQUEST_ID = 'O',
+    BUZZ_REQUEST_ID = 'B',
+    ALERT_REQUEST_ID = 'A',
+    HARDWARE_INTERRUPT_REQUEST_ID = 'H'
+} PROTOCOL_PACKET_TYPES_t;
+# 301 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+typedef enum {
+    IDLE = 0,
+    SEQUENCE_NUMBER = 1,
+    PACKET_ID = 2,
+    PAYLOAD_SIZE_0 = 3,
+    PAYLOAD_SIZE_1 = 4,
+    PAYLOAD_0 = 5,
+    PAYLOAD_1 = 6
+
+} PACKET_PARSER_STATE_t;
+
+const char * const protocol_version_number = "1.1.0";
+static char _hex[] = "0123456789ABCDEF";
+static uint8_t sequenceNumber = 0;
+static volatile rn487x_gpio_bitmap_t bitMap;
+# 331 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static void LIGHTBLUE_SendPacket(char packetID, char* payload);
+# 340 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
+
+
+
+
+
+
+
+static void LIGHTBLUE_SplitByte(char* payload, int8_t value);
+
+
+
+
+
+
+
+static uint8_t LIGHTBLUE_GetButtonValue(void);
+
+
+
+
+
+
+static uint8_t LIGHTBLUE_GetAccState(void);
+# 373 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static uint8_t LIGHTBLUE_GetDataLedValue(void);
+# 382 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static uint8_t LIGHTBLUE_GetErrorLedValue(void);
+
+
+
+
+
+
+
+static void LIGHTBLUE_SetErrorLedValue(_Bool value);
+
+
+
+
+
+
+
+static void LIGHTBLUE_UpdateErrorLed(void);
+# 412 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+static void LIGHTBLUE_PerformAction(char id, uint8_t data);
+
+void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
+
+void LIGHTBLUE_AccState(void);
+void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
+
+typedef union {
+    struct {
+        unsigned ACC_FLAT_STATE : 1;
+        unsigned THERMOCOUPLE_TEMPERATURE : 1;
+        unsigned BUZZ_REQUEST : 1;
+        unsigned ALERT_REQUEST : 1;
+        unsigned HARDWARE_INTERRUPT_REQUEST : 1;
+        unsigned LED_STATE : 1;
+        unsigned RESET_REQUEST : 1;
+        unsigned SERIAL_DATA : 1;
+    };
+    uint8_t FeatureBits;
+}FeatureBits_t;
+
+volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
+# 485 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+# 7 "mcc_generated_files/../main.h" 2
+
+
+
+
+
+
+# 1 "./mcc_generated_files/services.h" 1
+# 1 "mcc_generated_files/../main.h" 1
+# 1 "./mcc_generated_files/services.h" 2
+
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+void service_thermocouple(void);
+# 13 "mcc_generated_files/../main.h" 2
+# 35 "mcc_generated_files/../main.h"
+static char statusBuffer[(80)];
+static char lightBlueSerial[(80)];
+static uint8_t serialIndex;
+
+void service_acceleremoterInterrupt(void);
+void service_thermocouple(void);
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+
+_Bool pushed = 0;
+
+
+
+
+
+
+
+_Bool sendSpiReadRequest = 0;
+uint8_t flats = 0;
+# 1 "./mcc_generated_files/services.h" 2
+
+void service_pushed(void);
+void service_acceleremoterInterrupt(void);
+void service_thermocouple(void);
+# 1 "mcc_generated_files/services.c" 2
+
+void service_pushed(void) {
+    if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+        if ((pushed==1)) {
+            LIGHTBLUE_Hardware_Interrupt();
+            (pushed = 0);
         }
     }
-    else
-    {
+}
 
+void service_acceleremoterInterrupt(void) {
+    if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
+        if ((INTERRUPTbits.ACC == 1)) {
+            (INTERRUPTbits.ACC = 0);
+            (accelerometerInterruptBits.FLAT = 1);
+            flats++;
+            if (flats > 1) {
+                (accelerometerInterruptBits.FLAT = 0);
+                LIGHTBLUE_AccState();
+                flats = 0;
+            }
+        }
+    }
+}
+
+void service_thermocouple(void) {
+    if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+        static uint8_t data[4];
+        do { LATCbits.LATC0 = 0; } while(0);
+        if (SPI2_Open(0)) {
+            sendSpiReadRequest = 0;
+            SPI2_ReadBlock(data, 4);
+            do { LATCbits.LATC0 = 1; } while(0);
+            LIGHTBLUE_Send_Thermocouple(data);
+            SPI2_Close();
+        }
     }
 }
