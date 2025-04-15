@@ -39,10 +39,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 419: typedef union {
 [u S1699 `S1700 1 `uc 1 ]
 [n S1699 . . FeatureBits ]
-"49
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 49: void LIGHTBLUE_Hardware_Interrupt();
-[v _LIGHTBLUE_Hardware_Interrupt `(v ~T0 @X0 0 e? ]
-"416
+"5 ./mcc_generated_files/services.h
+[; ;./mcc_generated_files/services.h: 5:     struct {
+[s S1702 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1702 . ACC_FLAT_STATE THERMOCOUPLE_TEMPERATURE HARDWARE_INTERRUPT_REQUEST TEMPERATURE_SENSOR ACCELEROMETER_SENSOR PUSH_BUTTON LED_STATE SEND_PROTOCOL_VERSION ]
+"4
+[; ;./mcc_generated_files/services.h: 4: typedef union {
+[u S1701 `S1702 1 `uc 1 ]
+[n S1701 . . ServiceBits ]
+"416 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 416: void LIGHTBLUE_AccState(void);
 [v _LIGHTBLUE_AccState `(v ~T0 @X0 0 ef ]
 "991 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
@@ -56,8 +61,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1002
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 1002: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
 [v _LATCbits `VS52 ~T0 @X0 0 e@26 ]
-"30 mcc_generated_files/services.c
-[; ;mcc_generated_files/services.c: 30:         if (SPI2_Open(0)) {
+"21 mcc_generated_files/services.c
+[; ;mcc_generated_files/services.c: 21:         if (SPI2_Open(0)) {
 [c E12593 0 .. ]
 [n E12593 . SPI2_DEFAULT  ]
 "64 mcc_generated_files/spi2.h
@@ -72,6 +77,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65 mcc_generated_files/spi2.h
 [; ;mcc_generated_files/spi2.h: 65: void SPI2_Close(void);
 [v _SPI2_Close `(v ~T0 @X0 0 ef ]
+"49 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 49: void LIGHTBLUE_Hardware_Interrupt();
+[v _LIGHTBLUE_Hardware_Interrupt `(v ~T0 @X0 0 e? ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1709,6 +1717,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
+"18 ./mcc_generated_files/services.h
+[; ;./mcc_generated_files/services.h: 18: volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
+[v _SERVICE `VS1701 ~T0 @X0 1 e ]
+[i _SERVICE
+:U 1
+:U ..
+-> -> 0 `i `uc
+..
+..
+]
 "35 mcc_generated_files/../main.h
 [; ;mcc_generated_files/../main.h: 35: static char statusBuffer[(80)];
 [v _statusBuffer `uc ~T0 @X0 -> 80 `i s ]
@@ -1736,143 +1754,193 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _flats
 -> -> 0 `i `uc
 ]
-"2 mcc_generated_files/services.c
-[; ;mcc_generated_files/services.c: 2: void service_pushed(void) {
-[v _service_pushed `(v ~T0 @X0 1 ef ]
+"3 mcc_generated_files/services.c
+[; ;mcc_generated_files/services.c: 3: void acc_flat_state(){
+[v _acc_flat_state `(v ~T0 @X0 1 ef ]
 {
-[e :U _service_pushed ]
+[e :U _acc_flat_state ]
 [f ]
-"3
-[; ;mcc_generated_files/services.c: 3:     if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 4 `i -> 1 `i 1702  ]
-{
 "4
-[; ;mcc_generated_files/services.c: 4:         if ((pushed==1)) {
-[e $ ! == -> _pushed `i -> 1 `i 1703  ]
+[; ;mcc_generated_files/services.c: 4:     if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 0 `i -> 1 `i 1704  ]
 {
 "5
-[; ;mcc_generated_files/services.c: 5:             LIGHTBLUE_Hardware_Interrupt();
-[e ( _LIGHTBLUE_Hardware_Interrupt ..  ]
+[; ;mcc_generated_files/services.c: 5:         if ((INTERRUPTbits.ACC == 1)) {
+[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1705  ]
+{
 "6
-[; ;mcc_generated_files/services.c: 6:             (pushed = 0);
-[e = _pushed -> -> 0 `i `a ]
-"7
-[; ;mcc_generated_files/services.c: 7:         }
-}
-[e :U 1703 ]
-"8
-[; ;mcc_generated_files/services.c: 8:     }
-}
-[e :U 1702 ]
-"9
-[; ;mcc_generated_files/services.c: 9: }
-[e :UE 1701 ]
-}
-"11
-[; ;mcc_generated_files/services.c: 11: void service_acceleremoterInterrupt(void) {
-[v _service_acceleremoterInterrupt `(v ~T0 @X0 1 ef ]
-{
-[e :U _service_acceleremoterInterrupt ]
-[f ]
-"12
-[; ;mcc_generated_files/services.c: 12:     if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 0 `i -> 1 `i 1705  ]
-{
-"13
-[; ;mcc_generated_files/services.c: 13:         if ((INTERRUPTbits.ACC == 1)) {
-[e $ ! == -> . . _INTERRUPTbits 0 0 `i -> 1 `i 1706  ]
-{
-"14
-[; ;mcc_generated_files/services.c: 14:             (INTERRUPTbits.ACC = 0);
+[; ;mcc_generated_files/services.c: 6:             (INTERRUPTbits.ACC = 0);
 [e = . . _INTERRUPTbits 0 0 -> -> 0 `i `uc ]
-"15
-[; ;mcc_generated_files/services.c: 15:             (accelerometerInterruptBits.FLAT = 1);
+"7
+[; ;mcc_generated_files/services.c: 7:             (accelerometerInterruptBits.FLAT = 1);
 [e = . . _accelerometerInterruptBits 0 1 -> -> 1 `i `uc ]
-"16
-[; ;mcc_generated_files/services.c: 16:             flats++;
+"8
+[; ;mcc_generated_files/services.c: 8:             flats++;
 [e ++ _flats -> -> 1 `i `uc ]
-"17
-[; ;mcc_generated_files/services.c: 17:             if (flats > 1) {
-[e $ ! > -> _flats `i -> 1 `i 1707  ]
+"9
+[; ;mcc_generated_files/services.c: 9:             if (flats > 1) {
+[e $ ! > -> _flats `i -> 1 `i 1706  ]
 {
-"18
-[; ;mcc_generated_files/services.c: 18:                 (accelerometerInterruptBits.FLAT = 0);
+"10
+[; ;mcc_generated_files/services.c: 10:                 (accelerometerInterruptBits.FLAT = 0);
 [e = . . _accelerometerInterruptBits 0 1 -> -> 0 `i `uc ]
-"19
-[; ;mcc_generated_files/services.c: 19:                 LIGHTBLUE_AccState();
+"11
+[; ;mcc_generated_files/services.c: 11:                 LIGHTBLUE_AccState();
 [e ( _LIGHTBLUE_AccState ..  ]
-"20
-[; ;mcc_generated_files/services.c: 20:                 flats = 0;
+"12
+[; ;mcc_generated_files/services.c: 12:                 flats = 0;
 [e = _flats -> -> 0 `i `uc ]
-"21
-[; ;mcc_generated_files/services.c: 21:             }
-}
-[e :U 1707 ]
-"22
-[; ;mcc_generated_files/services.c: 22:         }
+"13
+[; ;mcc_generated_files/services.c: 13:             }
 }
 [e :U 1706 ]
-"23
-[; ;mcc_generated_files/services.c: 23:     }
+"14
+[; ;mcc_generated_files/services.c: 14:         }
 }
 [e :U 1705 ]
-"24
-[; ;mcc_generated_files/services.c: 24: }
-[e :UE 1704 ]
+"15
+[; ;mcc_generated_files/services.c: 15:     }
 }
-"26
-[; ;mcc_generated_files/services.c: 26: void service_thermocouple(void) {
-[v _service_thermocouple `(v ~T0 @X0 1 ef ]
+[e :U 1704 ]
+"16
+[; ;mcc_generated_files/services.c: 16: }
+[e :UE 1703 ]
+}
+"17
+[; ;mcc_generated_files/services.c: 17: void thermocouple_temperature(){
+[v _thermocouple_temperature `(v ~T0 @X0 1 ef ]
 {
-[e :U _service_thermocouple ]
+[e :U _thermocouple_temperature ]
 [f ]
-"27
-[; ;mcc_generated_files/services.c: 27:     if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
-[e $ ! == -> . . _FEATURE_ENABLEDBits 0 1 `i -> 1 `i 1709  ]
+"18
+[; ;mcc_generated_files/services.c: 18:     if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 1 `i -> 1 `i 1708  ]
 {
-"28
-[; ;mcc_generated_files/services.c: 28:         static uint8_t data[4];
-[v F13162 `uc ~T0 @X0 -> 4 `i s data ]
-"29
-[; ;mcc_generated_files/services.c: 29:         do { LATCbits.LATC0 = 0; } while(0);
-[e :U 1712 ]
+"19
+[; ;mcc_generated_files/services.c: 19:         static uint8_t data[4];
+[v F13177 `uc ~T0 @X0 -> 4 `i s data ]
+"20
+[; ;mcc_generated_files/services.c: 20:         do { LATCbits.LATC0 = 0; } while(0);
+[e :U 1711 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 1711 ]
-"30
-[; ;mcc_generated_files/services.c: 30:         if (SPI2_Open(0)) {
-[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12593 `i -> 0 `i 1713  ]
+[e :U 1710 ]
+"21
+[; ;mcc_generated_files/services.c: 21:         if (SPI2_Open(0)) {
+[e $ ! != -> ( _SPI2_Open (1 -> -> 0 `i `E12593 `i -> 0 `i 1712  ]
 {
-"31
-[; ;mcc_generated_files/services.c: 31:             sendSpiReadRequest = 0;
+"22
+[; ;mcc_generated_files/services.c: 22:             sendSpiReadRequest = 0;
 [e = _sendSpiReadRequest -> -> 0 `i `a ]
-"32
-[; ;mcc_generated_files/services.c: 32:             SPI2_ReadBlock(data, 4);
-[e ( _SPI2_ReadBlock (2 , -> &U F13162 `*v -> -> 4 `i `ui ]
-"33
-[; ;mcc_generated_files/services.c: 33:             do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1716 ]
+"23
+[; ;mcc_generated_files/services.c: 23:             SPI2_ReadBlock(data, 4);
+[e ( _SPI2_ReadBlock (2 , -> &U F13177 `*v -> -> 4 `i `ui ]
+"24
+[; ;mcc_generated_files/services.c: 24:             do { LATCbits.LATC0 = 1; } while(0);
+[e :U 1715 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 1715 ]
-"34
-[; ;mcc_generated_files/services.c: 34:             LIGHTBLUE_Send_Thermocouple(data);
-[e ( _LIGHTBLUE_Send_Thermocouple (1 &U F13162 ]
-"35
-[; ;mcc_generated_files/services.c: 35:             SPI2_Close();
+[e :U 1714 ]
+"25
+[; ;mcc_generated_files/services.c: 25:             LIGHTBLUE_Send_Thermocouple(data);
+[e ( _LIGHTBLUE_Send_Thermocouple (1 &U F13177 ]
+"26
+[; ;mcc_generated_files/services.c: 26:             SPI2_Close();
 [e ( _SPI2_Close ..  ]
+"27
+[; ;mcc_generated_files/services.c: 27:         }
+}
+[e :U 1712 ]
+"28
+[; ;mcc_generated_files/services.c: 28:     }
+}
+[e :U 1708 ]
+"29
+[; ;mcc_generated_files/services.c: 29: }
+[e :UE 1707 ]
+}
+"30
+[; ;mcc_generated_files/services.c: 30: void hardware_interrupt_request(){
+[v _hardware_interrupt_request `(v ~T0 @X0 1 ef ]
+{
+[e :U _hardware_interrupt_request ]
+[f ]
+"31
+[; ;mcc_generated_files/services.c: 31:     if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+[e $ ! == -> . . _FEATURE_ENABLEDBits 0 4 `i -> 1 `i 1717  ]
+{
+"32
+[; ;mcc_generated_files/services.c: 32:         if ((pushed==1)) {
+[e $ ! == -> _pushed `i -> 1 `i 1718  ]
+{
+"33
+[; ;mcc_generated_files/services.c: 33:             LIGHTBLUE_Hardware_Interrupt();
+[e ( _LIGHTBLUE_Hardware_Interrupt ..  ]
+"34
+[; ;mcc_generated_files/services.c: 34:             (pushed = 0);
+[e = _pushed -> -> 0 `i `a ]
+"35
+[; ;mcc_generated_files/services.c: 35:         }
+}
+[e :U 1718 ]
 "36
-[; ;mcc_generated_files/services.c: 36:         }
+[; ;mcc_generated_files/services.c: 36:     }
 }
-[e :U 1713 ]
+[e :U 1717 ]
 "37
-[; ;mcc_generated_files/services.c: 37:     }
+[; ;mcc_generated_files/services.c: 37: }
+[e :UE 1716 ]
 }
-[e :U 1709 ]
 "38
-[; ;mcc_generated_files/services.c: 38: }
-[e :UE 1708 ]
+[; ;mcc_generated_files/services.c: 38: void temperature_sensor(){
+[v _temperature_sensor `(v ~T0 @X0 1 ef ]
+{
+[e :U _temperature_sensor ]
+[f ]
+"39
+[; ;mcc_generated_files/services.c: 39: }
+[e :UE 1719 ]
+}
+"40
+[; ;mcc_generated_files/services.c: 40: void accelerometer_sensor(){
+[v _accelerometer_sensor `(v ~T0 @X0 1 ef ]
+{
+[e :U _accelerometer_sensor ]
+[f ]
+"41
+[; ;mcc_generated_files/services.c: 41: }
+[e :UE 1720 ]
+}
+"42
+[; ;mcc_generated_files/services.c: 42: void push_button(){
+[v _push_button `(v ~T0 @X0 1 ef ]
+{
+[e :U _push_button ]
+[f ]
+"43
+[; ;mcc_generated_files/services.c: 43: }
+[e :UE 1721 ]
+}
+"44
+[; ;mcc_generated_files/services.c: 44: void led_state(){
+[v _led_state `(v ~T0 @X0 1 ef ]
+{
+[e :U _led_state ]
+[f ]
+"45
+[; ;mcc_generated_files/services.c: 45: }
+[e :UE 1722 ]
+}
+"46
+[; ;mcc_generated_files/services.c: 46: void send_protocol_version(){
+[v _send_protocol_version `(v ~T0 @X0 1 ef ]
+{
+[e :U _send_protocol_version ]
+[f ]
+"47
+[; ;mcc_generated_files/services.c: 47: }
+[e :UE 1723 ]
 }
 [a 1C 49 46 49 46 48 0 ]

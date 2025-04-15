@@ -21127,9 +21127,32 @@ volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 # 1 "mcc_generated_files/../main.h" 1
 # 1 "./mcc_generated_files/services.h" 2
 
-void service_pushed(void);
-void service_acceleremoterInterrupt(void);
-void service_thermocouple(void);
+
+
+typedef union {
+    struct {
+        unsigned ACC_FLAT_STATE : 1;
+        unsigned THERMOCOUPLE_TEMPERATURE : 1;
+        unsigned HARDWARE_INTERRUPT_REQUEST : 1;
+        unsigned TEMPERATURE_SENSOR : 1;
+        unsigned ACCELEROMETER_SENSOR : 1;
+        unsigned PUSH_BUTTON : 1;
+        unsigned LED_STATE : 1;
+        unsigned SEND_PROTOCOL_VERSION : 1;
+    };
+    uint8_t ServiceBits;
+}ServiceBits_t;
+
+volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
+# 69 "./mcc_generated_files/services.h"
+void acc_flat_state();
+void thermocouple_temperature();
+void hardware_interrupt_request();
+void temperature_sensor();
+void accelerometer_sensor();
+void push_button();
+void led_state();
+void send_protocol_version();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21172,12 +21195,11 @@ int main(void) {
     LIGHTBLUE_Initialize();
     while (1) {
         if (RN487X_IsConnected() == 1) {
-            service_acceleremoterInterrupt();
-            service_thermocouple();
-            service_pushed();
+             acc_flat_state();
+            hardware_interrupt_request();
             if ((PIR0bits.TMR0IF) == 1) {
                 (PIR0bits.TMR0IF = 0);
-                service_thermocouple();
+                thermocouple_temperature();
                 LIGHTBLUE_TemperatureSensor();
 
                 LIGHTBLUE_PushButton();

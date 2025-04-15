@@ -57,12 +57,11 @@ int main(void) {
     LIGHTBLUE_Initialize();
     while (1) {
         if (RN487X_IsConnected() == true) {
-            service_acceleremoterInterrupt();
-            service_thermocouple();
-            service_pushed();
+             acc_flat_state();
+            hardware_interrupt_request();
             if (TIMER_FLAG_SET() == true) {
                 RESET_TIMER_INTERRUPT_FLAG;
-                service_thermocouple();
+                thermocouple_temperature();
                 LIGHTBLUE_TemperatureSensor();
                 //                LIGHTBLUE_AccelSensor();
                 LIGHTBLUE_PushButton();

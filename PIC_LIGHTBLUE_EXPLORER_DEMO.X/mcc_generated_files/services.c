@@ -1,14 +1,6 @@
 #include "services.h"
-void service_pushed(void) {
-    if (FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
-        if (PUSHED_INTERRUPT_Is_High()) {
-            LIGHTBLUE_Hardware_Interrupt();
-            PUSHED_INTERRUPT_SetLow();
-        }
-    }
-}
 
-void service_acceleremoterInterrupt(void) {
+void acc_flat_state(){
     if (FEATURE_ENABLED_ACC_FLAT_STATE_Is_High()) {
         if (ACC_INTERRUPT_Is_High()) {
             ACC_INTERRUPT_SetLow();
@@ -22,8 +14,7 @@ void service_acceleremoterInterrupt(void) {
         }
     }
 }
-
-void service_thermocouple(void) {
+void thermocouple_temperature(){
     if (FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()) {
         static uint8_t data[4];
         SPI_SS_EXT_DEVICE_SetLow();
@@ -35,4 +26,22 @@ void service_thermocouple(void) {
             SPI2_Close();
         }
     }
+}
+void hardware_interrupt_request(){
+    if (FEATURE_ENABLED_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
+        if (PUSHED_INTERRUPT_Is_High()) {
+            LIGHTBLUE_Hardware_Interrupt();
+            PUSHED_INTERRUPT_SetLow();
+        }
+    }
+}
+void temperature_sensor(){
+}
+void accelerometer_sensor(){
+}
+void push_button(){
+}
+void led_state(){
+}
+void send_protocol_version(){
 }

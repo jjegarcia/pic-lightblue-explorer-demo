@@ -21127,9 +21127,32 @@ volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
 # 1 "mcc_generated_files/../main.h" 1
 # 1 "./mcc_generated_files/services.h" 2
 
-void service_pushed(void);
-void service_acceleremoterInterrupt(void);
-void service_thermocouple(void);
+
+
+typedef union {
+    struct {
+        unsigned ACC_FLAT_STATE : 1;
+        unsigned THERMOCOUPLE_TEMPERATURE : 1;
+        unsigned HARDWARE_INTERRUPT_REQUEST : 1;
+        unsigned TEMPERATURE_SENSOR : 1;
+        unsigned ACCELEROMETER_SENSOR : 1;
+        unsigned PUSH_BUTTON : 1;
+        unsigned LED_STATE : 1;
+        unsigned SEND_PROTOCOL_VERSION : 1;
+    };
+    uint8_t ServiceBits;
+}ServiceBits_t;
+
+volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
+# 69 "./mcc_generated_files/services.h"
+void acc_flat_state();
+void thermocouple_temperature();
+void hardware_interrupt_request();
+void temperature_sensor();
+void accelerometer_sensor();
+void push_button();
+void led_state();
+void send_protocol_version();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21152,22 +21175,10 @@ _Bool pushed = 0;
 _Bool sendSpiReadRequest = 0;
 uint8_t flats = 0;
 # 1 "./mcc_generated_files/services.h" 2
-
-void service_pushed(void);
-void service_acceleremoterInterrupt(void);
-void service_thermocouple(void);
 # 1 "mcc_generated_files/services.c" 2
 
-void service_pushed(void) {
-    if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
-        if ((pushed==1)) {
-            LIGHTBLUE_Hardware_Interrupt();
-            (pushed = 0);
-        }
-    }
-}
 
-void service_acceleremoterInterrupt(void) {
+void acc_flat_state(){
     if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
         if ((INTERRUPTbits.ACC == 1)) {
             (INTERRUPTbits.ACC = 0);
@@ -21181,8 +21192,7 @@ void service_acceleremoterInterrupt(void) {
         }
     }
 }
-
-void service_thermocouple(void) {
+void thermocouple_temperature(){
     if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
         static uint8_t data[4];
         do { LATCbits.LATC0 = 0; } while(0);
@@ -21194,4 +21204,22 @@ void service_thermocouple(void) {
             SPI2_Close();
         }
     }
+}
+void hardware_interrupt_request(){
+    if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+        if ((pushed==1)) {
+            LIGHTBLUE_Hardware_Interrupt();
+            (pushed = 0);
+        }
+    }
+}
+void temperature_sensor(){
+}
+void accelerometer_sensor(){
+}
+void push_button(){
+}
+void led_state(){
+}
+void send_protocol_version(){
 }
