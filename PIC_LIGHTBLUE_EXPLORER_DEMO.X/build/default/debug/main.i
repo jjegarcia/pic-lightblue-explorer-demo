@@ -21158,6 +21158,7 @@ void intiliase_services();
 void mirror_serial();
 void spool_ble_tx();
 void spool_ble_rx();
+void flush_serial_to_ble();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21198,6 +21199,7 @@ int main(void) {
     BMA253_Initialize();
     RN487X_Init();
     LIGHTBLUE_Initialize();
+    intiliase_services();
     while (1) {
         if (RN487X_IsConnected() == 1) {
              acc_flat_state();

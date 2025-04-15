@@ -21155,6 +21155,7 @@ void intiliase_services();
 void mirror_serial();
 void spool_ble_tx();
 void spool_ble_rx();
+void flush_serial_to_ble();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];

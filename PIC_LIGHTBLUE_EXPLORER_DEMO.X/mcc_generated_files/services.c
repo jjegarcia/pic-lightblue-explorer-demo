@@ -4,6 +4,7 @@ void intiliase_services(void) {
     SERVICE_ACC_FLAT_STATE_SetHigh();
     SERVICE_THERMOCOUPLE_TEMPERATURE_SetHigh();
     SERVICE_HARDWARE_INTERRUPT_REQUEST_SetHigh();
+    SERVICE_MIRROW_SERIAL_SetHigh();
 }
 
 void acc_flat_state() {
@@ -79,18 +80,7 @@ void mirror_serial() {
         while (RN487X_DataReady()) {
             LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
         }
-        while (uart[UART_CDC].DataReady()) {
-            lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-            if ((lightBlueSerial[serialIndex] == '\r')
-                    || (lightBlueSerial[serialIndex] == '\n')
-                    || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-                lightBlueSerial[serialIndex] = '\0';
-                LIGHTBLUE_SendSerialData(lightBlueSerial);
-                serialIndex = 0;
-            } else {
-                serialIndex++;
-            }
-        }
+        flush_serial_to_ble();
     }
 }
 
@@ -106,3 +96,17 @@ void spool_ble_tx() {
     }
 }
 
+void flush_serial_to_ble() {
+    while (uart[UART_CDC].DataReady()) {
+        lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+        if ((lightBlueSerial[serialIndex] == '\r')
+                || (lightBlueSerial[serialIndex] == '\n')
+                || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
+            lightBlueSerial[serialIndex] = '\0';
+            LIGHTBLUE_SendSerialData(lightBlueSerial);
+            serialIndex = 0;
+        } else {
+            serialIndex++;
+        }
+    }
+}

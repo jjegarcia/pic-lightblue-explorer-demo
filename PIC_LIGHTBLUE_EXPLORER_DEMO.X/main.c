@@ -55,6 +55,7 @@ int main(void) {
     BMA253_Initialize();
     RN487X_Init();
     LIGHTBLUE_Initialize();
+    intiliase_services();
     while (1) {
         if (RN487X_IsConnected() == true) {
              acc_flat_state();

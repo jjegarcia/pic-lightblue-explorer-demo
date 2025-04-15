@@ -21158,6 +21158,7 @@ void intiliase_services();
 void mirror_serial();
 void spool_ble_tx();
 void spool_ble_rx();
+void flush_serial_to_ble();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21187,6 +21188,7 @@ void intiliase_services(void) {
     (SERVICE.ACC_FLAT_STATE = 1);
     (SERVICE.THERMOCOUPLE_TEMPERATURE = 1);
     (SERVICE.HARDWARE_INTERRUPT_REQUEST = 1);
+    (SERVICE.SEND_PROTOCOL_VERSION = 1);
 }
 
 void acc_flat_state() {
@@ -21262,18 +21264,7 @@ void mirror_serial() {
         while (RN487X_DataReady()) {
             LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
         }
-        while (uart[UART_CDC].DataReady()) {
-            lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-            if ((lightBlueSerial[serialIndex] == '\r')
-                    || (lightBlueSerial[serialIndex] == '\n')
-                    || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-                lightBlueSerial[serialIndex] = '\0';
-                LIGHTBLUE_SendSerialData(lightBlueSerial);
-                serialIndex = 0;
-            } else {
-                serialIndex++;
-            }
-        }
+        flush_serial_to_ble();
     }
 }
 
@@ -21286,5 +21277,20 @@ void spool_ble_rx() {
 void spool_ble_tx() {
     while (uart[UART_CDC].DataReady()) {
         RN487X.Write(uart[UART_CDC].Read());
+    }
+}
+
+void flush_serial_to_ble() {
+    while (uart[UART_CDC].DataReady()) {
+        lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+        if ((lightBlueSerial[serialIndex] == '\r')
+                || (lightBlueSerial[serialIndex] == '\n')
+                || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
+            lightBlueSerial[serialIndex] = '\0';
+            LIGHTBLUE_SendSerialData(lightBlueSerial);
+            serialIndex = 0;
+        } else {
+            serialIndex++;
+        }
     }
 }
