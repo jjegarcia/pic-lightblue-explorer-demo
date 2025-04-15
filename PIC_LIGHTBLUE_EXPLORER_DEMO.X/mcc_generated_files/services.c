@@ -16,6 +16,7 @@ void acc_flat_state() {
             if (flats > 1) {
                 ACC_INTERRUPT_FLAT_SetLow();
                 LIGHTBLUE_AccState();
+                flush_serial_to_ble();
                 flats = 0;
             }
         }
@@ -31,6 +32,7 @@ void thermocouple_temperature() {
             SPI2_ReadBlock(data, 4);
             SPI_SS_EXT_DEVICE_SetHigh();
             LIGHTBLUE_Send_Thermocouple(data);
+            flush_serial_to_ble();
             SPI2_Close();
         }
     }
@@ -40,6 +42,7 @@ void hardware_interrupt_request() {
     if (SERVICE_HARDWARE_INTERRUPT_REQUEST_Is_High()) {
         if (PUSHED_INTERRUPT_Is_High()) {
             LIGHTBLUE_Hardware_Interrupt();
+            flush_serial_to_ble();
             PUSHED_INTERRUPT_SetLow();
         }
     }
@@ -48,30 +51,35 @@ void hardware_interrupt_request() {
 void temperature_sensor() {
     if (SERVICE_TEMPERATURE_SENSOR_Is_High()) {
         LIGHTBLUE_TemperatureSensor();
+        flush_serial_to_ble();
     }
 }
 
 void accelerometer_sensor() {
     if (SERVICE_ACCELEROMETER_SENSOR_Is_High()) {
         LIGHTBLUE_AccelSensor();
+        flush_serial_to_ble();
     }
 }
 
 void push_button() {
     if (SERVICE_PUSH_BUTTON_Is_High()) {
         LIGHTBLUE_PushButton();
+        flush_serial_to_ble();
     }
 }
 
 void led_state() {
     if (SERVICE_LED_STATE_Is_High()) {
         LIGHTBLUE_LedState();
+        flush_serial_to_ble();
     }
 }
 
 void send_protocol_version() {
     if (SERVICE_SEND_PROTOCOL_VERSION_REQUEST_Is_High()) {
         LIGHTBLUE_SendProtocolVersion();
+        flush_serial_to_ble();
     }
 }
 

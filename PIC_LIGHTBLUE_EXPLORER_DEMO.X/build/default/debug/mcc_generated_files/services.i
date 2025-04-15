@@ -21200,6 +21200,7 @@ void acc_flat_state() {
             if (flats > 1) {
                 (accelerometerInterruptBits.FLAT = 0);
                 LIGHTBLUE_AccState();
+                flush_serial_to_ble();
                 flats = 0;
             }
         }
@@ -21215,6 +21216,7 @@ void thermocouple_temperature() {
             SPI2_ReadBlock(data, 4);
             do { LATCbits.LATC0 = 1; } while(0);
             LIGHTBLUE_Send_Thermocouple(data);
+            flush_serial_to_ble();
             SPI2_Close();
         }
     }
@@ -21224,6 +21226,7 @@ void hardware_interrupt_request() {
     if ((SERVICE.HARDWARE_INTERRUPT_REQUEST == 1)) {
         if ((pushed==1)) {
             LIGHTBLUE_Hardware_Interrupt();
+            flush_serial_to_ble();
             (pushed = 0);
         }
     }
@@ -21232,30 +21235,35 @@ void hardware_interrupt_request() {
 void temperature_sensor() {
     if ((SERVICE.TEMPERATURE_SENSOR == 1)) {
         LIGHTBLUE_TemperatureSensor();
+        flush_serial_to_ble();
     }
 }
 
 void accelerometer_sensor() {
     if ((SERVICE.ACCELEROMETER_SENSOR == 1)) {
         LIGHTBLUE_AccelSensor();
+        flush_serial_to_ble();
     }
 }
 
 void push_button() {
     if ((SERVICE.PUSH_BUTTON == 1)) {
         LIGHTBLUE_PushButton();
+        flush_serial_to_ble();
     }
 }
 
 void led_state() {
     if ((SERVICE.LED_STATE == 1)) {
         LIGHTBLUE_LedState();
+        flush_serial_to_ble();
     }
 }
 
 void send_protocol_version() {
     if ((SERVICE.SEND_PROTOCOL_VERSION == 1)) {
         LIGHTBLUE_SendProtocolVersion();
+        flush_serial_to_ble();
     }
 }
 

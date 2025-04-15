@@ -192,16 +192,16 @@ I2C1_NULL 5
 [e E358 . `uc
 SPI2_DEFAULT 0
 ]
-"29 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"30 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [e E12593 . `uc
 SPI2_DEFAULT 0
 ]
-"89
+"97
 [e E13032 . `uc
 UART_CDC 0
 UART_BLE 1
 ]
-"95
+"103
 [e E12972 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
@@ -650,27 +650,27 @@ APPLICATION_MODE 1
 [v _intiliase_services intiliase_services `(v  1 e 1 0 ]
 "10
 [v _acc_flat_state acc_flat_state `(v  1 e 1 0 ]
-"25
+"26
 [v _thermocouple_temperature thermocouple_temperature `(v  1 e 1 0 ]
-"39
+"41
 [v _hardware_interrupt_request hardware_interrupt_request `(v  1 e 1 0 ]
-"48
+"51
 [v _temperature_sensor temperature_sensor `(v  1 e 1 0 ]
-"54
+"58
 [v _accelerometer_sensor accelerometer_sensor `(v  1 e 1 0 ]
-"60
+"65
 [v _push_button push_button `(v  1 e 1 0 ]
-"66
-[v _led_state led_state `(v  1 e 1 0 ]
 "72
+[v _led_state led_state `(v  1 e 1 0 ]
+"79
 [v _send_protocol_version send_protocol_version `(v  1 e 1 0 ]
-"78
+"86
 [v _mirror_serial mirror_serial `(v  1 e 1 0 ]
-"87
+"95
 [v _spool_ble_rx spool_ble_rx `(v  1 e 1 0 ]
-"93
+"101
 [v _spool_ble_tx spool_ble_tx `(v  1 e 1 0 ]
-"99
+"107
 [v _flush_serial_to_ble flush_serial_to_ble `(v  1 e 1 0 ]
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
@@ -1412,12 +1412,12 @@ APPLICATION_MODE 1
 {
 "78
 } 0
-"25 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"26 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _thermocouple_temperature thermocouple_temperature `(v  1 e 1 0 ]
 {
-"27
+"28
 [v thermocouple_temperature@data data `[4]uc  1 s 4 data ]
-"37
+"39
 } 0
 "127 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
@@ -1469,10 +1469,10 @@ APPLICATION_MODE 1
 [v LIGHTBLUE_Send_Thermocouple@temperature temperature `*.4uc  1 a 1 12 ]
 "67
 } 0
-"48 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"51 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _temperature_sensor temperature_sensor `(v  1 e 1 0 ]
 {
-"52
+"56
 } 0
 "44 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
@@ -1515,20 +1515,20 @@ APPLICATION_MODE 1
 [v i2c_read2ByteRegister@address address `uc  1 a 1 10 ]
 "148
 } 0
-"93 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"101 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _spool_ble_tx spool_ble_tx `(v  1 e 1 0 ]
 {
-"97
+"105
 } 0
-"87
+"95
 [v _spool_ble_rx spool_ble_rx `(v  1 e 1 0 ]
 {
-"91
+"99
 } 0
-"72
+"79
 [v _send_protocol_version send_protocol_version `(v  1 e 1 0 ]
 {
-"76
+"84
 } 0
 "139 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
@@ -1541,10 +1541,10 @@ APPLICATION_MODE 1
 [v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
 "152
 } 0
-"60 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _push_button push_button `(v  1 e 1 0 ]
 {
-"64
+"70
 } 0
 "84 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
@@ -1555,26 +1555,10 @@ APPLICATION_MODE 1
 [v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
 "92
 } 0
-"78 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"86 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _mirror_serial mirror_serial `(v  1 e 1 0 ]
 {
-"85
-} 0
-"99
-[v _flush_serial_to_ble flush_serial_to_ble `(v  1 e 1 0 ]
-{
-"112
-} 0
-"154 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
-{
-[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
-"155
-[v LIGHTBLUE_SendSerialData@length length `uc  1 a 1 8 ]
-"154
-[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
-[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 9 ]
-"167
+"93
 } 0
 "356 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_Read RN487X_Read `(uc  1 e 1 0 ]
@@ -1821,10 +1805,10 @@ APPLICATION_MODE 1
 [v RN487X_ReadMsg@msgLen msgLen `uc  1 p 1 5 ]
 "123
 } 0
-"66 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"72 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _led_state led_state `(v  1 e 1 0 ]
 {
-"70
+"77
 } 0
 "121 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
@@ -1850,10 +1834,10 @@ APPLICATION_MODE 1
 {
 "8
 } 0
-"39
+"41
 [v _hardware_interrupt_request hardware_interrupt_request `(v  1 e 1 0 ]
 {
-"46
+"49
 } 0
 "94 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Hardware_Interrupt LIGHTBLUE_Hardware_Interrupt `(v  1 e 1 0 ]
@@ -1869,10 +1853,10 @@ APPLICATION_MODE 1
 {
 "246
 } 0
-"54 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _accelerometer_sensor accelerometer_sensor `(v  1 e 1 0 ]
 {
-"58
+"63
 } 0
 "69 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
@@ -1966,9 +1950,25 @@ APPLICATION_MODE 1
 "10 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _acc_flat_state acc_flat_state `(v  1 e 1 0 ]
 {
-"23
+"24
 } 0
-"107 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+"107
+[v _flush_serial_to_ble flush_serial_to_ble `(v  1 e 1 0 ]
+{
+"120
+} 0
+"154 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
+{
+[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
+"155
+[v LIGHTBLUE_SendSerialData@length length `uc  1 a 1 8 ]
+"154
+[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
+[v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 9 ]
+"167
+} 0
+"107
 [v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
 {
 "108
