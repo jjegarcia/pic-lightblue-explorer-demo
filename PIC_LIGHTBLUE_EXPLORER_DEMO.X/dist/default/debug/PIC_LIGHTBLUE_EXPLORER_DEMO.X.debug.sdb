@@ -192,19 +192,19 @@ I2C1_NULL 5
 [e E358 . `uc
 SPI2_DEFAULT 0
 ]
-"75 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
+"28 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[e E12593 . `uc
+SPI2_DEFAULT 0
+]
+"83
 [e E13032 . `uc
 UART_CDC 0
 UART_BLE 1
 ]
-"93
+"105
 [e E12972 . `uc
 TEST_MODE 0
 APPLICATION_MODE 1
-]
-"21 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-[e E12593 . `uc
-SPI2_DEFAULT 0
 ]
 "10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -250,6 +250,8 @@ SPI2_DEFAULT 0
 [v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
 "56
 [v _LIGHTBLUE_Send_Thermocouple LIGHTBLUE_Send_Thermocouple `(v  1 e 1 0 ]
+"69
+[v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
 "84
 [v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
 "94
@@ -644,12 +646,28 @@ SPI2_DEFAULT 0
 [v _rn487x_PrintMessage rn487x_PrintMessage `T(v  1 s 1 rn487x_PrintMessage ]
 "368
 [v _RN487X_MessageHandler RN487X_MessageHandler `(v  1 s 1 RN487X_MessageHandler ]
-"3 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"9 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _acc_flat_state acc_flat_state `(v  1 e 1 0 ]
-"17
+"24
 [v _thermocouple_temperature thermocouple_temperature `(v  1 e 1 0 ]
-"30
+"38
 [v _hardware_interrupt_request hardware_interrupt_request `(v  1 e 1 0 ]
+"47
+[v _temperature_sensor temperature_sensor `(v  1 e 1 0 ]
+"53
+[v _accelerometer_sensor accelerometer_sensor `(v  1 e 1 0 ]
+"59
+[v _push_button push_button `(v  1 e 1 0 ]
+"65
+[v _led_state led_state `(v  1 e 1 0 ]
+"71
+[v _send_protocol_version send_protocol_version `(v  1 e 1 0 ]
+"77
+[v _mirror_serial mirror_serial `(v  1 e 1 0 ]
+"97
+[v _spool_ble_rx spool_ble_rx `(v  1 e 1 0 ]
+"103
+[v _spool_ble_tx spool_ble_tx `(v  1 e 1 0 ]
 "62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
 "77
@@ -687,9 +705,9 @@ SPI2_DEFAULT 0
 [u S140 . 1 `uc 1 gpioStateBitMap 1 0 `S133 1 . 1 0 ]
 [s S143 . 2 `S130 1 ioBitMap 1 0 `S140 1 ioStateBitMap 1 1 ]
 [u S146 . 2 `us 1 gpioMap 2 0 `S143 1 . 2 0 ]
-[v _bitMap@LIGHTBLUE_service$F2697 bitMap `VES146  1 s 2 bitMap ]
-[v _bitMap@LIGHTBLUE_service$F4234 bitMap `VES146  1 s 2 bitMap ]
-[v _bitMap@LIGHTBLUE_service$F4369 bitMap `VES146  1 s 2 bitMap ]
+[v _bitMap@LIGHTBLUE_service$F2698 bitMap `VES146  1 s 2 bitMap ]
+[v _bitMap@LIGHTBLUE_service$F4175 bitMap `VES146  1 s 2 bitMap ]
+[v _bitMap@LIGHTBLUE_service$F4400 bitMap `VES146  1 s 2 bitMap ]
 [s S149 . 1 `uc 1 ACC_FLAT_STATE 1 0 :1:0 
 `uc 1 THERMOCOUPLE_TEMPERATURE 1 0 :1:1 
 `uc 1 BUZZ_REQUEST 1 0 :1:2 
@@ -711,7 +729,7 @@ SPI2_DEFAULT 0
 "494 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/pin_manager.h
 [u S120 . 1 `S116 1 . 1 0 `uc 1 INTERRUPTbits 1 0 ]
 [v _INTERRUPTbits INTERRUPTbits `VES120  1 e 1 0 ]
-[s S2534 . 1 `uc 1 ACC_FLAT_STATE 1 0 :1:0 
+[s S2534 . 2 `uc 1 ACC_FLAT_STATE 1 0 :1:0 
 `uc 1 THERMOCOUPLE_TEMPERATURE 1 0 :1:1 
 `uc 1 HARDWARE_INTERRUPT_REQUEST 1 0 :1:2 
 `uc 1 TEMPERATURE_SENSOR 1 0 :1:3 
@@ -719,10 +737,11 @@ SPI2_DEFAULT 0
 `uc 1 PUSH_BUTTON 1 0 :1:5 
 `uc 1 LED_STATE 1 0 :1:6 
 `uc 1 SEND_PROTOCOL_VERSION 1 0 :1:7 
+`uc 1 MIRROW_SERIAL 1 1 :1:0 
 ]
-"18 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/services.h
-[u S2543 . 1 `S2534 1 . 1 0 `uc 1 ServiceBits 1 0 ]
-[v _SERVICE SERVICE `VES2543  1 e 1 0 ]
+"19 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/mcc_generated_files/services.h
+[u S2544 . 2 `S2534 1 . 2 0 `uc 1 ServiceBits 1 0 ]
+[v _SERVICE SERVICE `VES2544  1 e 2 0 ]
 [s S1163 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
@@ -761,7 +780,7 @@ SPI2_DEFAULT 0
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
 "778
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
-[s S3914 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S3916 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -771,8 +790,8 @@ SPI2_DEFAULT 0
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "795
-[u S3923 . 1 `S3914 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES3923  1 e 1 @20 ]
+[u S3925 . 1 `S3916 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES3925  1 e 1 @20 ]
 "840
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "861
@@ -853,7 +872,7 @@ SPI2_DEFAULT 0
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @398 ]
 "6236
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S3004 . 1 `uc 1 BF 1 0 :1:0 
+[s S3006 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -863,33 +882,33 @@ SPI2_DEFAULT 0
 `uc 1 SMP 1 0 :1:7 
 ]
 "6345
-[s S3013 . 1 `uc 1 . 1 0 :2:0 
+[s S3015 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S3018 . 1 `uc 1 . 1 0 :2:0 
+[s S3020 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S3023 . 1 `uc 1 . 1 0 :2:0 
+[s S3025 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S3028 . 1 `uc 1 . 1 0 :2:0 
+[s S3030 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S3033 . 1 `uc 1 . 1 0 :2:0 
+[s S3035 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S3039 . 1 `uc 1 BF1 1 0 :1:0 
+[s S3041 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -898,66 +917,66 @@ SPI2_DEFAULT 0
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S3048 . 1 `uc 1 . 1 0 :2:0 
+[s S3050 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S3054 . 1 `uc 1 . 1 0 :2:0 
+[s S3056 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S3060 . 1 `uc 1 . 1 0 :2:0 
+[s S3062 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S3066 . 1 `uc 1 . 1 0 :2:0 
+[s S3068 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S3071 . 1 `uc 1 . 1 0 :2:0 
+[s S3073 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S3076 . 1 `uc 1 . 1 0 :2:0 
+[s S3078 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S3081 . 1 `uc 1 . 1 0 :2:0 
+[s S3083 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S3086 . 1 `uc 1 . 1 0 :2:0 
+[s S3088 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S3091 . 1 `S3004 1 . 1 0 `S3013 1 . 1 0 `S3018 1 . 1 0 `S3023 1 . 1 0 `S3028 1 . 1 0 `S3033 1 . 1 0 `S3039 1 . 1 0 `S3048 1 . 1 0 `S3054 1 . 1 0 `S3060 1 . 1 0 `S3066 1 . 1 0 `S3071 1 . 1 0 `S3076 1 . 1 0 `S3081 1 . 1 0 `S3086 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES3091  1 e 1 @399 ]
+[u S3093 . 1 `S3006 1 . 1 0 `S3015 1 . 1 0 `S3020 1 . 1 0 `S3025 1 . 1 0 `S3030 1 . 1 0 `S3035 1 . 1 0 `S3041 1 . 1 0 `S3050 1 . 1 0 `S3056 1 . 1 0 `S3062 1 . 1 0 `S3068 1 . 1 0 `S3073 1 . 1 0 `S3078 1 . 1 0 `S3083 1 . 1 0 `S3088 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES3093  1 e 1 @399 ]
 "6600
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S2850 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S2852 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6630
-[s S2856 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S2858 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S2861 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S2863 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -966,11 +985,11 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S2870 . 1 `S2850 1 . 1 0 `S2856 1 . 1 0 `S2861 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES2870  1 e 1 @400 ]
+[u S2872 . 1 `S2852 1 . 1 0 `S2858 1 . 1 0 `S2863 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES2872  1 e 1 @400 ]
 "6720
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S2925 . 1 `uc 1 SEN 1 0 :1:0 
+[s S2927 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -980,17 +999,17 @@ SPI2_DEFAULT 0
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6767
-[s S2934 . 1 `uc 1 . 1 0 :1:0 
+[s S2936 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S2937 . 1 `uc 1 . 1 0 :1:0 
+[s S2939 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S2944 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S2946 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -999,15 +1018,15 @@ SPI2_DEFAULT 0
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S2953 . 1 `uc 1 . 1 0 :1:0 
+[s S2955 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S2960 . 1 `S2925 1 . 1 0 `S2934 1 . 1 0 `S2937 1 . 1 0 `S2944 1 . 1 0 `S2953 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES2960  1 e 1 @401 ]
+[u S2962 . 1 `S2927 1 . 1 0 `S2936 1 . 1 0 `S2939 1 . 1 0 `S2946 1 . 1 0 `S2955 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES2962  1 e 1 @401 ]
 "6969
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
 "6989
@@ -1017,7 +1036,7 @@ SPI2_DEFAULT 0
 "7543
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
 "7573
-[s S3946 . 1 `uc 1 SSPM02 1 0 :1:0 
+[s S3948 . 1 `uc 1 SSPM02 1 0 :1:0 
 `uc 1 SSPM12 1 0 :1:1 
 `uc 1 SSPM22 1 0 :1:2 
 `uc 1 SSPM32 1 0 :1:3 
@@ -1026,8 +1045,8 @@ SPI2_DEFAULT 0
 `uc 1 SSPOV2 1 0 :1:6 
 `uc 1 WCOL2 1 0 :1:7 
 ]
-[u S3955 . 1 `S2850 1 . 1 0 `S2856 1 . 1 0 `S3946 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES3955  1 e 1 @410 ]
+[u S3957 . 1 `S2852 1 . 1 0 `S2858 1 . 1 0 `S3948 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES3957  1 e 1 @410 ]
 "7663
 [v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @411 ]
 "19404
@@ -1036,27 +1055,27 @@ SPI2_DEFAULT 0
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "19796
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S2790 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2792 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "19824
-[s S2796 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2798 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2802 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2804 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[u S2808 . 1 `S2790 1 . 1 0 `S2796 1 . 1 0 `S2802 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2808  1 e 1 @1438 ]
+[u S2810 . 1 `S2792 1 . 1 0 `S2798 1 . 1 0 `S2804 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2810  1 e 1 @1438 ]
 "19894
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
 [s S2340 . 1 `uc 1 INTF 1 0 :1:0 
@@ -1179,7 +1198,7 @@ SPI2_DEFAULT 0
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
 "34938
 [v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
-[s S2615 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S2616 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -1189,11 +1208,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAP7 1 0 :1:7 
 ]
 "35017
-[u S2624 . 1 `S2615 1 . 1 0 ]
+[u S2625 . 1 `S2616 1 . 1 0 ]
 "35017
 "35017
-[v _IOCAPbits IOCAPbits `VES2624  1 e 1 @7997 ]
-[s S2594 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[v _IOCAPbits IOCAPbits `VES2625  1 e 1 @7997 ]
+[s S2595 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -1203,11 +1222,11 @@ SPI2_DEFAULT 0
 `uc 1 IOCAN7 1 0 :1:7 
 ]
 "35079
-[u S2603 . 1 `S2594 1 . 1 0 ]
+[u S2604 . 1 `S2595 1 . 1 0 ]
 "35079
 "35079
-[v _IOCANbits IOCANbits `VES2603  1 e 1 @7998 ]
-[s S2573 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[v _IOCANbits IOCANbits `VES2604  1 e 1 @7998 ]
+[s S2574 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -1217,10 +1236,10 @@ SPI2_DEFAULT 0
 `uc 1 IOCAF7 1 0 :1:7 
 ]
 "35141
-[u S2582 . 1 `S2573 1 . 1 0 ]
+[u S2583 . 1 `S2574 1 . 1 0 ]
 "35141
 "35141
-[v _IOCAFbits IOCAFbits `VES2582  1 e 1 @7999 ]
+[v _IOCAFbits IOCAFbits `VES2583  1 e 1 @7999 ]
 "35186
 [v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
 "35248
@@ -1246,11 +1265,11 @@ SPI2_DEFAULT 0
 "36199
 [v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
 "35 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X/main.h
-[v _statusBuffer@main$F4258 statusBuffer `[80]uc  1 s 80 statusBuffer ]
+[v _statusBuffer@main$F4199 statusBuffer `[80]uc  1 s 80 statusBuffer ]
 "36
-[v _lightBlueSerial@main$F4259 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
+[v _lightBlueSerial@main$F4425 lightBlueSerial `[80]uc  1 s 80 lightBlueSerial ]
 "37
-[v _serialIndex@main$F4260 serialIndex `uc  1 s 1 serialIndex ]
+[v _serialIndex@main$F4426 serialIndex `uc  1 s 1 serialIndex ]
 "44
 [v _pushed pushed `a  1 e 1 0 ]
 "52
@@ -1351,13 +1370,13 @@ SPI2_DEFAULT 0
 [v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
 "146 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E12565  1 e 32 0 ]
-[s S3389 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S3391 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E12565 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S3389  1 e 29 0 ]
+[v _I2C1_Status I2C1_Status `S3391  1 e 29 0 ]
 "54 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
 [v _IOCAF6_InterruptHandler IOCAF6_InterruptHandler `*.37(v  1 e 2 0 ]
 "55
@@ -1379,22 +1398,22 @@ SPI2_DEFAULT 0
 [s S243 . 18 `*.37(v 1 Write 2 0 `*.37(uc 1 Read 2 2 `*.37(a 1 TransmitDone 2 4 `*.37(a 1 DataReady 2 6 `*.37(v 1 IndicateRx 2 8 `*.37(v 1 ResetModule 2 10 `*.37(v 1 SetSystemMode 2 12 `*.37(v 1 DelayMs 2 14 `*.37(v 1 AsyncHandler 2 16 ]
 "227
 [v _RN487X RN487X `DCS243  1 e 18 0 ]
-[s S3902 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S3904 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
-[v _spi2_configuration spi2_configuration `DC[1]S3902  1 s 4 spi2_configuration ]
+[v _spi2_configuration spi2_configuration `DC[1]S3904  1 s 4 spi2_configuration ]
 "58 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEus  1 e 2 0 ]
 "45 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"98
+"77
 } 0
-"17 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+"24 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _thermocouple_temperature thermocouple_temperature `(v  1 e 1 0 ]
 {
-"19
+"26
 [v thermocouple_temperature@data data `[4]uc  1 s 4 data ]
-"29
+"36
 } 0
 "127 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
 [v _SPI2_ReadBlock SPI2_ReadBlock `(v  1 e 1 0 ]
@@ -1446,167 +1465,98 @@ SPI2_DEFAULT 0
 [v LIGHTBLUE_Send_Thermocouple@temperature temperature `*.4uc  1 a 1 12 ]
 "67
 } 0
-"30 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-[v _hardware_interrupt_request hardware_interrupt_request `(v  1 e 1 0 ]
+"47 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _temperature_sensor temperature_sensor `(v  1 e 1 0 ]
 {
-"37
+"51
 } 0
-"94 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_Hardware_Interrupt LIGHTBLUE_Hardware_Interrupt `(v  1 e 1 0 ]
+"44 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
 {
-"95
-[v LIGHTBLUE_Hardware_Interrupt@payload payload `[3]uc  1 a 3 3 ]
-"96
-[v LIGHTBLUE_Hardware_Interrupt@button button `uc  1 a 1 2 ]
-"105
+"45
+[v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 24 ]
+"46
+[v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 29 ]
+"54
 } 0
-"3 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-[v _acc_flat_state acc_flat_state `(v  1 e 1 0 ]
+"70 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/MCP9844_temp_sensor.c
+[v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
 {
-"16
+[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 wreg ]
+[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 wreg ]
+"72
+[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 11 ]
+"73
 } 0
-"107 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
+"75
+[v _MCP9844_CalcTemperature MCP9844_CalcTemperature `(s  1 s 2 MCP9844_CalcTemperature ]
 {
-"108
-[v LIGHTBLUE_AccState@payload payload `[3]uc  1 a 3 3 ]
-"109
-[v LIGHTBLUE_AccState@acc acc `uc  1 a 1 2 ]
-"119
+"77
+[v MCP9844_CalcTemperature@temperatureData temperatureData `s  1 a 2 22 ]
+"79
+[v MCP9844_CalcTemperature@lowerByte lowerByte `uc  1 a 1 21 ]
+"78
+[v MCP9844_CalcTemperature@upperByte upperByte `uc  1 a 1 20 ]
+"88
 } 0
-"248
-[v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
+"135 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
 {
-"250
+[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
+"138
+[v i2c_read2ByteRegister@result result `us  1 a 2 11 ]
+"135
+[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
+[v i2c_read2ByteRegister@reg reg `uc  1 p 1 4 ]
+[v i2c_read2ByteRegister@address address `uc  1 a 1 10 ]
+"148
 } 0
-"50 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
-[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"103 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _spool_ble_tx spool_ble_tx `(v  1 e 1 0 ]
 {
-"60
+"107
 } 0
-"65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
-[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"97
+[v _spool_ble_rx spool_ble_rx `(v  1 e 1 0 ]
 {
-"86
+"101
 } 0
-"62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
-[v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
+"71
+[v _send_protocol_version send_protocol_version `(v  1 e 1 0 ]
 {
 "75
 } 0
-"78 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
-[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"139 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
 {
-"96
+"140
+[v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 2 ]
+"142
+[v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 22 ]
+"141
+[v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
+"152
 } 0
-"57 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
-[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"59 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _push_button push_button `(v  1 e 1 0 ]
 {
-"150
+"63
 } 0
-"210
-[v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
+"84 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
 {
-[v IOCAF7_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 1 ]
-"212
+"85
+[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
+"86
+[v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
+"92
 } 0
-"181
-[v _IOCAF6_SetInterruptHandler IOCAF6_SetInterruptHandler `(v  1 e 1 0 ]
+"77 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _mirror_serial mirror_serial `(v  1 e 1 0 ]
 {
-[v IOCAF6_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 1 ]
-"183
+"95
 } 0
-"62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
-[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-{
-"76
-} 0
-"167 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
-[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
-{
-"174
-} 0
-"88 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-[v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
-{
-"130
-} 0
-"276
-[v _EUSART2_SetTxInterruptHandler EUSART2_SetTxInterruptHandler `(v  1 e 1 0 ]
-{
-[v EUSART2_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"278
-} 0
-"280
-[v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
-{
-[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"282
-} 0
-"268
-[v _EUSART2_SetOverrunErrorHandler EUSART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART2_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"270
-} 0
-"264
-[v _EUSART2_SetFramingErrorHandler EUSART2_SetFramingErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART2_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"266
-} 0
-"272
-[v _EUSART2_SetErrorHandler EUSART2_SetErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART2_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"274
-} 0
-"88 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-{
-"130
-} 0
-"285
-[v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"287
-} 0
-"289
-[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"291
-} 0
-"277
-[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"279
-} 0
-"273
-[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"275
-} 0
-"281
-[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
-"283
-} 0
-"328 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-[v _RN487X_SetAsyncMessageHandler RN487X_SetAsyncMessageHandler `(a  1 e 1 0 ]
-{
-[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 wreg ]
-[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 wreg ]
-[v RN487X_SetAsyncMessageHandler@len len `uc  1 p 1 1 ]
-"330
-[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 2 ]
-"340
-} 0
-"356
+"356 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
 [v _RN487X_Read RN487X_Read `(uc  1 e 1 0 ]
 {
 "361
@@ -1713,100 +1663,7 @@ SPI2_DEFAULT 0
 [v rn487x_PrintIndicatorCharacters@messageType messageType `E13001  1 a 1 3 ]
 "356
 } 0
-"243
-[v _RN487X_IsConnected RN487X_IsConnected `(a  1 e 1 0 ]
-{
-"246
-} 0
-"54 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-[v _RN487X_Init RN487X_Init `(a  1 e 1 0 ]
-{
-"77
-} 0
-"267 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-[v _RN487X_is_rx_ready RN487X_is_rx_ready `T(a  1 s 1 RN487X_is_rx_ready ]
-{
-"270
-} 0
-"137 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-[v _EUSART1_is_rx_ready EUSART1_is_rx_ready `(a  1 e 1 0 ]
-{
-"140
-} 0
-"137 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-[v _EUSART2_is_rx_ready EUSART2_is_rx_ready `(a  1 e 1 0 ]
-{
-"140
-} 0
-"301 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-[v _RN487X_SetSystemMode RN487X_SetSystemMode `(v  1 s 1 RN487X_SetSystemMode ]
-{
-[v RN487X_SetSystemMode@mode mode `E204  1 p 1 1 ]
-"317
-} 0
-"277
-[v _RN487X_Reset RN487X_Reset `(v  1 s 1 RN487X_Reset ]
-{
-[v RN487X_Reset@value value `a  1 p 1 1 ]
-"287
-} 0
-"289
-[v _RN487X_IndicateRx RN487X_IndicateRx `(v  1 s 1 RN487X_IndicateRx ]
-{
-[v RN487X_IndicateRx@value value `a  1 p 1 1 ]
-"299
-} 0
-"44 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_TemperatureSensor LIGHTBLUE_TemperatureSensor `(v  1 e 1 0 ]
-{
-"45
-[v LIGHTBLUE_TemperatureSensor@payload payload `[5]uc  1 a 5 24 ]
-"46
-[v LIGHTBLUE_TemperatureSensor@temperature temperature `s  1 a 2 29 ]
-"54
-} 0
-"70 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/MCP9844_temp_sensor.c
-[v _MCP9844_GetTemperatureValue MCP9844_GetTemperatureValue `(v  1 e 1 0 ]
-{
-[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 wreg ]
-[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 wreg ]
-"72
-[v MCP9844_GetTemperatureValue@temperature temperature `*.4s  1 a 1 11 ]
-"73
-} 0
-"75
-[v _MCP9844_CalcTemperature MCP9844_CalcTemperature `(s  1 s 2 MCP9844_CalcTemperature ]
-{
-"77
-[v MCP9844_CalcTemperature@temperatureData temperatureData `s  1 a 2 22 ]
-"79
-[v MCP9844_CalcTemperature@lowerByte lowerByte `uc  1 a 1 21 ]
-"78
-[v MCP9844_CalcTemperature@upperByte upperByte `uc  1 a 1 20 ]
-"88
-} 0
-"135 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/drivers/i2c_simple_master.c
-[v _i2c_read2ByteRegister i2c_read2ByteRegister `(us  1 e 2 0 ]
-{
-[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
-"138
-[v i2c_read2ByteRegister@result result `us  1 a 2 11 ]
-"135
-[v i2c_read2ByteRegister@address address `uc  1 a 1 wreg ]
-[v i2c_read2ByteRegister@reg reg `uc  1 p 1 4 ]
-[v i2c_read2ByteRegister@address address `uc  1 a 1 10 ]
-"148
-} 0
-"232 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
-{
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitWord@value value `s  1 p 2 9 ]
-[v LIGHTBLUE_SplitWord@payload payload `*.4uc  1 a 1 11 ]
-"235
-} 0
-"154
+"154 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_SendSerialData LIGHTBLUE_SendSerialData `(v  1 e 1 0 ]
 {
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
@@ -1816,31 +1673,6 @@ SPI2_DEFAULT 0
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendSerialData@serialData serialData `*.6uc  1 a 1 9 ]
 "167
-} 0
-"139
-[v _LIGHTBLUE_SendProtocolVersion LIGHTBLUE_SendProtocolVersion `(v  1 e 1 0 ]
-{
-"140
-[v LIGHTBLUE_SendProtocolVersion@payload payload `[19]uc  1 a 19 2 ]
-"142
-[v LIGHTBLUE_SendProtocolVersion@dataIndex dataIndex `uc  1 a 1 22 ]
-"141
-[v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
-"152
-} 0
-"84
-[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
-{
-"85
-[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
-"86
-[v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
-"92
-} 0
-"244
-[v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
-{
-"246
 } 0
 "169
 [v _LIGHTBLUE_ParseIncomingPacket LIGHTBLUE_ParseIncomingPacket `(v  1 e 1 0 ]
@@ -1980,36 +1812,10 @@ SPI2_DEFAULT 0
 [v RN487X_ReadMsg@msgLen msgLen `uc  1 p 1 5 ]
 "123
 } 0
-"257 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-[v _RN487X_Read@rn487x_interface$F1456 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+"65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _led_state led_state `(v  1 e 1 0 ]
 {
-"260
-} 0
-"151 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
-{
-"153
-[v EUSART1_Read@readValue readValue `uc  1 a 1 2 ]
-"171
-} 0
-"151 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-[v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
-{
-"153
-[v EUSART2_Read@readValue readValue `uc  1 a 1 2 ]
-"171
-} 0
-"272 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-[v _RN487X_Delay RN487X_Delay `T(v  1 s 1 RN487X_Delay ]
-{
-[v RN487X_Delay@delayCount delayCount `us  1 p 2 4 ]
-"275
-} 0
-"38 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/delay.c
-[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
-{
-[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 1 ]
-"42
+"69
 } 0
 "121 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_LedState LIGHTBLUE_LedState `(v  1 e 1 0 ]
@@ -2020,13 +1826,148 @@ SPI2_DEFAULT 0
 [v LIGHTBLUE_LedState@led led `uc  1 a 1 3 ]
 "137
 } 0
+"256
+[v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
+{
+"258
+} 0
+"252
+[v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
+{
+"254
+} 0
+"38 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _hardware_interrupt_request hardware_interrupt_request `(v  1 e 1 0 ]
+{
+"45
+} 0
+"94 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_Hardware_Interrupt LIGHTBLUE_Hardware_Interrupt `(v  1 e 1 0 ]
+{
+"95
+[v LIGHTBLUE_Hardware_Interrupt@payload payload `[3]uc  1 a 3 3 ]
+"96
+[v LIGHTBLUE_Hardware_Interrupt@button button `uc  1 a 1 2 ]
+"105
+} 0
+"244
+[v _LIGHTBLUE_GetButtonValue LIGHTBLUE_GetButtonValue `(uc  1 s 1 LIGHTBLUE_GetButtonValue ]
+{
+"246
+} 0
+"53 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _accelerometer_sensor accelerometer_sensor `(v  1 e 1 0 ]
+{
+"57
+} 0
+"69 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_AccelSensor LIGHTBLUE_AccelSensor `(v  1 e 1 0 ]
+{
+"70
+[v LIGHTBLUE_AccelSensor@payload payload `[13]uc  1 a 13 0 ]
+[s S53 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
+"71
+[v LIGHTBLUE_AccelSensor@accelData accelData `S53  1 a 6 13 ]
+"82
+} 0
+"232
+[v _LIGHTBLUE_SplitWord LIGHTBLUE_SplitWord `(v  1 s 1 LIGHTBLUE_SplitWord ]
+{
+[v LIGHTBLUE_SplitWord@payload payload `*.39uc  1 p 2 0 ]
+[v LIGHTBLUE_SplitWord@value value `s  1 p 2 2 ]
+"235
+} 0
+"119 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/BMA253_accel.c
+[v _BMA253_GetAccelDataXYZ BMA253_GetAccelDataXYZ `(v  1 e 1 0 ]
+{
+[s S53 . 6 `s 1 x 2 0 `s 1 y 2 2 `s 1 z 2 4 ]
+[v BMA253_GetAccelDataXYZ@accelData accelData `*.10S53  1 a 1 wreg ]
+"120
+[v BMA253_GetAccelDataXYZ@sensorValue sensorValue `s  1 a 2 17 ]
+"119
+[v BMA253_GetAccelDataXYZ@accelData accelData `*.10S53  1 a 1 wreg ]
+[v BMA253_GetAccelDataXYZ@accelData accelData `*.10S53  1 a 1 16 ]
+"141
+} 0
+"107
+[v _BMA253_GetAccelDataZ BMA253_GetAccelDataZ `(v  1 e 1 0 ]
+{
+[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 a 1 wreg ]
+"109
+[v BMA253_GetAccelDataZ@msbData msbData `uc  1 a 1 15 ]
+"108
+[v BMA253_GetAccelDataZ@lsbData lsbData `uc  1 a 1 14 ]
+"107
+[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 a 1 wreg ]
+[v BMA253_GetAccelDataZ@zAccelData zAccelData `*.4s  1 a 1 13 ]
+"117
+} 0
+"163
+[v _BMA253_NewAccelDataRdyZ BMA253_NewAccelDataRdyZ `(a  1 s 1 BMA253_NewAccelDataRdyZ ]
+{
+"164
+[v BMA253_NewAccelDataRdyZ@zNewData zNewData `a  1 a 1 11 ]
+"169
+} 0
+"95
+[v _BMA253_GetAccelDataY BMA253_GetAccelDataY `(v  1 e 1 0 ]
+{
+[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 a 1 wreg ]
+"97
+[v BMA253_GetAccelDataY@msbData msbData `uc  1 a 1 15 ]
+"96
+[v BMA253_GetAccelDataY@lsbData lsbData `uc  1 a 1 14 ]
+"95
+[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 a 1 wreg ]
+[v BMA253_GetAccelDataY@yAccelData yAccelData `*.4s  1 a 1 13 ]
+"105
+} 0
+"155
+[v _BMA253_NewAccelDataRdyY BMA253_NewAccelDataRdyY `(a  1 s 1 BMA253_NewAccelDataRdyY ]
+{
+"156
+[v BMA253_NewAccelDataRdyY@yNewData yNewData `a  1 a 1 11 ]
+"161
+} 0
+"83
+[v _BMA253_GetAccelDataX BMA253_GetAccelDataX `(v  1 e 1 0 ]
+{
+[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 a 1 wreg ]
+"85
+[v BMA253_GetAccelDataX@msbData msbData `uc  1 a 1 15 ]
+"84
+[v BMA253_GetAccelDataX@lsbData lsbData `uc  1 a 1 14 ]
+"83
+[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 a 1 wreg ]
+[v BMA253_GetAccelDataX@xAccelData xAccelData `*.4s  1 a 1 13 ]
+"93
+} 0
+"147
+[v _BMA253_NewAccelDataRdyX BMA253_NewAccelDataRdyX `(a  1 s 1 BMA253_NewAccelDataRdyX ]
+{
+"148
+[v BMA253_NewAccelDataRdyX@xNewData xNewData `a  1 a 1 11 ]
+"153
+} 0
+"9 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _acc_flat_state acc_flat_state `(v  1 e 1 0 ]
+{
+"22
+} 0
+"107 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_AccState LIGHTBLUE_AccState `(v  1 e 1 0 ]
+{
+"108
+[v LIGHTBLUE_AccState@payload payload `[3]uc  1 a 3 3 ]
+"109
+[v LIGHTBLUE_AccState@acc acc `uc  1 a 1 2 ]
+"119
+} 0
 "237
 [v _LIGHTBLUE_SplitByte LIGHTBLUE_SplitByte `(v  1 s 1 LIGHTBLUE_SplitByte ]
 {
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 wreg ]
-[v LIGHTBLUE_SplitByte@value value `c  1 p 1 6 ]
-[v LIGHTBLUE_SplitByte@payload payload `*.4uc  1 a 1 8 ]
+[v LIGHTBLUE_SplitByte@payload payload `*.39uc  1 p 2 6 ]
+[v LIGHTBLUE_SplitByte@value value `c  1 p 1 8 ]
 "242
 } 0
 "220
@@ -2034,8 +1975,8 @@ SPI2_DEFAULT 0
 {
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
 [v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 wreg ]
-[v LIGHTBLUE_SendPacket@payload payload `*.4uc  1 p 1 7 ]
-[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 10 ]
+[v LIGHTBLUE_SendPacket@payload payload `*.39uc  1 p 2 7 ]
+[v LIGHTBLUE_SendPacket@packetID packetID `uc  1 a 1 11 ]
 "230
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
@@ -2065,17 +2006,213 @@ SPI2_DEFAULT 0
 [v EUSART2_Write@txData txData `uc  1 p 1 1 ]
 "194
 } 0
-"256 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_GetErrorLedValue LIGHTBLUE_GetErrorLedValue `(uc  1 s 1 LIGHTBLUE_GetErrorLedValue ]
+"248 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_GetAccState LIGHTBLUE_GetAccState `(uc  1 s 1 LIGHTBLUE_GetAccState ]
 {
-"258
+"250
 } 0
-"252
-[v _LIGHTBLUE_GetDataLedValue LIGHTBLUE_GetDataLedValue `(uc  1 s 1 LIGHTBLUE_GetDataLedValue ]
+"50 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"254
+"60
 } 0
-"29
+"65 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/spi2.c
+[v _SPI2_Initialize SPI2_Initialize `(v  1 e 1 0 ]
+{
+"75
+} 0
+"78 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"96
+} 0
+"57 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"150
+} 0
+"210
+[v _IOCAF7_SetInterruptHandler IOCAF7_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCAF7_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 1 ]
+"212
+} 0
+"181
+[v _IOCAF6_SetInterruptHandler IOCAF6_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCAF6_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 1 ]
+"183
+} 0
+"62 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"167 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+{
+"174
+} 0
+"88 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+[v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
+{
+"130
+} 0
+"276
+[v _EUSART2_SetTxInterruptHandler EUSART2_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"278
+} 0
+"280
+[v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"282
+} 0
+"268
+[v _EUSART2_SetOverrunErrorHandler EUSART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"270
+} 0
+"264
+[v _EUSART2_SetFramingErrorHandler EUSART2_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"266
+} 0
+"272
+[v _EUSART2_SetErrorHandler EUSART2_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"274
+} 0
+"88 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"130
+} 0
+"285
+[v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"287
+} 0
+"289
+[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"291
+} 0
+"277
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"279
+} 0
+"273
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"275
+} 0
+"281
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"283
+} 0
+"328 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+[v _RN487X_SetAsyncMessageHandler RN487X_SetAsyncMessageHandler `(a  1 e 1 0 ]
+{
+[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 wreg ]
+[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 wreg ]
+[v RN487X_SetAsyncMessageHandler@len len `uc  1 p 1 1 ]
+"330
+[v RN487X_SetAsyncMessageHandler@pBuffer pBuffer `*.7uc  1 a 1 2 ]
+"340
+} 0
+"243 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_IsConnected RN487X_IsConnected `(a  1 e 1 0 ]
+{
+"246
+} 0
+"54 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+[v _RN487X_Init RN487X_Init `(a  1 e 1 0 ]
+{
+"77
+} 0
+"267 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_is_rx_ready RN487X_is_rx_ready `T(a  1 s 1 RN487X_is_rx_ready ]
+{
+"270
+} 0
+"137 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+[v _EUSART1_is_rx_ready EUSART1_is_rx_ready `(a  1 e 1 0 ]
+{
+"140
+} 0
+"137 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+[v _EUSART2_is_rx_ready EUSART2_is_rx_ready `(a  1 e 1 0 ]
+{
+"140
+} 0
+"301 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_SetSystemMode RN487X_SetSystemMode `(v  1 s 1 RN487X_SetSystemMode ]
+{
+[v RN487X_SetSystemMode@mode mode `E204  1 p 1 1 ]
+"317
+} 0
+"277
+[v _RN487X_Reset RN487X_Reset `(v  1 s 1 RN487X_Reset ]
+{
+[v RN487X_Reset@value value `a  1 p 1 1 ]
+"287
+} 0
+"257
+[v _RN487X_Read@rn487x_interface$F1456 RN487X_Read `T(uc  1 s 1 RN487X_Read ]
+{
+"260
+} 0
+"151 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+{
+"153
+[v EUSART1_Read@readValue readValue `uc  1 a 1 2 ]
+"171
+} 0
+"151 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+[v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
+{
+"153
+[v EUSART2_Read@readValue readValue `uc  1 a 1 2 ]
+"171
+} 0
+"289 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+[v _RN487X_IndicateRx RN487X_IndicateRx `(v  1 s 1 RN487X_IndicateRx ]
+{
+[v RN487X_IndicateRx@value value `a  1 p 1 1 ]
+"299
+} 0
+"272
+[v _RN487X_Delay RN487X_Delay `T(v  1 s 1 RN487X_Delay ]
+{
+[v RN487X_Delay@delayCount delayCount `us  1 p 2 4 ]
+"275
+} 0
+"38 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/delay.c
+[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+{
+[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 1 ]
+"42
+} 0
+"29 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 [v _LIGHTBLUE_Initialize LIGHTBLUE_Initialize `(v  1 e 1 0 ]
 {
 "33

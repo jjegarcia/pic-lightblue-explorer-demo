@@ -21139,12 +21139,13 @@ typedef union {
         unsigned PUSH_BUTTON : 1;
         unsigned LED_STATE : 1;
         unsigned SEND_PROTOCOL_VERSION : 1;
+        unsigned MIRROW_SERIAL : 1;
     };
     uint8_t ServiceBits;
 }ServiceBits_t;
 
 volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
-# 69 "./mcc_generated_files/services.h"
+# 76 "./mcc_generated_files/services.h"
 void acc_flat_state();
 void thermocouple_temperature();
 void hardware_interrupt_request();
@@ -21153,6 +21154,10 @@ void accelerometer_sensor();
 void push_button();
 void led_state();
 void send_protocol_version();
+void intiliase_services();
+void mirror_serial();
+void spool_ble_tx();
+void spool_ble_rx();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21200,36 +21205,15 @@ int main(void) {
             if ((PIR0bits.TMR0IF) == 1) {
                 (PIR0bits.TMR0IF = 0);
                 thermocouple_temperature();
-                LIGHTBLUE_TemperatureSensor();
-
-                LIGHTBLUE_PushButton();
-                LIGHTBLUE_LedState();
-                LIGHTBLUE_SendProtocolVersion();
-            } else {
-                while (RN487X_DataReady()) {
-                    LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-                }
-                while (uart[UART_CDC].DataReady()) {
-                    lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-                    if ((lightBlueSerial[serialIndex] == '\r')
-                            || (lightBlueSerial[serialIndex] == '\n')
-                            || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-                        lightBlueSerial[serialIndex] = '\0';
-                        LIGHTBLUE_SendSerialData(lightBlueSerial);
-                        serialIndex = 0;
-                    } else {
-                        serialIndex++;
-                    }
-                }
-
-            }
+                temperature_sensor();
+                accelerometer_sensor();
+                push_button();
+                led_state();
+                send_protocol_version();
+            } else mirror_serial();
         } else {
-            while (RN487X_DataReady()) {
-                uart[UART_CDC].Write(RN487X_Read());
-            }
-            while (uart[UART_CDC].DataReady()) {
-                RN487X.Write(uart[UART_CDC].Read());
-            }
+            spool_ble_rx();
+            spool_ble_tx();
         }
     }
     return 0;

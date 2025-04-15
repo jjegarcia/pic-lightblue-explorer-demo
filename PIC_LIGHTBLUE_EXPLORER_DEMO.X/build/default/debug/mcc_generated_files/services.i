@@ -21139,12 +21139,13 @@ typedef union {
         unsigned PUSH_BUTTON : 1;
         unsigned LED_STATE : 1;
         unsigned SEND_PROTOCOL_VERSION : 1;
+        unsigned MIRROW_SERIAL : 1;
     };
     uint8_t ServiceBits;
 }ServiceBits_t;
 
 volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
-# 69 "./mcc_generated_files/services.h"
+# 76 "./mcc_generated_files/services.h"
 void acc_flat_state();
 void thermocouple_temperature();
 void hardware_interrupt_request();
@@ -21153,6 +21154,10 @@ void accelerometer_sensor();
 void push_button();
 void led_state();
 void send_protocol_version();
+void intiliase_services();
+void mirror_serial();
+void spool_ble_tx();
+void spool_ble_rx();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21178,8 +21183,14 @@ uint8_t flats = 0;
 # 1 "mcc_generated_files/services.c" 2
 
 
-void acc_flat_state(){
-    if ((FEATURE_ENABLEDBits.ACC_FLAT_STATE == 1)) {
+void intiliase_services(void) {
+    (SERVICE.ACC_FLAT_STATE = 1);
+    (SERVICE.THERMOCOUPLE_TEMPERATURE = 1);
+    (SERVICE.HARDWARE_INTERRUPT_REQUEST = 1);
+}
+
+void acc_flat_state() {
+    if ((SERVICE.ACC_FLAT_STATE == 1)) {
         if ((INTERRUPTbits.ACC == 1)) {
             (INTERRUPTbits.ACC = 0);
             (accelerometerInterruptBits.FLAT = 1);
@@ -21192,8 +21203,9 @@ void acc_flat_state(){
         }
     }
 }
-void thermocouple_temperature(){
-    if ((FEATURE_ENABLEDBits.THERMOCOUPLE_TEMPERATURE == 1)) {
+
+void thermocouple_temperature() {
+    if ((SERVICE.THERMOCOUPLE_TEMPERATURE == 1)) {
         static uint8_t data[4];
         do { LATCbits.LATC0 = 0; } while(0);
         if (SPI2_Open(0)) {
@@ -21205,21 +21217,74 @@ void thermocouple_temperature(){
         }
     }
 }
-void hardware_interrupt_request(){
-    if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+
+void hardware_interrupt_request() {
+    if ((SERVICE.HARDWARE_INTERRUPT_REQUEST == 1)) {
         if ((pushed==1)) {
             LIGHTBLUE_Hardware_Interrupt();
             (pushed = 0);
         }
     }
 }
-void temperature_sensor(){
+
+void temperature_sensor() {
+    if ((SERVICE.TEMPERATURE_SENSOR == 1)) {
+        LIGHTBLUE_TemperatureSensor();
+    }
 }
-void accelerometer_sensor(){
+
+void accelerometer_sensor() {
+    if ((SERVICE.ACCELEROMETER_SENSOR == 1)) {
+        LIGHTBLUE_AccelSensor();
+    }
 }
-void push_button(){
+
+void push_button() {
+    if ((SERVICE.PUSH_BUTTON == 1)) {
+        LIGHTBLUE_PushButton();
+    }
 }
-void led_state(){
+
+void led_state() {
+    if ((SERVICE.LED_STATE == 1)) {
+        LIGHTBLUE_LedState();
+    }
 }
-void send_protocol_version(){
+
+void send_protocol_version() {
+    if ((SERVICE.SEND_PROTOCOL_VERSION == 1)) {
+        LIGHTBLUE_SendProtocolVersion();
+    }
+}
+
+void mirror_serial() {
+    if ((SERVICE.SEND_PROTOCOL_VERSION == 1)) {
+        while (RN487X_DataReady()) {
+            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
+        }
+        while (uart[UART_CDC].DataReady()) {
+            lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
+            if ((lightBlueSerial[serialIndex] == '\r')
+                    || (lightBlueSerial[serialIndex] == '\n')
+                    || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
+                lightBlueSerial[serialIndex] = '\0';
+                LIGHTBLUE_SendSerialData(lightBlueSerial);
+                serialIndex = 0;
+            } else {
+                serialIndex++;
+            }
+        }
+    }
+}
+
+void spool_ble_rx() {
+    while (RN487X_DataReady()) {
+        uart[UART_CDC].Write(RN487X_Read());
+    }
+}
+
+void spool_ble_tx() {
+    while (uart[UART_CDC].DataReady()) {
+        RN487X.Write(uart[UART_CDC].Read());
+    }
 }
