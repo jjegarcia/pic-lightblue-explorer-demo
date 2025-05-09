@@ -21159,6 +21159,7 @@ void mirror_serial();
 void spool_ble_tx();
 void spool_ble_rx();
 void flush_serial_to_ble();
+void flush_ble_to_serial();
 # 13 "mcc_generated_files/../main.h" 2
 # 35 "mcc_generated_files/../main.h"
 static char statusBuffer[(80)];
@@ -21202,16 +21203,16 @@ int main(void) {
     intiliase_services();
     while (1) {
         if (RN487X_IsConnected() == 1) {
-             acc_flat_state();
+            acc_flat_state();
             hardware_interrupt_request();
             if ((PIR0bits.TMR0IF) == 1) {
-                (PIR0bits.TMR0IF = 0);
                 thermocouple_temperature();
                 temperature_sensor();
                 accelerometer_sensor();
                 push_button();
                 led_state();
                 send_protocol_version();
+                (PIR0bits.TMR0IF = 0);
             } else mirror_serial();
         } else {
             spool_ble_rx();

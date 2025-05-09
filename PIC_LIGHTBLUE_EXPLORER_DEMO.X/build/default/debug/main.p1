@@ -1835,7 +1835,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> ( _RN487X_IsConnected ..  `i -> 1 `i 1707  ]
 {
 "61
-[; ;main.c: 61:              acc_flat_state();
+[; ;main.c: 61:             acc_flat_state();
 [e ( _acc_flat_state ..  ]
 "62
 [; ;main.c: 62:             hardware_interrupt_request();
@@ -1845,26 +1845,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> . . _PIR0bits 0 3 `i -> 1 `i 1708  ]
 {
 "64
-[; ;main.c: 64:                 (PIR0bits.TMR0IF = 0);
-[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-"65
-[; ;main.c: 65:                 thermocouple_temperature();
+[; ;main.c: 64:                 thermocouple_temperature();
 [e ( _thermocouple_temperature ..  ]
-"66
-[; ;main.c: 66:                 temperature_sensor();
+"65
+[; ;main.c: 65:                 temperature_sensor();
 [e ( _temperature_sensor ..  ]
-"67
-[; ;main.c: 67:                 accelerometer_sensor();
+"66
+[; ;main.c: 66:                 accelerometer_sensor();
 [e ( _accelerometer_sensor ..  ]
-"68
-[; ;main.c: 68:                 push_button();
+"67
+[; ;main.c: 67:                 push_button();
 [e ( _push_button ..  ]
-"69
-[; ;main.c: 69:                 led_state();
+"68
+[; ;main.c: 68:                 led_state();
 [e ( _led_state ..  ]
-"70
-[; ;main.c: 70:                 send_protocol_version();
+"69
+[; ;main.c: 69:                 send_protocol_version();
 [e ( _send_protocol_version ..  ]
+"70
+[; ;main.c: 70:                 (PIR0bits.TMR0IF = 0);
+[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
 "71
 [; ;main.c: 71:             } else mirror_serial();
 }

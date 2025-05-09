@@ -16,4 +16,6 @@ mcc_generated_files/application/../rn487x/rn487x.h  \
 mcc_generated_files/application/../rn487x/rn487x_interface.h  \
 mcc_generated_files/application/BMA253_accel.h  \
 mcc_generated_files/application/MCP9844_temp_sensor.h  \
-mcc_generated_files/application/../drivers/uart.h 
+mcc_generated_files/application/../drivers/uart.h  \
+mcc_generated_files/services.h  \
+mcc_generated_files/../main.h 

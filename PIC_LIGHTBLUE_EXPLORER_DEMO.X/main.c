@@ -58,16 +58,16 @@ int main(void) {
     intiliase_services();
     while (1) {
         if (RN487X_IsConnected() == true) {
-             acc_flat_state();
+            acc_flat_state();
             hardware_interrupt_request();
             if (TIMER_FLAG_SET() == true) {
-                RESET_TIMER_INTERRUPT_FLAG;
                 thermocouple_temperature();
                 temperature_sensor();
                 accelerometer_sensor();
                 push_button();
                 led_state();
                 send_protocol_version();
+                RESET_TIMER_INTERRUPT_FLAG;
             } else mirror_serial();
         } else {
             spool_ble_rx();

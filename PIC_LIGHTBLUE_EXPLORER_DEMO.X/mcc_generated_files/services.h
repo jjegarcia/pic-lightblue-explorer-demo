@@ -86,4 +86,5 @@ void mirror_serial();
 void spool_ble_tx();
 void spool_ble_rx();
 void flush_serial_to_ble();
+void flush_ble_to_serial();
 #endif

@@ -1,8 +1,9 @@
-build/default/production/mcc_generated_files/pin_manager.p1:  \
-mcc_generated_files/pin_manager.c  \
-mcc_generated_files/pin_manager.h  \
+build/default/production/mcc_generated_files/services.p1:  \
+mcc_generated_files/services.c  \
+mcc_generated_files/services.h  \
 mcc_generated_files/../main.h  \
 mcc_generated_files/mcc.h  \
+mcc_generated_files/pin_manager.h  \
 mcc_generated_files/interrupt_manager.h  \
 mcc_generated_files/i2c1_master.h  \
 mcc_generated_files/spi2.h  \
@@ -16,5 +17,4 @@ mcc_generated_files/application/../rn487x/rn487x.h  \
 mcc_generated_files/application/../rn487x/rn487x_interface.h  \
 mcc_generated_files/application/BMA253_accel.h  \
 mcc_generated_files/application/MCP9844_temp_sensor.h  \
-mcc_generated_files/application/../drivers/uart.h  \
-mcc_generated_files/services.h 
+mcc_generated_files/application/../drivers/uart.h 

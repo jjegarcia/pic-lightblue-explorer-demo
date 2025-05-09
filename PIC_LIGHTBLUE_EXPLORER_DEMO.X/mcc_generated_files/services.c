@@ -88,7 +88,7 @@ void mirror_serial() {
         while (RN487X_DataReady()) {
             LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
         }
-        flush_serial_to_ble();
+        flush_ble_to_serial();
     }
 }
 
@@ -105,7 +105,12 @@ void spool_ble_tx() {
 }
 
 void flush_serial_to_ble() {
-    while (uart[UART_CDC].DataReady()) {
+    spool_ble_rx();
+    spool_ble_tx();
+}
+
+void flush_ble_to_serial(){
+        while (uart[UART_CDC].DataReady()) {
         lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
         if ((lightBlueSerial[serialIndex] == '\r')
                 || (lightBlueSerial[serialIndex] == '\n')
