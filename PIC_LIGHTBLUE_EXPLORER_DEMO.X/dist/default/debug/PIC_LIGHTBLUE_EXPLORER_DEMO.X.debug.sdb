@@ -665,7 +665,7 @@ APPLICATION_MODE 1
 "78
 [v _send_protocol_version send_protocol_version `(v  1 e 1 0 ]
 "85
-[v _mirror_serial mirror_serial `(v  1 e 1 0 ]
+[v _read_ble read_ble `(v  1 e 1 0 ]
 "92
 [v _spool_ble_rx spool_ble_rx `(v  1 e 1 0 ]
 "98
@@ -1532,22 +1532,8 @@ APPLICATION_MODE 1
 [v LIGHTBLUE_SendProtocolVersion@value value `uc  1 a 1 21 ]
 "152
 } 0
-"64 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-[v _push_button push_button `(v  1 e 1 0 ]
-{
-"69
-} 0
-"84 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
-{
-"85
-[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
-"86
-[v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
-"92
-} 0
 "85 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-[v _mirror_serial mirror_serial `(v  1 e 1 0 ]
+[v _read_ble read_ble `(v  1 e 1 0 ]
 {
 "90
 } 0
@@ -1704,6 +1690,20 @@ APPLICATION_MODE 1
 [v RN487X_ReadMsg@expectedMsg expectedMsg `*.26DCuc  1 p 2 3 ]
 [v RN487X_ReadMsg@msgLen msgLen `uc  1 p 1 5 ]
 "123
+} 0
+"64 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+[v _push_button push_button `(v  1 e 1 0 ]
+{
+"69
+} 0
+"84 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+[v _LIGHTBLUE_PushButton LIGHTBLUE_PushButton `(v  1 e 1 0 ]
+{
+"85
+[v LIGHTBLUE_PushButton@payload payload `[3]uc  1 a 3 1 ]
+"86
+[v LIGHTBLUE_PushButton@button button `uc  1 a 1 0 ]
+"92
 } 0
 "71 C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 [v _led_state led_state `(v  1 e 1 0 ]

@@ -68,7 +68,7 @@ int main(void) {
                 led_state();
                 send_protocol_version();
                 RESET_TIMER_INTERRUPT_FLAG;
-            } else mirror_serial();
+            } else read_ble();
         } else {
             spool_ble_rx();
             spool_ble_tx();

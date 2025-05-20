@@ -11,6 +11,12 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+idloc IDLOC 5 8000 8000 4 2 1
+stack STACK 2 23C0 23C0 430 1 1
+reset_vec CODE 0 0 0 2 2 1
+end_init CODE 0 55 55 2 2 1
+config CONFIG 4 8007 8007 5 2 1
 $dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 cinit CODE 0 57 57 72 2 1
 idloc IDLOC 5 8000 8000 4 2 1
@@ -27,24 +33,24 @@ text10 CODE 0 9E2 9E2 25 2 1
 text11 CODE 0 FBD FBD 43 2 1
 text12 CODE 0 1560 1560 C 2 1
 text13 CODE 0 D39 D39 34 2 1
-text14 CODE 0 1554 1554 C 2 1
-text15 CODE 0 170F 170F 13 2 1
-text16 CODE 0 16FC 16FC 13 2 1
-text17 CODE 0 587 587 4F 2 1
-text18 CODE 0 1A0 1A0 AA 2 1
-text19 CODE 0 C9 C9 D7 2 1
-text20 CODE 0 35E 35E 76 2 1
-text21 CODE 0 15D7 15D7 F 2 1
-text22 CODE 0 8D5 8D5 1C 2 1
-text23 CODE 0 754 754 48 2 1
-text24 CODE 0 2D6 2D6 88 2 1
-text25 CODE 0 89E 89E 1B 2 1
-text26 CODE 0 17A1 17A1 17 2 1
-text27 CODE 0 CAA CAA 2E 2 1
-text28 CODE 0 14E2 14E2 A 2 1
-text29 CODE 0 13BC 13BC 4 2 1
-text30 CODE 0 13B8 13B8 4 2 1
-text31 CODE 0 B41 B41 2B 2 1
+text14 CODE 0 170F 170F 13 2 1
+text15 CODE 0 587 587 4F 2 1
+text16 CODE 0 1A0 1A0 AA 2 1
+text17 CODE 0 C9 C9 D7 2 1
+text18 CODE 0 35E 35E 76 2 1
+text19 CODE 0 15D7 15D7 F 2 1
+text20 CODE 0 8D5 8D5 1C 2 1
+text21 CODE 0 754 754 48 2 1
+text22 CODE 0 2D6 2D6 88 2 1
+text23 CODE 0 89E 89E 1B 2 1
+text24 CODE 0 17A1 17A1 17 2 1
+text25 CODE 0 CAA CAA 2E 2 1
+text26 CODE 0 14E2 14E2 A 2 1
+text27 CODE 0 13BC 13BC 4 2 1
+text28 CODE 0 13B8 13B8 4 2 1
+text29 CODE 0 B41 B41 2B 2 1
+text30 CODE 0 1554 1554 C 2 1
+text31 CODE 0 16FC 16FC 13 2 1
 text32 CODE 0 1548 1548 C 2 1
 text33 CODE 0 A07 A07 26 2 1
 text34 CODE 0 13FC 13FC 5 2 1
@@ -236,12 +242,6 @@ stringtext11 STRCODE 0 1812 1812 C 2 1
 stringtext12 STRCODE 0 1829 1829 B 2 1
 stringtext13 STRCODE 0 1834 1834 6 2 1
 config CONFIG 4 8007 8007 5 2 1
-$C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-idloc IDLOC 5 8000 8000 4 2 1
-stack STACK 2 23C0 23C0 430 1 1
-reset_vec CODE 0 0 0 2 2 1
-end_init CODE 0 55 55 2 2 1
-config CONFIG 4 8007 8007 5 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -373,94 +373,94 @@ STRING 184C-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-57 cinit CODE >21272:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-57 cinit CODE >21275:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-57 cinit CODE >21556:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-58 cinit CODE >21557:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-5B cinit CODE >21558:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-5C cinit CODE >21559:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-5F cinit CODE >21560:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-60 cinit CODE >21564:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-61 cinit CODE >21565:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-62 cinit CODE >21566:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-63 cinit CODE >21567:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-64 cinit CODE >21568:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-65 cinit CODE >21569:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-66 cinit CODE >21570:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-67 cinit CODE >21571:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-68 cinit CODE >21572:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-69 cinit CODE >21573:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-6C cinit CODE >21590:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-6D cinit CODE >21594:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-6E cinit CODE >21595:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-6F cinit CODE >21596:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-70 cinit CODE >21597:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-71 cinit CODE >21598:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-72 cinit CODE >21599:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-75 cinit CODE >21603:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-76 cinit CODE >21604:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-77 cinit CODE >21605:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-78 cinit CODE >21606:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-79 cinit CODE >21607:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-7A cinit CODE >21608:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-7D cinit CODE >21612:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-7E cinit CODE >21613:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-7F cinit CODE >21614:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-80 cinit CODE >21615:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-81 cinit CODE >21616:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-82 cinit CODE >21617:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-85 cinit CODE >21621:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-86 cinit CODE >21622:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-87 cinit CODE >21623:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-88 cinit CODE >21624:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-89 cinit CODE >21625:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-8A cinit CODE >21626:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-8D cinit CODE >21630:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-8E cinit CODE >21631:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-8F cinit CODE >21632:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-90 cinit CODE >21633:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-91 cinit CODE >21634:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-92 cinit CODE >21635:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-95 cinit CODE >21639:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-96 cinit CODE >21640:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-97 cinit CODE >21641:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-98 cinit CODE >21642:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-99 cinit CODE >21643:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-9A cinit CODE >21644:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-9D cinit CODE >21648:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-9E cinit CODE >21649:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-9F cinit CODE >21650:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A0 cinit CODE >21651:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A1 cinit CODE >21652:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A2 cinit CODE >21653:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A5 cinit CODE >21657:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A6 cinit CODE >21658:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A7 cinit CODE >21659:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A8 cinit CODE >21660:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-A9 cinit CODE >21661:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-AA cinit CODE >21662:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-AD cinit CODE >21666:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-AE cinit CODE >21667:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-AF cinit CODE >21668:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B0 cinit CODE >21669:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B1 cinit CODE >21670:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B2 cinit CODE >21671:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B5 cinit CODE >21675:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B6 cinit CODE >21676:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B7 cinit CODE >21677:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B8 cinit CODE >21678:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-B9 cinit CODE >21679:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-BA cinit CODE >21680:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-BD cinit CODE >21684:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-BE cinit CODE >21685:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-BF cinit CODE >21686:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C0 cinit CODE >21687:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C1 cinit CODE >21688:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C2 cinit CODE >21689:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C5 cinit CODE >21695:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C5 cinit CODE >21697:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C6 cinit CODE >21698:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-C7 cinit CODE >21699:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
+57 cinit CODE >21272:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+57 cinit CODE >21275:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+57 cinit CODE >21556:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+58 cinit CODE >21557:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+5B cinit CODE >21558:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+5C cinit CODE >21559:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+5F cinit CODE >21560:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+60 cinit CODE >21564:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+61 cinit CODE >21565:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+62 cinit CODE >21566:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+63 cinit CODE >21567:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+64 cinit CODE >21568:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+65 cinit CODE >21569:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+66 cinit CODE >21570:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+67 cinit CODE >21571:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+68 cinit CODE >21572:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+69 cinit CODE >21573:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+6C cinit CODE >21590:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+6D cinit CODE >21594:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+6E cinit CODE >21595:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+6F cinit CODE >21596:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+70 cinit CODE >21597:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+71 cinit CODE >21598:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+72 cinit CODE >21599:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+75 cinit CODE >21603:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+76 cinit CODE >21604:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+77 cinit CODE >21605:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+78 cinit CODE >21606:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+79 cinit CODE >21607:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+7A cinit CODE >21608:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+7D cinit CODE >21612:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+7E cinit CODE >21613:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+7F cinit CODE >21614:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+80 cinit CODE >21615:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+81 cinit CODE >21616:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+82 cinit CODE >21617:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+85 cinit CODE >21621:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+86 cinit CODE >21622:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+87 cinit CODE >21623:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+88 cinit CODE >21624:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+89 cinit CODE >21625:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+8A cinit CODE >21626:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+8D cinit CODE >21630:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+8E cinit CODE >21631:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+8F cinit CODE >21632:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+90 cinit CODE >21633:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+91 cinit CODE >21634:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+92 cinit CODE >21635:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+95 cinit CODE >21639:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+96 cinit CODE >21640:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+97 cinit CODE >21641:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+98 cinit CODE >21642:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+99 cinit CODE >21643:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+9A cinit CODE >21644:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+9D cinit CODE >21648:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+9E cinit CODE >21649:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+9F cinit CODE >21650:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A0 cinit CODE >21651:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A1 cinit CODE >21652:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A2 cinit CODE >21653:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A5 cinit CODE >21657:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A6 cinit CODE >21658:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A7 cinit CODE >21659:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A8 cinit CODE >21660:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+A9 cinit CODE >21661:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+AA cinit CODE >21662:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+AD cinit CODE >21666:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+AE cinit CODE >21667:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+AF cinit CODE >21668:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B0 cinit CODE >21669:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B1 cinit CODE >21670:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B2 cinit CODE >21671:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B5 cinit CODE >21675:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B6 cinit CODE >21676:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B7 cinit CODE >21677:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B8 cinit CODE >21678:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+B9 cinit CODE >21679:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+BA cinit CODE >21680:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+BD cinit CODE >21684:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+BE cinit CODE >21685:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+BF cinit CODE >21686:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C0 cinit CODE >21687:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C1 cinit CODE >21688:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C2 cinit CODE >21689:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C5 cinit CODE >21695:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C5 cinit CODE >21697:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C6 cinit CODE >21698:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+C7 cinit CODE >21699:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
 4 intentry CODE >52:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
 F intentry CODE >57:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
@@ -1516,246 +1516,246 @@ A2C text33 CODE >137:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-
 154D text32 CODE >73:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 1550 text32 CODE >74:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 1553 text32 CODE >76:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-B41 text31 CODE >108:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B41 text31 CODE >113:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B43 text31 CODE >115:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B4D text31 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B55 text31 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B5A text31 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B5E text31 CODE >118:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B60 text31 CODE >120:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B66 text31 CODE >120:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B6A text31 CODE >122:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-B6B text31 CODE >123:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-13B8 text30 CODE >142:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-13B8 text30 CODE >144:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-13BB text30 CODE >145:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
-13BC text29 CODE >142:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-13BC text29 CODE >144:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-13BF text29 CODE >145:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
-14E2 text28 CODE >262:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-14E2 text28 CODE >264:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-14EB text28 CODE >265:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
-CAA text27 CODE >79:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CAB text27 CODE >81:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CAC text27 CODE >83:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CAD text27 CODE >85:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CB7 text27 CODE >85:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CBB text27 CODE >87:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CCD text27 CODE >88:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CD1 text27 CODE >83:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CD3 text27 CODE >83:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-CD7 text27 CODE >91:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17A1 text26 CODE >195:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17A1 text26 CODE >199:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17A4 text26 CODE >200:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17A6 text26 CODE >201:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17A8 text26 CODE >203:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17AE text26 CODE >205:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-17B7 text26 CODE >206:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-89E text25 CODE >208:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-89E text25 CODE >212:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8A1 text25 CODE >213:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8A3 text25 CODE >214:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8A5 text25 CODE >215:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8A7 text25 CODE >216:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8A9 text25 CODE >218:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8AF text25 CODE >220:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8B8 text25 CODE >221:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2D6 text24 CODE >125:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2D6 text24 CODE >128:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2D7 text24 CODE >130:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2E1 text24 CODE >131:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2EB text24 CODE >132:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2F5 text24 CODE >134:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-2F6 text24 CODE >138:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-302 text24 CODE >139:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-305 text24 CODE >145:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-311 text24 CODE >146:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-313 text24 CODE >152:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-315 text24 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-317 text24 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-31A text24 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-31D text24 CODE >157:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-326 text24 CODE >158:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-32F text24 CODE >161:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-338 text24 CODE >162:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-341 text24 CODE >163:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-34A text24 CODE >164:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-353 text24 CODE >165:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-35C text24 CODE >167:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-35D text24 CODE >168:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-754 text23 CODE >223:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-754 text23 CODE >225:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-754 text23 CODE >226:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-757 text23 CODE >227:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-759 text23 CODE >228:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-75B text23 CODE >231:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-75F text23 CODE >233:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-761 text23 CODE >234:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-762 text23 CODE >237:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-764 text23 CODE >239:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-768 text23 CODE >242:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-76C text23 CODE >244:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-76E text23 CODE >245:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-76F text23 CODE >248:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-771 text23 CODE >250:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-775 text23 CODE >252:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-778 text23 CODE >253:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-77A text23 CODE >254:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-77C text23 CODE >255:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-780 text23 CODE >256:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-784 text23 CODE >257:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-786 text23 CODE >258:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-78A text23 CODE >259:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-78E text23 CODE >260:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-790 text23 CODE >261:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-792 text23 CODE >263:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-798 text23 CODE >264:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-79B text23 CODE >265:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
-8D5 text22 CODE >265:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-8D5 text22 CODE >266:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-8D8 text22 CODE >267:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-8E5 text22 CODE >268:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-8ED text22 CODE >269:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-8F0 text22 CODE >270:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-15D7 text21 CODE >260:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-15D9 text21 CODE >261:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-15E2 text21 CODE >262:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-15E5 text21 CODE >263:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-35E text20 CODE >272:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-360 text20 CODE >275:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-361 text20 CODE >276:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-361 text20 CODE >277:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-365 text20 CODE >278:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-36E text20 CODE >279:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-373 text20 CODE >280:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-377 text20 CODE >281:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-379 text20 CODE >283:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-37B text20 CODE >286:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-385 text20 CODE >290:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-385 text20 CODE >291:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-389 text20 CODE >292:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-38B text20 CODE >295:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-38B text20 CODE >296:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-38F text20 CODE >297:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-39B text20 CODE >300:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-39B text20 CODE >301:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-39F text20 CODE >302:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3A1 text20 CODE >305:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3A1 text20 CODE >306:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3A5 text20 CODE >307:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3A7 text20 CODE >310:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3A7 text20 CODE >311:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3AB text20 CODE >312:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3AD text20 CODE >315:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3AD text20 CODE >316:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3B1 text20 CODE >317:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3B3 text20 CODE >320:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3B3 text20 CODE >321:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3B7 text20 CODE >322:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3B9 text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3BB text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3BE text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3C1 text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3C4 text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3C7 text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3CA text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3CD text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3D0 text20 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-3D3 text20 CODE >329:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-C9 text19 CODE >169:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-CB text19 CODE >175:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-CC text19 CODE >178:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-CE text19 CODE >179:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-CF text19 CODE >181:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-D1 text19 CODE >182:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-D3 text19 CODE >183:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-D4 text19 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-D6 text19 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-DF text19 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-E7 text19 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-EC text19 CODE >186:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-EE text19 CODE >187:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-EF text19 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-F1 text19 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-FA text19 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-102 text19 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-10A text19 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-10F text19 CODE >190:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-111 text19 CODE >191:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-112 text19 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-114 text19 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-11E text19 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-127 text19 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-12A text19 CODE >194:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-12D text19 CODE >195:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-132 text19 CODE >196:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-133 text19 CODE >197:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-134 text19 CODE >198:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-137 text19 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-139 text19 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-142 text19 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-14A text19 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-167 text19 CODE >203:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-16E text19 CODE >204:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-171 text19 CODE >205:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-177 text19 CODE >213:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-17D text19 CODE >214:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-180 text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-185 text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-18A text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-18D text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-190 text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-193 text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-196 text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-199 text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-19C text19 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-19F text19 CODE >218:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1A0 text18 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1A1 text18 CODE >155:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1AB text18 CODE >157:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1B6 text18 CODE >158:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1CD text18 CODE >159:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1D8 text18 CODE >160:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1EF text18 CODE >161:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-200 text18 CODE >162:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-201 text18 CODE >163:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-21C text18 CODE >164:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-235 text18 CODE >162:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-23E text18 CODE >166:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-249 text18 CODE >167:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-587 text17 CODE >109:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-587 text17 CODE >110:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-588 text17 CODE >111:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-59A text17 CODE >112:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5B6 text17 CODE >115:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5BC text17 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5C0 text17 CODE >117:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5C2 text17 CODE >118:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5C3 text17 CODE >119:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5C7 text17 CODE >110:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5D1 text17 CODE >110:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-5D5 text17 CODE >122:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-16FC text16 CODE >85:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-16FC text16 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-16FD text16 CODE >87:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-1703 text16 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-1703 text16 CODE >88:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-1707 text16 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-170B text16 CODE >89:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-170E text16 CODE >90:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-170F text15 CODE >84:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-170F text15 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1714 text15 CODE >88:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1715 text15 CODE >89:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-171B text15 CODE >91:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1721 text15 CODE >92:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
-1554 text14 CODE >64:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-1554 text14 CODE >65:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-1559 text14 CODE >66:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-155C text14 CODE >67:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
-155F text14 CODE >69:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+16FC text31 CODE >84:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+16FC text31 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1701 text31 CODE >88:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1702 text31 CODE >89:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1708 text31 CODE >91:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+170E text31 CODE >92:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1554 text30 CODE >64:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+1554 text30 CODE >65:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+1559 text30 CODE >66:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+155C text30 CODE >67:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+155F text30 CODE >69:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+B41 text29 CODE >108:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B41 text29 CODE >113:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B43 text29 CODE >115:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B4D text29 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B55 text29 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B5A text29 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B5E text29 CODE >118:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B60 text29 CODE >120:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B66 text29 CODE >120:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B6A text29 CODE >122:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+B6B text29 CODE >123:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+13B8 text28 CODE >142:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+13B8 text28 CODE >144:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+13BB text28 CODE >145:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart2.c
+13BC text27 CODE >142:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+13BC text27 CODE >144:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+13BF text27 CODE >145:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/eusart1.c
+14E2 text26 CODE >262:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+14E2 text26 CODE >264:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+14EB text26 CODE >265:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x_interface.c
+CAA text25 CODE >79:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CAB text25 CODE >81:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CAC text25 CODE >83:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CAD text25 CODE >85:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CB7 text25 CODE >85:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CBB text25 CODE >87:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CCD text25 CODE >88:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CD1 text25 CODE >83:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CD3 text25 CODE >83:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+CD7 text25 CODE >91:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17A1 text24 CODE >195:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17A1 text24 CODE >199:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17A4 text24 CODE >200:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17A6 text24 CODE >201:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17A8 text24 CODE >203:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17AE text24 CODE >205:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+17B7 text24 CODE >206:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+89E text23 CODE >208:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+89E text23 CODE >212:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8A1 text23 CODE >213:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8A3 text23 CODE >214:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8A5 text23 CODE >215:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8A7 text23 CODE >216:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8A9 text23 CODE >218:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8AF text23 CODE >220:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8B8 text23 CODE >221:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2D6 text22 CODE >125:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2D6 text22 CODE >128:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2D7 text22 CODE >130:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2E1 text22 CODE >131:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2EB text22 CODE >132:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2F5 text22 CODE >134:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+2F6 text22 CODE >138:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+302 text22 CODE >139:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+305 text22 CODE >145:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+311 text22 CODE >146:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+313 text22 CODE >152:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+315 text22 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+317 text22 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+31A text22 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+31D text22 CODE >157:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+326 text22 CODE >158:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+32F text22 CODE >161:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+338 text22 CODE >162:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+341 text22 CODE >163:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+34A text22 CODE >164:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+353 text22 CODE >165:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+35C text22 CODE >167:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+35D text22 CODE >168:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+754 text21 CODE >223:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+754 text21 CODE >225:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+754 text21 CODE >226:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+757 text21 CODE >227:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+759 text21 CODE >228:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+75B text21 CODE >231:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+75F text21 CODE >233:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+761 text21 CODE >234:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+762 text21 CODE >237:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+764 text21 CODE >239:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+768 text21 CODE >242:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+76C text21 CODE >244:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+76E text21 CODE >245:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+76F text21 CODE >248:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+771 text21 CODE >250:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+775 text21 CODE >252:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+778 text21 CODE >253:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+77A text21 CODE >254:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+77C text21 CODE >255:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+780 text21 CODE >256:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+784 text21 CODE >257:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+786 text21 CODE >258:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+78A text21 CODE >259:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+78E text21 CODE >260:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+790 text21 CODE >261:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+792 text21 CODE >263:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+798 text21 CODE >264:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+79B text21 CODE >265:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/rn487x/rn487x.c
+8D5 text20 CODE >265:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+8D5 text20 CODE >266:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+8D8 text20 CODE >267:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+8E5 text20 CODE >268:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+8ED text20 CODE >269:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+8F0 text20 CODE >270:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+15D7 text19 CODE >260:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+15D9 text19 CODE >261:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+15E2 text19 CODE >262:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+15E5 text19 CODE >263:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+35E text18 CODE >272:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+360 text18 CODE >275:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+361 text18 CODE >276:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+361 text18 CODE >277:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+365 text18 CODE >278:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+36E text18 CODE >279:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+373 text18 CODE >280:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+377 text18 CODE >281:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+379 text18 CODE >283:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+37B text18 CODE >286:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+385 text18 CODE >290:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+385 text18 CODE >291:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+389 text18 CODE >292:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+38B text18 CODE >295:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+38B text18 CODE >296:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+38F text18 CODE >297:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+39B text18 CODE >300:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+39B text18 CODE >301:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+39F text18 CODE >302:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3A1 text18 CODE >305:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3A1 text18 CODE >306:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3A5 text18 CODE >307:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3A7 text18 CODE >310:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3A7 text18 CODE >311:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3AB text18 CODE >312:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3AD text18 CODE >315:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3AD text18 CODE >316:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3B1 text18 CODE >317:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3B3 text18 CODE >320:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3B3 text18 CODE >321:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3B7 text18 CODE >322:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3B9 text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3BB text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3BE text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3C1 text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3C4 text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3C7 text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3CA text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3CD text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3D0 text18 CODE >328:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+3D3 text18 CODE >329:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+C9 text17 CODE >169:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+CB text17 CODE >175:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+CC text17 CODE >178:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+CE text17 CODE >179:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+CF text17 CODE >181:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+D1 text17 CODE >182:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+D3 text17 CODE >183:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+D4 text17 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+D6 text17 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+DF text17 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+E7 text17 CODE >185:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+EC text17 CODE >186:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+EE text17 CODE >187:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+EF text17 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+F1 text17 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+FA text17 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+102 text17 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+10A text17 CODE >189:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+10F text17 CODE >190:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+111 text17 CODE >191:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+112 text17 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+114 text17 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+11E text17 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+127 text17 CODE >193:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+12A text17 CODE >194:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+12D text17 CODE >195:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+132 text17 CODE >196:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+133 text17 CODE >197:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+134 text17 CODE >198:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+137 text17 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+139 text17 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+142 text17 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+14A text17 CODE >202:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+167 text17 CODE >203:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+16E text17 CODE >204:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+171 text17 CODE >205:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+177 text17 CODE >213:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+17D text17 CODE >214:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+180 text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+185 text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+18A text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+18D text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+190 text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+193 text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+196 text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+199 text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+19C text17 CODE >217:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+19F text17 CODE >218:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1A0 text16 CODE >154:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1A1 text16 CODE >155:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1AB text16 CODE >157:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1B6 text16 CODE >158:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1CD text16 CODE >159:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1D8 text16 CODE >160:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+1EF text16 CODE >161:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+200 text16 CODE >162:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+201 text16 CODE >163:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+21C text16 CODE >164:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+235 text16 CODE >162:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+23E text16 CODE >166:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+249 text16 CODE >167:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
+587 text15 CODE >109:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+587 text15 CODE >110:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+588 text15 CODE >111:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+59A text15 CODE >112:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5B6 text15 CODE >115:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5BC text15 CODE >116:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5C0 text15 CODE >117:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5C2 text15 CODE >118:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5C3 text15 CODE >119:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5C7 text15 CODE >110:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5D1 text15 CODE >110:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+5D5 text15 CODE >122:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+170F text14 CODE >85:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+170F text14 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+1710 text14 CODE >87:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+1716 text14 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+1716 text14 CODE >88:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+171A text14 CODE >86:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+171E text14 CODE >89:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
+1721 text14 CODE >90:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/services.c
 D39 text13 CODE >139:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 D39 text13 CODE >144:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
 D3B text13 CODE >146:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/application/LIGHTBLUE_service.c
@@ -1876,22 +1876,22 @@ A52 text1 CODE >38:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-ex
 6AF maintext CODE >71:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 6B4 maintext CODE >73:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 6B7 maintext CODE >74:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-1461 clrtext CODE >21579:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1461 clrtext CODE >21580:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1462 clrtext CODE >21581:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1462 clrtext CODE >21582:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1463 clrtext CODE >21583:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1464 clrtext CODE >21584:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1465 clrtext CODE >21585:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-1466 clrtext CODE >21586:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-800 inittext CODE >21545:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-800 inittext CODE >21546:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-801 inittext CODE >21547:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-801 inittext CODE >21548:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-802 inittext CODE >21549:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-803 inittext CODE >21550:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-804 inittext CODE >21551:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
-805 inittext CODE >21552:C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_1.s
+1461 clrtext CODE >21579:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1461 clrtext CODE >21580:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1462 clrtext CODE >21581:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1462 clrtext CODE >21582:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1463 clrtext CODE >21583:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1464 clrtext CODE >21584:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1465 clrtext CODE >21585:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+1466 clrtext CODE >21586:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+800 inittext CODE >21545:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+800 inittext CODE >21546:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+801 inittext CODE >21547:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+801 inittext CODE >21548:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+802 inittext CODE >21549:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+803 inittext CODE >21550:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+804 inittext CODE >21551:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
+805 inittext CODE >21552:C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1964,20 +1964,20 @@ _WPUA 1F39 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _WPUB 1F44 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _WPUC 1F4F 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _WPUE 1F65 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___sp 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+___sp 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 __hex 1D3 0 BANK3 1 dataBANK3 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _main CE2 0 CODE 0 maintext dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _peek 3C 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _uart 2000 0 STRCODE 0 stringtext1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_RN487X_is_rx_ready 299C 0 CODE 0 text98 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___stack_hi 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-___stack_lo 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+___stack_hi 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+___stack_lo 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 __HbssBANK10 0 0 ABS 0 bssBANK10 -
 __HbssBANK11 0 0 ABS 0 bssBANK11 -
 ?_i2c_read2ByteRegister 4E 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 BMA253_GetAccelDataXYZ@accelData 5A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-start AA 0 CODE 0 init C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+start AA 0 CODE 0 init C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 _LIGHTBLUE_SendProtocolVersion 1A72 0 CODE 0 text13 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _lightBlueSerial@main$F4431 2A0 0 BANK5 1 bssBANK5 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART2_SetOverrunErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -1996,14 +1996,14 @@ __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _I2C1_MasterSendAck 2768 0 CODE 0 text141 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RC2STAbits A1D 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 LIGHTBLUE_TemperatureSensor@payload 62 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_SendCmd 19B0 0 CODE 0 text27 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_SendCmd 19B0 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_LIGHTBLUE_AccelSensor 1954 0 CODE 0 text41 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_EUSART1_SetTxInterruptHandler 2856 0 CODE 0 text90 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_rn487x_PrintIndicatorCharacters 1336 0 CODE 0 text65 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 wr1RegCompleteHandler@p 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_LIGHTBLUE_LedState 145A 0 CODE 0 text33 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _IOCAF7_InterruptHandler E6 0 BANK1 1 nvBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_LIGHTBLUE_PushButton 2E1E 0 CODE 0 text15 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_LIGHTBLUE_PushButton 2DF8 0 CODE 0 text31 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X_IsConnected 272C 0 CODE 0 text96 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 RN487X_SetOutputs@bitMap 4A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 RN487X_SendCmd@cmd 7A 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2035,12 +2035,12 @@ __LbssBANK11 0 0 ABS 0 bssBANK11 -
 rd2RegCompleteHandler@i2c1_master_example$F1312@ptr 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X_DataReady 1172 0 CODE 0 text55 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_AccelSensor 18F8 0 CODE 0 text41 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 __ptext100 293E 0 CODE 0 text100 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext101 2A30 0 CODE 0 text101 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext102 2A1A 0 CODE 0 text102 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2136,7 +2136,7 @@ _LIGHTBLUE_GetDataLedValue 28B6 0 CODE 0 text35 dist/default/debug\PIC_LIGHTBLUE
 __end_of_fsmStateTable 20D0 0 STRCODE 0 stringtext3 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 wtemp0 7E 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_MasterGetRxData 2720 0 CODE 0 text142 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_SetOutputs EA8 0 CODE 0 text23 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_SetOutputs EA8 0 CODE 0 text21 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _wr2RegCompleteHandler 2C98 0 CODE 0 text152 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2153,7 +2153,7 @@ RN487X_SetSystemMode@mode 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGH
 __Hclrtext 0 0 ABS 0 clrtext -
 _RN487X_Init 7A8 0 CODE 0 text97 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X_Read 2A60 0 CODE 0 text54 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_LIGHTBLUE_ParseIncomingPacket 340 0 CODE 0 text19 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_LIGHTBLUE_ParseIncomingPacket 340 0 CODE 0 text17 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_LedState 140E 0 CODE 0 text33 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_IOCAF6_SetInterruptHandler 289E 0 CODE 0 text80 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_RN487X_FilterData E12 0 CODE 0 text56 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2200,7 +2200,7 @@ EUSART2_SetTxInterruptHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/d
 EUSART2_SetErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_accelerometer_sensor 2A90 0 CODE 0 text40 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_DO_SEND_RESTART_WRITE 279E 0 CODE 0 text129 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_flush_ble_to_serial B0E 0 CODE 0 text17 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_flush_ble_to_serial B0E 0 CODE 0 text15 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 rdBlkRegCompleteHandler@i2c1_master_example$F1335@ptr 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART1_SetFramingErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_SPI2_Initialize 2EBE 0 CODE 0 text76 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2211,17 +2211,17 @@ _INLVLA 1F3C 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _INLVLB 1F47 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _INLVLC 1F52 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 I2C1_MasterSendTxData@data 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_LIGHTBLUE_SendSerialData 340 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_LIGHTBLUE_SendSerialData 340 0 CODE 0 text16 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 ?_strlen 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___stackhi 27EF 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-___stacklo 23C0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+___stackhi 27EF 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+___stacklo 23C0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 LIGHTBLUE_Send_Thermocouple@temperature 54 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _rn487x_PrintMessageEnd BAC 0 CODE 0 text62 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_EnterDataMode 113C 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_EnterDataMode 113C 0 CODE 0 text23 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _do_I2C_SEND_ADR_READ 0 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _wr2RegCompleteHandler@i2c1_master_example$F1324 2C10 0 CODE 0 text156 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_LIGHTBLUE_TemperatureSensor 2F42 0 CODE 0 text8 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_ReadDefaultResponse 6BC 0 CODE 0 text24 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_ReadDefaultResponse 6BC 0 CODE 0 text22 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterOperation 1224 0 CODE 0 text118 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 DELAY_milliseconds@milliseconds 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_RN487X_DataReady 11AA 0 CODE 0 text55 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2273,7 +2273,7 @@ _RC4PPS 1F24 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_EUSART2_RxDataHandler 103E 0 CODE 0 text180 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 rdBlkRegCompleteHandler@p 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X 3000 0 STRCODE 0 stringtext4 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_LIGHTBLUE_SetErrorLedValue 2BCC 0 CODE 0 text21 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_LIGHTBLUE_SetErrorLedValue 2BCC 0 CODE 0 text19 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_SYSTEM_Initialize 1070 0 CODE 0 text74 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 LIGHTBLUE_PushButton@payload 4B 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_MasterOpen 2B0A 0 CODE 0 text116 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2314,7 +2314,7 @@ LIGHTBLUE_SendProtocolVersion@value 5F 0 BANK0 1 cstackBANK0 dist/default/debug\
 _I2C1_Status A0 0 BANK1 1 bssBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART2_Write@txData 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART2_RxDataHandler 100C 0 CODE 0 text180 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___int_sp 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+___int_sp 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 BMA253_GetAccelDataY@msbData 59 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_intiliase_services 27F8 0 CODE 0 text36 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 wr2RegCompleteHandler@p 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2533,18 +2533,17 @@ __Lsfr61 0 0 ABS 0 sfr61 -
 __Lsfr62 0 0 ABS 0 sfr62 -
 __Lsfr63 0 0 ABS 0 sfr63 -
 __Lstack 23C0 0 STACK 2 stack -
-__end_of_flush_ble_to_serial BAC 0 CODE 0 text17 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_flush_ble_to_serial BAC 0 CODE 0 text15 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART1_FramingErrorHandler 160 0 BANK2 1 nvBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _bitMap@LIGHTBLUE_service$F2691 D9 0 BANK1 1 bssBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _bitMap@LIGHTBLUE_service$F4174 D7 0 BANK1 1 bssBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _bitMap@LIGHTBLUE_service$F4406 D5 0 BANK1 1 bssBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART1_OverrunErrorHandler 15E 0 BANK2 1 nvBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 init_ram 1000 0 CODE 0 inittext dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_is_tx_done 29D8 0 CODE 0 text28 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_mirror_serial 2DF8 0 CODE 0 text16 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_is_tx_done 29D8 0 CODE 0 text26 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterSetIrq 272C 0 CODE 0 text138 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 LIGHTBLUE_AccelSensor@accelData 6A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_LIGHTBLUE_PerformAction 6BC 0 CODE 0 text20 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_LIGHTBLUE_PerformAction 6BC 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __Linittext 0 0 ABS 0 inittext -
 _PORTAbits C 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_EUSART1_Transmit_ISR 12F0 0 CODE 0 text173 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2600,7 +2599,7 @@ __pstringtext9 3074 0 STRCODE 0 stringtext9 dist/default/debug\PIC_LIGHTBLUE_EXP
 __pnvBANK1 E6 0 BANK1 1 nvBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __pnvBANK2 15C 0 BANK2 1 nvBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_temperature_sensor 2AF0 0 CODE 0 text7 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_LIGHTBLUE_PerformAction 7A8 0 CODE 0 text20 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_LIGHTBLUE_PerformAction 7A8 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _returnStop 0 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SSP1CON1 190 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SSP1CON2 191 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2637,7 +2636,7 @@ _EUSART2_Receive_ISR 1C8E 0 CODE 0 text176 dist/default/debug\PIC_LIGHTBLUE_EXPL
 _EUSART1_DefaultErrorHandler 2738 0 CODE 0 text183 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_DO_ADDRESS_NACK 15E0 0 CODE 0 text122 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _bitMap 22 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_push_button 2AA8 0 CODE 0 text14 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_push_button 2AA8 0 CODE 0 text30 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 LIGHTBLUE_SetErrorLedValue@value 50 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 i2c_read2ByteRegister@address 54 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _eusart2RxLastError 34 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2646,7 +2645,7 @@ _cmdBuf 220 0 BANK4 1 bssBANK4 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.
 LIGHTBLUE_ParseIncomingPacket@packetID 41 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_CallbackReturnStop 26EE 0 CODE 0 text146 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _dataReady 3B 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_LIGHTBLUE_UpdateErrorLed 11AA 0 CODE 0 text22 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_LIGHTBLUE_UpdateErrorLed 11AA 0 CODE 0 text20 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_CallbackReturnReset 26F6 0 CODE 0 text145 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_DELAY_milliseconds 2EEA 0 CODE 0 text108 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_Initialize 292C 0 CODE 0 text109 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2677,7 +2676,7 @@ _EUSART2_RxDefaultInterruptHandler EA 0 BANK1 1 nvBANK1 dist/default/debug\PIC_L
 strchr@c 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strchr@s 73 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strcpy@d 72 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 __end_of_LIGHTBLUE_Send_Thermocouple 1730 0 CODE 0 text6 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strlen@a 74 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strlen@s 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2735,24 +2734,24 @@ __ptext10 13C4 0 CODE 0 text10 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.
 __ptext11 1F7A 0 CODE 0 text11 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext12 2AC0 0 CODE 0 text12 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext13 1A72 0 CODE 0 text13 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext14 2AA8 0 CODE 0 text14 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext15 2E1E 0 CODE 0 text15 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext16 2DF8 0 CODE 0 text16 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext17 B0E 0 CODE 0 text17 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext18 340 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext19 192 0 CODE 0 text19 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext20 6BC 0 CODE 0 text20 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext21 2BAE 0 CODE 0 text21 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext22 11AA 0 CODE 0 text22 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext23 EA8 0 CODE 0 text23 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext24 5AC 0 CODE 0 text24 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext25 113C 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext26 2F42 0 CODE 0 text26 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext27 1954 0 CODE 0 text27 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext28 29C4 0 CODE 0 text28 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext29 2778 0 CODE 0 text29 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext30 2770 0 CODE 0 text30 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__ptext31 1682 0 CODE 0 text31 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext14 2E1E 0 CODE 0 text14 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext15 B0E 0 CODE 0 text15 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext16 340 0 CODE 0 text16 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext17 192 0 CODE 0 text17 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext18 6BC 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext19 2BAE 0 CODE 0 text19 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext20 11AA 0 CODE 0 text20 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext21 EA8 0 CODE 0 text21 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext22 5AC 0 CODE 0 text22 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext23 113C 0 CODE 0 text23 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext24 2F42 0 CODE 0 text24 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext25 1954 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext26 29C4 0 CODE 0 text26 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext27 2778 0 CODE 0 text27 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext28 2770 0 CODE 0 text28 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext29 1682 0 CODE 0 text29 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext30 2AA8 0 CODE 0 text30 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__ptext31 2DF8 0 CODE 0 text31 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext32 2A90 0 CODE 0 text32 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext33 140E 0 CODE 0 text33 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext34 27F8 0 CODE 0 text34 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2895,11 +2894,11 @@ _do_I2C_RCEN 0 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __end_of_I2C1_Open 1B46 0 CODE 0 text115 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_EUSART1_is_tx_done 2780 0 CODE 0 text29 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_EUSART1_is_tx_done 2780 0 CODE 0 text27 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _pushed 29 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _spool_ble_rx 1108 0 CODE 0 text53 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _spool_ble_tx 1336 0 CODE 0 text52 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_is_tx_done 29C4 0 CODE 0 text28 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_is_tx_done 29C4 0 CODE 0 text26 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_MasterWaitForEvent 280E 0 CODE 0 text120 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 RN487X_ReadDefaultResponse@status 76 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strncmp@l 76 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2927,18 +2926,19 @@ RN487X_SendCmd@cmdLen 77 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLU
 __end_of_EUSART1_SetErrorHandler 2826 0 CODE 0 text94 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_MasterStart 2708 0 CODE 0 text162 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_MasterWrite 27E4 0 CODE 0 text117 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_ReadMsg 1682 0 CODE 0 text31 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_ReadMsg 1682 0 CODE 0 text29 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _do_I2C_SEND_STOP 0 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART2_Read 14A6 0 CODE 0 text105 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_EnterCmdMode 2F42 0 CODE 0 text26 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_EnterCmdMode 2F42 0 CODE 0 text24 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _strchr 10A2 0 CODE 0 text60 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _strcpy 2E6C 0 CODE 0 text64 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _strlen 1070 0 CODE 0 text69 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _strstr C48 0 CODE 0 text58 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _TX2STAbits A1E 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_read_ble 2E1E 0 CODE 0 text14 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_rd1RegCompleteHandler 2C76 0 CODE 0 text154 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_LIGHTBLUE_PushButton 2E44 0 CODE 0 text15 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_ReadDefaultResponse 5AC 0 CODE 0 text24 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_LIGHTBLUE_PushButton 2E1E 0 CODE 0 text31 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_ReadDefaultResponse 5AC 0 CODE 0 text22 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _ACKNOWLEDGED 45 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_rd2RegCompleteHandler@i2c1_master_example$F1312 2CFE 0 CODE 0 text149 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 wr2RegCompleteHandler@i2c1_master_example$F1324@ptr 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2955,7 +2955,7 @@ __end_of_EUSART1_SetFramingErrorHandler 2832 0 CODE 0 text93 dist/default/debug\
 I2C1_Open@returnValue 72 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_EUSART1_SetOverrunErrorHandler 283E 0 CODE 0 text92 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_EUSART1_Write 1630 0 CODE 0 text71 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_LIGHTBLUE_SendSerialData 494 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_LIGHTBLUE_SendSerialData 494 0 CODE 0 text16 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterSendNack 2768 0 CODE 0 text143 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 RN487X_IndicateRx@value 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SSP1CLKPPS 1EC5 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2969,6 +2969,7 @@ strstr@nl 4A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEM
 _SSP1DATPPS 1EC6 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _IOCAF7_DefaultInterruptHandler 2758 0 CODE 0 text170 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_Open 1ADA 0 CODE 0 text115 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_read_ble 2E44 0 CODE 0 text14 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_EUSART2_Transmit_ISR 12AA 0 CODE 0 text174 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __pbssBANK10 520 0 BANK10 1 bssBANK10 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __pbssBANK11 5A0 0 BANK11 1 bssBANK11 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3002,7 +3003,7 @@ _EUSART1_is_tx_ready 0 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.
 _PIR3bits 70F 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_MasterOperation 11E2 0 CODE 0 text118 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __Lend_init AA 0 CODE 0 end_init -
-_EUSART1_is_tx_done 2778 0 CODE 0 text29 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_EUSART1_is_tx_done 2778 0 CODE 0 text27 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 RN487X_ReadMsg@resp 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _hardware_interrupt_request 2DD2 0 CODE 0 text37 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3014,12 +3015,11 @@ _eusart1TxBuffer 14C 0 BANK2 1 bssBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORE
 _LIGHTBLUE_ParseIncomingPacket$516 57 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_ParseIncomingPacket$517 59 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_ParseIncomingPacket$518 5B 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_LIGHTBLUE_SetErrorLedValue 2BAE 0 CODE 0 text21 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_LIGHTBLUE_SetErrorLedValue 2BAE 0 CODE 0 text19 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 MCP9844_CalcTemperature@lowerByte 5F 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART1_SetTxInterruptHandler 284A 0 CODE 0 text90 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 end_of_initialization 18A 0 CODE 0 cinit dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_DO_RX_ACK 27C6 0 CODE 0 text126 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_mirror_serial 2E1E 0 CODE 0 text16 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART1_Read@readValue 72 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _INTERRUPTbits 47 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_TemperatureSensor 2F16 0 CODE 0 text8 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3062,7 +3062,7 @@ _SERVICE 2B 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.
 _EUSART2_FramingErrorHandler 16A 0 BANK2 1 nvBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART2_OverrunErrorHandler 168 0 BANK2 1 nvBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_LIGHTBLUE_GetDataLedValue 28C2 0 CODE 0 text35 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_ReadMsg 16D8 0 CODE 0 text31 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_ReadMsg 16D8 0 CODE 0 text29 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext1 145A 0 CODE 0 text1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext2 FC0 0 CODE 0 text2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext3 2B3E 0 CODE 0 text3 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3102,7 +3102,7 @@ __end_of_I2C1_DO_RESET 27E4 0 CODE 0 text123 dist/default/debug\PIC_LIGHTBLUE_EX
 LIGHTBLUE_ParseIncomingPacket@parserState 43 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART2_DefaultErrorHandler 2748 0 CODE 0 text179 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_DO_SEND_RESTART 27B2 0 CODE 0 text128 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_LIGHTBLUE_ParseIncomingPacket 192 0 CODE 0 text19 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_LIGHTBLUE_ParseIncomingPacket 192 0 CODE 0 text17 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _send_protocol_version 2AC0 0 CODE 0 text12 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 BMA253_NewAccelDataRdyZ@zNewData 7B 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -3117,7 +3117,7 @@ __Hstringtext7 0 0 ABS 0 stringtext7 -
 __Hstringtext8 0 0 ABS 0 stringtext8 -
 __Hstringtext9 0 0 ABS 0 stringtext9 -
 LIGHTBLUE_SplitByte@payload 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_EUSART2_is_tx_done 2778 0 CODE 0 text30 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_EUSART2_is_tx_done 2778 0 CODE 0 text28 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _strncmp 9C2 0 CODE 0 text59 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 SPI2_ReadBlock@block 75 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterClose 2702 0 CODE 0 text165 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3129,8 +3129,8 @@ _i2c_status 120 0 BANK2 1 bssBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEM
 _SLRCONA 1F3B 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SLRCONB 1F46 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SLRCONC 1F51 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___heap_hi 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-___heap_lo 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+___heap_hi 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+___heap_lo 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 _spi2_configuration 3088 0 STRCODE 0 stringtext5 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterStart 270E 0 CODE 0 text162 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterWrite 27EE 0 CODE 0 text117 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3147,7 +3147,7 @@ _EUSART2_ErrorHandler 166 0 BANK2 1 nvBANK2 dist/default/debug\PIC_LIGHTBLUE_EXP
 __pidataBANK1 4 0 CODE 0 idataBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __pidataBANK3 F38 0 CODE 0 idataBANK3 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 I2C1_SetBuffer@buffer 73 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_EnterDataMode 1172 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_EnterDataMode 1172 0 CODE 0 text23 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 BMA253_GetAccelDataZ@msbData 59 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_i2c_read2ByteRegister 2000 0 CODE 0 text11 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SP1BRGH 11C 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3156,7 +3156,7 @@ _SP2BRGH A1C 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SP2BRGL A1B 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 MCP9844_CalcTemperature@temperatureData 60 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _eusart2RxCount 35 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_EnterCmdMode 2F70 0 CODE 0 text26 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_EnterCmdMode 2F70 0 CODE 0 text24 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __Lclrtext 0 0 ABS 0 clrtext -
 _SSP1CON1bits 190 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SSP1CON2bits 191 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3195,7 +3195,7 @@ __end_of_I2C1_Close 2FA0 0 CODE 0 text163 dist/default/debug\PIC_LIGHTBLUE_EXPLO
 __end_of_I2C1_DO_RX 1F7A 0 CODE 0 text132 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_DO_TX B0E 0 CODE 0 text133 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART1_SetFramingErrorHandler 2826 0 CODE 0 text93 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_push_button 2AC0 0 CODE 0 text14 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_push_button 2AC0 0 CODE 0 text30 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART1_SetOverrunErrorHandler 2832 0 CODE 0 text92 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _eusart2RxHead 7C 0 COMMON 1 bssCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _eusart2RxTail 36 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3206,7 +3206,7 @@ __end_of_uart 2050 0 STRCODE 0 stringtext1 dist/default/debug\PIC_LIGHTBLUE_EXPL
 _i2c_read2ByteRegister 1F7A 0 CODE 0 text11 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 LIGHTBLUE_Send_Thermocouple@payload 4A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_flush_serial_to_ble 28EA 0 CODE 0 text51 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_EUSART2_is_tx_done 2770 0 CODE 0 text30 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_EUSART2_is_tx_done 2770 0 CODE 0 text28 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _MCP9844_CalcTemperature 13C4 0 CODE 0 text10 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 RN487X_SetOutputs@ioLowNibble 4C 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _asyncBufferSize 3E 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3229,7 +3229,7 @@ _flats 27 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.de
 _pHead 3D 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _BMA253_Initialize 1B46 0 CODE 0 text111 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 BMA253_GetAccelDataXYZ@sensorValue 5B 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_LIGHTBLUE_UpdateErrorLed 11E2 0 CODE 0 text22 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_LIGHTBLUE_UpdateErrorLed 11E2 0 CODE 0 text20 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_DO_SEND_RESTART_READ 279E 0 CODE 0 text130 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _eusart1RxCount 2E 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __pintentry 8 0 CODE 0 intentry dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3258,11 +3258,11 @@ __pbssBANK8 420 0 BANK8 1 bssBANK8 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEM
 __pbssBANK9 4A0 0 BANK9 1 bssBANK9 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _i2c1_fsmStateTable 2050 0 STRCODE 0 stringtext2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _i2c_busCollisionISR 0 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-_RN487X_SendCmd 1954 0 CODE 0 text27 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+_RN487X_SendCmd 1954 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _I2C1_DO_TX_EMPTY 1730 0 CODE 0 text137 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_MCP9844_GetTemperatureValue 2B3E 0 CODE 0 text9 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_SetAddressNackCallback 2A04 0 CODE 0 text114 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-__end_of_RN487X_SetOutputs F38 0 CODE 0 text23 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
+__end_of_RN487X_SetOutputs F38 0 CODE 0 text21 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _eusart1RxStatusBuffer BD 0 BANK1 1 bssBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X_IndicateRx 2A04 0 CODE 0 text106 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_led_state 2AA8 0 CODE 0 text32 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3276,8 +3276,8 @@ __end_of_rd1RegCompleteHandler@i2c1_master_example$F1301 2CDC 0 CODE 0 text150 d
 _SSP2DATPPS 1EC9 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterSendAck 2770 0 CODE 0 text141 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART1_SetOverrunErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___int_stack_hi 27F0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
-___int_stack_lo 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBs2jo.1\driver_tmp_15.o
+___int_stack_hi 27F0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
+___int_stack_lo 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcBsd4c.1\driver_tmp_15.o
 _OSCILLATOR_Initialize 299C 0 CODE 0 text81 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -3315,18 +3315,18 @@ text10 0 9E2 13C4 25 2
 text11 0 FBD 1F7A 43 2
 text12 0 1560 2AC0 C 2
 text13 0 D39 1A72 34 2
-text14 0 1554 2AA8 C 2
-text15 0 170F 2E1E 13 2
-text16 0 16FC 2DF8 13 2
-text21 0 15D7 2BAE F 2
-text22 0 8D5 11AA 1C 2
-text25 0 89E 113C 1B 2
-text26 0 17A1 2F42 17 2
-text27 0 CAA 1954 2E 2
-text28 0 14E2 29C4 A 2
-text29 0 13BC 2778 4 2
-text30 0 13B8 2770 4 2
-text31 0 B41 1682 2B 2
+text14 0 170F 2E1E 13 2
+text19 0 15D7 2BAE F 2
+text20 0 8D5 11AA 1C 2
+text23 0 89E 113C 1B 2
+text24 0 17A1 2F42 17 2
+text25 0 CAA 1954 2E 2
+text26 0 14E2 29C4 A 2
+text27 0 13BC 2778 4 2
+text28 0 13B8 2770 4 2
+text29 0 B41 1682 2B 2
+text30 0 1554 2AA8 C 2
+text31 0 16FC 2DF8 13 2
 text32 0 1548 2A90 C 2
 text33 0 A07 140E 26 2
 text34 0 13FC 27F8 5 2

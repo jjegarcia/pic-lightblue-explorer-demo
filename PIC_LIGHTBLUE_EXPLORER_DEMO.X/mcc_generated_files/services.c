@@ -82,7 +82,7 @@ void send_protocol_version() {
     }
 }
 
-void mirror_serial() {
+void read_ble() {
     while (RN487X_DataReady()) {
         LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
     }

@@ -21154,7 +21154,7 @@ void push_button();
 void led_state();
 void send_protocol_version();
 void intiliase_services();
-void mirror_serial();
+void read_ble();
 void spool_ble_tx();
 void spool_ble_rx();
 void flush_serial_to_ble();
@@ -21212,7 +21212,7 @@ int main(void) {
                 led_state();
                 send_protocol_version();
                 (PIR0bits.TMR0IF = 0);
-            } else mirror_serial();
+            } else read_ble();
         } else {
             spool_ble_rx();
             spool_ble_tx();

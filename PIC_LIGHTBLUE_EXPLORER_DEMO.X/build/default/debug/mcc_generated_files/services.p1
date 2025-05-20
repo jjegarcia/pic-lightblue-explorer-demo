@@ -2112,10 +2112,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 1728 ]
 }
 "85
-[; ;mcc_generated_files/services.c: 85: void mirror_serial() {
-[v _mirror_serial `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/services.c: 85: void read_ble() {
+[v _read_ble `(v ~T0 @X0 1 ef ]
 {
-[e :U _mirror_serial ]
+[e :U _read_ble ]
 [f ]
 "86
 [; ;mcc_generated_files/services.c: 86:     while (RN487X_DataReady()) {

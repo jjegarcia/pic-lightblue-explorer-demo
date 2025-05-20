@@ -21151,7 +21151,7 @@ void push_button();
 void led_state();
 void send_protocol_version();
 void intiliase_services();
-void mirror_serial();
+void read_ble();
 void spool_ble_tx();
 void spool_ble_rx();
 void flush_serial_to_ble();
