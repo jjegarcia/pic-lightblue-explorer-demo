@@ -21136,13 +21136,12 @@ typedef union {
         unsigned PUSH_BUTTON : 1;
         unsigned LED_STATE : 1;
         unsigned SEND_PROTOCOL_VERSION : 1;
-        unsigned MIRROW_SERIAL : 1;
     };
     uint8_t ServiceBits;
 }ServiceBits_t;
 
 volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
-# 76 "./mcc_generated_files/services.h"
+# 69 "./mcc_generated_files/services.h"
 void acc_flat_state();
 void thermocouple_temperature();
 void hardware_interrupt_request();

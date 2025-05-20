@@ -11,7 +11,6 @@ typedef union {
         unsigned PUSH_BUTTON                : 1;
         unsigned LED_STATE                  : 1;
         unsigned SEND_PROTOCOL_VERSION      : 1;
-        unsigned MIRROW_SERIAL              : 1;
     };
     uint8_t ServiceBits;
 }ServiceBits_t;
@@ -66,12 +65,6 @@ volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
 #define SERVICE_SEND_PROTOCOL_VERSION_Toggle()                          (SERVICE.SEND_PROTOCOL_VERSION = ~SERVICE.SEND_PROTOCOL_VERSION)
 #define FSERVICE_SEND_PROTOCOL_VERSION_GetValue()                       (SERVICE.SEND_PROTOCOL_VERSION)
 #define SERVICE_SEND_PROTOCOL_VERSION_REQUEST_Is_High()                 (SERVICE.SEND_PROTOCOL_VERSION == 1)
-
-#define SERVICE_MIRROW_SERIAL_SetHigh()                                 (SERVICE.MIRROW_SERIAL = 1)
-#define SERVICE_MIRROW_SERIAL_SetLow()                                  (SERVICE.MIRROW_SERIAL = 0)
-#define SERVICE_MIRROW_SERIAL_Toggle()                                  (SERVICE.MIRROW_SERIAL = ~SERVICE.MIRROW_SERIAL)
-#define SERVICE_MIRROW_SERIAL_GetValue()                                (SERVICE.MIRROW_SERIAL)
-#define SERVICE_MIRROW_SERIAL_REQUEST_Is_High()                         (SERVICE.MIRROW_SERIAL == 1)
 
 void acc_flat_state();
 void thermocouple_temperature();

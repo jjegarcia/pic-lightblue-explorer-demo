@@ -4,7 +4,6 @@ void intiliase_services(void) {
     SERVICE_ACC_FLAT_STATE_SetHigh();
     SERVICE_THERMOCOUPLE_TEMPERATURE_SetHigh();
     SERVICE_HARDWARE_INTERRUPT_REQUEST_SetHigh();
-    SERVICE_MIRROW_SERIAL_SetHigh();
 }
 
 void acc_flat_state() {
@@ -84,12 +83,10 @@ void send_protocol_version() {
 }
 
 void mirror_serial() {
-    if (SERVICE_MIRROW_SERIAL_REQUEST_Is_High()) {
-        while (RN487X_DataReady()) {
-            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-        }
-        flush_ble_to_serial();
+    while (RN487X_DataReady()) {
+        LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
     }
+    flush_ble_to_serial();
 }
 
 void spool_ble_rx() {
@@ -109,8 +106,8 @@ void flush_serial_to_ble() {
     spool_ble_tx();
 }
 
-void flush_ble_to_serial(){
-        while (uart[UART_CDC].DataReady()) {
+void flush_ble_to_serial() {
+    while (uart[UART_CDC].DataReady()) {
         lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
         if ((lightBlueSerial[serialIndex] == '\r')
                 || (lightBlueSerial[serialIndex] == '\n')

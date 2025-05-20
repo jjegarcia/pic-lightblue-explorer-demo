@@ -21139,13 +21139,12 @@ typedef union {
         unsigned PUSH_BUTTON : 1;
         unsigned LED_STATE : 1;
         unsigned SEND_PROTOCOL_VERSION : 1;
-        unsigned MIRROW_SERIAL : 1;
     };
     uint8_t ServiceBits;
 }ServiceBits_t;
 
 volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
-# 76 "./mcc_generated_files/services.h"
+# 69 "./mcc_generated_files/services.h"
 void acc_flat_state();
 void thermocouple_temperature();
 void hardware_interrupt_request();
@@ -21189,7 +21188,6 @@ void intiliase_services(void) {
     (SERVICE.ACC_FLAT_STATE = 1);
     (SERVICE.THERMOCOUPLE_TEMPERATURE = 1);
     (SERVICE.HARDWARE_INTERRUPT_REQUEST = 1);
-    (SERVICE.MIRROW_SERIAL = 1);
 }
 
 void acc_flat_state() {
@@ -21269,12 +21267,10 @@ void send_protocol_version() {
 }
 
 void mirror_serial() {
-    if ((SERVICE.MIRROW_SERIAL == 1)) {
-        while (RN487X_DataReady()) {
-            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-        }
-        flush_ble_to_serial();
+    while (RN487X_DataReady()) {
+        LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
     }
+    flush_ble_to_serial();
 }
 
 void spool_ble_rx() {
@@ -21294,8 +21290,8 @@ void flush_serial_to_ble() {
     spool_ble_tx();
 }
 
-void flush_ble_to_serial(){
-        while (uart[UART_CDC].DataReady()) {
+void flush_ble_to_serial() {
+    while (uart[UART_CDC].DataReady()) {
         lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
         if ((lightBlueSerial[serialIndex] == '\r')
                 || (lightBlueSerial[serialIndex] == '\n')

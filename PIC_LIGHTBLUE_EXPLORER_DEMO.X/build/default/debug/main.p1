@@ -41,8 +41,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1699 . . FeatureBits ]
 "5 ./mcc_generated_files/services.h
 [; ;./mcc_generated_files/services.h: 5:     struct {
-[s S1702 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1702 . ACC_FLAT_STATE THERMOCOUPLE_TEMPERATURE HARDWARE_INTERRUPT_REQUEST TEMPERATURE_SENSOR ACCELEROMETER_SENSOR PUSH_BUTTON LED_STATE SEND_PROTOCOL_VERSION MIRROW_SERIAL ]
+[s S1702 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1702 . ACC_FLAT_STATE THERMOCOUPLE_TEMPERATURE HARDWARE_INTERRUPT_REQUEST TEMPERATURE_SENSOR ACCELEROMETER_SENSOR PUSH_BUTTON LED_STATE SEND_PROTOCOL_VERSION ]
 "4
 [; ;./mcc_generated_files/services.h: 4: typedef union {
 [u S1701 `S1702 1 `uc 1 ]
@@ -72,16 +72,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46 ./mcc_generated_files/application/LIGHTBLUE_service.h
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 46: void LIGHTBLUE_Initialize(void);
 [v _LIGHTBLUE_Initialize `(v ~T0 @X0 0 ef ]
-"84 ./mcc_generated_files/services.h
-[; ;./mcc_generated_files/services.h: 84: void intiliase_services();
+"77 ./mcc_generated_files/services.h
+[; ;./mcc_generated_files/services.h: 77: void intiliase_services();
 [v _intiliase_services `(v ~T0 @X0 0 e? ]
 "75 ./mcc_generated_files/rn487x/rn487x_interface.h
 [v _RN487X_IsConnected `(a ~T0 @X0 0 ef ]
-"76 ./mcc_generated_files/services.h
-[; ;./mcc_generated_files/services.h: 76: void acc_flat_state();
+"69 ./mcc_generated_files/services.h
+[; ;./mcc_generated_files/services.h: 69: void acc_flat_state();
 [v _acc_flat_state `(v ~T0 @X0 0 e? ]
-"78
-[; ;./mcc_generated_files/services.h: 78: void hardware_interrupt_request();
+"71
+[; ;./mcc_generated_files/services.h: 71: void hardware_interrupt_request();
 [v _hardware_interrupt_request `(v ~T0 @X0 0 e? ]
 "22417 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22417:     struct {
@@ -94,32 +94,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22424
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 22424: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
 [v _PIR0bits `VS1020 ~T0 @X0 0 e@1804 ]
-"77 ./mcc_generated_files/services.h
-[; ;./mcc_generated_files/services.h: 77: void thermocouple_temperature();
+"70 ./mcc_generated_files/services.h
+[; ;./mcc_generated_files/services.h: 70: void thermocouple_temperature();
 [v _thermocouple_temperature `(v ~T0 @X0 0 e? ]
-"79
-[; ;./mcc_generated_files/services.h: 79: void temperature_sensor();
+"72
+[; ;./mcc_generated_files/services.h: 72: void temperature_sensor();
 [v _temperature_sensor `(v ~T0 @X0 0 e? ]
-"80
-[; ;./mcc_generated_files/services.h: 80: void accelerometer_sensor();
+"73
+[; ;./mcc_generated_files/services.h: 73: void accelerometer_sensor();
 [v _accelerometer_sensor `(v ~T0 @X0 0 e? ]
-"81
-[; ;./mcc_generated_files/services.h: 81: void push_button();
+"74
+[; ;./mcc_generated_files/services.h: 74: void push_button();
 [v _push_button `(v ~T0 @X0 0 e? ]
-"82
-[; ;./mcc_generated_files/services.h: 82: void led_state();
+"75
+[; ;./mcc_generated_files/services.h: 75: void led_state();
 [v _led_state `(v ~T0 @X0 0 e? ]
-"83
-[; ;./mcc_generated_files/services.h: 83: void send_protocol_version();
+"76
+[; ;./mcc_generated_files/services.h: 76: void send_protocol_version();
 [v _send_protocol_version `(v ~T0 @X0 0 e? ]
-"85
-[; ;./mcc_generated_files/services.h: 85: void mirror_serial();
+"78
+[; ;./mcc_generated_files/services.h: 78: void mirror_serial();
 [v _mirror_serial `(v ~T0 @X0 0 e? ]
-"87
-[; ;./mcc_generated_files/services.h: 87: void spool_ble_rx();
+"80
+[; ;./mcc_generated_files/services.h: 80: void spool_ble_rx();
 [v _spool_ble_rx `(v ~T0 @X0 0 e? ]
-"86
-[; ;./mcc_generated_files/services.h: 86: void spool_ble_tx();
+"79
+[; ;./mcc_generated_files/services.h: 79: void spool_ble_tx();
 [v _spool_ble_tx `(v ~T0 @X0 0 e? ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
@@ -1758,8 +1758,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"19 ./mcc_generated_files/services.h
-[; ;./mcc_generated_files/services.h: 19: volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
+"18 ./mcc_generated_files/services.h
+[; ;./mcc_generated_files/services.h: 18: volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
 [v _SERVICE `VS1701 ~T0 @X0 1 e ]
 [i _SERVICE
 :U 1
