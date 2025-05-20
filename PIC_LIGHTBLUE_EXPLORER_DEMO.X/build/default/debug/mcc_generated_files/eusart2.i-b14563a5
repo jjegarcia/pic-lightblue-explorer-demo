@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/services.c"
+# 1 "mcc_generated_files/eusart2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,18 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/services.c" 2
-# 1 "mcc_generated_files/services.h" 1
-# 1 "mcc_generated_files/../main.h" 1
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 1 "mcc_generated_files/../main.h" 2
-
-
-
-
-
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/eusart2.c" 2
+# 50 "mcc_generated_files/eusart2.c"
+# 1 "mcc_generated_files/eusart2.h" 1
+# 54 "mcc_generated_files/eusart2.h"
 # 1 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -20295,312 +20287,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 54 "mcc_generated_files/eusart2.h" 2
 
-
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 306 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 318 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 331 "mcc_generated_files/pin_manager.h"
-void IOCAF6_ISR(void);
-# 354 "mcc_generated_files/pin_manager.h"
-void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 378 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF6_InterruptHandler)(void);
-# 402 "mcc_generated_files/pin_manager.h"
-void IOCAF6_DefaultInterruptHandler(void);
-# 414 "mcc_generated_files/pin_manager.h"
-void IOCAF7_ISR(void);
-# 434 "mcc_generated_files/pin_manager.h"
-void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
-# 458 "mcc_generated_files/pin_manager.h"
-extern void (*IOCAF7_InterruptHandler)(void);
-# 482 "mcc_generated_files/pin_manager.h"
-void IOCAF7_DefaultInterruptHandler(void);
-
-void IOCAF7_DefaultInterruptHandler(void);
-typedef union {
-    struct {
-        unsigned ACC : 1;
-        unsigned HARDWARE : 1;
-        unsigned UNDEFINED : 6;
-    };
-    uint8_t INTERRUPTbits;
-}INTERRUPTbits_t;
-
-volatile INTERRUPTbits_t INTERRUPTbits;
-# 51 "./mcc_generated_files/mcc.h" 2
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 143 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef short ssize_t;
-# 255 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 409 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-
-
-
-
-
-int ungetc(int, FILE *);
-int getch(void);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-
-
-
-
-void putch(char);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/i2c1_master.h" 1
-# 58 "mcc_generated_files/i2c1_master.h"
-typedef enum {
-    I2C1_NOERR,
-    I2C1_BUSY,
-    I2C1_FAIL
-
-
-} i2c1_error_t;
-
-typedef enum
-{
-    I2C1_STOP=1,
-    I2C1_RESTART_READ,
-    I2C1_RESTART_WRITE,
-    I2C1_CONTINUE,
-    I2C1_RESET_LINK
-} i2c1_operations_t;
-
-typedef uint8_t i2c1_address_t;
-typedef i2c1_operations_t (*i2c1_callback_t)(void *funPtr);
-
-
-i2c1_operations_t I2C1_CallbackReturnStop(void *funPtr);
-i2c1_operations_t I2C1_CallbackReturnReset(void *funPtr);
-i2c1_operations_t I2C1_CallbackRestartWrite(void *funPtr);
-i2c1_operations_t I2C1_CallbackRestartRead(void *funPtr);
-
-
-
-
-
-
-void I2C1_Initialize(void);
-# 101 "mcc_generated_files/i2c1_master.h"
-i2c1_error_t I2C1_Open(i2c1_address_t address);
-# 111 "mcc_generated_files/i2c1_master.h"
-i2c1_error_t I2C1_Close(void);
-# 123 "mcc_generated_files/i2c1_master.h"
-i2c1_error_t I2C1_MasterOperation(_Bool read);
-
-
-
-
-i2c1_error_t I2C1_MasterWrite(void);
-
-
-
-
-i2c1_error_t I2C1_MasterRead(void);
-# 142 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetTimeout(uint8_t timeOut);
-# 152 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetDataCompleteCallback(i2c1_callback_t cb, void *ptr);
-# 174 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetWriteCollisionCallback(i2c1_callback_t cb, void *ptr);
-# 184 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
-# 194 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
-# 204 "mcc_generated_files/i2c1_master.h"
-void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/spi2.h" 1
-# 59 "mcc_generated_files/spi2.h"
-typedef enum {
-    SPI2_DEFAULT
-} spi2_modes_t;
-
-void SPI2_Initialize(void);
-_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
-void SPI2_Close(void);
-uint8_t SPI2_ExchangeByte(uint8_t data);
-void SPI2_ExchangeBlock(void *block, size_t blockSize);
-void SPI2_WriteBlock(void *block, size_t blockSize);
-void SPI2_ReadBlock(void *block, size_t blockSize);
-void SPI2_WriteByte(uint8_t byte);
-uint8_t SPI2_ReadByte(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/tmr0.h" 1
-# 100 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 129 "mcc_generated_files/tmr0.h"
-void TMR0_StartTimer(void);
-# 161 "mcc_generated_files/tmr0.h"
-void TMR0_StopTimer(void);
-# 197 "mcc_generated_files/tmr0.h"
-uint16_t TMR0_ReadTimer(void);
-# 236 "mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint16_t timerVal);
-# 272 "mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 310 "mcc_generated_files/tmr0.h"
-_Bool TMR0_HasOverflowOccured(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/eusart2.h" 1
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 55 "mcc_generated_files/eusart2.h" 2
 # 75 "mcc_generated_files/eusart2.h"
 typedef union {
     struct {
@@ -20653,658 +20343,226 @@ void EUSART2_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart2.h"
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
+# 50 "mcc_generated_files/eusart2.c" 2
+# 62 "mcc_generated_files/eusart2.c"
+volatile uint8_t eusart2TxHead = 0;
+volatile uint8_t eusart2TxTail = 0;
+volatile uint8_t eusart2TxBuffer[8];
+volatile uint8_t eusart2TxBufferRemaining;
 
-# 1 "mcc_generated_files/eusart1.h" 1
-# 76 "mcc_generated_files/eusart1.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}eusart1_status_t;
-
-
-
-
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
+volatile uint8_t eusart2RxHead = 0;
+volatile uint8_t eusart2RxTail = 0;
+volatile uint8_t eusart2RxBuffer[8];
+volatile eusart2_status_t eusart2RxStatusBuffer[8];
+volatile uint8_t eusart2RxCount;
+volatile eusart2_status_t eusart2RxLastError;
 
 
 
 
-extern void (*EUSART1_TxDefaultInterruptHandler)(void);
-extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-# 118 "mcc_generated_files/eusart1.h"
-void EUSART1_Initialize(void);
-# 166 "mcc_generated_files/eusart1.h"
-_Bool EUSART1_is_tx_ready(void);
-# 214 "mcc_generated_files/eusart1.h"
-_Bool EUSART1_is_rx_ready(void);
-# 261 "mcc_generated_files/eusart1.h"
-_Bool EUSART1_is_tx_done(void);
-# 309 "mcc_generated_files/eusart1.h"
-eusart1_status_t EUSART1_get_last_status(void);
-# 329 "mcc_generated_files/eusart1.h"
-uint8_t EUSART1_Read(void);
-# 349 "mcc_generated_files/eusart1.h"
-void EUSART1_Write(uint8_t txData);
-# 370 "mcc_generated_files/eusart1.h"
-void EUSART1_Transmit_ISR(void);
-# 391 "mcc_generated_files/eusart1.h"
-void EUSART1_Receive_ISR(void);
-# 412 "mcc_generated_files/eusart1.h"
-void EUSART1_RxDataHandler(void);
-# 430 "mcc_generated_files/eusart1.h"
-void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 448 "mcc_generated_files/eusart1.h"
-void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 466 "mcc_generated_files/eusart1.h"
-void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 486 "mcc_generated_files/eusart1.h"
-void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 506 "mcc_generated_files/eusart1.h"
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 60 "./mcc_generated_files/mcc.h" 2
+void (*EUSART2_TxDefaultInterruptHandler)(void);
+void (*EUSART2_RxDefaultInterruptHandler)(void);
 
-# 1 "mcc_generated_files/delay.h" 1
-# 34 "mcc_generated_files/delay.h"
-void DELAY_milliseconds(uint16_t milliseconds);
-void DELAY_microseconds(uint16_t microseconds);
-# 61 "./mcc_generated_files/mcc.h" 2
+void (*EUSART2_FramingErrorHandler)(void);
+void (*EUSART2_OverrunErrorHandler)(void);
+void (*EUSART2_ErrorHandler)(void);
 
-# 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
-# 37 "mcc_generated_files/drivers/i2c_simple_master.h"
-uint8_t i2c_read1ByteRegister(i2c1_address_t address, uint8_t reg);
-uint16_t i2c_read2ByteRegister(i2c1_address_t address, uint8_t reg);
-void i2c_write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data);
-void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
+void EUSART2_DefaultFramingErrorHandler(void);
+void EUSART2_DefaultOverrunErrorHandler(void);
+void EUSART2_DefaultErrorHandler(void);
 
-void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
-void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
-void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
-# 62 "./mcc_generated_files/mcc.h" 2
-# 77 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 90 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 103 "./mcc_generated_files/mcc.h"
-void PMD_Initialize(void);
-# 6 "mcc_generated_files/../main.h" 2
-
-# 1 "./mcc_generated_files/application/LIGHTBLUE_service.h" 1
-# 27 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 421 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-
-
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 27 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
-
-
-
-# 1 "./mcc_generated_files/application/../rn487x/rn487x.h" 1
-# 31 "./mcc_generated_files/application/../rn487x/rn487x.h"
-# 1 "./mcc_generated_files/application/../rn487x/rn487x.h" 1
-# 31 "./mcc_generated_files/application/../rn487x/rn487x.h" 2
-# 53 "./mcc_generated_files/application/../rn487x/rn487x.h"
-typedef union
+void EUSART2_Initialize(void)
 {
-    uint8_t gpioBitMap;
-    struct
+
+    PIE3bits.RC2IE = 0;
+    EUSART2_SetRxInterruptHandler(EUSART2_Receive_ISR);
+    PIE3bits.TX2IE = 0;
+    EUSART2_SetTxInterruptHandler(EUSART2_Transmit_ISR);
+
+
+
+    BAUD2CON = 0x08;
+
+
+    RC2STA = 0x90;
+
+
+    TX2STA = 0x24;
+
+
+    SP2BRGL = 0x40;
+
+
+    SP2BRGH = 0x03;
+
+
+    EUSART2_SetFramingErrorHandler(EUSART2_DefaultFramingErrorHandler);
+    EUSART2_SetOverrunErrorHandler(EUSART2_DefaultOverrunErrorHandler);
+    EUSART2_SetErrorHandler(EUSART2_DefaultErrorHandler);
+
+    eusart2RxLastError.status = 0;
+
+
+    eusart2TxHead = 0;
+    eusart2TxTail = 0;
+    eusart2TxBufferRemaining = sizeof(eusart2TxBuffer);
+
+    eusart2RxHead = 0;
+    eusart2RxTail = 0;
+    eusart2RxCount = 0;
+
+
+    PIE3bits.RC2IE = 1;
+}
+
+_Bool EUSART2_is_tx_ready(void)
+{
+    return (eusart2TxBufferRemaining ? 1 : 0);
+}
+
+_Bool EUSART2_is_rx_ready(void)
+{
+    return (eusart2RxCount ? 1 : 0);
+}
+
+_Bool EUSART2_is_tx_done(void)
+{
+    return TX2STAbits.TRMT;
+}
+
+eusart2_status_t EUSART2_get_last_status(void){
+    return eusart2RxLastError;
+}
+
+uint8_t EUSART2_Read(void)
+{
+    uint8_t readValue = 0;
+
+    while(0 == eusart2RxCount)
     {
-        unsigned p2_2 : 1;
-        unsigned p2_4 : 1;
-        unsigned p3_5 : 1;
-        unsigned p1_2 : 1;
-        unsigned p1_3 : 1;
-        unsigned reserved : 3;
-    };
-}rn487x_gpio_ioBitMap_t;
+    }
 
+    eusart2RxLastError = eusart2RxStatusBuffer[eusart2RxTail];
 
-
-
-
-
-typedef union
-{
-    uint8_t gpioStateBitMap;
-    struct
+    readValue = eusart2RxBuffer[eusart2RxTail++];
+    if(sizeof(eusart2RxBuffer) <= eusart2RxTail)
     {
-        unsigned p2_2_state : 1;
-        unsigned p2_4_state : 1;
-        unsigned p3_5_state : 1;
-        unsigned p1_2_state : 1;
-        unsigned p1_3_state : 1;
-        unsigned reserved : 3;
-    };
-}rn487x_gpio_stateBitMap_t;
+        eusart2RxTail = 0;
+    }
+    PIE3bits.RC2IE = 0;
+    eusart2RxCount--;
+    PIE3bits.RC2IE = 1;
 
+    return readValue;
+}
 
-
-
-
-
-typedef union
+void EUSART2_Write(uint8_t txData)
 {
-    uint16_t gpioMap;
-    struct
+    while(0 == eusart2TxBufferRemaining)
     {
-        rn487x_gpio_ioBitMap_t ioBitMap;
-        rn487x_gpio_stateBitMap_t ioStateBitMap;
-    };
-}rn487x_gpio_bitmap_t;
-# 111 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_Init(void);
-# 124 "./mcc_generated_files/application/../rn487x/rn487x.h"
-void RN487X_SendCmd(const uint8_t *cmd, uint8_t cmdLen);
-# 140 "./mcc_generated_files/application/../rn487x/rn487x.h"
-uint8_t RN487X_GetCmd(const char *getCmd, uint8_t getCmdLen, char *getCmdResp);
-# 156 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_ReadMsg(const uint8_t *expectedMsg, uint8_t msgLen);
-# 168 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_ReadDefaultResponse(void);
-# 182 "./mcc_generated_files/application/../rn487x/rn487x.h"
-void RN487X_WaitForMsg(const char *expectedMsg, uint8_t msgLen);
-# 194 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_EnterCmdMode(void);
-# 206 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_EnterDataMode(void);
-# 219 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_SetOutputs(rn487x_gpio_bitmap_t bitMap);
-# 232 "./mcc_generated_files/application/../rn487x/rn487x.h"
-rn487x_gpio_stateBitMap_t RN487X_GetInputsValues(rn487x_gpio_ioBitMap_t getGPIOs);
-# 245 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_RebootCmd(void);
-# 257 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_Disconnect(void);
-# 271 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_SetAsyncMessageHandler(char* pBuffer, uint8_t len);
-# 283 "./mcc_generated_files/application/../rn487x/rn487x.h"
-_Bool RN487X_DataReady(void);
-# 293 "./mcc_generated_files/application/../rn487x/rn487x.h"
-uint8_t RN487X_Read(void);
-# 30 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
+    }
 
-# 1 "./mcc_generated_files/application/../rn487x/rn487x_interface.h" 1
-# 37 "./mcc_generated_files/application/../rn487x/rn487x_interface.h"
-typedef enum
-{
-    TEST_MODE = 0x00,
-    APPLICATION_MODE = 0x01
-}RN487X_SYSTEM_MODES_t;
+    if(0 == PIE3bits.TX2IE)
+    {
+        TX2REG = txData;
+    }
+    else
+    {
+        PIE3bits.TX2IE = 0;
+        eusart2TxBuffer[eusart2TxHead++] = txData;
+        if(sizeof(eusart2TxBuffer) <= eusart2TxHead)
+        {
+            eusart2TxHead = 0;
+        }
+        eusart2TxBufferRemaining--;
+    }
+    PIE3bits.TX2IE = 1;
+}
 
 
-
-
-
-typedef struct
+void EUSART2_Transmit_ISR(void)
 {
 
-    void (*Write)(uint8_t);
-    uint8_t (*Read)(void);
-    _Bool (*TransmitDone)(void);
-    _Bool (*DataReady)(void);
 
-    void (*IndicateRx)(_Bool);
+    if(sizeof(eusart2TxBuffer) > eusart2TxBufferRemaining)
+    {
+        TX2REG = eusart2TxBuffer[eusart2TxTail++];
+        if(sizeof(eusart2TxBuffer) <= eusart2TxTail)
+        {
+            eusart2TxTail = 0;
+        }
+        eusart2TxBufferRemaining++;
+    }
+    else
+    {
+        PIE3bits.TX2IE = 0;
+    }
+}
 
-    void (*ResetModule)(_Bool);
-
-    void (*SetSystemMode)(RN487X_SYSTEM_MODES_t);
-
-    void (*DelayMs)(uint16_t);
-
-    void (*AsyncHandler)(char*);
-}iRN487X_FunctionPtrs_t;
-
-extern const iRN487X_FunctionPtrs_t RN487X;
-# 75 "./mcc_generated_files/application/../rn487x/rn487x_interface.h"
-_Bool RN487X_IsConnected(void);
-# 31 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
-
-# 1 "./mcc_generated_files/application/BMA253_accel.h" 1
-# 223 "./mcc_generated_files/application/BMA253_accel.h"
-typedef struct
+void EUSART2_Receive_ISR(void)
 {
-    int16_t x;
-    int16_t y;
-    int16_t z;
-}BMA253_ACCEL_DATA_t;
-# 237 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_Initialize(void);
-# 246 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataX(int16_t *xAccelData);
-# 255 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataY(int16_t *yAccelData);
-# 264 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataZ(int16_t *zAccelData);
-# 275 "./mcc_generated_files/application/BMA253_accel.h"
-void BMA253_GetAccelDataXYZ(BMA253_ACCEL_DATA_t *accelData);
 
+    eusart2RxStatusBuffer[eusart2RxHead].status = 0;
 
-
-
-
-
-uint8_t BMA253_GetAccelChipId(void);
-
-typedef union {
-    struct {
-        unsigned UNDEFINED : 7;
-        unsigned FLAT : 1;
-    };
-    uint8_t AccelerometerInterruptBits;
-}AccelerometerInterruptBits_t;
-volatile AccelerometerInterruptBits_t accelerometerInterruptBits;
-# 32 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
-
-# 1 "./mcc_generated_files/application/MCP9844_temp_sensor.h" 1
-# 112 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
-void MCP9844_GetTemperatureValue(int16_t *temperature);
-# 121 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
-uint16_t MCP9844_GetManufacture(void);
-# 130 "./mcc_generated_files/application/MCP9844_temp_sensor.h"
-uint16_t MCP9844_GetDevice(void);
-# 33 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
-
-
-# 1 "./mcc_generated_files/application/../drivers/uart.h" 1
-# 34 "./mcc_generated_files/application/../drivers/uart.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
-# 34 "./mcc_generated_files/application/../drivers/uart.h" 2
-
-
-
-
-
-
-
-
-typedef enum {
-    UART_CDC ,
-    UART_BLE
-} uart_configurations_t;
-
-
-
-
-
-typedef struct { uint8_t (*Read)(void); void (*Write)(uint8_t txdata); _Bool (*TransmitReady)(void); _Bool (*DataReady)(void); void (*SetTxISR)(void (* interruptHandler)(void)); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); _Bool (*TransmitDone)(void); void (*TxDefaultISR)(void); void (*Initialize)(void); } uart_functions_t;
-
-extern const uart_functions_t uart[];
-# 35 "./mcc_generated_files/application/LIGHTBLUE_service.h" 2
-# 46 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_Initialize(void);
-
-void setProtocol_Features(void);
-void LIGHTBLUE_Hardware_Interrupt();
-# 63 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_TemperatureSensor(void);
-# 77 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_AccelSensor(void);
-# 88 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_PushButton(void);
-# 102 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_LedState(void);
-# 113 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendProtocolVersion(void);
-# 124 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-void LIGHTBLUE_SendSerialData(char* serialData);
-# 277 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-typedef enum {
-    PROTOCOL_VERSION_ID = 'V',
-    LED_STATE_ID = 'L',
-    BUTTON_STATE_ID = 'P',
-    TEMPERATURE_DATA_ID = 'T',
-    ACCEL_DATA_ID = 'X',
-    SERIAL_DATA_ID = 'S',
-    ERROR_ID = 'R',
-    UI_CONFIG_DATA_ID = 'U',
-    ACC_FLAT_STATE_ID = 'F',
-    THERMOCOUPLE_TEMPERATURE_ID = 'K',
-    RESET_REQUEST_ID = 'O',
-    BUZZ_REQUEST_ID = 'B',
-    ALERT_REQUEST_ID = 'A',
-    HARDWARE_INTERRUPT_REQUEST_ID = 'H'
-} PROTOCOL_PACKET_TYPES_t;
-# 301 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-typedef enum {
-    IDLE = 0,
-    SEQUENCE_NUMBER = 1,
-    PACKET_ID = 2,
-    PAYLOAD_SIZE_0 = 3,
-    PAYLOAD_SIZE_1 = 4,
-    PAYLOAD_0 = 5,
-    PAYLOAD_1 = 6
-
-} PACKET_PARSER_STATE_t;
-
-const char * const protocol_version_number = "1.1.0";
-static char _hex[] = "0123456789ABCDEF";
-static uint8_t sequenceNumber = 0;
-static volatile rn487x_gpio_bitmap_t bitMap;
-# 331 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-static void LIGHTBLUE_SendPacket(char packetID, char* payload);
-# 340 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-static void LIGHTBLUE_SplitWord(char* payload, int16_t value);
-
-
-
-
-
-
-
-static void LIGHTBLUE_SplitByte(char* payload, int8_t value);
-
-
-
-
-
-
-
-static uint8_t LIGHTBLUE_GetButtonValue(void);
-
-
-
-
-
-
-static uint8_t LIGHTBLUE_GetAccState(void);
-# 373 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-static uint8_t LIGHTBLUE_GetDataLedValue(void);
-# 382 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-static uint8_t LIGHTBLUE_GetErrorLedValue(void);
-
-
-
-
-
-
-
-static void LIGHTBLUE_SetErrorLedValue(_Bool value);
-
-
-
-
-
-
-
-static void LIGHTBLUE_UpdateErrorLed(void);
-# 412 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-static void LIGHTBLUE_PerformAction(char id, uint8_t data);
-
-void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
-
-void LIGHTBLUE_AccState(void);
-void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
-
-typedef union {
-    struct {
-        unsigned ACC_FLAT_STATE : 1;
-        unsigned THERMOCOUPLE_TEMPERATURE : 1;
-        unsigned BUZZ_REQUEST : 1;
-        unsigned ALERT_REQUEST : 1;
-        unsigned HARDWARE_INTERRUPT_REQUEST : 1;
-        unsigned LED_STATE : 1;
-        unsigned RESET_REQUEST : 1;
-        unsigned SERIAL_DATA : 1;
-    };
-    uint8_t FeatureBits;
-}FeatureBits_t;
-
-volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
-# 485 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
-# 7 "mcc_generated_files/../main.h" 2
-
-
-
-
-
-
-# 1 "./mcc_generated_files/services.h" 1
-# 1 "mcc_generated_files/../main.h" 1
-# 1 "./mcc_generated_files/services.h" 2
-
-
-
-typedef union {
-    struct {
-        unsigned ACC_FLAT_STATE : 1;
-        unsigned THERMOCOUPLE_TEMPERATURE : 1;
-        unsigned HARDWARE_INTERRUPT_REQUEST : 1;
-        unsigned TEMPERATURE_SENSOR : 1;
-        unsigned ACCELEROMETER_SENSOR : 1;
-        unsigned PUSH_BUTTON : 1;
-        unsigned LED_STATE : 1;
-        unsigned SEND_PROTOCOL_VERSION : 1;
-        unsigned MIRROW_SERIAL : 1;
-    };
-    uint8_t ServiceBits;
-}ServiceBits_t;
-
-volatile ServiceBits_t SERVICE = { .ServiceBits = 0 };
-# 76 "./mcc_generated_files/services.h"
-void acc_flat_state();
-void thermocouple_temperature();
-void hardware_interrupt_request();
-void temperature_sensor();
-void accelerometer_sensor();
-void push_button();
-void led_state();
-void send_protocol_version();
-void intiliase_services();
-void mirror_serial();
-void spool_ble_tx();
-void spool_ble_rx();
-void flush_serial_to_ble();
-void flush_ble_to_serial();
-# 13 "mcc_generated_files/../main.h" 2
-# 35 "mcc_generated_files/../main.h"
-static char statusBuffer[(80)];
-static char lightBlueSerial[(80)];
-static uint8_t serialIndex;
-
-void service_acceleremoterInterrupt(void);
-void service_thermocouple(void);
-void service_pushed(void);
-void service_acceleremoterInterrupt(void);
-
-_Bool pushed = 0;
-
-
-
-
-
-
-
-_Bool sendSpiReadRequest = 0;
-uint8_t flats = 0;
-# 1 "./mcc_generated_files/services.h" 2
-# 1 "mcc_generated_files/services.c" 2
-
-
-void intiliase_services(void) {
-    (SERVICE.ACC_FLAT_STATE = 1);
-    (SERVICE.THERMOCOUPLE_TEMPERATURE = 1);
-    (SERVICE.HARDWARE_INTERRUPT_REQUEST = 1);
-    (SERVICE.MIRROW_SERIAL = 1);
-}
-
-void acc_flat_state() {
-    if ((SERVICE.ACC_FLAT_STATE == 1)) {
-        if ((INTERRUPTbits.ACC == 1)) {
-            (INTERRUPTbits.ACC = 0);
-            (accelerometerInterruptBits.FLAT = 1);
-            flats++;
-            if (flats > 1) {
-                (accelerometerInterruptBits.FLAT = 0);
-                LIGHTBLUE_AccState();
-                flush_serial_to_ble();
-                flats = 0;
-            }
-        }
+    if(RC2STAbits.FERR){
+        eusart2RxStatusBuffer[eusart2RxHead].ferr = 1;
+        EUSART2_FramingErrorHandler();
     }
-}
 
-void thermocouple_temperature() {
-    if ((SERVICE.THERMOCOUPLE_TEMPERATURE == 1)) {
-        static uint8_t data[4];
-        do { LATCbits.LATC0 = 0; } while(0);
-        if (SPI2_Open(0)) {
-            sendSpiReadRequest = 0;
-            SPI2_ReadBlock(data, 4);
-            do { LATCbits.LATC0 = 1; } while(0);
-            LIGHTBLUE_Send_Thermocouple(data);
-            flush_serial_to_ble();
-            SPI2_Close();
-        }
+    if(RC2STAbits.OERR){
+        eusart2RxStatusBuffer[eusart2RxHead].oerr = 1;
+        EUSART2_OverrunErrorHandler();
     }
-}
 
-void hardware_interrupt_request() {
-    if ((SERVICE.HARDWARE_INTERRUPT_REQUEST == 1)) {
-        if ((pushed==1)) {
-            LIGHTBLUE_Hardware_Interrupt();
-            flush_serial_to_ble();
-            (pushed = 0);
-        }
+    if(eusart2RxStatusBuffer[eusart2RxHead].status){
+        EUSART2_ErrorHandler();
+    } else {
+        EUSART2_RxDataHandler();
     }
+
+
 }
 
-void temperature_sensor() {
-    if ((SERVICE.TEMPERATURE_SENSOR == 1)) {
-        LIGHTBLUE_TemperatureSensor();
-        flush_serial_to_ble();
+void EUSART2_RxDataHandler(void){
+
+    eusart2RxBuffer[eusart2RxHead++] = RC2REG;
+    if(sizeof(eusart2RxBuffer) <= eusart2RxHead)
+    {
+        eusart2RxHead = 0;
     }
+    eusart2RxCount++;
 }
 
-void accelerometer_sensor() {
-    if ((SERVICE.ACCELEROMETER_SENSOR == 1)) {
-        LIGHTBLUE_AccelSensor();
-        flush_serial_to_ble();
-    }
+void EUSART2_DefaultFramingErrorHandler(void){}
+
+void EUSART2_DefaultOverrunErrorHandler(void){
+
+
+    RC2STAbits.CREN = 0;
+    RC2STAbits.CREN = 1;
+
 }
 
-void push_button() {
-    if ((SERVICE.PUSH_BUTTON == 1)) {
-        LIGHTBLUE_PushButton();
-        flush_serial_to_ble();
-    }
+void EUSART2_DefaultErrorHandler(void){
+    EUSART2_RxDataHandler();
 }
 
-void led_state() {
-    if ((SERVICE.LED_STATE == 1)) {
-        LIGHTBLUE_LedState();
-        flush_serial_to_ble();
-    }
+void EUSART2_SetFramingErrorHandler(void (* interruptHandler)(void)){
+    EUSART2_FramingErrorHandler = interruptHandler;
 }
 
-void send_protocol_version() {
-    if ((SERVICE.SEND_PROTOCOL_VERSION == 1)) {
-        LIGHTBLUE_SendProtocolVersion();
-        flush_serial_to_ble();
-    }
+void EUSART2_SetOverrunErrorHandler(void (* interruptHandler)(void)){
+    EUSART2_OverrunErrorHandler = interruptHandler;
 }
 
-void mirror_serial() {
-    if ((SERVICE.MIRROW_SERIAL == 1)) {
-        while (RN487X_DataReady()) {
-            LIGHTBLUE_ParseIncomingPacket(RN487X_Read());
-        }
-        flush_ble_to_serial();
-    }
+void EUSART2_SetErrorHandler(void (* interruptHandler)(void)){
+    EUSART2_ErrorHandler = interruptHandler;
 }
 
-void spool_ble_rx() {
-    while (RN487X_DataReady()) {
-        uart[UART_CDC].Write(RN487X_Read());
-    }
+void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void)){
+    EUSART2_TxDefaultInterruptHandler = interruptHandler;
 }
 
-void spool_ble_tx() {
-    while (uart[UART_CDC].DataReady()) {
-        RN487X.Write(uart[UART_CDC].Read());
-    }
-}
-
-void flush_serial_to_ble() {
-    spool_ble_rx();
-    spool_ble_tx();
-}
-
-void flush_ble_to_serial(){
-        while (uart[UART_CDC].DataReady()) {
-        lightBlueSerial[serialIndex] = uart[UART_CDC].Read();
-        if ((lightBlueSerial[serialIndex] == '\r')
-                || (lightBlueSerial[serialIndex] == '\n')
-                || (serialIndex == (sizeof (lightBlueSerial) - 1))) {
-            lightBlueSerial[serialIndex] = '\0';
-            LIGHTBLUE_SendSerialData(lightBlueSerial);
-            serialIndex = 0;
-        } else {
-            serialIndex++;
-        }
-    }
+void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void)){
+    EUSART2_RxDefaultInterruptHandler = interruptHandler;
 }

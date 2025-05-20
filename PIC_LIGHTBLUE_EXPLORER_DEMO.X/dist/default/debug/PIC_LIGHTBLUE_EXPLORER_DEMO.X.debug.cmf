@@ -236,7 +236,7 @@ stringtext11 STRCODE 0 1812 1812 C 2 1
 stringtext12 STRCODE 0 1829 1829 B 2 1
 stringtext13 STRCODE 0 1834 1834 6 2 1
 config CONFIG 4 8007 8007 5 2 1
-$C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+$C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 idloc IDLOC 5 8000 8000 4 2 1
 stack STACK 2 23C0 23C0 430 1 1
 reset_vec CODE 0 0 0 2 2 1
@@ -373,94 +373,94 @@ STRING 184C-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-57 cinit CODE >21272:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-57 cinit CODE >21275:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-57 cinit CODE >21556:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-58 cinit CODE >21557:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-5B cinit CODE >21558:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-5C cinit CODE >21559:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-5F cinit CODE >21560:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-60 cinit CODE >21564:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-61 cinit CODE >21565:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-62 cinit CODE >21566:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-63 cinit CODE >21567:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-64 cinit CODE >21568:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-65 cinit CODE >21569:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-66 cinit CODE >21570:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-67 cinit CODE >21571:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-68 cinit CODE >21572:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-69 cinit CODE >21573:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-6C cinit CODE >21590:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-6D cinit CODE >21594:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-6E cinit CODE >21595:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-6F cinit CODE >21596:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-70 cinit CODE >21597:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-71 cinit CODE >21598:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-72 cinit CODE >21599:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-75 cinit CODE >21603:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-76 cinit CODE >21604:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-77 cinit CODE >21605:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-78 cinit CODE >21606:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-79 cinit CODE >21607:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-7A cinit CODE >21608:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-7D cinit CODE >21612:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-7E cinit CODE >21613:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-7F cinit CODE >21614:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-80 cinit CODE >21615:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-81 cinit CODE >21616:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-82 cinit CODE >21617:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-85 cinit CODE >21621:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-86 cinit CODE >21622:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-87 cinit CODE >21623:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-88 cinit CODE >21624:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-89 cinit CODE >21625:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-8A cinit CODE >21626:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-8D cinit CODE >21630:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-8E cinit CODE >21631:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-8F cinit CODE >21632:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-90 cinit CODE >21633:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-91 cinit CODE >21634:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-92 cinit CODE >21635:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-95 cinit CODE >21639:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-96 cinit CODE >21640:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-97 cinit CODE >21641:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-98 cinit CODE >21642:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-99 cinit CODE >21643:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-9A cinit CODE >21644:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-9D cinit CODE >21648:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-9E cinit CODE >21649:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-9F cinit CODE >21650:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A0 cinit CODE >21651:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A1 cinit CODE >21652:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A2 cinit CODE >21653:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A5 cinit CODE >21657:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A6 cinit CODE >21658:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A7 cinit CODE >21659:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A8 cinit CODE >21660:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-A9 cinit CODE >21661:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-AA cinit CODE >21662:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-AD cinit CODE >21666:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-AE cinit CODE >21667:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-AF cinit CODE >21668:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B0 cinit CODE >21669:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B1 cinit CODE >21670:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B2 cinit CODE >21671:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B5 cinit CODE >21675:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B6 cinit CODE >21676:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B7 cinit CODE >21677:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B8 cinit CODE >21678:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-B9 cinit CODE >21679:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-BA cinit CODE >21680:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-BD cinit CODE >21684:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-BE cinit CODE >21685:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-BF cinit CODE >21686:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C0 cinit CODE >21687:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C1 cinit CODE >21688:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C2 cinit CODE >21689:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C5 cinit CODE >21695:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C5 cinit CODE >21697:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C6 cinit CODE >21698:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-C7 cinit CODE >21699:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
+57 cinit CODE >21272:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+57 cinit CODE >21275:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+57 cinit CODE >21556:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+58 cinit CODE >21557:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+5B cinit CODE >21558:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+5C cinit CODE >21559:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+5F cinit CODE >21560:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+60 cinit CODE >21564:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+61 cinit CODE >21565:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+62 cinit CODE >21566:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+63 cinit CODE >21567:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+64 cinit CODE >21568:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+65 cinit CODE >21569:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+66 cinit CODE >21570:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+67 cinit CODE >21571:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+68 cinit CODE >21572:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+69 cinit CODE >21573:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+6C cinit CODE >21590:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+6D cinit CODE >21594:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+6E cinit CODE >21595:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+6F cinit CODE >21596:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+70 cinit CODE >21597:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+71 cinit CODE >21598:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+72 cinit CODE >21599:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+75 cinit CODE >21603:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+76 cinit CODE >21604:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+77 cinit CODE >21605:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+78 cinit CODE >21606:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+79 cinit CODE >21607:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+7A cinit CODE >21608:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+7D cinit CODE >21612:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+7E cinit CODE >21613:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+7F cinit CODE >21614:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+80 cinit CODE >21615:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+81 cinit CODE >21616:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+82 cinit CODE >21617:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+85 cinit CODE >21621:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+86 cinit CODE >21622:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+87 cinit CODE >21623:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+88 cinit CODE >21624:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+89 cinit CODE >21625:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+8A cinit CODE >21626:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+8D cinit CODE >21630:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+8E cinit CODE >21631:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+8F cinit CODE >21632:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+90 cinit CODE >21633:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+91 cinit CODE >21634:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+92 cinit CODE >21635:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+95 cinit CODE >21639:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+96 cinit CODE >21640:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+97 cinit CODE >21641:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+98 cinit CODE >21642:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+99 cinit CODE >21643:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+9A cinit CODE >21644:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+9D cinit CODE >21648:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+9E cinit CODE >21649:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+9F cinit CODE >21650:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A0 cinit CODE >21651:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A1 cinit CODE >21652:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A2 cinit CODE >21653:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A5 cinit CODE >21657:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A6 cinit CODE >21658:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A7 cinit CODE >21659:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A8 cinit CODE >21660:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+A9 cinit CODE >21661:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+AA cinit CODE >21662:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+AD cinit CODE >21666:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+AE cinit CODE >21667:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+AF cinit CODE >21668:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B0 cinit CODE >21669:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B1 cinit CODE >21670:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B2 cinit CODE >21671:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B5 cinit CODE >21675:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B6 cinit CODE >21676:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B7 cinit CODE >21677:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B8 cinit CODE >21678:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+B9 cinit CODE >21679:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+BA cinit CODE >21680:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+BD cinit CODE >21684:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+BE cinit CODE >21685:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+BF cinit CODE >21686:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C0 cinit CODE >21687:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C1 cinit CODE >21688:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C2 cinit CODE >21689:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C5 cinit CODE >21695:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C5 cinit CODE >21697:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C6 cinit CODE >21698:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+C7 cinit CODE >21699:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
 4 intentry CODE >52:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
 F intentry CODE >57:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\mcc_generated_files/interrupt_manager.c
@@ -1877,22 +1877,22 @@ A52 text1 CODE >39:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-ex
 6AF maintext CODE >71:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 6B4 maintext CODE >73:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
 6B7 maintext CODE >74:C:\Users\jjega\OneDrive\Documents\GitHub\ble\pic-lightblue-explorer-demo\PIC_LIGHTBLUE_EXPLORER_DEMO.X\main.c
-145C clrtext CODE >21579:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-145C clrtext CODE >21580:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-145D clrtext CODE >21581:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-145D clrtext CODE >21582:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-145E clrtext CODE >21583:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-145F clrtext CODE >21584:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-1460 clrtext CODE >21585:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-1461 clrtext CODE >21586:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-800 inittext CODE >21545:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-800 inittext CODE >21546:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-801 inittext CODE >21547:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-801 inittext CODE >21548:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-802 inittext CODE >21549:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-803 inittext CODE >21550:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-804 inittext CODE >21551:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
-805 inittext CODE >21552:C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_1.s
+145C clrtext CODE >21579:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+145C clrtext CODE >21580:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+145D clrtext CODE >21581:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+145D clrtext CODE >21582:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+145E clrtext CODE >21583:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+145F clrtext CODE >21584:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+1460 clrtext CODE >21585:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+1461 clrtext CODE >21586:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+800 inittext CODE >21545:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+800 inittext CODE >21546:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+801 inittext CODE >21547:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+801 inittext CODE >21548:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+802 inittext CODE >21549:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+803 inittext CODE >21550:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+804 inittext CODE >21551:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
+805 inittext CODE >21552:C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1965,20 +1965,20 @@ _WPUA 1F39 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _WPUB 1F44 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _WPUC 1F4F 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _WPUE 1F65 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___sp 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+___sp 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 __hex 1D3 0 BANK3 1 dataBANK3 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _main CE2 0 CODE 0 maintext dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _peek 3C 0 BANK0 1 bssBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _uart 2000 0 STRCODE 0 stringtext1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_RN487X_is_rx_ready 2992 0 CODE 0 text98 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___stack_hi 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-___stack_lo 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+___stack_hi 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+___stack_lo 23C0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 __HbssBANK10 0 0 ABS 0 bssBANK10 -
 __HbssBANK11 0 0 ABS 0 bssBANK11 -
 ?_i2c_read2ByteRegister 4E 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 BMA253_GetAccelDataXYZ@accelData 5A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-start AA 0 CODE 0 init C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+start AA 0 CODE 0 init C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 _LIGHTBLUE_SendProtocolVersion 1A72 0 CODE 0 text13 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _lightBlueSerial@main$F4435 2A0 0 BANK5 1 bssBANK5 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART2_SetOverrunErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2036,12 +2036,12 @@ __LbssBANK11 0 0 ABS 0 bssBANK11 -
 rd2RegCompleteHandler@i2c1_master_example$F1312@ptr 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X_DataReady 1172 0 CODE 0 text55 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_AccelSensor 18F8 0 CODE 0 text41 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 __ptext100 2934 0 CODE 0 text100 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext101 2A26 0 CODE 0 text101 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __ptext102 2A10 0 CODE 0 text102 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2214,8 +2214,8 @@ _INLVLC 1F52 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 I2C1_MasterSendTxData@data 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _LIGHTBLUE_SendSerialData 340 0 CODE 0 text18 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 ?_strlen 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___stackhi 27EF 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-___stacklo 23C0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+___stackhi 27EF 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+___stacklo 23C0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 LIGHTBLUE_Send_Thermocouple@temperature 54 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _rn487x_PrintMessageEnd BAC 0 CODE 0 text62 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _RN487X_EnterDataMode 113C 0 CODE 0 text25 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2315,7 +2315,7 @@ LIGHTBLUE_SendProtocolVersion@value 5F 0 BANK0 1 cstackBANK0 dist/default/debug\
 _I2C1_Status A0 0 BANK1 1 bssBANK1 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART2_Write@txData 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _EUSART2_RxDataHandler 100C 0 CODE 0 text180 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___int_sp 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+___int_sp 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 BMA253_GetAccelDataY@msbData 59 0 BANK0 1 cstackBANK0 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_intiliase_services 28AC 0 CODE 0 text36 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 wr2RegCompleteHandler@p 78 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -2678,7 +2678,7 @@ _EUSART2_RxDefaultInterruptHandler 16C 0 BANK2 1 nvBANK2 dist/default/debug\PIC_
 strchr@c 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strchr@s 73 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strcpy@d 72 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 __end_of_LIGHTBLUE_Send_Thermocouple 1730 0 CODE 0 text6 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strlen@a 74 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 strlen@s 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3130,8 +3130,8 @@ _i2c_status 120 0 BANK2 1 bssBANK2 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEM
 _SLRCONA 1F3B 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SLRCONB 1F46 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 _SLRCONC 1F51 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___heap_hi 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-___heap_lo 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+___heap_hi 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+___heap_lo 0 0 ABS 0 - C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 _spi2_configuration 3088 0 STRCODE 0 stringtext5 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterStart 2702 0 CODE 0 text162 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterWrite 27E2 0 CODE 0 text117 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
@@ -3277,8 +3277,8 @@ __end_of_rd1RegCompleteHandler@i2c1_master_example$F1301 2CD2 0 CODE 0 text150 d
 _SSP2DATPPS 1EC9 0 ABS 0 - dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 __end_of_I2C1_MasterSendAck 2764 0 CODE 0 text141 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 EUSART1_SetOverrunErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
-___int_stack_hi 27F0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
-___int_stack_lo 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs2p0.\driver_tmp_15.o
+___int_stack_hi 27F0 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
+___int_stack_lo 25D8 0 STACK 2 stack C:\Users\jjega\AppData\Local\Temp\xcAs7a8.\driver_tmp_15.o
 _OSCILLATOR_Initialize 2992 0 CODE 0 text81 dist/default/debug\PIC_LIGHTBLUE_EXPLORER_DEMO.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.

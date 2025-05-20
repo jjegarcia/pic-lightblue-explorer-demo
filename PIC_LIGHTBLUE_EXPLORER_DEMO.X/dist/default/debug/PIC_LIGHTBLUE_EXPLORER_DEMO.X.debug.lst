@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Fri May 09 10:25:22 2025
+                                                                                               Tue May 20 12:55:57 2025
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16LF18456
@@ -14317,9 +14317,9 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  14167                           ; Regs used in _mirror_serial: [wreg-fsr1h+status,2+status,0+pclath+cstack]
  14168                           
  14169                           
- 14170                           ;mcc_generated_files/services.c: 87:     if ((SERVICE.SEND_PROTOCOL_VERSION == 1)) {
+ 14170                           ;mcc_generated_files/services.c: 87:     if ((SERVICE.MIRROW_SERIAL == 1)) {
  14171     17E8  0140               	movlb	0	; select bank0
- 14172     17E9  1FA2               	btfss	_SERVICE,7	;volatile
+ 14172     17E9  1C23               	btfss	_SERVICE+1,0	;volatile
  14173     17EA  2FEC               	goto	u5721
  14174     17EB  2FED               	goto	u5720
  14175     17EC                     u5721:
@@ -17020,8 +17020,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
  16669                           ;mcc_generated_files/services.c: 6:     (SERVICE.HARDWARE_INTERRUPT_REQUEST = 1);
  16670     1453  1522               	bsf	_SERVICE,2	;volatile
  16671                           
- 16672                           ;mcc_generated_files/services.c: 7:     (SERVICE.SEND_PROTOCOL_VERSION = 1);
- 16673     1454  17A2               	bsf	_SERVICE,7	;volatile
+ 16672                           ;mcc_generated_files/services.c: 7:     (SERVICE.MIRROW_SERIAL = 1);
+ 16673     1454  1423               	bsf	_SERVICE+1,0	;volatile
  16674     1455                     l2324:
  16675     1455  0008               	return
  16676     1456                     __end_of_intiliase_services:
@@ -32667,7 +32667,7 @@ SFR63                0      0       0      64        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Fri May 09 10:25:22 2025
+Symbol Table                                                                                   Tue May 20 12:55:57 2025
 
                                  _eusart1TxBufferRemaining 0031  
                                    ?_EUSART2_RxDataHandler 0070  
