@@ -21096,7 +21096,10 @@ void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 void LIGHTBLUE_AccState(void);
 void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
 
+int thermocouple_requests = 0;
+
 typedef union {
+
     struct {
         unsigned ACC_FLAT_STATE : 1;
         unsigned THERMOCOUPLE_TEMPERATURE : 1;
@@ -21108,11 +21111,11 @@ typedef union {
         unsigned SERIAL_DATA : 1;
     };
     uint8_t FeatureBits;
-}FeatureBits_t;
+} FeatureBits_t;
 
-volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
-# 485 "./mcc_generated_files/application/LIGHTBLUE_service.h"
-volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+volatile FeatureBits_t ACKNOWLEDGED = {.FeatureBits = 0};
+# 488 "./mcc_generated_files/application/LIGHTBLUE_service.h"
+volatile FeatureBits_t FEATURE_ENABLEDBits = {.FeatureBits = 0};
 # 7 "mcc_generated_files/../main.h" 2
 
 

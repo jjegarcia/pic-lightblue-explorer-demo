@@ -305,6 +305,7 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data) {
         case THERMOCOUPLE_TEMPERATURE_ID:
             if (FEATURE_ENABLED_THERMOCOUPLE_TEMPERATURE_Is_High()) {
                 ACKNOWLEDGED_THERMOCOUPLE_TEMPERATURE_SetHigh();
+                thermocouple_requests=50;
             }
             break;
         case BUZZ_REQUEST_ID:

@@ -39,12 +39,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/application/../rn487x/rn487x.h: 92: {
 [u S6 `us 1 `S7 1 ]
 [n S6 . gpioMap . ]
-"420 mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 420:     struct {
+"423 mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 423:     struct {
 [s S1700 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1700 . ACC_FLAT_STATE THERMOCOUPLE_TEMPERATURE BUZZ_REQUEST ALERT_REQUEST HARDWARE_INTERRUPT_REQUEST LED_STATE RESET_REQUEST SERIAL_DATA ]
-"419
-[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 419: typedef union {
+"421
+[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 421: typedef union {
 [u S1699 `S1700 1 `uc 1 ]
 [n S1699 . . FeatureBits ]
 "48
@@ -1790,8 +1790,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "315
 [; ;mcc_generated_files/application/LIGHTBLUE_service.h: 315: static volatile rn487x_gpio_bitmap_t bitMap;
 [v _bitMap `VS6 ~T0 @X0 1 s ]
-"433
-[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 433: volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
+"419
+[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 419: int thermocouple_requests = 0;
+[v _thermocouple_requests `i ~T0 @X0 1 e ]
+[i _thermocouple_requests
+-> 0 `i
+]
+"436
+[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 436: volatile FeatureBits_t ACKNOWLEDGED = {.FeatureBits = 0};
 [v _ACKNOWLEDGED `VS1699 ~T0 @X0 1 e ]
 [i _ACKNOWLEDGED
 :U 1
@@ -1800,8 +1806,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"485
-[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 485: volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+"488
+[; ;mcc_generated_files/application/LIGHTBLUE_service.h: 488: volatile FeatureBits_t FEATURE_ENABLEDBits = {.FeatureBits = 0};
 [v _FEATURE_ENABLEDBits `VS1699 ~T0 @X0 1 e ]
 [i _FEATURE_ENABLEDBits
 :U 1
@@ -2183,26 +2189,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "170
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 170:     static PACKET_PARSER_STATE_t parserState = IDLE;
-[v F13065 `E12955 ~T0 @X0 1 s parserState ]
-[i F13065
+[v F13066 `E12955 ~T0 @X0 1 s parserState ]
+[i F13066
 . `E12955 0
 ]
 "171
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 171:     static uint8_t length = 0;
-[v F13066 `uc ~T0 @X0 1 s length ]
-[i F13066
+[v F13067 `uc ~T0 @X0 1 s length ]
+[i F13067
 -> -> 0 `i `uc
 ]
 "172
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 172:     static uint16_t data = 0;
-[v F13067 `us ~T0 @X0 1 s data ]
-[i F13067
+[v F13068 `us ~T0 @X0 1 s data ]
+[i F13068
 -> -> 0 `i `us
 ]
 "173
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 173:     static char packetID = '\0';
-[v F13068 `uc ~T0 @X0 1 s packetID ]
-[i F13068
+[v F13069 `uc ~T0 @X0 1 s packetID ]
+[i F13069
 -> -> 0 `ui `uc
 ]
 "175
@@ -2214,7 +2220,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1725 ]
 "178
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 178:             parserState = PACKET_ID;
-[e = F13065 . `E12955 2 ]
+[e = F13066 . `E12955 2 ]
 "179
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 179:             break;
 [e $U 1723  ]
@@ -2223,10 +2229,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1726 ]
 "181
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 181:             packetID = receivedByte;
-[e = F13068 _receivedByte ]
+[e = F13069 _receivedByte ]
 "182
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 182:             parserState = PAYLOAD_SIZE_0;
-[e = F13065 . `E12955 3 ]
+[e = F13066 . `E12955 3 ]
 "183
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 183:             break;
 [e $U 1723  ]
@@ -2235,10 +2241,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1727 ]
 "185
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 185:             length = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13066 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+[e = F13067 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
 "186
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 186:             parserState = PAYLOAD_SIZE_1;
-[e = F13065 . `E12955 4 ]
+[e = F13066 . `E12955 4 ]
 "187
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 187:             break;
 [e $U 1723  ]
@@ -2247,10 +2253,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1728 ]
 "189
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 189:             length = (length << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13066 -> + -> << -> F13066 `i -> 4 `i `ui ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+[e = F13067 -> + -> << -> F13067 `i -> 4 `i `ui ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `uc ]
 "190
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 190:             parserState = PAYLOAD_0;
-[e = F13065 . `E12955 5 ]
+[e = F13066 . `E12955 5 ]
 "191
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 191:             break;
 [e $U 1723  ]
@@ -2259,17 +2265,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1729 ]
 "193
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 193:             data = (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13067 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+[e = F13068 -> ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
 "194
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 194:             length--;
-[e -- F13066 -> -> 1 `i `uc ]
+[e -- F13067 -> -> 1 `i `uc ]
 "195
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 195:             if (length == 0) {
-[e $ ! == -> F13066 `i -> 0 `i 1730  ]
+[e $ ! == -> F13067 `i -> 0 `i 1730  ]
 {
 "196
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 196:                 parserState = IDLE;
-[e = F13065 . `E12955 0 ]
+[e = F13066 . `E12955 0 ]
 "197
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 197:             } else {
 }
@@ -2278,7 +2284,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "198
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 198:                 parserState = PAYLOAD_1;
-[e = F13065 . `E12955 6 ]
+[e = F13066 . `E12955 6 ]
 "199
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 199:             }
 }
@@ -2291,20 +2297,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1732 ]
 "202
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 202:             data = (data << 4) + (((receivedByte) <= '9') ? (receivedByte) - '0' : (receivedByte & 0x5f) - 'A' + 10);
-[e = F13067 -> + << -> F13067 `ui -> 4 `i ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
+[e = F13068 -> + << -> F13068 `ui -> 4 `i ? <= -> _receivedByte `ui -> 57 `ui : - -> _receivedByte `ui -> 48 `ui + - -> & -> _receivedByte `i -> 95 `i `ui -> 65 `ui -> -> 10 `i `ui `us ]
 "203
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 203:             LIGHTBLUE_PerformAction(packetID, data);
-[e ( _LIGHTBLUE_PerformAction (2 , F13068 -> F13067 `uc ]
+[e ( _LIGHTBLUE_PerformAction (2 , F13069 -> F13068 `uc ]
 "204
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 204:             length--;
-[e -- F13066 -> -> 1 `i `uc ]
+[e -- F13067 -> -> 1 `i `uc ]
 "205
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 205:             if (length == 0) {
-[e $ ! == -> F13066 `i -> 0 `i 1733  ]
+[e $ ! == -> F13067 `i -> 0 `i 1733  ]
 {
 "206
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 206:                 parserState = IDLE;
-[e = F13065 . `E12955 0 ]
+[e = F13066 . `E12955 0 ]
 "207
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 207:             } else {
 }
@@ -2313,7 +2319,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "208
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 208:                 parserState = PAYLOAD_0;
-[e = F13065 . `E12955 5 ]
+[e = F13066 . `E12955 5 ]
 "209
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 209:             }
 }
@@ -2333,7 +2339,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "214
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 214:                 parserState = SEQUENCE_NUMBER;
-[e = F13065 . `E12955 1 ]
+[e = F13066 . `E12955 1 ]
 "215
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 215:             }
 }
@@ -2346,7 +2352,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 1723  ]
 [e :U 1724 ]
-[e [\ -> F13065 `ui , $ -> . `E12955 1 `ui 1725
+[e [\ -> F13066 `ui , $ -> . `E12955 1 `ui 1725
  , $ -> . `E12955 2 `ui 1726
  , $ -> . `E12955 3 `ui 1727
  , $ -> . `E12955 4 `ui 1728
@@ -2681,71 +2687,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/application/LIGHTBLUE_service.c: 307:                 (ACKNOWLEDGED.THERMOCOUPLE_TEMPERATURE = 1);
 [e = . . _ACKNOWLEDGED 0 1 -> -> 1 `i `uc ]
 "308
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 308:             }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 308:                 thermocouple_requests=50;
+[e = _thermocouple_requests -> 50 `i ]
+"309
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 309:             }
 }
 [e :U 1772 ]
-"309
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 309:             break;
-[e $U 1751  ]
 "310
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 310:         case BUZZ_REQUEST_ID:
-[e :U 1773 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 310:             break;
+[e $U 1751  ]
 "311
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 311:             if ((FEATURE_ENABLEDBits.BUZZ_REQUEST == 1)) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 311:         case BUZZ_REQUEST_ID:
+[e :U 1773 ]
+"312
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 312:             if ((FEATURE_ENABLEDBits.BUZZ_REQUEST == 1)) {
 [e $ ! == -> . . _FEATURE_ENABLEDBits 0 2 `i -> 1 `i 1774  ]
 {
-"312
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 312:                 (ACKNOWLEDGED.BUZZ_REQUEST = 1);
-[e = . . _ACKNOWLEDGED 0 2 -> -> 1 `i `uc ]
 "313
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 313:             }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 313:                 (ACKNOWLEDGED.BUZZ_REQUEST = 1);
+[e = . . _ACKNOWLEDGED 0 2 -> -> 1 `i `uc ]
+"314
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 314:             }
 }
 [e :U 1774 ]
-"314
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 314:             break;
-[e $U 1751  ]
 "315
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 315:         case ALERT_REQUEST_ID:
-[e :U 1775 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 315:             break;
+[e $U 1751  ]
 "316
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 316:             if ((FEATURE_ENABLEDBits.ALERT_REQUEST == 1)) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 316:         case ALERT_REQUEST_ID:
+[e :U 1775 ]
+"317
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 317:             if ((FEATURE_ENABLEDBits.ALERT_REQUEST == 1)) {
 [e $ ! == -> . . _FEATURE_ENABLEDBits 0 3 `i -> 1 `i 1776  ]
 {
-"317
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 317:                 (ACKNOWLEDGED.ALERT_REQUEST = 1);
-[e = . . _ACKNOWLEDGED 0 3 -> -> 1 `i `uc ]
 "318
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 318:             }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 318:                 (ACKNOWLEDGED.ALERT_REQUEST = 1);
+[e = . . _ACKNOWLEDGED 0 3 -> -> 1 `i `uc ]
+"319
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 319:             }
 }
 [e :U 1776 ]
-"319
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 319:             break;
-[e $U 1751  ]
 "320
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 320:         case HARDWARE_INTERRUPT_REQUEST_ID:
-[e :U 1777 ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 320:             break;
+[e $U 1751  ]
 "321
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 321:             if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 321:         case HARDWARE_INTERRUPT_REQUEST_ID:
+[e :U 1777 ]
+"322
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 322:             if ((FEATURE_ENABLEDBits.HARDWARE_INTERRUPT_REQUEST == 1)) {
 [e $ ! == -> . . _FEATURE_ENABLEDBits 0 4 `i -> 1 `i 1778  ]
 {
-"322
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 322:                 (ACKNOWLEDGED.HARDWARE_INTERRUPT_REQUEST = 1);
-[e = . . _ACKNOWLEDGED 0 4 -> -> 1 `i `uc ]
 "323
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 323:             }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 323:                 (ACKNOWLEDGED.HARDWARE_INTERRUPT_REQUEST = 1);
+[e = . . _ACKNOWLEDGED 0 4 -> -> 1 `i `uc ]
+"324
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 324:             }
 }
 [e :U 1778 ]
-"324
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 324:             break;
+"325
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 325:             break;
 [e $U 1751  ]
-"326
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 326:         default:
-[e :U 1779 ]
 "327
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 327:             break;
-[e $U 1751  ]
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 327:         default:
+[e :U 1779 ]
 "328
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 328:     }
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 328:             break;
+[e $U 1751  ]
+"329
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 329:     }
 }
 [e $U 1751  ]
 [e :U 1752 ]
@@ -2759,8 +2768,8 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ . `E12939 13 1777
  1779 ]
 [e :U 1751 ]
-"329
-[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 329: }
+"330
+[; ;mcc_generated_files/application/LIGHTBLUE_service.c: 330: }
 [e :UE 1750 ]
 }
 [a 1C 49 46 49 46 48 0 ]

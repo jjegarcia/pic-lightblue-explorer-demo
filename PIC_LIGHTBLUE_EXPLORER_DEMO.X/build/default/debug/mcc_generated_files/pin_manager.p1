@@ -31,12 +31,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92
 [u S1692 `us 1 `S1693 1 ]
 [n S1692 . gpioMap . ]
-"420 ./mcc_generated_files/application/LIGHTBLUE_service.h
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 420:     struct {
+"423 ./mcc_generated_files/application/LIGHTBLUE_service.h
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 423:     struct {
 [s S1700 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1700 . ACC_FLAT_STATE THERMOCOUPLE_TEMPERATURE BUZZ_REQUEST ALERT_REQUEST HARDWARE_INTERRUPT_REQUEST LED_STATE RESET_REQUEST SERIAL_DATA ]
-"419
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 419: typedef union {
+"421
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 421: typedef union {
 [u S1699 `S1700 1 `uc 1 ]
 [n S1699 . . FeatureBits ]
 "5 ./mcc_generated_files/services.h
@@ -47,8 +47,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/services.h: 4: typedef union {
 [u S1701 `S1702 1 `uc 1 ]
 [n S1701 . . ServiceBits ]
-[v F13182 `(v ~T0 @X0 0 tf ]
-[v F13184 `(v ~T0 @X0 0 tf ]
+[v F13183 `(v ~T0 @X0 0 tf ]
+[v F13185 `(v ~T0 @X0 0 tf ]
 "1047 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 1047: extern volatile unsigned char LATE __attribute__((address(0x01C)));
 [v _LATE `Vuc ~T0 @X0 0 e@28 ]
@@ -218,12 +218,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _IOCAF6_ISR `(v ~T0 @X0 0 ef ]
 "414
 [v _IOCAF7_ISR `(v ~T0 @X0 0 ef ]
-[v F13190 `(v ~T0 @X0 0 tf ]
-[v F13192 `(v ~T0 @X0 0 tf ]
-[v F13194 `(v ~T0 @X0 0 tf ]
-[v F13198 `(v ~T0 @X0 0 tf ]
-[v F13200 `(v ~T0 @X0 0 tf ]
-[v F13202 `(v ~T0 @X0 0 tf ]
+[v F13191 `(v ~T0 @X0 0 tf ]
+[v F13193 `(v ~T0 @X0 0 tf ]
+[v F13195 `(v ~T0 @X0 0 tf ]
+[v F13199 `(v ~T0 @X0 0 tf ]
+[v F13201 `(v ~T0 @X0 0 tf ]
+[v F13203 `(v ~T0 @X0 0 tf ]
 "111 C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h
 [; ;C:/Users/jjega/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.8.149/xc8\pic\include\proc\pic16lf18456.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1841,8 +1841,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "315
 [; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 315: static volatile rn487x_gpio_bitmap_t bitMap;
 [v _bitMap `VS1692 ~T0 @X0 1 s ]
-"433
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 433: volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
+"419
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 419: int thermocouple_requests = 0;
+[v _thermocouple_requests `i ~T0 @X0 1 e ]
+[i _thermocouple_requests
+-> 0 `i
+]
+"436
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 436: volatile FeatureBits_t ACKNOWLEDGED = {.FeatureBits = 0};
 [v _ACKNOWLEDGED `VS1699 ~T0 @X0 1 e ]
 [i _ACKNOWLEDGED
 :U 1
@@ -1851,8 +1857,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"485
-[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 485: volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+"488
+[; ;./mcc_generated_files/application/LIGHTBLUE_service.h: 488: volatile FeatureBits_t FEATURE_ENABLEDBits = {.FeatureBits = 0};
 [v _FEATURE_ENABLEDBits `VS1699 ~T0 @X0 1 e ]
 [i _FEATURE_ENABLEDBits
 :U 1
@@ -1900,10 +1906,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "54 mcc_generated_files/pin_manager.c
 [; ;mcc_generated_files/pin_manager.c: 54: void (*IOCAF6_InterruptHandler)(void);
-[v _IOCAF6_InterruptHandler `*F13182 ~T0 @X0 1 e ]
+[v _IOCAF6_InterruptHandler `*F13183 ~T0 @X0 1 e ]
 "55
 [; ;mcc_generated_files/pin_manager.c: 55: void (*IOCAF7_InterruptHandler)(void);
-[v _IOCAF7_InterruptHandler `*F13184 ~T0 @X0 1 e ]
+[v _IOCAF7_InterruptHandler `*F13185 ~T0 @X0 1 e ]
 "57
 [; ;mcc_generated_files/pin_manager.c: 57: void PIN_MANAGER_Initialize(void) {
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
@@ -2095,7 +2101,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTERRUPTbits 0 0 -> -> 1 `i `uc ]
 "172
 [; ;mcc_generated_files/pin_manager.c: 172:     if (IOCAF6_InterruptHandler) {
-[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F13190 1708  ]
+[e $ ! != _IOCAF6_InterruptHandler -> -> 0 `i `*F13191 1708  ]
 {
 "173
 [; ;mcc_generated_files/pin_manager.c: 173:         IOCAF6_InterruptHandler();
@@ -2113,10 +2119,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "181
 [; ;mcc_generated_files/pin_manager.c: 181: void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void)) {
-[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13192 ]
+[v _IOCAF6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13193 ]
 {
 [e :U _IOCAF6_SetInterruptHandler ]
-[v _InterruptHandler `*F13194 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F13195 ~T0 @X0 1 r1 ]
 [f ]
 "182
 [; ;mcc_generated_files/pin_manager.c: 182:     IOCAF6_InterruptHandler = InterruptHandler;
@@ -2143,7 +2149,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "201
 [; ;mcc_generated_files/pin_manager.c: 201:     if (IOCAF7_InterruptHandler) {
-[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F13198 1712  ]
+[e $ ! != _IOCAF7_InterruptHandler -> -> 0 `i `*F13199 1712  ]
 {
 "202
 [; ;mcc_generated_files/pin_manager.c: 202:         IOCAF7_InterruptHandler();
@@ -2161,10 +2167,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "210
 [; ;mcc_generated_files/pin_manager.c: 210: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void)) {
-[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13200 ]
+[v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13201 ]
 {
 [e :U _IOCAF7_SetInterruptHandler ]
-[v _InterruptHandler `*F13202 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F13203 ~T0 @X0 1 r1 ]
 [f ]
 "211
 [; ;mcc_generated_files/pin_manager.c: 211:     IOCAF7_InterruptHandler = InterruptHandler;

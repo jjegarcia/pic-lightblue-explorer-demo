@@ -22,7 +22,7 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS
     SOFTWARE.
-*/
+ */
 #include <stdint.h>
 #include <string.h>
 #include <stdbool.h>
@@ -275,20 +275,20 @@ LIGHTBLUE_PerformAction private function. Use of types is handled in packet
 format functions used to specific application transmission features. 
  */
 typedef enum {
-    PROTOCOL_VERSION_ID                 = 'V',
-    LED_STATE_ID                        = 'L',
-    BUTTON_STATE_ID                     = 'P',
-    TEMPERATURE_DATA_ID                 = 'T',
-    ACCEL_DATA_ID                       = 'X',
-    SERIAL_DATA_ID                      = 'S',
-    ERROR_ID                            = 'R',
-    UI_CONFIG_DATA_ID                   = 'U',
-    ACC_FLAT_STATE_ID                   = 'F',
-    THERMOCOUPLE_TEMPERATURE_ID         = 'K',
-    RESET_REQUEST_ID                    = 'O',
-    BUZZ_REQUEST_ID                     = 'B',
-    ALERT_REQUEST_ID                    = 'A',
-    HARDWARE_INTERRUPT_REQUEST_ID       = 'H'        
+    PROTOCOL_VERSION_ID = 'V',
+    LED_STATE_ID = 'L',
+    BUTTON_STATE_ID = 'P',
+    TEMPERATURE_DATA_ID = 'T',
+    ACCEL_DATA_ID = 'X',
+    SERIAL_DATA_ID = 'S',
+    ERROR_ID = 'R',
+    UI_CONFIG_DATA_ID = 'U',
+    ACC_FLAT_STATE_ID = 'F',
+    THERMOCOUPLE_TEMPERATURE_ID = 'K',
+    RESET_REQUEST_ID = 'O',
+    BUZZ_REQUEST_ID = 'B',
+    ALERT_REQUEST_ID = 'A',
+    HARDWARE_INTERRUPT_REQUEST_ID = 'H'
 } PROTOCOL_PACKET_TYPES_t;
 
 /**
@@ -413,24 +413,27 @@ static void LIGHTBLUE_PerformAction(char id, uint8_t data);
 
 void LIGHTBLUE_ParseIncomingPacket(char receivedByte);
 
-void LIGHTBLUE_AccState(void); 
+void LIGHTBLUE_AccState(void);
 void LIGHTBLUE_Send_Thermocouple(uint8_t* temperature);
 
+int thermocouple_requests = 0;
+
 typedef union {
+
     struct {
-        unsigned ACC_FLAT_STATE             : 1;
-        unsigned THERMOCOUPLE_TEMPERATURE   : 1;
-        unsigned BUZZ_REQUEST               : 1;
-        unsigned ALERT_REQUEST              : 1;
+        unsigned ACC_FLAT_STATE : 1;
+        unsigned THERMOCOUPLE_TEMPERATURE : 1;
+        unsigned BUZZ_REQUEST : 1;
+        unsigned ALERT_REQUEST : 1;
         unsigned HARDWARE_INTERRUPT_REQUEST : 1;
-        unsigned LED_STATE                  : 1;
-        unsigned RESET_REQUEST              : 1;
-        unsigned SERIAL_DATA                : 1;
+        unsigned LED_STATE : 1;
+        unsigned RESET_REQUEST : 1;
+        unsigned SERIAL_DATA : 1;
     };
     uint8_t FeatureBits;
-}FeatureBits_t;
+} FeatureBits_t;
 
-volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
+volatile FeatureBits_t ACKNOWLEDGED = {.FeatureBits = 0};
 #define ACNOWLEDGED_CLEAR_ALL (ACKNOWLEDGED.FeatureBits=0)
 
 #define ACKNOWLEDGED_ACC_FLAT_STATE_SetHigh()                           (ACKNOWLEDGED.ACC_FLAT_STATE = 1) 
@@ -482,7 +485,7 @@ volatile FeatureBits_t ACKNOWLEDGED = { .FeatureBits = 0 };
 #define ACKNOWLEDGED_LED_STATE_REQUEST_Is_High()                        (ACKNOWLEDGED.LED_STATE == 1)
 
 
-volatile FeatureBits_t FEATURE_ENABLEDBits= { .FeatureBits = 0 };
+volatile FeatureBits_t FEATURE_ENABLEDBits = {.FeatureBits = 0};
 #define FEATURE_DISBALE_ALL (FEATURE_ENABLEDBits.FeatureBits = 0)
 
 #define FEATURE_ENABLED_ACC_FLAT_STATE_SetHigh()                        (FEATURE_ENABLEDBits.ACC_FLAT_STATE = 1) 

@@ -23,7 +23,7 @@ void acc_flat_state() {
 }
 
 void thermocouple_temperature() {
-    if (SERVICE_THERMOCOUPLE_TEMPERATURE_Is_High()) {
+    if (SERVICE_THERMOCOUPLE_TEMPERATURE_Is_High() && thermocouple_requests > 0) {
         static uint8_t data[4];
         SPI_SS_EXT_DEVICE_SetLow();
         if (SPI2_Open(0)) {
@@ -34,6 +34,7 @@ void thermocouple_temperature() {
             flush_serial_to_ble();
             SPI2_Close();
         }
+        thermocouple_requests--;
     }
 }
 
